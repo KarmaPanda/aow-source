@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_leitai\form_leitai_gamble" init="main_form_init">
+        <prop LimitInScreen="true" Left="13" Top="5" Width="1024" Height="800" LineColor="0,0,0,0" ShadowColor="255,255,255,255" DrawMode="FitWindow" BackImage="gui\special\leitai\bg_main.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_right_fraction" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-200" Top="-259" Width="150" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_JiFen" Font="font_sns_event" />
+        </control>
+        <control name="lbl_right_num" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-200" Top="-275" Width="150" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_daleishu" Font="font_sns_event" />
+        </control>
+        <control name="lbl_left_fraction" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="88" Top="-262" Width="174" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_JiFen" Font="font_sns_event" />
+        </control>
+        <control name="lbl_left_num" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="88" Top="-281" Width="174" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_daleishu" Font="font_sns_event" />
+        </control>
+        <control name="scenebox_left_model" entity="SceneBox" script="" init="">
+            <prop Left="-435" Top="-227" Width="246" Height="454" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" />
+        </control>
+        <control name="scenebox_right_model" entity="SceneBox" script="" init="">
+            <prop Left="189" Top="-227" Width="238" Height="454" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" />
+        </control>
+        <control name="lbl_left_info_background" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="-320" Width="363" Height="112" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\leitai\bg_left_info.png" />
+        </control>
+        <control name="lbl_right_info_background" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-352" Top="-320" Width="349" Height="112" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\leitai\bg_right_info.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-307" Top="-59" Width="582" Height="46" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" BackImage="gui\special\leitai\bg_strength.png" />
+        </control>
+        <control name="lbl_money_text" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-184" Top="88" Width="86" Height="16" ShadowColor="0,22,68,68" VAnchor="Center" HAnchor="Center" Text="@ui_yazhuzonge" Font="font_system_individual" />
+        </control>
+        <control name="pbar_shili_contrast" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" WidthGap="2" HeightGap="2" ProgressImage="gui\special\leitai\pbr_red.png" ProgressMode="LeftToRight" TextColor="255,255,0,0" Left="-209" Top="-41" Width="405" Height="11" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\leitai\pbr_blue.png" />
+        </control>
+        <control name="lbl_all_money" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-192" Top="24" Width="382" Height="30" ShadowColor="0,2,68,68" VAnchor="Center" HAnchor="Center" Font="font_system_individual" DrawMode="FitWindow" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\leitai\btn_close_out.png" FocusImage="gui\language\ChineseS\leitai\btn_close_on.png" PushImage="gui\language\ChineseS\leitai\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-71" Top="102" Width="38" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_money_background" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="80" Top="80" Width="46" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\combobox\bg_select2.png" />
+        </control>
+        <control name="ipt_wen" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="80" Top="84" Width="46" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,20,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_left_name" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="88" Top="-300" Width="80" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_zudui0009" Font="font_sns_event" />
+        </control>
+        <control name="lbl_left_school" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="88" Top="-280" Width="38" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_MenPai" Font="font_sns_event" />
+        </control>
+        <control name="lbl_left_odds" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="88" Top="-260" Width="174" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_peilv" Font="font_sns_event" />
+        </control>
+        <control name="lbl_right_school" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-200" Top="-280" Width="80" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_MenPai" Font="font_sns_event" />
+        </control>
+        <control name="lbl_right_odds" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-200" Top="-260" Width="150" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_peilv" Font="font_sns_event" />
+        </control>
+        <control name="lbl_right_name" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-200" Top="-300" Width="94" Height="16" ForeColor="255,56,45,32" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_zudui0009" Font="font_sns_event" />
+        </control>
+        <control name="lbl_blue" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-19" Top="-83" Width="22" Height="16" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="FitWindow" BackImage="gui\animations\leitai\gong\9.png" />
+        </control>
+        <control name="lbl_red" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-48" Top="-83" Width="22" Height="16" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="FitWindow" BackImage="gui\animations\leitai\shou\9.png" />
+        </control>
+        <control name="btn_left_gamble" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\leitai\btn_bet_out.png" FocusImage="gui\language\ChineseS\leitai\btn_bet_on.png" PushImage="gui\language\ChineseS\leitai\btn_bet_down.png" DisableImage="gui\language\ChineseS\leitai\btn_bet_no.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-243" Top="17" Width="50" Height="50" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Enabled="false" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_left_gamble_click" />
+        </control>
+        <control name="btn_right_gamble" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\leitai\btn_bet_out.png" FocusImage="gui\language\ChineseS\leitai\btn_bet_on.png" PushImage="gui\language\ChineseS\leitai\btn_bet_down.png" DisableImage="gui\language\ChineseS\leitai\btn_bet_no.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="189" Top="17" Width="50" Height="50" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Enabled="false" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_right_gamble_click" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-120" Top="-96" Width="278" Height="24" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="@ui_show_strength_cmp" Font="font_sns_xiayi_title1" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="136" Top="88" Width="38" Height="16" ShadowColor="0,22,68,68" VAnchor="Center" HAnchor="Center" Text="@ui_Wen" Font="font_system_individual" />
+        </control>
+        <control name="lbl_total_moey_info" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-192" Width="382" Height="16" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="font_text" />
+        </control>
+        <control name="ipt_1" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="623" Top="542" Width="70" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,20,0,0" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-88" Top="80" Width="46" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\combobox\bg_select2.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-3" Top="80" Width="46" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\combobox\bg_select2.png" />
+        </control>
+        <control name="lbl_ding_test" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="44" Top="88" Width="38" Height="16" ShadowColor="0,22,68,68" VAnchor="Center" HAnchor="Center" Text="@ui_liang" Font="font_system_individual" />
+        </control>
+        <control name="lbl_ding_text" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-40" Top="88" Width="30" Height="16" ShadowColor="0,22,68,68" VAnchor="Center" HAnchor="Center" Text="@ui_ding" Font="font_system_individual" />
+        </control>
+        <control name="ipt_liang" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Top="84" Width="46" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,20,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" />
+        </control>
+        <control name="ipt_ding" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="-88" Top="84" Width="46" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,20,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" />
+        </control>
+    </control>
+</form>

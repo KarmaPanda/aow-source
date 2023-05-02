@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_action_edit" init="main_form_init">
+        <prop ShowGrid="true" Left="253" Top="149" Width="390" Height="430" ShadowColor="0,0,0,0" Font="GE_FONT" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="144" Top="8" Width="94" Height="24" ShadowColor="0,0,0,0" Text="动作列表" />
+        </control>
+        <control name="play_stop_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="40" Width="60" Height="22" ShadowColor="0,0,0,0" Text="播放" TabStop="true" />
+            <event on_click="play_stop_btn_click" />
+        </control>
+        <control name="pause_btn" entity="Button" script="" init="">
+            <prop Left="72" Top="40" Width="60" Height="22" ShadowColor="0,0,0,0" Text="暂停" TabStop="true" />
+            <event on_click="pause_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="272" Top="40" Width="38" Height="20" ShadowColor="0,0,0,0" Text="桢号" />
+        </control>
+        <control name="frame_speed_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Min="0.010000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="208" Top="40" Width="54" Height="20" ShadowColor="0,0,0,0" Text="1.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="frame_speed_edit_changed" on_drag="frame_speed_edit_drag" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="152" Top="40" Width="54" Height="20" ShadowColor="0,0,0,0" Text="帧速度" />
+        </control>
+        <control name="frame_num_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%0.1f" DragStep="1.000000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="328" Top="40" Width="54" Height="20" ShadowColor="0,0,0,0" Text="3" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="frame_num_edit_changed" on_drag="frame_num_edit_drag" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="160" Width="94" Height="20" ShadowColor="0,0,0,0" Text="LeaveTime：" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="88" Width="86" Height="20" ShadowColor="0,0,0,0" Text="默认动作：" />
+        </control>
+        <control name="default_action" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="288" Top="88" Width="94" Height="20" ShadowColor="0,0,0,0" Enabled="false" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="loop_cbn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="184" Top="232" Width="86" Height="20" ShadowColor="0,0,0,0" Text="重复播放" TabStop="true" />
+        </control>
+        <control name="action_state" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="288" Top="112" Width="94" Height="20" ShadowColor="0,0,0,0" Text="未融入" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="blend_btn" entity="Button" script="" init="">
+            <prop Left="184" Top="304" Width="94" Height="20" ShadowColor="0,0,0,0" Text="融入动作" TabStop="true" />
+            <event on_click="blend_btn_click" />
+        </control>
+        <control name="unblend_btn" entity="Button" script="" init="">
+            <prop Left="184" Top="328" Width="94" Height="20" ShadowColor="0,0,0,0" Text="删除动作" TabStop="true" />
+            <event on_click="unblend_btn_click" />
+        </control>
+        <control name="autodelete_cbn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="288" Top="232" Width="86" Height="20" ShadowColor="0,0,0,0" Text="自动删除" TabStop="true" />
+        </control>
+        <control name="Label18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="112" Width="86" Height="20" ShadowColor="0,0,0,0" Text="动作状态：" />
+        </control>
+        <control name="Label19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="208" Width="86" Height="20" ShadowColor="0,0,0,0" Text="动作速度：" />
+        </control>
+        <control name="speed_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Min="0.001000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="288" Top="208" Width="94" Height="20" ShadowColor="0,0,0,0" Text="1.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="speed_changed" on_drag="speed_changed" />
+        </control>
+        <control name="show_helper_cbn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="184" Top="280" Width="102" Height="20" ShadowColor="0,0,0,0" Text="显示辅助点" TabStop="true" />
+            <event on_checked_changed="show_helper_cbn_checked_changed" />
+        </control>
+        <control name="show_bone_cbn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="288" Top="280" Width="102" Height="20" ShadowColor="0,0,0,0" Text="显示骨骼点" TabStop="true" />
+            <event on_checked_changed="show_bone_cbn_checked_changed" />
+        </control>
+        <control name="action_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="88" Width="166" Height="302" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_double_click="action_list_select_double_click" on_select_changed="action_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="action_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="8" Top="64" Width="166" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="action_edit_changed" />
+        </control>
+        <control name="frame_lab" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="64" Width="174" Height="20" ShadowColor="0,0,0,0" Text="桢数：" />
+        </control>
+        <control name="critical_cbn" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="184" Top="256" Width="86" Height="20" ShadowColor="0,0,0,0" Text="立即融入" TabStop="true" />
+            <event on_checked_changed="critical_cbn_checked_changed" />
+        </control>
+        <control name="blend_weight" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="288" Top="184" Width="94" Height="20" ShadowColor="0,0,0,0" Text="1.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="blend_weight_changed" on_drag="blend_weight_drag" />
+        </control>
+        <control name="Label20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="184" Width="86" Height="20" ShadowColor="0,0,0,0" Text="混合权重：" />
+        </control>
+        <control name="set_color_btn" entity="Button" script="" init="">
+            <prop Left="184" Top="352" Width="94" Height="20" ShadowColor="0,0,0,0" Text="设置颜色" TabStop="true" />
+            <event on_click="set_color_btn_click" />
+        </control>
+        <control name="xskt_file" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="8" Top="400" Width="374" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="leave_time" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="288" Top="160" Width="94" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="leave_time_changed" on_drag="leave_time_changed" />
+        </control>
+        <control name="enter_time" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="288" Top="136" Width="94" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="enter_time_changed" on_drag="enter_time_changed" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="360" Top="8" Width="24" Height="24" ShadowColor="0,0,0,0" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="136" Width="94" Height="20" ShadowColor="0,0,0,0" Text="EnterTime：" />
+        </control>
+    </control>
+</form>

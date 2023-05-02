@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_freshman\form_freshman_particularize" init="main_form_init">
+        <prop ShowGrid="true" Left="5" Top="21" Width="530" Height="682" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\lead\bg_main_1.png" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="271" Top="172" Width="221" Height="272" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="39" Top="172" Width="221" Height="272" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="20" Top="614" Width="490" Height="54" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\lead\bg_list.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="57" Top="9" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Text="@textinskin00087" Font="font_sns_title_huali_1" />
+        </control>
+        <control name="mltbox_desc" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="4,4,418,62" LineHeight="25" ScrollSize="17" Left="61" Top="55" Width="422" Height="64" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_sns_title_1" />
+        </control>
+        <control name="lbl_image_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="43" Top="175" Width="213" Height="264" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\lead\picture\photo_b_1.png" />
+        </control>
+        <control name="lbl_image_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="275" Top="175" Width="213" Height="264" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\lead\picture\photo_b_1.png" />
+        </control>
+        <control name="mltbox_info_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,2,440,74" LineHeight="18" ScrollSize="13" HasVScroll="true" Left="41" Top="455" Width="446" Height="76" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" BackImage="gui\special\lead\bg_test.png" />
+            <event on_click_hyperlink="on_mltbox_info_click_hyperlink" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="13" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="13" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="13" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_pre" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="32" Top="627" Width="102" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_prevpage" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_pre_click" />
+        </control>
+        <control name="btn_next" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="144" Top="627" Width="102" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_nextpage" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_next_click" />
+        </control>
+        <control name="btn_return" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="393" Top="627" Width="102" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_return" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_return_click" />
+        </control>
+        <control name="lbl_step_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="111" Top="127" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_sns_title_1" />
+        </control>
+        <control name="lbl_step_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="337" Top="127" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_sns_title_1" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="681" Top="703" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@textinskin00088" Font="font_text_chat" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="25" Top="111" Width="478" Height="4" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\lead\line_1.png" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="25" Top="542" Width="478" Height="4" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\lead\line_1.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="481" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="25" Top="543" Width="486" Height="80" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="15" Top="16" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@textinskin00089" Font="font_text_chat" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="216" Top="16" Width="46" Height="46" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="280" Top="16" Width="46" Height="46" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+            </control>
+            <control name="lbl_res_1" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="219" Top="19" Width="40" Height="40" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="FitWindow" />
+                <event on_lost_capture="on_lbl_res_lost_capture" on_get_capture="on_lbl_res_get_capture" />
+            </control>
+            <control name="lbl_res_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="283" Top="19" Width="40" Height="40" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="FitWindow" />
+                <event on_lost_capture="on_lbl_res_lost_capture" on_get_capture="on_lbl_res_get_capture" />
+            </control>
+            <control name="lbl_res_freshman" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="324" Top="17" Width="44" Height="44" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+                <event on_lost_capture="on_lbl_res_lost_capture" on_get_capture="on_lbl_res_get_capture" />
+            </control>
+            <control name="pbar_freshman_pro" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\special\lead\hd_jindutiao_2.png" ProgressMode="LeftToRight" Left="88" Width="286" Height="18" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\lead\hd_jindutiaoditu_2.png" />
+            </control>
+            <control name="mltbox_freshman_tip" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,110,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,182,45" LineHeight="17" ScrollSize="17" Left="104" Top="24" Width="182" Height="45" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" NoFrame="true" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_freshman_pro" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="88" Width="286" Height="18" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\lead\hd_fenduan_2.png" />
+            </control>
+        </control>
+    </control>
+</form>

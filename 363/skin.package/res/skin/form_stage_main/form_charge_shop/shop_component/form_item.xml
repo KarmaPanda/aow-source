@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_charge_shop\shop_component\form_item" init="on_main_form_init">
+        <prop ShowGrid="true" Left="429" Top="397" Width="210" Height="127" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_item_0" entity="GroupBox" script="" init="">
+            <prop Width="210" Height="127" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\charge_shop\bg_item_1.png" />
+            <control name="imagegrid_item" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="5,5,45,45" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="62" GridWidth="62" GridsPos="0,-1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="1" Top="28" Width="71" Height="71" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\charge_shop\icon_item.png" />
+                <event on_mouseout_grid="on_mouseout_grid" on_mousein_grid="on_mousein_grid" on_select_changed="on_show_model" />
+            </control>
+            <control name="lbl_item_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" LblLimitWidth="true" Top="6" Width="209" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Font="Default" />
+            </control>
+            <control name="btn_buy" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal3_out.png" FocusImage="gui\common\button\btn_normal3_on.png" PushImage="gui\common\button\btn_normal3_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="100" Width="70" Height="25" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_shop_buy" Font="font_main" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_buy_click" />
+            </control>
+            <control name="lbl_zhekou" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="70" Width="24" Height="24" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\charge_shop\icon_discount.png" />
+            </control>
+            <control name="lbl_xianliang_total" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="75" Top="52" Width="126" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shop_limitnum_0" Font="Default" />
+            </control>
+            <control name="btn_give" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal3_out.png" FocusImage="gui\common\button\btn_normal3_on.png" PushImage="gui\common\button\btn_normal3_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="76" Top="100" Width="70" Height="25" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_shop_give" Font="font_main" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_give_click" />
+            </control>
+            <control name="lbl_xianliang_account" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="75" Top="66" Width="126" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shop_limitnum_1" Font="Default" />
+            </control>
+            <control name="btn_try_0" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="900" Top="-24" Width="54" Height="30" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_shop_browse" Font="font_main" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_try_click" />
+            </control>
+            <control name="lbl_vip" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="180" Top="29" Width="30" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="Vip" Font="font_main" />
+            </control>
+            <control name="mltbox_price" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,129,18" LineHeight="17" ScrollSize="17" Left="78" Top="32" Width="129" Height="18" ForeColor="255,76,61,44" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="DefaultQ" />
+            </control>
+            <control name="mltbox_9" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,76,61,44" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,135,18" LineHeight="17" ScrollSize="17" Left="75" Top="82" Width="135" Height="18" ForeColor="255,76,61,44" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="Default" />
+            </control>
+            <control name="lbl_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="14" Width="24" Height="22" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_btn" />
+            </control>
+            <control name="btn_delete" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="183" Top="101" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_delete_fav_click" />
+            </control>
+        </control>
+    </control>
+</form>

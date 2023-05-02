@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_tiguan\form_tiguan_binglu_new" init="main_form_init">
+        <prop ShowGrid="true" Left="200" Top="213" Width="350" Height="302" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,0,0,0" ViewRect="0,0,130,214" LineHeight="18" HtmlText="@sys_9yz_binglu" ScrollSize="15" HasVScroll="true" Left="189" Top="40" Width="150" Height="214" ShadowColor="0,0,0,0" Font="font_text_chat" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop Maximum="5" SmallChange="1" LargeChange="11" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="126" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="130" Top="10" Width="90" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_biaoti" Font="font_playername" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="357" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="28" Width="342" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="250" Width="342" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="15" Top="263" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_ok" Font="font_btn" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="178" Height="158" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="rbtn_1" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="34" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="100" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_2" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="34" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="101" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_3" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="65" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="102" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_4" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="65" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="103" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_5" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="96" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="104" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_6" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="96" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="105" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_7" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="127" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="106" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_8" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="127" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="107" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_9" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="158" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="108" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="rbtn_10" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="158" Width="87" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="110" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="42" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_unarmed" Font="font_text_figure" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="72" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_sword" Font="font_text_figure" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="103" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_dblade" Font="font_text_figure" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="134" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_ddagger" Font="font_text_figure" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="165" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_sstaff" Font="font_text_figure" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="42" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_blade" Font="font_text_figure" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="72" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_dagger" Font="font_text_figure" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="103" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_dsword" Font="font_text_figure" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="134" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_lstaff" Font="font_text_figure" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="165" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_hidden" Font="font_text_figure" />
+        </control>
+        <control name="edit_binglu_num" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="0.001000" Max="1000000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="115" Top="263" Width="70" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_1.png" />
+            <event on_changed="on_edit_binglu_num_changed" />
+        </control>
+        <control name="lbl_binglu_num" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="53" Top="267" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_num" Font="font_text_chat" />
+        </control>
+        <control name="rbtn_11" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_out.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" DisableImage="gui\common\checkbutton\binglu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="192" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="111" Font="font_text_chat" TabStop="true" AutoSize="true" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="198" Width="49" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_binglu_newweapon" Font="font_text_figure" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="180" Top="32" Width="9" Height="222" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="189" Top="36" Width="150" Height="222" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        </control>
+    </control>
+</form>

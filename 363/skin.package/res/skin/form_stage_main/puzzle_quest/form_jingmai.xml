@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\puzzle_quest\form_jingmai" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Left="13" Top="29" Width="622" Height="542" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="gb_up" entity="GroupBox" script="" init="">
+            <prop Fixed="false" Transparent="true" Width="662" Height="582" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Width="526" Height="526" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\WuXue_practice\Game_area_bg.png" />
+            </control>
+            <control name="btn_show_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\baoshi\WuXue_practice\rtbt-out.png" FocusImage="gui\mainform\smallgame\baoshi\WuXue_practice\rtbt-on.png" PushImage="gui\mainform\smallgame\baoshi\WuXue_practice\rtbt-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="64" Top="252" Width="30" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_show_left_click" />
+            </control>
+            <control name="btn_show_down" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\baoshi\WuXue_practice\upbt-out.png" FocusImage="gui\mainform\smallgame\baoshi\WuXue_practice\upbt-on.png" PushImage="gui\mainform\smallgame\baoshi\WuXue_practice\upbt-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="264" Top="456" Width="30" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_show_down_click" />
+            </control>
+            <control name="btn_show_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\baoshi\WuXue_practice\ltbt-out.png" FocusImage="gui\mainform\smallgame\baoshi\WuXue_practice\ltbt-on.png" PushImage="gui\mainform\smallgame\baoshi\WuXue_practice\ltbt-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="464" Top="256" Width="30" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_show_right_click" />
+            </control>
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="104" Top="16" Width="366" Height="72" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                <control name="lbl_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="28" Width="44" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\xiulian\Lg_Faculty.png" />
+                </control>
+                <control name="lbl_ratio" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-31" Top="-15" Width="62" Height="30" ForeColor="255,30,144,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="hyshtj14_S" HintText="@ui_xl_beilv" DrawMode="FitWindow" />
+                </control>
+                <control name="lbl_xiuwei" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="56" Top="28" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,46,46,49" Font="STKAITI14_W" HintText="@ui_xl_xiuwei" />
+                </control>
+            </control>
+            <control name="gb_down" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="70" Top="472" Width="422" Height="70" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="imagegrid_shortcut" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="26,5,430,32" MaxSize="-1" RowNum="1" ClomnNum="8" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid_new\wxpractice.png" GridBackOffsetX="-9" GridBackOffsetY="-10" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="-8" Top="8" Width="430" Height="62" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" ClickSound="ok_7" />
+                    <event on_select_changed="on_imagegrid_shortcut_select_changed" on_mousein_grid="on_imagegrid_shortcut_mousein_grid" on_rightclick_grid="on_imagegrid_shortcut_rightclick_grid" on_drag_enter="on_imagegrid_shortcut_drag_enter" on_drag_move="on_imagegrid_shortcut_drag_move" on_drag_leave="on_imagegrid_shortcut_drag_leave" on_mouseout_grid="on_imagegrid_shortcut_mouseout_grid" />
+                </control>
+            </control>
+            <control name="gb_right" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="483" Top="-8" Width="134" Height="606" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="wuxue_info" entity="GroupBox" script="" init="">
+                    <prop Transparent="true" Left="-3" Top="24" Width="134" Height="62" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                    <control name="imagegrid_xiuwei_photo" entity="ImageGrid" script="" init="">
+                        <prop SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="8" Top="16" Width="32" Height="32" ShadowColor="0,0,0,0" Text="imagegrid_2" />
+                    </control>
+                    <control name="lbl_xiuwei_name" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="35" Top="16" Width="78" Height="16" ForeColor="255,240,230,140" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" Font="hyshtj14_S" />
+                    </control>
+                    <control name="lbl_wuxue_gate" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="64" Top="32" Width="46" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="WRYH11_S" />
+                    </control>
+                </control>
+                <control name="skill" entity="GroupBox" script="" init="">
+                    <prop Transparent="true" Top="80" Width="134" Height="364" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\WuXue_practice\rt_bg.png" />
+                    <control name="lbl_page" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="54" Top="199" Width="22" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1/1" Font="WRYH12_S" />
+                    </control>
+                    <control name="btn_up" entity="Button" script="" init="">
+                        <prop NormalImage="gui\mainform\smallgame\baoshi\WuXue_practice\jn-rtbt-out.png" FocusImage="gui\mainform\smallgame\baoshi\WuXue_practice\jn-rtbt-on.png" PushImage="gui\mainform\smallgame\baoshi\WuXue_practice\jn-rtbt-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="85" Top="200" Width="11" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_btn_up_click" />
+                    </control>
+                    <control name="btn_down" entity="Button" script="" init="">
+                        <prop NormalImage="gui\mainform\smallgame\baoshi\WuXue_practice\jn-ltbt-out.png" FocusImage="gui\mainform\smallgame\baoshi\WuXue_practice\jn-ltbt-on.png" PushImage="gui\mainform\smallgame\baoshi\WuXue_practice\jn-lt-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="200" Width="11" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_btn_down_click" />
+                    </control>
+                    <control name="imagegrid_skill" entity="ImageGrid" script="" init="">
+                        <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,100,130" MaxSize="-1" RowNum="3" ClomnNum="2" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="21" Top="64" Width="94" Height="126" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_select_changed="on_imagegrid_skill_select_changed" on_mousein_grid="on_imagegrid_skill_mousein_grid" on_rightclick_grid="on_imagegrid_skill_rightclick_grid" on_drag_enter="on_imagegrid_skill_drag_enter" on_drag_move="on_imagegrid_skill_drag_move" on_drag_leave="on_imagegrid_skill_drag_leave" on_mouseout_grid="on_imagegrid_skill_mouseout_grid" />
+                    </control>
+                    <control name="lbl_proptext" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="21" Top="8" Width="30" Height="16" ForeColor="255,192,192,192" BlendColor="255,192,192,192" ShadowColor="0,192,192,192" Text="@ui_shuxing" Font="STKAITI14_W" HintText="@ui_xl_property" />
+                    </control>
+                    <control name="lbl_property" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="77" Top="8" Width="30" Height="16" ForeColor="255,192,192,192" BlendColor="255,192,192,192" ShadowColor="0,192,192,192" Text="@ui_huo" Font="STKAITI14_W" />
+                    </control>
+                </control>
+                <control name="imagegrid_prize_skill" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,100,200" MaxSize="-1" RowNum="1" ClomnNum="2" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="21" Top="384" Width="94" Height="46" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_mouseout_grid="on_imagegrid_prize_skill_mouseout_grid" on_rightclick_grid="on_imagegrid_prize_skill_rightclick_grid" on_mousein_grid="on_imagegrid_prize_skill_mousein_grid" />
+                </control>
+            </control>
+            <control name="lt_area" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="5" Top="88" Width="86" Height="358" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lt_bg_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="-8" Width="78" Height="364" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\WuXue_practice\lt_bg_1.png" />
+                </control>
+                <control name="img_player_group" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="8" Top="8" Width="54" Height="339" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" BackImage="gui\mainform\smallgame\baoshi\WuXue_practice\lt_bg_2.png" />
+                </control>
+            </control>
+            <control name="btn_dong" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\btn_xl\dong_on.png" FocusImage="gui\language\ChineseS\btn_xl\dong_on.png" PushImage="gui\language\ChineseS\btn_xl\dong_on.png" DisableImage="gui\language\ChineseS\btn_xl\dong_off.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="328" Top="38" Width="28" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_xl_dong" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="btn_lin" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\btn_xl\lin_on.png" FocusImage="gui\language\ChineseS\btn_xl\lin_on.png" PushImage="gui\language\ChineseS\btn_xl\lin_on.png" DisableImage="gui\language\ChineseS\btn_xl\lin_off.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="352" Top="38" Width="28" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_xl_lin" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="btn_shan" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\btn_xl\shan_on.png" FocusImage="gui\language\ChineseS\btn_xl\shan_on.png" PushImage="gui\language\ChineseS\btn_xl\shan_on.png" DisableImage="gui\language\ChineseS\btn_xl\shan_off.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="400" Top="38" Width="28" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_xl_shan" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="btn_shui" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\btn_xl\shui_on.png" FocusImage="gui\language\ChineseS\btn_xl\shui_on.png" PushImage="gui\language\ChineseS\btn_xl\shui_on.png" DisableImage="gui\language\ChineseS\btn_xl\shui_off.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="424" Top="38" Width="28" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_xl_shui" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="btn_xue" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\btn_xl\xue_on.png" FocusImage="gui\language\ChineseS\btn_xl\xue_on.png" PushImage="gui\language\ChineseS\btn_xl\xue_on.png" DisableImage="gui\language\ChineseS\btn_xl\xue_off.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="376" Top="38" Width="28" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_xl_xue" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+        </control>
+    </control>
+</form>

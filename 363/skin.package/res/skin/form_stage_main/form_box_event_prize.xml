@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_box_event_prize" init="on_main_form_init">
+        <prop Left="261" Top="101" Width="573" Height="463" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="ExpandV" BackImage="gui\guild\title\end.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_pick_bag" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\origin_new\btn_1_out.png" FocusImage="gui\language\ChineseS\origin_new\btn_1_on.png" PushImage="gui\language\ChineseS\origin_new\btn_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="464" Top="423" Width="100" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_haiwai_box_prize_lq" Font="font_main" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_pick_bag_click" />
+        </control>
+        <control name="btn_pick_mail" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\origin_new\btn_1_out.png" FocusImage="gui\language\ChineseS\origin_new\btn_1_on.png" PushImage="gui\language\ChineseS\origin_new\btn_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="368" Top="423" Width="100" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_haiwai_box_prize_yj" Font="font_main" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_pick_mail_click" />
+        </control>
+        <control name="grid_item" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,250,30" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\language\ChineseS\origin_new\grid.png" GridBackOffsetX="-9" GridBackOffsetY="-7" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="132" Top="109" Width="406" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" />
+            <event on_mouseout_grid="on_grid_item_mouseout_grid" on_mousein_grid="on_grid_item_mousein_grid" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="120" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_haiwai_box_prize_djjl" Font="font_main" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="227" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_haiwai_box_prize_sfxg" Font="font_main" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="537" Top="12" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_exp" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,414,21" LineHeight="21" ScrollSize="17" Left="136" Top="176" Width="414" Height="21" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_title" NoFrame="true" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="178" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_haiwai_box_prize_yljl" Font="font_main" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="16" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_haiwai_box_prize_sjjl" Font="font_title" />
+        </control>
+        <control name="lbl_event" entity="MultiTextBox" script="" init="">
+            <prop HAlign="Center" TextColor="255,255,204,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,413,41" LineHeight="36" ScrollSize="17" Left="115" Top="52" Width="413" Height="41" ShadowColor="0,0,0,0" Font="font_sns_title_huali_1" NoFrame="true" />
+        </control>
+        <control name="lbl_origin_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Top="552" Width="103" Height="164" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\origin_new\origin_1_out.png" />
+        </control>
+        <control name="lbl_origin_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="552" Width="103" Height="164" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\origin_new\origin_1_out.png" />
+        </control>
+        <control name="lbl_origin_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="376" Top="568" Width="103" Height="164" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\origin_new\origin_1_out.png" />
+        </control>
+        <control name="btn_origin_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\origin_new\origin_1_out.png" FocusImage="gui\language\ChineseS\origin_new\origin_1_on.png" PushImage="gui\language\ChineseS\origin_new\origin_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="104" Top="240" Width="103" Height="164" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_origin_click" />
+        </control>
+        <control name="btn_origin_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\origin_new\origin_1_out.png" FocusImage="gui\language\ChineseS\origin_new\origin_1_on.png" PushImage="gui\language\ChineseS\origin_new\origin_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="240" Top="240" Width="103" Height="164" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_origin_click" />
+        </control>
+        <control name="btn_origin_3" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\origin_new\origin_1_out.png" FocusImage="gui\language\ChineseS\origin_new\origin_1_on.png" PushImage="gui\language\ChineseS\origin_new\origin_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="376" Top="240" Width="103" Height="164" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_origin_click" />
+        </control>
+    </control>
+</form>

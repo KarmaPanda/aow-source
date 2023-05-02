@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_wuxue\form_wuxue_huihai.xml" entity="Form" script="form_stage_main\form_wuxue\form_wuxue_huihai" init="main_form_init">
+        <prop Transparent="true" LimitInScreen="true" Left="30" Top="29" Width="720" Height="455" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="gbox_list" entity="GroupBox" script="" init="">
+            <prop Width="180" Height="454" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="tree_types" entity="TreeViewEx" script="" init="">
+                <prop IsNoDrawRoot="true" IsLeftClickExpandClose="true" SelectForeColor="255,163,137,100" SelectBackColor="0,0,0,128" ScrollSize="17" AlwaysVScroll="true" Left="16" Top="10" Width="158" Height="406" ForeColor="255,101,80,63" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="simli16_W" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_tree_types_select_changed" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="0" FullBarBack="false" ForeColor="0,0,0,0" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    <subor name="DecButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="1" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="1" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\wuxue\liaotian_gdt_1.png" FocusImage="gui\special\wuxue\liaotian_gdt_2.png" PushImage="gui\special\wuxue\liaotian_gdt_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="406" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="gbox_right" entity="GroupBox" script="" init="">
+            <prop Left="198" Top="-1" Width="520" Height="455" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <control name="grid_huihai" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,0,0" MouseInColor="80,255,255,0" CoverColor="0,0,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="20,20,430,430" MaxSize="-1" RowNum="10" ClomnNum="10" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\wuxue\line\k.png" GridBackOffsetX="-7" GridBackOffsetY="-7" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="41" Top="10" Width="440" Height="440" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\wuxue\form_back\hhbg.png" />
+                <event on_mouseout_grid="on_grid_huihai_mouseout_grid" on_select_changed="on_grid_huihai_select_changed" on_mousein_grid="on_grid_huihai_mousein_grid" />
+            </control>
+            <control name="btn_reset" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\wuxue\button\reset_out.png" FocusImage="gui\special\wuxue\button\reset_on.png" PushImage="gui\special\wuxue\button\reset_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="489" Top="160" Width="31" Height="139" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_wuxue_huihai_chongzhi" TabStop="true" AutoSize="true" DrawMode="Expand" />
+                <event on_click="on_btn_reset_click" />
+            </control>
+            <control name="lbl_chong" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="496" Top="207" Width="22" Height="16" ForeColor="255,101,80,63" ShadowColor="0,0,0,0" Text="@ui_wuxue_huihai_chong" Font="font_text_title1" />
+            </control>
+            <control name="lbl_zhi" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="497" Top="223" Width="22" Height="16" ForeColor="255,101,80,63" ShadowColor="0,0,0,0" Text="@ui_wuxue_huihai_zhi" Font="font_text_title1" />
+            </control>
+        </control>
+    </control>
+</form>

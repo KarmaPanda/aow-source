@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_random_npc_creator" init="main_form_init">
+        <prop ShowGrid="true" Left="245" Top="93" Width="350" Height="646" BackColor="150,152,155,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="Label1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="168" Width="30" Height="24" ShadowColor="0,0,0,0" Text="位置" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="216" Width="62" Height="24" ShadowColor="0,0,0,0" Text="生成器半径" />
+        </control>
+        <control name="x_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="152" Top="192" Width="54" Height="20" ShadowColor="0,0,0,0" Enabled="false" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="z_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="288" Top="192" Width="54" Height="20" ShadowColor="0,0,0,0" Enabled="false" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="randomcreator_item_desc_edit" entity="RichEdit" script="" init="">
+            <prop ViewRect="4,4,250,20" Caret="Default" ReturnAllFormat="false" ScrollSize="17" HasVScroll="true" Solid="false" Left="152" Top="496" Width="150" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="376" Width="46" Height="24" ShadowColor="0,0,0,0" Text="NPC编号" />
+        </control>
+        <control name="id_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="208" Top="376" Width="94" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="id_edit_lost_focus" />
+        </control>
+        <control name="Label10" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="400" Width="54" Height="24" ShadowColor="0,0,0,0" Text="最大数量" />
+        </control>
+        <control name="amount_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="208" Top="400" Width="94" Height="20" ShadowColor="0,0,0,0" Text="1" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="amount_edit_lost_focus" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="448" Width="54" Height="24" ShadowColor="0,0,0,0" Text="刷新时间" />
+        </control>
+        <control name="refreshtime_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="208" Top="448" Width="94" Height="20" ShadowColor="0,0,0,0" Text="10" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="refreshtime_edit_lost_focus" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="472" Width="46" Height="24" ShadowColor="0,0,0,0" Text="NPC描述" />
+        </control>
+        <control name="xml_file_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="72" Width="134" Height="94" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="xml_file_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="304" Top="8" Width="22" Height="24" ShadowColor="0,0,0,0" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="go_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="152" Top="136" Width="70" Height="24" ShadowColor="0,0,0,0" Text="转到距NPC" TabStop="true" />
+            <event on_checked_changed="go_check_checked_changed" />
+        </control>
+        <control name="y_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="224" Top="192" Width="54" Height="20" ShadowColor="0,0,0,0" Enabled="false" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="112" Top="8" Width="102" Height="22" ShadowColor="0,0,0,0" Text="随机NPC摆放窗口" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="424" Width="46" Height="24" ShadowColor="0,0,0,0" Text="NPC角度" />
+        </control>
+        <control name="ay_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="1.000000" Min="-1.000000" Max="360.000000" Loop="true" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="208" Top="424" Width="94" Height="20" ShadowColor="0,0,0,0" Text="-1" Cursor="WIN_IBEAM" HintText="说明:-1表示随机角度" TabStop="true" />
+            <event on_lost_focus="ay_edit_lost_focus" on_drag="ay_edit_drag" />
+        </control>
+        <control name="show_creator_range_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="288" Top="216" Width="54" Height="24" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="显示" TabStop="true" />
+            <event on_checked_changed="show_creator_range_checked_changed" />
+        </control>
+        <control name="save_xml_file_btn" entity="Button" script="" init="">
+            <prop Left="232" Top="40" Width="94" Height="24" ShadowColor="0,0,0,0" Text="保存所有修改" TabStop="true" />
+            <event on_click="save_xml_file_btn_click" />
+        </control>
+        <control name="create_xml_file_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="40" Width="94" Height="24" ShadowColor="0,0,0,0" Text="创建XML文件" TabStop="true" />
+            <event on_click="create_xml_file_btn_click" />
+        </control>
+        <control name="delete_xml_file_btn" entity="Button" script="" init="">
+            <prop Left="120" Top="40" Width="94" Height="24" ShadowColor="0,0,0,0" Text="删除XML文件" TabStop="true" />
+            <event on_click="delete_xml_file_btn_click" />
+        </control>
+        <control name="creator_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="176" Width="134" Height="190" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="creator_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="npc_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="376" Width="134" Height="262" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="npc_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="npc_dis_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="240" Top="138" Width="38" Height="20" BackColor="255,128,128,128" ShadowColor="0,0,0,0" Text="2.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="136" Width="30" Height="24" ShadowColor="0,0,0,0" Text="米处" />
+        </control>
+        <control name="use_creator_check" entity="CheckButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" Left="152" Top="336" Width="78" Height="24" ShadowColor="0,0,0,0" Text="存储生成器" TabStop="true" />
+            <event on_checked_changed="use_creator_checked_changed" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="240" Width="70" Height="24" ShadowColor="0,0,0,0" Text="NPC副本进度" />
+        </control>
+        <control name="npc_progress_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="224" Top="240" Width="54" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="npc_progress_edit_lost_focus" />
+        </control>
+        <control name="delete_creator_btn" entity="Button" script="" init="">
+            <prop Left="240" Top="336" Width="80" Height="24" ShadowColor="0,0,0,0" Text="删除生成器" TabStop="true" />
+            <event on_click="delete_creator_btn_click" />
+        </control>
+        <control name="delete_npc_btn" entity="Button" script="" init="">
+            <prop Left="152" Top="576" Width="80" Height="24" ShadowColor="0,0,0,0" Text="删除NPC" TabStop="true" />
+            <event on_click="delete_npc_btn_click" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="264" Width="54" Height="24" ShadowColor="0,0,0,0" Text="警戒半径" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="288" Width="54" Height="24" ShadowColor="0,0,0,0" Text="追击半径" />
+        </control>
+        <control name="wakeup_range_float_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="224" Top="264" Width="54" Height="20" ShadowColor="0,0,0,0" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="wakeup_range_float_edit_changed" on_drag="wakeup_range_float_edit_drag" />
+        </control>
+        <control name="chase_range_float_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="224" Top="288" Width="54" Height="20" ShadowColor="0,0,0,0" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="chase_range_float_edit_changed" on_drag="chase_range_float_edit_drag" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="312" Width="54" Height="24" ShadowColor="0,0,0,0" Text="游走半径" />
+        </control>
+        <control name="patrol_range_float_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="224" Top="312" Width="54" Height="20" ShadowColor="0,0,0,0" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="patrol_range_float_edit_changed" on_drag="patrol_range_float_edit_drag" />
+        </control>
+        <control name="show_wakeuprange" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="288" Top="264" Width="54" Height="24" ForeColor="255,0,255,255" ShadowColor="0,0,0,0" Text="显示" TabStop="true" />
+            <event on_checked_changed="on_show_wakeuprange_checked_changed" />
+        </control>
+        <control name="show_chaserange" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="288" Top="288" Width="80" Height="24" ForeColor="255,255,0,255" ShadowColor="0,0,0,0" Text="显示" TabStop="true" />
+            <event on_checked_changed="on_show_chaserange_checked_changed" />
+        </control>
+        <control name="show_patrolrange" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="288" Top="312" Width="80" Height="24" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="显示" TabStop="true" />
+            <event on_checked_changed="on_show_patrolrange_checked_changed" />
+        </control>
+        <control name="save_way" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="216" Top="78" Width="126" Height="20" ShadowColor="0,0,0,0" Text="默认排序" />
+            <event on_selected="save_way_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Text="默认排序" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="152" Top="80" Width="80" Height="16" ShadowColor="0,0,0,0" Text="排序方式" />
+        </control>
+        <control name="from_left" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="152" Top="104" Width="42" Height="20" BackColor="255,128,128,128" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" HintText="起始坐标x" TabStop="true" />
+        </control>
+        <control name="from_top" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="200" Top="104" Width="42" Height="20" BackColor="255,128,128,128" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" HintText="起始坐标z" TabStop="true" />
+        </control>
+        <control name="to_left" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="256" Top="104" Width="42" Height="20" BackColor="255,128,128,128" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" HintText="终止坐标x" TabStop="true" />
+        </control>
+        <control name="to_top" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="304" Top="104" Width="42" Height="20" BackColor="255,128,128,128" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" HintText="终止坐标z" TabStop="true" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="195" Top="104" Width="22" Height="16" ShadowColor="0,0,0,0" Text=":" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="299" Top="104" Width="22" Height="16" ShadowColor="0,0,0,0" Text=":" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="245" Top="104" Width="14" Height="16" ShadowColor="0,0,0,0" Text="-" />
+        </control>
+        <control name="radius_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.200000" Max="200.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="224" Top="216" Width="54" Height="20" ShadowColor="0,0,0,0" Text="5" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="radius_edit_changed" on_drag="radius_edit_changed" />
+        </control>
+        <control name="fixed_check" entity="CheckButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" Left="152" Top="528" Width="80" Height="24" ShadowColor="0,0,0,0" Text="固定位置" TabStop="true" />
+            <event on_click="fixed_check_click" />
+        </control>
+    </control>
+</form>

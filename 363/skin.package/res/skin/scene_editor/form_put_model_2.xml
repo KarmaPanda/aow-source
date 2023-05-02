@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_put_model_2" init="main_form_init">
+        <prop ShowGrid="true" Left="245" Top="85" Width="254" Height="702" Font="GE_FONT" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="file_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" AlwaysHScroll="true" Left="8" Top="288" Width="238" Height="131" Text="ListBox1" TabStop="true" />
+            <event on_select_double_click="file_select_changed" on_select_click="file_select_changed" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="192" Height="17" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="85" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="path_tree" entity="TreeView" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" LevelWidth="18" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" AlwaysHScroll="true" Left="8" Top="37" Width="238" Height="222" Text="TreeView1" TabStop="true" AutoSize="true" />
+            <event on_select_changed="path_select_changed" on_expand_changed="path_tree_expand_changed" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="192" Height="17" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="176" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="104" Top="5" Width="70" Height="24" Text="物体摆放" />
+        </control>
+        <control name="sample_box" entity="SceneBox" script="" init="">
+            <prop Left="8" Top="424" Width="238" Height="134" BackColor="255,154,155,157" />
+        </control>
+        <control name="camera_dis_tb" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Minimum="1" Maximum="100" Value="50" Left="8" Top="568" Width="238" Height="14" BackColor="255,68,78,255" />
+            <event on_value_changed="camera_dis_tb_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" />
+            </subor>
+        </control>
+        <control name="file_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="56" Top="264" Width="118" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="file_edit_changed" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="8" Width="24" Height="24" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="264" Width="46" Height="16" Text="筛选:" />
+        </control>
+    </control>
+</form>

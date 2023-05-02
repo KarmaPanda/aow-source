@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_test\form_skill_check" init="main_form_init">
+        <prop ShowGrid="true" Left="85" Top="93" Width="894" Height="726" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="562" Width="884" Height="133" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area3.png" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="5" Top="693" Width="883" Height="29" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="32" Width="885" Height="535" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="860" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="397" Top="8" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_skill_test" Font="font_title" />
+        </control>
+        <control name="GridDrawLines" entity="DrawLines" script="" init="">
+            <prop TexWidth="256" LineWidth="1.000000" Left="48" Top="40" Width="782" Height="502" ShadowColor="0,0,0,0" Text="DrawLines1" NoFrame="true" />
+        </control>
+        <control name="DrawLines1" entity="DrawLines" script="" init="">
+            <prop TexWidth="256" LineWidth="1.000000" Left="48" Top="40" Width="782" Height="502" ShadowColor="0,0,0,0" Text="DrawLines1" NoFrame="true" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="824" Top="544" Width="54" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_average_skill_second" Font="font_title" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="40" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_average_skill_times" Font="font_title" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="24" Top="584" Width="66" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_total_deviation" Font="font_title" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="184" Top="584" Width="59" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_time" Font="font_title" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="320" Top="584" Width="86" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_average_number" Font="font_title" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="24" Top="648" Width="134" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_useskilltimes_persecond" Font="font_title" />
+        </control>
+        <control name="lbl_value" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="1,0,520,42" LineHeight="21" ScrollSize="17" HasVScroll="true" Left="176" Top="648" Width="539" Height="42" ShadowColor="0,0,0,0" Font="font_title" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop Maximum="1" SmallChange="1" LargeChange="1" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="12" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="12" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="8" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="24" Top="616" Width="74" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_total_deviation_1" Font="font_title" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="184" Top="616" Width="63" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_time_2" Font="font_title" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="328" Top="616" Width="78" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_average_number2" Font="font_title" />
+        </control>
+        <control name="btn_Inmage" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="801" Top="694" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_deviation_cut" Font="font_btn" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_Inmage_click" />
+        </control>
+        <control name="DrawLines2" entity="DrawLines" script="" init="">
+            <prop TexWidth="256" LineWidth="1.000000" Left="48" Top="40" Width="782" Height="502" ShadowColor="0,0,0,0" Text="DrawLines1" NoFrame="true" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="744" Top="584" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_player" Font="font_title" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="744" Top="616" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_scene" Font="font_title" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="744" Top="648" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_location" Font="font_title" />
+        </control>
+        <control name="lbl_player" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="800" Top="584" Width="70" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_title" />
+        </control>
+        <control name="lbl_scene" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="800" Top="616" Width="70" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_title" />
+        </control>
+        <control name="lbl_pos" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="800" Top="648" Width="70" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_title" />
+        </control>
+        <control name="fipt_check_total" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="104" Top="618" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="fipt_total" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="104" Top="586" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="fipt_check_total_time" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="264" Top="618" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="fipt_time" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="264" Top="586" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="fipt_check_total_average" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="416" Top="618" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="fipt_average" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="416" Top="586" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="563" Width="884" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="fipt_cur_minute" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="616" Top="618" Width="118" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="fipt_last_minute" entity="Float_Edit" script="" init="">
+            <prop Format="%.2f" DragStep="0.001000" Min="-10000.000000" Max="1000000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="616" Top="586" Width="150" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="482" Top="616" Width="113" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_just_now" Font="font_title" />
+        </control>
+        <control name="lbl_19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="482" Top="584" Width="110" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deviation_last_times" Font="font_title" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_hongbao\form_hongbao_detail" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="29" Top="29" Width="400" Height="669" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\redpacket\Bbg_1.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back_main" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="248" Width="339" Height="366" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\redpacket\Bbg_2.png" />
+        </control>
+        <control name="btn_close_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="372" Top="74" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_1_click" />
+        </control>
+        <control name="lbl_back_s" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="304" Width="324" Height="302" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\redpacket\Bbg_3.png" />
+        </control>
+        <control name="lbl_yinzi" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="285" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+        </control>
+        <control name="lbl_num" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Top="282" Width="134" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_hongbao_money" Font="font_money" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="340" Top="327" Width="20" Height="260" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\redpacket\Hline_1.png" />
+        </control>
+        <control name="groupscrollbox_detail" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="48" Top="314" Width="310" Height="286" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <subor name="VScrollBar">
+                <prop SmallChange="1" LargeChange="286" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\redpacket\Gbtn_1_out.png" FocusImage="gui\special\redpacket\Gbtn_1_on.png" PushImage="gui\special\redpacket\Gbtn_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="19" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\redpacket\Gbtn_2_out.png" FocusImage="gui\special\redpacket\Gbtn_2_on.png" PushImage="gui\special\redpacket\Gbtn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="19" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\redpacket\Hline_2.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                </subor>
+            </subor>
+        </control>
+        <control name="groupbox_templet" entity="GroupBox" script="" init="">
+            <prop Top="688" Width="293" Height="62" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+            <control name="lbl_playername" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="8" Width="70" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_hongbao_detail_player" Font="font_main" />
+            </control>
+            <control name="mltbox_tw" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,250,30" LineHeight="15" HtmlText="@ui_hongbao_detail_date" ScrollSize="17" Left="24" Top="28" Width="250" Height="30" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="mltbox_num" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,126,22" LineHeight="15" HtmlText="@ui_hongbao_detail_get" ScrollSize="17" Left="168" Top="8" Width="126" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_lucky" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="2" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\redpacket\best.png" />
+            </control>
+            <control name="lbl_line" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="12" Top="61" Width="278" Height="1" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\redpacket\line.png" />
+            </control>
+        </control>
+        <control name="lbl_m" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="120" Top="624" Width="102" Height="22" ForeColor="255,255,212,143" ShadowColor="0,0,0,0" Text="@ui_hongbao_detail_1" Font="font_name_tittle" />
+        </control>
+        <control name="lbl_from" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="40" Top="254" Width="326" Height="22" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Text="@ui_hongbao_open_player" Font="font_playername" />
+        </control>
+        <control name="lbl_money" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="280" Width="70" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_hongbao_detail_money" Font="font_name_tittle" />
+        </control>
+        <control name="lbl_nametitle" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="152" Top="64" Width="94" Height="26" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\redpacket\xiangqing.png" />
+        </control>
+    </control>
+</form>

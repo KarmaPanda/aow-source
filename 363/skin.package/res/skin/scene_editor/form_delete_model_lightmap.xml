@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_delete_model_lightmap" init="main_form_init">
+        <prop ShowGrid="true" Left="109" Top="117" Width="390" Height="190" BackColor="150,152,155,255" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="136" Top="16" Width="142" Height="22" Text="批量删除模型光贴图" />
+        </control>
+        <control name="model_path_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="56" Top="56" Width="78" Height="22" Text="模型路径：" />
+        </control>
+        <control name="model_path_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="136" Top="56" Width="198" Height="22" Text="mdl\\" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="360" Top="8" Width="24" Height="24" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="delete_cur_scene_model_lightmap_btn" entity="Button" script="" init="">
+            <prop Left="56" Top="96" Width="278" Height="24" Text="删除当前场景的模型的光贴图" TabStop="true" />
+            <event on_click="delete_cur_scene_model_lightmap_btn_click" />
+        </control>
+        <control name="delete_all_scene_model_lightmap_btn_click" entity="Button" script="" init="">
+            <prop Left="56" Top="128" Width="278" Height="24" Enabled="false" Text="删除所有场景的模型的光贴图" TabStop="true" />
+            <event on_click="delete_all_scene_model_lightmap_btn_click_click" />
+        </control>
+    </control>
+</form>

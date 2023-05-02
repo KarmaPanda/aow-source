@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_mail\form_mail_read.xml" entity="Form" script="form_stage_main\form_mail\form_mail_read" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="221" Top="69" Width="350" Height="402" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="form_mail_read_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="325" Top="8" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_close_click" />
+        </control>
+        <control name="delete" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="29" Top="210" Width="98" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_returnletter" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="delete_2" />
+            <event on_click="on_delete_click" />
+        </control>
+        <control name="answer" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="237" Top="210" Width="98" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huifu" Font="font_btn" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_answer_click" />
+        </control>
+        <control name="writer" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="16" Top="54" Width="46" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_faxinren" Font="font_main" />
+        </control>
+        <control name="sender" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="128" Top="54" Width="118" Height="16" ForeColor="255,128,50,23" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,255,255,255" Font="font_main" DrawMode="ExpandH" />
+        </control>
+        <control name="title" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,309,38" ScrollSize="17" Left="16" Top="8" Width="309" Height="38" ShadowColor="0,255,0,0" Text="mltbox_1" Font="font_text_sys" NoFrame="true" />
+        </control>
+        <control name="content" entity="RichEdit" script="" init="">
+            <prop ViewRect="2,2,280,130" ReadOnly="true" MaxLength="200" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" ScrollSize="14" HasVScroll="true" Left="16" Top="74" Width="302" Height="134" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="FitWindow" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_mail_note" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="16" Top="256" Width="118" Height="16" ForeColor="255,81,63,49" ShadowColor="0,255,255,255" Font="font_text" />
+        </control>
+        <control name="lbl_xian2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="245" Width="310" Height="6" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+        </control>
+        <control name="lbl_xian3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="3" Top="54" Width="339" Height="20" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_bg3.png" />
+        </control>
+        <control name="lbl_is_pay" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="198" Top="7" Width="51" Height="22" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\mail_pay.png" />
+        </control>
+        <control name="btn_return" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="133" Top="210" Width="98" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_return" Font="font_btn" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_return_click" />
+        </control>
+        <control name="groupbox_appendix" entity="GroupBox" script="" init="">
+            <prop Left="16" Top="282" Width="323" Height="64" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            <control name="recvbox" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,350,130" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="36" GridWidth="36" GridsPos="4,4;74,4;144,4;214,4;284,4" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item2.png" GridBackOffsetX="-4" GridBackOffsetY="-4" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="1" Top="8" Width="54" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" AutoSize="true" DrawMode="Center" />
+                <event on_mouseout_grid="on_mouseout_grid" on_mousein_grid="on_mousein_grid" />
+            </control>
+            <control name="pick_up" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="255,255,255,255" Left="236" Top="22" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Text="@ui_consign_buy" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_get_appendix_click" />
+            </control>
+            <control name="cash" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="54" Top="32" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="lbl_ding" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="79" Top="28" Width="22" Height="20" ForeColor="255,228,109,10" ShadowColor="0,255,255,255" Text="0" Font="font_main" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="101" Top="28" Width="27" Height="20" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Text="@ui_ding" Font="font_main" />
+            </control>
+            <control name="lbl_liang" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="127" Top="28" Width="22" Height="20" ForeColor="255,0,121,52" ShadowColor="0,255,255,255" Text="0" Font="font_main" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="148" Top="28" Width="38" Height="20" ForeColor="255,0,121,52" ShadowColor="0,0,0,0" Text="@ui_liang" Font="font_text" />
+            </control>
+            <control name="lbl_wen" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="184" Top="28" Width="22" Height="20" ForeColor="255,69,55,35" ShadowColor="0,255,255,255" Text="0" Font="font_main" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="207" Top="28" Width="30" Height="20" ForeColor="255,69,55,35" ShadowColor="0,0,0,0" Text="@ui_wen" Font="font_text" />
+            </control>
+        </control>
+        <control name="groupbox_have_money" entity="GroupBox" script="" init="">
+            <prop Left="16" Top="355" Width="324" Height="31" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="6" Width="78" Height="22" ForeColor="255,95,67,37" ShadowColor="0,0,0,0" Text="@ui_cash01" Font="font_text" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_money" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="8" Width="150" Height="16" ForeColor="255,95,67,37" ShadowColor="0,255,255,255" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="10" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\common\money\yyb.png" />
+            </control>
+        </control>
+        <control name="btn_friend" entity="Button" script="" init="">
+            <prop NormalImage="gui\mainform\role\hy_out.png" FocusImage="gui\mainform\role\hy_on.png" PushImage="gui\mainform\role\hy_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="209" Top="46" Width="23" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_menu_friend_jiawei_friend" AutoSize="true" />
+            <event on_click="on_btn_friend_click" />
+        </control>
+        <control name="btn_hei" entity="Button" script="" init="">
+            <prop NormalImage="gui\mainform\role\btn_jujuemsr_out.png" FocusImage="gui\mainform\role\btn_jujuemsr_on.png" PushImage="gui\mainform\role\btn_jujuemsr_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="237" Top="45" Width="21" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_menu_sns_jiaru_black" AutoSize="true" />
+            <event on_click="on_btn_hei_click" />
+        </control>
+        <control name="lbl_mail_sign" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="10" Width="10" Height="27" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+    </control>
+</form>

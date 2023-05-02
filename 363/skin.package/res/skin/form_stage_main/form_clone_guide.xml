@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_clone_guide" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="45" Top="141" Width="716" Height="446" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="33" Width="708" Height="411" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="263" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="686" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_info_desc" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="88" Top="46" Width="262" Height="30" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_clonerec_title07" Font="font_title_tasktrace" DrawMode="Expand" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="groupbox_info_desc" entity="GroupBox" script="" init="">
+            <prop Left="12" Top="94" Width="422" Height="22" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_jindi_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="26" Width="78" Height="24" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_clonerec_title02" Font="font_sns_main" />
+            </control>
+            <control name="lbl_location" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="138" Width="70" Height="22" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_clonerec_title03" Font="font_sns_main" />
+            </control>
+            <control name="lbl_switch_point" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="228" Width="62" Height="24" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_clonerec_title04" Font="font_text" />
+            </control>
+            <control name="lbl_player_num" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="292" Width="54" Height="22" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_clonerec_title05" Font="font_text" />
+            </control>
+            <control name="lbl_diff" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="331" Width="80" Height="22" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_clonerec_title06" Font="font_text" />
+            </control>
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="287" Top="11" Width="94" Height="14" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Text="@ui_jindixiangguan" Font="font_title" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="27" Width="708" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="436" Top="56" Width="4" Height="366" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\dailypoint\line1.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="448" Top="48" Width="60" Height="24" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_clonerec_title09" Font="font_title_tasktrace" DrawMode="Expand" BackImage="gui\common\form_line\line_bg3.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="72" Width="408" Height="22" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_bg3.png" />
+        </control>
+        <control name="mltbox_prog" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,76,61,44" SelectBarColor="255,128,128,128" MouseInBarColor="0,255,255,0" ViewRect="0,0,254,302" LineHeight="17" ScrollSize="17" Left="446" Top="80" Width="254" Height="302" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Font="font_sns_main_1" NoFrame="true" />
+        </control>
+        <control name="gbox_page" entity="GroupBox" script="" init="">
+            <prop Left="446" Top="392" Width="254" Height="47" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="btn_page_up" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_left_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="74" Top="12" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_page_up_click" />
+            </control>
+            <control name="btn_page_down" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="170" Top="12" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_page_down_click" />
+            </control>
+            <control name="lbl_page" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="114" Top="14" Width="38" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="1/1" Font="font_sns_main_1" />
+            </control>
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="22" Top="119" Width="395" Height="310" ShadowColor="0,0,0,0" BackImage="gui\special\rank\bg_grid.png" />
+        </control>
+        <control name="grid_clone" entity="Grid" script="" init="">
+            <prop HeaderBackColor="0,255,255,255" RowHeaderVisible="false" CanSelectRow="true" ColWidth="40" ColWidths="60,60,85,85,40,60" RowHeight="30" ColCount="6" ScrollSize="14" HasHScroll="true" Left="22" Top="120" Width="414" Height="300" ForeColor="255,76,61,44" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_main_1" TabStop="true" NoFrame="true" DrawMode="ExpandH" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="8" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop ButtonSize="14" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="btn_reset_clone" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="640" Top="382" Width="60" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@textinskin00006" Font="font_sns_name" HintText="@ui_clonesave_clear" DrawMode="Center" />
+            <event on_click="on_btn_reset_clone_click" />
+        </control>
+        <control name="lbl_reset_count_describe" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="528" Top="48" Width="122" Height="24" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@textinskin00007" Font="font_title_tasktrace" />
+        </control>
+        <control name="lbl_reset_count" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="675" Top="48" Width="25" Height="24" ForeColor="255,255,61,44" ShadowColor="0,0,0,0" Font="font_title_tasktrace" />
+        </control>
+    </control>
+</form>

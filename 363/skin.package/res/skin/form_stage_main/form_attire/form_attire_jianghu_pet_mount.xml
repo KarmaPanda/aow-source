@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_attire\form_attire_jianghu_pet_mount" init="on_main_form_init">
+        <prop ShowGrid="true" Width="560" Height="654" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="form_open" on_close="on_main_form_close" />
+        <control name="groupbox_title" entity="GroupBox" script="" init="">
+            <prop Width="542" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="rbtn_9" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_anniu_out.png" FocusImage="gui\special\attire\attire_btn\btn_anniu_on.png" CheckedImage="gui\special\attire\attire_btn\btn_anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,0,0,0" PushColor="255,0,0,0" DisableColor="0,0,0,0" Width="66" Height="45" ForeColor="255,83,32,12" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Text="@ui_rider_title20" Font="font_main" TabIndex="1" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="show_shuzhuangtai_change_all_click" />
+            </control>
+            <control name="rbtn_10" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_anniu_out.png" FocusImage="gui\special\attire\attire_btn\btn_anniu_on.png" CheckedImage="gui\special\attire\attire_btn\btn_anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,0,0,0" PushColor="255,0,0,0" DisableColor="0,0,0,0" Left="145" Width="66" Height="45" ForeColor="255,83,32,12" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Text="@ui_attire_save_8" Font="font_main" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="show_shuzhuangtai_change_had_click" />
+            </control>
+            <control name="rbtn_1" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_anniu_out.png" FocusImage="gui\special\attire\attire_btn\btn_anniu_on.png" CheckedImage="gui\special\attire\attire_btn\btn_anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,0,0,0" PushColor="255,0,0,0" DisableColor="0,0,0,0" Left="73" Width="66" Height="45" ForeColor="255,83,32,12" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Text="@attire_type_zaiju" Font="font_main" TabIndex="2" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="show_shuzhuangtai_change_all_click" />
+            </control>
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="4" Top="56" Width="560" Height="590" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="groupbox_model_pet" entity="GroupBox" script="" init="">
+            <prop Left="2000" Top="189" Width="249" Height="118" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\special\attire\attire_back\tz_out.png" />
+            <control name="imagegrid_2" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="5" GridOffsetY="5" GridHeight="73" GridWidth="72" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\attire\attire_back\k_jhz.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="14" Top="31" Width="74" Height="75" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="3" Top="11" Width="236" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="赤炎鸟" Font="font_main" />
+            </control>
+            <control name="lbl_type" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="115" Top="43" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="灵宠" Font="font_main" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="97" Top="83" Width="143" Height="30" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_text_figure" AutoSize="true" BackImage="gui\special\attire\attire_back\zton.png" />
+            </control>
+            <control name="btn_huoqu_1" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="480" Top="344" Width="30" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </control>
+        </control>
+        <control name="btn_left" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\attire\attire_btn\btn_left_out.png" FocusImage="gui\special\attire\attire_btn\btn_left_on.png" PushImage="gui\special\attire\attire_btn\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="197" Top="-33" Width="42" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" />
+            <event on_click="on_btn_left_click" />
+        </control>
+        <control name="btn_right" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\attire\attire_btn\btn_right_out.png" FocusImage="gui\special\attire\attire_btn\btn_right_on.png" PushImage="gui\special\attire\attire_btn\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="269" Top="-33" Width="42" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" />
+            <event on_click="on_btn_right_click" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="243" Top="-23" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="11/12" Font="font_main" />
+        </control>
+    </control>
+</form>

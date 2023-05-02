@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_wuxue\form_holdfaculty_buy" init="main_form_init">
+        <prop ShowGrid="true" Left="309" Top="189" Width="358" Height="478" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_deep" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="350" Height="411" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_main" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="34" Width="349" Height="408" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_area" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="442" Width="348" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_top" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="104" Width="150" Height="29" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="120" Top="9" Width="134" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_faculty_potentialarouse" Font="font_title" />
+        </control>
+        <control name="lbl_holdfaculty_info" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="56" Top="264" Width="134" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_jifaqianneng" Font="font_text" DrawMode="Expand" />
+        </control>
+        <control name="btn_buy" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="252" Top="443" Width="100" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_faculty_now_buy" Font="font_btn" TabStop="true" NoFrame="true" DrawMode="Expand" />
+            <event on_click="on_btn_buy_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="329" Top="5" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_colse_click" />
+        </control>
+        <control name="mltbox_about_holdfaculty" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="6,6,288,120" LineHeight="18" HtmlText="@ui_faculty_explain_3" LineTextAlign="Top" ScrollSize="17" Left="38" Top="80" Width="278" Height="102" ShadowColor="0,0,0,0" Enabled="false" Font="font_text_figure" NoFrame="true" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_text_plz" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="66" Top="320" Width="174" Height="16" ForeColor="255,255,5,0" ShadowColor="0,255,255,255" Text="@ui_xuanzehuangjin" Font="font_text" />
+        </control>
+        <control name="tbar_select" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="64" Top="296" Width="214" Height="14" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\trackbar\bg_2.png" />
+            <event on_value_changed="on_track_value_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\common\trackbar\tb_2_out.png" FocusImage="gui\common\trackbar\tb_2_on.png" PushImage="gui\common\trackbar\tb_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="0,115,192,79" ShadowColor="0,0,0,0" AutoSize="true" />
+            </subor>
+        </control>
+        <control name="lbl_buy_faculty" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="266" Width="102" Height="16" ForeColor="255,147,123,99" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_buy_jinzi" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="156" Top="363" Width="80" Height="16" ForeColor="255,147,123,99" ShadowColor="0,255,255,255" Text="@ui_faculty_costgold" Font="font_text_figure" />
+        </control>
+        <control name="lbl_text_all" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="104" Top="400" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_yongyou" Font="font_text" />
+        </control>
+        <control name="lbl_all_money" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="156" Top="403" Width="80" Height="16" ForeColor="255,147,123,99" ShadowColor="0,255,255,255" Text="@ui_faculty_owngold" Font="font_text_figure" />
+        </control>
+        <control name="lbl_text_holdfaculty" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="88" Top="232" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_faculty_potential" Font="font_text" />
+        </control>
+        <control name="lbl_hold_faculty" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="234" Width="102" Height="16" ForeColor="255,147,123,99" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Top="360" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_huafei" Font="font_text" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="336" Top="352" Width="70" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="Arial11" DrawMode="ExpandH" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="408" Width="70" Height="28" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="27" Width="348" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_line_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="437" Width="349" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_line_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="10" Top="60" Width="336" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+        </control>
+        <control name="lbl_head" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="48" Width="190" Height="27" ForeColor="255,76,61,44" ShadowColor="0,255,255,255" Text="@ui_shuoming" Font="font_text_title1" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="lbl_line_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="10" Top="208" Width="336" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+        </control>
+        <control name="lbl_t2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="196" Width="190" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_faculty_potentialarouse" Font="font_text_title1" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="btn_online_charge" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="112" Top="443" Width="140" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_addmoney_7" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_online_charge_click" />
+        </control>
+    </control>
+</form>

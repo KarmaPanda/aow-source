@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_note\form_note_wuxue_record" init="main_form_init">
+        <prop LimitInScreen="true" Left="29" Top="21" Width="999" Height="653" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_top" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="38" Width="942" Height="87" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\bg_top.png" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="28" Width="999" Height="625" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\bg_year.png" />
+        </control>
+        <control name="btn_return_day" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\jianghu_log\btn_2_on.png" FocusImage="gui\special\jianghu_log\btn_2_out.png" PushImage="gui\special\jianghu_log\btn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="32" Top="92" Width="20" Height="45" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_return_day_click" />
+        </control>
+        <control name="groupbox_info" entity="GroupBox" script="" init="">
+            <prop Left="76" Top="35" Width="870" Height="48" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="btn_particular" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\jianghu_log\btn_1_out.png" FocusImage="gui\special\jianghu_log\btn_1_on.png" PushImage="gui\special\jianghu_log\btn_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="788" Top="15" Width="58" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xxi" Font="font_main" TabStop="true" AutoSize="true" />
+                <event on_click="on_btn_particular_click" />
+            </control>
+            <control name="btn_share" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\jianghu_log\btn_1_out.png" FocusImage="gui\special\jianghu_log\btn_1_on.png" PushImage="gui\special\jianghu_log\btn_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="812" Top="-43" Width="58" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_fenxiang" Font="font_reputation_require" TabStop="true" AutoSize="true" />
+                <event on_click="on_btn_share_click" />
+            </control>
+            <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="190,190,190,190" MouseInBarColor="0,0,0,0" ViewRect="0,0,567,22" LineHeight="18" ScrollSize="17" Left="204" Top="24" Width="567" Height="22" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+            </control>
+            <control name="lbl_data" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="25" Width="206" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@textinskin00508" Font="font_text_chat" />
+            </control>
+        </control>
+        <control name="btn_return_month" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\jianghu_log\btn_2_on.png" FocusImage="gui\special\jianghu_log\btn_2_out.png" PushImage="gui\special\jianghu_log\btn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="32" Top="92" Width="20" Height="45" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_return_month_click" />
+        </control>
+        <control name="lbl_fan" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="1104" Top="96" Width="14" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_fan" Font="font_sns_event_time" />
+        </control>
+        <control name="lbl_hui" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="1128" Top="168" Width="14" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_hui" Font="font_sns_event_time" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="954" Top="50" Width="18" Height="18" ForeColor="255,255,255,255" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="255,255,255,255" Font="font_reputation_require" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_year" entity="GroupBox" script="" init="">
+            <prop Left="80" Top="96" Width="806" Height="30" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="rbtn_2011" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,0,0,0" FocusColor="255,255,255,0" PushColor="255,255,0,0" DisableColor="0,0,0,0" Left="28" Width="54" Height="24" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_eryi" DataSource="2011" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_year_checked_changed" />
+            </control>
+            <control name="rbtn_2012" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,0,0,0" FocusColor="255,255,255,0" PushColor="255,255,0,0" DisableColor="0,0,0,0" Left="110" Width="54" Height="24" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_erer" DataSource="2012" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_year_checked_changed" />
+            </control>
+            <control name="rbtn_2013" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,0,0,0" FocusColor="255,255,255,0" PushColor="255,255,0,0" DisableColor="0,0,0,0" Left="200" Width="54" Height="24" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_ersan" DataSource="2013" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_year_checked_changed" />
+            </control>
+            <control name="rbtn_2014" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,0,0,0" FocusColor="255,255,255,0" PushColor="255,255,0,0" DisableColor="0,0,0,0" Left="286" Width="54" Height="24" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_ersi" DataSource="2014" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_year_checked_changed" />
+            </control>
+            <control name="rbtn_2015" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,0,0,0" FocusColor="255,255,255,0" PushColor="255,255,0,0" DisableColor="0,0,0,0" Left="528" Width="54" Height="24" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_erwu" DataSource="2015" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_year_checked_changed" />
+            </control>
+            <control name="rbtn_2016" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,0,0,0" FocusColor="255,255,255,0" PushColor="255,255,0,0" DisableColor="0,0,0,0" Left="608" Width="54" Height="24" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_erliu" DataSource="2016" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_year_checked_changed" />
+            </control>
+            <control name="lbl_2011" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="-2" Width="33" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\shenegxiao\icon_rabbit.png" />
+            </control>
+            <control name="lbl_2012" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="90" Top="-2" Width="33" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\shenegxiao\icon_dragon.png" />
+            </control>
+            <control name="lbl_2013" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="176" Width="33" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\shenegxiao\icon_ox.png" />
+            </control>
+            <control name="lbl_2014" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="-2" Width="33" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\shenegxiao\icon_horse.png" />
+            </control>
+            <control name="lbl_2015" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Width="33" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\shenegxiao\icon_sheep.png" />
+            </control>
+            <control name="lbl_2016" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="584" Width="33" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\shenegxiao\icon_monkey.png" />
+            </control>
+        </control>
+        <control name="lbl_date" entity="Label" script="" init="">
+            <prop Align="Right" RefCursor="WIN_HELP" Left="688" Top="98" Width="221" Height="16" ShadowColor="0,0,0,0" Font="font_text_title2" />
+        </control>
+        <control name="lbl_sbar" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="111" Top="553" Width="784" Height="33" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\jianghu_log\bg_scrollbar1.png" />
+        </control>
+        <control name="textgrid_wuxue" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" RowHeaderVisible="false" SelectForeColor="255,0,0,0" SelectBackColor="190,190,190,190" CanSelectRow="true" ColWidth="40" RowHeight="31" ScrollSize="33" HasHScroll="true" Left="120" Top="128" Width="763" Height="457" BackColor="0,255,255,255" LineColor="0,255,0,0" ShadowColor="0,0,0,0" Enabled="false" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop ButtonSize="29" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_left_out.png" FocusImage="gui\special\jianghu_log\btn_left_on.png" PushImage="gui\special\jianghu_log\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="29" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_right_out.png" FocusImage="gui\special\jianghu_log\btn_right_on.png" PushImage="gui\special\jianghu_log\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="29" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_trace_out.png" FocusImage="gui\special\jianghu_log\btn_trace_on.png" PushImage="gui\special\jianghu_log\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="8" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\special\jianghu_log\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_up_out.png" FocusImage="gui\special\jianghu_log\btn_up_on.png" PushImage="gui\special\jianghu_log\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_down_out.png" FocusImage="gui\special\jianghu_log\btn_down_on.png" PushImage="gui\special\jianghu_log\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="textgrid_day" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" RowHeaderVisible="false" SelectForeColor="255,0,0,0" SelectBackColor="190,190,190,190" CanSelectRow="true" ColWidth="200" RowHeight="31" ScrollSize="33" HasHScroll="true" Left="120" Top="128" Width="763" Height="457" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Font="font_task_name" TabStop="true" DrawMode="Expand" />
+            <subor name="HScrollBar">
+                <prop ButtonSize="29" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_left_out.png" FocusImage="gui\special\jianghu_log\btn_left_on.png" PushImage="gui\special\jianghu_log\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="29" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_right_out.png" FocusImage="gui\special\jianghu_log\btn_right_on.png" PushImage="gui\special\jianghu_log\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="29" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_trace_out.png" FocusImage="gui\special\jianghu_log\btn_trace_on.png" PushImage="gui\special\jianghu_log\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="8" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\special\jianghu_log\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_up_out.png" FocusImage="gui\special\jianghu_log\btn_up_on.png" PushImage="gui\special\jianghu_log\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_down_out.png" FocusImage="gui\special\jianghu_log\btn_down_on.png" PushImage="gui\special\jianghu_log\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="textgrid_month" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="0,255,255,255" RowHeaderVisible="false" SelectForeColor="255,0,0,0" SelectBackColor="190,190,190,190" CanSelectRow="true" ColWidth="100" RowHeight="31" ColCount="31" ScrollSize="33" HasHScroll="true" Left="120" Top="128" Width="763" Height="457" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Font="font_task_name" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop ButtonSize="29" FullBarBack="false" Maximum="24" SmallChange="1" LargeChange="7" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_left_out.png" FocusImage="gui\special\jianghu_log\btn_left_on.png" PushImage="gui\special\jianghu_log\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="29" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_right_out.png" FocusImage="gui\special\jianghu_log\btn_right_on.png" PushImage="gui\special\jianghu_log\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="29" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_trace_out.png" FocusImage="gui\special\jianghu_log\btn_trace_on.png" PushImage="gui\special\jianghu_log\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="159" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\special\jianghu_log\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_up_out.png" FocusImage="gui\special\jianghu_log\btn_up_on.png" PushImage="gui\special\jianghu_log\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\jianghu_log\btn_down_out.png" FocusImage="gui\special\jianghu_log\btn_down_on.png" PushImage="gui\special\jianghu_log\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_return" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="104" Width="20" Height="21" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\special\jianghu_log\btn_back_001.png" />
+        </control>
+    </control>
+</form>

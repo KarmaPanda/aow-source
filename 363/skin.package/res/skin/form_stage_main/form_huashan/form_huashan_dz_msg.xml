@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_huashan\form_huashan_dz_msg" init="main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="852" Height="564" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\huashan\bg_main.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_dz" entity="GroupBox" script="" init="">
+            <prop Left="3" Top="47" Width="269" Height="510" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Width="270" Height="463" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\huashan\bg_main_4.png" />
+            </control>
+            <control name="groupbox_change" entity="GroupBox" script="" init="">
+                <prop Left="14" Top="440" Width="221" Height="46" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="btn_left" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="64" Top="29" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_left_click" />
+                </control>
+                <control name="btn_right" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Top="28" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_right_click" />
+                </control>
+                <control name="rbtn_1" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" DisableImage="gui\special\huashan\btn_saichengbiao_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,255,255,255" Left="90" Top="24" Width="54" Height="30" ForeColor="255,255,217,188" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="2/5" Font="font_money" TabIndex="1" TabStop="true" DrawMode="Expand" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+            </control>
+            <control name="groupscrollbox_dz_list" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="18" HasVScroll="true" Left="14" Top="72" Width="254" Height="380" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="10" LargeChange="20" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="44" Width="245" Height="16" ForeColor="255,255,217,188" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+        </control>
+        <control name="groupbox_dz_detail" entity="GroupBox" script="" init="">
+            <prop Left="273" Top="63" Width="574" Height="486" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_place" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="168" Top="16" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" />
+            </control>
+            <control name="lbl_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="736" Top="24" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="groupbox_v" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="24" Width="446" Height="410" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_name_v" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="24" Width="80" Height="32" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_school_v" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="96" Top="96" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_combox_text" />
+                </control>
+                <control name="lbl_lvl_v" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="96" Top="64" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_combox_text" />
+                </control>
+                <control name="lbl_gang_v" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="96" Top="128" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_combox_text" />
+                </control>
+                <control name="lbl_times_v" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="7" Top="160" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_bifen" Font="font_combox_text" />
+                </control>
+                <control name="scenebox_v" entity="SceneBox" script="" init="">
+                    <prop Transparent="true" Left="64" Top="48" Width="250" Height="380" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                </control>
+                <control name="groupbox_times_v" entity="GroupBox" script="" init="">
+                    <prop Left="16" Top="184" Width="100" Height="150" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="7" Top="64" Width="46" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_shili" Font="font_combox_text" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="7" Top="96" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_menpai" Font="font_combox_text" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="7" Top="128" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_bangpai" Font="font_combox_text" />
+                </control>
+                <control name="btn_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\huashan\btn_yazhu_out.png" FocusImage="gui\language\ChineseS\huashan\btn_yazhu_on.png" PushImage="gui\language\ChineseS\huashan\btn_yazhu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="680" Top="280" Width="44" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="96" Top="152" Width="80" Height="16" ShadowColor="0,0,0,0" />
+                </control>
+                <control name="lbl_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="328" Width="157" Height="67" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\huashan\touying.png" />
+                </control>
+            </control>
+            <control name="groupbox_s" entity="GroupBox" script="" init="">
+                <prop Left="128" Top="24" Width="446" Height="410" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_name_s" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="248" Top="24" Width="80" Height="32" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_school_s" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="293" Top="96" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_combox_text" />
+                </control>
+                <control name="lbl_lvl_s" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="293" Top="64" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_combox_text" />
+                </control>
+                <control name="lbl_gang_s" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="320" Top="128" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_combox_text" />
+                </control>
+                <control name="lbl_times_s" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="208" Top="160" Width="80" Height="16" ForeColor="255,255,255,255" BlendColor="255,0,0,0" ShadowColor="0,0,0,0" Text="@ui_huashan_bifen" Font="font_combox_text" />
+                </control>
+                <control name="groupbox_times_s" entity="GroupBox" script="" init="">
+                    <prop Left="256" Top="184" Width="100" Height="150" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="208" Top="64" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_shili" Font="font_combox_text" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="208" Top="96" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_menpai" Font="font_combox_text" />
+                </control>
+                <control name="lbl_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="208" Top="128" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_bangpai" Font="font_combox_text" />
+                </control>
+                <control name="scenebox_s" entity="SceneBox" script="" init="">
+                    <prop Transparent="true" Left="40" Top="48" Width="250" Height="380" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                </control>
+                <control name="lbl_9" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="328" Width="157" Height="67" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\huashan\touying.png" />
+                </control>
+            </control>
+            <control name="btn_look" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\huashan\btn_watch_out.png" FocusImage="gui\language\ChineseS\huashan\btn_watch_on.png" PushImage="gui\language\ChineseS\huashan\btn_watch_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="344" Top="416" Width="88" Height="46" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_look_click" />
+            </control>
+            <control name="btn_pour" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\huashan\btn_yazhu_out.png" FocusImage="gui\language\ChineseS\huashan\btn_yazhu_on.png" PushImage="gui\language\ChineseS\huashan\btn_yazhu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="712" Top="304" Width="44" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_pour_click" />
+            </control>
+            <control name="btn_join" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\huashan\btn_cansai_out.png" FocusImage="gui\language\ChineseS\huashan\btn_cansai_on.png" PushImage="gui\language\ChineseS\huashan\btn_cansai_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Top="416" Width="88" Height="46" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_join_click" />
+            </control>
+            <control name="lbl_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="800" Top="176" Width="26" Height="57" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\huashan\conduct.png" />
+            </control>
+        </control>
+        <control name="btn_fresh" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\huashan\btn_shuaxin_out.png" FocusImage="gui\language\ChineseS\huashan\btn_shuaxin_on.png" PushImage="gui\language\ChineseS\huashan\btn_shuaxin_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="278" Top="479" Width="88" Height="46" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_fresh_click" />
+        </control>
+    </control>
+</form>

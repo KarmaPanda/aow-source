@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_shop\form_trade_confirm" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="221" Top="213" Width="300" Height="200" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_bj" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="32" Width="292" Height="134" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_bg_main" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="3" Top="31" Width="292" Height="137" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_area" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="167" Width="292" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="112" Top="10" Width="86" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tishi" Font="font_title" />
+        </control>
+        <control name="btn_confirm" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="122" Top="166" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_queren" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_confirm_click" />
+        </control>
+        <control name="lbl_tip" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="64" Top="40" Width="175" Height="27" ForeColor="255,76,61,44" ShadowColor="0,255,255,255" Text="@ui_DaoJuInfoLabel" Font="font_text_title1" AutoSize="true" DrawMode="ExpandH" />
+        </control>
+        <control name="ipt_count" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="112" Top="102" Width="126" Height="16" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="208" Top="166" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_quxiao" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_cancel_click" />
+        </control>
+        <control name="lbl_silver_mark1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="76" Width="21" Height="19" ShadowColor="0,0,0,0" Font="HT12" AutoSize="true" BackImage="gui\common\money\suiyin.png" />
+        </control>
+        <control name="ipt_price" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="112" Top="74" Width="126" Height="16" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="ipt_total_price" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="112" Top="126" Width="126" Height="16" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="272" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_gold_mark1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="80" Width="22" Height="13" ShadowColor="0,0,0,0" Font="HT12" AutoSize="true" BackImage="gui\common\money\jyb.png" />
+        </control>
+        <control name="lbl_gold_mark2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="128" Width="22" Height="13" ShadowColor="0,0,0,0" Font="HT12" AutoSize="true" BackImage="gui\common\money\jyb.png" />
+        </control>
+        <control name="lbl_silver_mark2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="128" Width="21" Height="19" ShadowColor="0,0,0,0" Font="HT12" AutoSize="true" BackImage="gui\common\money\suiyin.png" />
+        </control>
+        <control name="lbl_price" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="74" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_Price" Font="font_text" />
+        </control>
+        <control name="lbl_total_price" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="126" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_Total" Font="font_text" />
+        </control>
+        <control name="lbl_count" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="100" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_Number" Font="font_text" />
+        </control>
+        <control name="lbl_xian1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="161" Width="290" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="26" Width="290" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

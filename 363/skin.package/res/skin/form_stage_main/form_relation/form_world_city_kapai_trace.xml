@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_world_city_kapai_trace" init="main_form_init">
+        <prop LimitInScreen="true" Left="29" Top="21" Width="390" Height="478" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\mainform\trace_main\bg_main_1.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="gb_kapai_trace" entity="GroupBox" script="" init="">
+            <prop Top="12" Width="382" Height="453" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="tree_kapai" entity="TreeViewEx" script="" init="">
+                <prop IsNoDrawRoot="true" SelectForeColor="255,204,204,204" SelectBackColor="0,0,0,128" ScrollSize="17" HasHScroll="true" ClipChildren="false" Left="10" Top="58" Width="374" Height="398" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" />
+                <event on_right_click="on_tree_kapai_right_click" on_mouse_in_node="on_tree_kapai_mouse_in_node" on_lost_capture="on_tree_kapai_lost_capture" on_mouse_out_node="on_tree_kapai_mouse_out_node" />
+                <subor name="HScrollBar">
+                    <prop Maximum="10" SmallChange="20" LargeChange="20" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\scrollbar\bg_scrollbar4.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_4\btn_left_out.png" FocusImage="gui\common\scrollbar\button_4\btn_left_on.png" PushImage="gui\common\scrollbar\button_4\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_4\btn_right_out.png" FocusImage="gui\common\scrollbar\button_4\btn_right_on.png" PushImage="gui\common\scrollbar\button_4\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_4\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_4\btn_trace_on.png" PushImage="gui\common\scrollbar\button_4\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="234" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="332" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" IsLimitWidth="true" ForeColor="0,0,0,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="lbl_back2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="31" Width="374" Height="30" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\trace_main\bg_bj_2.png" />
+            </control>
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-70" Top="36" Width="129" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" HAnchor="Center" Text="江湖地位" Font="font_title" />
+            </control>
+        </control>
+        <control name="groupbox_alpha" entity="GroupBox" script="" init="">
+            <prop Left="224" Width="158" Height="30" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\trackbar\tb_1_bg.png" />
+            <control name="tbar_alpha" entity="TrackBar" script="" init="">
+                <prop Orient="Horizon" Maximum="160" Value="160" Left="24" Top="8" Width="110" Height="15" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\trackbar\tb_1_cao.png" />
+                <event on_drag_leave="on_tbar_alpha_drag_leave" on_value_changed="on_tbar_alpha_value_changed" />
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\trackbar\tb_1_out.png" FocusImage="gui\common\trackbar\tb_1_on.png" PushImage="gui\common\trackbar\tb_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_control" entity="GroupBox" script="" init="">
+            <prop Left="320" Top="24" Width="70" Height="25" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+            <control name="btn_minimize" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_minimum_out.png" FocusImage="gui\common\button\btn_minimum_on.png" PushImage="gui\common\button\btn_minimum_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="45" Top="5" Width="18" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_tips_zuixiaohua" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_minimize_click" />
+            </control>
+            <control name="btn_fix" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_lock_out.png" FocusImage="gui\common\button\btn_lock_on.png" PushImage="gui\common\button\btn_lock_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="5" Top="5" Width="18" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_tips_suoding" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_fix_click" />
+            </control>
+            <control name="btn_alpha" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_alpha_out.png" FocusImage="gui\common\button\btn_alpha_on.png" PushImage="gui\common\button\btn_alpha_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="25" Top="5" Width="18" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_tips_toumingdu" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_alpha_click" />
+            </control>
+            <control name="btn_unfix" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_unlock_out.png" FocusImage="gui\common\button\btn_unlock_on.png" PushImage="gui\common\button\btn_unlock_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="5" Top="5" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_jiesuo" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_unfix_click" />
+            </control>
+        </control>
+    </control>
+</form>

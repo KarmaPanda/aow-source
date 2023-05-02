@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_jiuyang_faculty\form_jiuyang_rank" init="main_form_init">
+        <prop ShowGrid="true" Left="5" Top="5" Width="846" Height="550" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="21" Top="5" Width="800" Height="523" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\smzb\b_bg_1.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="795" Top="-527" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-40" Top="24" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_jiuyang_faculty_name" Font="font_title" />
+        </control>
+        <control name="single_box" entity="GroupBox" script="" init="">
+            <prop Left="22" Top="-466" Width="798" Height="414" BackColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" DrawMode="Expand" BackImage="gui\special\smzb\ph_diwen.png" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-4" Top="1" Width="784" Height="46" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\smzb\fengekuang_2.png" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="14" Top="15" Width="45" Height="15" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_jiuyang_rank_num" Font="font_main" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="150" Top="15" Width="80" Height="15" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_jiuyang_rank_player_severname" Font="font_main" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="330" Top="15" Width="80" Height="15" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_jiuyang_player_name" Font="font_main" />
+            </control>
+            <control name="lbl_support" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="550" Top="15" Width="45" Height="15" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_jiuyang_support_result" Font="font_main" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="698" Top="15" Width="45" Height="15" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_jiuyang_result" Font="font_main" />
+            </control>
+            <control name="lbl_44" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-4" Top="44" Width="784" Height="365" ShadowColor="0,0,0,0" NoFrame="false" AutoSize="true" DrawMode="Expand" BackImage="gui\special\smzb\fenge_bg.png" />
+            </control>
+            <control name="lbl_17" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="770" Top="1" Width="30" Height="377" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+            </control>
+            <control name="jiuyang_rank_grid" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="38" HeaderBackColor="0,0,0,0" HeaderForeColor="0,76,61,44" SelectForeColor="255,128,101,74" SelectBackColor="0,128,101,74" CanSelectRow="true" ColWidth="40" ColWidths="80,250,100,280,30" RowHeight="34" ColCount="5" ScrollSize="18" HasHScroll="true" AlwaysVScroll="true" Left="-6" Top="4" Width="798" Height="375" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_name" TabStop="true" DrawMode="FitWindow" />
+                <event on_select_row="on_jiuyang_rank_grid_select_row" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="3" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="563" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" SmallChange="1" LargeChange="9" BackColor="0,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="339" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="groupbox_4" entity="GroupBox" script="" init="">
+                <prop Left="-1" Top="376" Width="782" Height="33" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\smzb\fengekuang_1.png" />
+                <control name="rank_num" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="14" Top="8" Width="45" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+                </control>
+                <control name="server_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="150" Top="8" Width="80" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+                </control>
+                <control name="player_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="330" Top="8" Width="80" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+                </control>
+                <control name="support_result" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="550" Top="8" Width="45" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+                </control>
+                <control name="jiuyang_result" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="710" Top="8" Width="45" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

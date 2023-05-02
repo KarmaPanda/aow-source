@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_hongbao\form_hongbao_open" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="29" Top="29" Width="273" Height="452" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\redpacket\Cbg_2.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back_main" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="22" Top="152" Width="230" Height="246" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\redpacket\Bbg_2.png" />
+        </control>
+        <control name="btn_close_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="248" Top="52" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_1_click" />
+        </control>
+        <control name="lbl_back_info" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="216" Width="210" Height="166" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\redpacket\Bbg_3.png" />
+        </control>
+        <control name="groupbox_get" entity="GroupBox" script="" init="">
+            <prop Left="32" Top="216" Width="210" Height="166" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="lbl_get" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="8" Width="62" Height="22" ForeColor="255,255,212,143" ShadowColor="0,0,0,0" Text="@ui_hongbao_open_get" Font="font_name_tittle" />
+            </control>
+            <control name="lbl_yinzi" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="40" Top="29" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="lbl_money" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="64" Top="24" Width="118" Height="22" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_hongbao_money" Font="font_money" />
+            </control>
+            <control name="ipt_replay" entity="Edit" script="" init="">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="272" Top="64" Width="190" Height="26" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_money" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\special\redpacket\shurukuang.png" />
+            </control>
+            <control name="lbl_replay_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="64" Width="190" Height="26" ForeColor="255,255,249,194" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\special\redpacket\shurukuang.png" />
+            </control>
+            <control name="combobox_replay" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="118" OnlySelect="true" Left="10" Top="65" Width="187" Height="26" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                <event on_selected="on_combobox_replay_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" Align="Center" Caret="Default" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" DrawMode="ExpandH" />
+                </subor>
+                <subor name="DropButton">
+                    <prop NormalImage="gui\special\redpacket\Abtn_2_out.png" FocusImage="gui\special\redpacket\Abtn_2_on.png" PushImage="gui\special\redpacket\Abtn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="255,255,204,0" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_replay" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="72" Top="136" Width="135" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_hongbao_open_replay" Font="font_main" DrawMode="ExpandH" />
+                <event on_click="on_btn_replay_click" />
+            </control>
+            <control name="lbl_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,214,40" LineHeight="15" HtmlText="@ui_hongbao_open_got" ScrollSize="17" Top="104" Width="214" Height="40" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+            </control>
+        </control>
+        <control name="lbl_nomoney" entity="Label" script="" init="">
+            <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="40" Top="280" Width="187" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_hongbao_open_fail_1" Font="font_main" />
+        </control>
+        <control name="btn_record" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="21" Top="404" Width="134" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_hongbao_record" Font="font_main" DrawMode="ExpandH" />
+            <event on_click="on_btn_record_click" />
+        </control>
+        <control name="btn_detail" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Top="404" Width="101" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_hongbao_open_detail" Font="font_main" DrawMode="ExpandH" />
+            <event on_click="on_btn_detail_click" />
+        </control>
+        <control name="lbl_player" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="24" Top="174" Width="224" Height="22" ForeColor="255,255,212,143" ShadowColor="0,255,255,255" Text="@ui_hongbao_open_player" Font="font_playername" />
+        </control>
+    </control>
+</form>

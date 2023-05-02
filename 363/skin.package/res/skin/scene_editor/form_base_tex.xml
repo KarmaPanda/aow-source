@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_base_tex" init="main_form_init">
+        <property name="Left" value="125" />
+        <property name="Top" value="141" />
+        <property name="Width" value="254" />
+        <property name="Height" value="262" />
+        <property name="BackColor" value="152,154,154,255" />
+        <property name="Font" value="Default" />
+        <property name="DrawMode" value="Expand" />
+        <property name="BackImage" value="skin\png\form.png" />
+        <callback name="on_open" function="main_form_open" />
+        <callback name="on_move" function="main_form_move" />
+        <control name="title_label" entity="Label" script="" init="">
+            <property name="Align" value="Center" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="72" />
+            <property name="Top" value="8" />
+            <property name="Width" value="110" />
+            <property name="Height" value="16" />
+            <property name="Text" value="基础贴图编辑" />
+        </control>
+        <control name="base_tex_pict" entity="Picture" script="" init="">
+            <property name="Left" value="112" />
+            <property name="Top" value="32" />
+            <property name="Width" value="126" />
+            <property name="Height" value="126" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <property name="Left" value="232" />
+            <property name="Width" value="24" />
+            <property name="Height" value="24" />
+            <property name="Text" value="X" />
+            <property name="HintText" value="关闭" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="close_btn_click" />
+        </control>
+        <control name="base_tex_list" entity="ListBox" script="" init="">
+            <property name="ItemHeight" value="12" />
+            <property name="TextOffsetX" value="2" />
+            <property name="ScrollSize" value="17" />
+            <property name="Left" value="16" />
+            <property name="Top" value="48" />
+            <property name="Width" value="86" />
+            <property name="Height" value="110" />
+            <property name="Text" value="ListBox1" />
+            <property name="TabStop" value="true" />
+            <callback name="on_select_changed" function="base_tex_select_changed" />
+            <subor name="VScrollBar">
+                <property name="BackColor" value="255,224,224,224" />
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="16" />
+            <property name="Top" value="24" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="贴图列表：" />
+        </control>
+        <control name="GroupBox2" entity="GroupBox" script="" init="">
+            <property name="Left" value="8" />
+            <property name="Top" value="168" />
+            <property name="Width" value="238" />
+            <property name="Height" value="46" />
+            <property name="BackColor" value="0,255,255,255" />
+            <property name="Text" value="刷子形状" />
+            <control name="rect_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="24" />
+                <property name="Top" value="16" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="方形" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="rect_checked_changed" />
+            </control>
+            <control name="circle_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="128" />
+                <property name="Top" value="16" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="圆形" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="circle_checked_changed" />
+            </control>
+        </control>
+        <control name="base_scale_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="16" />
+            <property name="Top" value="216" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="刷子尺寸：" />
+        </control>
+        <control name="base_scale_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="10" />
+            <property name="Left" value="16" />
+            <property name="Top" value="240" />
+            <property name="Width" value="222" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="base_scale_value_changed" />
+        </control>
+    </control>
+</form>

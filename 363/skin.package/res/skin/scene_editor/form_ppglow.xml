@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_ppglow" init="main_form_init">
+        <prop Left="197" Top="125" Width="430" Height="286" BackColor="150,152,155,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="120" Top="240" Width="78" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="216" Top="240" Width="78" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="8" Width="94" Height="22" Text="模型泛光效果参数" />
+        </control>
+        <control name="ppglow_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="48" Width="126" Height="22" Text="开启ppglow效果" TabStop="true" />
+            <event on_checked_changed="ppglow_checked_changed" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="104" Width="62" Height="16" Text="亮度:" />
+        </control>
+        <control name="brightness_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="104" Width="80" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="brightness_edit_drag" on_lost_focus="brightness_edit_lost_focus" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="136" Width="62" Height="16" Text="发光权重:" />
+        </control>
+        <control name="glowweight_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="136" Width="80" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="glowweight_edit_drag" on_lost_focus="glowweight_edit_lost_focus" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="168" Width="62" Height="16" Text="抖动1(x):" />
+        </control>
+        <control name="dither1x_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="168" Width="80" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="dither1x_edit_drag" on_lost_focus="dither1x_edit_lost_focus" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="168" Width="80" Height="16" Text="抖动1(y):" />
+        </control>
+        <control name="dither1y_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="288" Top="168" Width="80" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="dither1y_edit_drag" on_lost_focus="dither1y_edit_lost_focus" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="200" Width="62" Height="16" Text="抖动2(x):" />
+        </control>
+        <control name="dither2x_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="200" Width="80" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="dither2x_edit_drag" on_lost_focus="dither2x_edit_lost_focus" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="200" Width="80" Height="16" Text="抖动2(y):" />
+        </control>
+        <control name="dither2y_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="288" Top="200" Width="80" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="dither2y_edit_drag" on_lost_focus="dither2y_edit_lost_focus" />
+        </control>
+    </control>
+</form>

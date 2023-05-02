@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_hbao" init="main_form_init">
+        <prop Left="93" Top="157" Width="502" Height="286" BackColor="150,152,155,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="160" Top="240" Width="78" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="264" Top="240" Width="78" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="8" Width="158" Height="22" Text="实时环境遮挡（HBAO）参数" />
+        </control>
+        <control name="ssao_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="32" Top="40" Width="246" Height="22" Text="开启实时环境遮挡（必须先开启实时阴影）" TabStop="true" />
+            <event on_checked_changed="ssao_check_checked_changed" />
+        </control>
+        <control name="Label13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="104" Width="78" Height="22" Text="遮挡质量等级" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="128" Width="78" Height="22" Text="采样方向数量" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="152" Width="78" Height="22" Text="采样步进次数" />
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="176" Width="78" Height="22" Text="遮挡采样半径" />
+        </control>
+        <control name="Label17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="104" Width="78" Height="22" Text="遮挡衰减系数" />
+        </control>
+        <control name="Label18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="128" Width="78" Height="22" Text="遮挡对比度" />
+        </control>
+        <control name="Label19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="176" Width="78" Height="22" Text="模糊范围尺寸" />
+        </control>
+        <control name="Label20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="200" Width="78" Height="22" Text="模糊锐利度" />
+        </control>
+        <control name="ao_quality_level_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="112" Top="104" Width="126" Height="20" />
+            <event on_selected="ao_quality_level_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="ao_num_of_dir_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="112" Top="128" Width="126" Height="20" />
+            <event on_selected="ao_num_of_dir_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="ao_num_of_step_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="100" OnlySelect="true" Left="112" Top="152" Width="126" Height="20" />
+            <event on_selected="ao_num_of_step_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="ao_radius_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="112" Top="176" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_radius_edit_changed" on_changed="ao_radius_edit_changed" />
+        </control>
+        <control name="ao_attenuation_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="344" Top="104" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_attenuation_edit_changed" on_changed="ao_attenuation_edit_changed" />
+        </control>
+        <control name="ao_contrast_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="344" Top="128" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_contrast_edit_changed" on_changed="ao_contrast_edit_changed" />
+        </control>
+        <control name="ao_blur_size_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="344" Top="176" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_blur_size_edit_changed" on_changed="ao_blur_size_edit_changed" />
+        </control>
+        <control name="ao_blur_sharpness_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.100000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="344" Top="200" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_blur_sharpness_edit_changed" on_changed="ao_blur_sharpness_edit_changed" />
+        </control>
+        <control name="ao_half_res_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="32" Top="72" Width="198" Height="22" Text="使用一半屏幕分辨率进行遮挡计算" TabStop="true" />
+            <event on_checked_changed="ao_half_res_check_checked_changed" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="200" Width="78" Height="22" Text="遮挡角度偏置" />
+        </control>
+        <control name="ao_angle_bias_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="1.000000" Max="90.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="112" Top="200" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_angle_bias_edit_changed" on_changed="ao_angle_bias_edit_changed" />
+        </control>
+        <control name="ao_distance_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="344" Top="152" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ao_distance_edit_changed" on_changed="ao_distance_edit_changed" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="152" Width="78" Height="22" Text="遮挡有效距离" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_task\form_yubi_activity" init="main_form_init">
+        <prop ShowGrid="true" Left="77" Top="77" Width="262" Height="470" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="-8" Width="262" Height="478" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\agree_war\abg_11.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="96" Top="8" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@huodong_dy_5101" Font="font_playername" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="240" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="grid_yubi" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="0,0,0,0" RowHeaderVisible="false" SelectBackColor="0,0,0,0" CanSelectRow="true" ColWidth="40" ColWidths="40,100,100" RowHeight="24" ColCount="3" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" Top="56" Width="262" Height="382" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="textgrid_1" Font="font_playername" TabStop="true" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\agree_war\Abg_1.png" />
+            <subor name="HScrollBar">
+                <prop Maximum="1" SmallChange="1" LargeChange="2" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="144" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop SmallChange="1" LargeChange="5" BackColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="32" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@huodong_dy_5102" Font="font_playername" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Top="32" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@huodong_dy_5103" Font="font_playername" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="176" Top="32" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@huodong_dy_5104" Font="font_playername" />
+        </control>
+        <control name="lbl_snum" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="18" Top="440" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="lbl_6" Font="font_playername" />
+        </control>
+        <control name="lbl_sname" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="69" Top="440" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="lbl_7" Font="font_playername" />
+        </control>
+        <control name="lbl_sdamage" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="182" Top="440" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="lbl_8" Font="font_playername" />
+        </control>
+    </control>
+</form>

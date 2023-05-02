@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_task\form_monster_list" init="">
+        <prop Transparent="true" ShowGrid="true" Left="21" Top="29" Width="398" Height="438" BackColor="0,134,143,152" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        <event on_open="main_form_open" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="20" Width="62" Height="16" ShadowColor="0,0,0,0" Text="刷怪信息" Font="WRYH14" />
+        </control>
+        <control name="btn_show_all" entity="Button" script="" init="">
+            <prop Left="80" Top="16" Width="65" Height="22" ShadowColor="0,0,0,0" Text="刷怪总表" Font="WRYH14" TabStop="true" />
+            <event on_click="btn_show_all_click" />
+        </control>
+        <control name="ctrlbox_monster_list" entity="ControlBox" script="" init="">
+            <prop ItemHeight="16" SelectForeColor="255,168,173,180" SelectBackColor="255,113,88,18" ScrollSize="17" Left="17" Top="40" Width="358" Height="310" BackColor="255,134,143,152" ShadowColor="0,0,0,0" Text="ctrlbox_1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,134,143,152" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

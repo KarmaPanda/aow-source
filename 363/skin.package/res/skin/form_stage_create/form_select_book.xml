@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_create\form_select_book" init="main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="1024" Height="768" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_ani" entity="GroupBox" script="" init="">
+            <prop Left="-495" Top="-321" Width="499" Height="581" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Right" NoFrame="true" BackImage="gui\create\select_book_3.png" />
+            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,147,123,99" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="100,60,400,500" LineHeight="30" ScrollSize="14" HasVScroll="true" Left="-499" Width="446" Height="510" ShadowColor="0,255,0,0" HAnchor="Right" Text="mltbox_2" Font="font_playername" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-496" Width="500" Height="40" ShadowColor="0,0,0,0" HAnchor="Right" BackImage="gui\create\select_book_1.png" />
+            </control>
+        </control>
+        <control name="btn_repeat_select" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\resetface\btn_out.png" FocusImage="gui\special\resetface\btn_on.png" PushImage="gui\special\resetface\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-159" Top="-137" Width="142" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_creat_selectbook_back" Font="font_btn" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_repeat_select_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-7" Top="-87" Width="1600" Height="88" ShadowColor="0,0,0,0" VAnchor="Bottom" DrawMode="ExpandH" BackImage="gui\login\down.png" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\resetface\btn1_out.png" FocusImage="gui\special\resetface\btn1_on.png" PushImage="gui\special\resetface\btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-64" Top="-71" Width="131" Height="49" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" Text="@ui_creat_ok" Font="font_title" AutoSize="true" InSound="MouseOn_20" ClickSound="enter_19" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="btn_back" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\create\back_out.png" FocusImage="gui\language\ChineseS\create\back_on.png" PushImage="gui\language\ChineseS\create\back_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="33" Top="-58" Width="100" Height="32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_back_click" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="1628" Height="60" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\login\up.png" />
+        </control>
+        <control name="lbl_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="1" Top="7" Width="6" Height="6" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\login\mdah.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="145" Top="119" Width="183" Height="355" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="rbtn_1" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\create\select_book\fenghuangshi_out.png" FocusImage="gui\language\ChineseS\create\select_book\fenghuangshi_on.png" CheckedImage="gui\language\ChineseS\create\select_book\fenghuangshi_down.png" DisableImage="gui\language\ChineseS\create\select_book\fenghuangshi_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="10" Width="142" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="book1" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_btn_book_select_click" on_lost_capture="on_rbtn_lost_capture" on_get_capture="on_rbtn_get_capture" />
+            </control>
+            <control name="rbtn_2" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\create\select_book\jianwuming_out.png" FocusImage="gui\language\ChineseS\create\select_book\jianwuming_on.png" CheckedImage="gui\language\ChineseS\create\select_book\jianwuming_down.png" DisableImage="gui\language\ChineseS\create\select_book\jianwuming_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="70" Width="142" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="book5" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_btn_book_select_click" on_lost_capture="on_rbtn_lost_capture" on_get_capture="on_rbtn_get_capture" />
+            </control>
+            <control name="rbtn_3" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\create\select_book\junzichuanqi_out.png" FocusImage="gui\language\ChineseS\create\select_book\junzichuanqi_on.png" CheckedImage="gui\language\ChineseS\create\select_book\junzichuanqi_down.png" DisableImage="gui\language\ChineseS\create\select_book\junzichuanqi_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="130" Width="142" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="book4" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_btn_book_select_click" on_lost_capture="on_rbtn_lost_capture" on_get_capture="on_rbtn_get_capture" />
+            </control>
+            <control name="rbtn_4" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\create\select_book\tianshanxijianlu_out.png" FocusImage="gui\language\ChineseS\create\select_book\tianshanxijianlu_on.png" CheckedImage="gui\language\ChineseS\create\select_book\tianshanxijianlu_down.png" DisableImage="gui\language\ChineseS\create\select_book\tianshanxijianlu_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="190" Width="142" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="book2" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_btn_book_select_click" on_lost_capture="on_rbtn_lost_capture" on_get_capture="on_rbtn_get_capture" />
+            </control>
+            <control name="rbtn_5" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\create\select_book\tianxiabian_out.png" FocusImage="gui\language\ChineseS\create\select_book\tianxiabian_on.png" CheckedImage="gui\language\ChineseS\create\select_book\tianxiabian_down.png" DisableImage="gui\language\ChineseS\create\select_book\tianxiabian_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="912" Top="296" Width="142" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="book8" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_btn_book_select_click" on_lost_capture="on_rbtn_lost_capture" on_get_capture="on_rbtn_get_capture" />
+            </control>
+            <control name="rbtn_6" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\create\select_book\tianxiabian_out.png" FocusImage="gui\language\ChineseS\create\select_book\tianxiabian_on.png" CheckedImage="gui\language\ChineseS\create\select_book\tianxiabian_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5000" Width="142" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="book5" TabStop="true" AutoSize="true" />
+            </control>
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="36" Width="108" Height="431" ShadowColor="0,0,0,0" Text="=" AutoSize="true" BackImage="gui\language\ChineseS\create\tz_xzjb.png" />
+        </control>
+        <control name="lbl_recommend" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Top="623" Width="20" Height="20" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\create\commend.png" />
+        </control>
+        <control name="mltbox_tips_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,204,0" SelectBarColor="255,255,255,255" MouseInBarColor="255,255,255,255" ViewRect="4,4,218,122" ScrollSize="17" Left="305" Top="415" Width="222" Height="47" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_line\mibox_1.png" />
+        </control>
+        <control name="mltbox_tips_2" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,204,0" SelectBarColor="255,255,255,255" MouseInBarColor="255,255,255,255" ViewRect="0,0,315,54" LineHeight="21" ScrollSize="17" Left="-245" Top="-49" Width="315" Height="54" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="mltbox_1" Font="font_title" NoFrame="true" />
+        </control>
+    </control>
+</form>

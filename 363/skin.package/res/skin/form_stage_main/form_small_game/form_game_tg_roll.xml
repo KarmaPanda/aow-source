@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_tg_roll" init="main_form_init">
+        <prop ShowGrid="true" Left="213" Top="21" Width="646" Height="446" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_btn" entity="GroupBox" script="" init="">
+            <prop Left="6" Top="400" Width="422" Height="38" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="btn_start" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="32" Top="352" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="重置" />
+                <event on_click="on_btn_start_click" />
+            </control>
+            <control name="btn_start_single" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Top="320" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="开始游戏" />
+                <event on_click="on_btn_start_single_click" />
+            </control>
+            <control name="btn_chip" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="90" Top="5" Width="134" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tg_dice_6" Font="font_btn" DrawMode="ExpandH" />
+                <event on_click="on_btn_chip_click" />
+            </control>
+            <control name="btn_sys" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="288" Top="304" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="系统投掷" />
+                <event on_click="on_btn_sys_click" />
+            </control>
+            <control name="btn_sys_again" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Top="328" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="系统重掷" />
+                <event on_click="on_btn_sys_again_click" />
+            </control>
+            <control name="btn_player" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="42" Top="-64" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tg_dice_7" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_player_click" />
+            </control>
+            <control name="btn_player_again" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="91" Top="5" Width="137" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tg_dice_9" Font="font_btn" DrawMode="ExpandH" />
+                <event on_click="on_btn_player_again_click" />
+            </control>
+            <control name="btn_cheat" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="91" Top="6" Width="143" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tg_dice_8" Font="font_btn" DrawMode="ExpandH" />
+                <event on_click="on_btn_cheat_click" />
+            </control>
+            <control name="btn_sum_single" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="266" Top="4" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tg_dice_10" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_sum_single_click" />
+            </control>
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Top="8" Width="454" Height="398" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="-16" Width="454" Height="143" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\small_game_tg_roll\back.png" />
+            </control>
+            <control name="lbl_sys_chip" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="160" Top="30" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="0" Font="font_text_chat" />
+            </control>
+            <control name="groupbox_player_res" entity="GroupBox" script="" init="">
+                <prop Left="240" Top="32" Width="214" Height="62" ForeColor="255,156,156,156" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text_sys" />
+                <control name="lbl_player_res1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="112" Top="16" Width="37" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_player_res2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="142" Top="16" Width="37" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_player_res3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="172" Top="16" Width="37" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="27" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tg_dice_5" Font="font_main" />
+                </control>
+            </control>
+            <control name="groupbox_ani" entity="GroupBox" script="" init="">
+                <prop Left="-229" Top="80" Width="467" Height="314" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" AutoSize="true" BackImage="gui\special\small_game_tg_roll\png_back.png" />
+                <control name="ani_wan" entity="Animation" script="" init="">
+                    <prop AnimationImage="tg_roll" Loop="false" PlayMode="2" Left="-24" Top="-7" Width="102" Height="78" />
+                    <event on_animation_end="on_ani_wan_animation_end" on_animation_start="on_ani_wan_animation_start" />
+                </control>
+                <control name="groupbox_touzi" entity="GroupBox" script="" init="">
+                    <prop Top="1" Width="467" Height="314" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" />
+                    <control name="groupbox_touzi1" entity="GroupBox" script="" init="">
+                        <prop Left="160" Top="120" Width="80" Height="80" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <control name="lbl_touzi1" entity="Label" script="" init="">
+                            <prop RefCursor="WIN_HELP" Width="50" Height="30" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </control>
+                    </control>
+                    <control name="groupbox_touzi2" entity="GroupBox" script="" init="">
+                        <prop Left="177" Top="173" Width="80" Height="80" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <control name="lbl_touzi2" entity="Label" script="" init="">
+                            <prop RefCursor="WIN_HELP" Width="50" Height="30" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </control>
+                    </control>
+                    <control name="groupbox_touzi3" entity="GroupBox" script="" init="">
+                        <prop Left="240" Top="112" Width="80" Height="80" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <control name="lbl_touzi3" entity="Label" script="" init="">
+                            <prop RefCursor="WIN_HELP" Width="50" Height="50" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </control>
+                    </control>
+                    <control name="ani_single" entity="Animation" script="" init="">
+                        <prop AnimationImage="Face28" Loop="false" PlayMode="2" Left="354" Top="47" Width="50" Height="50" />
+                        <event on_animation_start="on_ani_single_animation_start" on_animation_end="on_ani_single_animation_end" />
+                    </control>
+                </control>
+            </control>
+            <control name="lbl_player_chip" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="320" Top="30" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="0" Font="font_text_chat" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="30" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tg_dice_1" Font="font_main" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="248" Top="30" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tg_dice_2" Font="font_main" />
+            </control>
+            <control name="groupbox_sys_res" entity="GroupBox" script="" init="">
+                <prop Left="24" Top="32" Width="180" Height="62" ForeColor="255,156,156,156" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+                <control name="lbl_sys_res2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="147" Top="16" Width="37" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_sys_res3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="177" Top="16" Width="37" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_sys_res1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="117" Top="16" Width="37" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="27" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tg_dice_4" Font="font_main" />
+                </control>
+            </control>
+        </control>
+        <control name="btn_introduce" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" PushImage="gui\common\button\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="400" Top="496" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="424" Top="96" Width="214" Height="318" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="214" Height="318" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\small_game_tg_roll\back.png" />
+            </control>
+            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,166,262" LineHeight="20" TipAutoSize="true" HtmlText="@ui_tg_dice_19" ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="24" Top="24" Width="166" Height="262" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_tip" />
+                <subor name="VScrollBar">
+                    <prop FullBarBack="false" Maximum="16" SmallChange="1" LargeChange="1" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="392" Top="112" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

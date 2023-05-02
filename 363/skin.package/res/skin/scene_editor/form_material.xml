@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_material" init="main_form_init">
+        <prop Left="101" Top="93" Width="430" Height="302" BackColor="171,161,161,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="144" Top="8" Width="142" Height="22" ShadowColor="0,0,0,0" Text="地面材质" />
+        </control>
+        <control name="mat_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="24" Top="48" Width="150" Height="110" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="mat_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="136" Top="256" Width="70" Height="24" ShadowColor="0,0,0,0" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="256" Width="70" Height="24" ShadowColor="0,0,0,0" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="alpha_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="96" Width="214" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="alpha_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="red_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="136" Width="214" Height="14" BackColor="255,255,0,0" ShadowColor="0,0,0,0" />
+            <event on_value_changed="red_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="green_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="176" Width="214" Height="14" BackColor="255,0,255,0" ShadowColor="0,0,0,0" />
+            <event on_value_changed="green_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="blue_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="216" Width="214" Height="14" BackColor="255,0,0,255" ShadowColor="0,0,0,0" />
+            <event on_value_changed="blue_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="alpha_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="72" Width="80" Height="22" ShadowColor="0,0,0,0" Text="透明:" />
+        </control>
+        <control name="red_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="112" Width="80" Height="22" ShadowColor="0,0,0,0" Text="红色：" />
+        </control>
+        <control name="green_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="152" Width="80" Height="22" ShadowColor="0,0,0,0" Text="绿色：" />
+        </control>
+        <control name="blue_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="192" Width="80" Height="22" ShadowColor="0,0,0,0" Text="蓝色：" />
+        </control>
+        <control name="power_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="192" Width="110" Height="22" ShadowColor="0,0,0,0" Text="镜面反射强度：" />
+        </control>
+        <control name="specular_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="168" Width="110" Height="22" ShadowColor="0,0,0,0" Text="开启镜面反射" TabStop="true" />
+            <event on_checked_changed="specular_checked_changed" />
+        </control>
+        <control name="power_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="24" Top="216" Width="150" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="power_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="color_btn" entity="Button" script="" init="">
+            <prop Left="296" Top="48" Width="110" Height="24" ShadowColor="0,0,0,0" Text="选择颜色" TabStop="true" />
+            <event on_click="color_btn_click" />
+        </control>
+        <control name="color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="192" Top="48" Width="94" Height="22" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+    </control>
+</form>

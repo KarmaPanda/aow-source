@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="preload_puzzle_quest" entity="Form" script="form_stage_main\puzzle_quest\preload_puzzle_quest" init="">
+        <prop LimitInScreen="true" Left="13" Top="21" Width="1022" Height="766" ShadowColor="0,0,0,0" DataSource="caifeng" NoFrame="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\caifeng\bg-caifeng.png" />
+        <control name="gb_all_role_a" entity="GroupBox" script="" init="">
+            <prop Width="502" Height="294" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="rbtn_photo1_a" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="216" Top="8" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="1" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_a_checked_changed" />
+            </control>
+            <control name="rbtn_photo2_a" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="2" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_a_checked_changed" />
+            </control>
+            <control name="rbtn_photo3_a" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="48" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="3" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_a_checked_changed" />
+            </control>
+            <control name="rbtn_photo4_a" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_a_checked_changed" />
+            </control>
+            <control name="lbl_selback_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="240" Top="96" Width="46" Height="92" ShadowColor="0,0,0,0" DataSource="1" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\hh.png" />
+            </control>
+            <control name="lbl_photo1_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="336" Top="96" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="1" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_a_click" on_lost_capture="on_lbl_photo_a_lost_capture" on_get_capture="on_lbl_photo_a_get_capture" />
+            </control>
+            <control name="lbl_photo2_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="97" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="2" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_a_click" on_lost_capture="on_lbl_photo_a_lost_capture" on_get_capture="on_lbl_photo_a_get_capture" />
+            </control>
+            <control name="lbl_photo3_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="49" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="3" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_a_click" on_lost_capture="on_lbl_photo_a_lost_capture" on_set_context="on_lbl_photo_a_set_context" />
+            </control>
+            <control name="lbl_photo4_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="1" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="4" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_a_click" on_lost_capture="on_lbl_photo_a_lost_capture" on_get_capture="on_lbl_photo_a_get_capture" />
+            </control>
+            <control name="pbar_hp1_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="200" Top="144" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="pbar_hp2_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="97" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="pbar_hp3_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="49" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="pbar_hp4_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="1" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+        </control>
+        <control name="gb_one_role_a" entity="GroupBox" script="" init="">
+            <prop Top="94" Width="190" Height="142" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="pbar_hp_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" TextVisible="true" Left="-1" Width="190" Height="26" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="lbl_photo_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="112" Top="26" Width="69" Height="86" ShadowColor="0,0,0,0" DataSource="1" />
+            </control>
+            <control name="lbl_name_a" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" IsLimitWidth="true" Left="72" Top="117" Width="110" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_wangxiaoba" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_def_add_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="30" Top="114" Width="24" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="2" Font="FZHKJT24_0" BackImage="gui\mainform\smallgame\baoshi\common\dun.png" />
+            </control>
+            <control name="lbl_sku_add_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="54" Top="114" Width="24" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="3" Font="FZHKJT24_0" BackImage="gui\mainform\smallgame\baoshi\common\kul.png" />
+            </control>
+            <control name="grid_buff_a" entity="ImageGrid" script="" init="">
+                <prop SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="9,2,118,78" MaxSize="-1" RowNum="4" ClomnNum="5" ShowEmpty="false" GridHeight="16" GridWidth="16" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Top="28" Width="118" Height="78" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <event on_mouseout_grid="on_mouseout_grid" on_mousein_grid="on_mousein_grid" />
+            </control>
+            <control name="lbl_att_add_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="5" Top="114" Width="24" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT24_0" BackImage="gui\mainform\smallgame\baoshi\common\chuizixiao.png" />
+            </control>
+        </control>
+        <control name="gb_all_role_b" entity="GroupBox" script="" init="">
+            <prop Left="830" Width="192" Height="94" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="rbtn_photo1_b" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="1" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_b_checked_changed" />
+            </control>
+            <control name="rbtn_photo2_b" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="48" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="2" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_b_checked_changed" />
+            </control>
+            <control name="rbtn_photo3_b" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="3" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_b_checked_changed" />
+            </control>
+            <control name="rbtn_photo4_b" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\diban.png" CheckedImage="gui\mainform\smallgame\baoshi\common\xz.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="144" Width="48" Height="94" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_photo_b_checked_changed" />
+            </control>
+            <control name="lbl_selback_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="1" Top="1" Width="46" Height="92" ShadowColor="0,0,0,0" DataSource="1" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\hh.png" />
+            </control>
+            <control name="lbl_photo1_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="1" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="1" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_b_click" on_lost_capture="on_lbl_photo_b_lost_capture" on_get_capture="on_lbl_photo_b_get_capture" />
+            </control>
+            <control name="lbl_photo2_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="49" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="2" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_b_click" on_lost_capture="on_lbl_photo_b_lost_capture" on_get_capture="on_lbl_photo_b_get_capture" />
+            </control>
+            <control name="lbl_photo3_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="97" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="3" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_b_click" on_lost_capture="on_lbl_photo_b_lost_capture" on_get_capture="on_lbl_photo_b_get_capture" />
+            </control>
+            <control name="lbl_photo4_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="145" Top="5" Width="45" Height="70" ShadowColor="0,0,0,0" DataSource="4" DrawMode="FitWindow" />
+                <event on_click="on_lbl_photo_b_click" on_lost_capture="on_lbl_photo_b_lost_capture" on_get_capture="on_lbl_photo_b_get_capture" />
+            </control>
+            <control name="pbar_hp1_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="1" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="pbar_hp2_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="49" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="pbar_hp3_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="97" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="pbar_hp4_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" Left="145" Top="82" Width="45" Height="10" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+        </control>
+        <control name="gb_one_role_b" entity="GroupBox" script="" init="">
+            <prop Left="830" Top="94" Width="190" Height="150" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_photo_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-6" Top="18" Width="62" Height="86" ShadowColor="0,0,0,0" DataSource="1" />
+            </control>
+            <control name="pbar_hp_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\d-xue.png" ProgressMode="LeftToRight" TextVisible="true" Left="-1" Width="190" Height="26" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\d-cao.png" />
+            </control>
+            <control name="lbl_name_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="117" Width="110" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_wuxiaogui" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_att_add_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="162" Top="114" Width="24" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT24_0" BackImage="gui\mainform\smallgame\baoshi\common\chuizixiao.png" />
+            </control>
+            <control name="lbl_def_add_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="138" Top="114" Width="24" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="2" Font="FZHKJT24_0" BackImage="gui\mainform\smallgame\baoshi\common\dun.png" />
+            </control>
+            <control name="grid_buff_b" entity="ImageGrid" script="" init="">
+                <prop SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="9,2,118,78" MaxSize="-1" RowNum="4" ClomnNum="5" ShowEmpty="false" GridHeight="16" GridWidth="16" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="72" Top="26" Width="118" Height="78" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <event on_mouseout_grid="on_mouseout_grid" on_mousein_grid="on_mousein_grid" />
+            </control>
+            <control name="lbl_sku_add_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="113" Top="114" Width="24" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="3" Font="FZHKJT24_0" BackImage="gui\mainform\smallgame\baoshi\common\kul.png" />
+            </control>
+        </control>
+        <control name="gb_weapon_a" entity="GroupBox" script="" init="">
+            <prop Top="237" Width="182" Height="46" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_fight_count_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="85" Top="28" Width="22" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="10" Font="FZHKJT19_O" />
+            </control>
+            <control name="btn_fight_a" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-out.png" FocusImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-on.png" PushImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-down.png" DisableImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-out.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="82" Top="4" Width="35" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Enabled="false" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_fight_a_click" />
+            </control>
+            <control name="lbl_left_hand_a" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="21" Top="2" Width="44" Height="40" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="FZHKJT19_O" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-jd.png" />
+                <event on_click="on_lbl_hand_a_click" on_lost_capture="on_lbl_lost_capture" on_get_capture="on_lbl_get_capture" />
+            </control>
+            <control name="lbl_right_hand_a" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="130" Top="2" Width="44" Height="40" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="FZHKJT19_O" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-dz.png" />
+                <event on_click="on_lbl_hand_a_click" on_lost_capture="on_lbl_lost_capture" on_get_capture="on_lbl_get_capture" />
+            </control>
+        </control>
+        <control name="gb_weapon_b" entity="GroupBox" script="" init="">
+            <prop Left="837" Top="237" Width="182" Height="46" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_fight_count_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="79" Top="28" Width="22" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="10" Font="FZHKJT19_O" />
+            </control>
+            <control name="btn_fight_b" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-out.png" FocusImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-on.png" PushImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-down.png" DisableImage="gui\mainform\smallgame\baoshi\caifeng\quantou1-out.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="73" Top="4" Width="35" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Enabled="false" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_fight_b_click" />
+            </control>
+            <control name="lbl_left_hand_b" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="14" Top="2" Width="44" Height="40" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="FZHKJT19_O" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-jd.png" />
+                <event on_click="on_lbl_hand_b_click" on_lost_capture="on_lbl_lost_capture" on_get_capture="on_lbl_get_capture" />
+            </control>
+            <control name="lbl_right_hand_b" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="122" Top="2" Width="44" Height="40" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="FZHKJT19_O" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-dz.png" />
+                <event on_click="on_lbl_hand_b_click" on_lost_capture="on_lbl_lost_capture" on_get_capture="on_lbl_get_capture" />
+            </control>
+        </control>
+        <control name="gb_denglong_a" entity="GroupBox" script="" init="">
+            <prop Top="288" Width="190" Height="166" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="cbtn_dl1_a" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\ahong-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl2_a" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\ahuang-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="44" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl3_a" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\alan-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\alan-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="81" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl4_a" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\alv-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\alv-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="120" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl5_a" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\azi-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\azi-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="157" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="pbar_dl1_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-hong-on.png" ProgressMode="BottomToTop" Left="1" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-hong-off.png" />
+            </control>
+            <control name="pbar_dl2_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-huang-on.png" ProgressMode="BottomToTop" Left="38" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-huang-off.png" />
+            </control>
+            <control name="pbar_dl3_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-lan-on.png" ProgressMode="BottomToTop" Left="75" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-lan-off.png" />
+            </control>
+            <control name="pbar_dl4_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-lv-on.png" ProgressMode="BottomToTop" Left="114" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-lv-off.png" />
+            </control>
+            <control name="pbar_dl5_a" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-zi-on.png" ProgressMode="BottomToTop" Left="152" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-zi-off.png" />
+            </control>
+            <control name="lbl_dl1_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="1" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="hongdl" />
+            </control>
+            <control name="lbl_dl2_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="38" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="huangdl" />
+            </control>
+            <control name="lbl_dl3_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="75" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="landl" />
+            </control>
+            <control name="lbl_dl4_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="114" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="lvdl" />
+            </control>
+            <control name="lbl_dl5_a" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="152" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="zidl" />
+            </control>
+            <control name="lbl_dlcnt1_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="1" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt2_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="38" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt3_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="75" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt4_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="114" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt5_a" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="gb_dlcover_a" entity="GroupBox" script="" init="">
+                <prop Width="190" Height="26" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            </control>
+        </control>
+        <control name="gb_denglong_b" entity="GroupBox" script="" init="">
+            <prop Left="830" Top="288" Width="190" Height="166" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="cbtn_dl1_b" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\ahong-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl2_b" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\ahuang-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="44" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl3_b" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\alan-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\alan-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="81" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl4_b" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\alv-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\alv-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="120" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="cbtn_dl5_b" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\mainform\smallgame\baoshi\common\azi-out.png" CheckedImage="gui\mainform\smallgame\baoshi\common\azi-on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="157" Top="1" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="pbar_dl1_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-hong-on.png" ProgressMode="BottomToTop" Left="1" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-hong-off.png" />
+            </control>
+            <control name="pbar_dl2_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-huang-on.png" ProgressMode="BottomToTop" Left="38" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-huang-off.png" />
+            </control>
+            <control name="pbar_dl3_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-lan-on.png" ProgressMode="BottomToTop" Left="75" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-lan-off.png" />
+            </control>
+            <control name="pbar_dl4_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-lv-on.png" ProgressMode="BottomToTop" Left="114" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-lv-off.png" />
+            </control>
+            <control name="pbar_dl5_b" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\baoshi\common\dl-zi-on.png" ProgressMode="BottomToTop" Left="152" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\dl-zi-off.png" />
+            </control>
+            <control name="lbl_dl1_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="1" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="hongdl" />
+            </control>
+            <control name="lbl_dl2_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="38" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="huangdl" />
+            </control>
+            <control name="lbl_dl3_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="75" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="landl" />
+            </control>
+            <control name="lbl_dl4_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="114" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="lvdl" />
+            </control>
+            <control name="lbl_dl5_b" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="152" Top="29" Width="36" Height="131" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="zidl" />
+            </control>
+            <control name="lbl_dlcnt1_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="1" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt2_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="38" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt3_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="75" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt4_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="114" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_dlcnt5_b" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="144" Width="36" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="gb_dlcover_b" entity="GroupBox" script="" init="">
+                <prop Left="-6" Width="190" Height="26" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            </control>
+        </control>
+        <control name="gb_all_skill_a" entity="GroupBox" script="" init="">
+            <prop Top="456" Width="190" Height="270" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="gb_skill1_a" entity="GroupBox" script="" init="">
+                <prop Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname1_a" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_qianfu" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed1_a" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill1_a" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_a_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani1_a" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill2_a" entity="GroupBox" script="" init="">
+                <prop Top="51" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname2_a" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_dundi" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed2_a" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill2_a" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="2" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_a_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani2_a" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill3_a" entity="GroupBox" script="" init="">
+                <prop Top="104" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname3_a" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@textinskin00506" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed3_a" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill3_a" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="3" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_a_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani3_a" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill4_a" entity="GroupBox" script="" init="">
+                <prop Top="155" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname4_a" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_mihuo" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed4_a" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill4_a" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_a_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani4_a" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill5_a" entity="GroupBox" script="" init="">
+                <prop Top="207" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname5_a" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_nizong" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed5_a" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill5_a" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="5" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_a_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani5_a" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_all_skill_b" entity="GroupBox" script="" init="">
+            <prop Left="830" Top="456" Width="190" Height="270" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="gb_skill1_b" entity="GroupBox" script="" init="">
+                <prop Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname1_b" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@textinskin00507" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed1_b" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill1_b" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_b_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani1_b" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill2_b" entity="GroupBox" script="" init="">
+                <prop Top="51" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname2_b" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_dundi" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed2_b" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill2_b" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="2" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_b_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani2_b" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill3_b" entity="GroupBox" script="" init="">
+                <prop Top="104" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname3_b" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_touxi" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed3_b" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill3_b" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="3" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_b_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani3_b" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill4_b" entity="GroupBox" script="" init="">
+                <prop Top="155" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname4_b" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_mihuo" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed4_b" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill4_b" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_b_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani4_b" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+            <control name="gb_skill5_b" entity="GroupBox" script="" init="">
+                <prop Top="207" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_skillname5_b" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_nizong" Font="FZHKJT17" />
+                </control>
+                <control name="icg_skillneed5_b" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="19" MultiTextBoxTop="11" MultiTextBoxPos="19,11;-10,-13" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="10,20,190,32" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="19" GridWidth="20" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\smallgame\baoshi\common\bsxue.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Width="190" Height="50" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" />
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,20,19" LineHeight="19" HtmlText="8" ScrollSize="17" Width="20" Height="19" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="MultiTextBox2">
+                        <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,41,45" LineHeight="19" ScrollSize="17" Width="41" Height="45" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                    </subor>
+                </control>
+                <control name="btn_skill5_b" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\baoshi\common\kuang01-out.png" FocusImage="gui\mainform\smallgame\baoshi\common\kuang01-on.png" PushImage="gui\mainform\smallgame\baoshi\common\kuang01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="190" Height="50" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="5" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_skill_b_click" on_lost_capture="on_btn_lost_capture" on_get_capture="on_btn_get_capture" />
+                </control>
+                <control name="lbl_skillani5_b" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="190" Height="50" ShadowColor="0,0,0,0" BackImage="jinenganniu" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_left_time" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="408" Top="16" Width="102" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shengyu" Font="FZHKJT20" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="128" Width="54" Height="38" ShadowColor="0,0,0,0" BackImage="baozhabai" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="656" Top="144" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="344" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-hong-off.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="480" Top="128" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="320" Top="136" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="baozhahong" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="144" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="baozhhuang" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="456" Top="144" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="baozhlan" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="512" Top="144" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="baozhlv" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="640" Top="144" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="baozhzi" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="312" Top="176" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="faguanghong" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="432" Top="184" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="faguanglan" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="376" Top="184" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="faguanghuang" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="496" Top="184" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="faguanglv" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="568" Top="184" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="faguangzi" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="240" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="quanhong" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="240" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="quanlv" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="440" Top="248" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="tishi" />
+        </control>
+        <control name="lbl_19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="528" Top="256" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="shanghai01" />
+        </control>
+        <control name="lbl_20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="632" Top="256" Width="78" Height="54" ShadowColor="0,0,0,0" BackImage="shanghai02" />
+        </control>
+        <control name="lbl_22" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="456" Top="344" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-huang.png" />
+        </control>
+        <control name="lbl_23" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="528" Top="344" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-lan.png" />
+        </control>
+        <control name="lbl_21" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="600" Top="344" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-lv.png" />
+        </control>
+        <control name="lbl_24" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="312" Top="352" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\caifeng\cf-zi.png" />
+        </control>
+        <control name="lbl_25" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="672" Top="344" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\common\baoshi.png" />
+        </control>
+        <control name="lbl_26" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="296" Top="424" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\common\kulou.png" />
+        </control>
+        <control name="lbl_27" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="376" Top="424" Width="70" Height="70" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\common\quantou.png" />
+        </control>
+        <control name="lbl_28" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="464" Top="424" Width="126" Height="86" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\common\BG.png" />
+        </control>
+        <control name="lbl_29" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="592" Top="432" Width="190" Height="198" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\common\BG1.png" />
+        </control>
+        <control name="lbl_30" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="248" Top="496" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-4lx.png" />
+        </control>
+        <control name="lbl_31" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="568" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-5lx.png" />
+        </control>
+        <control name="lbl_32" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="448" Top="520" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-6lx.png" />
+        </control>
+        <control name="lbl_33" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="448" Top="584" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-7lx.png" />
+        </control>
+        <control name="lbl_34" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="640" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-8lx.png" />
+        </control>
+        <control name="lbl_35" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="464" Top="648" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-clzls.png" />
+        </control>
+        <control name="lbl_36" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="237" Top="448" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-cwdxd.png" />
+        </control>
+        <control name="lbl_37" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="656" Top="640" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-drdhh.png" />
+        </control>
+        <control name="lbl_38" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="472" Top="72" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-ewhh.png" />
+        </control>
+        <control name="lbl_39" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="281" Top="63" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-ndhh.png" />
+        </control>
+        <control name="lbl_40" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="552" Top="8" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-wfhh.png" />
+        </control>
+        <control name="lbl_41" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="16" Width="190" Height="70" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\f-zcsh.png" />
+        </control>
+        <control name="lbl_42" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="264" Top="205" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\chushi\bg-chushi.png" />
+        </control>
+        <control name="lbl_43" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="260" Top="313" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\dushi\bg-dushi.png" />
+        </control>
+        <control name="lbl_44" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="348" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\qiaojiang\bg-qiaojiang.png" />
+        </control>
+        <control name="lbl_45" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="274" Top="381" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\tiejiang\bg-tiejiang.png" />
+        </control>
+        <control name="lbl_46" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="283" Top="415" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\yaoshi\bg-yaoshi.png" />
+        </control>
+        <control name="lbl_47" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="304" Top="280" Width="70" Height="70" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\chushi\cs_hong.png" />
+        </control>
+        <control name="lbl_48" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="407" Top="312" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\chushi\cs_huang.png" />
+        </control>
+        <control name="lbl_49" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="498" Top="317" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\chushi\cs_lan.png" />
+        </control>
+        <control name="lbl_50" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="589" Top="332" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\chushi\cs_lv.png" />
+        </control>
+        <control name="lbl_51" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="686" Top="332" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\chushi\cs_zi.png" />
+        </control>
+        <control name="lbl_52" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="391" Top="418" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\dushi\ds_hong.png" />
+        </control>
+        <control name="lbl_53" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="482" Top="414" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\dushi\ds_huang.png" />
+        </control>
+        <control name="lbl_54" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="608" Top="426" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\dushi\ds_lan.png" />
+        </control>
+        <control name="lbl_55" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="718" Top="418" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\dushi\ds_lv.png" />
+        </control>
+        <control name="lbl_56" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="426" Top="288" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\dushi\ds_zi.png" />
+        </control>
+        <control name="lbl_57" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="733" Top="127" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\qiaojiang\qj_hong.png" />
+        </control>
+        <control name="lbl_58" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="752" Top="159" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\qiaojiang\qj_huang.png" />
+        </control>
+        <control name="lbl_59" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="752" Top="189" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\qiaojiang\qj_lan.png" />
+        </control>
+        <control name="lbl_60" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="767" Top="225" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\qiaojiang\qj_lv.png" />
+        </control>
+        <control name="lbl_61" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="759" Top="255" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\qiaojiang\qj_zi.png" />
+        </control>
+        <control name="lbl_62" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="694" Top="131" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\tiejiang\tj_hong.png" />
+        </control>
+        <control name="lbl_63" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="728" Top="175" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\tiejiang\tj_huang.png" />
+        </control>
+        <control name="lbl_64" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="703" Top="208" Width="80" Height="30" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\tiejiang\tj_lan.png" />
+        </control>
+        <control name="lbl_65" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="238" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\tiejiang\tj_lv.png" />
+        </control>
+        <control name="lbl_66" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="715" Top="266" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\tiejiang\tj_zi.png" />
+        </control>
+        <control name="lbl_67" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="744" Top="294" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\yaoshi\ys_hong.png" />
+        </control>
+        <control name="lbl_68" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="748" Top="320" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\yaoshi\ys_huang.png" />
+        </control>
+        <control name="lbl_69" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="752" Top="355" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\yaoshi\ys_lan.png" />
+        </control>
+        <control name="lbl_70" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="759" Top="381" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\yaoshi\ys_lv.png" />
+        </control>
+        <control name="lbl_71" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="770" Top="402" Width="80" Height="16" ShadowColor="0,0,0,0" Text="" BackImage="gui\mainform\smallgame\baoshi\yaoshi\ys_zi.png" />
+        </control>
+    </control>
+</form>

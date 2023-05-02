@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_relation_world" init="on_main_form_init">
+        <prop Transparent="true" LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="1062" Height="654" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="tree_ec" entity="TreeViewEx" script="" init="">
+            <prop IsNoDrawRoot="true" IsLeftClickExpandClose="true" NodeExpandDraw="gui\special\sns_new\tree_expand.png" NodeCloseDraw="gui\special\sns_new\tree_close.png" ScrollSize="18" Left="25" Top="1051" Width="158" Height="478" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" TabStop="true" NoFrame="true" AutoSize="true" />
+            <event on_left_click="on_tree_ec_left_click" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_ec" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\btn_main\btn_enchou_out_36.png" FocusImage="gui\special\btn_main\btn_enchou_on_36.png" PushImage="gui\special\btn_main\btn_enchou_down_36.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="49" Top="127" Width="55" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_karmahelp_title" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_ec_click" />
+        </control>
+        <control name="btn_born02" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\born02.png" FocusImage="gui\map\area\item\born02_ad.png" PushImage="gui\map\area\item\born02.png" DisableImage="gui\map\area\item\born02_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="9" Top="527" Width="79" Height="56" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xibei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_born01" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\born01.png" FocusImage="gui\map\area\item\born01_ad.png" PushImage="gui\map\area\item\born01.png" DisableImage="gui\map\area\item\born01_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="65" Top="527" Width="81" Height="62" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_born03" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\born03.png" FocusImage="gui\map\area\item\born03_ad.png" PushImage="gui\map\area\item\born03.png" DisableImage="gui\map\area\item\born03_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="129" Top="519" Width="76" Height="70" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="jiangnan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_born04" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\born04.png" FocusImage="gui\map\area\item\born04_ad.png" PushImage="gui\map\area\item\born04.png" DisableImage="gui\map\area\item\born04_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="185" Top="519" Width="87" Height="72" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_city01" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\city01.png" FocusImage="gui\map\area\item\city01_ad.png" PushImage="gui\map\area\item\city01.png" DisableImage="gui\map\area\item\city01_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="241" Top="519" Width="92" Height="66" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_city02" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\city02.png" FocusImage="gui\map\area\item\city02_ad.png" PushImage="gui\map\area\item\city02.png" DisableImage="gui\map\area\item\city02_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="313" Top="519" Width="79" Height="78" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="jiangnan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_city03" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\city03.png" FocusImage="gui\map\area\item\city03_ad.png" PushImage="gui\map\area\item\city03.png" DisableImage="gui\map\area\item\city03_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="369" Top="527" Width="97" Height="61" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="jiangnan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_city04" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\city04.png" FocusImage="gui\map\area\item\city04_ad.png" PushImage="gui\map\area\item\city04.png" DisableImage="gui\map\area\item\city04_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="425" Top="519" Width="117" Height="73" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="zhongyuan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_city05" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\city05.png" FocusImage="gui\map\area\item\city05_ad.png" PushImage="gui\map\area\item\city05.png" DisableImage="gui\map\area\item\city05_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="497" Top="503" Width="80" Height="78" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene01" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene01.png" FocusImage="gui\map\area\item\scene01_ad.png" PushImage="gui\map\area\item\scene01.png" DisableImage="gui\map\area\item\scene01_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="561" Top="535" Width="73" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene02" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene02.png" FocusImage="gui\map\area\item\scene02_ad.png" PushImage="gui\map\area\item\scene02.png" DisableImage="gui\map\area\item\scene02_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="601" Top="527" Width="86" Height="61" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene03" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene03.png" FocusImage="gui\map\area\item\scene03_ad.png" PushImage="gui\map\area\item\scene03.png" DisableImage="gui\map\area\item\scene03_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="665" Top="527" Width="79" Height="65" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene04" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene04.png" FocusImage="gui\map\area\item\scene04_ad.png" PushImage="gui\map\area\item\scene04.png" DisableImage="gui\map\area\item\scene04_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="713" Top="519" Width="75" Height="67" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene05" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene05.png" FocusImage="gui\map\area\item\scene05_ad.png" PushImage="gui\map\area\item\scene05.png" DisableImage="gui\map\area\item\scene05_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="761" Top="519" Width="80" Height="79" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene06" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene06.png" FocusImage="gui\map\area\item\scene06_ad.png" PushImage="gui\map\area\item\scene06.png" DisableImage="gui\map\area\item\scene06_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="809" Top="527" Width="61" Height="68" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene07" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene07.png" FocusImage="gui\map\area\item\scene07_ad.png" PushImage="gui\map\area\item\scene07.png" DisableImage="gui\map\area\item\scene07_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="833" Top="519" Width="83" Height="70" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="jiangnan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene08" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene08.png" FocusImage="gui\map\area\item\scene08_ad.png" PushImage="gui\map\area\item\scene08.png" DisableImage="gui\map\area\item\scene08_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="889" Top="527" Width="63" Height="69" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xibei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_scene09" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\scene09.png" FocusImage="gui\map\area\item\scene09_ad.png" PushImage="gui\map\area\item\scene09.png" DisableImage="gui\map\area\item\scene09_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="913" Top="527" Width="105" Height="71" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xibei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school01" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school01.png" FocusImage="gui\map\area\item\school01_ad.png" PushImage="gui\map\area\item\school01.png" DisableImage="gui\map\area\item\school01_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="73" Top="567" Width="66" Height="80" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school02" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school02.png" FocusImage="gui\map\area\item\school02_ad.png" PushImage="gui\map\area\item\school02.png" DisableImage="gui\map\area\item\school02_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="129" Top="583" Width="73" Height="56" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="huabei" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school03" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school03.png" FocusImage="gui\map\area\item\school03_ad.png" PushImage="gui\map\area\item\school03.png" DisableImage="gui\map\area\item\school03_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="193" Top="575" Width="77" Height="69" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="jiangnan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school04" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school04.png" FocusImage="gui\map\area\item\school04_ad.png" PushImage="gui\map\area\item\school04.png" DisableImage="gui\map\area\item\school04_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="257" Top="583" Width="72" Height="65" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="jiangnan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school05" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school05.png" FocusImage="gui\map\area\item\school05_ad.png" PushImage="gui\map\area\item\school05.png" DisableImage="gui\map\area\item\school05_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="313" Top="567" Width="88" Height="85" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school06" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school06.png" FocusImage="gui\map\area\item\school06_ad.png" PushImage="gui\map\area\item\school06.png" DisableImage="gui\map\area\item\school06_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="385" Top="567" Width="68" Height="77" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="xinan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school07" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school07.png" FocusImage="gui\map\area\item\school07_ad.png" PushImage="gui\map\area\item\school07.png" DisableImage="gui\map\area\item\school07_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="441" Top="575" Width="81" Height="69" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="zhongyuan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="btn_school08" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\area\item\school08.png" FocusImage="gui\map\area\item\school08_ad.png" PushImage="gui\map\area\item\school08.png" DisableImage="gui\map\area\item\school08_bc.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="497" Top="575" Width="85" Height="61" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="zhongyuan" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_city_click" on_lost_capture="hide_world_city_tips" on_get_capture="get_world_city_tips" />
+        </control>
+        <control name="groupbox_filter" entity="GroupBox" script="" init="">
+            <prop Left="-549" Top="27" Width="422" Height="57" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" BackImage="gui\common\form_back\bg_list3.png" />
+            <control name="combobox_his" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="55" OnlySelect="true" Top="-11" Width="110" Height="23" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                <event on_selected="on_combobox_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" Marked="true" TextOffsetX="2" Caret="Default" ForeColor="255,204,204,204" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                </subor>
+                <subor name="DropButton">
+                    <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectForeColor="255,197,184,159" SelectBackColor="255,147,123,99" ScrollSize="17" ForeColor="255,204,204,204" BackColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="combobox_type" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="70" OnlySelect="true" Left="120" Top="16" Width="110" Height="23" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                <event on_selected="on_combobox_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ForeColor="255,204,204,204" BlendColor="3,255,255,255" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" BackImage="gui\common\form_back\bg_menu.png" />
+                </subor>
+                <subor name="DropButton">
+                    <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectForeColor="255,197,184,159" SelectBackColor="255,147,123,99" ScrollSize="17" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="combobox_rel" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="133" OnlySelect="true" Left="240" Top="16" Width="110" Height="23" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                <event on_selected="on_combobox_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ForeColor="255,204,204,204" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                </subor>
+                <subor name="DropButton">
+                    <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectForeColor="255,197,184,159" SelectBackColor="255,147,123,99" ScrollSize="17" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_degree" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="97" Top="383" Width="79" Height="67" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_num_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="24" Top="2" Width="50" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="10/10" Font="font_text" DrawMode="Expand" BackImage="gui\special\prestige\sns_back.png" DisableEnter="true" />
+            </control>
+            <control name="lbl_num_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="24" Top="22" Width="50" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="5/10" Font="font_text" NoFrame="false" DrawMode="Expand" BackImage="gui\special\prestige\sns_back.png" />
+            </control>
+            <control name="lbl_num_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="24" Top="42" Width="50" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="5/10" Font="font_text" NoFrame="false" DrawMode="Expand" BackImage="gui\special\prestige\sns_back.png" />
+            </control>
+            <control name="btn_type_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\btn_type1_out.png" FocusImage="gui\language\ChineseS\prestige\btn_type1_on.png" PushImage="gui\language\ChineseS\prestige\btn_type1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="-1" Width="23" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="btn_type_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\btn_type2_out.png" FocusImage="gui\language\ChineseS\prestige\btn_type2_on.png" PushImage="gui\language\ChineseS\prestige\btn_type2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="20" Width="23" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="btn_type_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\btn_type3_out.png" FocusImage="gui\language\ChineseS\prestige\btn_type3_on.png" PushImage="gui\language\ChineseS\prestige\btn_type3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="41" Width="23" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+        </control>
+        <control name="btn_degree" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\prestige\prestige_out.png" FocusImage="gui\language\ChineseS\prestige\prestige_on.png" PushImage="gui\language\ChineseS\prestige\prestige_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="49" Top="79" Width="42" Height="42" BackColor="0,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_btn_prestige" AutoSize="true" />
+            <event on_click="on_btn_degree_click" />
+        </control>
+        <control name="gb_degree_tips" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="289" Top="159" Width="198" Height="150" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Top="32" Width="192" Height="118" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            </control>
+            <control name="lbl_imageback" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="304" Top="56" Width="46" Height="46" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+            </control>
+            <control name="lbl_type" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="64" Top="48" Width="118" Height="20" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="类型名" Font="font_text" NoFrame="false" DrawMode="Expand" BackImage="gui\special\xiulian\back.png" />
+            </control>
+            <control name="lbl_num" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="256" Top="32" Width="118" Height="20" ShadowColor="0,0,0,0" Text="2/4" Font="font_text" NoFrame="false" DrawMode="Expand" BackImage="gui\special\xiulian\back.png" />
+            </control>
+            <control name="lbl_scene" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="64" Top="72" Width="118" Height="20" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="千灯镇" Font="font_text" DrawMode="Expand" BackImage="gui\special\xiulian\back.png" />
+            </control>
+            <control name="groupbox_kapai" entity="GroupBox" script="" init="">
+                <prop Left="3" Top="100" Width="190" Height="22" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="lbl_green" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="9" Top="104" Width="182" Height="20" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="恶人谷游侠" Font="font_text" />
+            </control>
+            <control name="lbl_line" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Top="125" Width="190" Height="4" ShadowColor="0,0,0,0" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="61" Top="11" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_prestige_name" Font="font_title" />
+            </control>
+            <control name="lbl_image" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="43" Width="46" Height="46" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+        </control>
+        <control name="btn_trace" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\prestige\prestige_out.png" FocusImage="gui\language\ChineseS\prestige\prestige_on.png" PushImage="gui\language\ChineseS\prestige\prestige_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-29" Top="39" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" DrawMode="FitWindow" />
+            <event on_click="on_btn_trace_click" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="225" Top="391" Width="102" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_num4" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="47" Top="14" Width="50" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="10/10" Font="font_text" DrawMode="Expand" BackImage="gui\special\prestige\sns_back.png" DisableEnter="true" />
+                <event on_lost_capture="on_btn_type_lost_capture" on_get_capture="on_btn_type_get_capture" />
+            </control>
+            <control name="btn_type4" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\icon_type4_out.png" FocusImage="gui\language\ChineseS\prestige\icon_type4_on.png" PushImage="gui\language\ChineseS\prestige\icon_type4_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="46" Height="46" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+        </control>
+        <control name="groupbox_world" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Width="100" Height="80" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="groupbox_scene_relation" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Width="100" Height="80" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="groupbox_scene" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Width="100" Height="80" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+    </control>
+</form>

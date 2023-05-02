@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_put_model" init="main_form_init">
+        <prop Left="133" Top="29" Width="254" Height="606" BackColor="146,146,148,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_move="main_form_move" on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="8" Width="94" Height="16" Text="物体摆放" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="233" Top="-1" Width="22" Height="22" Text="X" HintText="关闭" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="type_list" entity="ListBox" script="" init="">
+            <prop Sorted="true" ItemHeight="12" TextOffsetX="2" ScrollSize="17" Left="16" Top="56" Width="222" Height="78" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="type_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+        </control>
+        <control name="name_list" entity="ListBox" script="" init="">
+            <prop Sorted="true" ItemHeight="12" TextOffsetX="2" ScrollSize="17" Left="16" Top="184" Width="222" Height="78" Text="ListBox2" TabStop="true" />
+            <event on_select_changed="name_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="32" Width="46" Height="22" Text="种类：" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="136" Width="38" Height="22" Text="列表:" />
+        </control>
+        <control name="reload_btn" entity="Button" script="" init="">
+            <prop Left="192" Top="136" Width="46" Height="22" Text="刷新" TabStop="true" />
+            <event on_click="reload_btn_click" />
+        </control>
+        <control name="sample_box" entity="SceneBox" script="" init="">
+            <prop Left="16" Top="432" Width="222" Height="134" BackColor="255,154,155,157" />
+        </control>
+        <control name="add_btn" entity="Button" script="" init="">
+            <prop Left="80" Top="136" Width="46" Height="22" Text="添加" TabStop="true" />
+            <event on_click="add_btn_click" />
+        </control>
+        <control name="remove_btn" entity="Button" script="" init="">
+            <prop Left="128" Top="136" Width="46" Height="22" Text="删除" TabStop="true" />
+            <event on_click="remove_btn_click" />
+        </control>
+        <control name="info_grid" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="255,178,178,178" CanSelectRow="true" ColWidth="100" RowHeight="16" ColCount="2" ScrollSize="17" HasHScroll="true" Left="16" Top="288" Width="222" Height="134" Text="Grid1" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="16" Height="17" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="entity_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="382" OnlySelect="true" Left="112" Top="32" Width="126" Height="16" />
+            <event on_selected="entity_select_changed" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="16" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="264" Width="80" Height="22" Text="物体信息：" />
+        </control>
+        <control name="camera_dis_tb" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Value="50" Left="72" Top="584" Width="166" Height="6" />
+            <event on_value_changed="camera_dis_tb_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="6" />
+            </subor>
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="578" Width="70" Height="16" Text="摄像机距离:" />
+        </control>
+        <control name="bind_check" entity="CheckButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" Left="143" Top="263" Width="94" Height="22" Enabled="false" Text="绑定到辅助点" TabStop="true" />
+            <event on_checked_changed="bind_check_checked_changed" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="160" Width="38" Height="22" Text="筛选:" />
+        </control>
+        <control name="filter_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="48" Top="160" Width="126" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="filter_edit_changed" />
+        </control>
+        <control name="remove_type_btn" entity="Button" script="" init="">
+            <prop Left="48" Top="32" Width="62" Height="22" Text="删除种类" TabStop="true" />
+            <event on_click="remove_type_btn_click" />
+        </control>
+    </control>
+</form>

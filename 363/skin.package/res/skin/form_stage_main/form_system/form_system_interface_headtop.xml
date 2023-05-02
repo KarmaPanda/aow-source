@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_system\form_system_interface_headtop" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="229" Top="125" Width="420" Height="445" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="420" Height="440" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="16" Top="8" Width="80" Height="20" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_system_headinfo" Font="font_title" AutoSize="true" DrawMode="FitWindow" />
+        </control>
+        <control name="mltbox_title" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,318,32" LineHeight="18" HtmlText="@ui_system_headinfo_settings" ScrollSize="17" Left="72" Top="24" Width="318" Height="32" ForeColor="255,95,64,37" ShadowColor="0,20,0,0" Font="font_main" NoFrame="true" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="16" Top="60" Width="166" Height="350" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            <control name="lbl_headinfo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="20" Top="10" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_system_headinfo" Font="font_text" />
+            </control>
+            <control name="cbtn_headinfo" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Top="10" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_headinfo_checked_changed" />
+            </control>
+            <control name="lbl_myname" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="30" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_myname" Font="font_main" />
+            </control>
+            <control name="cbtn_myname" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="30" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_myname_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_myname_checked_changed" />
+            </control>
+            <control name="lbl_myorgind" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="50" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_titile" Font="font_main" />
+            </control>
+            <control name="cbtn_myorgind" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="50" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_titile_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_myguild" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="70" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_faction" Font="font_main" />
+            </control>
+            <control name="cbtn_myguild" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="70" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_factiom_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_myguild_checked_changed" />
+            </control>
+            <control name="lbl_myguildid" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="90" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_factionjob" Font="font_main" />
+            </control>
+            <control name="cbtn_myguildid" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="90" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_factionjob_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_friendname" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="110" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_friendname" Font="font_main" />
+            </control>
+            <control name="cbtn_friendname" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="110" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_friendname_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_friendname_checked_changed" />
+            </control>
+            <control name="lbl_friendorgind" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="130" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_titile" Font="font_main" />
+            </control>
+            <control name="cbtn_friendorgind" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="130" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_friendtitile_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_friendguild" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="150" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_faction" Font="font_main" />
+            </control>
+            <control name="cbtn_friendguild" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="150" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_friendfaction_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_friendguild_checked_changed" />
+            </control>
+            <control name="lbl_friendguildid" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="170" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_factionjob" Font="font_main" />
+            </control>
+            <control name="cbtn_friendguildid" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="170" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_friendfactionjob_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_enemyname" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="190" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_enemyname" Font="font_main" />
+            </control>
+            <control name="cbtn_enemyname" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="190" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_enemyname_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_enemyname_checked_changed" />
+            </control>
+            <control name="lbl_enemyorgind" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="210" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_titile" Font="font_main" />
+            </control>
+            <control name="cbtn_enemyorgind" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="210" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_enemytitile_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_enemyguild" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="230" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_faction" Font="font_main" />
+            </control>
+            <control name="cbtn_enemyguild" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="230" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_enemyfaction_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_enemyguild_checked_changed" />
+            </control>
+            <control name="lbl_enemyguildid" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="250" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_factionjob" Font="font_main" />
+            </control>
+            <control name="cbtn_enemyguildid" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="250" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_enemyfactionjob_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_npcname" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="270" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_npcname" Font="font_main" />
+            </control>
+            <control name="cbtn_npcname" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="270" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_npcname_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_npcname_checked_changed" />
+            </control>
+            <control name="lbl_npcorgind" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="290" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_titile" Font="font_main" />
+            </control>
+            <control name="cbtn_npcorgind" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="290" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_npctitile_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_npccorpsename" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="312" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_corpsename" Font="font_main" />
+            </control>
+            <control name="cbtn_npccorpsename" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="312" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_corpsetitile_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_partnername" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="328" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_marry" Font="font_main" />
+            </control>
+            <control name="cbtn_partnername" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="328" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_marry_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="192" Top="60" Width="214" Height="180" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            <control name="lbl_headblod" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="20" Top="10" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_headtopbar" Font="font_text" />
+            </control>
+            <control name="cbtn_headblod" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="4" Top="10" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_headtopbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_headblod_checked_changed" />
+            </control>
+            <control name="lbl_myblood" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="30" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_bloodbar" Font="font_main" />
+            </control>
+            <control name="cbtn_playerblood" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="16" Top="30" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_bloodbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_playerblood_checked_changed" />
+            </control>
+            <control name="lbl_playerblood" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="50" Width="54" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_mybloodbar" Font="font_main" />
+            </control>
+            <control name="cbtn_myblood" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="50" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_mybloodbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_friendblood" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="70" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_friendbbar" Font="font_main" />
+            </control>
+            <control name="cbtn_friendblood" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="70" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_friendbbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_enemyblood" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="90" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_enemybbar" Font="font_main" />
+            </control>
+            <control name="cbtn_enemyblood" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="90" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_enemybbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_bubble20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="110" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_npcbbar" Font="font_main" />
+            </control>
+            <control name="cbtn_npcblood" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="16" Top="110" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_npcbbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_npcblood_checked_changed" />
+            </control>
+            <control name="cbtn_friendnpc" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="128" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_friendnpc_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_friendnpc" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="128" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_friendnpc" Font="font_main" />
+            </control>
+            <control name="cbtn_enemynpc" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="152" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_enemynpc_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_enemynpc" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="48" Top="152" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_enemynpc" Font="font_main" />
+            </control>
+        </control>
+        <control name="groupbox_3" entity="GroupBox" script="" init="">
+            <prop Left="192" Top="244" Width="214" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            <control name="lbl_bubble22" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="20" Top="32" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_allthetime" Font="font_text_figure" />
+            </control>
+            <control name="rbtn_kfall" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_4_off.png" FocusImage="gui\common\checkbutton\cbtn_4_on.png" CheckedImage="gui\common\checkbutton\cbtn_4_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="32" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_allthetime_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_bubble23" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="112" Top="32" Width="78" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_flight" Font="font_text_figure" />
+            </control>
+            <control name="rbtn_kfuse" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_4_off.png" FocusImage="gui\common\checkbutton\cbtn_4_on.png" CheckedImage="gui\common\checkbutton\cbtn_4_down.png" DisableImage="gui\common\checkbutton\cbtn_4_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="95" Top="32" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_flight_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_bubble21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="20" Top="10" Width="54" Height="16" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_flightbar" Font="font_text" HintText="@tips_system_headinfo_flightbar" />
+            </control>
+            <control name="cbtn_kungfu" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="4" Top="10" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_flightbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_kungfu_checked_changed" />
+            </control>
+        </control>
+        <control name="lbl_range" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="144" Top="360" Width="262" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_headname_zoom" Font="font_text_figure" />
+        </control>
+        <control name="pbar_range" entity="ProgressBar" script="" init="">
+            <prop Minimum="1" Maximum="200" Value="1" WidthGap="2" HeightGap="2" ProgressImage="gui\common\progressbar\pbr_3.png" ProgressMode="LeftToRight" Left="218" Top="385" Width="166" Height="14" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\trackbar\bg_2.png" />
+        </control>
+        <control name="tbar_range" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Minimum="1" Maximum="200" Value="1" Left="218" Top="385" Width="166" Height="14" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_info_tip" NoFrame="true" DrawMode="ExpandH" />
+            <event on_value_changed="on_tbar_range_value_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\common\trackbar\tb_2_out.png" FocusImage="gui\common\trackbar\tb_2_on.png" PushImage="gui\common\trackbar\tb_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            </subor>
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="32" Width="406" Height="20" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg3.png" />
+        </control>
+        <control name="cbtn_aishow" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="200" Top="408" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+        </control>
+        <control name="lbl_aishow" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="216" Top="408" Width="174" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_zhinengxianshi" Font="font_text_figure" />
+        </control>
+        <control name="groupbox_4" entity="GroupBox" script="" init="">
+            <prop Left="192" Top="302" Width="214" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="21" Top="32" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_allthetime" Font="font_text_figure" />
+            </control>
+            <control name="rbtn_5" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_4_off.png" FocusImage="gui\common\checkbutton\cbtn_4_on.png" CheckedImage="gui\common\checkbutton\cbtn_4_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="32" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_allthetime_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="112" Top="32" Width="78" Height="16" ForeColor="255,128,101,74" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_flight" Font="font_text_figure" />
+            </control>
+            <control name="rbtn_6" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_4_off.png" FocusImage="gui\common\checkbutton\cbtn_4_on.png" CheckedImage="gui\common\checkbutton\cbtn_4_down.png" DisableImage="gui\common\checkbutton\cbtn_4_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="32" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_flight_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="20" Top="10" Width="54" Height="16" ForeColor="255,76,61,44" ShadowColor="0,255,0,0" Text="@ui_system_headinfo_GJqg" Font="font_text" HintText="@tips_system_headinfo_GJqg" />
+            </control>
+            <control name="cbtn_3" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="4" Top="10" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_system_headinfo_flightbar_tip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_cbtn_3_checked_changed" />
+            </control>
+        </control>
+    </control>
+</form>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_skyhill\form_clone_skyhill_achievement" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Left="101" Top="93" Width="796" Height="607" LineColor="255,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="179" Width="603" Height="607" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\clone_bg3.png" />
+        </control>
+        <control name="gsb_1" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="18" HasVScroll="true" AlwaysVScroll="true" Left="179" Top="3" Width="619" Height="600" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="18" SmallChange="50" LargeChange="422" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="564" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="groupbox_module_1" entity="GroupBox" script="" init="">
+            <prop Top="661" Width="603" Height="60" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+            <control name="cbtn_achieve" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\clone_new\form_ttf_achievement\close.png" CheckedImage="gui\clone_new\form_ttf_achievement\open.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Width="603" Height="78" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="FitWindow" />
+                <event on_checked_changed="on_cbtn_achieve_checked_changed" />
+            </control>
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="104" Top="13" Width="86" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_prize" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="20" Width="30" Height="30" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_sns_title_1" DrawMode="FitWindow" BackImage="gui\daohh7.png" />
+            </control>
+            <control name="lbl_achieve" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="205" Top="13" Width="126" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_other" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="232" Top="69" Width="326" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="imagegrid" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,300,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="40" GridWidth="40" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\clone_new\form_ttf_achievement\daoju bg.png" GridBackOffsetX="-7" GridBackOffsetY="-7" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="147" Top="-19" Width="54" Height="56" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="btn_prize" entity="Button" script="" init="">
+                <prop NormalImage="gui\clone_new\form_ttf_achievement\out.png" FocusImage="gui\clone_new\form_ttf_achievement\on.png" PushImage="gui\clone_new\form_ttf_achievement\down.png" DisableImage="gui\clone_new\form_ttf_achievement\forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="500" Top="16" Width="75" Height="30" ForeColor="255,255,255,255" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_skyhill_achievement_prize" Font="font_playername" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_finish" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="16" Width="70" Height="30" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\clone_new\form_ttf_achievement\receive.png" />
+            </control>
+        </control>
+        <control name="groupbox_module_2" entity="GroupBox" script="" init="">
+            <prop Left="6" Top="661" Width="592" Height="80" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\clone_new\form_ttf_achievement\bg2.png" />
+            <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,542,64" LineHeight="19" TipMaxWidth="80" ScrollSize="17" Left="48" Top="16" Width="542" Height="64" ForeColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+        </control>
+        <control name="tree_job" entity="TreeViewEx" script="" init="">
+            <prop IsNoDrawRoot="true" IsLeftClickExpandClose="true" SelectBackColor="190,190,190,190" NodeExpandDraw="gui/special/match/subtract.png" NodeCloseDraw="gui/special/match/plus.png" ScrollSize="18" Top="1" Width="182" Height="604" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_select_changed="on_tree_job_select_changed" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="20" TrackSize="36" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="groupbox_reward" entity="GroupBox" script="" init="">
+            <prop Top="772" Width="612" Height="230" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\clone_new\form_ttf_achievement\bg2.png" />
+            <control name="mltbox_reward_info1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,100,182" LineHeight="18" ScrollSize="17" Left="104" Top="40" Width="100" Height="182" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text_chat" NoFrame="true" DrawMode="Expand" />
+            </control>
+            <control name="mltbox_reward_info2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,227,55" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,200,182" LineHeight="18" ScrollSize="17" Left="248" Top="40" Width="200" Height="182" ShadowColor="0,0,0,0" Font="font_text_chat" NoFrame="true" />
+            </control>
+            <control name="mltbox_title" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,76,61,44" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,500,30" LineHeight="19" ScrollSize="17" Left="60" Top="10" Width="500" Height="30" ForeColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" NoFrame="true" />
+            </control>
+        </control>
+    </control>
+</form>

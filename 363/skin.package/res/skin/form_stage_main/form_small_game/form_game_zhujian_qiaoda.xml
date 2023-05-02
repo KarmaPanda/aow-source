@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_zhujian_qiaoda" init="main_form_init">
+        <prop LimitInScreen="true" Left="13" Top="5" Width="1186" Height="819" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_back" entity="GroupBox" script="" init="">
+            <prop Left="17" Top="15" Width="100" Height="80" BackColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" NoFrame="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\forgegameground.png" />
+        </control>
+        <control name="groupbox_guide" entity="GroupBox" script="" init="">
+            <prop Fixed="false" Left="528" Top="64" Width="334" Height="438" BackColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\tips\bg_main.png" />
+            <control name="btn_guide_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="296" Top="16" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" />
+                <event on_click="on_btn_guide_click" />
+            </control>
+            <control name="mltbox_guide_text" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,150,255,0" MouseInBarColor="0,255,255,0" ViewRect="0,0,294,350" LineHeight="18" HtmlText="@ui_dfsj_zjcj_jmyw05" ScrollSize="17" Left="16" Top="40" Width="294" Height="350" ShadowColor="0,0,0,0" Enabled="false" Font="font_map_area_2" />
+            </control>
+        </control>
+        <control name="groupbox_progress" entity="GroupBox" script="" init="">
+            <prop Left="105" Top="530" Width="827" Height="222" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_progress_bk" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="827" Height="170" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\dfsj_zhujian\taizi.png" />
+            </control>
+            <control name="lbl_progress_bk_sword" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="15" Width="815" Height="143" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\language\ChineseS\dfsj_zhujian\jian.png" />
+            </control>
+            <control name="lbl_split" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="375" Top="48" Width="293" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\language\ChineseS\dfsj_zhujian\fenge.png" />
+            </control>
+            <control name="lbl_pbar_sword_bk" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="303" Top="68" Width="455" Height="30" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\dfsj_zhujian\jindu_di.png" />
+            </control>
+            <control name="pbar_sword" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\language\ChineseS\dfsj_zhujian\shui_jindu.png" ProgressMode="LeftToRight" Left="311" Top="76" Width="437" Height="14" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+            </control>
+            <control name="lbl_pbar_sword_halo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="2" Width="826" Height="154" BlendColor="0,255,130,55" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\dfsj_zhujian\light_L.png" />
+            </control>
+            <control name="btn_case_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\dfsj_zhujian\light1.png" FocusBlendColor="0,255,255,255" PushBlendColor="128,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="231" Top="46" Width="145" Height="72" BackColor="255,192,192,192" BlendColor="0,255,110,0" ShadowColor="0,0,0,0" DataSource="0" DrawMode="FitWindow" />
+                <event on_click="on_btn_case_click" />
+            </control>
+            <control name="btn_case_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\dfsj_zhujian\light1.png" FocusBlendColor="0,255,255,255" PushBlendColor="128,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="376" Top="46" Width="145" Height="72" BackColor="255,192,192,192" BlendColor="0,255,110,0" ShadowColor="0,0,0,0" DataSource="1" DrawMode="FitWindow" />
+                <event on_click="on_btn_case_click" />
+            </control>
+            <control name="btn_case_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\dfsj_zhujian\light1.png" FocusBlendColor="0,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="521" Top="46" Width="145" Height="72" BackColor="255,192,192,192" BlendColor="0,255,110,0" ShadowColor="0,0,0,0" DataSource="2" DrawMode="FitWindow" />
+                <event on_click="on_btn_case_click" />
+            </control>
+            <control name="btn_case_4" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\dfsj_zhujian\light2.png" FocusBlendColor="0,255,255,255" PushBlendColor="128,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="666" Top="46" Width="145" Height="72" BackColor="255,192,192,192" BlendColor="0,255,110,0" ShadowColor="0,0,0,0" DataSource="3" DrawMode="FitWindow" />
+                <event on_click="on_btn_case_click" />
+            </control>
+            <control name="btn_start" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn-out.png" FocusImage="gui\common\button\btn-on.png" PushImage="gui\common\button\btn-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="271" Top="180" Width="106" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_dfsj_zjcj_jmyw01" Font="font_sns_btn" DrawMode="ExpandH" />
+                <event on_click="on_btn_start_click" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn-out.png" FocusImage="gui\common\button\btn-on.png" PushImage="gui\common\button\btn-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="385" Top="180" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_dfsj_zjcj_jmyw02" Font="font_sns_btn" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_guide" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn-out.png" FocusImage="gui\common\button\btn-on.png" PushImage="gui\common\button\btn-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="480" Top="180" Width="134" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_dfsj_zjcj_jmyw03" Font="font_sns_btn" DrawMode="ExpandH" />
+                <event on_click="on_btn_guide_click" />
+            </control>
+        </control>
+        <control name="ani_1" entity="Animation" script="" init="">
+            <prop PlayMode="2" Left="16" Top="144" Width="32" Height="32" />
+        </control>
+        <control name="ani_djs" entity="Animation" script="" init="">
+            <prop AnimationImage="dfsj_zjcj_dhcz02" PlayMode="2" Left="121" Top="161" Width="100" Height="100" />
+        </control>
+    </control>
+</form>

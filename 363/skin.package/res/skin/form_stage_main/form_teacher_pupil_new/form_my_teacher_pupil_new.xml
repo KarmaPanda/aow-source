@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_teacher_pupil_new\form_my_teacher_pupil_new" init="on_main_form_init">
+        <prop ShowGrid="true" Left="13" Top="13" Width="630" Height="480" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_jiangli" entity="GroupBox" script="" init="">
+            <prop Width="632" Height="474" ForeColor="255,197,184,159" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" AutoSize="true" BackImage="gui\special\newshitu\di333.png" />
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Width="270" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="rbtn_1" entity="RadioButton" script="" init="">
+                    <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" CheckedImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="5" Width="174" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huodongyujiangli" Font="font_text" TabStop="true" DrawMode="ExpandH" />
+                    <event on_click="on_rbtn_1_click" />
+                </control>
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-1" Top="30" Width="632" Height="416" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\newshitu\fengexian_b.png" />
+            </control>
+            <control name="textgrid_prize" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderBackColor="0,255,255,255" HeaderForeColor="0,255,255,255" CanSelectRow="true" ColWidth="50" ColWidths="375,110,80" RowHeight="55" ScrollSize="20" HasHScroll="true" AlwaysVScroll="true" Left="-309" Top="26" Width="624" Height="415" ForeColor="0,197,184,159" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_text_title1" TabStop="true" NoFrame="true" AutoSize="true" />
+                <subor name="HScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop SmallChange="1" LargeChange="6" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="385" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Align="Center" Solid="true" RefCursor="WIN_HELP" ForeColor="255,255,180,40" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="btn_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\newshitu\anniu_x_out.png" FocusImage="gui\special\newshitu\anniu_x_on.png" PushImage="gui\special\newshitu\anniu_x_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="544" Top="445" Width="78" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_fanhui" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="Default" ClickSound="ok_7" />
+                <event on_click="on_btn_return_click" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="-235" Top="40" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_shituhuodong_001" Font="font_playername" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="360" Top="40" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shutujiangli_001" Font="font_playername" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="496" Top="40" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shituwancheng_001" Font="font_playername" />
+            </control>
+        </control>
+        <control name="imagegrid_award" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,320,50" MaxSize="-1" RowNum="1" ClomnNum="1" ShowEmpty="false" EmptyShowFade="true" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item2.png" GridBackOffsetX="-4" GridBackOffsetY="-3" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="648" Top="240" Width="46" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <event on_mouseout_grid="on_imagegrid_tiguan_award_mouseout_grid" on_mousein_grid="on_imagegrid_tiguan_award_mousein_grid" />
+        </control>
+        <control name="groupbox_shixiongdi" entity="GroupBox" script="" init="">
+            <prop Width="630" Height="480" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="250" Top="264" Width="380" Height="176" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="248" Top="24" Width="382" Height="246" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            </control>
+            <control name="pic_scenebox_bg" entity="Picture" script="" init="">
+                <prop ZoomWidth="0.983784" ZoomHeight="0.984456" CenterX="-1" CenterY="-1" Left="5" Top="24" Width="238" Height="414" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="pic_1" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="5" Top="24" Width="238" Height="414" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="lbl_18" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="32" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_shitu_name_01" Font="font_name_guild" />
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="328" Top="32" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="56" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_shitu_power_01" Font="font_name_guild" />
+            </control>
+            <control name="lbl_powerlevel" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="328" Top="56" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="80" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_shitu_time" Font="font_name_guild" />
+            </control>
+            <control name="lbl_tptime" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="448" Top="80" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_him" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="104" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_shitu_dangqianzhuangtai" Font="font_name_guild" />
+            </control>
+            <control name="lbl_himinfo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="368" Top="104" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_intimate" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="128" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@shitu_qinmi" Font="font_name_guild" />
+            </control>
+            <control name="lbl_intimateinfo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="448" Top="128" Width="64" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_me" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="176" Width="70" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_shitu_shenfen" Font="font_name_guild" />
+            </control>
+            <control name="lbl_myinfo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="352" Top="176" Width="110" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="200" Width="62" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_shitu_shituzhi" Font="font_name_guild" />
+            </control>
+            <control name="lbl_tpvalue" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="432" Top="200" Width="110" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="lbl_enshi" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="224" Width="70" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_enshi" Font="font_name_guild" />
+            </control>
+            <control name="lbl_enshiinfo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="368" Top="224" Width="110" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+            <control name="btn_pupil1" entity="Button" script="" init="">
+                <prop DragEvent="true" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" PushImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="2" Width="126" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_shidi01" Font="font_main" TabStop="true" NoFrame="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_pupil1_click" />
+            </control>
+            <control name="btn_pupil2" entity="Button" script="" init="">
+                <prop DragEvent="true" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" PushImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="131" Top="2" Width="134" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_shidi02" Font="font_main" TabStop="true" NoFrame="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_pupil2_click" />
+            </control>
+            <control name="btn_pupil3" entity="Button" script="" init="">
+                <prop DragEvent="true" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" PushImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="267" Top="2" Width="110" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_shidi03" Font="font_main" HintText="@ui_tudi3_001" TabStop="true" NoFrame="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_pupil3_click" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="24" Width="248" Height="416" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="scenebox_1" entity="SceneBox" script="" init="">
+                <prop Left="5" Top="24" Width="238" Height="414" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            </control>
+            <control name="btn_change_form" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\newshitu\bao_out.png" FocusImage="gui\special\newshitu\bao_on.png" PushImage="gui\special\newshitu\bao_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="568" Top="128" Width="55" Height="35" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_prize_001" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_change_form_click" />
+            </control>
+            <control name="back_image" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="26" Width="632" Height="416" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\newshitu\diwen.png" />
+            </control>
+            <control name="groupbox_bottom" entity="GroupBox" script="" init="">
+                <prop Left="176" Top="446" Width="454" Height="30" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <control name="btn_quit" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\newshitu\anniu_x_out.png" FocusImage="gui\special\newshitu\anniu_x_on.png" PushImage="gui\special\newshitu\anniu_x_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="112" Width="168" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_jiechuguanxi" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_quit_click" />
+                </control>
+                <control name="btn_qiangzhi_remove" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\newshitu\anniu_x_out.png" FocusImage="gui\special\newshitu\anniu_x_on.png" PushImage="gui\special\newshitu\anniu_x_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="280" Width="172" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_jiechu_2" Font="font_btn" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="Default" ClickSound="ok_7" />
+                    <event on_click="on_btn_qiangzhi_remove_click" />
+                </control>
+                <control name="btn_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\newshitu\anniu_x_out.png" FocusImage="gui\special\newshitu\anniu_x_on.png" PushImage="gui\special\newshitu\anniu_x_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="19" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_fanhui" Font="font_btn" TabStop="true" NoFrame="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_return_click" />
+                </control>
+            </control>
+            <control name="groupbox_2" entity="GroupBox" script="" init="">
+                <prop Left="248" Top="264" Width="380" Height="182" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="-182" Top="4" Width="346" Height="23" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="@shitu_huoqu" Font="font_text" AutoSize="true" BackImage="gui\special\newshitu\title_bg.png" />
+                </control>
+                <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="10,0,350,260" LineHeight="15" HtmlText="@shitu_shituzhijieshao" ScrollSize="18" HasVScroll="true" AlwaysVScroll="true" Top="32" Width="382" Height="142" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" Maximum="27" SmallChange="1" LargeChange="14" BackColor="0,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+            </control>
+            <control name="lbl_day" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="248" Width="80" Height="16" ForeColor="255,225,204,0" ShadowColor="0,0,0,0" Text="@ui_shitu_dangri" Font="font_name_guild" />
+            </control>
+            <control name="lbl_dayinfo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="472" Top="248" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_name_guild" />
+            </control>
+        </control>
+    </control>
+</form>

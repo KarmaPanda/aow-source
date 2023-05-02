@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\puzzle_quest\form_skill" init="on_main_form_init">
+        <prop ShowGrid="true" Left="37" Top="189" Width="748" Height="568" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\skill\bg.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="no_use_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\minigame\baoshi\chexiao-out.png" FocusImage="gui\language\ChineseS\minigame\baoshi\chexiao-on.png" PushImage="gui\language\ChineseS\minigame\baoshi\chexiao-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="300" Top="480" Width="69" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_no_use_btn_click" />
+        </control>
+        <control name="equip_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\minigame\baoshi\zhuangbei-out.png" FocusImage="gui\language\ChineseS\minigame\baoshi\zhuangbei-on.png" PushImage="gui\language\ChineseS\minigame\baoshi\zhuangbei-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="412" Top="482" Width="41" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_equip_btn_click" />
+        </control>
+        <control name="down_page_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\minigame\baoshi\xiayiye-out.png" FocusImage="gui\language\ChineseS\minigame\baoshi\xiayiye-on.png" PushImage="gui\language\ChineseS\minigame\baoshi\xiayiye-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="568" Top="480" Width="46" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_down_page_btn_click" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="686" Top="39" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_close_btn_click" />
+        </control>
+        <control name="equip_skill_1" entity="GroupBox" script="" init="">
+            <prop Left="48" Top="80" Width="318" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+            <event on_lost_capture="on_skill_equip_lost_capture" on_get_capture="on_skill_equip_get_capture" />
+            <control name="skill_name_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="70" Top="10" Width="80" Height="22" ShadowColor="0,0,0,0" Text="@ui_qianfu" Font="WRYH15" />
+            </control>
+            <control name="need_point_info_1" entity="GroupBox" script="" init="">
+                <prop Left="64" Top="32" Width="254" Height="33" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Expand" BackImage="gui\mainform\smallgame\baoshi\skill\landi.png" />
+                <control name="red_lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="10" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" />
+                </control>
+                <control name="yellow_lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" />
+                </control>
+                <control name="blue_lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="102" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alan-on.png" />
+                </control>
+                <control name="green_lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alv-on.png" />
+                </control>
+                <control name="purple_lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="194" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\azi-on.png" />
+                </control>
+                <control name="red_point_number_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="35" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="yellow_point_number_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="81" Top="10" Width="14" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="blue_point_number_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="127" Top="10" Width="14" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="green_point_number_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="173" Top="10" Width="14" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="purple_point_number_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="219" Top="10" Width="14" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+            </control>
+            <control name="skill_pic_1" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="16" Width="50" Height="50" ShadowColor="0,0,0,0" />
+                <event on_left_down="on_skill_pic_left_down" />
+            </control>
+            <control name="msg_pic_1" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Width="318" Height="78" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_skill_equip_lost_capture" on_double_click="on_msg_pic_double_click" on_get_capture="on_skill_equip_get_capture" on_left_down="on_msg_pic_left_down" />
+            </control>
+        </control>
+        <control name="equip_skill_2" entity="GroupBox" script="" init="">
+            <prop Left="48" Top="160" Width="318" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+            <event on_lost_capture="on_skill_equip_lost_capture" on_get_capture="on_skill_equip_get_capture" />
+            <control name="skill_name_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="70" Top="10" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qianfu" Font="WRYH15" />
+            </control>
+            <control name="need_point_info_2" entity="GroupBox" script="" init="">
+                <prop Left="64" Top="32" Width="254" Height="33" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\skill\landi.png" />
+                <control name="red_lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="10" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" />
+                </control>
+                <control name="yellow_lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" />
+                </control>
+                <control name="blue_lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="102" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alan-on.png" />
+                </control>
+                <control name="green_lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alv-on.png" />
+                </control>
+                <control name="purple_lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="194" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\azi-on.png" />
+                </control>
+                <control name="red_point_number_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="35" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="yellow_point_number_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="81" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="blue_point_number_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="127" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="green_point_number_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="173" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="purple_point_number_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="219" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+            </control>
+            <control name="skill_pic_2" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="16" Width="50" Height="50" ShadowColor="0,0,0,0" />
+                <event on_left_down="on_skill_pic_left_down" />
+            </control>
+            <control name="msg_pic_2" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Width="318" Height="78" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_skill_equip_lost_capture" on_double_click="on_msg_pic_double_click" on_get_capture="on_skill_equip_get_capture" on_left_down="on_msg_pic_left_down" />
+            </control>
+        </control>
+        <control name="equip_skill_3" entity="GroupBox" script="" init="">
+            <prop Left="48" Top="240" Width="318" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+            <event on_lost_capture="on_skill_equip_lost_capture" on_get_capture="on_skill_equip_get_capture" />
+            <control name="skill_name_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="70" Top="10" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qianfu" Font="WRYH15" />
+            </control>
+            <control name="need_point_info_3" entity="GroupBox" script="" init="">
+                <prop Left="64" Top="32" Width="254" Height="33" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\mainform\smallgame\baoshi\skill\landi.png" />
+                <control name="red_lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="10" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" Font="FZHKJT17" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" />
+                </control>
+                <control name="yellow_lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" />
+                </control>
+                <control name="blue_lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="102" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alan-on.png" />
+                </control>
+                <control name="green_lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alv-on.png" />
+                </control>
+                <control name="purple_lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="194" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\azi-on.png" />
+                </control>
+                <control name="red_point_number_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="35" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="yellow_point_number_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="81" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="blue_point_number_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="127" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="green_point_number_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="173" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="purple_point_number_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="219" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+            </control>
+            <control name="skill_pic_3" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="15" Width="50" Height="50" ShadowColor="0,0,0,0" />
+                <event on_left_down="on_skill_pic_left_down" />
+            </control>
+            <control name="msg_pic_3" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Width="318" Height="78" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_skill_equip_lost_capture" on_double_click="on_msg_pic_double_click" on_get_capture="on_skill_equip_get_capture" on_left_down="on_msg_pic_left_down" />
+            </control>
+        </control>
+        <control name="equip_skill_4" entity="GroupBox" script="" init="">
+            <prop Left="48" Top="320" Width="318" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+            <event on_lost_capture="on_skill_equip_lost_capture" on_get_capture="on_skill_equip_get_capture" />
+            <control name="skill_name_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="70" Top="10" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qianfu" Font="WRYH15" />
+            </control>
+            <control name="need_point_info_4" entity="GroupBox" script="" init="">
+                <prop Left="64" Top="32" Width="254" Height="33" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\skill\landi.png" />
+                <control name="red_lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="10" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" />
+                </control>
+                <control name="yellow_lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" />
+                </control>
+                <control name="blue_lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="102" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alan-on.png" />
+                </control>
+                <control name="green_lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alv-on.png" />
+                </control>
+                <control name="purple_lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="194" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\azi-on.png" />
+                </control>
+                <control name="red_point_number_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="35" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="yellow_point_number_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="81" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="blue_point_number_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="127" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="green_point_number_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="173" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="purple_point_number_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="219" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+            </control>
+            <control name="skill_pic_4" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="16" Width="50" Height="50" ShadowColor="0,0,0,0" />
+                <event on_left_down="on_skill_pic_left_down" />
+            </control>
+            <control name="msg_pic_4" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Width="318" Height="78" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_skill_equip_lost_capture" on_double_click="on_msg_pic_double_click" on_get_capture="on_skill_equip_get_capture" on_left_down="on_msg_pic_left_down" />
+            </control>
+        </control>
+        <control name="equip_skill_5" entity="GroupBox" script="" init="">
+            <prop Left="48" Top="400" Width="318" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+            <event on_lost_capture="on_skill_equip_lost_capture" on_get_capture="on_skill_equip_get_capture" />
+            <control name="skill_name_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="70" Top="10" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qianfu" Font="WRYH15" />
+            </control>
+            <control name="need_point_info_5" entity="GroupBox" script="" init="">
+                <prop Left="64" Top="32" Width="254" Height="33" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Expand" BackImage="gui\mainform\smallgame\baoshi\skill\landi.png" />
+                <control name="red_lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="10" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahong-on.png" />
+                </control>
+                <control name="yellow_lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\ahuang-on.png" />
+                </control>
+                <control name="blue_lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="102" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alan-on.png" />
+                </control>
+                <control name="green_lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\alv-on.png" />
+                </control>
+                <control name="purple_lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="194" Top="5" Width="25" Height="25" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\baoshi\common\azi-on.png" />
+                </control>
+                <control name="red_point_number_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="35" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="yellow_point_number_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="81" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="blue_point_number_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="127" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="green_point_number_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="173" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+                <control name="purple_point_number_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="219" Top="10" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="FZHKJT17" />
+                </control>
+            </control>
+            <control name="skill_pic_5" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="16" Width="50" Height="50" ShadowColor="0,0,0,0" />
+                <event on_left_down="on_skill_pic_left_down" />
+            </control>
+            <control name="msg_pic_5" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Width="318" Height="78" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_skill_equip_lost_capture" on_double_click="on_msg_pic_double_click" on_get_capture="on_skill_equip_get_capture" on_left_down="on_msg_pic_left_down" />
+            </control>
+        </control>
+        <control name="page_tip" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="528" Top="488" Width="38" Height="16" ShadowColor="0,0,0,0" Text="1/20" Font="WRYH14" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="135" Top="45" Width="150" Height="38" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\zbjn.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="480" Top="45" Width="158" Height="38" ShadowColor="0,0,0,0" BackImage="gui\language\ChineseS\minigame\baoshi\jnb.png" />
+        </control>
+        <control name="groupbox_skill" entity="GroupBox" script="" init="">
+            <prop Left="416" Top="80" Width="286" Height="398" ShadowColor="0,0,0,0" BackImage="gui\mainform\smallgame\baoshi\skill\xian.png" />
+            <control name="skill_level_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="8" Width="31" Height="25" ShadowColor="0,0,0,0" Text="2" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="40" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="7" Top="70" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_4" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="100" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_5" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="129" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_6" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="159" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_7" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="189" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_8" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="218" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_9" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="247" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_10" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="278" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_11" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="309" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_12" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="338" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_level_13" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="370" Width="31" Height="25" ShadowColor="0,0,0,0" Text="20" Font="WRYH15" AutoSize="true" BackImage="gui\mainform\smallgame\baoshi\skill\bishuaquan.png" />
+            </control>
+            <control name="skill_info_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="15" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="45" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="75" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="105" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="135" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="165" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="195" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="225" Width="102" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="skill_info_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="255" Width="102" Height="16" ShadowColor="0,0,0,0" Font="WRYH15" />
+            </control>
+            <control name="skill_info_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="285" Width="102" Height="16" ShadowColor="0,0,0,0" Font="WRYH15" />
+            </control>
+            <control name="skill_info_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="315" Width="102" Height="16" ShadowColor="0,0,0,0" Font="WRYH15" />
+            </control>
+            <control name="skill_info_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="345" Width="102" Height="16" ShadowColor="0,0,0,0" Font="WRYH15" />
+            </control>
+            <control name="skill_info_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="375" Width="102" Height="16" ShadowColor="0,0,0,0" Font="WRYH15" />
+            </control>
+            <control name="pic_1" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="12" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_2" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="40" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_3" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="64" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_4" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="96" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_5" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="128" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_6" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="160" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_7" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="184" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_8" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="216" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_9" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="248" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_10" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="280" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_11" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="306" Width="150" Height="22" ForeColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_12" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="336" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="pic_13" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="8" Top="368" Width="150" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_lost_capture="on_pic_lost_capture" on_double_click="on_pic_double_click" on_get_capture="on_pic_get_capture" on_left_down="on_pic_left_down" />
+            </control>
+            <control name="desc_label_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="16" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="48" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="72" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="104" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="136" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="160" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="192" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="224" Width="46" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="256" Width="54" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="280" Width="54" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="312" Width="54" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="344" Width="54" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+            <control name="desc_label_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="376" Width="54" Height="16" ShadowColor="0,0,0,0" Text="" Font="WRYH15" />
+            </control>
+        </control>
+        <control name="useful_curr_setting_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\b-qd-out.png" FocusImage="gui\language\ChineseS\b-qd-on.png" PushImage="gui\language\ChineseS\b-qd-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="48" Top="481" Width="69" Height="35" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_useful_curr_setting_btn_click" />
+        </control>
+        <control name="back_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\b-fh1-out.png" FocusImage="gui\language\ChineseS\b-fh1-on.png" PushImage="gui\language\ChineseS\b-fh1-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="637" Top="476" Width="69" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_back_btn_click" />
+        </control>
+        <control name="up_page_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\minigame\baoshi\shangyiye-out.png" FocusImage="gui\language\ChineseS\minigame\baoshi\shangyiye-on.png" PushImage="gui\language\ChineseS\minigame\baoshi\shangyiye-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="472" Top="480" Width="46" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_up_page_btn_click" />
+        </control>
+        <control name="btn_help" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\minigame\help_out.png" FocusImage="gui\language\ChineseS\minigame\help_on.png" PushImage="gui\language\ChineseS\minigame\help_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="40" Top="-72" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_help_click" />
+        </control>
+    </control>
+</form>

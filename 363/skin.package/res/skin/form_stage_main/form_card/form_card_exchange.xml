@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_card\form_card_exchange" init="main_form_init">
+        <prop ShowGrid="true" Left="13" Top="29" Width="614" Height="462" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" on_shut="on_main_form_shut" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="8" Width="603" Height="454" BackColor="0,255,255,255" ShadowColor="0,0,0,0" BackImage="gui\special\card\fwz_exchange\back.png" />
+            <control name="lbl_card1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="106" Top="176" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="groupbox_change" entity="GroupBox" script="" init="">
+                <prop Left="355" Top="312" Width="190" Height="118" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Width="174" Height="24" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefield\info.png" />
+                </control>
+                <control name="cmb_card2" entity="ComboBox" script="" init="">
+                    <prop ButtonWidth="20" DropDownHeight="94" OnlySelect="true" Left="8" Top="3" Width="175" Height="23" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    <event on_selected="on_cmb_card2_selected" />
+                    <subor name="InputEdit">
+                        <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="255,120,120,120" Caret="Default" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" />
+                    </subor>
+                    <subor name="DropButton">
+                        <prop NormalImage="gui\special\card\fwz_exchange\xiala_out.png" FocusImage="gui\special\card\fwz_exchange\xiala_on.png" PushImage="gui\special\card\fwz_exchange\xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="16" Height="16" BackColor="0,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="DropListBox">
+                        <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="0,255,127,13" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\special\battlefield\info.png" />
+                        <subor name="VScrollBar">
+                            <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                            <subor name="DecButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                        </subor>
+                    </subor>
+                </control>
+            </control>
+            <control name="groupbox_belong" entity="GroupBox" script="" init="">
+                <prop Left="57" Top="312" Width="190" Height="118" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_12" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Width="174" Height="24" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefield\info.png" />
+                </control>
+                <control name="cmb_card1" entity="ComboBox" script="" init="">
+                    <prop ButtonWidth="20" DropDownHeight="94" OnlySelect="true" Left="8" Top="3" Width="175" Height="23" ForeColor="255,127,101,44" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_selected="on_cmb_card1_selected" />
+                    <subor name="InputEdit">
+                        <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="255,120,120,120" Caret="Default" ForeColor="255,127,101,44" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" />
+                    </subor>
+                    <subor name="DropButton">
+                        <prop NormalImage="gui\special\card\fwz_exchange\xiala_out.png" FocusImage="gui\special\card\fwz_exchange\xiala_on.png" PushImage="gui\special\card\fwz_exchange\xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" />
+                    </subor>
+                    <subor name="DropListBox">
+                        <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="0,0,0,128" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\special\battlefield\info.png" />
+                        <subor name="VScrollBar">
+                            <prop TrackSize="30" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                            <subor name="DecButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                            </subor>
+                        </subor>
+                    </subor>
+                </control>
+                <control name="ipt_search_key" entity="Edit" script="" init="">
+                    <prop ChangedEvent="true" MaxLength="15" TextOffsetX="2" Caret="Default" Left="32" Width="129" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,20,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" />
+                    <event on_get_focus="on_ipt_search_key_get_focus" on_changed="on_ipt_search_key_changed" on_lost_focus="on_ipt_search_key_lost_focus" />
+                </control>
+            </control>
+            <control name="lbl_card2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="404" Top="176" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="329" Width="134" Height="38" ForeColor="255,147,123,99" LineColor="255,255,0,0" ShadowColor="0,255,0,0" Text="@ui_fwz_exchangenum" Font="font_text_figure" />
+            </control>
+            <control name="lbl_number" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="204" Top="351" Width="35" Height="24" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_main" />
+            </control>
+            <control name="btn_ok" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\card\fwz_exchange\exchange_out.png" FocusImage="gui\special\card\fwz_exchange\exchange_on.png" PushImage="gui\special\card\fwz_exchange\exchange_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="452" Top="415" Width="144" Height="30" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_fwz_exchangeok" Font="font_text" DrawMode="Expand" />
+                <event on_click="on_btn_ok_click" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="584" Top="16" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_2" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

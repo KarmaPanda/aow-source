@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_marry\form_marry_trace" entity="Form" script="form_stage_main\form_marry\form_marry_trace" init="main_form_init">
+        <prop ShowGrid="true" Left="309" Top="189" Width="262" Height="307" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\marry\step\bg_main.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-91" Top="10" Width="182" Height="16" ForeColor="255,255,239,179" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_marry_flow" Font="font_title" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\marry\close_out.png" FocusImage="gui\special\marry\close_on.png" PushImage="gui\special\marry\close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="90" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_colse_click" />
+        </control>
+        <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,239,179" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,202,94" LineHeight="20" LineTextAlign="Center" ScrollSize="13" HasVScroll="true" Left="18" Top="178" Width="222" Height="94" ForeColor="255,139,131,97" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="13" Maximum="15" SmallChange="1" LargeChange="17" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\marry\bg_scrollbar.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\marry\btn_s_out.png" FocusImage="gui\special\marry\btn_s_on.png" PushImage="gui\special\marry\btn_s_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="13" Height="13" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\marry\btn_x_out.png" FocusImage="gui\special\marry\btn_x_on.png" PushImage="gui\special\marry\btn_x_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="13" Height="13" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\marry\btn_trace_out.png" FocusImage="gui\special\marry\btn_trace_on.png" PushImage="gui\special\marry\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="13" Height="150" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="grid_flow" entity="Grid" script="" init="">
+            <prop ShowComment="true" RowHeaderVisible="false" SelectForeColor="255,255,204,0" SelectBackColor="0,0,0,128" SelectBackDraw="gui\special\marry\step\ing.png" CanSelectRow="true" ColWidth="230" RowHeight="24" ColCount="1" ScrollSize="17" HasHScroll="true" Left="12" Top="34" Width="237" Height="122" ForeColor="255,255,239,179" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" />
+            <subor name="HScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="12" Top="33" Width="233" Height="128" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\marry\step\bg.png" />
+        </control>
+        <control name="lbl_leave_time" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,180,40" ViewRect="0,0,230,34" LineHeight="15" ScrollSize="17" Left="16" Top="280" Width="230" Height="34" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" />
+        </control>
+    </control>
+</form>

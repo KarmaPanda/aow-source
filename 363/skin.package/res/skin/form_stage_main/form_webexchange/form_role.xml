@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_webexchange\form_role" init="on_main_form_init">
+        <prop ShowGrid="true" Left="189" Top="125" Width="724" Height="522" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bj_kuang.png" />
+        <event on_open="on_main_form_open" on_shut="on_main_form_shut" on_close="on_main_form_close" />
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="488" Width="724" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="548" Top="489" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_platform_sure" Font="font_btn" />
+            <event on_click="on_sell_click" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="635" Top="489" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_platform_cancel" Font="font_btn" />
+            <event on_click="on_close_click" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="-2" Top="-1" Width="728" Height="490" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+            <control name="lbl_need" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="426" Top="137" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_platform_charge" Font="font_text" />
+            </control>
+            <control name="lbl_charge" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="562" Top="139" Width="64" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" BackImage="gui\special\camera\bg_time_out.png" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="522" Top="141" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="lb_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="240" Top="65" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+            <control name="lb_sex" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="240" Top="87" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+            <control name="lb_char" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="242" Top="136" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_name_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="131" Top="61" Width="80" Height="16" ForeColor="255,153,51,0" ShadowColor="0,0,0,0" Text="@ui_platform_name" Font="font_text" />
+            </control>
+            <control name="lbl_sex_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="131" Top="84" Width="80" Height="16" ForeColor="255,153,51,0" ShadowColor="0,0,0,0" Text="@ui_platform_sex" Font="font_text" />
+            </control>
+            <control name="lbl_level_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="131" Top="108" Width="80" Height="16" ForeColor="255,153,51,0" ShadowColor="0,0,0,0" Text="@ui_platform_level" Font="font_text" />
+            </control>
+            <control name="lbl_char_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="132" Top="134" Width="80" Height="16" ForeColor="255,153,51,0" ShadowColor="0,0,0,0" Text="@ui_platform_char" Font="font_text" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="2" Top="177" Width="718" Height="36" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="@ui_platform_cant_consign" Font="font_sns_title_hual_4" DrawMode="Expand" BackImage="gui\language\ChineseS\vip\back01.png" />
+            </control>
+            <control name="lb_photo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="34" Top="57" Width="96" Height="96" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lb_powerlevel" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="240" Top="110" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="8,6,690,220" LineHeight="17" HtmlText="@ui_platform_role_msg" ScrollSize="18" HasVScroll="true" Left="8" Top="248" Width="695" Height="235" ForeColor="255,162,101,38" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop Maximum="7" SmallChange="1" LargeChange="6" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="45" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_role" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" TextOffsetX="10" Left="8" Top="13" Width="199" Height="34" ForeColor="255,197,184,159" ShadowColor="0,50,0,0" Font="font_title" AutoSize="true" BackImage="gui\language\ChineseS\vip\back02.png" />
+        </control>
+        <control name="lbl_regulate_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="10" Top="209" Width="199" Height="34" ForeColor="255,197,184,159" ShadowColor="0,30,0,0" Font="font_text" AutoSize="true" BackImage="gui\language\ChineseS\vip\back02.png" />
+        </control>
+        <control name="lbl_price" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="128" Top="155" Width="326" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_platform_setprice" Font="font_text" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="482" Width="724" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="19" Top="215" Width="182" Height="23" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_platform_regulate2" Font="font_title" DrawMode="ExpandV" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="20" Top="12" Width="183" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_platform_nowrole" Font="font_title" DrawMode="ExpandV" />
+        </control>
+    </control>
+</form>

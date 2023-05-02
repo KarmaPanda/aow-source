@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_charge_keep.xml" entity="Form" script="form_stage_main\form_charge_shop\form_charge_keep" init="on_main_form_init">
+        <prop Left="181" Top="149" Width="438" Height="374" BackColor="255,34,32,31" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="imagegrid_item" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="5,5,45,45" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="80" GridWidth="80" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="181" Top="77" Width="62" Height="62" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\charge_shop\icon_item.png" />
+            <event on_mouseout_grid="on_mouseout_grid" on_mousein_grid="on_mousein_grid" />
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="408" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_keep" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="40000" Top="338" Width="262" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_keepcharge_click" Font="font_btn" DrawMode="ExpandH" />
+            <event on_click="on_keep_click" />
+        </control>
+        <control name="btn_3" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="26400" Top="338" Width="169" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_keepcharge_look" Font="font_btn" DrawMode="ExpandH" />
+            <event on_click="on_shop_click" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="274" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_keepcharge_need" Font="font_btn" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="306" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shop_ownresource" Font="font_btn" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,227,198,75" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,166,22" LineHeight="17" ScrollSize="17" Left="216" Top="272" Width="166" Height="22" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" />
+        </control>
+        <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,227,198,75" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,166,22" LineHeight="17" ScrollSize="17" Left="216" Top="304" Width="166" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="156" Top="168" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_sub_click" />
+        </control>
+        <control name="btn_4" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="255" Top="168" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_add_click" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="197" Top="168" Width="38" Height="16" ForeColor="255,176,111,31" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="LineEnd1" entity="LineEnd" script="" init="">
+            <prop Left="3" Top="332" Width="430" Height="9" ShadowColor="0,0,0,0" Text="LineEnd1" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="144" Top="4" Width="142" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_keepcharge_title" Font="font_title" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="LineEnd2" entity="LineEnd" script="" init="">
+            <prop Left="3" Top="190" Width="430" Height="9" ShadowColor="0,0,0,0" Text="LineEnd1" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_name" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="144" Width="390" Height="16" ForeColor="255,225,172,0" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="LineEnd3" entity="LineEnd" script="" init="">
+            <prop Left="3" Top="254" Width="430" Height="9" ShadowColor="0,0,0,0" Text="LineEnd1" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="20" Top="204" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_keepcharge_choose" Font="font_text" />
+        </control>
+        <control name="groupbox_ctype" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="228" Width="422" Height="30" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,398,38" LineHeight="17" HtmlText="@ui_keepcharge_over" ScrollSize="17" Left="20" Top="46" Width="398" Height="38" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+        </control>
+    </control>
+</form>

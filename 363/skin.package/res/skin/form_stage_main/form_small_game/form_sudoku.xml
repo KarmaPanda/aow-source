@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_sudoku" init="main_form_init">
+        <prop ShowGrid="true" Left="205" Top="53" Width="606" Height="594" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" BackImage="gui\mainform\smallgame\sudoku\sudoku_background.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_grid" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="45" Top="39" Width="526" Height="526" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="624" Top="8" Width="86" Height="24" ShadowColor="0,0,0,0" Text="@ui_sudoku" Font="FZHKJT24" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\mainform\smallgame\sudoku\sudoku_close1.png" FocusImage="gui\mainform\smallgame\sudoku\sudoku_close2.png" PushImage="gui\mainform\smallgame\sudoku\sudoku_close3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="570" Top="10" Width="24" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_reset" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\b-01-out.png" FocusImage="gui\common\button\b-01-on.png" PushImage="gui\common\button\b-01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="616" Top="128" Width="80" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_OnceAgain" Font="HEAD16_O" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_reset_click" />
+        </control>
+        <control name="btn_change" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\b-01-out.png" FocusImage="gui\common\button\b-01-on.png" PushImage="gui\common\button\b-01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="632" Top="168" Width="80" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_RenewSubject" Font="HEAD16_O" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_change_click" />
+        </control>
+        <control name="lbl_timer" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="88" Top="560" Width="94" Height="22" ForeColor="255,252,217,132" ShadowColor="0,0,0,0" Text="10:10:10" Font="font_sns_xiayi_title1" DrawMode="Expand" BackImage="gui\common\Kl.png" />
+        </control>
+        <control name="lbl_tips" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="264" Top="560" Width="94" Height="22" ShadowColor="0,0,0,0" Text="10:10:10" Font="font_sns_xiayi_title1" DrawMode="Expand" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="608" Top="248" Width="110" Height="118" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" />
+            <control name="rbtn_level1" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" NormalImage="gui\common\select-yel-un.png" FocusImage="gui\common\select-yel.png" CheckedImage="gui\common\select-yel.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="20" Top="8" Width="18" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="rbtn_level2" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\select-yel-un.png" FocusImage="gui\common\select-yel.png" CheckedImage="gui\common\select-yel.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="20" Top="32" Width="18" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="rbtn_level3" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\select-yel-un.png" FocusImage="gui\common\select-yel.png" CheckedImage="gui\common\select-yel.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="20" Top="56" Width="18" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="rbtn_level4" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\select-yel-un.png" FocusImage="gui\common\select-yel.png" CheckedImage="gui\common\select-yel.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="20" Top="80" Width="18" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabIndex="3" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="40" Top="8" Width="54" Height="16" ShadowColor="0,0,0,0" Text="@ui_Primary" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="40" Top="32" Width="54" Height="16" ShadowColor="0,0,0,0" Text="@ui_Junior" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="40" Top="56" Width="54" Height="16" ShadowColor="0,0,0,0" Text="@ui_Senior" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="40" Top="80" Width="54" Height="16" ShadowColor="0,0,0,0" Text="@ui_ExpertRank" Font="FZHKJT20" />
+            </control>
+        </control>
+        <control name="btn_start" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\b-01-out.png" FocusImage="gui\common\button\b-01-on.png" PushImage="gui\common\button\b-01-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="632" Top="504" Width="80" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Start" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_start_click" />
+        </control>
+    </control>
+</form>

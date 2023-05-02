@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_tvt_fight_reason.lua" init="main_form_init">
+        <prop Transparent="true" Left="125" Top="29" Width="902" Height="822" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="32" Top="8" Width="929" Height="374" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="919" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-72" Top="-8" Width="933" Height="307" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui/special/tianti/tvt_fight/team_bg_1.png" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="576" Top="160" Width="108" Height="108" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui/special/tianti/tvt_fight/lose.png" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="144" Top="160" Width="108" Height="108" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui/special/tianti/tvt_fight/win.png" />
+            </control>
+            <control name="lbl_lose" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="120" Width="126" Height="40" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_jifen" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="336" Top="184" Width="142" Height="46" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="cbtn_1" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\guild\guild_dota\button_out.png" FocusImage="gui\guild\guild_dota\button_on.png" CheckedImage="gui\guild\guild_dota\button_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="368" Top="288" Width="91" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tvt_team_1" Font="font_btn" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_1_checked_changed" />
+            </control>
+            <control name="btn_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\guild\guild_dota\button_out.png" FocusImage="gui\guild\guild_dota\button_on.png" PushImage="gui\guild\guild_dota\button_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="488" Top="848" Width="91" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tvt_team_leave" Font="font_btn" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_1_click" />
+            </control>
+            <control name="lbl_win" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="56" Top="120" Width="126" Height="40" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="480" Top="80" Width="30" Height="38" ForeColor="255,255,66,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="+" Font="font_sns_title_num" AutoSize="true" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="960" Top="136" Width="30" Height="38" ForeColor="255,0,198,255" ShadowColor="0,0,0,0" Text="-" Font="font_sns_title_num" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="176" Top="125" Width="80" Height="38" ForeColor="255,255,66,0" ShadowColor="0,0,0,0" Font="font_title2" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="616" Top="125" Width="80" Height="38" ForeColor="255,0,198,255" ShadowColor="0,0,0,0" Font="font_title2" />
+            </control>
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="776" Top="64" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_2_click" />
+            </control>
+        </control>
+        <control name="groupbox_4" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Top="328" Width="894" Height="470" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\tianti\tvt_fight\team_bg.png" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="884" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="textgrid_2" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="50" HeaderBackColor="0,76,61,44" HeaderForeColor="255,99,52,11" SelectForeColor="0,255,255,255" SelectBackColor="0,0,0,128" CanSelectRow="false" CanSelectRol="false" ColWidth="40" ColWidths="120, 32, 140, 70, 70" RowHeight="54" ColCount="5" RowCount="6" ScrollSize="17" HasHScroll="true" Left="456" Top="80" Width="462" Height="430" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Center" BackImage="gui\special\tianti\tvt_fight\back_bg_3.png" />
+                <subor name="HScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="textgrid_1" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="50" HeaderBackColor="0,76,61,44" SelectForeColor="0,255,255,255" SelectBackColor="0,0,0,128" CanSelectRow="false" CanSelectRol="false" ColWidth="40" ColWidths="120, 32, 140, 70, 70" RowHeight="54" ColCount="5" RowCount="6" ScrollSize="17" HasHScroll="true" Left="16" Top="80" Width="462" Height="430" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Center" BackImage="gui\special\tianti\tvt_fight\back_bg_3.png" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="4" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="312" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="275" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+        </control>
+    </control>
+</form>

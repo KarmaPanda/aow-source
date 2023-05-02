@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_main\form_main_select.xml" entity="Form" script="form_stage_main\form_main\form_main_select" init="main_form_init">
+        <prop Transparent="true" LimitInScreen="true" Left="-291" Top="-5" Width="581" Height="184" LineColor="0,255,0,0" ShadowColor="0,0,0,0" HAnchor="Center" NoFrame="true" AutoSize="true" />
+        <event on_open="main_form_open" on_close="main_form_close" on_shut="on_main_form_shut" />
+        <control name="lbl_bosslevel" entity="Label" script="" init="">
+            <prop ClickEvent="true" RefCursor="WIN_HELP" Left="313" Top="19" Width="115" Height="101" LineColor="255,255,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\target\bg_level_1.png" />
+            <event on_right_click="on_show_selectobj_menu" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop ClickEvent="true" RefCursor="WIN_HELP" Left="164" Top="35" Width="234" Height="71" LineColor="255,255,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\target\bg_target.png" />
+            <event on_right_click="on_show_selectobj_menu" />
+        </control>
+        <control name="lbl_name" entity="Label" script="" init="">
+            <prop Align="Right" RefCursor="WIN_HELP" LblLimitWidth="true" Left="-365" Top="33" Width="94" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_wuxia" Font="font_playername" NoFrame="false" />
+        </control>
+        <control name="lbl_captain" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="328" Top="21" Width="22" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" NoFrame="false" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_allot" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="380" Top="21" Width="22" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" NoFrame="false" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_menpai" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="174" Top="33" Width="40" Height="22" ForeColor="255,0,255,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_wuxiawu" Font="font_playername" NoFrame="false" />
+        </control>
+        <control name="buff_groupbox" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="47" Top="81" Width="240" Height="104" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_3" NoFrame="true" />
+            <control name="buff_grid" entity="ImageControlGrid" script="" init="">
+                <prop MultiTextBoxLeft="4" MultiTextBoxTop="40" MultiTextBoxPos="4,40" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,190,100" MaxSize="-1" RowNum="4" ClomnNum="8" ShowEmpty="false" GridHeight="20" GridWidth="20" GridsPos="175,0;150,0;125,0;100,0;75,0;50,0;25,0;0,0;175,25;150,25;125,25;100,25;75,25;50,25;25,25;0,25;175,50;150,50;125,50;100,50;75,50;50,50;25,50;0,50;175,75;150,75;125,75;100,75;75,75;50,75;25,75;0,75" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\target\icon_buff.png" GridBackOffsetX="-6" GridBackOffsetY="-5" GridCoverOffsetY="-2" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="41" Top="3" Width="201" Height="94" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                <event on_mouseout_grid="on_imagegrid_buffer_mouseout_grid" on_mousein_grid="on_imagegrid_buffer_mousein_grid" />
+            </control>
+        </control>
+        <control name="btn_tvt_info" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-279" Top="305" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" />
+            <event on_click="on_btn_tvt_info_click" />
+        </control>
+        <control name="btn_jiaohu" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="104" Top="205" Width="42" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jiaohu" Font="Default" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_jiaohu_click" />
+        </control>
+        <control name="btn_offline" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="184" Width="42" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_jiaohu" Font="Default" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_offline_click" />
+        </control>
+        <control name="prog_resume_hp" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\target\pbr_target_resume.png" ProgressMode="RightToLeft" Left="169" Top="57" Width="164" Height="12" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="9" Font="Arial11" NoFrame="true" />
+        </control>
+        <control name="prog_hp" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\target\pbr_target_hp.png" ProgressMode="RightToLeft" Left="169" Top="57" Width="164" Height="12" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="7" Font="Arial11" NoFrame="true" DrawMode="Center" />
+            <event on_right_click="on_show_selectobj_menu" />
+        </control>
+        <control name="btn_chakan" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="160" Top="184" Width="42" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_chakan" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_chakan_click" />
+        </control>
+        <control name="btn_miliao" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="120" Top="184" Width="42" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_menu_secret_chat" Font="Default" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_miliao_click" />
+        </control>
+        <control name="btn_info" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="32" Top="200" Width="42" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_menu_look" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_info_click" />
+        </control>
+        <control name="btn_copy" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="176" Top="192" Width="72" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_menu_copyname" Font="Default" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_copy_click" />
+        </control>
+        <control name="btn_flag" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="120" Top="200" Width="42" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="Default_chat_s" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_miliao_click" />
+        </control>
+        <control name="lbl_photo" entity="Label" script="" init="">
+            <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="44" Top="14" Width="61" Height="82" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DrawMode="FitWindow" BackImage="icon\players\girl01.png" />
+            <event on_click="on_select_photo_box_click" on_right_click="on_show_selectobj_menu" />
+        </control>
+        <control name="prog_mp" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\target\pbr_target_mp.png" ProgressMode="RightToLeft" Left="188" Top="73" Width="146" Height="6" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="8" NoFrame="true" DrawMode="Center" />
+            <event on_right_click="on_show_selectobj_menu" />
+        </control>
+        <control name="groupbox_select" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="352" Top="66" Width="190" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_1" NoFrame="true" AutoSize="true" />
+            <event on_left_double_click="on_groupbox_select_left_double_click" />
+            <control name="lbl_back_ex" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="38" Top="29" Width="120" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\target\bg_target2.png" />
+            </control>
+            <control name="lbl_photo_ex" entity="Label" script="" init="">
+                <prop ClickEvent="true" RefCursor="WIN_HELP" Left="8" Top="17" Width="34" Height="34" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_name_ex" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="53" Top="11" Width="70" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_wuxiawuxiawu" Font="font_playername" NoFrame="false" />
+            </control>
+            <control name="lbl_school" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="192" Width="54" Height="22" ForeColor="255,219,213,182" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_wuxiawuxiawu" Font="hyshtj16" NoFrame="false" />
+            </control>
+            <control name="pbar_resume_hp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\target\pbr_target2_resume.png" ProgressMode="LeftToRight" Left="41" Top="33" Width="114" Height="8" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="11" Font="Arial11" NoFrame="true" />
+            </control>
+            <control name="pbar_hp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\target\pbr_target2_hp.png" ProgressMode="LeftToRight" Left="41" Top="33" Width="114" Height="8" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="10" Font="Arial11" NoFrame="true" DrawMode="Center" />
+            </control>
+        </control>
+        <control name="lbl_level" entity="Label" script="" init="">
+            <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="313" Top="32" Width="22" Height="18" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="FZHKJT17" NoFrame="false" AutoSize="true" BackImage="gui\special\monster\lv_1.png" />
+            <event on_lost_capture="on_lbl_level_lost_capture" on_get_capture="on_lbl_level_get_capture" />
+        </control>
+        <control name="scenebox_1" entity="SceneBox" script="" init="">
+            <prop Left="331" Top="11" Width="62" Height="86" BackColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <event on_right_click="on_show_selectobj_menu" />
+        </control>
+        <control name="groupbox_skill" entity="GroupBox" script="" init="">
+            <prop Left="160" Top="106" Width="190" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="imagegrid_curskill" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="22" GridWidth="22" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="16" Top="6" Width="22" Height="22" BackColor="0,204,204,204" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" />
+            </control>
+            <control name="pbar_curskill" entity="ProgressBar" script="" init="">
+                <prop Maximum="30" Value="15" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\target\pbr_target_mp.png" ProgressMode="LeftToRight" Left="40" Top="8" Width="142" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_skillname" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="8" Width="110" Height="14" ForeColor="255,50,200,50" ShadowColor="0,0,0,0" Font="font_tip" />
+            </control>
+        </control>
+        <control name="lbl_jin" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="352" Top="90" Width="22" Height="22" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="lbl_p" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="144" Top="34" Width="21" Height="21" ShadowColor="0,0,0,0" HintText="@ui_tips_main_select_lbl_p" AutoSize="true" BackImage="gui\special\tiguan\nd_3.png" />
+        </control>
+        <control name="btn_leave_school_type" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\mainform\school_3.png" FocusImage="gui\language\ChineseS\mainform\school_3.png" PushImage="gui\language\ChineseS\mainform\school_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="309" Top="18" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_lost_capture="on_btn_leave_school_type_lost_capture" on_get_capture="on_btn_leave_school_type_get_capture" />
+        </control>
+        <control name="btn_YY" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\mainform\YY_out.png" FocusImage="gui\language\ChineseS\mainform\YY_on.png" PushImage="gui\language\ChineseS\mainform\YY_down.png" DisableImage="gui\language\ChineseS\mainform\YY_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="290" Top="17" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_guild_YY_11" AutoSize="true" />
+            <event on_click="on_btn_YY_click" />
+        </control>
+    </control>
+</form>

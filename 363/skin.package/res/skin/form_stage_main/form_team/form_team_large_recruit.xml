@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_team\form_team_large_recruit" init="main_form_init">
+        <prop Transparent="true" LimitInScreen="true" ShowGrid="true" Left="181" Top="149" Width="810" Height="542" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="6" Top="364" Width="750" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\team\line_team_3.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="191" Top="51" Width="4" Height="310" ShadowColor="0,0,0,0" BackImage="gui\special\team\line_team_2.png" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="568" Top="51" Width="4" Height="306" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-9" Top="502" Width="764" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-10" Top="45" Width="791" Height="456" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+        <control name="gb_team_1" entity="GroupBox" script="" init="">
+            <prop Left="-1" Top="41" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag1" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="233,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0031" DataSource="1" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp1" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane1" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_11" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_11" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="11" TabStop="true" NoFrame="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name11" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playernameaa" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy11" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_12" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_12" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="12" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name12" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc12" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy12" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo12" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_13" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_13" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="13" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name13" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy13" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_14" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_14" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="14" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name14" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" HintType=" " />
+                </control>
+                <control name="lbl_Vc14" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy14" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo14" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_15" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_15" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="15" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name15" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc15" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy15" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo15" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_16" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_16" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="16" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name16" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc16" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy16" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo16" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_team_4" entity="GroupBox" script="" init="">
+            <prop Left="563" Top="41" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag4" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0034" DataSource="4" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp4" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane4" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_41" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_41" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="41" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name41" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc41" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy41" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo41" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_42" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_42" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="42" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name42" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc42" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy42" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo42" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_43" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_43" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="43" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name43" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc43" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy43" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo43" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_44" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_44" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="44" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name44" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc44" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy44" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo44" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_45" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_45" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-2" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="45" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name45" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc45" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy45" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo45" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_46" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_46" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="46" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name46" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc46" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy46" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo46" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_team_5" entity="GroupBox" script="" init="">
+            <prop Left="-1" Top="201" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag5" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0035" DataSource="5" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp5" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane5" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_51" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_51" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="51" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name51" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc51" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy51" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo51" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_52" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_52" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="52" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name52" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc52" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy52" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo52" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_53" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_53" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="53" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name53" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc53" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy53" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo53" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_54" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_54" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="54" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name54" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc54" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy54" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo54" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_55" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_55" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="55" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name55" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc55" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy55" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo55" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_56" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_56" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="56" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name56" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc56" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy56" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo56" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_team_6" entity="GroupBox" script="" init="">
+            <prop Left="187" Top="201" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag6" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0036" DataSource="6" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp6" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane6" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_61" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_61" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="61" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name61" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc61" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy61" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo61" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_62" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_62" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="62" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name62" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc62" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy62" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo62" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_63" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_63" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="63" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name63" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc63" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy63" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo63" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_64" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_64" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="64" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name64" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc64" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy64" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo64" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_65" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_65" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="216" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="65" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name65" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc65" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy65" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo65" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_66" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_66" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="66" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name66" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc66" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy66" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo66" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_team_7" entity="GroupBox" script="" init="">
+            <prop Left="375" Top="201" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag7" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0037" DataSource="7" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp7" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane7" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_71" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_71" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="71" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name71" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc71" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy71" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo71" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_72" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_72" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="72" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name72" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc72" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy72" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo72" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_73" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_73" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="73" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name73" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc73" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy73" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo73" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_74" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_74" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="74" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name74" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc74" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy74" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo74" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_75" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_75" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="75" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name75" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc75" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy75" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo75" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_76" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_76" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="76" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name76" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc76" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy76" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo76" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_team_8" entity="GroupBox" script="" init="">
+            <prop Left="563" Top="201" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag8" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0038" DataSource="8" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp8" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane8" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_81" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_81" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="81" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name81" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc81" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy81" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo81" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_82" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_82" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="82" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name82" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc82" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy82" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo82" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_83" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_83" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="83" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name83" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc83" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy83" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo83" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_84" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_84" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="84" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name84" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc84" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy84" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo84" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_85" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_85" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="85" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name85" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc85" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy85" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo85" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_86" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_86" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="86" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name86" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc86" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy86" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo86" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_limit_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="386" Top="370" Width="126" Height="22" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0040" Font="font_text" DrawMode="Expand" />
+        </control>
+        <control name="btn_remove_member" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="396" Top="464" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_zudui0043" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_fireTeam_click" />
+        </control>
+        <control name="btn_give_capital" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="569" Top="432" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_zudui0041" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_changeCaptain_click" />
+        </control>
+        <control name="btn_disbuild_team" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="572" Top="464" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_zudui0042" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_disbandTeam_click" />
+        </control>
+        <control name="btn_set_allocater" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="569" Top="400" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_zudui0044" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_set_allocater_click" />
+        </control>
+        <control name="btn_set_assist" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="396" Top="400" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_zudui0045" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_set_assist_click" />
+        </control>
+        <control name="btn_add_normal" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="396" Top="432" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_zudui0003" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_add_player_click" />
+        </control>
+        <control name="btn_show_nearby" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Top="502" Width="140" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_loplayer" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_show_nearby_click" />
+        </control>
+        <control name="btn_leave_team" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="624" Top="502" Width="140" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_zudui0006" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_leaveTeam_click" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="7" Top="236" Width="751" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\team\line_team_3.png" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="7" Top="76" Width="751" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\team\line_team_3.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="6" Top="392" Width="371" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\team\line_team_1.png" />
+        </control>
+        <control name="lbl_allot_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="6" Top="368" Width="134" Height="22" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0046" Font="font_text" DrawMode="Expand" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="7" Top="416" Width="380" Height="62" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="lbl_freeze" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="31" Top="8" Width="62" Height="16" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0013" Font="font_main" DrawMode="Expand" />
+            </control>
+            <control name="rbtn_freeze" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="14" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="7" Top="8" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="team_alloc_free_click" />
+            </control>
+            <control name="lbl_turn" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="119" Top="8" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0016" Font="font_main" DrawMode="Expand" />
+            </control>
+            <control name="rbtn_turn" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="14" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="95" Top="8" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="team_alloc_turn_click" />
+            </control>
+            <control name="lbl_team" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="23" Top="40" Width="60" Height="16" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0015" Font="font_main" DrawMode="Expand" />
+            </control>
+            <control name="rbtn_team" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="14" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="7" Top="40" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="team_alloc_team_click" />
+            </control>
+            <control name="lbl_capital" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="223" Top="40" Width="150" Height="16" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0014" Font="font_main" DrawMode="Expand" />
+            </control>
+            <control name="rbtn_capital" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="14" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="199" Top="40" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="team_alloc_allocater_click" />
+            </control>
+            <control name="btn_quality_setup1" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\team\btn_team_setting_out.png" FocusImage="gui\special\team\btn_team_setting_on.png" PushImage="gui\special\team\btn_team_setting_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="135" Top="40" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_fenpeipinzhi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_quality_setup_click" />
+            </control>
+            <control name="btn_quality_setup2" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\team\btn_team_setting_out.png" FocusImage="gui\special\team\btn_team_setting_on.png" PushImage="gui\special\team\btn_team_setting_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="361" Top="40" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_fenpeipinzhi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_quality_setup_click" />
+            </control>
+            <control name="lbl_compete" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="223" Top="8" Width="110" Height="16" ForeColor="255,178,153,127" ShadowColor="0,255,255,255" Text="@ui_zudui0053" Font="font_main" DrawMode="Expand" />
+            </control>
+            <control name="rbtn_compete" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="14" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="199" Top="8" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="team_alloc_compete_click" />
+            </control>
+            <control name="btn_quality_setup3" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\team\btn_team_setting_out.png" FocusImage="gui\special\team\btn_team_setting_on.png" PushImage="gui\special\team\btn_team_setting_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="361" Top="8" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_fenpeipinzhi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_quality_setup_click" />
+            </control>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="386" Top="392" Width="371" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\team\line_team_1.png" />
+        </control>
+        <control name="cbtn_show_all" entity="CheckButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="659" Top="20" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_cbtn_show_all_click" />
+        </control>
+        <control name="lbl_show_all" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="680" Top="21" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_zudui0050" Font="font_text" />
+        </control>
+        <control name="lbl_select1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="141" Top="504" Width="230" Height="19" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\team\btn_bg_down.png" />
+        </control>
+        <control name="lbl_select2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="381" Top="504" Width="230" Height="19" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\team\btn_bg_down.png" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="569" Top="51" Width="4" Height="310" ShadowColor="0,0,0,0" BackImage="gui\special\team\line_team_2.png" />
+        </control>
+        <control name="gb_team_3" entity="GroupBox" script="" init="">
+            <prop Left="375" Top="41" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag3" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0033" DataSource="3" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="lbl_shane3" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_31" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_31" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="31" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name31" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc31" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy31" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo31" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_32" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_32" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="32" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name32" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc32" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy32" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo32" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_33" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_33" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="33" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name33" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc33" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy33" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo33" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_34" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_34" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="34" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name34" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc34" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy34" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo34" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_35" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_35" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="35" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name35" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc35" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy35" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo35" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_36" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_36" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="36" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name36" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc36" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy36" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo36" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="btn_openhp3" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="379" Top="51" Width="4" Height="310" ShadowColor="0,0,0,0" BackImage="gui\special\team\line_team_2.png" />
+        </control>
+        <control name="gb_team_2" entity="GroupBox" script="" init="">
+            <prop Left="187" Top="41" Width="194" Height="166" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_drag2" entity="Button" script="" init="">
+                <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\bg_tittle_out.png" FocusImage="gui\special\team\bg_tittle_on.png" PushImage="gui\special\team\bg_tittle_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="10" Width="191" Height="27" ForeColor="255,220,197,159" BackColor="255,192,192,192" ShadowColor="255,255,255,255" Text="@ui_zudui0032" DataSource="2" Font="font_text_title1" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_drag_click" on_drag_move="on_btn_drag_move" on_push="on_btn_push" />
+            </control>
+            <control name="btn_openhp2" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\special\team\btn_status_out.png" FocusImage="gui\special\team\btn_status_on.png" CheckedImage="gui\special\team\btn_status_down.png" DisableImage="gui\special\team\btn_status_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="8" Top="10" Width="13" Height="13" ForeColor="255,76,61,44" BackColor="233,192,192,192" ShadowColor="255,255,255,255" DataSource="1" Font="Default" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_openhp_click" />
+            </control>
+            <control name="lbl_shane2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="172" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_kuang.png" />
+                <event on_lost_capture="on_lbl_shane_lost_capture" on_get_capture="on_lbl_shane_get_capture" />
+            </control>
+            <control name="gb_mb_21" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="40" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_21" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="21" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name21" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc21" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy21" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo21" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_22" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="60" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_22" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="22" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name22" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc22" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy22" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo22" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_23" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="80" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_23" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="23" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name23" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc23" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy23" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo23" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_24" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="100" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_24" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="24" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name24" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc24" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy24" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo24" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_25" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="120" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_1.png" />
+                <control name="Button_MemberBack_25" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="25" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name25" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc25" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy25" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo25" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+            <control name="gb_mb_26" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="140" Width="194" Height="19" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="task" DrawMode="FitWindow" BackImage="gui\special\team\bg_team_2.png" />
+                <control name="Button_MemberBack_26" entity="Button" script="" init="">
+                    <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalImage="gui\special\team\btn_bg_out.png" FocusImage="gui\special\team\btn_bg_on.png" PushImage="gui\special\team\btn_bg_down.png" DisableImage="gui\special\team\btn_bg_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Width="190" Height="19" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="26" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="picture_on_click" on_right_click="picture_on_rmouse_click" on_push="on_Button_MemberBack_push" on_drag_move="on_Button_MemberBack_drag_move" />
+                </control>
+                <control name="lbl_Name26" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="19" Top="1" Width="70" Height="16" ForeColor="255,178,153,127" ShadowColor="0,20,0,0" Text="playername" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vc26" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+                <control name="lbl_Zy26" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="98" Top="1" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_chukui" Font="font_sns_event" />
+                </control>
+                <control name="lbl_Vo26" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="22" Height="22" ShadowColor="0,0,0,0" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_school_war\form_school_fight_item" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="50" Top="100" Width="822" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Width="830" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="7" Top="4" Width="752" Height="427" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\school\5_bg_1.png" />
+            </control>
+            <control name="groupbox_bmzb" entity="GroupBox" script="" init="">
+                <prop Left="198" Top="9" Width="557" Height="462" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" AutoSize="true" />
+                <control name="lbl_bgk" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="117" Top="124" Width="316" Height="204" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\war_scuffle\1_bg_1.png" />
+                </control>
+                <control name="mltbox_bmzb" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,0,500,81" LineHeight="17" ScrollSize="14" HasVScroll="true" Left="24" Top="35" Width="514" Height="81" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\special\war_scuffle\1_bg_1.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="lbl_title_photo" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="13" Width="134" Height="32" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\school\3_bg_3.png" />
+                </control>
+                <control name="btn_showallitem" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="488" Top="472" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_total" />
+                    <event on_click="on_btn_showallitem_click" />
+                </control>
+                <control name="mltbox_zbdesc" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,6,500,64" LineHeight="17" ScrollSize="14" HasVScroll="true" Left="24" Top="335" Width="510" Height="78" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\special\war_scuffle\1_bg_1.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="lbl_bmzb_bg" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="119" Top="126" Width="312" Height="198" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </control>
+            </control>
+            <control name="groupbox_detail" entity="GroupBox" script="" init="">
+                <prop Left="209" Top="4" Width="558" Height="498" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="26" Top="136" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_dmsl" Font="font_text" NoFrame="false" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_DaMoSheLi" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="42" Top="40" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="158" Top="136" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_tjt" Font="font_text" NoFrame="false" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_TaiJiTu" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="170" Top="40" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="290" Top="136" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_ytj" Font="font_text" NoFrame="false" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_YiTianJian" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="302" Top="40" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="420" Top="136" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_dgg" Font="font_text" NoFrame="false" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_DaGouGun" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="432" Top="40" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="26" Top="268" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_kql" Font="font_text" NoFrame="false" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_KongQueLing" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="42" Top="173" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="158" Top="268" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_ltx" Font="font_text" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_LanTingXu" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="172" Top="173" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_7" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="281" Top="267" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_sfbj" Font="font_text" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_ShangFangBaoJian" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="302" Top="173" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_8" entity="Label" script="" init="">
+                    <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="418" Top="268" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_smwd" Font="font_text" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_ShenMuWangDing" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="432" Top="173" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_detail_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Top="6" Width="134" Height="32" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_total" Font="font_text" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\school\3_bg_3.png" />
+                </control>
+                <control name="lbl_DaMoSheLi" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="43" Top="41" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_TaiJiTu" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="171" Top="41" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_YiTianJian" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="303" Top="41" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_DaGouGun" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="433" Top="41" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_KongQueLing" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="43" Top="174" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_LanTingXu" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="173" Top="174" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_ShangFangBaoJian" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="303" Top="174" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_ShenMuWangDing" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="433" Top="174" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_bg_PoLuYin" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="42" Top="301" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_PoLuYin" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="43" Top="302" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_11" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="26" Top="397" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_ply" Font="font_text" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_bg_YouXianZhen" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="172" Top="301" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\school\5_bg_2.png" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_10" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="162" Top="397" Width="118" Height="26" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolwar_treasure_yxz" Font="font_text" DrawMode="ExpandH" BackImage="gui\special\school\5_bg_3.png" />
+                </control>
+                <control name="lbl_YouXianZhen" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="173" Top="302" Width="87" Height="87" ShadowColor="0,0,0,0" />
+                    <event on_click="on_lbl_bg_click" />
+                </control>
+                <control name="lbl_DaGouGun_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="390" Top="37" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_YiTianJian_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="260" Top="37" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_TaiJiTu_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="37" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_DaMoSheLi_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="2" Top="37" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_ShenMuWangDing_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="390" Top="173" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_ShangFangBaoJian_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="260" Top="173" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_LanTingXu_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="173" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_KongQueLing_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="2" Top="173" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_PoLuYin_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="2" Top="301" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+                <control name="lbl_YouXianZhen_owner" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="301" Width="48" Height="48" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\shengwang\em.png" />
+                </control>
+            </control>
+            <control name="groupbox_left" entity="GroupBox" script="" init="">
+                <prop Left="3" Top="-8" Width="196" Height="422" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                <control name="groupbox_catalog" entity="GroupBox" script="" init="">
+                    <prop Left="3" Top="47" Width="191" Height="326" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <control name="rbtn_DaMoSheLi" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Width="183" Height="28" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_dmsl" Font="font_main" TabIndex="5" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_TaiJiTu" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="120" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_tjt" Font="font_main" TabIndex="6" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_YiTianJian" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="30" Width="183" Height="28" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_ytj" Font="font_main" TabIndex="7" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_DaGouGun" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="60" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_dgg" Font="font_main" TabIndex="8" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_KongQueLing" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="180" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_kql" Font="font_main" TabIndex="9" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_LanTingXu" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="90" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_ltx" Font="font_main" TabIndex="10" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_ShangFangBaoJian" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="210" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_sfbj" Font="font_main" TabIndex="11" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_ShenMuWangDing" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="150" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_smwd" Font="font_main" TabIndex="12" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_PoLuYin" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="240" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_ply" Font="font_main" TabIndex="12" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                    <control name="rbtn_YouXianZhen" entity="RadioButton" script="" init="">
+                        <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\special\school\56_btn2_out.png" FocusImage="gui\special\school\56_btn2_on.png" CheckedImage="gui\special\school\56_btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,184,159" FocusColor="255,197,184,159" PushColor="255,255,204,0" DisableColor="255,76,61,44" Left="2" Top="270" Width="183" Height="28" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_schoolwar_treasure_yxz" Font="font_main" TabIndex="12" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                        <event on_click="on_rbtn_click" />
+                    </control>
+                </control>
+                <control name="lbl_itemnum" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="388" Width="175" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_schoolface_treasure_sum" Font="font_main" />
+                </control>
+                <control name="lbl_schoolitem_title" entity="Label" script="" init="">
+                    <prop Align="Center" Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="4" Top="15" Width="187" Height="30" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" Text="@ui_schoolface_treasure" Font="font_main" AutoSize="true" DrawMode="Expand" BackImage="gui\special\school\56_btn_out.png" />
+                    <event on_click="on_lbl_schoolitem_title_click" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

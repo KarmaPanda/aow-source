@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_main" entity="Form" script="form_stage_main\form_marry\form_marry_sns" init="on_main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="1062" Height="742" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="scenebox" entity="SceneBox" script="" init="">
+            <prop Left="1" Top="-1" Width="1062" Height="662" BackColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="groupbox_yinyuan" entity="GroupBox" script="" init="">
+            <prop Width="1062" Height="742" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="scenebox_male" entity="SceneBox" script="" init="">
+                <prop Left="-422" Top="63" Width="494" Height="702" BackColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" NoFrame="true" />
+            </control>
+            <control name="scenebox_famale" entity="SceneBox" script="" init="">
+                <prop Left="-84" Top="63" Width="502" Height="702" BackColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" NoFrame="true" />
+            </control>
+            <control name="lbl_male_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-194" Top="103" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" />
+            </control>
+            <control name="lbl_famale_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="150" Top="103" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="601" Top="31" Width="248" Height="61" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\marry\sns\test.png" />
+            </control>
+            <control name="gb_center" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="134" Top="151" Width="342" Height="373" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" NoFrame="true" BackImage="gui\special\sns\bg_center.png" />
+                <control name="btn_qifu" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\btn_main_wish_out.png" FocusImage="gui\special\sns_new\btn_main_wish_on.png" PushImage="gui\special\sns_new\btn_main_wish_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="298" Top="180" Width="42" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_sns_tips_qifu" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_qifu_click" />
+                </control>
+                <control name="btn_present" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\btn_main_gift_out.png" FocusImage="gui\special\sns_new\btn_main_gift_on.png" PushImage="gui\special\sns_new\btn_main_gift_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="284" Top="88" Width="42" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_sns_tips_gift" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_present_click" />
+                </control>
+                <control name="btn_player_info" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\btn_main_role_out.png" FocusImage="gui\special\sns_new\btn_main_role_on.png" PushImage="gui\special\sns_new\btn_main_role_down.png" DisableImage="gui\special\sns_new\btn_main_role_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="233" Top="22" Width="42" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_sns_tips_information" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_player_info_click" />
+                </control>
+                <control name="btn_pingjia" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\btn_connection_hui.png" FocusImage="gui\special\sns_new\btn_connection_hui.png" PushImage="gui\special\sns_new\btn_connection_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="266" Top="254" Width="42" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_interact_appraise" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_pingjia_click" />
+                </control>
+                <control name="btn_relation" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\btn_main_relation_hui.png" FocusImage="gui\special\sns_new\btn_main_relation_hui.png" PushImage="gui\special\sns_new\btn_main_relation_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="210" Top="310" Width="42" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_sns_lichengbai_event" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                </control>
+            </control>
+            <control name="groupbox_marry_info" entity="GroupBox" script="" init="">
+                <prop Left="41" Top="-196" Width="373" Height="158" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" NoFrame="true" />
+                <control name="lbl_1" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" Left="2" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_marry_blessingscore_1" Font="font_sns_xiayi_title1" HintText="@ui_GetMarryScore" />
+                </control>
+                <control name="lbl_marry_date" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="200" Top="16" Width="110" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_xiayi_title1" />
+                </control>
+                <control name="lbl_marry_score" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="200" Top="80" Width="110" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_xiayi_title1" />
+                </control>
+                <control name="lbl_marry_cooperation" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="277" Top="135" Width="113" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_xiayi_title1" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" Left="2" Top="135" Width="190" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_MarryCooperation" Font="font_sns_xiayi_title1" HintText="@ui_GetMarryCooperation" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" Left="2" Top="16" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_marry_date_desc_1" Font="font_sns_xiayi_title1" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_fuqifuli" entity="GroupBox" script="" init="">
+            <prop Width="1062" Height="742" BackColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="scenebox_show_item" entity="SceneBox" script="" init="">
+                <prop Left="-450" Top="-364" Width="910" Height="638" BackColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" NoFrame="true" />
+            </control>
+            <control name="tree_marry_type" entity="TreeViewEx" script="" init="">
+                <prop IsNoDrawRoot="true" IsLeftClickExpandClose="true" SelectForeColor="255,255,0,0" SelectBackColor="0,0,0,128" NodeExpandDraw="gui\special\sns_new\tree_expand.png" NodeCloseDraw="gui\special\sns_new\tree_close.png" ScrollSize="17" Left="-7" Top="159" Width="166" Height="310" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="tree_ex1" Font="font_sns_xiayi_title1" TabStop="true" NoFrame="true" />
+                <event on_select_changed="on_tree_marry_type_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Left="-221" Top="-236" Width="219" Height="254" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Right" DrawMode="ExpandH" BackImage="gui\special\marry\sns\bg_main.png" />
+                <control name="mltbox_marry_flow_desc" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="10,-9,190,190" LineHeight="27" ScrollSize="17" Left="-203" Top="40" Width="198" Height="190" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="mltbox_1" Font="font_sns_list" NoFrame="true" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="196" Width="18" Height="11" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yb.png" />
+                </control>
+                <control name="lbl_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="217" Width="28" Height="16" ShadowColor="0,0,0,0" HintText="@tips_yinpiao_info" AutoSize="true" BackImage="gui\common\money\yinpiao.png" />
+                </control>
+            </control>
+            <control name="mltbox_marry_prize_desc" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="15,15,900,160" LineHeight="18" ScrollSize="17" Left="-458" Top="-231" Width="901" Height="167" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" Text="mltbox_1" Font="font_sns_list" NoFrame="true" AutoSize="true" BackImage="gui\special\marry\sns\bg.png" />
+            </control>
+            <control name="mltbox_marry_price" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="30,0,190,22" LineHeight="19" ScrollSize="17" Left="-149" Top="-44" Width="94" Height="22" ForeColor="255,255,204,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Right" Font="font_sns_list" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_marry_price" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-179" Top="-66" Width="80" Height="22" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Right" Text="@ui_marry_yzgyf" Font="font_sns_list" />
+            </control>
+            <control name="mltbox_marry_price_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="30,0,190,22" LineHeight="19" ScrollSize="17" Left="-149" Top="-22" Width="94" Height="22" ForeColor="255,255,204,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Right" Font="font_sns_list" HintText="@tips_yinpiao_info" DrawMode="FitWindow" />
+            </control>
+        </control>
+        <control name="groupbox_rbtn" entity="GroupBox" script="" init="">
+            <prop Top="679" Width="1062" Height="64" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\special\sns_new\bg_bottom_new.png" />
+            <control name="rbtn_fuqifuli" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\marry\sns\btn4_out.png" FocusImage="gui\special\marry\sns\btn4_on.png" CheckedImage="gui\special\marry\sns\btn4_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="14" Top="16" Width="147" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" HintText="@tips_marrysns_fuli" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_fuqifuli_checked_changed" />
+            </control>
+            <control name="rbtn_yinyuan" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\marry\sns\btn1_out.png" FocusImage="gui\special\marry\sns\btn1_on.png" CheckedImage="gui\special\marry\sns\btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-530" Top="16" Width="131" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" HintText="@tips_marrysns_wdyy" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_yinyuan_checked_changed" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-269" Top="88" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_sns_banquan" Font="font_system_individual" />
+            </control>
+            <control name="btn_zhenghun" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\sns\btn2_out.png" FocusImage="gui\special\marry\sns\btn2_on.png" PushImage="gui\special\marry\sns\btn2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-378" Top="16" Width="131" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" HintText="@tips_marrysns_zh" AutoSize="true" />
+                <event on_click="on_btn_zhenghun_click" />
+            </control>
+            <control name="btn_qingyuanpu" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\sns\btn5_out.png" FocusImage="gui\special\marry\sns\btn5_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="174" Top="16" Width="129" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" HintText="@tips_marrysns_qyg" AutoSize="true" />
+                <event on_click="on_btn_qingyuanpu_click" />
+            </control>
+            <control name="btn_jiehunjiri" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\sns\btn3_out.png" FocusImage="gui\special\marry\sns\btn3_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-226" Top="16" Width="221" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" HintText="@tips_marrysns_jhjr" AutoSize="true" />
+                <event on_click="on_btn_jiehunjiri_click" />
+            </control>
+            <control name="btn_fuqirenwu" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\sns\btn6_out.png" FocusImage="gui\special\marry\sns\btn6_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="310" Top="16" Width="99" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" HintText="@tips_marrysns_renwu" AutoSize="true" />
+                <event on_click="on_btn_fuqirenwu_click" />
+            </control>
+            <control name="btn_jiehunbaixiao" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\sns\btn7_out.png" FocusImage="gui\special\marry\sns\btn7_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="422" Top="16" Width="99" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" HintText="@tips_marrysns_baixiao" AutoSize="true" />
+                <event on_click="on_btn_jiehunbaixiao_click" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-35" Top="15" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

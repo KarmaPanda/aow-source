@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_treasure_upgrade" init="on_main_form_init">
+        <prop ShowGrid="true" Left="173" Top="125" Width="784" Height="593" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="lbl_mainbg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="478" Height="593" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="64" Width="475" Height="492" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\fenjie\003.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="70" Top="118" Width="325" Height="325" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\special\fenjie\001.png" />
+        </control>
+        <control name="groupbox_upgrade" entity="GroupBox" script="" init="">
+            <prop Top="62" Width="478" Height="532" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_1" NoFrame="true" />
+            <control name="lbl_upgrade_main" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="192" Top="245" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_treasure_hht" Font="font_btn" />
+            </control>
+            <control name="lbl_upgrade_minor" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="216" Top="368" Width="46" Height="9" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="@ui_treasure_hht_cost" Font="font_btn" />
+            </control>
+            <control name="btn_upgrade" entity="Button" script="" init="">
+                <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="344" Top="500" Width="126" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_jinglian" Font="font_main" DrawMode="ExpandH" />
+                <event on_click="on_btn_upgrade_click" />
+            </control>
+            <control name="imagegrid_bw" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="2" ClomnNum="1" GridHeight="38" GridWidth="38" GridsPos="0,101;0,220;0,-5" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item3.png" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="214" Top="100" Width="48" Height="302" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <event on_select_changed="on_imagegrid_bw_select_changed" on_mousein_grid="on_imagegrid_bw_mousein_grid" on_rightclick_grid="on_imagegrid_bw_rightclick_grid" on_mouseout_grid="on_imagegrid_bw_mouseout_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_tips" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="208" Top="392" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_treasure_hht1" Font="font_btn" />
+            </control>
+        </control>
+        <control name="groupbox_convert" entity="GroupBox" script="" init="">
+            <prop Left="-4" Top="58" Width="480" Height="533" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="btn_convert" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="380" Top="566" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_convert_click" />
+            </control>
+            <control name="lbl_box_2_main" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="199" Top="252" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_EquipUpgrade_zhujian" Font="font_btn" />
+            </control>
+            <control name="Img_equip_convert" entity="ImageControlGrid" script="" init="">
+                <prop MultiTextBoxLeft="60" MultiTextBoxTop="10" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="4,10,70,370" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" GridsPos="0,101;0,205;0,-5" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="214" Top="92" Width="46" Height="270" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="WRYH18" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_Img_equip_upgrade_select_changed" on_mousein_grid="on_Img_equip_upgrade_mousein_grid" on_rightclick_grid="on_Img_equip_upgrade_rightclick_grid" on_mouseout_grid="on_Img_equip_upgrade_mouseout_grid" />
+            </control>
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="82" Top="3" Width="309" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_treasure_hht_upgrade_1" Font="font_title" AutoSize="true" DrawMode="ExpandH" BackImage="gui\commom_new\form_bg\zjhuawen.png" DisableEnter="true" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="58" Width="474" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_line2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-64" Top="64" Width="11" Height="498" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+        </control>
+        <control name="lbl_line3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="553" Width="474" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="groupbox_rbt" entity="GroupBox" script="" init="">
+            <prop Left="-168" Top="64" Width="163" Height="238" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="btn_equip_up" entity="Button" script="" init="">
+                <prop NormalImage="gui\commom_new\btn\main_left_out.png" FocusImage="gui\commom_new\btn\main_left_on.png" PushImage="gui\commom_new\btn\main_left_down.png" DisableImage="gui\commom_new\btn\main_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="6" Width="158" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_hht_upgrade" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_equip_up_click" />
+            </control>
+        </control>
+    </control>
+</form>

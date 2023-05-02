@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_gossip_info" init="on_main_form_init">
+        <prop Transparent="true" LimitInScreen="true" ShowGrid="true" Left="45" Top="29" Width="385" Height="500" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_gossip" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Width="360" Height="500" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_bg_num" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-123" Top="24" Width="60" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="15" Font="font_sns_title_hual_2" />
+            </control>
+            <control name="gsb_gossip" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" HasVScroll="true" Left="8" Top="88" Width="300" Height="400" BackColor="0,139,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="10" LargeChange="20" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_bg" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Width="54" Height="30" ForeColor="255,129,103,78" ShadowColor="0,0,0,0" Text="@ui_rank_2_bg" Font="font_sns_main" HintText="@desc_sns_bagua" />
+            </control>
+        </control>
+    </control>
+</form>

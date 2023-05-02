@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_arrest\form_arrest_manage" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="173" Top="149" Width="598" Height="481" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="58" Width="594" Height="388" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="444" Width="590" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="groupbox_radio" entity="GroupBox" script="" init="">
+            <prop Left="5" Top="32" Width="588" Height="31" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area.png" />
+            <control name="rbtn_list" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-107" Top="3" Width="86" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Enabled="false" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+            </control>
+            <control name="rbtn_publish" entity="RadioButton" script="" init="">
+                <prop Checked="true" ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Width="86" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_arrest_publish" Font="font_main" TabIndex="1" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_rbtn_page_click" />
+            </control>
+            <control name="rbtn_receive" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-109" Top="48" Width="86" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_arrest_receive" Font="font_main" TabIndex="2" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_rbtn_page_click" />
+            </control>
+            <control name="rbtn_me" entity="RadioButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="83" Width="86" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_arrested" Font="font_main" TabIndex="3" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_rbtn_page_click" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-1" Top="32" Width="590" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="lbl_police_period_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="275" Top="8" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Text="@ui_police_period" Font="font_main" />
+            </control>
+            <control name="lbl_police_period" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="379" Top="8" Width="134" Height="16" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Font="font_main" />
+            </control>
+        </control>
+        <control name="groupbox_publish" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="58" Width="594" Height="392" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            <control name="textgrid_doing_publish" entity="Grid" script="" init="">
+                <prop ShowComment="true" RowHeaderVisible="false" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectRow="true" ColWidth="128" RowHeight="52" ColCount="5" ScrollSize="14" HasHScroll="true" Left="38" Top="54" Width="516" Height="262" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" TabStop="true" NoFrame="true" />
+                <event on_select_row="on_textgrid_doing_publish_select_row" on_double_click_grid="on_textgrid_publish_double_click_grid" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="4" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="388" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="groupbox_doing_desc" entity="GroupBox" script="" init="">
+                <prop Left="6" Top="30" Width="550" Height="286" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_name_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="8" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_name" Font="font_main" />
+                </control>
+                <control name="lbl_name_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="8" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_character_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="32" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_evil" Font="font_main" />
+                </control>
+                <control name="lbl_character_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="32" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_power_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="56" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_power" Font="font_main" />
+                </control>
+                <control name="lbl_power_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="56" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_online_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="80" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_catch_online" Font="font_main" />
+                </control>
+                <control name="lbl_online_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="80" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_scene_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="104" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_catch_map" Font="font_main" />
+                </control>
+                <control name="lbl_scene_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="104" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_report_scene_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="104" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_report_scene" Font="font_main" />
+                </control>
+                <control name="lbl_report_scene_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="104" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_coordinate_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="128" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_coordinate" Font="font_main" />
+                </control>
+                <control name="lbl_coordinate_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="128" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_money_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="152" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_money" Font="font_main" />
+                </control>
+                <control name="lbl_money_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="152" Width="80" Height="16" ForeColor="255,90,0,0" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_time_leave_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="176" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_sort_last_time" Font="font_main" />
+                </control>
+                <control name="lbl_time_leave" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="176" Width="80" Height="16" ForeColor="255,90,0,0" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_num_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-136" Top="184" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_sort_catch_num" Font="font_main" />
+                </control>
+                <control name="lbl_num_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-136" Top="216" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_prison_time_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="197" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_time" Font="font_main" />
+                </control>
+                <control name="lbl_prison_time_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="208" Top="197" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_catch_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-136" Top="256" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_today_num" Font="font_main" />
+                </control>
+                <control name="lbl_catch_do" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-104" Top="216" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="redit_desc_do" entity="RichEdit" script="" init="">
+                    <prop ViewRect="10,10,218,276" ReadOnly="true" SelectBackColor="190,190,190,190" Caret="Default" ScrollSize="17" Left="312" Width="238" Height="286" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+                </control>
+                <control name="lbl_del_time_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="176" Width="80" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="@ui_delete_time" Font="font_main" />
+                </control>
+                <control name="lbl_del_time" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="200" Top="176" Width="80" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_danger_icon_publish" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="224" Width="100" Height="53" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_receive" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="58" Width="594" Height="392" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            <control name="textgrid_doing_receive" entity="Grid" script="" init="">
+                <prop ShowComment="true" RowHeaderVisible="false" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectRow="true" ColWidth="128" RowHeight="46" ColCount="5" ScrollSize="17" HasHScroll="true" Left="38" Top="54" Width="516" Height="262" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" TabStop="true" NoFrame="true" />
+                <event on_double_click_grid="on_textgrid_receive_double_click_grid" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="4" BackColor="0,224,224,224" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" BackImage="gui\common\scrollbar\button_4\btn_trace_out.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_4\btn_left_out.png" FocusImage="gui\common\scrollbar\button_4\btn_left_on.png" PushImage="gui\common\scrollbar\button_4\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_4\btn_right_out.png" FocusImage="gui\common\scrollbar\button_4\btn_right_on.png" PushImage="gui\common\scrollbar\button_4\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_4\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_4\btn_trace_on.png" PushImage="gui\common\scrollbar\button_4\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="388" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="groupbox_doing_desc_receive" entity="GroupBox" script="" init="">
+                <prop Left="6" Top="30" Width="550" Height="286" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="lbl_name_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="8" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_name" Font="font_main" />
+                </control>
+                <control name="lbl_name_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="8" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_character_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="32" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_evil" Font="font_main" />
+                </control>
+                <control name="lbl_character_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="32" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_power_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="56" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_power" Font="font_main" />
+                </control>
+                <control name="lbl_power_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="56" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_online_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="80" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_catch_online" Font="font_main" />
+                </control>
+                <control name="lbl_online_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="80" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_scene_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="104" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_catch_map" Font="font_main" />
+                </control>
+                <control name="lbl_scene_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="104" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_scene_report_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="104" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_report_scene" Font="font_main" />
+                </control>
+                <control name="lbl_scene_report_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="104" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_coordinate_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="128" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_coordinate" Font="font_main" />
+                </control>
+                <control name="lbl_coordinate_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="128" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_money_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="152" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_money" Font="font_main" />
+                </control>
+                <control name="lbl_money_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="152" Width="80" Height="16" ForeColor="255,90,0,0" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_time_leave_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="176" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_sort_last_time" Font="font_main" />
+                </control>
+                <control name="lbl_time_leave_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="122" Top="176" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_num_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="200" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_sort_catch_num" Font="font_main" />
+                </control>
+                <control name="lbl_num_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="178" Top="200" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_prison_time_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="224" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_time" Font="font_main" />
+                </control>
+                <control name="lbl_prison_time_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="216" Top="224" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_catch_do_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="251" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_num" Font="font_main" />
+                </control>
+                <control name="lbl_catch_do_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="216" Top="251" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="redit_desc_do_receive" entity="RichEdit" script="" init="">
+                    <prop ViewRect="10,10,218,276" ReadOnly="true" SelectBackColor="190,190,190,190" Caret="Default" ScrollSize="17" Left="312" Width="238" Height="286" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+                </control>
+                <control name="lbl_del_time_receive_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="50" Top="176" Width="80" Height="16" ForeColor="255,90,0,0" ShadowColor="0,20,0,0" Text="@ui_delete_time" Font="font_main" />
+                </control>
+                <control name="lbl_del_time_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="219" Top="176" Width="80" Height="16" ForeColor="255,90,0,0" ShadowColor="0,20,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_danger_icon_receive" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="224" Width="100" Height="53" ShadowColor="0,0,0,0" />
+                </control>
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="569" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_me" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="61" Width="594" Height="384" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            <control name="lbl_del_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="46" Top="209" Width="254" Height="70" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+            </control>
+            <control name="lbl_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="30" Top="15" Width="126" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_title_tasktrace" />
+            </control>
+            <control name="lbl_me_time_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="30" Top="218" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arresting_time" Font="font_main" />
+            </control>
+            <control name="lbl_me_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="230" Top="218" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_me_police_num_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-154" Top="30" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_catching_num" Font="font_main" />
+            </control>
+            <control name="lbl_me_police_num" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-130" Top="94" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_me_catch_times_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-114" Top="131" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_today_num" Font="font_main" />
+            </control>
+            <control name="lbl_me_catch_times" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-162" Top="219" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_me_prison_time_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="30" Top="146" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_arrest_time" Font="font_main" />
+            </control>
+            <control name="lbl_me_prison_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="230" Top="146" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_me_money_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="30" Top="182" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_now_money" Font="font_main" />
+            </control>
+            <control name="lbl_me_money" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="230" Top="182" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_me_del_time_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="94" Top="208" Width="174" Height="38" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_delete_time" Font="font_text" />
+            </control>
+            <control name="lbl_me_del_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="126" Top="228" Width="102" Height="38" ForeColor="255,90,0,0" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="redit_me_desc" entity="RichEdit" script="" init="">
+                <prop ViewRect="10,10,218,172" ReadOnly="true" SelectBackColor="190,190,190,190" Caret="Default" ScrollSize="17" Left="334" Top="72" Width="238" Height="182" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+            </control>
+            <control name="lbl_me_tips" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="30" Top="437" Width="518" Height="62" ForeColor="255,90,0,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="22" Top="21" Width="550" Height="20" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg3.png" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop HAlign="Center" TextColor="255,90,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,518,50" LineTextAlign="Center" ScrollSize="17" Left="46" Top="309" Width="518" Height="50" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="mltbox_1" Font="font_tip" />
+            </control>
+        </control>
+        <control name="btn_back" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="420" Top="445" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_return" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_back_click" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="506" Top="445" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_cancel" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_resume" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="446" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Redo" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_resume_click" />
+        </control>
+        <control name="btn_give_up" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="445" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shenfen0008" Font="font_btn" DrawMode="FitWindow" />
+            <event on_click="on_btn_give_up_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="248" Top="10" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_arrest_kingdom" Font="font_title" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="590" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="439" Width="590" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_handwriting" init="main_form_init">
+        <prop LimitInScreen="true" Left="13" Top="5" Width="1182" Height="886" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_back" entity="GroupBox" script="" init="">
+            <prop Left="17" Top="15" Width="100" Height="80" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\forgegameground.png" />
+        </control>
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Top="8" Width="958" Height="534" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="groupbox_word" entity="GroupBox" script="" init="">
+                <prop Width="952" Height="421" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\picture_game\picture_background.png" />
+                <control name="lbl_pen" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="256" Top="128" Width="99" Height="153" BackColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="handwriting_pen1" />
+                </control>
+            </control>
+            <control name="groupbox_sbg" entity="GroupBox" script="" init="">
+                <prop Left="312" Top="432" Width="310" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_sbg" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="310" Height="55" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\handwriting_game\handwriting_progress.png" />
+                </control>
+                <control name="lbl_ball" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="140" Top="14" Width="31" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\handwriting_game\handwriting_ball.png" />
+                </control>
+                <control name="btn_left" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_left\btn_left2_out.png" FocusImage="gui\common\button\btn_left\btn_left2_on.png" PushImage="gui\common\button\btn_left\btn_left2_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="80" Top="48" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_left_click" />
+                </control>
+                <control name="btn_right" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_right\btn_right2_out.png" FocusImage="gui\common\button\btn_right\btn_right2_on.png" PushImage="gui\common\button\btn_right\btn_right2_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="200" Top="48" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_right_click" />
+                </control>
+            </control>
+            <control name="btn_start" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\minigame\start-out.png" FocusImage="gui\language\ChineseS\minigame\start-on.png" PushImage="gui\language\ChineseS\minigame\start-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="784" Top="424" Width="71" Height="38" ForeColor="255,255,118,117" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_start_click" />
+            </control>
+        </control>
+        <control name="mltbox_desc" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,326,182" LineHeight="33" ScrollSize="17" Left="664" Top="328" Width="326" Height="182" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_time" NoFrame="true" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\tc-out.png" FocusImage="gui\language\ChineseS\tc-on.png" PushImage="gui\language\ChineseS\tc-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="293" Top="756" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_help" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\minigame\help_out.png" FocusImage="gui\language\ChineseS\minigame\help_on.png" PushImage="gui\language\ChineseS\minigame\help_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="366" Top="775" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_help_click" />
+        </control>
+        <control name="lbl_name" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="360" Top="152" Width="500" Height="100" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_xiayi_title2" />
+        </control>
+    </control>
+</form>

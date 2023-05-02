@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_npc\form_random_creator_config" init="main_form_init">
+        <prop ShowGrid="true" Left="157" Top="173" Width="278" Height="518" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Top="16" Width="126" Height="16" ShadowColor="0,0,0,0" Text="生成器配置窗口" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="48" Width="110" Height="16" ShadowColor="0,0,0,0" Text="双击显示距离" />
+        </control>
+        <control name="npc_dis_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="120" Top="48" Width="46" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Text="10" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="npc_dis_edit_lost_focus" />
+        </control>
+        <control name="show_ball" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="144" Top="232" Width="110" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="是否显示气球" TabStop="true" />
+            <event on_checked_changed="show_ball_checked_changed" />
+        </control>
+        <control name="show_creator_range_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="144" Top="104" Width="126" Height="16" ForeColor="255,32,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="显示生成器半径" TabStop="true" />
+            <event on_checked_changed="show_creator_range_check_checked_changed" />
+        </control>
+        <control name="show_wakeuprange" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="144" Top="136" Width="126" Height="14" ForeColor="255,255,0,0" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="显示警戒半径" TabStop="true" />
+            <event on_checked_changed="show_wakeuprange_checked_changed" />
+        </control>
+        <control name="show_chaserange" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="144" Top="168" Width="126" Height="14" ForeColor="255,255,32,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="显示追击半径" TabStop="true" />
+            <event on_checked_changed="show_chaserange_checked_changed" />
+        </control>
+        <control name="show_patrolrange" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="144" Top="200" Width="126" Height="14" ForeColor="255,255,255,32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="显示游走半径" TabStop="true" />
+            <event on_checked_changed="show_patrolrange_checked_changed" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="304" Width="80" Height="24" ShadowColor="0,0,0,0" Text="排序方式：" />
+        </control>
+        <control name="default_rbtn" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="336" Width="86" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="默认排序" TabStop="true" />
+            <event on_checked_changed="sort_rbtn_checked_changed" />
+        </control>
+        <control name="name_rbtn" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="368" Width="102" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="按名称排序" TabStop="true" />
+            <event on_checked_changed="sort_rbtn_checked_changed" />
+        </control>
+        <control name="range_rbtn" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="400" Width="102" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="按区域排序" TabStop="true" />
+            <event on_checked_changed="sort_rbtn_checked_changed" />
+        </control>
+        <control name="from_left" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="8" Top="432" Width="62" Height="22" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="sort_range_changed" />
+        </control>
+        <control name="from_top" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="72" Top="432" Width="62" Height="22" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="sort_range_changed" />
+        </control>
+        <control name="to_left" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="144" Top="432" Width="62" Height="22" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="sort_range_changed" />
+        </control>
+        <control name="to_top" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="208" Top="432" Width="62" Height="22" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="sort_range_changed" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="136" Top="432" Width="14" Height="22" ShadowColor="0,0,0,0" Text=":" />
+        </control>
+        <control name="show_all_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="472" Width="150" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="加载下所有生成器" TabStop="true" />
+            <event on_click="on_show_all_btn_click" />
+        </control>
+        <control name="select_all_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="264" Width="118" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="全选生成器" TabStop="true" />
+            <event on_click="select_all_btn_click" />
+        </control>
+        <control name="npc_style_list_cb" entity="ControlBox" script="" init="">
+            <prop ItemHeight="16" ScrollSize="17" Left="8" Top="72" Width="134" Height="182" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="ControlBox1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="show_npc_cbtn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="144" Top="72" Width="110" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="是否显示NPC" TabStop="true" />
+            <event on_checked_changed="show_npc_cbtn_checked_changed" />
+        </control>
+    </control>
+</form>

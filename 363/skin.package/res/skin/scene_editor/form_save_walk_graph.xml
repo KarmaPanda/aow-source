@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_save_walk_graph" init="main_form_init">
+        <prop Left="45" Top="53" Width="670" Height="726" BackColor="164,166,164,255" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="240" Top="8" Width="174" Height="22" Text="保存选定区域可行走图" />
+        </control>
+        <control name="zone_grid" entity="Grid" script="" init="">
+            <prop HeaderBackColor="255,206,206,206" ColHeaderVisible="true" CanSelectCol="true" CanSelectRow="true" ColWidth="20" ColWidths="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" RowHeight="20" ColCount="100" ScrollSize="17" HasHScroll="true" Left="24" Top="72" Width="622" Height="518" Text="Grid1" TabStop="true" />
+            <event on_select_grid="zone_select_grid" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="177" Height="17" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="40" Width="70" Height="22" Text="选择区域" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="40" Width="22" Height="22" Text="行" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="312" Top="40" Width="22" Height="22" Text="列" />
+        </control>
+        <control name="zone_row_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="104" Top="40" Width="78" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="zone_col_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="224" Top="40" Width="78" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="608" Width="102" Height="22" Text="开 始 区 域：" />
+        </control>
+        <control name="start_zone_row_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="128" Top="608" Width="62" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="608" Width="22" Height="22" Text="行" />
+        </control>
+        <control name="start_zone_col_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="216" Top="608" Width="62" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="608" Width="22" Height="22" Text="列" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="632" Width="110" Height="22" Text="结 束 区 域：" />
+        </control>
+        <control name="end_zone_row_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="128" Top="632" Width="62" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="632" Width="22" Height="22" Text="行" />
+        </control>
+        <control name="end_zone_col_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="216" Top="632" Width="62" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="632" Width="22" Height="22" Text="列" />
+        </control>
+        <control name="Label10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="312" Top="608" Width="126" Height="22" Text="单元格横纵向各有" />
+        </control>
+        <control name="unit_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="448" Top="608" Width="38" Height="22" Enabled="false" Text="2" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="592" Top="13" Width="54" Height="24" Text="关闭" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="create_all_modified_map_btn" entity="Button" script="" init="">
+            <prop Left="24" Top="688" Width="182" Height="24" Text="导出可行走图" TabStop="true" />
+            <event on_click="create_all_modified_map_btn_click" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="656" Width="102" Height="22" Text="地 图 名 字：" />
+        </control>
+        <control name="map_name_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="128" Top="656" Width="438" Height="22" Text="map\default_walk_graph.tga" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="496" Top="608" Width="94" Height="22" Text="个可行走点数" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="312" Top="632" Width="182" Height="22" Text="与相邻可行走点高度差 &gt;=" />
+        </control>
+        <control name="height_delta_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="504" Top="632" Width="38" Height="22" Text="1.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="552" Top="632" Width="110" Height="22" Text="则为不可行走点" />
+        </control>
+        <control name="save_all_walk_pos_btn" entity="Button" script="" init="">
+            <prop Left="384" Top="688" Width="182" Height="24" Text="导出可行走点坐标" TabStop="true" />
+            <event on_click="save_all_walk_pos_btn_click" />
+        </control>
+    </control>
+</form>

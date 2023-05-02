@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_relation\form_relation_guild\form_guild.xml" entity="Form" script="form_stage_main\form_relation\form_relation_guild\form_guild" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="37" Top="21" Width="1014" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="groupbox_right" entity="GroupBox" script="" init="">
+            <prop Left="-406" Top="520" Width="281" Height="421" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" NoFrame="true" DrawMode="Expand" />
+            <control name="groupscrollbox_member_list" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" VScrollLeft="true" IsEditMode="false" Left="56" Top="12" Width="181" Height="379" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" FullBarBack="false" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="343" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="GroupBox_" entity="GroupBox" script="" init="">
+                <prop Left="21" Top="-100" Width="150" Height="64" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <control name="Button_member_" entity="Button" script="" init="">
+                    <prop FocusImage="gui\special\sns\bg_select.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="155" Height="62" ForeColor="0,0,0,0" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Enabled="false" TestTrans="true" NoFrame="true" DrawMode="ExpandH" />
+                    <event on_click="on_member_click" on_right_click="on_member_right_click" />
+                </control>
+                <control name="Label_bg_" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="6" Top="8" Width="48" Height="50" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\icon_skill.png" />
+                </control>
+                <control name="Label_position_" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="66" Top="32" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_main_1" />
+                </control>
+                <control name="Label_name_" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="66" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_rank_35_bangzhu" Font="font_sns_main" />
+                </control>
+                <control name="Label_photo_" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="10" Top="1" Width="40" Height="50" ShadowColor="0,0,0,0" TestTrans="true" DrawMode="FitWindow" />
+                </control>
+            </control>
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Left="230" Top="9" Width="51" Height="350" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="rbtn_pos_2" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\list\cbtn_fubangzhu_out.png" FocusImage="gui\language\ChineseS\sns_new\list\cbtn_fubangzhu_on.png" CheckedImage="gui\language\ChineseS\sns_new\list\cbtn_fubangzhu_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="79" Width="70" Height="28" ForeColor="255,255,255,255" BackColor="0,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_pos_checked_changed" />
+                </control>
+                <control name="rbtn_pos_3" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\list\cbtn_tangzhu_out.png" FocusImage="gui\language\ChineseS\sns_new\list\cbtn_tangzhu_on.png" CheckedImage="gui\language\ChineseS\sns_new\list\cbtn_tangzhu_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="159" Width="70" Height="28" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_pos_checked_changed" />
+                </control>
+                <control name="rbtn_pos_4" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\list\cbtn_hufa_out.png" FocusImage="gui\language\ChineseS\sns_new\list\cbtn_hufa_on.png" CheckedImage="gui\language\ChineseS\sns_new\list\cbtn_hufa_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="228" Width="70" Height="28" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_pos_checked_changed" />
+                </control>
+                <control name="rbtn_pos_5" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="210" Top="214" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="rbtn_6" TabStop="true" />
+                    <event on_checked_changed="on_rbtn_pos_checked_changed" />
+                </control>
+                <control name="rbtn_pos_1" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\list\cbtn_bangzhu_out.png" FocusImage="gui\language\ChineseS\sns_new\list\cbtn_bangzhu_on.png" CheckedImage="gui\language\ChineseS\sns_new\list\cbtn_bangzhu_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="16" Width="70" Height="28" ForeColor="255,255,255,255" BackColor="0,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_pos_checked_changed" />
+                </control>
+                <control name="lbl_bg_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="7" Width="45" Height="64" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\bg_select_list.png" />
+                </control>
+                <control name="lbl_bg_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="79" Width="45" Height="64" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\bg_select_list.png" />
+                </control>
+                <control name="lbl_bg_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="151" Width="45" Height="64" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\bg_select_list.png" />
+                </control>
+                <control name="lbl_bg_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="223" Width="45" Height="64" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\bg_select_list.png" />
+                </control>
+            </control>
+            <control name="lbl_bg_right" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="235" Top="16" Width="46" Height="354" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\bg_select_list.png" />
+            </control>
+            <control name="btn_down" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\scrollbar\button_1\btn_bottom_out.png" FocusImage="gui\common\scrollbar\button_1\btn_bottom_on.png" PushImage="gui\common\scrollbar\button_1\btn_bottom_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="56" Top="392" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_down_click" />
+            </control>
+            <control name="sender_menu" entity="GroupBox" script="" init="">
+                <prop Left="100" Top="40" Width="118" Height="142" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\formback\menu.png" />
+                <control name="btn_secret_chat" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="7" Width="110" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_sns_chat_top_title" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_secret_chat_click" />
+                </control>
+                <control name="btn_friend_request" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="25" Width="110" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_menu_friend_request" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_friend_request_click" />
+                </control>
+                <control name="btn_add_blacklist" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="43" Width="110" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_menu_addto_blacklist" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_add_blacklist_click" />
+                </control>
+                <control name="btn_team_request" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="61" Width="110" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_menu_team_request" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_team_request_click" />
+                </control>
+                <control name="btn_manage" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="79" Width="106" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_guild_member_manage" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_member_manage_click" />
+                </control>
+                <control name="btn_tiren" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="97" Width="110" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_guild_kickout" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_kick_click" />
+                </control>
+                <control name="btn_shanrang" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="115" Width="110" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_guild_shanrang" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_shanrang_click" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_bg_out" entity="GroupBox" script="" init="">
+            <prop Width="788" Height="508" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_5" NoFrame="true" />
+            <control name="lbl_24" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="63" Width="190" Height="414" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\guild\guild_beiyong\bg_left.png" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="69" Width="182" Height="402" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+            </control>
+            <control name="lbl_18" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-1" Top="7" Width="793" Height="499" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="184" Top="68" Width="606" Height="406" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            </control>
+            <control name="btn_help" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="743" Top="14" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_btn_help_checked_changed" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-55" Top="552" Width="144" Height="29" ShadowColor="0,0,0,0" HAnchor="Center" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="471" Width="785" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="339" Top="18" Width="118" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_FormBangPai" Font="font_title" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="466" Width="785" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\language\ChineseS\btn_main\btn_guild_out.png" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="216" Top="95" Width="542" Height="282" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\language\ChineseS\origin\origin\bg\jianghuchengjiu.png" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="200" Top="102" Width="126" Height="70" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\common\form_back\bg_main.png" />
+            </control>
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="242" Top="166" Width="30" Height="38" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\common\form_back\bg_main.png" />
+            </control>
+            <control name="lbl_22" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="104" Top="664" Width="214" Height="300" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_beiyong\z-z.png" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="180" Top="70" Width="11" Height="400" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="763" Top="13" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="64" Width="783" Height="398" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\kuangxian_new\hireshop\" />
+            </control>
+        </control>
+        <control name="btn_show_right" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\sns_new\btn_news1_out.png" FocusImage="gui\special\sns_new\btn_news1_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-46" Top="608" Width="34" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" AutoSize="true" />
+            <event on_click="on_btn_show_right_click" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="40" Width="785" Height="31" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area.png" />
+        </control>
+        <control name="groupbox_tab" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="6" Top="30" Width="774" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" Text="groupbox_5" NoFrame="true" />
+            <control name="rbtn_member" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="56" Top="8" Width="66" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_member" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_member_checked_changed" />
+            </control>
+            <control name="rbtn_authority" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="320" Top="8" Width="88" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_management" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_authority_checked_changed" />
+            </control>
+            <control name="rbtn_info" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-3" Top="8" Width="62" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_info" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_info_checked_changed" />
+            </control>
+            <control name="rbtn_drawings" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="120" Top="8" Width="68" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_drawings" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_drawings_checked_changed" />
+            </control>
+            <control name="rbtn_league" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="250" Top="8" Width="72" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_diplomatism" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_league_checked_changed" />
+            </control>
+            <control name="rbtn_cf" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="406" Top="8" Width="66" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_cf_title" Font="font_main" TabStop="true" DrawMode="Expand" />
+                <event on_checked_changed="on_rbtn_cf_checked_changed" />
+            </control>
+            <control name="rbtn_1" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="6" Top="448" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="rbtn_1" TabStop="true" />
+            </control>
+            <control name="rbtn_domaininfo" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="186" Top="8" Width="66" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_domain_info" Font="font_main" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" />
+                <event on_checked_changed="on_rbtn_domaininfo_checked_changed" />
+            </control>
+            <control name="rbtn_dkp" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="471" Top="8" Width="80" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guld_points" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" />
+                <event on_checked_changed="on_rbtn_dkp_checked_changed" />
+            </control>
+            <control name="rbtn_auth" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="549" Top="8" Width="80" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_sinature" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" />
+                <event on_checked_changed="on_rbtn_auth_checked_changed" />
+            </control>
+            <control name="rbtn_war" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="633" Top="8" Width="70" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_18" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" />
+                <event on_checked_changed="on_rbtn_war_checked_changed" />
+            </control>
+            <control name="rbtn_luck" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,255" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="703" Top="8" Width="70" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_pray_shp_016" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" />
+                <event on_checked_changed="on_rbtn_luck_checked_changed" />
+            </control>
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="34" Width="785" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="groupbox_left" entity="GroupBox" script="" init="">
+            <prop Left="786" Top="10" Width="190" Height="494" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\role\bg_expand.png" />
+            <control name="groupbox_base" entity="GroupBox" script="" init="">
+                <prop Left="1" Width="182" Height="150" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <control name="lbl_name" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="14" Top="37" Width="177" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_bangpaiming" Font="font_main" />
+                </control>
+                <control name="lbl_level" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="14" Top="93" Width="118" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_rank_32_bangpaidengji" Font="font_main" />
+                </control>
+                <control name="lbl_hotness" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="14" Top="65" Width="158" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_bangpairenqi" Font="font_main" />
+                </control>
+                <control name="lbl_member_count" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="14" Top="121" Width="162" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_bangpaizaixian" Font="font_main" />
+                </control>
+                <control name="lbl_25" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="14" Top="8" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_rank_33_bangpaixinxi" Font="font_main" />
+                </control>
+                <control name="btn_plus" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\formback\jiantou.png" FocusImage="gui\guild\formback\jiantou_on.png" PushImage="gui\guild\formback\jiantou_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="168" Top="120" Width="15" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_guild_shp_prosperity_012" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_plus_click" />
+                </control>
+            </control>
+            <control name="groupbox_zongzhi" entity="GroupBox" script="" init="">
+                <prop Left="1" Top="148" Width="190" Height="150" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <control name="lbl_23" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="15" Top="8" Width="87" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_rank_34_bangpaizongzhi" Font="font_main" />
+                </control>
+                <control name="mltbox_zongzhi" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,158,126" LineHeight="18" ScrollSize="17" Left="15" Top="31" Width="158" Height="126" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="Expand" />
+                </control>
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="142" Width="181" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="310" Width="182" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="groupbox_notice" entity="GroupBox" script="" init="">
+                <prop Left="7" Top="318" Width="175" Height="168" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+            </control>
+        </control>
+        <control name="btn_open_right" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_expand_out.png" FocusImage="gui\common\button\btn_expand_on.png" PushImage="gui\common\button\btn_expand_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="779" Top="224" Width="18" Height="49" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_open_right_click" />
+        </control>
+        <control name="btn_close_right" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_contract_out.png" FocusImage="gui\common\button\btn_contract_on.png" PushImage="gui\common\button\btn_contract_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="962" Top="224" Width="18" Height="49" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_close_right_click" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="323" Top="10" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+    </control>
+</form>

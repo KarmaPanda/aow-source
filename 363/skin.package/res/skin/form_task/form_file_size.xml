@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_task\\form_file_size" init="main_form_init">
+        <prop ShowGrid="true" Left="93" Top="197" Width="574" Height="494" ForeColor="255,111,122,60" BackColor="255,134,143,152" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="file_tree" entity="TreeView" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" LevelWidth="18" ScrollSize="17" Left="8" Top="32" Width="238" Height="454" ShadowColor="0,0,0,0" Text="TreeView1" TabStop="true" />
+            <event on_select_changed="file_tree_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="info_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="32" Width="62" Height="16" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="8" Width="102" Height="16" ShadowColor="0,0,0,0" Text="文件大小查看" />
+        </control>
+        <control name="close_button" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="544" Top="8" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" TabStop="true" />
+            <event on_click="close_button_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="32" Width="80" Height="16" ShadowColor="0,0,0,0" Text="大小:" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="56" Width="80" Height="16" ShadowColor="0,0,0,0" Text="文件个数:" />
+        </control>
+        <control name="file_num_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="56" Width="70" Height="16" ShadowColor="0,0,0,0" />
+        </control>
+    </control>
+</form>

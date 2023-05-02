@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_paijiu_game" init="main_form_init">
+        <prop ShowGrid="true" Left="210" Top="190" Width="678" Height="566" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_paijiu" entity="GroupBox" script="" init="">
+            <prop Top="54" Width="678" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="groupbox_info" entity="GroupBox" script="" init="">
+                <prop Left="5" Top="312" Width="192" Height="168" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area3.png" />
+                <control name="lbl_101" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="13" Top="10" Width="64" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Text="@ui_paijiu_dujunumber" Font="font_main" />
+                </control>
+                <control name="lbl_duju" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="19" Top="29" Width="86" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_102" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="16" Top="120" Width="64" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Text="@ui_paijiu_chouma" Font="font_main" />
+                </control>
+                <control name="lbl_103" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="16" Top="96" Width="62" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Text="@ui_paijiu_chouma2" Font="font_main" />
+                </control>
+                <control name="lbl_money_num" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="20" Top="141" Width="86" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_system_money" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="105" Top="96" Width="86" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_win_radio" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="82" Top="48" Width="86" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_who_big" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="67" Top="72" Width="86" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Font="font_main" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="16" Top="48" Width="64" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Text="@ui_paijiu_win_ratio" Font="font_main" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="16" Top="72" Width="64" Height="16" ForeColor="255,255,227,74" ShadowColor="0,0,0,0" Text="@ui_paijiu_big" Font="font_main" />
+                </control>
+            </control>
+            <control name="npc" entity="GroupBox" script="" init="">
+                <prop Left="4" Top="15" Width="667" Height="302" BackColor="255,147,123,99" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+                <control name="lbl_npc_outline" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="25" Width="318" Height="254" BackColor="255,0,255,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\schoolwar\form_small.png" />
+                </control>
+                <control name="lbl_player_outline" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="335" Top="25" Width="318" Height="254" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\schoolwar\form_small.png" />
+                </control>
+                <control name="groupbox_npc_gupai" entity="GroupBox" script="" init="">
+                    <prop Left="28" Top="49" Width="286" Height="142" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+                    <control name="lbl_npc_card1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="88" Top="16" Width="49" Height="115" ShadowColor="0,0,0,0" NoFrame="false" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_0.png" />
+                    </control>
+                    <control name="lbl_npc_card2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="152" Top="16" Width="49" Height="115" ShadowColor="0,0,0,0" NoFrame="false" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_0.png" />
+                    </control>
+                </control>
+                <control name="npc_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="84" Top="11" Width="175" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_paijiu_npc" Font="font_sns_school" AutoSize="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_title.png" />
+                </control>
+                <control name="lbl_npc_text" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,76,61,44" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="1,1,285,53" LineHeight="25" ScrollSize="17" Left="28" Top="199" Width="286" Height="54" ShadowColor="0,0,0,0" Font="font_money" NoFrame="true" DrawMode="Expand" />
+                </control>
+                <control name="groupbox_player_gupai" entity="GroupBox" script="" init="">
+                    <prop Left="350" Top="49" Width="286" Height="142" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+                    <control name="lbl_player_card2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="86" Top="16" Width="49" Height="115" ShadowColor="0,0,0,0" NoFrame="false" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_0.png" />
+                    </control>
+                    <control name="lbl_player_card1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="150" Top="16" Width="49" Height="115" ShadowColor="0,0,0,0" NoFrame="false" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_0.png" />
+                    </control>
+                </control>
+                <control name="player_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="408" Top="11" Width="175" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_paijiu_player" Font="font_sns_school" AutoSize="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_title.png" />
+                </control>
+                <control name="lbl_player_text" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,76,61,44" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="1,1,285,53" LineHeight="25" ScrollSize="17" Left="350" Top="199" Width="286" Height="54" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Font="font_money" NoFrame="true" DrawMode="Expand" />
+                </control>
+            </control>
+            <control name="mltbox_game_message" entity="MultiTextBox" script="" init="">
+                <prop VAlign="Bottom" TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="10,0,250,156" LineHeight="22" AutoScroll="true" TipAutoSize="true" TipMaxWidth="250" TransNormalText="true" ScrollSize="15" HasVScroll="true" Solid="true" Left="200" Top="319" Width="261" Height="156" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="MultiTextBox1" Font="font_main" DrawMode="Expand" BackImage="gui\common\form_back\bj_kuang.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="15" BackColor="110,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="15" BackColor="110,0,0,0" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="40" BackColor="110,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Left="463" Top="312" Width="208" Height="168" ForeColor="0,0,0,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_area3.png" />
+                <control name="lbl_skill1_frame" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="20" Top="27" Width="50" Height="50" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\imagegrid\icon_item.png" />
+                </control>
+                <control name="lbl_skill2_frame" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="80" Top="27" Width="50" Height="50" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\imagegrid\icon_item.png" />
+                </control>
+                <control name="btn_look" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\paijiuganme\skill_1_out.png" FocusImage="gui\mainform\smallgame\paijiuganme\skill_1_on.png" PushImage="gui\mainform\smallgame\paijiuganme\skill_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="25" Top="32" Width="40" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_paijiu_brief_7" DrawMode="FitWindow" />
+                    <event on_click="on_btn_look_click" />
+                </control>
+                <control name="btn_restart" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\paijiuganme\skill_2_out.png" FocusImage="gui\mainform\smallgame\paijiuganme\skill_2_on.png" PushImage="gui\mainform\smallgame\paijiuganme\skill_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="85" Top="32" Width="40" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_paijiu_brief_8" DrawMode="FitWindow" />
+                    <event on_click="on_btn_restart_click" />
+                </control>
+                <control name="money_pic" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="129" Top="115" Width="15" Height="15" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="FitWindow" BackImage="gui\common\money\paijiu_daibi.png" />
+                </control>
+                <control name="txt_xiazhu_number" entity="Float_Edit" script="" init="">
+                    <prop Format="%.0f" DragStep="0.001000" Max="10000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" Caret="Default" Left="145" Top="112" Width="46" Height="22" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="0" Font="font_tip" Cursor="WIN_IBEAM" TabStop="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+                </control>
+                <control name="lbl_skill3_frame" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="140" Top="27" Width="50" Height="50" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\imagegrid\icon_item.png" />
+                </control>
+                <control name="btn_luck" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\smallgame\paijiuganme\skill_3_out.png" FocusImage="gui\mainform\smallgame\paijiuganme\skill_3_on.png" PushImage="gui\mainform\smallgame\paijiuganme\skill_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="145" Top="32" Width="40" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_paijiu_brief_9" DrawMode="FitWindow" />
+                    <event on_click="on_btn_luck_click" />
+                </control>
+                <control name="lbl_99" entity="Label" script="" init="">
+                    <prop Align="Right" RefCursor="WIN_HELP" Left="41" Top="115" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_paijiu_duzhu" Font="font_main" />
+                </control>
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="311" Width="667" Height="10" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="192" Top="318" Width="12" Height="158" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="456" Top="318" Width="12" Height="158" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+            </control>
+            <control name="lbl_96" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="472" Width="667" Height="10" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="groupbox_below" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="480" Width="662" Height="30" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_2" />
+                <control name="btn_start" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="439" Top="-2" Width="132" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_start" Font="font_playername" DrawMode="Expand" />
+                    <event on_click="on_btn_start_click" />
+                </control>
+                <control name="btn_open" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="576" Top="-2" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_open" Font="font_playername" AutoSize="true" DrawMode="Expand" />
+                    <event on_click="on_btn_open_click" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_brief" entity="GroupBox" script="" init="">
+            <prop Top="69" Width="670" Height="534" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="groupbox_briefcheck" entity="GroupBox" script="" init="">
+                <prop Left="5" Width="110" Height="492" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_2" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+                <control name="cbtn_3" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="11" Top="57" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_briefbutton_1" Font="font_money" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_checked_changed="on_cbtn_3_checked_changed" />
+                </control>
+                <control name="cbtn_4" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="11" Top="97" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_briefbutton_2" Font="font_money" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_checked_changed="on_cbtn_4_checked_changed" />
+                </control>
+                <control name="cbtn_5" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="11" Top="17" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_briefbutton_3" Font="font_money" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_checked_changed="on_cbtn_5_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_show" entity="GroupBox" script="" init="">
+                <prop Left="117" Width="553" Height="492" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+                <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" IsEditMode="false" Top="4" Width="550" Height="481" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" Text="11" NoFrame="true" DrawMode="Expand" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="1931" SmallChange="1" LargeChange="481" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="89" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                        </subor>
+                    </subor>
+                    <control name="groupbox_show_1" entity="GroupBox" script="" init="">
+                        <prop Left="8" Top="112" Width="510" Height="2300" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                        <control name="groupbox_1_1" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="8" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_11" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_1.png" />
+                            </control>
+                            <control name="lbl_13" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_2.png" />
+                            </control>
+                            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_1" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_2" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="142" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_14" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_3.png" />
+                            </control>
+                            <control name="lbl_15" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_4.png" />
+                            </control>
+                            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_3" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_3" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="276" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_16" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_5.png" />
+                            </control>
+                            <control name="lbl_17" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_6.png" />
+                            </control>
+                            <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_5" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_4" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="410" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_18" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_7.png" />
+                            </control>
+                            <control name="lbl_19" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_8.png" />
+                            </control>
+                            <control name="mltbox_4" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_7" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_5" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="544" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_20" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_9.png" />
+                            </control>
+                            <control name="lbl_21" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_10.png" />
+                            </control>
+                            <control name="mltbox_5" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_9" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_6" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="678" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_22" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_11.png" />
+                            </control>
+                            <control name="lbl_23" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_12.png" />
+                            </control>
+                            <control name="mltbox_6" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_11" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_7" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="812" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_24" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_13.png" />
+                            </control>
+                            <control name="lbl_25" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_14.png" />
+                            </control>
+                            <control name="mltbox_7" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_13" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_8" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="946" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_26" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_15.png" />
+                            </control>
+                            <control name="lbl_27" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_16.png" />
+                            </control>
+                            <control name="mltbox_8" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_15" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_9" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1080" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_28" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_17.png" />
+                            </control>
+                            <control name="lbl_29" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_18.png" />
+                            </control>
+                            <control name="mltbox_9" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_17" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_10" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1214" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_30" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_19.png" />
+                            </control>
+                            <control name="lbl_31" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_20.png" />
+                            </control>
+                            <control name="mltbox_10" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_19" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_11" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1348" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_32" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_21.png" />
+                            </control>
+                            <control name="lbl_33" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_22.png" />
+                            </control>
+                            <control name="mltbox_11" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_21" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_12" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1482" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_34" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_23.png" />
+                            </control>
+                            <control name="lbl_35" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_24.png" />
+                            </control>
+                            <control name="mltbox_12" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_23" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_13" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1616" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_36" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_25.png" />
+                            </control>
+                            <control name="lbl_37" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_26.png" />
+                            </control>
+                            <control name="mltbox_13" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_25" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_14" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1750" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_38" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_27.png" />
+                            </control>
+                            <control name="lbl_39" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_28.png" />
+                            </control>
+                            <control name="mltbox_14" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_27" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_15" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1884" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_40" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="8" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_29.png" />
+                            </control>
+                            <control name="lbl_41" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="52" Top="18" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_30.png" />
+                            </control>
+                            <control name="mltbox_15" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_29" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_16" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2018" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_42" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="30" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_31.png" />
+                            </control>
+                            <control name="mltbox_16" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_31" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_1_17" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2152" Width="510" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_43" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="30" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_32.png" />
+                            </control>
+                            <control name="mltbox_17" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_paijiu_gupai_32" ScrollSize="17" Left="96" Top="21" Width="410" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                    </control>
+                    <control name="mltbox_18" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,475,92" LineHeight="25" HtmlText="@ui_paijiu_intro1" ScrollSize="17" Left="19" Top="21" Width="502" Height="102" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                    </control>
+                    <control name="lbl_100" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="5" Width="175" Height="27" ShadowColor="0,0,0,0" Text="@ui_paijiu_briefbutton_1" Font="font_task_name" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+                    </control>
+                </control>
+                <control name="groupscrollbox_2" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" IsEditMode="false" Top="4" Width="550" Height="481" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" Text="22" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="2601" SmallChange="1" LargeChange="481" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="70" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                        </subor>
+                    </subor>
+                    <control name="groupbox_show_2" entity="GroupBox" script="" init="">
+                        <prop Left="8" Top="112" Width="520" Height="2970" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" />
+                        <control name="groupbox_2_1" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="8" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_45" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_31.png" />
+                            </control>
+                            <control name="lbl_46" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_32.png" />
+                            </control>
+                            <control name="mltbox_20" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_1" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_2" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="142" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_47" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_1.png" />
+                            </control>
+                            <control name="lbl_48" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_2.png" />
+                            </control>
+                            <control name="mltbox_21" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_2" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_3" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="276" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_49" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_3.png" />
+                            </control>
+                            <control name="lbl_50" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_4.png" />
+                            </control>
+                            <control name="mltbox_22" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_3" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_4" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="410" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_51" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_5.png" />
+                            </control>
+                            <control name="lbl_52" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_6.png" />
+                            </control>
+                            <control name="mltbox_23" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_4" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_5" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="544" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_53" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_7.png" />
+                            </control>
+                            <control name="lbl_54" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_8.png" />
+                            </control>
+                            <control name="mltbox_24" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_5" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_6" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="678" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_55" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_9.png" />
+                            </control>
+                            <control name="lbl_56" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_10.png" />
+                            </control>
+                            <control name="mltbox_25" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_6" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_7" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="812" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_57" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_11.png" />
+                            </control>
+                            <control name="lbl_58" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_12.png" />
+                            </control>
+                            <control name="mltbox_26" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_7" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_8" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="946" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_59" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_13.png" />
+                            </control>
+                            <control name="lbl_60" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_14.png" />
+                            </control>
+                            <control name="mltbox_27" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_8" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_9" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1080" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_61" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_15.png" />
+                            </control>
+                            <control name="lbl_62" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_16.png" />
+                            </control>
+                            <control name="mltbox_28" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_9" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_10" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1214" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_63" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_17.png" />
+                            </control>
+                            <control name="lbl_64" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_18.png" />
+                            </control>
+                            <control name="mltbox_29" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_10" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_11" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1348" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_65" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_19.png" />
+                            </control>
+                            <control name="lbl_66" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_20.png" />
+                            </control>
+                            <control name="mltbox_30" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_11" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_12" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1482" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_67" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_21.png" />
+                            </control>
+                            <control name="lbl_68" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_22.png" />
+                            </control>
+                            <control name="mltbox_31" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_12" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_13" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1616" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_69" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_23.png" />
+                            </control>
+                            <control name="lbl_70" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_24.png" />
+                            </control>
+                            <control name="mltbox_32" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_13" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_14" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1750" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_71" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_25.png" />
+                            </control>
+                            <control name="lbl_72" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_26.png" />
+                            </control>
+                            <control name="mltbox_33" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_14" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_15" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="1884" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_73" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_27.png" />
+                            </control>
+                            <control name="lbl_74" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_28.png" />
+                            </control>
+                            <control name="mltbox_34" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_15" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_16" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2018" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_75" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_29.png" />
+                            </control>
+                            <control name="lbl_76" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_30.png" />
+                            </control>
+                            <control name="mltbox_35" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_16" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_17" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2152" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_77" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="3" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_1.png" />
+                            </control>
+                            <control name="lbl_78" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="53" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_23.png" />
+                            </control>
+                            <control name="lbl_89" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="97" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_24.png" />
+                            </control>
+                            <control name="mltbox_36" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_17" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_18" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2286" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_79" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="3" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_3.png" />
+                            </control>
+                            <control name="lbl_80" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="53" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_23.png" />
+                            </control>
+                            <control name="lbl_90" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="97" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_24.png" />
+                            </control>
+                            <control name="mltbox_37" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_18" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_19" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2420" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_81" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_1.png" />
+                            </control>
+                            <control name="lbl_82" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="47" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_5.png" />
+                            </control>
+                            <control name="lbl_91" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="88" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_25.png" />
+                            </control>
+                            <control name="lbl_92" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="129" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_26.png" />
+                            </control>
+                            <control name="mltbox_38" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,318,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_19" ScrollSize="17" Left="172" Top="16" Width="338" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_20" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2554" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_83" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_3.png" />
+                            </control>
+                            <control name="lbl_84" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="47" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_5.png" />
+                            </control>
+                            <control name="lbl_93" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="88" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_25.png" />
+                            </control>
+                            <control name="lbl_94" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="129" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_26.png" />
+                            </control>
+                            <control name="mltbox_39" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,318,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_20" ScrollSize="17" Left="172" Top="16" Width="338" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_21" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2688" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_85" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_1.png" />
+                            </control>
+                            <control name="lbl_86" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_28.png" />
+                            </control>
+                            <control name="mltbox_40" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_21" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                        <control name="groupbox_2_22" entity="GroupBox" script="" init="">
+                            <prop Left="3" Top="2822" Width="515" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                            <control name="lbl_87" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="32" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_3.png" />
+                            </control>
+                            <control name="lbl_88" entity="Label" script="" init="">
+                                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="40" Height="94" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\paijiu_19.png" />
+                            </control>
+                            <control name="mltbox_41" entity="MultiTextBox" script="" init="">
+                                <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,338,100" LineHeight="25" HtmlText="@ui_jiupai_duipaidesc_22" ScrollSize="17" Left="152" Top="16" Width="358" Height="94" ShadowColor="0,0,0,0" Text="@ui_paijiu_gupai_1" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                            </control>
+                        </control>
+                    </control>
+                    <control name="mltbox_19" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,475,92" LineHeight="25" HtmlText="@ui_paijiu_intro2" ScrollSize="17" Left="19" Top="21" Width="502" Height="102" ShadowColor="0,0,0,0" Text="mltbox_19" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text_1.png" />
+                    </control>
+                    <control name="lbl_104" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="7" Width="175" Height="27" ShadowColor="0,0,0,0" Text="@ui_paijiu_briefbutton_2" Font="font_task_name" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+                    </control>
+                </control>
+                <control name="groupscrollbox_3" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" IsEditMode="false" Top="4" Width="550" Height="481" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="33" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="929" SmallChange="1" LargeChange="481" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="153" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                        </subor>
+                    </subor>
+                    <control name="groupbox_3_1" entity="GroupBox" script="" init="">
+                        <prop Left="8" Top="20" Width="518" Height="390" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                        <control name="mltbox_42" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,474,460" LineHeight="25" HtmlText="@ui_paijiu_brief_2" ScrollSize="17" Left="16" Top="22" Width="494" Height="358" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_2" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="lbl_7" entity="Label" script="" init="">
+                            <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="7" Width="175" Height="27" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_1" Font="font_task_name" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+                        </control>
+                    </control>
+                    <control name="groupbox_3_2" entity="GroupBox" script="" init="">
+                        <prop Left="8" Top="420" Width="518" Height="390" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                        <control name="mltbox_43" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,474,420" LineHeight="22" HtmlText="@ui_paijiu_brief_4" ScrollSize="17" Left="16" Top="22" Width="494" Height="366" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_4" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="lbl_8" entity="Label" script="" init="">
+                            <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="7" Width="175" Height="27" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_3" Font="font_task_name" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+                        </control>
+                    </control>
+                    <control name="groupbox_3_3" entity="GroupBox" script="" init="">
+                        <prop Left="8" Top="820" Width="518" Height="590" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                        <control name="mltbox_44" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,474,180" LineHeight="22" HtmlText="@ui_paijiu_brief_6" ScrollSize="17" Left="16" Top="22" Width="494" Height="132" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_6" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="mltbox_45" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,400,90" LineHeight="22" HtmlText="@ui_paijiu_brief_7" ScrollSize="17" Left="80" Top="172" Width="425" Height="90" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_7" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="mltbox_46" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,400,90" LineHeight="22" HtmlText="@ui_paijiu_brief_8" ScrollSize="17" Left="80" Top="272" Width="425" Height="90" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_8" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="mltbox_47" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,400,90" LineHeight="22" HtmlText="@ui_paijiu_brief_9" ScrollSize="17" Left="80" Top="372" Width="425" Height="90" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_9" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="lbl_10" entity="Label" script="" init="">
+                            <prop RefCursor="WIN_HELP" Left="15" Top="172" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\skill_1_on.png" />
+                        </control>
+                        <control name="lbl_12" entity="Label" script="" init="">
+                            <prop RefCursor="WIN_HELP" Left="15" Top="272" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\skill_2_on.png" />
+                        </control>
+                        <control name="lbl_44" entity="Label" script="" init="">
+                            <prop RefCursor="WIN_HELP" Left="15" Top="372" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\paijiuganme\skill_3_on.png" />
+                        </control>
+                        <control name="lbl_9" entity="Label" script="" init="">
+                            <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="7" Width="175" Height="27" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_5" Font="font_task_name" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+                        </control>
+                    </control>
+                    <control name="groupbox_3_4" entity="GroupBox" script="" init="">
+                        <prop Left="8" Top="1300" Width="518" Height="100" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                        <control name="mltbox_48" entity="MultiTextBox" script="" init="">
+                            <prop TextColor="255,0,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="20,10,474,92" LineHeight="22" HtmlText="@ui_paijiu_brief_11" ScrollSize="17" Left="16" Top="22" Width="494" Height="86" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_11" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                        </control>
+                        <control name="lbl_95" entity="Label" script="" init="">
+                            <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="7" Width="175" Height="27" ShadowColor="0,0,0,0" Text="@ui_paijiu_brief_10" Font="font_task_name" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="109" Width="14" Height="494" ShadowColor="0,0,0,0" NoFrame="false" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+            </control>
+        </control>
+        <control name="groupbox_check" entity="GroupBox" script="" init="">
+            <prop Left="5" Top="35" Width="665" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area.png" />
+            <control name="cbtn_1" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="6" Top="4" Width="152" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_mainbutton_1" Font="font_playername" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_cbtn1_checked_changed" />
+            </control>
+            <control name="cbtn_2" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="159" Top="4" Width="117" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_paijiu_mainbutton_2" Font="font_playername" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_cbtn2_checked_changed" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="640" Top="6" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_97" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="300" Top="8" Width="70" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_paijiu_game" Font="font_playername" />
+        </control>
+        <control name="lbl_98" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="30" Width="667" Height="10" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

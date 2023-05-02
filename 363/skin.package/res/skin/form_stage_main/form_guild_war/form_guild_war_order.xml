@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="from_guild_war_order" entity="Form" script="form_stage_main\form_guild_war\form_guild_war_order" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="221" Top="109" Width="878" Height="509" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="848" Top="32" Width="30" Height="438" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="3" Top="33" Width="854" Height="446" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-30" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_bg_down" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="472" Width="865" Height="27" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="rbtn_attack" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="475" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_guildwar_order_jingongfang" DataSource="2" Font="font_main" TabStop="true" AutoSize="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_checked_changed="on_rbtn_checked_changed" />
+        </control>
+        <control name="rbtn_defend" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="475" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_guildwar_order_fangshoufang" DataSource="1" Font="font_main" TabStop="true" AutoSize="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_checked_changed="on_rbtn_checked_changed" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="367" Width="144" Height="29" ShadowColor="0,0,0,0" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_line_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="469" Width="867" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_wininfo" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="340" Top="-245" Width="200" Height="16" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" VAnchor="Center" Font="FZHKJT20" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="14" Top="40" Width="830" Height="390" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\list\bg_main.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="14" Top="40" Width="830" Height="390" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\list\bg_line.png" />
+        </control>
+        <control name="textgrid_order" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderRowHeight="35" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectCol="true" CanSelectRow="true" ColWidth="40" RowHeight="30" ScrollSize="20" HasHScroll="true" AlwaysVScroll="true" Left="18" Top="-218" Width="857" Height="430" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" TestTrans="true" Font="font_sns_main_1" TabStop="true" NoFrame="true" />
+            <subor name="HScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop ButtonSize="18" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="394" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" IsLimitWidth="true" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="13" Top="437" Width="831" Height="30" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+        </control>
+        <control name="lbl_me_honor" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="775" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_me_destroy" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="460" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_me_rob" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="378" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_me_bekill" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="323" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_me_kill" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="258" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_me_name" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="80" Top="448" Width="81" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_main" />
+        </control>
+        <control name="lbl_me_burn" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="575" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_me_order" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="27" Top="448" Width="40" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_main" />
+        </control>
+        <control name="lbl_me_guild" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="158" Top="448" Width="80" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_main" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="648" Top="520" Width="20" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_special" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="685" Top="448" Width="44" Height="5" ForeColor="255,255,0,0" ShadowColor="0,255,255,255" Font="font_text_figure" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="26" Width="868" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_win_text" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="40" Width="440" Height="150" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="guildwar_win" />
+        </control>
+        <control name="lbl_lose_text" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="224" Top="40" Width="440" Height="150" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="guildwar_lose" />
+        </control>
+    </control>
+</form>

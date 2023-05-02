@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_sweet_employ\form_offline_employee_records" init="on_main_form_init">
+        <prop ShowGrid="true" Left="101" Top="101" Width="326" Height="350" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sweetemploy\sweetemploy_dialog_3.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\sweetemploy\sweetemploy_shutdown_out.png" FocusImage="gui\special\sweetemploy\sweetemploy_shutdown_on.png" PushImage="gui\special\sweetemploy\sweetemploy_shutdown_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="296" Top="8" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" InSound="MouseOn_20" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="120" Top="8" Width="86" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_sweetemploy_tips50" Font="font_title" />
+        </control>
+        <control name="gsb_records" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" Left="8" Top="40" Width="311" Height="270" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="0" Maximum="10" SmallChange="20" LargeChange="25" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="1" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="1" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\wuxue\liaotian_gdt_1.png" FocusImage="gui\special\wuxue\liaotian_gdt_2.png" PushImage="gui\special\wuxue\liaotian_gdt_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="42" BackColor="0,192,192,192" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <control name="gb_item" entity="GroupBox" script="" init="">
+                <prop Left="4" Top="-1" Width="294" Height="69" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sweetemploy\sweetemploy_subdirectories_out.png" InSound="MouseOn_20" />
+                <control name="lbl_time" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="278" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" />
+                </control>
+                <control name="mltbox_txt" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,278,38" LineHeight="33" ScrollSize="17" Top="29" Width="278" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_xiayi_title2" NoFrame="true" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_buttons" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="317" Width="310" Height="30" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="btn_ok" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\sweetemploy\sweetemploy_button_1_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="238" Width="72" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@bsyx_fmgl" Font="font_main" DrawMode="FitWindow" InSound="MouseOn_20" />
+                <event on_click="on_btn_ok_click" />
+            </control>
+        </control>
+    </control>
+</form>

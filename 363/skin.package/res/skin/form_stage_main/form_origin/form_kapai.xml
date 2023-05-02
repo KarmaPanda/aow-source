@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_origin\form_origin.xml" entity="Form" script="form_stage_main\form_origin\form_kapai" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="5" Top="29" Width="862" Height="638" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="16" Width="862" Height="614" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="lbl_deep_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="46" Width="854" Height="50" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="360" Top="16" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="833" Top="24" Width="20" Height="22" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_name" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="400" Top="24" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_prestige_name" Font="font_title" />
+        </control>
+        <control name="groupbox_tab" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" Left="7" Top="46" Width="850" Height="70" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="3" Width="849" Height="48" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+            </control>
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\prestige\right_out.png" FocusImage="gui\special\prestige\right_on.png" PushImage="gui\special\prestige\right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="961" Top="26" Width="24" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="btn_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\prestige\left_out.png" FocusImage="gui\special\prestige\left_on.png" PushImage="gui\special\prestige\left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="969" Top="114" Width="24" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="rbtn_type_1" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\prestige\button_out.png" FocusImage="gui\special\prestige\button_on.png" CheckedImage="gui\special\prestige\button_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="5" Top="7" Width="110" Height="43" ForeColor="255,147,123,99" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_code_figure" TabIndex="1" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_type_checked_changed" />
+            </control>
+            <control name="btn_yueli" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\karma\yueli_out.png" FocusImage="gui\special\karma\yueli_on.png" PushImage="gui\special\karma\yueli_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1025" Top="26" Width="14" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_karma_yueli" DrawMode="FitWindow" />
+                <event on_click="on_btn_yueli_click" />
+            </control>
+            <control name="mlt_yueli" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,21" LineHeight="21" HtmlText="乳臭未干" LineTextAlign="Center" ScrollSize="17" Left="1017" Top="26" Width="110" Height="21" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_karma_yueli" NoFrame="true" />
+            </control>
+            <control name="btn_num" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\trackbar\tb_1_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="682" Top="8" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_num" HintText="@tips_prestige_num" AutoSize="true" />
+            </control>
+            <control name="mltbox_num" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,94,21" LineHeight="21" HtmlText="4/4" LineTextAlign="Center" ScrollSize="17" Left="701" Top="4" Width="94" Height="21" ForeColor="255,17,204,4" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_prestige_num" NoFrame="true" />
+            </control>
+            <control name="btn_prize" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\prize_out.png" FocusImage="gui\language\ChineseS\prestige\prize_on.png" PushImage="gui\language\ChineseS\prestige\prize_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="805" Top="6" Width="40" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_name" HintText="@tips_btn_prestige_prize" DrawMode="FitWindow" />
+                <event on_click="on_btn_prize_click" />
+            </control>
+            <control name="btn_prestigeexp" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\littleprestige_out.png" FocusImage="gui\language\ChineseS\prestige\littleprestige_on.png" PushImage="gui\language\ChineseS\prestige\littleprestige_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="682" Top="29" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_PrestigeExp" DrawMode="FitWindow" />
+            </control>
+            <control name="mltbox_prestigeexp" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,21" LineHeight="21" HtmlText="1111" LineTextAlign="Center" ScrollSize="17" Left="700" Top="26" Width="110" Height="21" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_title" NoFrame="true" />
+            </control>
+        </control>
+        <control name="btn_help" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="814" Top="24" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_checked_changed="on_btn_help_checked_changed" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="42" Width="853" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="groupbox_template" entity="GroupBox" script="" init="">
+            <prop Top="93" Width="828" Height="265" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_back_kapai" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Width="828" Height="265" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\prestige\back2_new1.png" />
+            </control>
+            <control name="lbl_back_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="-48" Width="822" Height="38" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\prestige\bg_2.png" />
+            </control>
+            <control name="groupbox_kapai" entity="GroupBox" script="" init="">
+                <prop Width="150" Height="246" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="lbl_time" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="264" Width="150" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_text" />
+                </control>
+                <control name="btn_kapai" entity="Button" script="" init="">
+                    <prop NormalImage="gui\..\icon\funcnpc\itemnpc016" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="36" Top="104" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_kapai_click_test" />
+                </control>
+                <control name="mltbox_state" entity="MultiTextBox" script="" init="">
+                    <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,150,16" ScrollSize="17" Left="4" Top="232" Width="150" Height="16" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_template_5" entity="GroupBox" script="" init="">
+            <prop Left="4" Top="88" Width="800" Height="502" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_back_kapai_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Width="827" Height="530" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\prestige\back2_new2.png" />
+            </control>
+            <control name="lbl_back_time_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-4" Top="528" Width="806" Height="38" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\prestige\bg_2.png" />
+            </control>
+        </control>
+        <control name="groupbox_kapai_1" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="96" Width="150" Height="265" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_time_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="17" Top="240" Width="134" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_text" />
+            </control>
+            <control name="btn_kapai_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\1011.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="32" Top="64" Width="104" Height="133" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_kapai_click_test" />
+            </control>
+            <control name="mltbox_state_1" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,134,16" ScrollSize="17" Left="18" Top="212" Width="134" Height="16" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+            </control>
+        </control>
+        <control name="groupbox_kapai_2" entity="GroupBox" script="" init="">
+            <prop Left="144" Top="96" Width="190" Height="265" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_time_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="240" Width="150" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_text" />
+            </control>
+            <control name="btn_kapai_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\2001.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="24" Top="56" Width="122" Height="142" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_kapai_click_test" />
+            </control>
+            <control name="mltbox_state_2" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,150,16" ScrollSize="17" Left="8" Top="212" Width="150" Height="16" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+            </control>
+        </control>
+        <control name="groupbox_kapai_3" entity="GroupBox" script="" init="">
+            <prop Left="288" Top="96" Width="254" Height="265" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_time_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="31" Top="240" Width="150" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_text" />
+            </control>
+            <control name="btn_kapai_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\3001.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="16" Width="190" Height="200" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_kapai_click_test" />
+            </control>
+            <control name="mltbox_state_3" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,150,16" ScrollSize="17" Left="31" Top="212" Width="150" Height="16" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+            </control>
+        </control>
+        <control name="groupbox_kapai_4" entity="GroupBox" script="" init="">
+            <prop Left="488" Top="96" Width="326" Height="265" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_time_4" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="84" Top="240" Width="150" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_text" />
+            </control>
+            <control name="btn_kapai_4" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\4001.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="56" Top="6" Width="211" Height="216" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_kapai_click_test" />
+            </control>
+            <control name="mltbox_state_4" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,150,16" ScrollSize="17" Left="84" Top="212" Width="150" Height="16" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+            </control>
+        </control>
+        <control name="groupbox_kapai_5" entity="GroupBox" script="" init="">
+            <prop Left="464" Top="96" Width="358" Height="518" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_time_5" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="100" Top="504" Width="150" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_text" />
+            </control>
+            <control name="btn_kapai_5" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\prestige\5001.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="36" Top="96" Width="275" Height="365" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_kapai_click_test" />
+            </control>
+            <control name="mltbox_state_5" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,150,16" ScrollSize="17" Left="100" Top="476" Width="150" Height="16" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+            </control>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="831" Top="97" Width="30" Height="530" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+        </control>
+        <control name="kapai_main" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="18" HasVScroll="true" AlwaysVScroll="true" Left="5" Top="98" Width="850" Height="528" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="20" FullBarBack="false" SmallChange="1" LargeChange="528" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="488" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="92" Width="853" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="16" Width="42" Height="42" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\btn_main\btn_enchou_out_36.png" />
+        </control>
+    </control>
+</form>

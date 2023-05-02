@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_dbomall\form_collect_pieces" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Left="29" Top="29" Width="790" Height="630" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_picture_list" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="10" Top="30" Width="614" Height="550" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="btn_picture_0" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="656" Top="440" Width="49" Height="49" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        </control>
+        <control name="btn_get_prize" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\dbomall\btn_3_out.png" FocusImage="gui\special\dbomall\btn_3_on.png" PushImage="gui\special\dbomall\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="488" Top="450" Width="143" Height="30" ForeColor="255,255,243,215" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_atsxm_get" Font="font_main" DrawMode="ExpandH" />
+            <event on_click="on_btn_get_prize_click" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,216,172,130" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,202,341" LineHeight="17" HtmlText="@ui_atsxm_desc" ScrollSize="15" HasVScroll="true" Left="479" Top="64" Width="222" Height="341" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" />
+            <subor name="VScrollBar">
+                <prop Maximum="13" SmallChange="1" LargeChange="20" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="188" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="466" Top="29" Width="10" Height="460" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\newshitu\fengexian_1.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="496" Top="41" Width="80" Height="16" ForeColor="255,255,221,177" ShadowColor="0,0,0,0" Text="@ui_atsxm_title" Font="HyperLink4" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="10" Top="30" Width="462" Height="456" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\hd_atsxm\bg.png" />
+        </control>
+        <control name="lbl_lightnum" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="479" Top="408" Width="80" Height="16" ForeColor="255,216,172,130" ShadowColor="0,0,0,0" Text="@ui_atsxm_lightnum" Font="HyperLink1" />
+        </control>
+        <control name="lbl_darknum" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="999999" Top="999999" Width="80" Height="16" ForeColor="255,216,172,130" ShadowColor="0,0,0,0" Text="@ui_atsxm_darknum" Font="font_main" />
+        </control>
+        <control name="lbl_goodsnum" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="479" Top="429" Width="80" Height="16" ForeColor="255,216,172,130" ShadowColor="0,0,0,0" Text="@ui_atsxm_goodsnum" Font="font_main" />
+        </control>
+    </control>
+</form>

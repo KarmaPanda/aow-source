@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_newtreasure_transfer" init="on_main_form_init">
+        <prop ShowGrid="true" Left="37" Top="29" Width="548" Height="506" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_notice" entity="GroupBox" script="" init="">
+            <prop Left="349" Width="198" Height="505" BackColor="255,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\combobox\bg_list3.png" />
+            <control name="mltbox_notice" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,0,180,478" LineHeight="18" HtmlText="@ui_newtreasure_upgrade_4" LineTextAlign="Center" ScrollSize="17" HasVScroll="true" Solid="true" Left="8" Top="24" Width="182" Height="478" ForeColor="255,204,204,204" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_treeview" NoFrame="true" DrawMode="Expand" BackImage="gui\bg_menu.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="25" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\special\huashan_mvp\scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\huashan_mvp\up1_out.png" FocusImage="gui\special\huashan_mvp\up1_on.png" PushImage="gui\special\huashan_mvp\up1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\huashan_mvp\down1_out.png" FocusImage="gui\special\huashan_mvp\down1_on.png" PushImage="gui\special\huashan_mvp\down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\huashan_mvp\trace2_out.png" FocusImage="gui\special\huashan_mvp\trace2_on.png" PushImage="gui\special\huashan_mvp\trace2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="311" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_notice_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_contract_out.png" FocusImage="gui\common\button\btn_contract_on.png" PushImage="gui\common\button\btn_contract_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="183" Top="226" Width="16" Height="47" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" />
+                <event on_click="on_btn_notice_close_click" />
+            </control>
+            <control name="lbl_notice_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="64" Top="6" Width="79" Height="19" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_newtreasure_upgrade_2" Font="font_btn" DrawMode="Expand" BackImage="gui\bg_list1.png" />
+            </control>
+        </control>
+        <control name="groupbox_serve" entity="GroupBox" script="" init="">
+            <prop Width="354" Height="506" ShadowColor="0,0,0,0" Text="groupbox_1" DrawMode="FitWindow" BackImage="gui\special\newtersure\bg01.png" />
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="326" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="lbl_main_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" TextOffsetX="0" TextOffsetY="0" Left="80" Top="2" Width="182" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_newtreasure_upgrade_1" Font="font_title" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_adorn.png" />
+            </control>
+            <control name="btn_help" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" PushImage="gui\common\button\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="305" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_help_click" />
+            </control>
+            <control name="lbl_main_bg" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="34" Width="346" Height="441" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\newtersure\back02.png" />
+            </control>
+            <control name="btn_upgrade" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="258" Top="472" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newtreasure_upgrade_5" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_upgrade_click" />
+            </control>
+            <control name="imagegrid_1" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,70,70" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="3" GridOffsetY="3" GridHeight="38" GridWidth="38" GridsPos="0,0,0,105" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\newtersure\zhuk3.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="98" Top="293" Width="46" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+                <event on_mouseout_grid="on_imagegrid_mouseout_grid" on_mousein_grid="on_imagegrid_mousein_grid" />
+            </control>
+            <control name="imagegrid_2" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,70,70" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="3" GridOffsetY="3" GridHeight="38" GridWidth="38" GridsPos="0,0,0,105" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\newtersure\zhuk3.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="158" Top="293" Width="46" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+                <event on_mouseout_grid="on_imagegrid_mouseout_grid" on_mousein_grid="on_imagegrid_mousein_grid" />
+            </control>
+            <control name="imagegrid_3" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,70,70" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="3" GridOffsetY="3" GridHeight="38" GridWidth="38" GridsPos="0,0,0,105" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\newtersure\zhuk3.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="218" Top="293" Width="46" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+                <event on_mouseout_grid="on_imagegrid_mouseout_grid" on_mousein_grid="on_imagegrid_mousein_grid" />
+            </control>
+            <control name="imagegrid_target" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,70,70" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="3" GridOffsetY="3" GridHeight="38" GridWidth="38" GridsPos="0,0,0,105" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\newtersure\zhuk2.png" GridBackOffsetX="-14" GridBackOffsetY="-12" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="95" Top="165" Width="46" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+                <event on_select_changed="on_imagegrid_target_select_changed" on_mousein_grid="on_imagegrid_target_mousein_grid" on_rightclick_grid="on_imagegrid_target_rightclick_grid" on_drag_move="on_imagegrid_target_drag_move" on_mouseout_grid="on_imagegrid_target_mouseout_grid" />
+            </control>
+            <control name="mltbox_num_1" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,54,20" ScrollSize="17" Left="-85" Top="340" Width="54" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_tip" />
+            </control>
+            <control name="mltbox_num_2" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,54,20" ScrollSize="17" Left="-25" Top="340" Width="54" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_tip" />
+            </control>
+            <control name="mltbox_num_3" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,54,20" ScrollSize="17" Left="35" Top="340" Width="54" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_tip" />
+            </control>
+            <control name="imagegrid_material" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,70,70" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="3" GridOffsetY="3" GridHeight="38" GridWidth="38" GridsPos="0,0,0,105" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\newtersure\zhuk2.png" GridBackOffsetX="-14" GridBackOffsetY="-12" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="219" Top="165" Width="46" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Center" />
+                <event on_select_changed="on_imagegrid_material_select_changed" on_mousein_grid="on_imagegrid_material_mousein_grid" on_rightclick_grid="on_imagegrid_material_rightclick_grid" on_drag_move="on_imagegrid_material_drag_move" on_mouseout_grid="on_imagegrid_material_mouseout_grid" />
+            </control>
+            <control name="lbl_target" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="-85" Top="-37" Width="46" Height="20" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="@ui_haiwai_lnt_mbl" Font="font_sns_event_mid" DrawMode="ExpandH" />
+            </control>
+            <control name="lbl_material" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="216" Top="216" Width="46" Height="20" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_haiwai_lnt_rll" Font="font_sns_event_mid" DrawMode="ExpandH" />
+            </control>
+            <control name="lbl_imagegrid_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="80" Top="264" Width="46" Height="20" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_haiwai_lnt_xhl" Font="font_sns_event_mid" DrawMode="ExpandH" />
+            </control>
+            <control name="mltbox_help" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,312,46" LineHeight="20" HtmlText="@ui_newtreasure_upgrade_3" LineTextAlign="Center" ScrollSize="17" Left="24" Top="429" Width="312" Height="46" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+            </control>
+        </control>
+        <control name="btn_notice" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_expand_out.png" FocusImage="gui\common\button\btn_expand_on.png" PushImage="gui\common\button\btn_expand_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="340" Top="226" Width="18" Height="49" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" />
+            <event on_click="on_btn_notice_click" />
+        </control>
+    </control>
+</form>

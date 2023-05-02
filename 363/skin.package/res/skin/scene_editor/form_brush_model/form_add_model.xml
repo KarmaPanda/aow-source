@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_brush_model\form_add_model" init="main_form_init">
+        <prop Left="125" Top="133" Width="414" Height="182" BackColor="255,157,155,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="8" Width="80" Height="22" ShadowColor="0,0,0,0" Text="添加模型" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="48" Width="46" Height="22" ShadowColor="0,0,0,0" Text="类型:" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="48" Width="46" Height="22" ShadowColor="0,0,0,0" Text="名称：" />
+        </control>
+        <control name="name_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="70" Top="46" Width="134" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="type_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="100" Left="256" Top="48" Width="134" Height="22" ShadowColor="0,0,0,0" />
+            <subor name="InputEdit">
+                <prop TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="22" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="128" Top="144" Width="70" Height="24" ShadowColor="0,0,0,0" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="216" Top="144" Width="70" Height="24" ShadowColor="0,0,0,0" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="80" Width="80" Height="22" ShadowColor="0,0,0,0" Text="模型文件：" />
+        </control>
+        <control name="model_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="104" Top="80" Width="230" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="model_btn" entity="Button" script="" init="">
+            <prop Left="344" Top="80" Width="46" Height="24" ShadowColor="0,0,0,0" Text="选择" TabStop="true" />
+            <event on_click="model_btn_click" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_damage_statistics_rank.lua" init="">
+        <prop LimitInScreen="true" ShowGrid="true" Left="205" Top="141" Width="446" Height="556" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\tiguan\detailback.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="73" Top="162" Width="80" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="@ui_clone_damage_back" Font="font_btn" TabStop="true" DrawMode="ExpandH" ClickSound="cancel_5" />
+            <event on_click="on_btn_1_click" />
+        </control>
+        <control name="btn_total" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_down.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_out.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="278" Top="120" Width="80" Height="24" ForeColor="255,220,184,24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_clone_damage_all" Font="font_title_tasktrace" DrawMode="Expand" />
+            <event on_click="on_btn_total_click" />
+        </control>
+        <control name="btn_boss" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_down.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_out.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="186" Top="120" Width="80" Height="24" ForeColor="255,220,184,24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_clone_damage_boss" Font="font_title_tasktrace" DrawMode="Expand" />
+            <event on_click="on_btn_boss_click" />
+        </control>
+        <control name="lbl_player" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="96" Top="120" Width="80" Height="24" ForeColor="255,220,184,24" ShadowColor="0,0,0,0" Text="@ui_clone_damage_name" Font="font_title_tasktrace" DrawMode="Expand" BackImage="gui\common\button\btn_normal_down.png" />
+        </control>
+        <control name="textgrid_1" entity="Grid" script="" init="">
+            <prop HeaderBackColor="0,255,255,255" HeaderForeColor="0,255,255,255" RowHeaderVisible="false" SelectBackColor="0,0,0,0" CanSelectRow="true" ColWidth="80" RowHeight="24" ColCount="3" ScrollSize="17" HasHScroll="true" VScrollLeft="true" Solid="false" Left="88" Top="152" Width="286" Height="245" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop Maximum="1" SmallChange="1" LargeChange="2" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="33" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="82" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_ani" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="168" Top="184" Width="118" Height="110" ShadowColor="0,0,0,0" BackImage="loading" />
+        </control>
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="88" Top="56" Width="286" Height="350" BackColor="81,0,0,0" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="88" Top="56" Width="270" Height="46" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\language\ChineseS\tiguan\detail.png" />
+        </control>
+    </control>
+</form>

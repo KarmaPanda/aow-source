@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_guild_war\form_guild_war_join" init="on_main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="110" Top="90" Width="872" Height="585" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="-3" Width="861" Height="575" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\guild\guild_kuafu\bg.png" />
+        </control>
+        <control name="btn_help" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" PushImage="gui\common\button\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="640" Top="888" Width="20" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,20,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_help_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="827" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="9" Top="11" Width="462" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="rbtn_1" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,175,160" FocusColor="255,253,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="7" Top="23" Width="108" Height="33" ForeColor="255,204,204,204" BackColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_2" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_btn_assign_click" />
+            </control>
+            <control name="rbtn_2" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,175,160" FocusColor="255,253,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="118" Top="23" Width="108" Height="33" ForeColor="255,204,204,204" BackColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_haiwai_guild_war_join_bbzj" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_btn_guild_fight_result_click" />
+            </control>
+            <control name="rbtn_3" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,197,175,160" FocusColor="255,253,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="230" Top="23" Width="108" Height="33" ForeColor="255,204,204,204" BackColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_haiwai_guild_war_join_grzj" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_btn_person_fight_result_click" />
+            </control>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="57" Width="847" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="grpbox_cg" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="64" Width="862" Height="515" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="227" Width="265" Height="272" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="265" Height="225" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="4" Top="-8" Width="256" Height="191" ForeColor="255,255,204,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_title" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\1.png" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="260" Top="-1" Width="590" Height="505" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_bg_main" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="265" Top="2" Width="580" Height="498" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_bg.png" />
+            </control>
+            <control name="mltbox_cgdesc" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,200,200,200" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="6,6,233,254" LineHeight="15" HtmlText="@ui_guild_war_s_desc_1" ScrollSize="14" HasVScroll="true" Left="8" Top="234" Width="246" Height="134" ForeColor="255,255,255,255" BackColor="127,0,0,0" LineColor="0,0,0,0" BlendColor="40,0,0,0" ShadowColor="154,108,0,0" Font="font_text_figure" NoFrame="true" DrawMode="Expand" />
+                <subor name="VScrollBar">
+                    <prop Maximum="6" SmallChange="1" LargeChange="9" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="134" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_enter" entity="Button" script="" init="">
+                <prop NormalImage="gui\guild\guild_kuafu\btn_out.png" FocusImage="gui\guild\guild_kuafu\btn_on.png" PushImage="gui\guild\guild_kuafu\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="704" Top="440" Width="137" Height="59" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_enter_click" />
+            </control>
+            <control name="btn_request" entity="Button" script="" init="">
+                <prop NormalImage="gui\guild\guild_kuafu\out.png" FocusImage="gui\guild\guild_kuafu\on.png" PushImage="gui\guild\guild_kuafu\down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="704" Top="384" Width="137" Height="59" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_request_click" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="264" Top="320" Width="414" Height="182" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,200,200,200" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="1,1,375,170" LineHeight="18" HtmlText="@ui_guild_war_s_30" ScrollSize="14" HasVScroll="true" Left="272" Top="328" Width="397" Height="171" ForeColor="255,255,255,255" BackColor="127,0,0,0" LineColor="0,0,0,0" BlendColor="40,0,0,0" ShadowColor="154,108,0,0" Font="font_main" NoFrame="true" DrawMode="Expand" />
+                <subor name="VScrollBar">
+                    <prop Maximum="6" SmallChange="1" LargeChange="9" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="84" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="112" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_32" Font="font_text" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="136" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_33" Font="font_text" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="160" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_34" Font="font_text" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="72" Top="112" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="72" Top="136" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="72" Top="160" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="335" Top="8" Width="166" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_31" Font="font_sns_title_1" DrawMode="Expand" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="4" Top="189" Width="256" Height="31" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_haiwai_guild_war_join_wbm" Font="font_system_friend" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\bg_2.png" />
+            </control>
+            <control name="lbl_74" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="15" Top="425" Width="80" Height="16" ForeColor="255,200,200,200" ShadowColor="0,0,0,0" Text="@ui_haiwai_guild_war_join_zwxz" Font="font_text_figure" />
+            </control>
+            <control name="lbl_75" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="459" Width="80" Height="16" ForeColor="255,200,200,200" ShadowColor="0,0,0,0" Text="@ui_haiwai_guild_war_join_hydxz" Font="font_text_figure" />
+            </control>
+            <control name="lbl_pos" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="178" Top="443" Width="70" Height="16" ForeColor="255,200,200,200" ShadowColor="0,0,0,0" Text="@ui_haiwai_guild_war_join_jmbz" Font="font_text_figure" />
+            </control>
+            <control name="lbl_act" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="194" Top="479" Width="70" Height="16" ForeColor="255,200,200,200" ShadowColor="0,0,0,0" Text="0" Font="font_sns_main_1" />
+            </control>
+        </control>
+        <control name="groupbox_guild" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="65" Width="862" Height="515" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" Text="groupbox_2" NoFrame="true" />
+            <control name="lbl_17" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="264" Height="204" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_23" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="4" Width="256" Height="191" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_title" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\3.png" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="259" Width="305" Height="204" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_25" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="103" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_32" Font="font_text" />
+            </control>
+            <control name="lbl_26" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="127" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_35" Font="font_text" />
+            </control>
+            <control name="lbl_27" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="151" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_36" Font="font_text" />
+            </control>
+            <control name="lbl_28" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="72" Top="103" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_29" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="96" Top="127" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_30" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="96" Top="151" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_18" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="175" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_37" Font="font_text" />
+            </control>
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="96" Top="175" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="563" Width="283" Height="502" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_24" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="203" Width="566" Height="302" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="groupbox_guild_group_2" entity="GroupBox" script="" init="">
+                <prop Left="192" Top="202" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_3" NoFrame="true" />
+                <control name="groupbox_guild_btn_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="2" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_guild_lbl_title_2" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="29" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_201" Font="font_title" />
+                </control>
+                <control name="groupbox_guild_lbl_content_2" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="53" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_tips_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="85" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_7" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_imagegrid_2" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="85" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_guild_lost_capture" on_get_capture="on_groupbox_guild_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_guild_lbl_got_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="5" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_guild_lbl_value_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="85" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_guild_group_4" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="336" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_5" NoFrame="true" />
+                <control name="groupbox_guild_btn_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="4" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_guild_lbl_title_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_201" Font="font_title" />
+                </control>
+                <control name="groupbox_guild_lbl_content_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="48" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_tips_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_7" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_imagegrid_4" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="80" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_guild_lost_capture" on_get_capture="on_groupbox_guild_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_guild_lbl_got_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_guild_lbl_value_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="80" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_guild_group_5" entity="GroupBox" script="" init="">
+                <prop Left="192" Top="336" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_6" NoFrame="true" />
+                <control name="groupbox_guild_btn_5" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="5" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_guild_lbl_title_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_201" Font="font_title" />
+                </control>
+                <control name="groupbox_guild_lbl_content_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="48" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_tips_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_7" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_imagegrid_5" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="80" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_guild_lost_capture" on_get_capture="on_groupbox_guild_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_guild_lbl_got_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_guild_lbl_value_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="80" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="lbl_51" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-5" Top="458" Width="571" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\line.png" />
+            </control>
+            <control name="btn_15" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="232" Top="472" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_guild_accomplish_before_page" />
+            </control>
+            <control name="btn_16" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="312" Top="472" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_16" AutoSize="true" />
+                <event on_click="on_btn_guild_accomplish_next_page" />
+            </control>
+            <control name="lbl_361" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="648" Top="11" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_42" Font="font_title" />
+            </control>
+            <control name="lbl_381" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="35" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_391" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="107" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_401" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="179" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_421" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="251" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_431" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="323" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_441" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="395" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_471" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="638" Top="36" Width="4" Height="430" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\guild\guild_kuafu\line_2.png" />
+            </control>
+            <control name="lbl_481" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="750" Top="36" Width="4" Height="430" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\guild\guild_kuafu\line_2.png" />
+            </control>
+            <control name="lbl_501" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="568" Top="35" Width="273" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\lion_3.png" />
+            </control>
+            <control name="lbl_52" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="241" Top="473" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="2/4" Font="font_text" />
+            </control>
+            <control name="lbl_54" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="368" Top="175" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1/1" Font="font_text" />
+            </control>
+            <control name="btn_17" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="435" Top="175" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_17" AutoSize="true" />
+                <event on_click="on_btn_log_next_page_click" />
+            </control>
+            <control name="btn_18" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="175" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_18" AutoSize="true" />
+                <event on_click="on_btn_log_before_page_click" />
+            </control>
+            <control name="lbl_69" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="679" Top="607" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1/1" Font="font_text" />
+            </control>
+            <control name="btn_20" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="736" Top="623" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_20" AutoSize="true" />
+            </control>
+            <control name="btn_19" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="664" Top="591" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_19" AutoSize="true" />
+            </control>
+            <control name="groupbox_guild_group_1" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="202" Width="190" Height="142" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="groupbox_guild_btn_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="1" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_guild_lbl_title_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="29" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_201" Font="font_title" />
+                </control>
+                <control name="groupbox_guild_lbl_content_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="53" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_tips_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="85" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_7" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_value_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="85" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_got_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="5" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_guild_imagegrid_1" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="85" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_guild_lost_capture" on_get_capture="on_groupbox_guild_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+            </control>
+            <control name="groupbox_guild_group_3" entity="GroupBox" script="" init="">
+                <prop Left="376" Top="202" Width="187" Height="142" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_4" NoFrame="true" />
+                <control name="groupbox_guild_btn_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="3" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_guild_lbl_title_3" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="29" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_201" Font="font_title" />
+                </control>
+                <control name="groupbox_guild_lbl_content_3" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="5" Top="53" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_tips_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="85" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_7" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_value_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="85" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_got_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="5" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_guild_imagegrid_3" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="3,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="85" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_guild_lost_capture" on_get_capture="on_groupbox_guild_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+            </control>
+            <control name="groupbox_guild_group_6" entity="GroupBox" script="" init="">
+                <prop Left="376" Top="336" Width="187" Height="150" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_7" NoFrame="true" />
+                <control name="groupbox_guild_btn_6" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="6" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_guild_lbl_title_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_201" Font="font_title" />
+                </control>
+                <control name="groupbox_guild_lbl_content_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="48" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_lbl_tips_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_7" Font="font_text" />
+                </control>
+                <control name="groupbox_guild_imagegrid_6" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="80" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_guild_lost_capture" on_get_capture="on_groupbox_guild_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_guild_lbl_got_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_guild_lbl_value_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="80" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="textgrid_1" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" SelectBackColor="0,0,0,128" CanSelectRow="true" ColWidth="80" ColWidths="90,188" RowHeight="20" ColCount="2" ScrollSize="18" HasHScroll="true" Left="262" Top="7" Width="296" Height="165" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="textgrid_1" Font="font_main" TabStop="true" NoFrame="true" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="1" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="25" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="lbl_33" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="280" Top="13" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_01" Font="font_main" />
+            </control>
+            <control name="lbl_37" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="416" Top="15" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_02" Font="font_main" />
+            </control>
+            <control name="lbl_41" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="561" Top="47" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_03" Font="font_main" />
+            </control>
+            <control name="lbl_45" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="656" Top="47" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_04" Font="font_main" />
+            </control>
+            <control name="lbl_49" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="744" Top="47" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_05" Font="font_main" />
+            </control>
+            <control name="lbl_22" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-10" Top="448" Width="586" Height="28" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_4.png" />
+            </control>
+            <control name="textgrid_2" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="35" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" SelectBackColor="0,0,0,128" CanSelectRow="true" ColWidth="40" ColWidths="70,110,72" RowHeight="36" ColCount="3" ScrollSize="18" HasHScroll="true" Left="568" Top="36" Width="274" Height="432" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="textgrid_2" Font="font_text" TabStop="true" NoFrame="true" />
+                <subor name="HScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="16" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="36" LargeChange="36" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="23" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="lbl_72" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="599" Top="475" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_44" Font="font_text" />
+            </control>
+            <control name="lbl_76" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="699" Top="475" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_desc_3" Font="font_text" />
+            </control>
+        </control>
+        <control name="groupbox_person" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="65" Width="862" Height="504" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" Text="groupbox_8" NoFrame="true" />
+            <control name="lbl_31" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="264" Height="204" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_55" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="259" Width="305" Height="204" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_59" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="11" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_35" Font="font_text" />
+            </control>
+            <control name="lbl_60" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="35" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_36" Font="font_text" />
+            </control>
+            <control name="lbl_61" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="59" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_37" Font="font_text" />
+            </control>
+            <control name="lbl_62" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="352" Top="11" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_63" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="352" Top="35" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_64" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="352" Top="59" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_65" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="83" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_38" Font="font_text" />
+            </control>
+            <control name="lbl_66" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="352" Top="83" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_67" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="563" Width="283" Height="502" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="lbl_68" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="203" Width="566" Height="302" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\newguildwar\kuang_ser.png" />
+            </control>
+            <control name="groupbox_person_group_1" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="202" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_9" NoFrame="true" />
+                <control name="groupbox_person_btn_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="1" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_person_lbl_title_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="29" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_1" Font="font_title" />
+                </control>
+                <control name="groupbox_person_lbl_content_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="53" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_tips_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="85" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_217" Font="font_text" />
+                </control>
+                <control name="groupbox_person_imagegrid_1" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="85" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_person_lost_capture" on_get_capture="on_groupbox_person_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_person_lbl_value_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="85" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_got_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="5" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+            </control>
+            <control name="groupbox_person_group_2" entity="GroupBox" script="" init="">
+                <prop Left="192" Top="202" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_10" NoFrame="true" />
+                <control name="groupbox_person_btn_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="2" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_person_lbl_title_2" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="29" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_1" Font="font_title" />
+                </control>
+                <control name="groupbox_person_lbl_content_2" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="53" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_tips_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="85" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_217" Font="font_text" />
+                </control>
+                <control name="groupbox_person_imagegrid_2" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="85" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_person_lost_capture" on_get_capture="on_groupbox_person_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_person_lbl_got_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="5" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_person_lbl_value_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="85" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_person_group_4" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="336" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_12" NoFrame="true" />
+                <control name="groupbox_person_btn_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="4" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_person_lbl_title_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_1" Font="font_title" />
+                </control>
+                <control name="groupbox_person_lbl_content_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="48" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_tips_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_217" Font="font_text" />
+                </control>
+                <control name="groupbox_person_imagegrid_4" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="80" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_person_lost_capture" on_get_capture="on_groupbox_person_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_person_lbl_got_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_person_lbl_value_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="80" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_person_group_5" entity="GroupBox" script="" init="">
+                <prop Left="192" Top="336" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_13" NoFrame="true" />
+                <control name="groupbox_person_btn_5" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="5" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_person_lbl_title_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_1" Font="font_title" />
+                </control>
+                <control name="groupbox_person_lbl_content_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="48" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_tips_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_217" Font="font_text" />
+                </control>
+                <control name="groupbox_person_imagegrid_5" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="80" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_person_lost_capture" on_get_capture="on_groupbox_person_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_person_lbl_got_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_person_lbl_value_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="80" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="lbl_56" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="107" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_39" Font="font_text" />
+            </control>
+            <control name="lbl_57" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="352" Top="107" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_58" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="146" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_40" Font="font_text" />
+            </control>
+            <control name="lbl_93" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="408" Top="146" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_94" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="170" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_41" Font="font_text" />
+            </control>
+            <control name="lbl_95" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="408" Top="170" Width="78" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="0" Font="font_text" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="-5" Width="255" Height="195" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\guild\guild_kuafu\role.png" />
+            </control>
+            <control name="lbl_34" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-5" Top="458" Width="572" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\line.png" />
+            </control>
+            <control name="lbl_32" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-10" Top="448" Width="586" Height="28" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_4.png" />
+            </control>
+            <control name="btn_14" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="312" Top="472" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_14" AutoSize="true" />
+                <event on_click="on_btn_person_accomplish_next_page" />
+            </control>
+            <control name="btn_13" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="232" Top="472" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_person_accomplish_before_page" />
+            </control>
+            <control name="lbl_35" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="256" Top="473" Width="51" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="2/5" Font="font_text" />
+            </control>
+            <control name="lbl_36" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="648" Top="11" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_43" Font="font_title" />
+            </control>
+            <control name="lbl_38" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="35" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_39" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="107" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_40" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="179" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_42" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="251" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_43" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="323" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_44" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="504" Top="395" Width="376" Height="74" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\line_1.png" />
+            </control>
+            <control name="lbl_47" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="638" Top="36" Width="4" Height="430" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\guild\guild_kuafu\line_2.png" />
+            </control>
+            <control name="lbl_48" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="750" Top="36" Width="4" Height="430" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\guild\guild_kuafu\line_2.png" />
+            </control>
+            <control name="lbl_50" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="568" Top="35" Width="275" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\guild\guild_kuafu\lion_3.png" />
+            </control>
+            <control name="groupbox_person_group_3" entity="GroupBox" script="" init="">
+                <prop Left="376" Top="202" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_11" NoFrame="true" />
+                <control name="groupbox_person_btn_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" TabIndex="3" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_person_lbl_title_3" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="29" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_1" Font="font_title" />
+                </control>
+                <control name="groupbox_person_lbl_content_3" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="53" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_tips_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="85" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_217" Font="font_text" />
+                </control>
+                <control name="groupbox_person_imagegrid_3" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="85" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_person_lost_capture" on_get_capture="on_groupbox_person_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_person_lbl_got_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="5" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_person_lbl_value_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="85" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_person_group_6" entity="GroupBox" script="" init="">
+                <prop Left="376" Top="336" Width="187" Height="134" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_14" NoFrame="true" />
+                <control name="groupbox_person_btn_6" entity="Button" script="" init="">
+                    <prop NormalImage="gui\guild\guild_kuafu\btn_3_out.png" FocusImage="gui\guild\guild_kuafu\btn_3_on.png" PushImage="gui\guild\guild_kuafu\btn_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="181" Height="125" BackColor="255,0,122,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_click="on_btn_get_award_click" />
+                </control>
+                <control name="groupbox_person_lbl_title_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@cardtitle_guildwar_kuafu_guild_1" Font="font_title" />
+                </control>
+                <control name="groupbox_person_lbl_content_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="48" Width="166" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardmatter_guildwar_kuafu_guild_1" Font="font_text" />
+                </control>
+                <control name="groupbox_person_lbl_tips_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="80" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@cardtips_guildwar_kuafu_guild_217" Font="font_text" />
+                </control>
+                <control name="groupbox_person_imagegrid_6" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="1" GridOffsetY="1" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" GridBackOffsetX="1" GridBackOffsetY="1" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="136" Top="80" Width="36" Height="36" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <event on_lost_capture="on_groupbox_person_lost_capture" on_get_capture="on_groupbox_person_get_capture" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="groupbox_person_lbl_got_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="69" Height="69" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_kuafu\pic_1.png" />
+                </control>
+                <control name="groupbox_person_lbl_value_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="64" Top="80" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="9999/9999" Font="font_text" />
+                </control>
+            </control>
+            <control name="lbl_46" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="685" Top="639" Width="51" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1/1" Font="font_text" />
+            </control>
+            <control name="btn_21" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="736" Top="647" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="btn_22" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="664" Top="647" Width="18" Height="20" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="scenebox_1" entity="SceneBox" script="" init="">
+                <prop Left="8" Top="19" Width="254" Height="166" ForeColor="0,0,0,0" BackColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="lbl_53" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="561" Top="47" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_06" Font="font_main" />
+            </control>
+            <control name="lbl_70" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="656" Top="47" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_07" Font="font_main" />
+            </control>
+            <control name="lbl_71" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="745" Top="47" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_kuafu_paiming_08" Font="font_main" />
+            </control>
+            <control name="textgrid_4" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="35" HeaderBackColor="0,255,255,255" SelectBackColor="0,0,0,128" CanSelectRow="true" ColWidth="40" ColWidths="70,110,72" RowHeight="36" ScrollSize="18" HasHScroll="true" Left="568" Top="35" Width="274" Height="432" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="textgrid_4" Font="font_text" TabStop="true" NoFrame="true" />
+                <subor name="HScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="6" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="6" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="8" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" Maximum="10" SmallChange="36" LargeChange="36" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="lbl_73" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="599" Top="475" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_44" Font="font_text" />
+            </control>
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="336" Top="5" Width="200" Height="26" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guild_war_s_1" Font="font_text" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_prenewbag.xml" entity="Form" script="form_stage_main\form_prenewbag" init="main_form_init">
+        <prop LimitInScreen="true" Left="181" Top="125" Width="462" Height="438" BackColor="1,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_main1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="24" Width="363" Height="358" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="56" Width="354" Height="206" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="98" Top="24" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="133" Top="28" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_newworld_2" Font="font_title" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1112" Top="64" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_bnt" entity="GroupBox" script="" init="">
+            <prop Left="3" Top="345" Width="356" Height="33" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+            <control name="btn_sure" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\bag\new_bag\btn_out.png" FocusImage="gui\special\bag\new_bag\btn_on.png" PushImage="gui\special\bag\new_bag\btn_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="173" Width="92" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_btn_out" Font="font_main" HintText="@ui_btn_out_text" TabStop="true" DrawMode="ExpandH" ClickSound="ok_7" />
+                <event on_click="on_btn_sure_click" />
+            </control>
+            <control name="btn_all" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\bag\new_bag\btn_out.png" FocusImage="gui\special\bag\new_bag\btn_on.png" PushImage="gui\special\bag\new_bag\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Width="86" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_selectall" Font="font_main" TabStop="true" DrawMode="FitWindow" ClickSound="sorting_4" />
+                <event on_click="on_btn_all_click" />
+            </control>
+            <control name="btn_reset" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\bag\new_bag\btn_out.png" FocusImage="gui\special\bag\new_bag\btn_on.png" PushImage="gui\special\bag\new_bag\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="92" Width="79" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jinyu_huanyuan_equip" Font="font_main" TabStop="true" DrawMode="FitWindow" ClickSound="ok_7" />
+                <event on_click="on_btn_reset_click" />
+            </control>
+        </control>
+        <control name="lbl_xian4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="341" Width="355" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="4" Top="65" Width="342" Height="197" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="imagegrid_equip" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="10,10,350,345" MaxSize="-1" RowNum="1" ClomnNum="6" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\bag\newbag_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="4" Width="342" Height="142" ShadowColor="0,0,0,0" Text="imagegrid_1" Font="Default" NoFrame="true" AutoSize="true" DrawMode="Expand" InSound="MouseOn_20" />
+                <event on_select_changed="on_bag_right_click" on_mousein_grid="on_mousein_grid" on_rightclick_grid="on_bag_right_click" on_mouseout_grid="on_mouseout_grid" />
+            </control>
+            <control name="imagegrid_tool" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="10,10,350,345" MaxSize="-1" RowNum="1" ClomnNum="6" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\bag\newbag_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="4" Width="342" Height="142" ShadowColor="0,0,0,0" Text="imagegrid_1" Font="Default" NoFrame="true" AutoSize="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_select_changed="on_bag_right_click" on_mousein_grid="on_mousein_grid" on_rightclick_grid="on_bag_right_click" on_mouseout_grid="on_mouseout_grid" />
+            </control>
+            <control name="imagegrid_myequip" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="10,10,350,345" MaxSize="-1" RowNum="1" ClomnNum="6" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\bag\newbag_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="4" Width="342" Height="142" ShadowColor="0,0,0,0" Text="imagegrid_1" Font="Default" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+                <event on_select_changed="on_bag_right_click" on_mousein_grid="on_mousein_grid" on_rightclick_grid="on_bag_right_click" on_mouseout_grid="on_mouseout_grid" />
+            </control>
+            <control name="imagegrid_mat" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="10,10,350,345" MaxSize="-1" RowNum="1" ClomnNum="6" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\bag\newbag_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="4" Width="342" Height="142" ShadowColor="0,0,0,0" Text="imagegrid_1" Font="Default" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+                <event on_select_changed="on_bag_right_click" on_mousein_grid="on_mousein_grid" on_rightclick_grid="on_bag_right_click" on_mouseout_grid="on_mouseout_grid" />
+            </control>
+            <control name="imagegrid_task" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="10,10,350,345" MaxSize="-1" RowNum="1" ClomnNum="6" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\bag\newbag_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="4" Width="342" Height="142" ShadowColor="0,0,0,0" Text="imagegrid_1" Font="Default" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+                <event on_select_changed="on_bag_right_click" on_mousein_grid="on_mousein_grid" on_rightclick_grid="on_bag_right_click" on_mouseout_grid="on_mouseout_grid" />
+            </control>
+        </control>
+        <control name="lbl_tb" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="616" Top="328" Width="38" Height="36" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\special\btn_main\btn_newWorld_bag.png" />
+        </control>
+        <control name="lbl_xian3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="51" Width="355" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="360" Top="64" Width="54" Height="310" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" />
+            <control name="rbtn_equip" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\bag\cbtn_equip_out.png" FocusImage="gui\special\bag\cbtn_equip_on.png" CheckedImage="gui\special\bag\cbtn_equip_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-2" Top="50" Width="45" Height="53" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="2" HintText="@ui_toolbox_equip" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_tool" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\bag\cbtn_item_out.png" FocusImage="gui\special\bag\cbtn_item_on.png" CheckedImage="gui\special\bag\cbtn_item_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-2" Top="100" Width="45" Height="53" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="3" HintText="@ui_toolbox_goods" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_marterial" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\bag\cbtn_material_out.png" FocusImage="gui\special\bag\cbtn_material_on.png" CheckedImage="gui\special\bag\cbtn_material_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-2" Top="150" Width="45" Height="53" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" HintText="@ui_toolbox_mater" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_myequip" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\bag\cbtn_body_out.png" FocusImage="gui\special\bag\cbtn_body_on.png" CheckedImage="gui\special\bag\cbtn_body_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-2" Width="43" Height="53" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="1" HintText="@ui_toolbox_yinshe" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_task" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\bag\cbtn_task_out.png" FocusImage="gui\special\bag\cbtn_task_on.png" CheckedImage="gui\special\bag\cbtn_task_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-2" Top="200" Width="45" Height="53" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="5" HintText="@force_wgm" TabStop="true" AutoSize="true" InSound="MouseOn_20" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+        </control>
+        <control name="groupbox_3" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="320" Width="350" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_3" NoFrame="true" />
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="9" Width="32" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\btn_main\btn_bag_sum.png" />
+            </control>
+            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,78,30" ScrollSize="17" Left="36" Top="12" Width="78" Height="30" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,134,38" LineHeight="17" ScrollSize="17" Left="160" Top="19" Width="134" Height="38" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="140" Top="23" Width="22" Height="12" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\common\money\yyb.png" />
+            </control>
+        </control>
+        <control name="lbl_xian5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="312" Width="355" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+    </control>
+</form>

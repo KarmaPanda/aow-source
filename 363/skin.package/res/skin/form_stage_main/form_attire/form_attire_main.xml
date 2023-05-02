@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_attire\form_attire_main" init="on_main_form_init">
+        <prop ShowGrid="true" Width="1600" Height="900" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Top="-3" Width="1600" Height="100" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\attire\attire_back\bg_top.png" />
+            <control name="groupbox_title" entity="GroupBox" script="" init="">
+                <prop Left="517" Top="-2" Width="860" Height="100" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" />
+                <control name="rbtn_sf_equip" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_sfz_out.png" FocusImage="gui\special\attire\attire_btn\btn_sfz_on.png" CheckedImage="gui\special\attire\attire_btn\btn_sfz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="5" Width="216" Height="93" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabIndex="3" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_sf_equip_checked_changed" />
+                </control>
+                <control name="rbtn_jh_equip" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_jhz_out.png" FocusImage="gui\special\attire\attire_btn\btn_jhz_on.png" CheckedImage="gui\special\attire\attire_btn\btn_jhz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="213" Top="5" Width="216" Height="93" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabIndex="2" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_jh_equip_checked_changed" />
+                </control>
+                <control name="rbtn_fwz_equip" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_fwz_out.png" FocusImage="attire_fwz" CheckedImage="attire_fwz" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="426" Top="5" Width="216" Height="93" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabIndex="1" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_fwz_equip_checked_changed" />
+                </control>
+                <control name="rbtn_body" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_tx_out.png" FocusImage="gui\special\attire\attire_btn\btn_tx_on.png" CheckedImage="gui\special\attire\attire_btn\btn_tx_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="639" Top="5" Width="216" Height="93" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabIndex="4" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_rbtn_body_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_scale" entity="GroupBox" script="" init="">
+                <prop Left="29" Top="16" Width="294" Height="62" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="21" Width="62" Height="14" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_system_setting0010" Font="font_text" />
+                </control>
+                <control name="pbar_scale" entity="ProgressBar" script="" init="">
+                    <prop Minimum="7" Maximum="10" Value="10" WidthGap="2" HeightGap="2" ProgressImage="gui\common\progressbar\pbr_3.png" ProgressMode="LeftToRight" Left="104" Top="22" Width="80" Height="16" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\trackbar\bg_2.png" />
+                </control>
+                <control name="tb_scale" entity="TrackBar" script="" init="">
+                    <prop Orient="Horizon" Minimum="7" Maximum="10" Value="10" Left="106" Top="22" Width="80" Height="16" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HintText="@ui_system_setting0010_tip" NoFrame="true" DrawMode="ExpandH" />
+                    <event on_value_changed="on_tb_scale_value_changed" />
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\trackbar\tb_2_out.png" FocusImage="gui\common\trackbar\tb_2_on.png" PushImage="gui\common\trackbar\tb_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                    </subor>
+                </control>
+                <control name="lbl_scale_number" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="192" Top="21" Width="54" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1.0" Font="font_text" />
+                </control>
+                <control name="btn_quedin" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\attire\attire_btn\btn_tiz_out.png" FocusImage="gui\special\attire\attire_btn\btn_tiz_on.png" PushImage="gui\special\attire\attire_btn\btn_tiz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="224" Top="13" Width="61" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_main" AutoSize="true" />
+                    <event on_click="on_btn_quedin_click" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="6" Top="37" Width="1200" Height="900" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_1" NoFrame="true" />
+            <control name="role_box" entity="SceneBox" script="" init="">
+                <prop Left="-41" Width="1200" Height="900" BackColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="role_fwz_box" entity="SceneBox" script="" init="">
+                <prop Left="-41" Width="1200" Height="900" BackColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="btn_model_left" entity="Button" script="" init="">
+                <prop PushEvent="true" NormalImage="gui\special\attire\attire_btn\left_out.png" FocusImage="gui\special\attire\attire_btn\left_on.png" PushImage="gui\special\attire\attire_btn\left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-209" Top="-340" Width="37" Height="31" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" HintText="@ui_attire_left" AutoSize="true" />
+                <event on_click="on_btn_model_left_click" on_lost_capture="on_btn_model_left_lost_capture" on_push="on_btn_model_left_push" />
+            </control>
+            <control name="btn_model_right" entity="Button" script="" init="">
+                <prop PushEvent="true" NormalImage="gui\special\attire\attire_btn\right_out.png" FocusImage="gui\special\attire\attire_btn\right_on.png" PushImage="gui\special\attire\attire_btn\right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-209" Top="-300" Width="37" Height="31" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" HintText="@ui_attire_right" AutoSize="true" />
+                <event on_click="on_btn_model_right_click" on_lost_capture="on_btn_model_right_lost_capture" on_push="on_btn_model_right_push" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-33" Top="18" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Top="86" Width="1190" Height="822" BackColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" Text="groupbox_2" NoFrame="true" />
+        </control>
+    </control>
+</form>

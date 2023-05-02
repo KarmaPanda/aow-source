@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_qingame.lua" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="20" Width="1000" Height="700" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_backImage" entity="GroupBox" script="" init="">
+            <prop Width="1000" Height="700" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\forgegameground.png" />
+        </control>
+        <control name="groupbox_qingame" entity="GroupBox" script="" init="">
+            <prop Width="1000" Height="700" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_textbg" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="122" Top="19" Width="730" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg_txt.png" />
+            </control>
+            <control name="lbl_blank" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="81" Top="121" Width="823" Height="320" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg1.png" />
+            </control>
+            <control name="groupbox_move_text" entity="GroupBox" script="" init="">
+                <prop Left="89" Top="121" Width="774" Height="310" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_move_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="30" Width="717" Height="250" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg2.png" />
+                </control>
+                <control name="lbl_move_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-687" Top="30" Width="717" Height="250" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg2.png" />
+                </control>
+            </control>
+            <control name="btn_start_game" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\qin_game\general\btn_start_out.png" FocusImage="gui\mainform\smallgame\qin_game\general\btn_start_on.png" PushImage="gui\mainform\smallgame\qin_game\general\btn_start_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="465" Top="513" Width="73" Height="64" ForeColor="255,0,255,156" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_start_game_click" />
+            </control>
+            <control name="groupbox_pbar" entity="GroupBox" script="" init="">
+                <prop Left="870" Top="121" Width="30" Height="310" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+                <control name="lbl_ProgressBackImage" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="8" Width="19" Height="296" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\qin_game\general\bg_pbr.png" />
+                </control>
+                <control name="pbar_qingame" entity="ProgressBar" script="" init="">
+                    <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\qin_game\general\pbr.png" ProgressMode="BottomToTop" Left="5" Top="8" Width="19" Height="296" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="lbl_flag" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="77" Width="19" Height="4" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\common\form_line\line_horizontal.png" />
+                </control>
+            </control>
+            <control name="groupbox_life" entity="GroupBox" script="" init="">
+                <prop Left="369" Top="417" Width="270" Height="62" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_life_backimage" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="269" Height="59" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg_life.png" />
+                </control>
+                <control name="lbl_life_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="13" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\life_0.png" />
+                </control>
+                <control name="lbl_life_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="84" Top="13" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\life_0.png" />
+                </control>
+                <control name="lbl_life_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="13" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\life_0.png" />
+                </control>
+                <control name="lbl_life_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="155" Top="13" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\life_0.png" />
+                </control>
+                <control name="lbl_life_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="192" Top="13" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\life_0.png" />
+                </control>
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\qin_game\general\btn_close_out.png" FocusImage="gui\mainform\smallgame\qin_game\general\btn_close_on.png" PushImage="gui\mainform\smallgame\qin_game\general\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="905" Top="121" Width="36" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_help" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\qin_game\general\btn_help_out.png" FocusImage="gui\mainform\smallgame\qin_game\general\btn_help_on.png" PushImage="gui\mainform\smallgame\qin_game\general\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="905" Top="185" Width="36" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_help_click" />
+            </control>
+            <control name="mltbox_desc" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,255,255,0" ViewRect="0,0,698,62" LineHeight="21" ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="126" Top="55" Width="718" Height="62" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_tiguan_title" DrawMode="FitWindow" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="-99" Top="25" Width="174" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_xiayi_title1" />
+            </control>
+            <control name="groupbox_backimage" entity="GroupBox" script="" init="">
+                <prop Left="41" Top="121" Width="862" Height="326" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_backImage" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="88" Top="24" Width="595" Height="266" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg3.png" />
+                </control>
+                <control name="lbl_line_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="49" Width="760" Height="6" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg4.png" />
+                </control>
+                <control name="lbl_line_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="118" Width="760" Height="6" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg4.png" />
+                </control>
+                <control name="lbl_line_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="188" Width="760" Height="6" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg4.png" />
+                </control>
+                <control name="lbl_line_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="35" Top="259" Width="760" Height="6" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\bg4.png" />
+                </control>
+            </control>
+            <control name="groupbox_gamearea" entity="GroupBox" script="" init="">
+                <prop Left="81" Top="121" Width="790" Height="318" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="groupbox_1" entity="GroupBox" script="" init="">
+                    <prop Top="18" Width="790" Height="70" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <control name="lbl_1_back_image" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\btn_out.png" />
+                    </control>
+                    <control name="lbl_1_special" entity="Animation" script="" init="">
+                        <prop OffsetX="-15" OffsetY="-15" AnimationImage="general_qin_blue" Loop="false" PlayMode="2" Left="600" Top="-8" Width="81" Height="81" />
+                    </control>
+                    <control name="lbl_1_back_key" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\p.png" />
+                    </control>
+                    <control name="lbl_1_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_7" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_8" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_9" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_10" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_1_0" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                </control>
+                <control name="groupbox_2" entity="GroupBox" script="" init="">
+                    <prop Top="88" Width="790" Height="70" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <control name="lbl_2_back_image" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\btn_out.png" />
+                    </control>
+                    <control name="lbl_2_special" entity="Animation" script="" init="">
+                        <prop OffsetX="-15" OffsetY="-15" AnimationImage="general_qin_blue" Loop="false" PlayMode="2" Left="600" Top="-8" Width="81" Height="81" />
+                    </control>
+                    <control name="lbl_2_back_key" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\l.png" />
+                    </control>
+                    <control name="lbl_2_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_7" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_8" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_9" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_10" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_2_0" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                </control>
+                <control name="groupbox_3" entity="GroupBox" script="" init="">
+                    <prop Top="156" Width="790" Height="70" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <control name="lbl_3_back_image" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\btn_out.png" />
+                    </control>
+                    <control name="lbl_3_special" entity="Animation" script="" init="">
+                        <prop OffsetX="-15" OffsetY="-15" AnimationImage="general_qin_blue" Loop="false" PlayMode="2" Left="600" Top="-8" Width="81" Height="81" />
+                    </control>
+                    <control name="lbl_3_back_key" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\s.png" />
+                    </control>
+                    <control name="lbl_3_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_7" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_8" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_9" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_10" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_3_0" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                </control>
+                <control name="groupbox_4" entity="GroupBox" script="" init="">
+                    <prop Top="224" Width="790" Height="70" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <control name="lbl_4_back_image" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\btn_out.png" />
+                    </control>
+                    <control name="lbl_4_special" entity="Animation" script="" init="">
+                        <prop OffsetX="-15" OffsetY="-15" AnimationImage="general_qin_blue" Loop="false" PlayMode="2" Left="600" Top="-8" Width="81" Height="81" />
+                    </control>
+                    <control name="lbl_4_back_key" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="600" Top="-8" Width="81" Height="81" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\qin_game\general\x.png" />
+                    </control>
+                    <control name="lbl_4_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_7" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_8" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_9" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_10" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                    <control name="lbl_4_0" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="-16" Top="16" Width="10" Height="27" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </control>
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

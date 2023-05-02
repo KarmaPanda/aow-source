@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_bag_config" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="229" Top="125" Width="300" Height="200" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_bj" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="80" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="cbtn_isbigbag" entity="CheckButton" script="" init="">
+            <prop BoxSize="10" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="32" Top="58" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_checked_changed="on_cbtn_isbigbag_checked_changed" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="270" Top="6" Width="20" Height="22" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_cols" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="90" Width="54" Height="16" ForeColor="255,255,255,255" ShadowColor="0,255,0,0" Text="@ui_bag_config_cols" Font="WRYH13_S" />
+        </control>
+        <control name="sb_colnum" entity="ScrollBar" script="" init="">
+            <prop ButtonSize="25" FullBarBack="false" Orient="Horizon" Minimum="6" Maximum="12" Value="6" SmallChange="1" LargeChange="5" Left="50" Top="122" Width="157" Height="8" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\progressbar\bg_pbr_1.png" />
+            <event on_value_changed="on_sb_colnum_value_changed" />
+            <subor name="DecButton">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" ClickSound="ok_7" />
+            </subor>
+            <subor name="IncButton">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" ClickSound="ok_7" />
+            </subor>
+            <subor name="TrackButton">
+                <prop NormalImage="gui\common\progressbar\pbr_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="52" Height="8" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="lbl_compose_smallbag" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="56" Top="58" Width="134" Height="16" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Text="@ui_bag_config_compose" Font="STKAITI16_W" />
+        </control>
+        <control name="lbl_col" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="88" Top="90" Width="46" Height="16" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Font="FZHKJT18_O" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="96" Top="8" Width="110" Height="16" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Text="@ui_bag_config_name" Font="hyshtj14_S" />
+        </control>
+        <control name="lbl_kuang" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="33" Width="292" Height="162" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_xian1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="28" Width="292" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

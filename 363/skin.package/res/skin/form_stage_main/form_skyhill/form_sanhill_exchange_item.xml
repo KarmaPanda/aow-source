@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_skyhill\form_sanhill_exchange_item" init="on_main_form_init">
+        <prop LimitInScreen="true" Left="13" Top="13" Width="318" Height="140" ShadowColor="0,0,0,0" Font="GE_FONT" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="309" Height="70" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="102" Width="310" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="info_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="9999" Top="9999" Width="150" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_inputbox0001" Font="font_text" />
+        </control>
+        <control name="name_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="0.001000" Min="1.000000" Max="500.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="9999" Top="9999" Width="84" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_1.png" />
+            <event on_changed="on_name_edit_changed" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="224" Top="104" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_main" TabStop="true" AutoSize="true" ClickSound="ok_7" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="125" Top="10" Width="50" Height="18" ForeColor="255,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="@ui_guj_srltzbs_060" Font="font_title" />
+        </control>
+        <control name="lbl_xian" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="96" Width="309" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="28" Width="308" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_itemid" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="115" Top="40" Width="190" Height="16" ForeColor="255,255,222,0" ShadowColor="0,0,0,0" Font="font_main" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="115" Top="58" Width="190" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Font="font_main" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="115" Top="77" Width="190" Height="16" ForeColor="255,255,222,0" ShadowColor="0,0,0,0" Text="@ui_lzy_fyy_001" Font="font_main" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="288" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_cancel_click" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="39" Top="35" Width="66" Height="67" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_kuang.png" />
+        </control>
+        <control name="lbl_image" entity="Label" script="" init="">
+            <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="47" Top="42" Width="50" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_main_on.png" />
+            <event on_lost_capture="on_lbl_item_lost_capture" on_get_capture="on_lbl_item_get_capture" />
+        </control>
+        <control name="lbl_explian" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="8" Top="110" Width="206" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="@ui_lzy_fyy_003" Font="font_main" />
+        </control>
+    </control>
+</form>

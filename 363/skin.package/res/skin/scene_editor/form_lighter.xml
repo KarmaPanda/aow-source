@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_lighter" init="main_form_init">
+        <prop Left="45" Top="29" Width="590" Height="566" BackColor="152,154,154,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="216" Top="8" Width="158" Height="22" ShadowColor="0,0,0,0" Text="光照渲染" />
+        </control>
+        <control name="zone_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="32" Top="56" Width="142" Height="86" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="32" Width="78" Height="22" ShadowColor="0,0,0,0" Text="区域列表：" />
+        </control>
+        <control name="light_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="32" Top="368" Width="142" Height="86" ShadowColor="0,0,0,0" Text="ListBox2" TabStop="true" />
+            <event on_select_changed="light_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="344" Width="62" Height="22" ShadowColor="0,0,0,0" Text="光源列表：" />
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="192" Top="520" Width="88" Height="24" ShadowColor="0,0,0,0" Text="开始渲染" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="312" Top="520" Width="86" Height="24" ShadowColor="0,0,0,0" Text="关闭" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="intensity_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="264" Width="80" Height="22" ShadowColor="0,0,0,0" Text="Intensity:" />
+        </control>
+        <control name="cosine_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="304" Width="80" Height="22" ShadowColor="0,0,0,0" Text="Cosine:" />
+        </control>
+        <control name="shadow_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="344" Width="80" Height="22" ShadowColor="0,0,0,0" Text="Shadow:" />
+        </control>
+        <control name="bright_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="384" Width="80" Height="22" ShadowColor="0,0,0,0" Text="Bright:" />
+        </control>
+        <control name="contrast_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="424" Width="80" Height="22" ShadowColor="0,0,0,0" Text="Contrast:" />
+        </control>
+        <control name="gamma_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="464" Width="80" Height="22" ShadowColor="0,0,0,0" Text="Gamma:" />
+        </control>
+        <control name="smooth_normal_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="192" Top="208" Width="150" Height="22" ShadowColor="0,0,0,0" Text="使用法线进行平滑处理" TabStop="true" />
+        </control>
+        <control name="blur_trace_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="192" Top="56" Width="70" Height="22" ShadowColor="0,0,0,0" Text="BlurTrace" TabStop="true" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="232" Width="86" Height="22" ShadowColor="0,0,0,0" Text="平滑处理半径：" />
+        </control>
+        <control name="Label13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="80" Width="94" Height="22" ShadowColor="0,0,0,0" Text="BlurRadius:" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="104" Width="94" Height="22" ShadowColor="0,0,0,0" Text="BlurAttenu:" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="128" Width="86" Height="22" ShadowColor="0,0,0,0" Text="BlurCosine:" />
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="152" Width="80" Height="22" ShadowColor="0,0,0,0" Text="BlurCoeff:" />
+        </control>
+        <control name="turn_on_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="192" Top="288" Width="78" Height="22" ShadowColor="0,0,0,0" Text="打开光源" TabStop="true" />
+            <event on_checked_changed="turn_on_checked_changed" />
+        </control>
+        <control name="intensity_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="384" Top="288" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="intensity_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="cosine_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="384" Top="328" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="cosine_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="shadow_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="384" Top="368" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="shadow_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="bright_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="384" Top="408" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="bright_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="contrast_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="384" Top="448" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="contrast_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="gamma_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="384" Top="488" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="gamma_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="blur_radius_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="280" Top="80" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="blur_attenu_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="280" Top="104" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="blur_cosine_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="280" Top="128" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="blur_coeff_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="280" Top="152" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="smooth_radius_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="280" Top="232" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="light_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="256" Top="320" Width="54" Height="22" BackColor="255,156,156,255" ShadowColor="0,0,0,0" HintText="光源颜色" NoFrame="false" />
+        </control>
+        <control name="attenu0_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="344" Width="80" Height="22" ShadowColor="0,0,0,0" Text="衰减系数0:" />
+        </control>
+        <control name="attenu1_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="384" Width="80" Height="22" ShadowColor="0,0,0,0" Text="衰减系数1:" />
+        </control>
+        <control name="attenu2_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="424" Width="80" Height="22" ShadowColor="0,0,0,0" Text="衰减系数2:" />
+        </control>
+        <control name="Label21" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="480" Width="78" Height="22" ShadowColor="0,0,0,0" Text="影响范围:" />
+        </control>
+        <control name="attenu0_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="368" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="attenu0_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="attenu1_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="408" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="attenu1_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="attenu2_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="192" Top="448" Width="174" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="attenu2_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="range_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="272" Top="480" Width="94" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="range_edit_lost_focus" />
+        </control>
+        <control name="load_light_btn" entity="Button" script="" init="">
+            <prop Left="32" Top="480" Width="70" Height="24" ShadowColor="0,0,0,0" Text="加载文件" TabStop="true" />
+            <event on_click="load_light_btn_click" />
+        </control>
+        <control name="save_light_btn" entity="Button" script="" init="">
+            <prop Left="104" Top="480" Width="70" Height="24" ShadowColor="0,0,0,0" Text="保存文件" TabStop="true" />
+            <event on_click="save_light_btn_click" />
+        </control>
+        <control name="load_zone_btn" entity="Button" script="" init="">
+            <prop Left="32" Top="168" Width="70" Height="24" ShadowColor="0,0,0,0" Text="加载文件" TabStop="true" />
+            <event on_click="load_zone_btn_click" />
+        </control>
+        <control name="save_zone_btn" entity="Button" script="" init="">
+            <prop Left="104" Top="168" Width="70" Height="24" ShadowColor="0,0,0,0" Text="保存文件" TabStop="true" />
+            <event on_click="save_zone_btn_click" />
+        </control>
+        <control name="add_zone_btn" entity="Button" script="" init="">
+            <prop Left="32" Top="144" Width="70" Height="24" ShadowColor="0,0,0,0" Text="添加" TabStop="true" />
+            <event on_click="add_zone_btn_click" />
+        </control>
+        <control name="remove_zone_btn" entity="Button" script="" init="">
+            <prop Left="104" Top="144" Width="70" Height="24" ShadowColor="0,0,0,0" Text="删除" TabStop="true" />
+            <event on_click="remove_zone_btn_click" />
+        </control>
+        <control name="use_color_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="384" Top="160" Width="166" Height="22" ShadowColor="0,0,0,0" Enabled="false" Text="使用模型原有顶点色" TabStop="true" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="80" Width="80" Height="22" ShadowColor="0,0,0,0" Text="地面光照密度：" />
+        </control>
+        <control name="light_density_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="480" Top="80" Width="78" Height="22" ShadowColor="0,0,0,0" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="22" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="add_light_btn" entity="Button" script="" init="">
+            <prop Left="32" Top="456" Width="70" Height="24" ShadowColor="0,0,0,0" Text="添加" TabStop="true" />
+            <event on_click="add_light_btn_click" />
+        </control>
+        <control name="remove_light_btn" entity="Button" script="" init="">
+            <prop Left="104" Top="456" Width="70" Height="24" ShadowColor="0,0,0,0" Text="删除" TabStop="true" />
+            <event on_click="remove_light_btn_click" />
+        </control>
+        <control name="only_ground_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="384" Top="184" Width="78" Height="22" ShadowColor="0,0,0,0" Text="只渲染地面" TabStop="true" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="32" Width="78" Height="22" ShadowColor="0,0,0,0" Text="太阳高度：" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="56" Width="78" Height="22" ShadowColor="0,0,0,0" Text="太阳方位：" />
+        </control>
+        <control name="sun_height_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="480" Top="32" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="sun_azimuth_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="480" Top="56" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="use_sky_light_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="384" Top="224" Width="78" Height="22" ShadowColor="0,0,0,0" Text="使用天空光" TabStop="true" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="320" Width="78" Height="22" ShadowColor="0,0,0,0" Text="光源颜色：" />
+        </control>
+        <control name="light_color_btn" entity="Button" script="" init="">
+            <prop Left="312" Top="320" Width="54" Height="22" ShadowColor="0,0,0,0" Text="设置" TabStop="true" />
+            <event on_click="light_color_btn_click" />
+        </control>
+        <control name="smooth_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="192" Top="184" Width="94" Height="22" ShadowColor="0,0,0,0" Text="平滑处理" TabStop="true" />
+        </control>
+        <control name="blur_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="192" Top="32" Width="70" Height="24" ShadowColor="0,0,0,0" Text="模糊处理" TabStop="true" />
+        </control>
+        <control name="visual_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="32" Top="224" Width="142" Height="86" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="200" Width="62" Height="22" ShadowColor="0,0,0,0" Text="物体列表：" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="104" Width="94" Height="22" ShadowColor="0,0,0,0" Text="物体光贴图大小：" />
+        </control>
+        <control name="light_map_size_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="100" OnlySelect="true" Left="480" Top="104" Width="78" Height="22" ShadowColor="0,0,0,0" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="22" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="128" Width="94" Height="22" ShadowColor="0,0,0,0" Text="物体光贴图填充：" />
+        </control>
+        <control name="light_map_fill_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="100" OnlySelect="true" Left="480" Top="128" Width="78" Height="22" ShadowColor="0,0,0,0" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="22" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="light_map_degrade_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="384" Top="248" Width="166" Height="22" ShadowColor="0,0,0,0" Text="物体光贴图大小自动降级" TabStop="true" />
+        </control>
+        <control name="use_point_light_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="480" Top="224" Width="80" Height="22" ShadowColor="0,0,0,0" Text="使用点光源" TabStop="true" />
+        </control>
+        <control name="del_light_btn" entity="Button" script="" init="">
+            <prop Left="32" Top="312" Width="142" Height="24" ShadowColor="0,0,0,0" Text="删除物体的光照文件" TabStop="true" />
+            <event on_click="del_light_btn_click" />
+        </control>
+        <control name="save_occlusion_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="480" Top="184" Width="86" Height="22" ShadowColor="0,0,0,0" Text="保存遮挡信息" TabStop="true" />
+        </control>
+        <control name="sync_render_zone_visuals_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="384" Top="200" Width="150" Height="24" ShadowColor="0,0,0,0" Text="同步渲染区域所有物体" TabStop="true" />
+            <event on_checked_changed="sync_render_zone_visuals_checked_changed" />
+        </control>
+        <control name="del_all_light_map_btn" entity="Button" script="" init="">
+            <prop Left="192" Top="256" Width="158" Height="24" ForeColor="255,0,0,255" ShadowColor="0,0,0,0" Text="删除所有光照文件" TabStop="true" />
+            <event on_click="del_all_light_map_btn_click" />
+        </control>
+    </control>
+</form>

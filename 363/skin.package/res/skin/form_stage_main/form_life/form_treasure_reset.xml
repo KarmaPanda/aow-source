@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_treasure_reset" init="on_main_form_init">
+        <prop ShowGrid="true" Left="37" Top="29" Width="966" Height="606" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_main" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="1" Width="642" Height="606" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="gui\commom_new\form_bg\bg_form.png" />
+        </control>
+        <control name="groupbox_notice" entity="GroupBox" script="" init="">
+            <prop Left="640" Width="214" Height="603" BackColor="255,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\gonggao.png" />
+            <control name="mltbox_notice" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,0,190,518" LineHeight="18" HtmlText="@ui_treasure_reset_tip_1" LineTextAlign="Center" ScrollSize="17" HasVScroll="true" Solid="true" Left="9" Top="47" Width="190" Height="518" ForeColor="255,204,204,204" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_treeview" NoFrame="true" DrawMode="Expand" BackImage="gui\bg_menu.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="25" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\special\huashan_mvp\scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\huashan_mvp\up1_out.png" FocusImage="gui\special\huashan_mvp\up1_on.png" PushImage="gui\special\huashan_mvp\up1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\huashan_mvp\down1_out.png" FocusImage="gui\special\huashan_mvp\down1_on.png" PushImage="gui\special\huashan_mvp\down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\huashan_mvp\trace2_out.png" FocusImage="gui\special\huashan_mvp\trace2_on.png" PushImage="gui\special\huashan_mvp\trace2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="311" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_notice_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_contract_out.png" FocusImage="gui\common\button\btn_contract_on.png" PushImage="gui\common\button\btn_contract_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="196" Top="279" Width="16" Height="47" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" />
+                <event on_click="on_btn_notice_close_click" />
+            </control>
+            <control name="lbl_notice_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="63" Top="8" Width="79" Height="19" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_shuoming_title" Font="font_btn" DrawMode="Expand" BackImage="gui\bg_list1.png" />
+            </control>
+        </control>
+        <control name="groupbox_sub_form" entity="GroupBox" script="" init="">
+            <prop Width="650" Height="606" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Width="650" Height="606" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="lbl_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="3" Width="309" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_open" Font="font_title" AutoSize="true" DrawMode="Center" BackImage="gui\commom_new\form_bg\zjhuawen.png" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="4" Top="62" Width="636" Height="502" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\commom_new\form_bg\huawen.png" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="11" Top="137" Width="313" Height="389" LineColor="255,197,184,159" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\ng_3.png" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="319" Top="137" Width="313" Height="388" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\ng_3.png" />
+                </control>
+                <control name="lbl_name" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="73" Top="88" Width="190" Height="38" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" Font="font_sns_event_mid" DrawMode="Expand" />
+                </control>
+                <control name="imagegrid_zb" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,0,0" MouseInColor="0,0,0,0" CoverColor="0,0,0,0" LockColor="0,0,0,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\commom_new\imagegrid\item.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="21" Top="88" Width="44" Height="44" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" AutoSize="true" />
+                    <event on_select_changed="on_imagegrid_zb_select_changed" on_mousein_grid="on_imagegrid_zb_mousein_grid" on_rightclick_grid="on_imagegrid_zb_rightclick_grid" on_drag_move="on_imagegrid_zb_drag_move" on_mouseout_grid="on_imagegrid_zb_mouseout_grid" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="mltbox_skill" entity="MultiTextBox" script="" init="">
+                    <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,100" LineHeight="20" ScrollSize="17" Left="21" Top="410" Width="294" Height="100" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                </control>
+                <control name="mltbox_result_skill" entity="MultiTextBox" script="" init="">
+                    <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,100" LineHeight="20" ScrollSize="17" Left="329" Top="410" Width="294" Height="100" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                </control>
+                <control name="groupbox_2" entity="GroupBox" script="" init="">
+                    <prop Left="8" Top="560" Width="630" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" />
+                    <control name="btn_start" entity="Button" script="" init="">
+                        <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Top="8" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_reset" Font="font_btn" AutoSize="true" />
+                        <event on_click="on_btn_start_click" />
+                    </control>
+                    <control name="btn_lock" entity="Button" script="" init="">
+                        <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="248" Top="8" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_lock" Font="font_btn" AutoSize="true" />
+                        <event on_click="on_btn_lock_click" />
+                    </control>
+                    <control name="btn_unlock" entity="Button" script="" init="">
+                        <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="344" Top="8" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_unlock" Font="font_btn" AutoSize="true" />
+                        <event on_click="on_btn_unlock_click" />
+                    </control>
+                    <control name="btn_ok" entity="Button" script="" init="">
+                        <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="536" Top="8" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_ok" Font="font_btn" AutoSize="true" />
+                        <event on_click="on_btn_ok_click" />
+                    </control>
+                </control>
+                <control name="lbl_12" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="-243" Top="139" Width="175" Height="27" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_treasure_reset_name_01" Font="font_text_title1" AutoSize="true" />
+                </control>
+                <control name="lbl_13" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="387" Top="139" Width="175" Height="27" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_02" Font="font_text_title1" AutoSize="true" />
+                </control>
+                <control name="groupbox_skill_type" entity="GroupBox" script="" init="">
+                    <prop Left="18" Top="526" Width="254" Height="30" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <control name="rbtn_school" entity="RadioButton" script="" init="">
+                        <prop BoxSize="12" NormalImage="gui\commom_new\check_btn\cbtn_btn_out.png" FocusImage="gui\commom_new\check_btn\cbtn_btn_on.png" CheckedImage="gui\commom_new\check_btn\cbtn_btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="6" Top="4" Width="166" Height="22" ForeColor="255,255,255,197" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_04_3" Font="font_sns_list" HintText="@ui_treasure_reset_tips_01" TabStop="true" DrawMode="ExpandH" />
+                    </control>
+                    <control name="rbtn_jianghu" entity="RadioButton" script="" init="">
+                        <prop BoxSize="12" NormalImage="gui\commom_new\check_btn\cbtn_btn_out.png" FocusImage="gui\commom_new\check_btn\cbtn_btn_on.png" CheckedImage="gui\commom_new\check_btn\cbtn_btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="174" Top="4" Width="110" Height="22" ForeColor="255,255,255,197" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_04_2" Font="font_sns_list" HintText="@ui_treasure_reset_tips_02" TabStop="true" DrawMode="ExpandH" />
+                    </control>
+                </control>
+                <control name="mltbox_desc" entity="MultiTextBox" script="" init="">
+                    <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,342,22" LineHeight="20" HtmlText="@ui_treasure_reset_tip" LineTextAlign="Center" ScrollSize="17" Left="296" Top="532" Width="342" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure" NoFrame="true" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="4" Top="555" Width="636" Height="16" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+                </control>
+                <control name="lbl_15" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="636" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+                </control>
+                <control name="lbl_16" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="4" Top="57" Width="636" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+                </control>
+                <control name="groupbox_prop" entity="GroupBox" script="" init="">
+                    <prop Left="17" Top="176" Width="607" Height="222" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <control name="mltbox_lock_pro" entity="MultiTextBox" script="" init="">
+                        <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,54" LineHeight="20" ScrollSize="17" Left="4" Top="2" Width="294" Height="62" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                    </control>
+                    <control name="mltbox_pro" entity="MultiTextBox" script="" init="">
+                        <prop SelectBarColor="255,0,0,0" MouseInBarColor="0,0,0,0" SelectBarDraw="gui\special\baowu_check01.png" ViewRect="8,6,294,150" LineHeight="20" LineTextAlign="Center" ScrollSize="17" Left="4" Top="78" Width="294" Height="142" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                    </control>
+                    <control name="mltbox_result_lock_pro" entity="MultiTextBox" script="" init="">
+                        <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,54" LineHeight="20" ScrollSize="17" Left="312" Top="2" Width="294" Height="62" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                    </control>
+                    <control name="mltbox_result_pro" entity="MultiTextBox" script="" init="">
+                        <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,150" LineHeight="20" LineTextAlign="Center" ScrollSize="17" Left="312" Top="78" Width="294" Height="142" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                    </control>
+                    <control name="lbl_lock" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="279" Top="81" Width="18" Height="18" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\button\btn_lock_out_3.png" />
+                    </control>
+                </control>
+                <control name="groupbox_skill" entity="GroupBox" script="" init="">
+                    <prop Left="17" Top="176" Width="607" Height="222" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <control name="mltbox_prop" entity="MultiTextBox" script="" init="">
+                        <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,218" LineHeight="20" ScrollSize="17" Left="4" Width="294" Height="220" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                    </control>
+                    <control name="mltbox_result_prop" entity="MultiTextBox" script="" init="">
+                        <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="8,6,294,218" LineHeight="20" ScrollSize="17" Left="312" Top="2" Width="294" Height="218" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+                    </control>
+                </control>
+                <control name="btn_notice" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_expand_out.png" FocusImage="gui\common\button\btn_expand_on.png" PushImage="gui\common\button\btn_expand_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="633" Top="280" Width="18" Height="49" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" />
+                    <event on_click="on_btn_notice_click" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_title" entity="GroupBox" script="" init="">
+            <prop Width="645" Height="62" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="636" Height="30" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\bg_title.png" />
+            </control>
+            <control name="groupbox_reset_type" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="35" Width="542" Height="30" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="rbtn_prop" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="2" Width="126" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_03" Font="font_main" TabStop="true" DrawMode="Expand" />
+                    <event on_checked_changed="on_rbtn_prop_checked_changed" />
+                </control>
+                <control name="rbtn_skill" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="128" Width="126" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_04" Font="font_main" TabStop="true" DrawMode="Expand" />
+                    <event on_checked_changed="on_rbtn_skill_checked_changed" />
+                </control>
+                <control name="rbtn_treasure_recast" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="256" Width="126" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_05" Font="font_main" TabStop="true" DrawMode="Expand" />
+                    <event on_checked_changed="on_rbtn_treasure_recast_checked_changed" />
+                </control>
+                <control name="rbtn_treasure_upgrade" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="384" Width="126" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_treasure_reset_name_06" Font="font_main" TabStop="true" DrawMode="Expand" />
+                    <event on_checked_changed="on_rbtn_treasure_upgrade_checked_changed" />
+                </control>
+            </control>
+            <control name="btn_help" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" PushImage="gui\common\button\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="592" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="616" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-8" Top="-8" Width="54" Height="38" ShadowColor="0,0,0,0" BackImage="gui\mainform\chongzhu.png" />
+        </control>
+        <control name="groupbox_upgrade_notice" entity="GroupBox" script="" init="">
+            <prop Left="478" Width="300" Height="593" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\gonggao.png" />
+            <control name="lbl_66" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="92" Top="8" Width="110" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_equipupgrade_shuoming_title" Font="font_btn" />
+            </control>
+            <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,270,506" LineHeight="17" AutoScroll="true" ScrollSize="17" HasVScroll="true" Solid="true" Left="15" Top="50" Width="270" Height="506" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="@ui_recast_treasrue_rule" Font="font_treeview" NoFrame="true" DrawMode="Expand" />
+                <subor name="VScrollBar">
+                    <prop Maximum="2" SmallChange="1" LargeChange="20" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\special\huashan_mvp\scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\huashan_mvp\up1_out.png" FocusImage="gui\special\huashan_mvp\up1_on.png" PushImage="gui\special\huashan_mvp\up1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\huashan_mvp\down1_out.png" FocusImage="gui\special\huashan_mvp\down1_on.png" PushImage="gui\special\huashan_mvp\down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\huashan_mvp\trace2_out.png" FocusImage="gui\special\huashan_mvp\trace2_on.png" PushImage="gui\special\huashan_mvp\trace2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_upgrade_notice_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_contract_out.png" FocusImage="gui\common\button\btn_contract_on.png" PushImage="gui\common\button\btn_contract_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="279" Top="264" Width="18" Height="49" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_upgrade_notice_close_click" />
+            </control>
+        </control>
+        <control name="btn_upgrade_notice" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_expand_out.png" FocusImage="gui\common\button\btn_expand_on.png" PushImage="gui\common\button\btn_expand_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="632" Top="256" Width="18" Height="49" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_upgrade_notice_click" />
+        </control>
+    </control>
+</form>

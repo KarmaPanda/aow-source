@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_pssm" init="main_form_init">
+        <prop Left="109" Top="189" Width="486" Height="358" BackColor="150,152,155,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="152" Top="312" Width="78" Height="24" ShadowColor="0,0,0,0" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="256" Top="312" Width="78" Height="24" ShadowColor="0,0,0,0" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="184" Top="8" Width="126" Height="22" ShadowColor="0,0,0,0" Text="实时阴影效果参数" />
+        </control>
+        <control name="pssm_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="48" Width="118" Height="22" ShadowColor="0,0,0,0" Text="开启多级阴影贴图" TabStop="true" />
+            <event on_checked_changed="pssm_check_checked_changed" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="176" Width="62" Height="22" ShadowColor="0,0,0,0" Text="阴影强度" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="80" Width="78" Height="22" ShadowColor="0,0,0,0" Text="阴影过滤方式" />
+        </control>
+        <control name="shadow_inten_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="176" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="shadow_inten_edit_changed" on_drag="shadow_inten_edit_changed" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="200" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度偏置0" />
+        </control>
+        <control name="depth_bias0_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="200" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_bias0_edit_changed" on_drag="depth_bias0_edit_changed" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="104" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度斜率0" />
+        </control>
+        <control name="depth_slope0_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="104" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_slope0_edit_changed" on_drag="depth_slope0_edit_changed" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="152" Width="78" Height="22" ShadowColor="0,0,0,0" Text="阴影贴图尺寸" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="200" Width="78" Height="22" ShadowColor="0,0,0,0" Text="摄影机距离" />
+        </control>
+        <control name="camera_distance_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="200" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="camera_distance_edit_changed" on_drag="camera_distance_edit_changed" />
+        </control>
+        <control name="shadow_distance_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="224" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="shadow_distance_edit_changed" on_drag="shadow_distance_edit_changed" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="224" Width="78" Height="22" ShadowColor="0,0,0,0" Text="阴影有效距离" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="128" Width="62" Height="22" ShadowColor="0,0,0,0" Text="阴影级数" />
+        </control>
+        <control name="vsm_low_limit_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="272" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="vsm_low_limit_edit_changed" on_drag="vsm_low_limit_edit_changed" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="104" Width="78" Height="22" ShadowColor="0,0,0,0" Text="阴影过滤级别" />
+        </control>
+        <control name="filter_mode_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="80" OnlySelect="true" Left="104" Top="80" Width="126" Height="20" ShadowColor="0,0,0,0" />
+            <event on_selected="filter_mode_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="filter_level_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="104" Top="104" Width="126" Height="20" ShadowColor="0,0,0,0" />
+            <event on_selected="filter_level_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="shadow_map_size_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="80" OnlySelect="true" Left="104" Top="152" Width="126" Height="20" ShadowColor="0,0,0,0" />
+            <event on_selected="shadow_map_size_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="shadow_map_count_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="80" OnlySelect="true" Left="104" Top="128" Width="126" Height="20" ShadowColor="0,0,0,0" />
+            <event on_selected="shadow_map_count_combo_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="Label10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="272" Width="78" Height="22" ShadowColor="0,0,0,0" Text="VSM阴影下限" />
+        </control>
+        <control name="log_split_weight_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.010000" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="248" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="log_split_weight_edit_changed" on_drag="log_split_weight_edit_changed" />
+        </control>
+        <control name="Label21" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="248" Width="78" Height="22" ShadowColor="0,0,0,0" Text="对数切分权重" />
+        </control>
+        <control name="prelight_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="256" Top="48" Width="134" Height="22" ShadowColor="0,0,0,0" Text="开启动态多光源照明" TabStop="true" />
+            <event on_checked_changed="prelight_check_checked_changed" />
+        </control>
+        <control name="depth_bias1_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="224" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_bias1_edit_changed" on_drag="depth_bias1_edit_changed" />
+        </control>
+        <control name="depth_bias2_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="248" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_bias2_edit_changed" on_drag="depth_bias2_edit_changed" />
+        </control>
+        <control name="depth_bias3_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="272" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_bias3_edit_changed" on_drag="depth_bias3_edit_changed" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="224" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度偏置1" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="248" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度偏置2" />
+        </control>
+        <control name="Label13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="272" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度偏置3" />
+        </control>
+        <control name="depth_slope1_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="128" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_slope1_edit_changed" on_drag="depth_slope1_edit_changed" />
+        </control>
+        <control name="depth_slope2_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="152" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_slope2_edit_changed" on_drag="depth_slope2_edit_changed" />
+        </control>
+        <control name="depth_slope3_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.5f" DragStep="0.000010" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="176" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="depth_slope3_edit_changed" on_drag="depth_slope3_edit_changed" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="128" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度斜率1" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="152" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度斜率2" />
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="176" Width="62" Height="22" ShadowColor="0,0,0,0" Text="深度斜率3" />
+        </control>
+        <control name="Label17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="256" Top="80" Width="78" Height="22" ShadowColor="0,0,0,0" Text="最大光源距离" />
+        </control>
+        <control name="light_distance_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="336" Top="80" Width="126" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="light_distance_edit_changed" on_drag="light_distance_edit_changed" />
+        </control>
+    </control>
+</form>

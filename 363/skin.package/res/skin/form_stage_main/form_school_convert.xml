@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_school_convert" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="13" Width="1120" Height="768" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\schoolchange\back_1.png" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="scenebox_school" entity="SceneBox" script="" init="">
+            <prop Transparent="true" Left="-303" Top="184" Width="286" Height="454" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" NoFrame="true" />
+        </control>
+        <control name="scenebox_player" entity="SceneBox" script="" init="">
+            <prop Transparent="true" Left="17" Top="184" Width="238" Height="454" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-35" Top="12" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_school" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\check_out.png" FocusImage="gui\special\schoolchange\check_on.png" PushImage="gui\special\schoolchange\check_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-191" Top="136" Width="120" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_check_school" Font="font_main" AutoSize="true" />
+            <event on_click="on_btn_school_click" />
+        </control>
+        <control name="btn_type" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\bt_out.png" FocusImage="gui\special\schoolchange\bt_on.png" PushImage="gui\special\schoolchange\bt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-1062" Top="3" Width="106" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_haiwai_school_convert_mplx" Font="font_main" />
+            <event on_click="on_btn_type_click" />
+        </control>
+        <control name="btn_from" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\bt_out.png" FocusImage="gui\special\schoolchange\bt_on.png" PushImage="gui\special\schoolchange\bt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-555" Top="2" Width="116" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_haiwai_school_convert_dqmp" Font="font_main" />
+            <event on_click="on_btn_from_click" />
+        </control>
+        <control name="btn_leave" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\bt_out.png" FocusImage="gui\special\schoolchange\bt_on.png" PushImage="gui\special\schoolchange\bt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-455" Top="2" Width="174" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="LeaveSchoolType" Font="font_main" DrawMode="FitWindow" />
+            <event on_click="on_btn_leave_click" />
+        </control>
+        <control name="btn_last" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\bt_out.png" FocusImage="gui\special\schoolchange\bt_on.png" PushImage="gui\special\schoolchange\bt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-287" Top="2" Width="106" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="LastSchool" Font="font_main" />
+            <event on_click="on_btn_last_click" />
+        </control>
+        <control name="btn_mark" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\bt_out.png" FocusImage="gui\special\schoolchange\bt_on.png" PushImage="gui\special\schoolchange\bt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-183" Top="2" Width="106" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="SchoolMark" Font="font_main" />
+            <event on_click="on_btn_mark_click" />
+        </control>
+        <control name="btn_test" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\schoolchange\bt_out.png" FocusImage="gui\special\schoolchange\bt_on.png" PushImage="gui\special\schoolchange\bt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-659" Top="4" Width="106" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="测试" Font="font_main" />
+            <event on_click="on_btn_test_click" />
+        </control>
+        <control name="groupbox_school_list" entity="GroupBox" script="" init="">
+            <prop Left="-182" Top="175" Width="106" Height="463" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Text="groupbox_1" NoFrame="true" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="96" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_1" />
+            </subor>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Width="102" Height="447" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\schoolchange\check_back.png" />
+            </control>
+            <control name="listbox_school" entity="ListBox" script="" init="">
+                <prop ItemHeight="16" TextOffsetX="23" SelectBackColor="255,243,255,119" ScrollSize="17" Left="7" Top="11" Width="94" Height="425" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+                <event on_select_changed="on_listbox_school_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_path" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="273" Top="96" Width="486" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="btn_path_1" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\schoolchange\step_1_out.png" FocusImage="gui\special\schoolchange\step_1_ on.png" CheckedImage="gui\special\schoolchange\step_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="176" Top="8" Width="71" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_schoolchange_step_1" TabStop="true" />
+                <event on_checked_changed="on_btn_path_checked_changed" />
+            </control>
+            <control name="btn_path_2" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\schoolchange\step_2_out.png" FocusImage="gui\special\schoolchange\step_2_on.png" CheckedImage="gui\special\schoolchange\step_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="288" Top="8" Width="71" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_schoolchange_step_2" TabStop="true" />
+                <event on_checked_changed="on_btn_path_checked_changed" />
+            </control>
+            <control name="btn_path_3" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\schoolchange\step_3_out.png" FocusImage="gui\special\schoolchange\step_3_ on.png" CheckedImage="gui\special\schoolchange\step_3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="400" Top="8" Width="71" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_schoolchange_step_3" TabStop="true" />
+                <event on_checked_changed="on_btn_path_checked_changed" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="204" Height="63" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_title_hual_3" AutoSize="true" BackImage="gui\special\schoolchange\change_step.png" />
+            </control>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-279" Top="664" Width="231" Height="44" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Font="font_text_chat" BackImage="gui\special\schoolchange\back_6.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="33" Top="664" Width="231" Height="44" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" BackImage="gui\special\schoolchange\back_6.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="49" Top="672" Width="126" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_current_school" Font="font_text_chat" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="857" Top="675" Width="118" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_dest_school" Font="font_text_chat" />
+        </control>
+        <control name="lbl_cur_school" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="123" Top="670" Width="94" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" />
+        </control>
+        <control name="lbl_dest_school" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="930" Top="675" Width="94" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" />
+        </control>
+        <control name="groupscrollbox_step" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" Left="232" Top="168" Width="608" Height="606" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupscrollbox_1" NoFrame="true" />
+            <control name="groupbox_step_1" entity="GroupBox" script="" init="">
+                <prop Width="606" Height="222" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="lbl_head_step_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="24" Top="2" Width="597" Height="75" ShadowColor="0,0,0,0" BackImage="gui\special\schoolchange\title.png" />
+                </control>
+                <control name="mltbox_desc_step_1" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="9,5,520,140" LineHeight="17" ScrollSize="17" HasVScroll="true" Left="48" Top="53" Width="536" Height="165" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" BackImage="gui\special\schoolchange\desc_back.png" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_title_step_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\step_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="243" Top="12" Width="116" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    <event on_click="on_btn_step_click" />
+                </control>
+                <control name="btn_done_step_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\btn_webexchange_out.png" FocusImage="gui\special\schoolchange\btn_webexchange_on.png" PushImage="gui\special\schoolchange\btn_webexchange_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="529" Top="16" Width="35" Height="35" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_comp" />
+                </control>
+                <control name="btn_accept_step_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\xxrenwu-out.png" FocusImage="gui\special\schoolchange\xxrenwu--on.png" PushImage="gui\special\schoolchange\xxrenwu-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="489" Top="16" Width="35" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_acc" />
+                    <event on_click="on_btn_accept_step_click" />
+                </control>
+                <control name="lbl_name_step_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="280" Top="16" Width="110" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_step_2" entity="GroupBox" script="" init="">
+                <prop Top="208" Width="606" Height="222" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="lbl_head_step_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="24" Top="2" Width="597" Height="75" ShadowColor="0,0,0,0" BackImage="gui\special\schoolchange\title.png" />
+                </control>
+                <control name="mltbox_desc_step_2" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="9,5,520,140" LineHeight="17" ScrollSize="17" HasVScroll="true" Left="48" Top="53" Width="536" Height="165" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" BackImage="gui\special\schoolchange\desc_back.png" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_title_step_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\step_2.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="243" Top="12" Width="116" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    <event on_click="on_btn_step_click" />
+                </control>
+                <control name="btn_done_step_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\btn_webexchange_out.png" FocusImage="gui\special\schoolchange\btn_webexchange_on.png" PushImage="gui\special\schoolchange\btn_webexchange_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="529" Top="16" Width="35" Height="35" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_comp" />
+                </control>
+                <control name="btn_accept_step_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\xxrenwu-out.png" FocusImage="gui\special\schoolchange\xxrenwu--on.png" PushImage="gui\special\schoolchange\xxrenwu-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="489" Top="16" Width="35" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_acc" />
+                    <event on_click="on_btn_accept_step_click" />
+                </control>
+                <control name="lbl_name_step_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="280" Top="16" Width="110" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_step_3" entity="GroupBox" script="" init="">
+                <prop Top="415" Width="606" Height="222" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="lbl_head_step_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="24" Top="2" Width="597" Height="75" ShadowColor="0,0,0,0" BackImage="gui\special\schoolchange\title.png" />
+                </control>
+                <control name="mltbox_desc_step_3" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="9,5,520,140" LineHeight="17" ScrollSize="17" HasVScroll="true" Left="48" Top="53" Width="536" Height="165" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" BackImage="gui\special\schoolchange\desc_back.png" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_title_step_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\step_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="243" Top="12" Width="116" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    <event on_click="on_btn_step_click" />
+                </control>
+                <control name="btn_done_step_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\btn_webexchange_out.png" FocusImage="gui\special\schoolchange\btn_webexchange_on.png" PushImage="gui\special\schoolchange\btn_webexchange_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="529" Top="16" Width="35" Height="35" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_comp" />
+                </control>
+                <control name="btn_accept_step_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\xxrenwu-out.png" FocusImage="gui\special\schoolchange\xxrenwu--on.png" PushImage="gui\special\schoolchange\xxrenwu-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="489" Top="16" Width="35" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_acc" />
+                    <event on_click="on_btn_accept_step_click" />
+                </control>
+                <control name="lbl_name_step_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="280" Top="16" Width="110" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_step_4" entity="GroupBox" script="" init="">
+                <prop Top="672" Width="606" Height="222" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="lbl_head_step_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="24" Top="2" Width="597" Height="75" ShadowColor="0,0,0,0" BackImage="gui\special\schoolchange\title.png" />
+                </control>
+                <control name="mltbox_desc_step_4" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="9,5,520,140" LineHeight="17" ScrollSize="17" HasVScroll="true" Left="48" Top="53" Width="536" Height="165" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" BackImage="gui\special\schoolchange\desc_back.png" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_title_step_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\step_4.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="243" Top="12" Width="116" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    <event on_click="on_btn_step_click" />
+                </control>
+                <control name="btn_done_step_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\btn_webexchange_out.png" FocusImage="gui\special\schoolchange\btn_webexchange_on.png" PushImage="gui\special\schoolchange\btn_webexchange_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="529" Top="16" Width="35" Height="35" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+                <control name="btn_accept_step_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\schoolchange\xxrenwu-out.png" FocusImage="gui\special\schoolchange\xxrenwu--on.png" PushImage="gui\special\schoolchange\xxrenwu-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="489" Top="16" Width="35" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" HintText="@ui_task_acc" />
+                    <event on_click="on_btn_accept_step_click" />
+                </control>
+                <control name="lbl_name_step_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="280" Top="16" Width="110" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_type" entity="GroupBox" script="" init="">
+            <prop Left="-1063" Top="40" Width="254" Height="340" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Text="groupbox_1" NoFrame="true" />
+            <control name="lbl_type" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="254" Height="330" ShadowColor="0,0,0,0" Text="lbl_5" DrawMode="Expand" BackImage="gui\special\schoolchange\back_5.png" />
+            </control>
+            <control name="listbox_type" entity="ListBox" script="" init="">
+                <prop ItemHeight="16" TextOffsetX="2" SelectBackColor="255,243,255,119" ScrollSize="17" Top="11" Width="254" Height="310" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_listbox_type_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_from" entity="GroupBox" script="" init="">
+            <prop Left="-553" Top="40" Width="106" Height="340" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Text="groupbox_1" NoFrame="true" />
+            <control name="lbl_from" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="102" Height="330" ShadowColor="0,0,0,0" Text="lbl_5" DrawMode="Expand" BackImage="gui\special\schoolchange\back_5.png" />
+            </control>
+            <control name="listbox_from" entity="ListBox" script="" init="">
+                <prop ItemHeight="16" TextOffsetX="23" SelectBackColor="255,243,255,119" ScrollSize="17" Top="11" Width="106" Height="310" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_listbox_from_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_leave" entity="GroupBox" script="" init="">
+            <prop Left="-417" Top="40" Width="106" Height="100" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Text="groupbox_1" NoFrame="true" />
+            <control name="lbl_leave" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="102" Height="100" ShadowColor="0,0,0,0" Text="lbl_5" DrawMode="Expand" BackImage="gui\special\schoolchange\back_5.png" />
+            </control>
+            <control name="listbox_leave" entity="ListBox" script="" init="">
+                <prop ItemHeight="16" TextOffsetX="23" SelectBackColor="255,243,255,119" ScrollSize="17" Top="11" Width="106" Height="100" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_listbox_leave_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_last" entity="GroupBox" script="" init="">
+            <prop Left="-285" Top="40" Width="106" Height="50" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Text="groupbox_1" NoFrame="true" />
+            <control name="lbl_last" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="102" Height="50" ShadowColor="0,0,0,0" Text="lbl_5" DrawMode="Expand" BackImage="gui\special\schoolchange\back_5.png" />
+            </control>
+            <control name="listbox_last" entity="ListBox" script="" init="">
+                <prop ItemHeight="16" TextOffsetX="23" SelectBackColor="255,243,255,119" ScrollSize="17" Top="11" Width="106" Height="50" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_listbox_last_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_mark" entity="GroupBox" script="" init="">
+            <prop Left="-181" Top="40" Width="106" Height="100" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" Text="groupbox_1" NoFrame="true" />
+            <control name="lbl_mark" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="102" Height="100" ShadowColor="0,0,0,0" Text="lbl_5" DrawMode="Expand" BackImage="gui\special\schoolchange\back_5.png" />
+            </control>
+            <control name="listbox_mark" entity="ListBox" script="" init="">
+                <prop ItemHeight="16" TextOffsetX="23" SelectBackColor="255,243,255,119" ScrollSize="17" Top="11" Width="106" Height="100" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_select_changed="on_listbox_last_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="cbtn_equal" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="217" Top="12" Width="198" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="LastSchool等于选择的School" Font="font_main" TabStop="true" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="289" Top="152" Width="509" Height="5" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\schoolchange\line.png" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_marry\form_marry_collect" entity="Form" script="form_stage_main\form_marry\form_marry_collect" init="main_form_init">
+        <prop ShowGrid="true" Left="-259" Top="37" Width="1400" Height="800" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\marry\zhenghun\bg.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-32" Top="16" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_colse_click" />
+        </control>
+        <control name="sbox_player" entity="SceneBox" script="" init="">
+            <prop Left="248" Top="160" Width="342" Height="518" BackColor="0,0,0,0" LineColor="255,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="mbox_decl" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,204,153,108" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,40,180,271" LineHeight="17" ScrollSize="17" Left="48" Top="224" Width="189" Height="291" ForeColor="255,204,153,108" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" BackImage="gui\special\marry\zhenghun\bg_main_3.png" />
+        </control>
+        <control name="gbox_list" entity="GroupBox" script="" init="">
+            <prop Left="-724" Top="163" Width="651" Height="574" ShadowColor="0,0,0,0" HAnchor="Right" AutoSize="true" BackImage="gui\special\marry\zhenghun\bg_main_1.png" />
+            <control name="rbtn_boy" entity="RadioButton" script="" init="">
+                <prop Checked="true" HideBox="true" BoxSize="12" NormalImage="gui\special\marry\zhenghun\boy_out.png" FocusImage="gui\special\marry\zhenghun\boy_on.png" CheckedImage="gui\special\marry\zhenghun\boy_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="51" Top="67" Width="89" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="0" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_sex_checked_changed" />
+            </control>
+            <control name="rbtn_girl" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\marry\zhenghun\girl_out.png" FocusImage="gui\special\marry\zhenghun\girl_on.png" CheckedImage="gui\special\marry\zhenghun\girl_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="147" Top="67" Width="89" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="1" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_sex_checked_changed" />
+            </control>
+            <control name="edit_player_name" entity="Edit" script="" init="">
+                <prop MaxLength="20" TextOffsetX="5" SelectBackColor="0,0,0,128" Caret="Default" Left="495" Top="69" Width="134" Height="30" ForeColor="255,255,180,0" BackColor="255,131,43,0" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\special\marry\ibox.png" />
+            </control>
+            <control name="btn_search" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\zhenghun\btn_search_out.png" FocusImage="gui\special\marry\zhenghun\btn_search_on.png" PushImage="gui\special\marry\zhenghun\btn_search_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="603" Top="73" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                <event on_click="on_btn_search_click" />
+            </control>
+            <control name="grid_collecter" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,95,0" SelectBackColor="0,0,0,0" CanSelectRow="true" ColWidth="40" ColWidths="140,200,70,140" RowHeight="31" ColCount="4" ScrollSize="17" HasHScroll="true" Left="36" Top="104" Width="582" Height="254" ForeColor="255,255,180,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" />
+                <event on_select_row="on_grid_collecter_select_row" />
+                <subor name="HScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" IsLimitWidth="true" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="gbox_page" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="179" Top="360" Width="358" Height="30" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="btn_page_dec" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\marry\zhenghun\btn_left_out.png" FocusImage="gui\special\marry\zhenghun\btn_left_on.png" PushImage="gui\special\marry\zhenghun\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="83" Top="3" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_page_dec_click" />
+                </control>
+                <control name="btn_page_add" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\marry\zhenghun\btn_right_out.png" FocusImage="gui\special\marry\zhenghun\btn_right_on.png" PushImage="gui\special\marry\zhenghun\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="190" Top="3" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_page_add_click" />
+                </control>
+                <control name="ipt_page" entity="Edit" script="" init="">
+                    <prop OnlyDigit="true" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" Caret="Default" Left="112" Top="5" Width="30" Height="19" ForeColor="255,255,180,0" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\special\marry\ibox.png" />
+                    <event on_changed="on_ipt_page_changed" />
+                </control>
+                <control name="lbl_11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="155" Top="6" Width="6" Height="16" ForeColor="255,255,180,0" ShadowColor="0,0,0,0" Text="/" Font="font_text" />
+                </control>
+                <control name="lbl_max_page" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="166" Top="6" Width="30" Height="16" ForeColor="255,255,180,0" ShadowColor="0,0,0,0" Text="23" Font="font_text" />
+                </control>
+                <control name="btn_page_goto" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\marry\zhenghun\btn_zt_out.png" FocusImage="gui\special\marry\zhenghun\btn_zt_on.png" PushImage="gui\special\marry\zhenghun\btn_zt_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="220" Top="2" Width="54" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" />
+                    <event on_click="on_btn_page_goto_click" />
+                </control>
+            </control>
+        </control>
+        <control name="gbox_commit" entity="GroupBox" script="" init="">
+            <prop Left="-696" Top="556" Width="607" Height="146" ShadowColor="0,0,0,0" HAnchor="Right" BackImage="gui\special\marry\zhenghun\bg_main_2.png" />
+            <control name="redit_decl" entity="RichEdit" script="" init="">
+                <prop ViewRect="10,14,562,58" MaxLength="40" SelectForeColor="255,128,101,74" SelectBackColor="0,190,190,190" Caret="Default" ReturnAllFormat="false" ScrollSize="14" HasVScroll="true" Left="11" Top="12" Width="582" Height="86" ForeColor="255,255,180,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" />
+                <event on_get_focus="on_redit_decl_get_focus" on_lost_focus="on_redit_decl_lost_focus" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_collect" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\zhenghun\btn_tell_out.png" FocusImage="gui\special\marry\zhenghun\btn_tell_on.png" PushImage="gui\special\marry\zhenghun\btn_tell_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="499" Top="100" Width="91" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_collect_click" />
+            </control>
+            <control name="mbox_desc" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,380,40" LineHeight="17" HtmlText="@ui_collect_rule_declare" ScrollSize="17" Left="16" Top="98" Width="380" Height="40" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+            </control>
+            <control name="btn_giveup" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\marry\zhenghun\btn_xqzh_out.png" FocusImage="gui\special\marry\zhenghun\btn_xqzh_on.png" PushImage="gui\special\marry\zhenghun\btn_xqzh_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="400" Top="100" Width="91" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_giveup_click" />
+            </control>
+        </control>
+        <control name="btn_chat" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\marry\zhenghun\btn_chat_out.png" FocusImage="gui\special\marry\zhenghun\btn_chat_on.png" PushImage="gui\special\marry\zhenghun\btn_chat_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="376" Top="700" Width="91" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_chat_click" />
+        </control>
+    </control>
+</form>

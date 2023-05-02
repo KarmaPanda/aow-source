@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_huashan\form_gamble_main_huashan" init="main_form_init">
+        <prop ShowGrid="true" Left="29" Top="29" Width="795" Height="614" BackColor="0,92,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Width="795" Height="614" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" BackImage="gui\language\ChineseS\huashan\bg_duicai_main.png" />
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="765" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="groupbox_left" entity="GroupBox" script="" init="">
+                <prop Left="4" Top="72" Width="182" Height="526" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="rbtn_now" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\language\ChineseS\huashan\btn_duicai01_out.png" FocusImage="gui\language\ChineseS\huashan\btn_duicai01_on.png" CheckedImage="gui\language\ChineseS\huashan\btn_duicai01_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="183" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huashan_yazhu_15" Font="font_btn" TabIndex="1" TabStop="true" AutoSize="true" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+                <control name="rbtn_history" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\language\ChineseS\huashan\btn_duicai01_out.png" FocusImage="gui\language\ChineseS\huashan\btn_duicai01_on.png" CheckedImage="gui\language\ChineseS\huashan\btn_duicai01_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="34" Width="183" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huashan_yazhu_16" Font="font_btn" TabIndex="2" TabStop="true" AutoSize="true" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+                <control name="rbtn_my" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\language\ChineseS\huashan\btn_duicai01_out.png" FocusImage="gui\language\ChineseS\huashan\btn_duicai01_on.png" CheckedImage="gui\language\ChineseS\huashan\btn_duicai01_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="68" Width="183" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huashan_yazhu_17" Font="font_btn" TabIndex="3" TabStop="true" AutoSize="true" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+            </control>
+            <control name="groupbox_find" entity="GroupBox" script="" init="">
+                <prop Left="576" Top="31" Width="222" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="combobox_name_list" entity="ComboBox" script="" init="">
+                    <prop ButtonWidth="20" DropDownHeight="126" Top="7" Width="129" Height="26" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\huashan\bg_duicai_input.png" />
+                    <event on_selected="on_combobox_name_list_selected" />
+                    <subor name="InputEdit">
+                        <prop TextOffsetX="2" Caret="Default" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_playername" Cursor="WIN_IBEAM" BackImage="gui\language\ChineseS\huashan\bg_duicai_input.png" />
+                    </subor>
+                    <subor name="DropButton">
+                        <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="24" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    </subor>
+                    <subor name="DropListBox">
+                        <prop Sorted="true" MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="56,255,180,40" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_playername" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list1.png" />
+                        <subor name="VScrollBar">
+                            <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                            <subor name="DecButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                            </subor>
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_find" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\huashan\btn_duicai03_out.png" FocusImage="gui\language\ChineseS\huashan\btn_duicai03_on.png" PushImage="gui\language\ChineseS\huashan\btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="144" Top="8" Width="70" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huashan_yazhu_18" Font="font_btn" DrawMode="FitWindow" />
+                    <event on_click="on_btn_find_click" />
+                </control>
+            </control>
+            <control name="groupscrollbox_pro_list" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" Left="209" Top="66" Width="583" Height="522" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+            <control name="groupbox_skip" entity="GroupBox" script="" init="">
+                <prop Left="216" Top="579" Width="574" Height="34" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="btn_left" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="213" Top="11" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_left_click" />
+                </control>
+                <control name="btn_right" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="268" Top="11" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_right_click" />
+                </control>
+                <control name="lbl_num" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="-57" Top="12" Width="38" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_huashan_yazhu_29" Font="font_main" />
+                </control>
+                <control name="ipt_page" entity="Edit" script="" init="">
+                    <prop OnlyDigit="true" MaxDigit="99" MaxLength="2" TextOffsetX="2" Align="Center" Caret="Default" Left="291" Top="8" Width="22" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="Expand" BackImage="gui\language\ChineseS\huashan\bg_duicai_input.png" />
+                </control>
+                <control name="btn_skip" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\huashan\btn_duicai03_out.png" FocusImage="gui\language\ChineseS\huashan\btn_duicai03_on.png" PushImage="gui\language\ChineseS\huashan\btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="7" Width="54" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huashan_yazhu_19" Font="font_btn" AutoSize="true" />
+                    <event on_click="on_btn_skip_click" />
+                </control>
+                <control name="lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="317" Top="8" Width="38" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_page" Font="font_btn" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

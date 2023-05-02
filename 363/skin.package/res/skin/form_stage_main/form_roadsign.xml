@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_roadsign" init="init_main_form">
+        <prop ShowGrid="true" Left="256" Top="205" Width="256" Height="256" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="gb_photo" entity="GroupBox" script="" init="">
+            <prop Width="256" Height="256" NoFrame="true" />
+            <control name="pic_map" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Width="256" Height="256" />
+            </control>
+            <control name="mtb_north" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,100,20" ScrollSize="17" Left="77" Width="100" Height="20" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_south" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,100,20" ScrollSize="17" Left="77" Top="232" Width="100" Height="20" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_west" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,20,100" ScrollSize="17" Left="5" Top="72" Width="20" Height="100" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_east" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,20,100" ScrollSize="17" Left="229" Top="72" Width="20" Height="100" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_westnorth" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,50,50" ScrollSize="17" Left="5" Top="8" Width="50" Height="50" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_eastnorth" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,50,50" ScrollSize="17" Left="197" Top="8" Width="50" Height="50" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_westsouth" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,50,50" ScrollSize="17" Left="5" Top="200" Width="50" Height="50" Font="Default" NoFrame="true" />
+            </control>
+            <control name="mtb_eastsouth" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,50,50" ScrollSize="17" Left="197" Top="200" Width="50" Height="50" Font="Default" NoFrame="true" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\chineses\gb02-out.png" FocusImage="gui\language\chineses\gb02-on.png" PushImage="gui\language\chineses\gb02-down.png" Left="205" Width="53" Height="21" TabStop="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="lbl_north" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-N.png" />
+            </control>
+            <control name="lbl_south" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-S.png" />
+            </control>
+            <control name="lbl_east" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-E.png" />
+            </control>
+            <control name="lbl_west" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-W.png" />
+            </control>
+            <control name="lbl_wn" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-WN.png" />
+            </control>
+            <control name="lbl_en" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-EN.png" />
+            </control>
+            <control name="lbl_ws" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-WS.png" />
+            </control>
+            <control name="lbl_es" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="256" Height="256" AutoSize="true" BackImage="gui\map\icon\jts-ES.png" />
+            </control>
+            <control name="lbl_me" entity="Label" script="" init="">
+                <prop Rotate="true" RefCursor="WIN_HELP" Left="120" Top="120" Width="18" Height="21" AutoSize="true" BackImage="gui\map\icon\me.png" />
+            </control>
+            <control name="mtb_w_t" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,20,80" ScrollSize="17" Top="48" Width="20" Height="80" NoFrame="true" />
+            </control>
+            <control name="mtb_n_l" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,80,20" ScrollSize="17" Left="45" Width="80" Height="20" NoFrame="true" />
+            </control>
+            <control name="mtb_w_d" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,20,80" ScrollSize="17" Top="128" Width="20" Height="80" NoFrame="true" />
+            </control>
+            <control name="mtb_n_r" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,80,20" ScrollSize="17" Left="125" Width="80" Height="20" NoFrame="true" />
+            </control>
+            <control name="mtb_e_t" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,20,80" ScrollSize="17" Left="235" Top="48" Width="20" Height="80" NoFrame="true" />
+            </control>
+            <control name="mtb_e_d" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,20,80" ScrollSize="17" Left="235" Top="128" Width="20" Height="80" NoFrame="true" />
+            </control>
+            <control name="mtb_s_l" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,80,20" ScrollSize="17" Left="45" Top="232" Width="80" Height="20" NoFrame="true" />
+            </control>
+            <control name="mtb_s_r" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" ViewRect="0,0,80,20" ScrollSize="17" Left="125" Top="232" Width="80" Height="20" NoFrame="true" />
+            </control>
+            <control name="lbl_n_l" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-N_w.png" />
+            </control>
+            <control name="lbl_n_r" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-N_a.png" />
+            </control>
+            <control name="lbl_w_t" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-W_n.png" />
+            </control>
+            <control name="lbl_w_d" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-W_s.png" />
+            </control>
+            <control name="lbl_s_l" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-S_w.png" />
+            </control>
+            <control name="lbl_s_r" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-S_e.png" />
+            </control>
+            <control name="lbl_e_t" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-E_n.png" />
+            </control>
+            <control name="lbl_e_d" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="255" Height="255" BackImage="gui\map\icon\jts-E_s.png" />
+            </control>
+        </control>
+    </control>
+</form>

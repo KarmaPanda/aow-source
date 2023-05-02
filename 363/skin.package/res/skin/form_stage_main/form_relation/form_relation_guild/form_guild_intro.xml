@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_relation\form_relation_guild\form_guild_intro.xml" entity="Form" script="form_stage_main\form_relation\form_relation_guild\form_guild_intro" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="189" Top="149" Width="636" Height="430" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_edit" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="496" Top="390" Width="126" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_guild_edit_purpose" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_edit_click" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="40" Top="-8" Width="574" Height="230" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="HEAD18_O" NoFrame="true" />
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="8" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_name" Font="font_text" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="33" Width="78" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_level_no" Font="font_text" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="108" Width="86" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_founder" Font="font_text" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="133" Width="102" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_found_date" Font="font_text" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="208" Width="126" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_location" Font="font_text" />
+            </control>
+            <control name="lbl_guild_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="108" Top="8" Width="118" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_guild_level" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="108" Top="33" Width="62" Height="16" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_guild_founder" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="108" Top="108" Width="126" Height="16" ForeColor="255,128,101,74" BackColor="255,0,0,0" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_found_date" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="160" Top="133" Width="118" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_guild_location" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="144" Top="208" Width="158" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="183" Width="78" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_capital" Font="font_text" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="83" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_captain_now" Font="font_text" />
+            </control>
+            <control name="lbl_guild_captain" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="160" Top="83" Width="86" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_guild_capital" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,158,22" LineHeight="17" LineTextAlign="Center" ScrollSize="17" Left="96" Top="183" Width="158" Height="22" ShadowColor="0,20,0,0" Text="mltbox_1" Font="font_text" NoFrame="true" />
+            </control>
+            <control name="groupbox_logo" entity="GroupBox" script="" init="">
+                <prop Left="480" Top="8" Width="95" Height="95" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                <control name="pic_logo" entity="Picture" script="" init="">
+                    <prop ZoomWidth="1.187500" ZoomHeight="1.187500" CenterX="-1" CenterY="-1" Width="95" Height="95" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                </control>
+                <control name="pic_frame" entity="Picture" script="" init="">
+                    <prop ZoomWidth="0.510753" ZoomHeight="0.336879" CenterX="-1" CenterY="-1" Width="95" Height="95" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                </control>
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="58" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_rank" Font="font_text" />
+            </control>
+            <control name="lbl_info_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="108" Top="58" Width="102" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_16" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="304" Top="83" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_bank_output" Font="font_text" />
+            </control>
+            <control name="lbl_info_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="408" Top="83" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="304" Top="8" Width="46" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_domain_large" Font="font_text" />
+            </control>
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="304" Top="33" Width="46" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_domain_midsize" Font="font_text" />
+            </control>
+            <control name="lbl_21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="304" Top="58" Width="46" Height="14" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_domain_pocketsize" Font="font_text" />
+            </control>
+            <control name="lbl_info_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="408" Top="8" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_info_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="424" Top="32" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_info_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="408" Top="58" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_29" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="158" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_supreme_level" Font="font_text" />
+            </control>
+            <control name="lbl_info_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="158" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text" />
+            </control>
+            <control name="lbl_18" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="456" Top="112" Width="95" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_guild_logo1" Font="font_text" />
+            </control>
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="243" Width="557" Height="134" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+        </control>
+        <control name="redit_1" entity="RichEdit" script="" init="">
+            <prop ViewRect="10,10,440,90" MaxLength="301" SelectBackColor="190,190,190,190" Caret="Default" LineHeight="15" ReturnAllFormat="false" ScrollSize="14" HasVScroll="true" Left="58" Top="251" Width="519" Height="102" ForeColor="255,128,101,74" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="FitWindow" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="14" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="237" Top="227" Width="175" Height="27" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="272" Top="232" Width="70" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_purpose" Font="font_text_title1" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="456" Top="356" Width="150" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_guild_input_word75" Font="font_text" />
+        </control>
+    </control>
+</form>

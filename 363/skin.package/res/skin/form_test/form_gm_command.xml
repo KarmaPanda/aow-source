@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_test\form_gm_command" init="main_form_init">
+        <prop Transparent="true" LimitInScreen="true" Left="21" Top="-895" Width="1174" Height="830" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="ListBox" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" VScrollLeft="true" Left="8" Top="584" Width="470" Height="206" BackColor="60,255,255,255" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_click="on_ListBox_select_click" />
+            <subor name="HScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="176" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="InputBox" entity="RichInputBox" script="" init="">
+            <prop SupportHtml="false" TextOffsetX="2" Caret="Default" Remember="true" Left="8" Top="800" Width="384" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_enter="on_inputbox_enter" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="787" Width="446" Height="16" ShadowColor="0,0,0,0" Text="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" />
+        </control>
+        <control name="adjuster_2" entity="Adjuster" script="" init="">
+            <prop Left="113" Top="788" Width="19" Height="14" ShadowColor="0,0,0,0" Text="adjuster_2" Cursor="WIN_SIZEWE" />
+            <event on_drag_move="on_adjuster_2_drag_move" />
+        </control>
+        <control name="btn_func" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="392" Top="800" Width="86" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="功能菜单" TabStop="true" />
+            <event on_click="on_btn_func_click" />
+        </control>
+        <control name="func_grpbox" entity="GroupBox" script="" init="">
+            <prop Left="468" Top="282" Width="450" Height="546" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="10" Top="6" Width="432" Height="63" BackColor="80,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="close_cbtn" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\button\small\b-03-out.png" FocusImage="gui\common\button\small\b-lock05-on.png" CheckedImage="gui\common\button\small\b-lock05-out.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="415" Top="8" Width="12" Height="12" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="锁定窗口" TabStop="true" />
+                </control>
+                <control name="cbtn_save" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="416" Top="24" Width="14" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="保存到文件(gm.txt)" TabStop="true" />
+                </control>
+            </control>
+            <control name="reload_rbtn" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="90" Top="9" Width="80" Height="24" ForeColor="255,0,0,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="重载资源" TabStop="true" />
+                <event on_checked_changed="on_reload_rbtn_checked_changed" />
+            </control>
+            <control name="createobj_rbtn" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="170" Top="9" Width="80" Height="24" ForeColor="255,0,0,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="添加删除" TabStop="true" />
+                <event on_checked_changed="on_createobj_rbtn_checked_changed" />
+            </control>
+            <control name="basefunc_rbtn" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="9" Width="80" Height="24" ForeColor="255,0,0,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="基础功能" TabStop="true" />
+                <event on_checked_changed="on_basefunc_rbtn_checked_changed" />
+            </control>
+            <control name="basefunc_grpbox" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="10" Top="72" Width="432" Height="464" BackColor="80,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+            </control>
+            <control name="reload_grpbox" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="10" Top="72" Width="432" Height="464" BackColor="80,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+            </control>
+            <control name="createobj_grpbox" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="10" Top="72" Width="432" Height="464" BackColor="80,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+            </control>
+            <control name="param_edit" entity="Edit" script="" init="">
+                <prop TextOffsetX="2" Caret="Default" Left="220" Top="45" Width="222" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="45" Width="206" Height="16" ShadowColor="0,0,0,0" Text="命令参数(参数用空格隔开)" />
+            </control>
+            <control name="somegms_rbtn" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="250" Top="9" Width="80" Height="24" ForeColor="255,0,0,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="批量命令" TabStop="true" />
+                <event on_checked_changed="on_somegms_rbtn_checked_changed" />
+            </control>
+            <control name="somegms_grpbox" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="10" Top="72" Width="432" Height="464" BackColor="80,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+                <control name="run_btn" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="351" Top="439" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="执行" TabStop="true" />
+                    <event on_click="on_run_btn_click" />
+                </control>
+                <control name="gms_lbox" entity="ListBox" script="" init="">
+                    <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Top="26" Width="432" Height="406" BackColor="60,255,255,255" ShadowColor="0,0,0,0" TabStop="true" />
+                    <event on_select_changed="on_gms_lbox_select_changed" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="readfile_btn" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="282" Top="1" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="导入" HintText="把GM列表文件放在bin\gm\目录下" TabStop="true" />
+                    <event on_click="on_readfile_btn_click" />
+                </control>
+                <control name="onegm_edit" entity="Edit" script="" init="">
+                    <prop TextOffsetX="2" Caret="Default" Top="439" Width="254" Height="24" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+                </control>
+                <control name="gmedit_btn" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="268" Top="439" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="修改" HintText="修改选中的命令" TabStop="true" />
+                    <event on_click="on_gmedit_btn_click" />
+                </control>
+                <control name="combobox_files" entity="ComboBox" script="" init="">
+                    <prop ButtonWidth="20" DropDownHeight="142" Left="1" Top="3" Width="278" Height="20" ShadowColor="0,0,0,0" />
+                    <subor name="InputEdit">
+                        <prop TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+                    </subor>
+                    <subor name="DropButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="DropListBox">
+                        <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                        <subor name="VScrollBar">
+                            <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                            <subor name="DecButton">
+                                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_out" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="348" Top="1" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="擂台导出" />
+                    <event on_click="on_btn_out_click" />
+                </control>
+            </control>
+            <control name="cleardata_grpbox" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="10" Top="70" Width="432" Height="464" BackColor="80,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+                <control name="clear_btn" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="346" Top="182" Width="86" Height="48" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="清除表格" TabStop="true" />
+                    <event on_click="on_clear_btn_click" />
+                </control>
+                <control name="listbox_table" entity="ListBox" script="" init="">
+                    <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" Left="2" Top="-2" Width="342" Height="466" BackColor="60,255,255,255" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+                    <subor name="HScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                    <subor name="VScrollBar">
+                        <prop SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="436" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                    <subor name="CornerLabel">
+                        <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                    </subor>
+                </control>
+            </control>
+            <control name="cleardata_rbtn" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="330" Top="9" Width="80" Height="24" ForeColor="255,0,0,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="清除数据" TabStop="true" />
+                <event on_checked_changed="on_cleardata_rbtn_checked_changed" />
+            </control>
+        </control>
+        <control name="adjuster_1" entity="Adjuster" script="" init="">
+            <prop Left="468" Top="584" Width="10" Height="10" ShadowColor="0,0,0,0" Text="adjuster_1" Cursor="WIN_SIZENESW" AutoSize="true" />
+            <event on_drag_move="on_adjuster_drag_move" />
+        </control>
+    </control>
+</form>

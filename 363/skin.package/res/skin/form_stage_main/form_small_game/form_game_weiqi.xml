@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_weiqi" init="main_form_init">
+        <prop LimitInScreen="true" Left="20" Top="30" Width="1158" Height="854" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_back" entity="GroupBox" script="" init="">
+            <prop Left="9" Top="-1" Width="100" Height="80" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\forgegameground.png" />
+        </control>
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Left="57" Top="87" Width="930" Height="662" BackColor="0,103,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="20" Width="749" Height="540" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\weiqi_game\weiqi_background.png" />
+            </control>
+            <control name="lbl_grid_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="152" Top="52" Width="477" Height="477" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\weiqi_game\weiqi_grid.png" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\tc-out.png" FocusImage="gui\language\ChineseS\tc-on.png" PushImage="gui\language\ChineseS\tc-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="744" Top="24" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_help" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\minigame\help_out.png" FocusImage="gui\language\ChineseS\minigame\help_on.png" PushImage="gui\language\ChineseS\minigame\help_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="744" Top="88" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_help_click" />
+            </control>
+            <control name="lbl_pebar_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="564" Width="241" Height="100" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\weiqi_game\weiqi_progressbackground.png" />
+            </control>
+            <control name="pebar_time" entity="EllipseProgressBar" script="" init="">
+                <prop BeginDelta="200" EndDelta="340" Maximum="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\smallgame\weiqi_game\weiqi_eprogress.png" Left="293" Top="568" Width="198" Height="198" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="groupbox_tips" entity="GroupBox" script="" init="">
+                <prop BlendAlpha="200" Left="740" Top="280" Width="214" Height="270" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                <control name="mltbox_text" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,253,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="1,1,182,142" LineHeight="19" ScrollSize="17" Left="8" Top="8" Width="174" Height="270" ShadowColor="0,0,0,0" NoFrame="true" />
+                </control>
+            </control>
+            <control name="imagegrid_weiqi" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,0,477,477" MaxSize="-1" RowNum="19" ClomnNum="19" GridHeight="25" GridWidth="25" DrawMouseIn="gui\mainform\smallgame\weiqi_game\weiqi_mouse.png" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="152" Top="48" Width="477" Height="477" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+                <event on_mouseout_grid="on_imagegrid_weiqi_mouseout_grid" on_select_changed="on_imagegrid_weiqi_select_changed" on_mousein_grid="on_imagegrid_weiqi_mousein_grid" />
+            </control>
+            <control name="lbl_game_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="312" Width="150" Height="24" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="WRYH24" />
+            </control>
+            <control name="groupbox_light" entity="GroupBox" script="" init="">
+                <prop Left="328" Top="624" Width="134" Height="38" BackColor="0,99,79,105" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_light1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="35" Height="34" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\life_on.png" />
+                </control>
+                <control name="lbl_light2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Width="35" Height="34" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\life_on.png" />
+                </control>
+                <control name="lbl_light3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="96" Width="35" Height="34" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\life_on.png" />
+                </control>
+            </control>
+            <control name="lbl_name1" entity="Label" script="" init="">
+                <prop Align="Center" Solid="true" RefCursor="WIN_HELP" IsLimitWidth="true" Left="167" Top="160" Width="150" Height="38" ForeColor="255,255,255,255" BackColor="0,50,50,50" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_xiayi_title1" DrawMode="Expand" BackImage="gui\common\form_back\origin_t.png" />
+            </control>
+            <control name="lbl_name2" entity="Label" script="" init="">
+                <prop Align="Center" Solid="true" RefCursor="WIN_HELP" Left="-465" Top="384" Width="150" Height="38" ForeColor="255,255,255,255" BackColor="0,50,50,50" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_xiayi_title1" DrawMode="Expand" BackImage="gui\common\form_back\origin_t.png" />
+            </control>
+            <control name="btn_start" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\minigame\start-out.png" FocusImage="gui\language\ChineseS\minigame\start-on.png" PushImage="gui\language\ChineseS\minigame\start-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="624" Width="71" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_start_click" />
+            </control>
+            <control name="btn_yanshi" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\yanshi-out.png" FocusImage="gui\language\ChineseS\yanshi-on.png" PushImage="gui\language\ChineseS\yanshi-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="624" Width="71" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_yanshi_click" />
+            </control>
+            <control name="btn_break_yanshi" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\tiaoguo-out.png" FocusImage="gui\language\ChineseS\tiaoguo-on.png" PushImage="gui\language\ChineseS\tiaoguo-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="624" Width="71" Height="42" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_break_yanshi_click" />
+            </control>
+            <control name="lbl_tips" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="328" Top="512" Width="128" Height="48" ForeColor="149,255,0,0" ShadowColor="0,0,0,0" Text="@ui_YourTurn" Font="FZHKJT30" DrawMode="Expand" BackImage="gui\common\form_back\di02-b.png" />
+            </control>
+        </control>
+    </control>
+</form>

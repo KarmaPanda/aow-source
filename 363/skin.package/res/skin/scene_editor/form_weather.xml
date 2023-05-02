@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_weather" init="main_form_init">
+        <prop Left="93" Top="101" Width="430" Height="606" BackColor="150,152,155,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="128" Top="568" Width="78" Height="24" ShadowColor="0,0,0,0" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="568" Width="78" Height="24" ShadowColor="0,0,0,0" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="8" Width="94" Height="22" ShadowColor="0,0,0,0" Text="天气参数" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="40" Width="46" Height="22" ShadowColor="0,0,0,0" Text="环境光：" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="160" Top="40" Width="46" Height="22" ShadowColor="0,0,0,0" Text="太阳光：" />
+        </control>
+        <control name="fog_exp_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="232" Width="94" Height="22" ShadowColor="0,0,0,0" Text="开启指数雾效" TabStop="true" />
+            <event on_checked_changed="fog_exp_checked_changed" />
+        </control>
+        <control name="fog_density_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="280" Width="70" Height="22" ShadowColor="0,0,0,0" Text="指数雾浓度：" />
+        </control>
+        <control name="show_sun_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="224" Top="128" Width="86" Height="24" ShadowColor="0,0,0,0" Text="显示太阳" TabStop="true" />
+            <event on_checked_changed="show_sun_checked_changed" />
+        </control>
+        <control name="sun_azimuth_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Top="200" Width="80" Height="14" ShadowColor="0,0,0,0" Text="太阳方位角：" />
+        </control>
+        <control name="sun_height_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Top="160" Width="80" Height="14" ShadowColor="0,0,0,0" Text="太阳高度角：" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="120" Width="70" Height="22" ShadowColor="0,0,0,0" Text="线性雾颜色：" />
+        </control>
+        <control name="ambient_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="72" Top="40" Width="22" Height="22" BackColor="255,83,86,83" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+        <control name="sunglow_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="208" Top="40" Width="22" Height="22" BackColor="255,255,198,162" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+        <control name="fog_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="96" Top="120" Width="22" Height="22" BackColor="255,205,210,224" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+        <control name="ambient_color_btn" entity="Button" script="" init="">
+            <prop Left="96" Top="40" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="ambient_color_btn_click" />
+        </control>
+        <control name="sunglow_color_btn" entity="Button" script="" init="">
+            <prop Left="232" Top="40" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="sunglow_color_btn_click" />
+        </control>
+        <control name="fog_color_btn" entity="Button" script="" init="">
+            <prop Left="120" Top="120" Width="46" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="fog_color_btn_click" />
+        </control>
+        <control name="sky_up_tex_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="368" Width="86" Height="22" ShadowColor="0,0,0,0" Text="天空顶部贴图：" />
+        </control>
+        <control name="sky_side_tex_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="392" Width="86" Height="22" ShadowColor="0,0,0,0" Text="天空四周贴图：" />
+        </control>
+        <control name="sky_up_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="112" Top="368" Width="254" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="sky_side_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="112" Top="392" Width="254" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="sky_up_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="368" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="sky_up_btn_click" />
+        </control>
+        <control name="sky_side_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="392" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="sky_side_btn_click" />
+        </control>
+        <control name="fog_height_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="192" Width="70" Height="22" ShadowColor="0,0,0,0" Text="天空雾高度：" />
+        </control>
+        <control name="show_sky_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="320" Width="62" Height="22" ShadowColor="0,0,0,0" Text="显示天空" TabStop="true" />
+            <event on_checked_changed="show_sky_checked_changed" />
+        </control>
+        <control name="sun_azimuth_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="360" Left="224" Top="216" Width="182" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="sun_azimuth_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="sun_height_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="180" Left="224" Top="176" Width="182" Height="14" ShadowColor="0,0,0,0" />
+            <event on_value_changed="sun_height_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="14" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="show_flare_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="320" Top="128" Width="80" Height="24" ShadowColor="0,0,0,0" Text="显示光晕" TabStop="true" />
+            <event on_checked_changed="show_flare_checked_changed" />
+        </control>
+        <control name="wind_speed_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Top="248" Width="110" Height="14" ShadowColor="0,0,0,0" Text="风力：" />
+        </control>
+        <control name="wind_angle_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="224" Top="288" Width="102" Height="14" ShadowColor="0,0,0,0" Text="风向：" />
+        </control>
+        <control name="wind_speed_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="300" Left="224" Top="264" Width="182" Height="16" ShadowColor="0,0,0,0" />
+            <event on_value_changed="wind_speed_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="16" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="wind_angle_track" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="360" Left="224" Top="304" Width="182" Height="16" ShadowColor="0,0,0,0" />
+            <event on_value_changed="wind_angle_value_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="16" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="fog_linear_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="96" Width="94" Height="22" ShadowColor="0,0,0,0" Text="开启线性雾效" TabStop="true" />
+            <event on_checked_changed="fog_linear_checked_changed" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="144" Width="70" Height="22" ShadowColor="0,0,0,0" Text="线性雾起始：" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="168" Width="70" Height="22" ShadowColor="0,0,0,0" Text="线性雾结束：" />
+        </control>
+        <control name="fog_start_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="96" Top="144" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="fog_start_drag" on_lost_focus="fog_start_lost_focus" />
+        </control>
+        <control name="fog_end_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="96" Top="168" Width="70" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="fog_end_drag" on_lost_focus="fog_end_lost_focus" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="64" Width="62" Height="22" ShadowColor="0,0,0,0" Text="亮度系数：" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="160" Top="64" Width="62" Height="22" ShadowColor="0,0,0,0" Text="亮度系数：" />
+        </control>
+        <control name="ambient_intensity_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="64" Width="46" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="ambient_intensity_drag" on_lost_focus="ambient_intensity_lost_focus" />
+        </control>
+        <control name="sunglow_intensity_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="224" Top="64" Width="46" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="sunglow_intensity_drag" on_lost_focus="sunglow_intensity_lost_focus" />
+        </control>
+        <control name="rain_enable_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="424" Width="86" Height="22" ShadowColor="0,0,0,0" Text="降水开启" TabStop="true" />
+            <event on_checked_changed="rain_enable_checked_changed" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="288" Top="448" Width="38" Height="16" ShadowColor="0,0,0,0" Text="颜色：" />
+        </control>
+        <control name="raincolor_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="328" Top="448" Width="22" Height="22" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+        <control name="raincolor_btn" entity="Button" script="" init="">
+            <prop Left="352" Top="448" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="raincolor_btn_click" />
+        </control>
+        <control name="Label10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="448" Width="38" Height="16" ShadowColor="0,0,0,0" Text="速度：" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="200" Top="448" Width="38" Height="16" ShadowColor="0,0,0,0" Text="缩放：" />
+        </control>
+        <control name="rainspeed_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="448" Width="46" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="rainspeed_edit_drag" on_lost_focus="rainspeed_edit_lost_focus" />
+        </control>
+        <control name="rainscale_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="240" Top="448" Width="46" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="rainscale_edit_drag" on_lost_focus="rainscale_edit_lost_focus" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="112" Top="448" Width="38" Height="16" ShadowColor="0,0,0,0" Text="扰动：" />
+        </control>
+        <control name="rainrotate_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="152" Top="448" Width="46" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="rainrotate_edit_drag" on_lost_focus="rainrotate_edit_lost_focus" />
+        </control>
+        <control name="Label13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="480" Width="54" Height="22" ShadowColor="0,0,0,0" Text="贴图1：" />
+        </control>
+        <control name="raintex1_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="80" Top="480" Width="278" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="raintex1_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="480" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="raintex1_btn_click" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="504" Width="54" Height="22" ShadowColor="0,0,0,0" Text="贴图2：" />
+        </control>
+        <control name="raintex2_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="80" Top="504" Width="278" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="raintex2_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="504" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="raintex2_btn_click" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="528" Width="54" Height="22" ShadowColor="0,0,0,0" Text="贴图3：" />
+        </control>
+        <control name="raintex3_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="80" Top="528" Width="278" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="raintex3_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="528" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="raintex3_btn_click" />
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="296" Top="40" Width="46" Height="22" ShadowColor="0,0,0,0" Text="反射光：" />
+        </control>
+        <control name="specular_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="344" Top="40" Width="22" Height="22" BackColor="255,83,86,83" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+        <control name="specular_color_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="40" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="specular_color_btn_click" />
+        </control>
+        <control name="Label18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="296" Top="64" Width="62" Height="22" ShadowColor="0,0,0,0" Text="亮度系数：" />
+        </control>
+        <control name="specular_intensity_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="360" Top="64" Width="46" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="specular_intensity_drag" on_lost_focus="specular_intensity_lost_focus" />
+        </control>
+        <control name="sun_tex_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="160" Top="96" Width="62" Height="22" ShadowColor="0,0,0,0" Text="太阳贴图：" />
+        </control>
+        <control name="sun_tex_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="224" Top="96" Width="142" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="sun_tex_btn" entity="Button" script="" init="">
+            <prop Left="368" Top="96" Width="38" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="sun_tex_btn_click" />
+        </control>
+        <control name="sky_yaw_speed_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.3f" DragStep="0.010000" Min="-10.000000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="112" Top="344" Width="86" Height="22" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="sky_yaw_speed_edit_drag" on_lost_focus="sky_yaw_speed_edit_lost_focus" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="344" Width="86" Height="22" ShadowColor="0,0,0,0" Text="天空旋转速度：" />
+        </control>
+        <control name="fog_density_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.000100" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="96" Top="280" Width="70" Height="22" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="fog_density_edit_changed" on_drag="fog_density_edit_changed" />
+        </control>
+        <control name="fog_height_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="96" Top="192" Width="70" Height="22" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="fog_height_edit_changed" on_drag="fog_height_edit_changed" />
+        </control>
+        <control name="Label17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="256" Width="70" Height="22" ShadowColor="0,0,0,0" Text="指数雾颜色：" />
+        </control>
+        <control name="fog_exp_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="96" Top="256" Width="22" Height="22" BackColor="255,205,210,224" ShadowColor="0,0,0,0" NoFrame="false" />
+        </control>
+        <control name="fog_exp_color_btn" entity="Button" script="" init="">
+            <prop Left="120" Top="256" Width="46" Height="24" ShadowColor="0,0,0,0" Text="更改" TabStop="true" />
+            <event on_click="fog_exp_color_btn_click" />
+        </control>
+    </control>
+</form>

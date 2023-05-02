@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_common\form_pictfile" init="main_form_init">
+        <prop LimitInScreen="true" Left="77" Top="125" Width="670" Height="384" BackColor="255,150,150,255" ShadowColor="0,0,0,0" Font="GE_FONT" />
+        <event on_open="main_form_open" />
+        <control name="file_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="240" Top="48" Width="198" Height="200" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="file_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="path_tree" entity="TreeView" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" LevelWidth="18" ScrollSize="17" Left="24" Top="48" Width="198" Height="200" ShadowColor="0,0,0,0" Text="TreeView1" TabStop="true" />
+            <event on_expand_changed="path_expand_changed" on_select_changed="path_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="240" Top="336" Width="88" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Sure" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="344" Top="336" Width="88" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Cancel" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="name_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="104" Top="264" Width="334" Height="24" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="264" Width="80" Height="24" ShadowColor="0,0,0,0" Text="@ui_FileNameMH" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="296" Width="80" Height="24" ShadowColor="0,0,0,0" Text="@ui_FileTypeMH" />
+        </control>
+        <control name="type_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="104" Top="296" Width="334" Height="24" ShadowColor="0,0,0,0" Text="*.*" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Text="*.*" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="272" Top="8" Width="126" Height="24" ShadowColor="0,0,0,0" Text="@ui_SelImage" />
+        </control>
+        <control name="format_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="456" Top="296" Width="182" Height="22" ShadowColor="0,0,0,0" Text="@ui_RuleMH" />
+        </control>
+        <control name="sample_pict" entity="Picture" script="" init="">
+            <prop CenterX="-1" CenterY="-1" Left="456" Top="48" Width="190" Height="198" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="pictfile_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="456" Top="264" Width="190" Height="22" ShadowColor="0,0,0,0" Text="@ui_FileMH" />
+        </control>
+    </control>
+</form>

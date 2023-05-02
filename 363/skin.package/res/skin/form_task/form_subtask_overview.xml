@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_task\form_subtask_overview" init="main_form_init">
+        <prop ShowGrid="true" Left="117" Top="101" Width="790" Height="366" ForeColor="255,111,122,60" BackColor="255,134,143,152" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="overview_grid" entity="Grid" script="" init="">
+            <prop HeaderBackColor="255,96,106,116" SelectBackColor="255,113,88,18" CanSelectRow="true" ColWidth="70" RowHeight="24" ColCount="10" ScrollSize="17" HasHScroll="true" Left="16" Top="64" Width="766" Height="254" BackColor="255,134,143,152" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <event on_select_row="overview_grid_select_row" on_double_click_grid="overview_grid_double_click_grid" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="597" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="hunter_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="16" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="猎杀表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="collect_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="80" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="采集表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="interact_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="144" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="交互表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="story_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="208" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="故事类" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="question_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="272" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="答题表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="useitem_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="336" Top="32" Width="94" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="使用道具表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="convoy_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="432" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="护送表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="add_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="16" Top="328" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="+" TabStop="true" />
+            <event on_click="add_btn_click" />
+        </control>
+        <control name="delete_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="40" Top="328" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="-" TabStop="true" />
+            <event on_click="delete_btn_click" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="744" Top="8" Width="30" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="save_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="240" Top="328" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="保存" TabStop="true" />
+            <event on_click="save_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="8" Width="70" Height="16" ShadowColor="0,0,0,0" Text="步骤总表" />
+        </control>
+        <control name="sort_up_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="88" Top="328" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="升序" TabStop="true" />
+            <event on_click="sort_btn_click" />
+        </control>
+        <control name="sort_down_btn" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="136" Top="328" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="降序" TabStop="true" />
+            <event on_click="sort_btn_click" />
+        </control>
+        <control name="id_key_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="704" Top="32" Width="78" Height="24" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="id_key_edit_changed" />
+        </control>
+        <control name="choose_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="560" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="选择表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="questiongroup_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="496" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="题库表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+        <control name="special_rb" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="624" Top="32" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="特殊表" TabStop="true" />
+            <event on_checked_changed="grid_changed_rb_click" />
+        </control>
+    </control>
+</form>

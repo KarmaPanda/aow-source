@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_small_game\form_game_weiqi_edit.xml" entity="Form" script="form_stage_main\form_small_game\form_game_weiqi_edit" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="13" Top="13" Width="1006" Height="630" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="8" Width="990" Height="614" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Width="749" Height="540" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\weiqi_game\weiqi_background.png" />
+            </control>
+            <control name="lbl_grid_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="152" Top="32" Width="477" Height="477" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\weiqi_game\weiqi_grid1.png" />
+            </control>
+            <control name="combobox_qipantype" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="872" Top="16" Width="102" Height="20" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <event on_selected="on_combobox_qipantype_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" />
+                </subor>
+                <subor name="DropButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="752" Top="-8" Width="5" Height="622" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\kuangxian\fgx4.png" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="752" Top="16" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qipanleixing" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="752" Top="56" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@uiyouxileixing" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="752" Top="96" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qizileixing:" Font="FZHKJT20" />
+            </control>
+            <control name="combobox_gametype" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="872" Top="56" Width="102" Height="20" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <event on_selected="on_combobox_gametype_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" />
+                </subor>
+                <subor name="DropButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="combobox_qizitype" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="872" Top="96" Width="102" Height="20" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <event on_selected="on_combobox_qizitype_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" />
+                </subor>
+                <subor name="DropButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="200" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_youxishijian" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="720" Top="232" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_rongcuocishu" Font="FZHKJT20" />
+            </control>
+            <control name="ipt_time" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="6000" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="880" Top="200" Width="80" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="30" Font="font_main" Cursor="WIN_IBEAM" HintText="@ui_Second" TabStop="true" />
+            </control>
+            <control name="ipt_errortimes" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="100" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="880" Top="232" Width="80" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="920" Top="576" Width="71" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guanbi" Font="FZHKJT20" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_buju" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="576" Width="71" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_buju" Font="FZHKJT20" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_buju_click" />
+            </control>
+            <control name="btn_add_bai" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\weiqi_game\weiqi_bai.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="32" Width="57" Height="57" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianjia" Font="FZHKJT20" HintText="@ui_tianjiaqizi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_add_bai_click" />
+            </control>
+            <control name="btn_delete" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close\bX-out.png" FocusImage="gui\common\button\btn_close\bX-on.png" PushImage="gui\common\button\btn_close\bX-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="168" Width="51" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="FZHKJT20" HintText="@ui_shanchuqizi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_delete_click" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="152" Top="552" Width="80" Height="16" ShadowColor="0,0,0,0" Text="ui_dangqiancaozuo" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="304" Top="552" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_wu" Font="FZHKJT20" />
+            </control>
+            <control name="btn_yanshi" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="176" Top="576" Width="78" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xiaqi" Font="FZHKJT20" HintText="@ui_wanjiaduijiqiren" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_yanshi_click" />
+            </control>
+            <control name="btn_clear" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="576" Width="71" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_qingli" Font="FZHKJT20" HintText="@ui_qinglizhuangtai" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_clear_click" />
+            </control>
+            <control name="imagegrid_weiqi" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,513,513" MaxSize="-1" RowNum="9" ClomnNum="9" GridHeight="57" GridWidth="57" DrawMouseIn="gui\mainform\smallgame\weiqi_game\weiqi_mouse.png" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="134" Top="14" Width="513" Height="513" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+                <event on_select_changed="on_imagegrid_weiqi_select_changed" />
+            </control>
+            <control name="btn_add_hei" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\weiqi_game\weiqi_hei.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="96" Width="57" Height="57" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianjia" Font="FZHKJT20" HintText="@ui_tianjiaqizi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_add_hei_click" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="464" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_duanming" Font="FZHKJT20" />
+            </control>
+            <control name="ipt_name" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="400" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="856" Top="464" Width="80" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="ipt_num" entity="Edit" script="" init="">
+                <prop MaxDigit="100" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="512" Top="550" Width="50" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="ipt_total_num" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="100" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="576" Top="550" Width="46" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="1" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="568" Top="552" Width="14" Height="16" ShadowColor="0,0,0,0" Text="/" Font="FZHKJT20" />
+            </control>
+            <control name="btn_save" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="840" Top="576" Width="71" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_baocun" Font="FZHKJT20" HintText="@ui_baocunduanming" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_save_click" />
+            </control>
+            <control name="ipt_textinfo_ex" entity="Edit" script="" init="">
+                <prop TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="520" Top="584" Width="166" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="448" Top="584" Width="54" Height="16" ShadowColor="0,0,0,0" Text="@ui_zhushi" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="448" Top="552" Width="54" Height="16" ShadowColor="0,0,0,0" Text="@ui_buzhou" Font="FZHKJT20" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="384" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_qijuzhushi" Font="FZHKJT20" />
+            </control>
+            <control name="ipt_textinfo" entity="Edit" script="" init="">
+                <prop TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="792" Top="408" Width="166" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="264" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_jiangeshijian" Font="FZHKJT20" HintText="@ui_liangbuqijiange" />
+            </control>
+            <control name="ipt_spacing_time" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="10000" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="880" Top="264" Width="80" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="2000" Font="font_main" Cursor="WIN_IBEAM" HintText="@ui_haomiao" TabStop="true" />
+            </control>
+            <control name="btn_continue" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\smallgame\weiqi_game\weiqi_quan1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="160" Width="57" Height="57" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jixuxiaqi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_continue_click" />
+            </control>
+            <control name="btn_goback" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="272" Top="576" Width="71" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huitui" Font="FZHKJT20" HintText="@ui_huituidaobuju" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_goback_click" />
+            </control>
+            <control name="btn_read" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="768" Top="488" Width="174" Height="33" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_duqu" Font="FZHKJT20" HintText="@ui_duquduanming" TabStop="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_read_click" />
+            </control>
+            <control name="lbl_firstturn" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="136" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_xianshou" Font="FZHKJT20" />
+            </control>
+            <control name="combobox_firstturn" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="872" Top="136" Width="102" Height="20" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <event on_selected="on_combobox_firstturn_selected" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" />
+                </subor>
+                <subor name="DropButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="296" Width="80" Height="22" ShadowColor="0,0,0,0" Text="ui_biaoji" Font="FZHKJT20" />
+            </control>
+            <control name="ipt_mark_type" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="880" Top="296" Width="80" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Text="3" Font="font_main" Cursor="WIN_IBEAM" HintText="@ui_biaojileixing" TabStop="true" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="768" Top="336" Width="80" Height="16" ShadowColor="0,0,0,0" Text="@ui_bangzhu" Font="FZHKJT20" />
+            </control>
+            <control name="ipt_help_text" entity="Edit" script="" init="">
+                <prop TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="792" Top="360" Width="166" Height="20" BackColor="99,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+        </control>
+    </control>
+</form>

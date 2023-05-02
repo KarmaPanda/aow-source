@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_project" init="main_form_init">
+        <prop Left="109" Top="61" Width="382" Height="350" BackColor="150,152,155,255" Font="GE_FONT" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="96" Top="312" Width="80" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="200" Top="312" Width="80" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="72" Width="110" Height="22" Text="地形工程列表：" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="8" Width="118" Height="22" Text="选择地形工程" />
+        </control>
+        <control name="new_project_btn" entity="Button" script="" init="">
+            <prop Left="264" Top="72" Width="94" Height="24" Text="新建地形" TabStop="true" />
+            <event on_click="new_project_btn_click" />
+        </control>
+        <control name="project_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="24" Top="96" Width="334" Height="206" Text="ListBox1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+        </control>
+        <control name="path_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="24" Top="40" Width="334" Height="20" Text="地形工程路径：" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+    </control>
+</form>

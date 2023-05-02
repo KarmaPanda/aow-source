@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_player_info" init="main_form_init">
+        <prop Left="29" Top="29" Width="431" Height="567" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_title_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="148" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="400" Top="6" Width="20" Height="22" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Font="simsun12_S" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="138" Top="8" Width="170" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_renwu_info" Font="font_title" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="421" Height="9" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="32" Width="423" Height="532" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="83" Width="411" Height="366" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\mibox_1.png" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-2" Top="-32" Width="429" Height="564" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="94" Top="19" Width="94" Height="27" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name" DrawMode="ExpandH" />
+            </control>
+            <control name="btn_chat" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main\info_out.png" FocusImage="gui\special\btn_main\info_on.png" PushImage="gui\special\btn_main\info_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="148" Top="54" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_sns_systemfriends_talk" AutoSize="true" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_mail" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\role\btn_mail_out.png" FocusImage="gui\mainform\role\btn_mail_on.png" PushImage="gui\mainform\role\btn_mail_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="82" Top="52" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="3" HintText="@ui_mail_fasong" TabStop="true" AutoSize="true" />
+                <event on_click="on_btn_mail_click" />
+            </control>
+            <control name="btn_team" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main\btn_team_out_1.png" FocusImage="gui\special\btn_main\btn_team_on_1.png" PushImage="gui\special\btn_main\btn_team_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="114" Top="54" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="3" HintText="@ui_playerlink_yaoqingzudui" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_team_click" />
+            </control>
+            <control name="btn_copyname" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="278" Top="18" Width="99" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_sns_npcinfo_copyname" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_copyname_click" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="17" Top="23" Width="48" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\icon_skill.png" />
+            </control>
+            <control name="lbl_photo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="18" Top="12" Width="48" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="141" Width="44" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_school" Font="font_playername" />
+            </control>
+            <control name="lbl_menpai" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="62" Top="141" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="168" Width="37" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_camp" Font="font_playername" />
+            </control>
+            <control name="lbl_bangpai" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="54" Top="168" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="115" Width="44" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_level" Font="font_playername" />
+            </control>
+            <control name="btn_friend" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="230" Top="496" Width="145" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_menu_friend_jiawei_friend" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_friend_click" />
+            </control>
+            <control name="btn_guanzhu" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="230" Top="456" Width="145" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_menu_friend_jiawei_attention" Font="font_main" DrawMode="ExpandH" />
+                <event on_click="on_btn_guanzhu_click" />
+            </control>
+            <control name="btn_add_filter" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="30" Top="456" Width="145" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_menu_friend_add_heimingdan" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_add_filter_click" />
+            </control>
+            <control name="btn_add_filter_native" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="30" Top="496" Width="145" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_add_filter_native" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_add_filter_native_click" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="272" Width="110" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_life" Font="font_playername" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,255" MouseInBarColor="0,0,0,0" ViewRect="0,0,284,59" LineHeight="18" ScrollSize="17" Left="116" Top="272" Width="284" Height="59" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_playername" NoFrame="true" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="235" Top="168" Width="86" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_banghuizhiwu" Font="font_playername" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="316" Top="168" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_zhuangtai" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="112" Top="220" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="220" Width="126" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_npcinfo_scene" Font="font_playername" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="235" Top="115" Width="42" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_chenghao" Font="font_playername" />
+            </control>
+            <control name="lbl_chengwei" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="276" Top="115" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="235" Top="93" Width="60" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_rank_27_gx" Font="font_playername" />
+            </control>
+            <control name="lbl_guanxi" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="298" Top="93" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="93" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_system_info_xiae" Font="font_playername" />
+            </control>
+            <control name="lbl_shane" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="81" Top="94" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_shili" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="59" Top="115" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="196" Width="46" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_shixiong" Font="font_playername" />
+            </control>
+            <control name="lbl_teacher" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="62" Top="196" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_16" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="245" Width="134" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_jianghumingjun" Font="font_playername" />
+            </control>
+            <control name="lbl_viper" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="132" Top="245" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="235" Top="141" Width="110" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_rank_hunpei" Font="font_playername" />
+            </control>
+            <control name="lbl_marry" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="339" Top="141" Width="78" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="groupbox_2" entity="GroupBox" script="" init="">
+                <prop Left="6" Top="329" Width="399" Height="102" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_17" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="7" Top="4" Width="62" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_sworn040" Font="font_playername" />
+                </control>
+                <control name="lbl_sworn_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="31" Width="94" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+                </control>
+                <control name="lbl_sworn_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="210" Top="31" Width="94" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+                </control>
+                <control name="lbl_sworn_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="51" Width="94" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+                </control>
+                <control name="lbl_sworn_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="210" Top="51" Width="94" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+                </control>
+                <control name="lbl_sworn_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="71" Width="94" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_playername" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

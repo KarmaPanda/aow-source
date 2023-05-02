@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_camera\form_save_camera" init="init">
+        <prop Transparent="true" LimitInScreen="true" ShowGrid="true" Left="173" Top="445" Width="806" Height="190" ForeColor="255,255,192,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Center" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="fipt_move_velocity" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-10000.000000" Max="10000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="344" Top="64" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="lbl_move_velocity" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="216" Top="64" Width="102" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_camera_move_speed" Font="HyperLink4" />
+        </control>
+        <control name="fipt_pos_z" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-10000.000000" Max="10000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="88" Top="64" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="lbl_pos_z" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="64" Width="46" Height="16" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Text="@ui_zzuobian" Font="HyperLink4" />
+        </control>
+        <control name="fipt_pos_y" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-10000.000000" Max="10000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="344" Top="48" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="lbl_pos_y" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="216" Top="48" Width="102" Height="16" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Text="@ui_yzuobiao" Font="HyperLink4" />
+        </control>
+        <control name="fipt_pos_x" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-10000.000000" Max="10000.000000" ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="88" Top="48" Width="80" Height="16" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Font="HyperLink4" Cursor="WIN_IBEAM" TabStop="true" DisableEnter="true" />
+        </control>
+        <control name="lbl_pos_x" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="48" Width="46" Height="16" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Text="@ui_xzuobiao" Font="HyperLink4" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="48" Width="430" Height="34" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="groupbox_3" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="408" Top="8" Width="374" Height="80" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="44" Width="358" Height="43" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\camera\bg_menu.png" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_down_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="352" Top="16" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_set" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\camera\btn_menu_on.png" FocusImage="gui\special\camera\btn_menu_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="216" Top="24" Width="78" Height="39" ForeColor="255,209,187,143" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_camera_setting" Font="font_system_world" HintText="@ui_camera_setting_tips" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_set_click" />
+            </control>
+            <control name="btn_video" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\camera\btn_menu_on.png" FocusImage="gui\special\camera\btn_menu_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="144" Top="16" Width="78" Height="39" ForeColor="255,209,187,143" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_camera_rec" Font="font_system_world" HintText="@ui_camera_rec_tips" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_video_click" />
+            </control>
+            <control name="btn_edit_point" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\camera\btn_menu_on.png" FocusImage="gui\special\camera\btn_menu_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="96" Top="16" Width="54" Height="39" ForeColor="255,209,187,143" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_camera_edit" Font="font_system_world" HintText="@ui_camera_edit_tips" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_edit_point_click" />
+            </control>
+            <control name="btn_add_point" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\camera\btn_menu_on.png" FocusImage="gui\special\camera\btn_menu_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="48" Top="24" Width="54" Height="39" ForeColor="255,209,187,143" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_camera_add" Font="font_system_world" HintText="@ui_camera_add_tips" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_add_point_click" />
+            </control>
+            <control name="btn_play_all" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\camera\btn_menu_on.png" FocusImage="gui\special\camera\btn_menu_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Top="40" Width="54" Height="39" ForeColor="255,209,187,143" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_camera_play" Font="font_system_world" HintText="@ui_camera_play_tips" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_play_all_click" />
+            </control>
+            <control name="btn_file" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\camera\btn_menu_on.png" FocusImage="gui\special\camera\btn_menu_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="280" Top="40" Width="102" Height="39" ForeColor="255,209,187,143" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_camera_more" Font="font_system_world" HintText="@ui_camera_more_tips" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_file_click" />
+            </control>
+            <control name="menu_file" entity="Menu" script="" init="">
+                <prop ItemHeight="20" SelectForeColor="0,255,255,255" SelectBackColor="0,176,176,240" SelectBorderColor="0,0,0,240" SelectBarDraw="gui\common\treeview\tree_2_on.png" SplitColor="0,192,192,192" LeftBarWidth="24" LeftBar="true" LeftBarBackColor="0,95,67,37" Left="296" Top="24" Width="36" Height="4" ForeColor="255,209,187,143" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="menu_1" Font="font_text" DrawMode="Expand" BackImage="gui\mainform\chat\bg_select.png" />
+                <event on_lost_capture="on_menu_file_lost_capture" />
+            </control>
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="132" Width="86" Height="14" ForeColor="255,95,67,37" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\operation\top.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="114" Width="86" Height="14" ForeColor="255,95,67,37" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\operation\top.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="96" Width="86" Height="14" ForeColor="255,95,67,37" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\operation\top.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="112" Top="72" Width="647" Height="80" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\camera\bg_time.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="128" Top="152" Width="614" Height="12" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\camera\line_1.png" />
+        </control>
+        <control name="textgrid_timeaction" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderForeColor="255,209,187,143" RowHeaderVisible="false" SelectForeColor="255,255,180,40" SelectBackColor="128,209,187,143" CanSelectCol="true" CanSelectRow="true" ColWidth="34" RowHeight="18" ColCount="901" ScrollSize="15" HasHScroll="true" AlwaysHScroll="true" Left="112" Top="88" Width="646" Height="76" ForeColor="255,209,187,143" BackColor="0,255,255,255" LineColor="0,255,0,0" ShadowColor="0,0,0,0" Font="font_shortcut_figure" TabStop="true" />
+            <event on_right_select_grid="on_textgrid_timeaction_right_select_grid" on_select_grid="on_textgrid_timeaction_select_grid" />
+            <subor name="HScrollBar">
+                <prop Maximum="883" SmallChange="1" LargeChange="18" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\special\camera\btn_left_out.png" FocusImage="gui\special\camera\btn_left_on.png" PushImage="gui\special\camera\btn_left_down.png" DisableImage="gui\special\camera\btn_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\special\camera\btn_right_out.png" FocusImage="gui\special\camera\btn_right_on.png" PushImage="gui\special\camera\btn_right_down.png" DisableImage="gui\special\camera\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\camera\tb_out.png" FocusImage="gui\special\camera\tb_on.png" PushImage="gui\special\camera\tb_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="12" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" IsLimitWidth="true" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="btn_test" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-88" Top="312" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_test" TabStop="true" />
+            <event on_click="on_btn_test_click" />
+        </control>
+        <control name="lbl_current_point" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="760" Top="560" Width="158" Height="16" ShadowColor="0,0,0,0" Text="lbl_current_point" />
+        </control>
+        <control name="lbl_angle_x" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="800" Top="-136" Width="102" Height="22" ShadowColor="0,0,0,0" Text="lbl_angle_x" />
+        </control>
+        <control name="lbl_angle_y" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="280" Top="296" Width="94" Height="16" ShadowColor="0,0,0,0" Text="lbl_angle_y" />
+        </control>
+        <control name="lbl_angle_z" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="728" Top="240" Width="94" Height="16" ShadowColor="0,0,0,0" Text="lbl_angle_z" />
+        </control>
+        <control name="lbl_angle_velocity" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="712" Top="288" Width="158" Height="16" ShadowColor="0,0,0,0" Text="lbl_angle_velocity" />
+        </control>
+        <control name="fipt_angle_x" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-100.000000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="816" Top="160" Width="80" Height="20" ShadowColor="0,20,0,0" Text="0.0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="fipt_angle_y" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-100.000000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="816" Top="184" Width="80" Height="20" ShadowColor="0,20,0,0" Text="0.0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="fipt_angle_z" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-100.000000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="800" Top="224" Width="80" Height="20" ShadowColor="0,20,0,0" Text="0.0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="fipt_angle_velocity" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Min="-10000.000000" Max="10000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="800" Top="320" Width="80" Height="20" ShadowColor="0,20,0,0" Text="0.0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="btn_create_camera" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-136" Top="136" Width="118" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="create_camera" TabStop="true" />
+            <event on_click="on_btn_create_camera_click" />
+        </control>
+        <control name="btn_delete_camera" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-128" Top="184" Width="118" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="delete_camera" TabStop="true" />
+            <event on_click="on_btn_delete_camera_click" />
+        </control>
+        <control name="rbtn_point" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="704" Top="-336" Width="214" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="According to point" TabStop="true" />
+            <event on_checked_changed="on_rbtn_point_checked_changed" />
+        </control>
+        <control name="rbtn_move" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="720" Top="-216" Width="214" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="Towards move direction" TabStop="true" />
+            <event on_checked_changed="on_rbtn_move_checked_changed" />
+        </control>
+        <control name="rbtn_player" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="688" Top="-192" Width="214" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="Towards player" TabStop="true" />
+            <event on_checked_changed="on_rbtn_player_checked_changed" />
+        </control>
+        <control name="lbl_move_mode" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="752" Top="408" Width="158" Height="16" ShadowColor="0,0,0,0" Text="lbl_move_mode" />
+        </control>
+        <control name="ipt_move_mode" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="744" Top="472" Width="80" Height="20" ShadowColor="0,20,0,0" Text="smooth" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="combobox_weather" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="150" OnlySelect="true" Left="736" Top="-240" Width="142" Height="22" ShadowColor="0,0,0,0" Text="null" />
+            <event on_selected="on_combobox_weather_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" ShadowColor="0,20,0,0" Text="null" Font="font_main" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-88" Top="264" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_btn_1_click" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-104" Top="224" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_btn_2_click" />
+        </control>
+        <control name="rbtn_free" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="680" Top="-168" Width="214" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="Free Mode" TabStop="true" />
+            <event on_checked_changed="on_rbtn_free_checked_changed" />
+        </control>
+        <control name="btn_add_subtitle" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-144" Top="-8" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="addSubtitle" TabStop="true" />
+            <event on_click="on_btn_add_subtitle_click" />
+        </control>
+        <control name="btn_del_subtitle" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-128" Top="8" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="delSubtitle" TabStop="true" />
+            <event on_click="on_btn_del_subtitle_click" />
+        </control>
+        <control name="btn_edit_subtitle" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-128" Top="16" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="editSubtitle" TabStop="true" />
+            <event on_click="on_btn_edit_subtitle_click" />
+        </control>
+        <control name="cbtn_show_subtitle" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="736" Top="-128" Width="142" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="Show Subtitle" TabStop="true" />
+            <event on_checked_changed="on_cbtn_show_subtitle_checked_changed" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="728" Top="648" Width="142" Height="219" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\create\2j_bg.png" />
+            <control name="btn_delete_point" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="15" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Delete" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_delete_point_click" />
+            </control>
+            <control name="btn_copy_point" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="47" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_fuzhi" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_copy_point_click" />
+            </control>
+            <control name="btn_cut_point" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="79" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jianqie" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_cut_point_click" />
+            </control>
+            <control name="btn_paste_point" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="111" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_zhantie" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_paste_point_click" />
+            </control>
+            <control name="btn_open_file" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="143" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_dakaipeizhi" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_open_file_click" />
+            </control>
+            <control name="btn_save_file" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="175" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_baocunpeizhi" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_save_file_click" />
+            </control>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="99" Top="72" Width="13" Height="80" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\camera\bg_time_left.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="759" Top="72" Width="13" Height="80" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\camera\bg_time_right.png" />
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="640" Top="680" Width="142" Height="91" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\create\2j_bg.png" />
+            <control name="btn_7" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="47" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@textinskin00039" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+            </control>
+            <control name="btn_6" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\treeview\tree_2_out.png" FocusImage="gui\common\treeview\tree_2_on.png" PushImage="gui\common\treeview\tree_3_on.png" DisableImage="gui\common\treeview\tree_3_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,178,126,27" DisableColor="0,0,0,0" Left="18" Top="15" Width="108" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@textinskin00040" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+            </control>
+        </control>
+        <control name="menu_operation" entity="Menu" script="" init="">
+            <prop ItemHeight="20" SelectForeColor="0,255,255,255" SelectBackColor="0,176,176,240" SelectBorderColor="0,0,0,240" SelectBarDraw="gui\common\treeview\tree_2_on.png" SplitColor="0,192,192,192" LeftBarWidth="24" LeftBar="true" LeftBarBackColor="0,95,67,37" Left="384" Top="256" Width="36" Height="4" ForeColor="255,209,187,143" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="menu_1" Font="font_text" DrawMode="Expand" BackImage="gui\mainform\chat\bg_select.png" />
+            <event on_lost_capture="on_menu_operation_lost_capture" />
+        </control>
+        <control name="btn_cut_subtitle" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-136" Top="160" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="cutSubtitle" />
+            <event on_click="on_btn_cut_subtitle_click" />
+        </control>
+        <control name="btn_copy_subtitle" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-136" Top="64" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="copySubtitle" />
+            <event on_click="on_btn_copy_subtitle_click" />
+        </control>
+        <control name="btn_paste_subtitle" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-128" Top="96" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="pasteSubtitle" />
+            <event on_click="on_btn_paste_subtitle_click" />
+        </control>
+        <control name="lbl_caption_point" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="88" Width="80" Height="16" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Text="@ui_camera_caption_point" Font="HyperLink4" />
+        </control>
+        <control name="lbl_camera_point" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="24" Top="104" Width="80" Height="16" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Text="@ui_camera_camera_point" Font="HyperLink4" />
+        </control>
+        <control name="lbl_timing" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="24" Top="124" Width="80" Height="16" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Text="@ui_camera_timing" Font="HyperLink4" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="24" Top="88" Width="62" Height="58" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" IsLimitWidth="true" Left="112" Top="124" Width="650" Height="18" BackColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        </control>
+    </control>
+</form>

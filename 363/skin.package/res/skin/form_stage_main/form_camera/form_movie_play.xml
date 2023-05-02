@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_camera\form_movie_play" init="main_form_init">
+        <prop ShowGrid="true" Left="13" Top="21" Width="404" Height="358" LineColor="255,204,204,204" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="pic_1" entity="Picture" script="" init="">
+            <prop CenterX="-1" CenterY="-1" Left="9" Top="36" Width="386" Height="247" LineColor="255,204,204,204" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_2_out.png" FocusImage="gui\common\button\btn_2_on.png" PushImage="gui\common\button\btn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="159" Top="320" Width="86" Height="30" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="暂停" Font="font_sns_name" />
+            <event on_click="on_btn_1_click" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_2_out.png" FocusImage="gui\common\button\btn_2_on.png" PushImage="gui\common\button\btn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="247" Top="320" Width="86" Height="30" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="停止" Font="font_sns_name" />
+            <event on_click="on_btn_2_click" />
+        </control>
+        <control name="btn_3" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_2_out.png" FocusImage="gui\common\button\btn_2_on.png" PushImage="gui\common\button\btn_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="71" Top="320" Width="86" Height="30" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="播放" Font="font_sns_name" />
+            <event on_click="on_btn_3_click" />
+        </control>
+        <control name="btn_4" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="376" Top="8" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_4" />
+            <event on_click="on_btn_4_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="155" Top="8" Width="94" Height="22" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="剧情回放" Font="font_sns_title_huali_1" />
+        </control>
+        <control name="btn_5" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\buttontvt_main_down.png" FocusImage="gui\common\button\buttontvt_main_on.png" PushImage="gui\common\button\buttontvt_main_out.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="377" Top="36" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="0" HintText="@tips_movie_play_zoomin" AutoSize="true" />
+            <event on_click="on_btn_5_click" />
+        </control>
+        <control name="tbar_1" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="9" Top="289" Width="386" Height="13" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\progressbar\bg_pbr_1.png" />
+            <event on_value_changed="on_tbar_1_value_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\common\trackbar\tb_2_out.png" FocusImage="gui\common\trackbar\tb_2_on.png" PushImage="gui\common\trackbar\tb_2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="12" Height="13" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Right" RefCursor="WIN_HELP" IsLimitWidth="true" Left="315" Top="302" Width="80" Height="16" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+    </control>
+</form>

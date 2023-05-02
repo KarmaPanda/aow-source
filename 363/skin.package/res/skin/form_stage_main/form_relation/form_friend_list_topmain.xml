@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="mainform" entity="Form" script="form_stage_main\form_relation\form_friend_list_topmain" init="main_form_init">
+        <prop LimitInScreen="true" Left="-370" Top="-375" Width="217" Height="358" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" NoFrame="true" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="lbl_form_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="30" Top="-2" Width="178" Height="326" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="groupbox_players_list" entity="GroupBox" script="" init="">
+            <prop Left="38" Top="-324" Width="166" Height="251" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" NoFrame="true" DrawMode="Expand" />
+            <control name="player_list" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" HasVScroll="true" Left="-166" Top="2" Width="166" Height="248" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" FullBarBack="false" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="8" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_radiobutton" entity="GroupBox" script="" init="">
+            <prop Left="-3" Top="24" Width="35" Height="295" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="rbtn_zhiyou" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns\list\cbtn_zhiyou1_out.png" FocusImage="gui\language\ChineseS\sns\list\cbtn_zhiyou2_on.png" CheckedImage="gui\language\ChineseS\sns\list\cbtn_zhiyou1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="87" Width="32" Height="56" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,255,255,255" Font="simli16_W" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_zhiyou_checked_changed" />
+            </control>
+            <control name="rbtn_guanzhu" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns\list\cbtn_guanzhu1_out.png" FocusImage="gui\language\ChineseS\sns\list\cbtn_guanzhu1_on.png" CheckedImage="gui\language\ChineseS\sns\list\cbtn_guanzhu1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="147" Width="32" Height="56" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,255,255,255" Font="simli16_W" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_guanzhu_checked_changed" />
+            </control>
+            <control name="rbtn_jieshi" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns\list\cbtn_jieshi1_out.png" FocusImage="gui\language\ChineseS\sns\list\cbtn_jieshi1_on.png" CheckedImage="gui\language\ChineseS\sns\list\cbtn_jieshi1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="207" Width="32" Height="56" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,255,255,255" Font="simli16_W" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_jieshi_checked_changed" />
+            </control>
+            <control name="rbtn_friend" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" NormalImage="gui\language\ChineseS\sns\list\cbtn_haoyou1_out.png" FocusImage="gui\language\ChineseS\sns\list\cbtn_haoyou1_on.png" CheckedImage="gui\language\ChineseS\sns\list\cbtn_haoyou1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="28" Width="32" Height="56" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,255,255,255" Font="simli16_W" TabStop="true" NoFrame="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_checked_changed="on_rbtn_friend_checked_changed" />
+            </control>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="33" Top="24" Width="170" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="34" Top="29" Width="169" Height="260" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="179" Top="4" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_state_menu" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="3" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_state_btn" />
+            <event on_click="on_btn_state_menu_click" />
+        </control>
+        <control name="btn_find" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="33" Top="290" Width="86" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_sns_search_chazhao_btn" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_find_click" />
+        </control>
+        <control name="btn_siliao" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="118" Top="290" Width="86" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_sns_systemfriends_talk" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_siliao_click" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="33" Top="285" Width="170" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_enchou_npc_list" init="main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="699" Height="440" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_title" entity="GroupBox" script="" init="">
+            <prop Left="9" Top="7" Width="678" Height="38" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\tiguan\TreasureTitle.png" />
+            <control name="lbl_scene" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="1" Top="6" Width="102" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_scene" Font="font_sns_event" />
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="115" Top="6" Width="78" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_name" Font="font_sns_event" />
+            </control>
+            <control name="lbl_xiae" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="197" Top="6" Width="70" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_shane" Font="font_sns_event" />
+            </control>
+            <control name="lbl_shili" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="272" Top="6" Width="70" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_shili" Font="font_sns_event" />
+            </control>
+            <control name="lbl_relaiton" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="347" Top="6" Width="110" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_relaiton" Font="font_sns_event" />
+            </control>
+            <control name="lbl_yinxiang" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="466" Top="6" Width="102" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_yinxiang" Font="font_sns_event" />
+            </control>
+            <control name="lbl_his_top" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="896" Top="48" Width="70" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_histop" Font="font_sns_event_mid" />
+            </control>
+            <control name="lbl_his_bot" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="848" Top="8" Width="70" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_hisbot" Font="font_sns_event_mid" />
+            </control>
+            <control name="lbl_func" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="573" Top="6" Width="102" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_sns_npclist_func" Font="font_sns_event" />
+            </control>
+        </control>
+        <control name="groupscrollbox_list" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="14" HasVScroll="true" Left="9" Top="46" Width="683" Height="382" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

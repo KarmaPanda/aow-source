@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_relation_guild\form_guild_member.lua" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="277" Top="125" Width="750" Height="438" BackColor="0,255,255,255" LineColor="255,153,153,155" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" />
+        <control name="groupbox_member_list" entity="GroupBox" script="" init="">
+            <prop Width="750" Height="438" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="btn_10" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="394" Top="346" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,255,255" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_last_click" />
+            </control>
+            <control name="btn_4" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="320" Top="520" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_disband" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_disband_click" />
+            </control>
+            <control name="btn_invite" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="424" Top="393" Width="113" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_guild_invite" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_invite_click" />
+            </control>
+            <control name="btn_quit" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="626" Top="393" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_guild_quit" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_quit_click" />
+            </control>
+            <control name="btn_9" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="469" Top="346" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,255,255" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_next_click" />
+            </control>
+            <control name="btn_donate" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="538" Top="393" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_guild_donate_text" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                <event on_click="on_btn_donate_click" />
+            </control>
+            <control name="lbl_pageno" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="417" Top="347" Width="46" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="4/20" Font="font_text_figure" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="592" Top="348" Width="142" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_bangpailixian" Font="font_sns_list" />
+            </control>
+            <control name="btn_online" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\guild\formback\cbtn_2_out.png" FocusImage="gui\guild\formback\cbtn_2_on.png" CheckedImage="gui\guild\formback\cbtn_2_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="576" Top="350" Width="14" Height="12" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                <event on_checked_changed="on_btn_online_checked_changed" />
+            </control>
+            <control name="textgrid_2" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="35" HeaderBackColor="0,255,255,255" HeaderForeColor="0,255,255,255" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectRow="true" ColWidth="73" RowHeight="25" ColCount="6" ScrollSize="17" HasHScroll="true" Left="188" Top="6" Width="524" Height="330" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,255,255,0" ShadowColor="0,0,0,0" Font="font_text_figure" TabStop="true" />
+                <event on_select_row="on_textgrid_2_select_row" on_right_select_grid="on_textgrid_2_right_select_grid" on_select_grid="on_textgrid_2_select_grid" />
+                <subor name="HScrollBar">
+                    <prop Maximum="6" SmallChange="1" LargeChange="1" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="418" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="sender_menu" entity="GroupBox" script="" init="">
+                <prop Left="592" Top="40" Width="135" Height="190" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\formback\menu.png" />
+                <control name="btn_secret_chat" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="7" Width="132" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_sns_chat_top_title" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_secret_chat_click" />
+                </control>
+                <control name="btn_friend_request" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="25" Width="129" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_menu_friend_request" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_friend_request_click" />
+                </control>
+                <control name="btn_add_blacklist" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="43" Width="130" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_menu_addto_blacklist" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_add_blacklist_click" />
+                </control>
+                <control name="btn_team_request" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="61" Width="130" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_menu_team_request" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_team_request_click" />
+                </control>
+                <control name="btn_manage" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-6" Top="79" Width="142" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_guild_member_manage" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_member_manage_click" />
+                </control>
+                <control name="btn_tiren" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="97" Width="131" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_guild_kickout" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_kick_click" />
+                </control>
+                <control name="btn_shanrang" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="115" Width="131" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_guild_shanrang" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_shanrang_click" />
+                </control>
+                <control name="btn_mail" entity="Button" script="" init="">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="2" Top="130" Width="129" Height="20" ForeColor="255,255,255,255" BackColor="255,110,255,255" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_mail_fasong" Font="font_main" TabStop="true" />
+                    <event on_click="on_btn_mail_click" />
+                </control>
+            </control>
+            <control name="btn_search" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="362" Top="552" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_guild_menber_search" Font="font_btn" AutoSize="true" DrawMode="Expand" />
+                <event on_click="on_btn_search_click" />
+            </control>
+        </control>
+        <control name="rbtn_member_list" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="26" Top="40" Width="120" Height="30" ForeColor="255,255,255,255" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_bangpailiebiao" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+            <event on_checked_changed="on_rbtn_member_list_checked_changed" />
+        </control>
+        <control name="rbtn_candidate_list" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" CheckedImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="25" Top="85" Width="121" Height="30" ForeColor="255,255,255,255" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,20,0,0" Text="@ui_shenqingliebiao" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+            <event on_checked_changed="on_rbtn_candidate_list_checked_changed" />
+        </control>
+    </control>
+</form>

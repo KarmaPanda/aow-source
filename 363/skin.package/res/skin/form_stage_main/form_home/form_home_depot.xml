@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_home\form_home_depot" init="main_form_init">
+        <prop LimitInScreen="true" Left="309" Top="69" Width="300" Height="320" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\bag\new_bag\home_bag_di.png" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="goods_grid" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,0,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="6,6,280,200" MaxSize="-1" RowNum="4" ClomnNum="6" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="12" Top="34" Width="278" Height="198" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" />
+            <event on_select_changed="goods_grid_select" on_mousein_grid="on_mousein_grid" on_rightclick_grid="on_goods_grid_rightclick_grid" on_mouseout_grid="on_mouseout_grid" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="272" Top="8" Width="20" Height="22" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_name_di" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_name" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="8" Width="45" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_deopt_title" Font="font_title" />
+        </control>
+        <control name="btn_item_arrange" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\bag\new_bag\btn_out.png" FocusImage="gui\special\bag\new_bag\btn_on.png" PushImage="gui\special\bag\new_bag\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="206" Top="227" Width="79" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_bag_arrange" Font="font_btn" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_item_arrange_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="263" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_depot_sm" Font="font_sns_event" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="279" Width="238" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_depot_sm_01" Font="font_sns_event" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="296" Width="286" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_depot_sm_02" Font="font_sns_event" />
+        </control>
+    </control>
+</form>

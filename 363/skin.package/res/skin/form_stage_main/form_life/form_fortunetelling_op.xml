@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_fortunetelling_op" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="77" Top="133" Width="382" Height="493" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="352" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_close_btn_click" />
+        </control>
+        <control name="btn_help" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\wenhao-out.png" FocusImage="gui\common\button\wenhao-on.png" PushImage="gui\common\button\wenhao-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="272" Top="-80" Width="22" Height="23" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_help_btn_click" />
+        </control>
+        <control name="lbl_bg_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="119" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="123" Top="7" Width="138" Height="20" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_gs_jm2" Font="font_title" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="374" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="31" Width="376" Height="432" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="groupbox_3" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="24" Width="366" Height="118" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="32" Width="80" Height="22" ForeColor="255,76,61,44" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_baitan001" Font="font_text" />
+            </control>
+            <control name="edit_name" entity="Edit" script="" init="">
+                <prop MaxLength="8" TextOffsetX="20" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="88" Top="28" Width="260" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="78" Width="150" Height="22" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_gs_jm4" Font="font_text" />
+            </control>
+            <control name="lbl_bg_combox1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="160" Top="72" Width="190" Height="30" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="combobox_style" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownWidth="262" DropDownHeight="48" OnlySelect="true" Left="160" Top="76" Width="185" Height="26" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="STKAITI16_W" NoFrame="true" DrawMode="Expand" />
+                <subor name="InputEdit">
+                    <prop ReadOnly="true" TextOffsetX="20" SelectForeColor="255,76,61,44" SelectBackColor="190,190,190,190" Caret="Default" ForeColor="255,76,61,44" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" NoFrame="true" />
+                </subor>
+                <subor name="DropButton">
+                    <prop NormalImage="gui\common\combobox\btn_down2_out.png" FocusImage="gui\common\combobox\btn_down2_on.png" PushImage="gui\common\combobox\btn_down2_down.png" DisableImage="gui\common\combobox\btn_down2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="22" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="20" SelectBackColor="190,190,190,190" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="14" ForeColor="255,255,255,255" BackColor="140,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_combox_text" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\gdc.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="10" Top="140" Width="358" Height="262" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="type_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="18" Top="23" Width="52" Height="52" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Font="FZHKJT20" AutoSize="true" BackImage="gui\language\ChineseS\lifebtn\gg.png" />
+            </control>
+            <control name="edit_1" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="73" Top="36" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="133" Top="43" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_ding" Font="font_text" />
+            </control>
+            <control name="edit_2" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="165" Top="36" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="225" Top="43" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_liang" Font="font_text" />
+            </control>
+            <control name="edit_3" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="262" Top="36" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="322" Top="43" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_wen" Font="font_text" />
+            </control>
+            <control name="type_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="18" Top="104" Width="47" Height="56" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Font="FZHKJT20" AutoSize="true" BackImage="gui\language\ChineseS\lifebtn\rg.png" />
+            </control>
+            <control name="edit_4" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="73" Top="120" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="133" Top="127" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_ding" Font="font_text" />
+            </control>
+            <control name="edit_5" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="165" Top="121" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="225" Top="127" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_liang" Font="font_text" />
+            </control>
+            <control name="edit_6" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="262" Top="121" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="322" Top="127" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_wen" Font="font_text" />
+            </control>
+            <control name="type_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="18" Top="184" Width="55" Height="56" ForeColor="255,209,187,143" ShadowColor="0,0,0,0" Font="FZHKJT20" AutoSize="true" BackImage="gui\language\ChineseS\lifebtn\sg.png" />
+            </control>
+            <control name="edit_7" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="73" Top="201" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="133" Top="208" Width="30" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_ding" Font="font_text" />
+            </control>
+            <control name="edit_8" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="165" Top="202" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="225" Top="208" Width="38" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_liang" Font="font_text" />
+            </control>
+            <control name="edit_9" entity="Float_Edit" script="" init="">
+                <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="262" Top="202" Width="60" Height="30" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="edit_lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="322" Top="208" Width="30" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_bag_wen" Font="font_text" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="90" Width="366" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="171" Width="366" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="251" Width="366" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+        </control>
+        <control name="groupbox_4" entity="GroupBox" script="" init="">
+            <prop Left="9" Top="408" Width="358" Height="47" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="lbl_bg_combox2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="119" Top="5" Width="230" Height="30" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="combobox_talk" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownWidth="262" DropDownHeight="96" Left="119" Top="9" Width="225" Height="26" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="STKAITI16_W" DrawMode="Expand" />
+                <subor name="InputEdit">
+                    <prop TextOffsetX="20" SelectForeColor="255,76,61,44" SelectBackColor="190,190,190,190" Caret="Default" ForeColor="255,76,61,44" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" NoFrame="true" DrawMode="Expand" />
+                </subor>
+                <subor name="DropButton">
+                    <prop NormalImage="gui\common\combobox\btn_down2_down.png" FocusImage="gui\common\combobox\btn_down2_on.png" PushImage="gui\common\combobox\btn_down2_down.png" DisableImage="gui\common\combobox\btn_down2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="22" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="16" SelectBackColor="190,190,190,190" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="14" ForeColor="255,255,255,255" BackColor="140,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_combox_text" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\gdc.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="12" Width="118" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_zidonghanhua" Font="font_text" />
+            </control>
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="153" Width="366" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="1" Top="459" Width="374" Height="29" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="4" Top="1" Width="371" Height="27" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area2.png" />
+            </control>
+            <control name="btn_stall" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="84" Top="-14" Width="105" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Text="@ui_baitan005" Font="font_btn" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_stall_btn_click" />
+            </control>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="455" Width="374" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

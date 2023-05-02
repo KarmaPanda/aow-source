@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_test\form_debug" init="main_form_init">
+        <prop LimitInScreen="true" Left="85" Top="117" Width="790" Height="638" BackColor="164,166,171,255" ShadowColor="0,0,0,0" />
+        <event on_open="main_form_open" />
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-55" Top="8" Width="110" Height="22" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_tiaoshichuangkou" />
+        </control>
+        <control name="btn_refresh" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="738" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="R" HintText="@ui_shuaxin" TabStop="true" />
+            <event on_click="on_btn_refresh_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="768" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" HintText="@ui_guanbi" TabStop="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="object_tree" entity="TreeView" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" LevelWidth="18" ScrollSize="17" Left="8" Top="56" Width="318" Height="542" ShadowColor="0,0,0,0" Text="TreeView1" TabStop="true" />
+            <event on_select_changed="object_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="value_grid" entity="Grid" script="" init="">
+            <prop HeaderBackColor="255,182,187,187" CanSelectRow="true" ColWidth="200" RowHeight="24" ColCount="2" ScrollSize="17" HasHScroll="true" Left="336" Top="56" Width="446" Height="238" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="16" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_type" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="32" Width="46" Height="22" ShadowColor="0,0,0,0" Text="@ui_duixiang" />
+        </control>
+        <control name="lbl_content" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="336" Top="32" Width="46" Height="22" ShadowColor="0,0,0,0" Text="@ui_shuzhi" />
+        </control>
+        <control name="visual_grid" entity="Grid" script="" init="">
+            <prop HeaderBackColor="255,182,187,187" CanSelectRow="true" ColWidth="200" ColWidths="200,200" RowHeight="24" ColCount="2" ScrollSize="17" HasHScroll="true" Left="336" Top="304" Width="446" Height="294" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="16" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="btn_pos" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="344" Top="608" Width="134" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="玩家坐标，朝向" TabStop="true" />
+            <event on_click="on_btn_pos_click" />
+        </control>
+        <control name="ipt_pos" entity="Edit" script="" init="">
+            <prop MaxLength="100" TextOffsetX="2" Caret="Default" Left="8" Top="608" Width="326" Height="22" ShadowColor="0,0,0,0" Text="ipt_1" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="btn_select" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="245" Top="29" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="选择" HintText="在对像列表中选中目标后点击进行游戏实际的选择" TabStop="true" />
+            <event on_click="on_btn_select_click" />
+        </control>
+    </control>
+</form>
