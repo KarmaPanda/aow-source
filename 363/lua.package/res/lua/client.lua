@@ -893,7 +893,7 @@ function need_pre_server()
   return true
 end
 function get_version()
-  return "NA90819@.*363"
+  return "NA90819@.*364"
 end
 function need_pre_normal_server()
   local game_config = nx_value("game_config")
