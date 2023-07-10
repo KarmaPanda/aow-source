@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\\form_blendexhibit" init="on_main_form_init">
+        <prop ShowGrid="true" Left="53" Top="29" Width="864" Height="688" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="863" Height="687" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\language\ChineseS\blendexhibit\bg_main.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="34" Width="854" Height="31" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="834" Top="60" Width="30" Height="556" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="838" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="rbtn_main" entity="RadioButton" script="" init="">
+            <prop Checked="true" HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,204,204,204" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="6" Top="33" Width="68" Height="33" ForeColor="255,204,204,204" BackColor="255,192,192,192" LineColor="0,255,255,255" ShadowColor="0,255,255,255" Text="@ui_blendactive_tab_1" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_checked_changed="on_rbtn_main_checked_changed" />
+        </control>
+        <control name="rbtn_minor" entity="RadioButton" script="" init="">
+            <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="76" Top="33" Width="68" Height="33" ForeColor="255,204,204,204" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,255,255,255" Text="@ui_blendactive_tab_2" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_checked_changed="on_rbtn_minor_checked_changed" />
+        </control>
+        <control name="rbtn_box" entity="RadioButton" script="" init="">
+            <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="146" Top="33" Width="68" Height="33" ForeColor="255,204,204,204" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,255,255,255" Text="@ui_blendactive_tab_3" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_checked_changed="on_rbtn_box_checked_changed" />
+        </control>
+        <control name="gsb_main" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="18" HasVScroll="true" AlwaysVScroll="true" IsEditMode="false" Left="2" Top="62" Width="856" Height="553" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupscrollbox_1" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="18" FullBarBack="false" SmallChange="1" LargeChange="553" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="517" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <control name="groupbox_suit" entity="GroupBox" script="" init="">
+                <prop Left="1" Width="418" Height="188" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" BackImage="gui\special\blendexhibit\bg_suit.png" />
+                <control name="suit_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="171" Top="16" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_figure_1" />
+                </control>
+                <control name="suit_imagegrid" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="4" GridHeight="90" GridWidth="90" GridsPos="0,0;100,0;200,0;300,0" DrawMouseIn="tab_photo_xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\huanpi\bg_kuang.png" GridBackOffsetX="-5" GridBackOffsetY="-5" GridCoverOffsetX="-4" GridCoverOffsetY="-4" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="14" Top="43" Width="398" Height="102" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                </control>
+                <control name="suit_open1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\blendexhibit\btn_activation_out.png" FocusImage="gui\language\ChineseS\blendexhibit\btn_activation_on.png" PushImage="gui\language\ChineseS\blendexhibit\btn_activation_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="28" Top="72" Width="55" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                </control>
+                <control name="suit_open2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\blendexhibit\btn_activation_out.png" FocusImage="gui\language\ChineseS\blendexhibit\btn_activation_on.png" PushImage="gui\language\ChineseS\blendexhibit\btn_activation_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="128" Top="72" Width="55" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                </control>
+                <control name="suit_open3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\blendexhibit\btn_activation_out.png" FocusImage="gui\language\ChineseS\blendexhibit\btn_activation_on.png" PushImage="gui\language\ChineseS\blendexhibit\btn_activation_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="228" Top="72" Width="55" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                </control>
+                <control name="suit_open4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\blendexhibit\btn_activation_out.png" FocusImage="gui\language\ChineseS\blendexhibit\btn_activation_on.png" PushImage="gui\language\ChineseS\blendexhibit\btn_activation_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="328" Top="72" Width="55" Height="31" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                </control>
+                <control name="suit_browse" entity="Button" script="" init="">
+                    <prop NormalImage="gui\language\ChineseS\blendexhibit\btn_review_out.png" FocusImage="gui\language\ChineseS\blendexhibit\btn_review_on.png" PushImage="gui\language\ChineseS\blendexhibit\btn_review_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="167" Top="142" Width="79" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+        <control name="cbtn_lookall" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="624" Top="35" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_cbtn_lookall_checked_changed" />
+        </control>
+        <control name="lbl_lookall" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="648" Top="37" Width="206" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_blendactive_show" Font="font_text" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="614" Width="863" Height="74" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\blendexhibit\bg_bottom.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="612" Width="857" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

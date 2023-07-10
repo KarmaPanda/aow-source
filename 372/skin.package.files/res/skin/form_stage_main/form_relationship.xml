@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_main" entity="Form" script="form_stage_main\form_relationship" init="on_main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="1062" Height="742" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_shut="on_form_main_shut" on_close="on_main_form_close" />
+        <control name="lbl_background" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="1" Top="7" Width="1054" Height="728" ShadowColor="0,0,0,0" Text="lbl_6" DrawMode="FitWindow" BackImage="gui\special\sns\bg_1a.png" />
+        </control>
+        <control name="scenebox" entity="SceneBox" script="" init="">
+            <prop Left="1" Top="-1" Width="1062" Height="662" BackColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="gb_front" entity="GroupBox" script="" init="">
+            <prop Left="425" Top="759" Width="100" Height="80" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\forgegameground.png" />
+        </control>
+        <control name="groupbox_rbtn" entity="GroupBox" script="" init="">
+            <prop Left="89" Top="679" Width="1062" Height="64" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" BackImage="gui\special\sns_new\bg_bottom_new.png" />
+            <control name="rbtn_fujin" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_fj_out.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_fj_on.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_fj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="29" Top="112" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" HintText="@tips_sns_fujin" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_fujin_checked_changed" />
+            </control>
+            <control name="rbtn_shili" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_sl_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_sl_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_sl_down1.png" DisableImage="gui\language\ChineseS\sns_new\cbtn_sl_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="149" Width="85" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" HintText="@tips_sns_shili" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_shili_checked_changed" />
+            </control>
+            <control name="rbtn_renmai" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_rm_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_rm_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_rm_down1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="9" Width="147" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_renmai_checked_changed" />
+            </control>
+            <control name="rbtn_geren" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_gr_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_gr_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_gr_down1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-131" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_geren_checked_changed" />
+            </control>
+            <control name="lbl_renmai_news" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="65" Top="8" Width="36" Height="20" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_system_news" AutoSize="true" BackImage="gui\special\sns_new\btn_enchou_price\icon_prompt_03.png" />
+            </control>
+            <control name="lbl_shili_news" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="199" Top="8" Width="36" Height="20" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_system_news" AutoSize="true" BackImage="gui\special\sns_new\btn_enchou_price\icon_prompt_03.png" />
+            </control>
+            <control name="lbl_enchou_news" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="93" Top="104" Width="36" Height="20" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_system_news" AutoSize="true" BackImage="gui\special\sns_new\btn_enchou_price\icon_prompt_03.png" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-158" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_sns_banquan" Font="font_system_individual" />
+            </control>
+            <control name="rbtn_zonglan" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="181" Top="100" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabStop="true" NoFrame="true" AutoSize="true" />
+            </control>
+            <control name="rbtn_shijie" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_daj_out.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_daj_on.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_daj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-307" Top="16" Width="120" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" HintText="@tips_sns_enchou" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_shijie_checked_changed" />
+            </control>
+            <control name="lbl_shijie_news" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="-217" Top="8" Width="36" Height="20" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_system_news" AutoSize="true" BackImage="gui\special\sns_new\btn_enchou_price\icon_prompt_03.png" />
+            </control>
+        </control>
+        <control name="groupbox_relation2" entity="GroupBox" script="" init="">
+            <prop Left="89" Top="679" Width="1062" Height="64" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\special\sns_new\bg_bottom_new.png" />
+            <control name="rbtn_relation2_personal" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_gr_out2.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_gr_on2.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_gr_down2.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-350" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_relation2_checked_changed" />
+            </control>
+            <control name="rbtn_relation2_friend" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_hy_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_hy_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_hy_down1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-230" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabIndex="1" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_relation2_checked_changed" />
+            </control>
+            <control name="rbtn_relation2_enemy" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_cr_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_cr_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_cr_down1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabIndex="3" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_relation2_checked_changed" />
+            </control>
+            <control name="rbtn_relation2_attention" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_gz_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_gz_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_gz_down1.png" DisableImage="gui\language\ChineseS\sns_new\cbtn_sl_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="250" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabIndex="5" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_relation2_checked_changed" />
+            </control>
+            <control name="rbtn_relation2_buddy" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_zhy_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_zhy_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_zhy_down1.png" DisableImage="gui\language\ChineseS\sns_new\cbtn_sl_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="-110" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabIndex="2" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_relation2_checked_changed" />
+            </control>
+            <control name="rbtn_relation2_blood" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\sns_new\cbtn_xc_out1.png" FocusImage="gui\language\ChineseS\sns_new\cbtn_xc_on1.png" CheckedImage="gui\language\ChineseS\sns_new\cbtn_xc_down1.png" DisableImage="gui\language\ChineseS\sns_new\cbtn_sl_hui.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="130" Width="70" Height="70" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_name" TabIndex="4" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_relation2_checked_changed" />
+            </control>
+            <control name="lbl_relation2_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-158" Top="24" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_sns_banquan" Font="font_system_individual" />
+            </control>
+            <control name="lbl_frame" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="78" Height="46" ShadowColor="0,0,0,0" Font="font_sns_num" />
+            </control>
+        </control>
+        <control name="groupbox_head" entity="GroupBox" script="" init="">
+            <prop Left="1" Top="-1" Width="1062" Height="678" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="groupbox_buttons" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="9" Top="-179" Width="142" Height="114" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" />
+            <control name="btn_life" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\btn_life_out.png" FocusImage="gui\mainform\btn_life_on.png" PushImage="gui\mainform\btn_life_on.png" DisableImage="gui\mainform\btn_life_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="-1" Width="145" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_life_click" />
+            </control>
+            <control name="btn_fight" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\btn_fight_out.png" FocusImage="gui\mainform\btn_fight_on.png" PushImage="gui\mainform\btn_fight_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="79" Width="145" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_fight_click" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="352" Width="70" Height="16" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Text="@ui_mylife" Font="font_money" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="336" Width="20" Height="20" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\btn_main\btn_life_out_36.png" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="25" Top="239" Width="70" Height="16" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Text="@ui_myzhandou" Font="font_money" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="57" Top="247" Width="20" Height="20" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\btn_main\btn_schoolwar_out_36.png" />
+            </control>
+            <control name="btn_jianghu" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\btn_sns_out.png" FocusImage="gui\mainform\btn_sns_on.png" PushImage="gui\mainform\btn_sns_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="39" Width="145" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+        </control>
+        <control name="btn_return_relationtype" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\sns_new\btn_back_out.png" FocusImage="gui\special\sns_new\btn_back_on.png" PushImage="gui\special\sns_new\btn_back_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="99999" Top="99999" Width="28" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_return_relationtype_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-30" Top="10" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_npcfriendinfo" entity="GroupBox" script="" init="">
+            <prop Left="100000" Top="159" Width="262" Height="86" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="btn_npcfriendinfo" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\sns\bg_reply.png" FocusImage="gui\special\sns\bg_select.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="246" Height="78" BackColor="0,192,192,192" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_npcinfo_feeling" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="23" Top="40" Width="50" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\icon_feeling.png" />
+            </control>
+            <control name="lbl_npcinfo_head" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="16" Width="48" Height="50" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\icon_skill.png" />
+            </control>
+            <control name="lbl_npcinfo_xia" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="23" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\triangle_mark\xia_colour.png" />
+            </control>
+            <control name="lbl_npcinfo_head_pic" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="16" Width="46" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_npcinfo_feeling_head" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="53" Top="49" Width="14" Height="18" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\NPC\Level_1.png" />
+            </control>
+            <control name="lbl_npcInfo_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="80" Top="16" Width="78" Height="22" ShadowColor="0,0,0,0" Font="font_sns_main" />
+            </control>
+            <control name="lbl_npcInfo_job" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="80" Top="48" Width="54" Height="16" ShadowColor="0,0,0,0" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_npcInfo_relation" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="160" Top="48" Width="80" Height="16" ForeColor="255,214,204,191" ShadowColor="0,0,0,0" Text="@ui_guanzhu_01" Font="font_sns_main_1" />
+            </control>
+        </control>
+        <control name="mltbox_title" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,5,960,50" LineHeight="33" ScrollSize="17" Left="99999" Top="99999" Width="966" Height="54" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_sns_title_1" NoFrame="true" />
+        </control>
+    </control>
+</form>

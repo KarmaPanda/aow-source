@@ -1,0 +1,15 @@
+G_SHOP_PATH = "form_stage_main\\form_charge_shop\\form_charge_shop"
+CHARGE_VIPCARD_SHOP = 1
+CHARGE_GATHER_SHOP = 2
+CHARGE_NORMAL_SHOP = 3
+CHARGE_OTHER_ITEM_SHOP = 4
+CHARGE_MOUNT_SHOP = 5
+CHARGE_INTERACTIVE_SHOP = 6
+CHARGE_ARTEQUIP_SHOP = 7
+CHARGE_GUILD_SHOP = 8
+CHARGE_BAG_SHOP = 9
+CHARGE_FIGHT_ITEM = 10
+CHARGE_GUASHI_ITEM = 11
+function util_open_charge_shop(type)
+  nx_execute(G_SHOP_PATH, "show_charge_shop", type)
+end

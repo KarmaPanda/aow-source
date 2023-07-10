@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="EffectFinder">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Item" type="Item"/>
+			</xs:choice>
+			<xs:attribute name="ConditionType" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>条件类型
+0：多个条件有一个正确就可以
+1: 所有条件都必须正确</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Item">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Condition" type="Condition"/>
+		</xs:choice>
+		<xs:attribute name="EffectName" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>特效名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Point" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>点名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Key" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>查询关键字，一般为动作名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ConditionType" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>条件类型
+0：多个条件有一个正确就可以
+1: 所有条件都必须正确</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Condition">
+		<xs:attribute name="Key" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>瑞在为属性名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Value" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>现在为属性值</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_camera\form_movie_cap_rect" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="798" Height="766" BackColor="0,101,105,51" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="pos" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="9" Top="735" Width="222" Height="16" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="rect" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="273" Top="295" Width="6" Height="6" BackColor="0,46,111,51" LineColor="255,160,32,240" BlendColor="0,160,32,240" ShadowColor="0,0,0,0" Text="listbox_1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_rect" entity="Button" script="" init="">
+            <prop PushEvent="true" OutUpEvent="true" DragEvent="true" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="9" Top="39" Width="790" Height="678" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_screen_click" on_right_click="on_form_close_click" on_push="on_screen_push" on_drag_move="on_screen_drag_move" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="473" Top="735" Width="80" Height="24" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_form_close_click" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_home\form_weapon_hanger" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="-450" Top="165" Width="537" Height="550" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_dt" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="6" Top="34" Width="524" Height="479" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\home\jiaju\wqjdt.png" />
+        </control>
+        <control name="lbl_wqj" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="239" Top="9" Width="62" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_home_wqj" Font="font_title" />
+        </control>
+        <control name="imagegrid_1" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="101" Top="112" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="1" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="445" Top="515" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" DisableImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-28" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="199" Top="2" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="imagegrid_2" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="303" Top="112" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="2" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_4" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="101" Top="192" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="4" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_5" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="303" Top="192" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="5" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_3" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="101" Top="280" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="3" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_6" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="303" Top="280" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="6" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_8" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="101" Top="368" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="8" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_7" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="303" Top="368" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="7" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_9" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="183" Top="112" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="9" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_10" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="383" Top="112" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="10" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_12" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="183" Top="192" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="12" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_13" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="383" Top="192" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="13" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_11" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="183" Top="280" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="11" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_14" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="383" Top="280" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="14" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_16" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="183" Top="368" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="16" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="imagegrid_15" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\home\jiaju\gezi.png" GridBackOffsetX="-3" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="383" Top="368" Width="52" Height="52" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DataSource="15" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="109" Top="164" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_dandao" Font="font_text_title1" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="311" Top="164" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_danjian" Font="font_text_title1" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="109" Top="247" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_shuangdao" Font="font_text_title1" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="311" Top="247" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_shuangjian" Font="font_text_title1" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="109" Top="336" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_bishou" Font="font_text_title1" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="311" Top="336" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_shuangci" Font="font_text_title1" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="109" Top="424" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_duangun" Font="font_text_title1" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="311" Top="424" Width="30" Height="22" ForeColor="255,94,73,57" ShadowColor="0,0,0,0" Text="@ui_home_wqj_changgun" Font="font_text_title1" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="191" Top="164" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="391" Top="164" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="191" Top="247" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="391" Top="247" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="191" Top="336" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="391" Top="336" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="191" Top="424" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="391" Top="424" Width="30" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Text="@ui_home_wqj_fwz" Font="font_text_title1" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="28" Width="528" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="510" Width="528" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="150" Top="124" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_21" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="150" Top="205" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_22" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="150" Top="293" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_23" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="150" Top="381" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_24" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="351" Top="124" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_25" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="351" Top="205" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_26" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="351" Top="293" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="lbl_27" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="351" Top="381" Width="33" Height="27" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\home\jiaju\wqjjt.png" />
+        </control>
+        <control name="mltbox_tip" entity="MultiTextBox" script="" init="">
+            <prop VAlign="Center" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,310,67" LineHeight="15" HtmlText="@ui_home_cfts" ScrollSize="14" HasVScroll="true" Left="98" Top="448" Width="340" Height="67" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" AutoSize="true" DrawMode="ExpandH" />
+            <subor name="VScrollBar">
+                <prop Maximum="1" SmallChange="1" LargeChange="4" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

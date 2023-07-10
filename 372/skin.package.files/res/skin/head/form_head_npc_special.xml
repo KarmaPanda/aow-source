@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<control name="main_form" entity="Form" script="" init="">
+		<prop LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="390" Height="494" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true"/>
+		<control name="YanGeTime" entity="GroupBox" script="" init="">
+			<prop Left="-163" Top="-3" Width="270" Height="54" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcYanGeTime" NoFrame="true"/>
+			<control name="lbl_kuang" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-10" Top="-8" Width="289" Height="76" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\yange\yange_back.png"/>
+			</control>
+			<control name="groupbox_progress" entity="GroupBox" script="" init="">
+				<prop Left="44" Top="16" Width="198" Height="30" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true"/>
+				<control name="groupbox_real_progress" entity="GroupBox" script="" init="">
+					<prop Left="-14" Width="198" Height="30" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true"/>
+					<control name="lbl_jt" entity="Label" script="" init="">
+						<prop RefCursor="WIN_HELP" IsLimitWidth="true" Width="210" Height="28" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="yange_jindu"/>
+					</control>
+					<control name="lbl_ding" entity="Label" script="" init="">
+						<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="159" Top="2" Width="39" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\animations\yange\yange_tiaoyue.png"/>
+					</control>
+				</control>
+			</control>
+			<control name="lbl_end" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-6" Top="-2" Width="278" Height="63" ShadowColor="0,0,0,0" AutoSize="true" BackImage="yange_beijing"/>
+			</control>
+			<control name="lbl_text" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="88" Top="6" Width="102" Height="14" ForeColor="255,242,68,255" ShadowColor="0,0,0,0" Text="@ui_wgm_yange" Font="font_text_chat"/>
+			</control>
+		</control>
+		<control name="Name" entity="MultiTextBox" script="" init="">
+			<prop HAlign="Center" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,30" LineHeight="30" HtmlText="name" LineTextAlign="Center" ScrollSize="17" Left="-62" Top="15" Width="110" Height="30" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="mltbox_1" DataSource="NpcName" Font="font_name_tittle"/>
+		</control>
+		<control name="pbar" entity="ProgressBar" script="" init="">
+			<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_hp.png" ProgressMode="LeftToRight" TextPercent="true" Left="-146" Top="111" Width="72" Height="12" ShadowColor="0,0,0,0" HAnchor="Center" Font="Default_npc_talk" AutoSize="true" BackImage="gui\mainform\bg_hp.png"/>
+		</control>
+		<control name="HP" entity="GroupBox" script="" init="">
+			<prop Left="-162" Top="95" Width="72" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcHP" AutoSize="true" BackImage="gui\mainform\bg_hp.png"/>
+			<control name="pbar_hithp" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="60" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_resume.png" ProgressMode="LeftToRight" TextPercent="true" Width="72" Height="12" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="HP" Font="Default_npc_talk"/>
+			</control>
+			<control name="pbar_hp" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_hp.png" ProgressMode="LeftToRight" TextPercent="true" Width="72" Height="12" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="HP" Font="Default_npc_talk"/>
+			</control>
+			<control name="pbar_hp_1" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_NPC_hp.png" ProgressMode="LeftToRight" TextPercent="true" Width="72" Height="12" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="HP" Font="Default_npc_talk"/>
+			</control>
+		</control>
+		<control name="Fire" entity="GroupBox" script="" init="">
+			<prop Left="-166" Top="55" Width="302" Height="46" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcFire" NoFrame="true"/>
+			<control name="blue_bar" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\special\tvt\fanghuo\blue.png" ProgressMode="RightToLeft" TextPercent="true" Width="164" Height="29" ShadowColor="0,0,0,0" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\left.png"/>
+			</control>
+			<control name="red_bar" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\special\tvt\fanghuo\red.png" ProgressMode="LeftToRight" TextPercent="true" Left="135" Top="6" Width="164" Height="29" ShadowColor="0,0,0,0" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\right.png"/>
+			</control>
+			<control name="lbl_blue" entity="Label" script="" init="">
+				<prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="48" Top="7" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure"/>
+			</control>
+			<control name="lbl_red" entity="Label" script="" init="">
+				<prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="212" Top="7" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure"/>
+			</control>
+		</control>
+		<control name="Recover" entity="ProgressBar" script="" init="">
+			<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\special\tvt\fanghuo\dh.png" ProgressMode="LeftToRight" TextPercent="true" Left="-154" Top="167" Width="238" Height="30" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcBurnPointWaterRatio" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\dhback.png"/>
+		</control>
+		<control name="CropPhoto" entity="Label" script="" init="">
+			<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-130" Top="215" Width="54" Height="38" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="CropPhoto" DrawMode="FitWindow" BackImage="gui\special\life\farm\hand.png"/>
+		</control>
+		<control name="Chat" entity="GroupBox" script="" init="">
+			<prop Left="-18" Top="7" Width="190" Height="102" BackColor="0,255,255,255" LineColor="0,255,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Visible="false" NoFrame="true"/>
+			<control name="MultiTextBox_1" entity="MultiTextBox" script="" init="">
+				<prop ViewRect="0,0,150,70" LineHeight="13" TipAutoSize="true" ScrollSize="17" Width="150" Height="70" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" NoFrame="true" DrawMode="Expand"/>
+			</control>
+		</control>
+		<control name="HireShopName" entity="GroupBox" script="" init="">
+			<prop Left="-154" Top="255" Width="142" Height="39" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcHireShopName" NoFrame="true" DrawMode="ExpandH" BackImage="gui\mainform\bg_stall.png"/>
+			<control name="lbl_hire_shop_icon" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="-6" Width="32" Height="39" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\mainform\icon_hireshop.png"/>
+			</control>
+			<control name="lbl_hire_shop_name" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="42" Top="10" Width="80" Height="16" ForeColor="255,162,224,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="hireshop_name" Font="font_text_chat"/>
+			</control>
+		</control>
+		<control name="StrongPoint" entity="ProgressBar" script="" init="">
+			<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\special\schoolwar\trackbar\tb_1.png" ProgressMode="LeftToRight" TextPercent="true" Left="-154" Top="303" Width="238" Height="30" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcActiveState" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\schoolwar\trackbar\bg_1.png"/>
+		</control>
+		<control name="FireRuin" entity="GroupBox" script="" init="">
+			<prop Left="-170" Top="351" Width="302" Height="54" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcFireRuin" NoFrame="true"/>
+			<control name="blue_bar_ruin" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\special\tvt\fanghuo\blue.png" ProgressMode="RightToLeft" TextPercent="true" Top="16" Width="164" Height="29" ShadowColor="0,0,0,0" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\left.png"/>
+			</control>
+			<control name="red_bar_ruin" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\special\tvt\fanghuo\red.png" ProgressMode="LeftToRight" TextPercent="true" Left="135" Top="22" Width="164" Height="29" ShadowColor="0,0,0,0" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\right.png"/>
+			</control>
+			<control name="lbl_blue_ruin" entity="Label" script="" init="">
+				<prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="48" Top="22" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure"/>
+			</control>
+			<control name="lbl_red_ruin" entity="Label" script="" init="">
+				<prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="184" Top="20" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure"/>
+			</control>
+			<control name="lbl_ruin" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="120" Top="-1" Width="52" Height="21" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\sunhui.png"/>
+			</control>
+			<control name="lbl_1" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="172" Top="4" Width="80" Height="21" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_FireRuin_text" Font="font_text"/>
+			</control>
+		</control>
+		<control name="SelfHoodName" entity="MultiTextBox" script="" init="">
+			<prop HAlign="Center" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,20" LineHeight="20" HtmlText="SelfHoodName" LineTextAlign="Center" ScrollSize="17" Left="62" Top="23" Width="110" Height="20" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="mltbox_1" DataSource="SelfHoodName" Font="font_name_tittle"/>
+		</control>
+		<control name="RipeTime" entity="Label" script="" init="">
+			<prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-114" Top="135" Width="102" Height="14" ForeColor="218,0,218,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="RipeTime" Font="font_text_chat"/>
+		</control>
+		<control name="BannerNpcPlayerName" entity="MultiTextBox" script="" init="">
+			<prop HAlign="Center" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,20" LineHeight="20" LineTextAlign="Center" ScrollSize="17" Left="-146" Top="415" Width="110" Height="20" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="mltbox_1" DataSource="BannerNpcPlayerName" Font="font_name_tittle"/>
+		</control>
+		<control name="BannerNpcGuildName" entity="MultiTextBox" script="" init="">
+			<prop HAlign="Center" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,20" LineHeight="20" LineTextAlign="Center" ScrollSize="17" Left="-146" Top="447" Width="110" Height="20" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="mltbox_1" DataSource="BannerNpcGuildName" Font="font_name_tittle"/>
+		</control>
+		<control name="StartTimeStamp" entity="GroupBox" script="" init="">
+			<prop Left="-130" Top="431" Width="286" Height="16" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Visible="false" Text="groupbox_1" DataSource="StartTimeStamp" NoFrame="true" DrawMode="FitWindow"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_1"/>
+			</subor>
+			<control name="pbar_qizhi_time" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" WidthGap="2" HeightGap="2" ProgressMode="LeftToRight" Width="222" Height="16" ShadowColor="0,0,0,0" DrawMode="FitWindow"/>
+			</control>
+			<control name="lbl_qizhi_time" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="224" Width="38" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="" Font="font_sns_name"/>
+			</control>
+		</control>
+		<control name="LuanDouFlagStamp" entity="GroupBox" script="" init="">
+			<prop Left="-186" Top="420" Width="366" Height="81" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="LuanDouFlagStamp" NoFrame="true"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="292" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0"/>
+			</subor>
+			<control name="pbar_team_2" entity="ProgressBar" script="" init="">
+				<prop Maximum="20" Value="20" WidthGap="2" HeightGap="2" ProgressImage="gui\special\war_scuffle\left.png" ProgressMode="RightToLeft" TextPercent="true" Left="32" Top="38" Width="164" Height="29" ShadowColor="0,0,0,0" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\left.png"/>
+			</control>
+			<control name="pbar_team_1" entity="ProgressBar" script="" init="">
+				<prop Maximum="20" Value="20" WidthGap="2" HeightGap="2" ProgressImage="gui\special\war_scuffle\right.png" ProgressMode="LeftToRight" TextPercent="true" Left="168" Top="43" Width="164" Height="29" ShadowColor="0,0,0,0" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\special\tvt\fanghuo\right.png"/>
+			</control>
+			<control name="lbl_time_2" entity="Label" script="" init="">
+				<prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="10" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_map_area_2"/>
+			</control>
+			<control name="lbl_time_1" entity="Label" script="" init="">
+				<prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="9" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_map_area_2"/>
+			</control>
+			<control name="lbl_cool_down" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="184" Top="9" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_map_area_2"/>
+			</control>
+			<control name="lbl_cool_pic" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="101" Top="11" Width="75" Height="23" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure" AutoSize="true" BackImage="gui\special\war_scuffle\cool.png"/>
+			</control>
+			<control name="lbl_right" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="207" Top="27" Width="81" Height="19" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure" AutoSize="true" BackImage="gui\special\war_scuffle\rsys_r.png"/>
+			</control>
+			<control name="lbl_left" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="72" Top="27" Width="81" Height="19" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_figure" AutoSize="true" BackImage="gui\special\war_scuffle\rsys_b.png"/>
+			</control>
+			<control name="lbl_4" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="63" Top="25" Width="60" Height="22" ForeColor="255,20,149,244" ShadowColor="0,0,0,0" Text="/3" Font="font_map_area_2"/>
+			</control>
+			<control name="lbl_6" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="292" Top="25" Width="22" Height="22" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="/3" Font="font_map_area_2"/>
+			</control>
+			<control name="lbl_rirht_num" entity="Label" script="" init="">
+				<prop Align="Right" RefCursor="WIN_HELP" Left="268" Top="25" Width="22" Height="22" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="2" Font="font_map_area_2"/>
+			</control>
+			<control name="lbl_left_num" entity="Label" script="" init="">
+				<prop Align="Right" RefCursor="WIN_HELP" Left="39" Top="25" Width="22" Height="22" ForeColor="255,20,149,244" ShadowColor="0,0,0,0" Text="2" Font="font_map_area_2"/>
+			</control>
+		</control>
+		<control name="GuildStriveBuildStart" entity="GroupBox" script="" init="">
+			<prop Left="-106" Top="503" Width="294" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="groupbox_1" DataSource="GuildStriveBuildStart" NoFrame="true" DrawMode="FitWindow"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_1"/>
+			</subor>
+			<control name="pbar_strive_time" entity="ProgressBar" script="" init="">
+				<prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\special\tvt\fanghuo\dh.png" ProgressMode="LeftToRight" Top="24" Width="294" Height="24" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\tvt\fanghuo\dhback.png"/>
+			</control>
+			<control name="lbl_strive_time" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="200" Top="8" Width="54" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="12:55" Font="font_text_chat"/>
+			</control>
+			<control name="lbl_strive_guild" entity="Label" script="" init="">
+				<prop Align="Right" RefCursor="WIN_HELP" Left="24" Top="8" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_guild_name" Font="font_text_chat"/>
+			</control>
+			<control name="lbl_2" entity="Label" script="" init="">
+				<prop Align="Right" RefCursor="WIN_HELP" Left="112" Top="8" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_global_war_shp_071" Font="font_text_chat"/>
+			</control>
+		</control>
+		<control name="lbl_5" entity="Label" script="" init="">
+			<prop RefCursor="WIN_HELP" Left="336" Top="472" Width="60" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_map_area_2"/>
+		</control>
+	</control>
+</form>

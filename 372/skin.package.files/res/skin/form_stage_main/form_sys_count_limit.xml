@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_sys_count_limit" init="main_form_init">
+        <prop ShowGrid="true" Left="205" Top="301" Width="198" Height="57" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\guild\guildwar\zhujiemian_xiala_bk.png" />
+        <event on_close="on_main_form_close" on_lost_capture="on_main_form_lost_capture" on_get_capture="on_main_form_get_capture" on_open="on_main_form_open" />
+        <control name="ImageControlGrid" entity="ImageControlGrid" script="" init="">
+            <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="20" MultiTextBoxPos="20,0;140,0" SelectColor="0,0,0,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,180,20" MaxSize="-1" RowNum="5" ClomnNum="1" ShowEmpty="false" GridOffsetY="6" GridHeight="30" GridWidth="180" FitGrid="false" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" ScrollSize="20" HasVScroll="false" Solid="false" Left="10" Top="24" Width="180" Height="30" ForeColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" />
+            <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" />
+            <subor name="MultiTextBox1">
+                <prop TextColor="255,255,255,255" ViewRect="10,0,120,30" LineHeight="30" LineTextAlign="Center" ScrollSize="17" Width="120" Height="30" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" />
+            </subor>
+            <subor name="MultiTextBox2">
+                <prop TextColor="255,255,0,0" ViewRect="10,0,60,28" LineHeight="28" LineTextAlign="Center" ScrollSize="17" Width="60" Height="28" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_line\ibox_1.png" />
+            </subor>
+        </control>
+        <control name="btn_hide" entity="Button" script="" init="">
+            <prop NormalImage="gui\guild\guildwar\zhujiemian_xiala_shang_up.png" FocusImage="gui\guild\guildwar\zhujiemian_xiala_shang_over.png" PushImage="gui\guild\guildwar\zhujiemian_xiala_shang_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="176" Top="4" Width="18" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_hide_click" />
+        </control>
+        <control name="btn_help" entity="Button" script="" init="">
+            <prop NormalImage="gui\guild\guildwar\zhujiemian_xiala_-_up.png" FocusImage="gui\guild\guildwar\zhujiemian_xiala_-_over.png" PushImage="gui\guild\guildwar\zhujiemian_xiala_-_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="160" Top="4" Width="18" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_help_click" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_home\form_home_sell" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="45" Top="53" Width="658" Height="314" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="629" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="258" Top="1" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title_tasktrace" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="32" Width="653" Height="254" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="groupbox_sell_info" entity="GroupBox" script="" init="">
+            <prop Left="16" Top="72" Width="302" Height="198" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" DrawMode="Expand" />
+            <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,265,182" LineHeight="25" TipMaxWidth="100" HtmlText="@ui_home_sell_22" ScrollSize="17" Left="12" Top="10" Width="265" Height="182" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+        </control>
+        <control name="lbl_place" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="720" Top="184" Width="80" Height="62" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="啊啊啊啊啊" Font="font_title_tasktrace" DrawMode="Expand" BackImage="gui\special\home\home_20.png" />
+        </control>
+        <control name="lbl_home" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="448" Top="85" Width="118" Height="22" ForeColor="255,140,46,14" ShadowColor="0,0,0,0" Font="font_text" AutoSize="true" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="368" Width="603" Height="38" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\combobox\bg_select_out.png" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop ViewRect="0,0,312,220" LineHeight="18" ScrollSize="14" HasVScroll="true" Left="13" Top="54" Width="312" Height="220" ShadowColor="0,0,0,0" Text="mltbox_1" NoFrame="true" AutoSize="true" DrawMode="Expand" BackImage="gui\special\home\kuang_3.PNG" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="40" Width="174" Height="30" ForeColor="255,76,61,44" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_home_sell_05" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+            <prop ViewRect="0,0,312,220" LineHeight="13" ScrollSize="17" Left="331" Top="54" Width="312" Height="220" ShadowColor="0,0,0,0" Text="mltbox_1" NoFrame="true" AutoSize="true" DrawMode="Expand" BackImage="gui\special\home\kuang_3.PNG" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="408" Top="40" Width="174" Height="30" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_home_sell_06" Font="font_text" DrawMode="Expand" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="343" Top="116" Width="294" Height="38" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="11" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_07" Font="font_text" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="140" Top="11" Width="14" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_02" Font="font_text" />
+            </control>
+            <control name="lbl_17" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="199" Top="11" Width="14" Height="16" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Text="@ui_home_sell_03" Font="font_text" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="257" Top="11" Width="14" Height="16" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Text="@ui_home_sell_04" Font="font_text" />
+            </control>
+            <control name="ipt_baseding" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="-50" Top="8" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_money" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+            <control name="ipt_baseliang" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="156" Top="8" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_money" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+            <control name="ipt_basewen" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="217" Top="8" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_money" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="344" Top="186" Width="284" Height="68" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="11" Width="62" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_10" Font="font_text" />
+            </control>
+            <control name="lbl_21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="119" Top="13" Width="14" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_02" Font="font_text" />
+            </control>
+            <control name="lbl_22" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="178" Top="13" Width="14" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_03" Font="font_text" />
+            </control>
+            <control name="lbl_23" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="239" Top="13" Width="14" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_04" Font="font_text" />
+            </control>
+            <control name="ipt_fixedding" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="79" Top="10" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+            <control name="ipt_fixedliang" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="137" Top="11" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+            <control name="ipt_fixedwen" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="196" Top="10" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="43" Width="62" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_23" Font="font_text" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="216" Top="49" Width="18" Height="11" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\liang.png" />
+            </control>
+        </control>
+        <control name="groupbox_3" entity="GroupBox" script="" init="">
+            <prop Left="344" Top="155" Width="286" Height="38" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="ipt_bidtime" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxLength="2" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="82" Top="4" Width="38" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_money" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\mibox_2.png" />
+            </control>
+            <control name="lbl_24" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="46" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_08" Font="font_text" />
+            </control>
+            <control name="lbl_25" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="122" Top="8" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_sell_25" Font="font_text" />
+            </control>
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="296" Top="4" Width="80" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_home_sell_01" Font="font_title" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="27" Width="650" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="280" Width="646" Height="27" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="275" Width="653" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_sell" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="567" Top="279" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_home_sell_24" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_sell_click" />
+        </control>
+        <control name="lbl_26" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="352" Top="87" Width="80" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_bulid_03" Font="font_text" />
+        </control>
+    </control>
+</form>

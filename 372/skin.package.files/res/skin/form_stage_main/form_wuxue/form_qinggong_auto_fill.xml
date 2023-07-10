@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_wuxue\form_qinggong_auto_fill" init="on_main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="213" Top="157" Width="510" Height="406" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="32" Width="502" Height="14" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="184" Top="8" Width="118" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_qxyl01" Font="font_title" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="480" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="27" Width="502" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="48" Width="494" Height="342" ShadowColor="0,0,0,0" BackImage="gui\special\wuxue\form_back\bg_ng.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="64" Top="64" Width="371" Height="103" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\wuxue\qixueyoulong.png" />
+        </control>
+        <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="14" HasVScroll="true" Left="8" Top="176" Width="494" Height="214" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <control name="lbl_3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,478,33" HtmlText="@ui_qixueyoulong001" ScrollSize="17" Left="8" Top="4" Width="478" Height="33" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="lbl_7" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,477,38" LineHeight="15" HtmlText="@ui_qixueyoulong002" ScrollSize="17" Left="8" Top="44" Width="477" Height="38" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="lbl_8" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,483,43" LineHeight="15" HtmlText="@ui_qixueyoulong003" ScrollSize="17" Left="8" Top="84" Width="483" Height="43" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="lbl_9" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,479,41" LineHeight="15" HtmlText="@ui_qixueyoulong004" ScrollSize="17" Left="8" Top="124" Width="479" Height="41" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="lbl_10" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,477,43" LineHeight="15" HtmlText="@ui_qixueyoulong005" ScrollSize="17" Left="8" Top="164" Width="477" Height="43" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" />
+            </control>
+        </control>
+    </control>
+</form>

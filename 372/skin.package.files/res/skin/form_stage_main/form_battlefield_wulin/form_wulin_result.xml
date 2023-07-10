@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_battlefield_wulin\form_wulin_result" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="29" Top="29" Width="774" Height="655" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_balance\result\BG.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-28" Top="18" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="288" Top="18" Width="200" Height="22" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Text="@ui_battle_info" Font="font_playername" />
+        </control>
+        <control name="textgrid_info_1" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderRowHeight="35" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" RowHeaderVisible="false" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectCol="true" CanSelectRow="true" ColWidth="40" RowHeight="36" ScrollSize="20" HasHScroll="true" Left="2" Top="112" Width="770" Height="216" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" Font="font_text" TabStop="true" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\battlefiled_balance\result\back.png" />
+            <subor name="HScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_4\btn_left_out.png" FocusImage="gui\common\scrollbar\button_4\btn_left_on.png" PushImage="gui\common\scrollbar\button_4\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_4\btn_right_out.png" FocusImage="gui\common\scrollbar\button_4\btn_right_on.png" PushImage="gui\common\scrollbar\button_4\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_4\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_4\btn_trace_on.png" PushImage="gui\common\scrollbar\button_4\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="250" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop ButtonSize="18" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="214" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="textgrid_info_2" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderRowHeight="35" HeaderBackColor="0,255,255,255" HeaderForeColor="255,255,255,255" RowHeaderVisible="false" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectCol="true" CanSelectRow="true" ColWidth="40" RowHeight="36" ScrollSize="20" HasHScroll="true" Left="2" Top="400" Width="770" Height="216" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" Font="font_text" TabStop="true" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\battlefiled_balance\result\back.png" />
+            <subor name="HScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_4\btn_left_out.png" FocusImage="gui\common\scrollbar\button_4\btn_left_on.png" PushImage="gui\common\scrollbar\button_4\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_4\btn_right_out.png" FocusImage="gui\common\scrollbar\button_4\btn_right_on.png" PushImage="gui\common\scrollbar\button_4\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_4\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_4\btn_trace_on.png" PushImage="gui\common\scrollbar\button_4\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="250" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop ButtonSize="18" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="214" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="lbl_self" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="50" Width="758" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_task_name" />
+        </control>
+        <control name="lbl_enemy" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="340" Width="758" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_task_name" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="148" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\deep.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="112" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\light.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="184" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\light.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="220" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\deep.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="256" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\light.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="292" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\deep.png" />
+        </control>
+        <control name="lbl_title_enemy" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="14" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_rank" Font="font_tip" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="400" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\light.png" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="436" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\deep.png" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="472" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\light.png" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="508" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\deep.png" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="544" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\light.png" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="580" Width="770" Height="36" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\deep.png" />
+        </control>
+        <control name="lbl_team_1_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="114" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_1_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="150" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_1_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="186" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_1_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="222" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_1_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="258" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_1_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="294" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_2_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="404" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_2_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="440" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_2_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="476" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_2_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="512" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_2_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="548" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="lbl_team_2_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="712" Top="584" Width="51" Height="28" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\battlefiled_balance\result\victory.png" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,318,22" LineHeight="18" ScrollSize="17" Left="8" Top="626" Width="318" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text_chat" />
+        </control>
+        <control name="btn_quit" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="640" Top="622" Width="126" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_wudao_leave_out" Font="font_name_tittle" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_quit_click" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_player_name" Font="font_tip" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="234" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_kill" Font="font_tip" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="314" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_damage" Font="font_tip" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="464" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_continue_kill" Font="font_tip" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="568" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_assist" Font="font_tip" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="632" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_dead" Font="font_tip" />
+        </control>
+        <control name="lbl_19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="696" Top="82" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_result" Font="font_tip" />
+        </control>
+        <control name="lbl_20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="14" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_rank" Font="font_tip" />
+        </control>
+        <control name="lbl_21" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="72" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_player_name" Font="font_tip" />
+        </control>
+        <control name="lbl_22" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="234" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_kill" Font="font_tip" />
+        </control>
+        <control name="lbl_23" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="314" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_damage" Font="font_tip" />
+        </control>
+        <control name="lbl_24" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="464" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_continue_kill" Font="font_tip" />
+        </control>
+        <control name="lbl_25" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="568" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_assist" Font="font_tip" />
+        </control>
+        <control name="lbl_26" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="632" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_dead" Font="font_tip" />
+        </control>
+        <control name="lbl_27" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="696" Top="370" Width="54" Height="27" ForeColor="255,255,149,40" ShadowColor="0,0,0,0" Text="@ui_wudao_result" Font="font_tip" />
+        </control>
+    </control>
+</form>

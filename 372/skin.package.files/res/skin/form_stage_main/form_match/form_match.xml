@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_match\form_match" init="main_form_init">
+        <prop ShowGrid="true" Left="13" Top="13" Width="1046" Height="630" BackColor="0,92,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="mltbox_iPhase" entity="MultiTextBox" script="" init="">
+            <prop HAlign="Right" VAlign="Center" TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,222,38" LineHeight="22" ScrollSize="17" Left="-211" Top="-131" Width="222" Height="38" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="font_task_name" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/match/bg_ditu.png" />
+        </control>
+        <control name="lbl_gropbox_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="664" Top="112" Width="246" Height="174" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        </control>
+        <control name="groupbox_match_week" entity="GroupBox" script="" init="">
+            <prop Left="163" Top="32" Width="747" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_week_ruxuan" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="-67" Top="600" Width="230" Height="118" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="btn_week_info" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="909" Top="376" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface01" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_week_info_click" />
+            </control>
+            <control name="btn_week_rank" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="925" Top="384" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface02" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_week_rank_click" />
+            </control>
+            <control name="btn_jianghu_week_match_rule" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="925" Top="416" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface05" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_rule_info_click" />
+            </control>
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/match/btn3_out.png" FocusImage="gui/special/match/btn3_on.png" PushImage="gui/special/match/btn3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-51" Top="608" Width="102" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface06" Font="font_btn" AutoSize="true" />
+            </control>
+            <control name="btn_show_jh_week" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="893" Top="344" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface49" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_show_jh_week_click" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="20" TipMaxWidth="20" HtmlText="@ui_match_interface51" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="Expand" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="5" SmallChange="1" LargeChange="9" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="108" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_17" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/match/back.png" />
+            </control>
+        </control>
+        <control name="groupbox_match_day" entity="GroupBox" script="" init="">
+            <prop Left="163" Top="32" Width="747" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="btn_apply" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="917" Top="352" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface04" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_apply_click" />
+            </control>
+            <control name="btn_day_info" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="925" Top="376" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface01" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_day_info_click" />
+            </control>
+            <control name="btn_day_rank" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="925" Top="384" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface02" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_day_rank_click" />
+            </control>
+            <control name="btn_jianghu_day_match_rule" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="917" Top="432" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface05" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_rule_info_click" />
+            </control>
+            <control name="btn_5" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/match/btn3_out.png" FocusImage="gui/special/match/btn3_on.png" PushImage="gui/special/match/btn3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-11" Top="624" Width="102" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface06" Font="font_btn" AutoSize="true" />
+            </control>
+            <control name="mltbox_29" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="20" TipMaxWidth="20" HtmlText="@ui_match_interface50" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="4" SmallChange="1" LargeChange="9" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="116" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_16" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/match/back.png" />
+            </control>
+        </control>
+        <control name="groupbox_school_match_month" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="163" Top="32" Width="747" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="FitWindow" />
+            <control name="btn_day_info_32" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="797" Top="360" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface01" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_day_info_32_click" />
+            </control>
+            <control name="btn_day_rank_32" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="941" Top="384" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface02" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_day_rank_32_click" />
+            </control>
+            <control name="btn_school_month_match_rule" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="933" Top="424" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface05" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_rule_info_click" />
+            </control>
+            <control name="btn_5_32" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/match/btn3_out.png" FocusImage="gui/special/match/btn3_on.png" PushImage="gui/special/match/btn3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-51" Top="640" Width="102" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface06" Font="font_btn" AutoSize="true" />
+            </control>
+            <control name="btn_show_school_month" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="925" Top="368" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface49" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_show_school_month_click" />
+            </control>
+            <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="20" TipMaxWidth="20" HtmlText="@ui_schoolmatch_01" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="6" SmallChange="1" LargeChange="9" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="100" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_18" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/match/back02.png" />
+            </control>
+        </control>
+        <control name="groupbox_school_match_week" entity="GroupBox" script="" init="">
+            <prop Left="163" Top="32" Width="747" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="FitWindow" />
+            <control name="btn_apply_31" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="901" Top="360" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface04" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_apply_31_click" />
+            </control>
+            <control name="btn_day_info_31" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="901" Top="384" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface01" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_day_info_31_click" />
+            </control>
+            <control name="btn_day_rank_31" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="925" Top="408" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface02" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_day_rank_31_click" />
+            </control>
+            <control name="btn_school_week_match_rule" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="933" Top="416" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface05" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_rule_info_click" />
+            </control>
+            <control name="btn_5_31" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/match/btn3_out.png" FocusImage="gui/special/match/btn3_on.png" PushImage="gui/special/match/btn3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-19" Top="640" Width="102" Height="40" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_match_interface06" Font="font_btn" AutoSize="true" />
+            </control>
+            <control name="mltbox_4" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="20" HtmlText="@ui_schoolmatch_02" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="6" SmallChange="1" LargeChange="9" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="100" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/match/back02.png" />
+            </control>
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="584" Top="48" Width="296" Height="26" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="Expand" />
+            <control name="ipt_1" entity="Edit" script="" init="">
+                <prop MaxDigit="50" MaxLength="50" TextOffsetX="2" Caret="Default" Left="144" Width="129" Height="26" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_playername" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui/language/ChineseS/huashan/bg_duicai_input.png" />
+            </control>
+            <control name="btn_find" entity="Button" script="" init="">
+                <prop NormalImage="gui/map/mapn/btn_search_out.png" FocusImage="gui/map/mapn/btn_search_on.png" PushImage="gui/map/mapn/btn_search_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="272" Top="2" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_match_interface24" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_find_click" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="6" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_interface41" Font="font_main" />
+            </control>
+        </control>
+        <control name="groupbox_revenge_match" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="163" Top="32" Width="747" Height="510" BackColor="0,0,255,66" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_fenqu_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-83" Top="528" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_area" Font="font_name" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="107" Top="32" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_rank_ponit" Font="font_main" />
+            </control>
+            <control name="lbl_integral" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="245" Top="32" Width="54" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="btn_room" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-3" Top="720" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_revenge_join_room" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_room_click" />
+            </control>
+            <control name="btn_match" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="376" Width="90" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_revenge_quit" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_match_click" />
+            </control>
+            <control name="lbl_fenqu" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="901" Width="78" Height="16" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="btn_target" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="301" Top="648" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_revenge_wait" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_target_click" />
+            </control>
+            <control name="lbl_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="117" Top="648" Width="142" Height="22" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="font_sns_main" DrawMode="FitWindow" />
+            </control>
+            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="19" HtmlText="@ui_tianti_revenge" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" BackColor="19,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="7" SmallChange="1" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="98" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="100" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui/special/tianti/strength/bg_gjf.png" />
+            </control>
+            <control name="lbl_bg_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="96" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="132" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="168" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="204" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="240" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="276" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="btn_taolu" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="205" Top="376" Width="98" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huangxc_taolu" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_taolu_click" />
+            </control>
+            <control name="btn_tianti" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="637" Top="472" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_046" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_tianti_click" />
+            </control>
+            <control name="btn_wycx" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="549" Top="712" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_053" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_wycx_click" />
+            </control>
+            <control name="btn_qiubai" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="525" Top="704" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_052" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_qiubai_click" />
+            </control>
+            <control name="lbl_24" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="521" Top="34" Width="70" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="lbl_25" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="487" Top="32" Width="24" Height="23" ShadowColor="0,0,0,0" HintText="@ui_tianti_066" AutoSize="true" BackImage="gui/special/tianti/end/bwd.png" />
+            </control>
+            <control name="lbl_jointimes" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="193" Top="56" Width="70" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="1/10" Font="HyperLink4" HintText="@ui_tianti_068" />
+            </control>
+            <control name="lbl_22" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="107" Top="56" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tianti_067" Font="font_main" />
+            </control>
+            <control name="lbl_26" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="373" Top="32" Width="22" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="lbl_27" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="477" Top="56" Width="54" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="lbl_28" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="293" Top="32" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tianti_069" Font="font_main" />
+            </control>
+            <control name="lbl_29" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="293" Top="56" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tianti_070" Font="font_main" />
+            </control>
+            <control name="lbl_30" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="172" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_33" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="208" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_34" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="244" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_35" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="136" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_32" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="280" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_bg_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-99" Top="616" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="213" Top="640" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="140" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_0" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_2.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="176" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_1" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_3.png" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="212" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_2" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_4.png" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="248" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_3" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_5.png" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="284" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_4" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_6.png" />
+            </control>
+            <control name="lbl_37" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="-147" Top="712" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_5" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_7.PNG" />
+            </control>
+            <control name="lbl_38" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="77" Top="704" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_6" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_8.png" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="104" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_0" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_1.png" />
+            </control>
+            <control name="textgrid_room" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="24" HeaderBackColor="19,255,255,255" SelectBackColor="0,76,61,44" SelectBackDraw="gui/special/match/bg_ditu03.png" CanSelectRow="true" ColWidth="25" ColWidths=",80,100,,,60,140" RowHeight="36" ColCount="7" ScrollSize="17" HasHScroll="true" Left="-296" Top="80" Width="382" Height="270" ForeColor="255,255,255,255" BackColor="0,76,61,44" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_main" TabStop="true" DrawMode="FitWindow" />
+                <event on_select_row="on_textgrid_room_select_row" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="6" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="294" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="lbl_36" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="141" Top="640" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_31" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-107" Top="648" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_42" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="309" Top="656" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_roomstate_1" Font="font_main" />
+            </control>
+            <control name="lbl_41" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-51" Top="680" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_roomstate_1" Font="font_main" />
+            </control>
+            <control name="lbl_40" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="37" Top="664" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_type_2" Font="font_main" />
+            </control>
+            <control name="lbl_39" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-115" Top="656" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_type_3" Font="font_main" />
+            </control>
+            <control name="btn_hj" entity="Button" script="" init="">
+                <prop NormalImage="gui/language/ChineseS/huashan/btn_duicai03_out.png" FocusImage="gui/language/ChineseS/huashan/btn_duicai03_on.png" PushImage="gui/language/ChineseS/huashan/btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="685" Top="632" Width="46" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xianxia_xiangqing" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_hj_click" />
+            </control>
+            <control name="btn_jy" entity="Button" script="" init="">
+                <prop NormalImage="gui/language/ChineseS/huashan/btn_duicai03_out.png" FocusImage="gui/language/ChineseS/huashan/btn_duicai03_on.png" PushImage="gui/language/ChineseS/huashan/btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="605" Top="672" Width="46" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xianxia_xiangqing" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_jy_click" />
+            </control>
+            <control name="btn_quick_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\tianti\strength\btn1_out.png" FocusImage="gui\special\tianti\strength\btn1_on.png" PushImage="gui\special\tianti\strength\btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="309" Top="376" Width="134" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_quick_1" Font="font_main" HintText="@ui_quick_2" DrawMode="FitWindow" />
+                <event on_click="on_btn_exist_cross_click" />
+            </control>
+            <control name="lbl_43" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="941" Top="-16" Width="22" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="lbl_44" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="917" Top="-16" Width="14" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="/" Font="HyperLink4" DrawMode="Center" />
+            </control>
+            <control name="btn_reward" entity="Button" script="" init="">
+                <prop NormalImage="gui\clone_new\bao_out.png" FocusImage="gui\clone_new\bao_on.png" PushImage="gui\clone_new\bao_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="653" Top="24" Width="70" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_bt_ban_jl" />
+                <event on_click="on_btn_reward_click" />
+            </control>
+        </control>
+        <control name="groupbox_revenge_match_1" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="163" Top="32" Width="747" Height="510" BackColor="0,0,255,66" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="btn_room_1" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="980" Top="248" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_manyrevenge_join_room" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_room_1_click" />
+            </control>
+            <control name="btn_match_1" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="980" Top="248" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_revenge_quit" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_match_1_click" />
+            </control>
+            <control name="mltbox_2_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="19" HtmlText="@ui_tianti_manyrevenge_free" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" BackColor="19,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="7" SmallChange="1" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="98" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_21_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_8_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\special\tianti\tvt_fight\groupscene021_bg.png" />
+            </control>
+            <control name="btn_wycx_1" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="549" Top="712" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_053" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_wycx_click" />
+            </control>
+            <control name="btn_qiubai_1" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="525" Top="704" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_052" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_qiubai_click" />
+            </control>
+            <control name="lbl_bg_7_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-99" Top="616" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_8_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="213" Top="640" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_37_1" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="-147" Top="712" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_5" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_7.PNG" />
+            </control>
+            <control name="lbl_38_1" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="77" Top="704" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_6" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_8.png" />
+            </control>
+            <control name="lbl_36_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="141" Top="640" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_31_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-107" Top="648" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_42_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="309" Top="656" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_roomstate_1" Font="font_main" />
+            </control>
+            <control name="lbl_41_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-51" Top="680" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_roomstate_1" Font="font_main" />
+            </control>
+            <control name="lbl_40_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="37" Top="664" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_type_2" Font="font_main" />
+            </control>
+            <control name="lbl_39_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-115" Top="656" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_type_3" Font="font_main" />
+            </control>
+            <control name="btn_hj_1" entity="Button" script="" init="">
+                <prop NormalImage="gui/language/ChineseS/huashan/btn_duicai03_out.png" FocusImage="gui/language/ChineseS/huashan/btn_duicai03_on.png" PushImage="gui/language/ChineseS/huashan/btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="685" Top="632" Width="46" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xianxia_xiangqing" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_hj_click" />
+            </control>
+            <control name="btn_jy_1" entity="Button" script="" init="">
+                <prop NormalImage="gui/language/ChineseS/huashan/btn_duicai03_out.png" FocusImage="gui/language/ChineseS/huashan/btn_duicai03_on.png" PushImage="gui/language/ChineseS/huashan/btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="605" Top="672" Width="46" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xianxia_xiangqing" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_jy_click" />
+            </control>
+            <control name="mltbox_duoren" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="15,25,300,200" LineHeight="18" HtmlText="@ui_duoren_free" ScrollSize="17" Left="-304" Top="-143" Width="310" Height="150" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\match\bg_ditu.png" />
+            </control>
+            <control name="btn_quick_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\tianti\strength\btn1_out.png" FocusImage="gui\special\tianti\strength\btn1_on.png" PushImage="gui\special\tianti\strength\btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="980" Top="248" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_quick_1" Font="font_main" HintText="@ui_quick_2" DrawMode="FitWindow" />
+                <event on_click="on_btn_exist_cross_click" />
+            </control>
+        </control>
+        <control name="groupbox_revenge_match_2" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="163" Top="32" Width="747" Height="510" BackColor="0,0,255,66" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="lbl_fenqu_1_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-83" Top="528" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_area" Font="font_name" />
+            </control>
+            <control name="lbl_5_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="107" Top="32" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_rank_ponit" Font="font_main" />
+            </control>
+            <control name="lbl_integral_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="237" Top="33" Width="54" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="btn_room_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="980" Top="376" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_manyrevenge_join_room" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_room_2_click" />
+            </control>
+            <control name="btn_match_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="980" Top="376" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_revenge_quit" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_match_2_click" />
+            </control>
+            <control name="lbl_fenqu_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="901" Width="78" Height="16" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="btn_target_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="301" Top="648" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_revenge_wait" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_target_2_click" />
+            </control>
+            <control name="lbl_state_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="117" Top="648" Width="142" Height="22" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="font_sns_main" DrawMode="FitWindow" />
+            </control>
+            <control name="mltbox_2_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="19" HtmlText="@ui_tianti_manyrevenge_sworn" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" BackColor="19,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="12" SmallChange="1" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="98" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_9_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="100" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_21_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_8_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="Center" BackImage="gui\special\tianti\tvt_fight\groupscene021_bg.png" />
+            </control>
+            <control name="lbl_bg_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="96" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="132" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="350" Top="168" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="397" Top="696" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="btn_tianti_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="589" Top="472" Width="122" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_046" Font="font_main" DrawMode="FitWindow" />
+                <event on_click="on_btn_tianti_2_click" />
+            </control>
+            <control name="btn_wycx_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="613" Top="720" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_053" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_wycx_click" />
+            </control>
+            <control name="btn_qiubai_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="525" Top="704" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_052" Font="font_main" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_qiubai_click" />
+            </control>
+            <control name="lbl_24_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="573" Top="34" Width="70" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" />
+            </control>
+            <control name="lbl_25_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="653" Top="32" Width="24" Height="23" ShadowColor="0,0,0,0" HintText="@ui_tianti_manyrevenge_3" AutoSize="true" BackImage="gui\special\tianti\tvt_fight\point.png" />
+            </control>
+            <control name="lbl_jointimes_2" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="213" Top="56" Width="70" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="1/10" Font="HyperLink4" HintText="@ui_tianti_manyrevenge_2" />
+            </control>
+            <control name="lbl_22_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="107" Top="56" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tianti_manyrevenge_1" Font="font_main" />
+            </control>
+            <control name="lbl_26_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="517" Top="32" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="HyperLink4" HintText="@ui_tianti_manyrevenge_4" />
+            </control>
+            <control name="lbl_28_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="301" Top="32" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tianti_manyrevenge_5" Font="font_main" HintText="@ui_tianti_manyrevenge_4" />
+            </control>
+            <control name="lbl_30_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="172" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_33_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="189" Top="624" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_35_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="136" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_bg_7_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-99" Top="616" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_bg_8_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="213" Top="640" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_12.png" />
+            </control>
+            <control name="lbl_11_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="140" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\tianti\tvt_fight\1.png" />
+            </control>
+            <control name="lbl_12_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="176" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\tianti\tvt_fight\5.png" />
+            </control>
+            <control name="lbl_13_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="101" Top="648" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\tianti\tvt_fight\1.png" />
+            </control>
+            <control name="lbl_37_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="-91" Top="736" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_7.PNG" />
+            </control>
+            <control name="lbl_bg_15" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="349" Top="648" Width="100" Height="48" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\tianti\strength\bg_12.png" />
+            </control>
+            <control name="lbl_14_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="133" Top="664" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\tianti\tvt_fight\5.png" />
+            </control>
+            <control name="lbl_36_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="149" Top="720" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_38_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="-35" Top="720" Width="36" Height="36" ShadowColor="0,0,0,0" HintText="@ui_MRBC_Roomtips_6" DrawMode="FitWindow" BackImage="gui/language/ChineseS/tianti/icon_8.png" />
+            </control>
+            <control name="lbl_10_2" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="104" Top="104" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\tianti\tvt_fight\6.png" />
+            </control>
+            <control name="textgrid_room_2" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderRowHeight="24" HeaderBackColor="19,255,255,255" SelectBackColor="0,76,61,44" SelectBackDraw="gui/special/match/bg_ditu03.png" CanSelectRow="true" ColWidth="25" ColWidths=",80,100,,,60,140" RowHeight="36" ColCount="7" ScrollSize="17" HasHScroll="true" Left="-296" Top="80" Width="382" Height="270" ForeColor="255,255,255,255" BackColor="0,76,61,44" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Enabled="false" Font="font_main" TabStop="true" DrawMode="FitWindow" />
+                <event on_select_row="on_textgrid_room_2_select_row" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="6" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="294" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="lbl_31_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="189" Top="672" Width="210" Height="42" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/tianti/strength/bg_11.png" />
+            </control>
+            <control name="lbl_42_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="341" Top="696" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_roomstate_1" Font="font_main" />
+            </control>
+            <control name="lbl_41_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-35" Top="680" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_revenge_roomstate_1" Font="font_main" />
+            </control>
+            <control name="lbl_40_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="29" Top="712" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_type_2" Font="font_main" />
+            </control>
+            <control name="lbl_39_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-83" Top="688" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_match_type_3" Font="font_main" />
+            </control>
+            <control name="btn_hj_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/language/ChineseS/huashan/btn_duicai03_out.png" FocusImage="gui/language/ChineseS/huashan/btn_duicai03_on.png" PushImage="gui/language/ChineseS/huashan/btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="693" Top="688" Width="46" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xianxia_xiangqing" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_hj_click" />
+            </control>
+            <control name="btn_jy_2" entity="Button" script="" init="">
+                <prop NormalImage="gui/language/ChineseS/huashan/btn_duicai03_out.png" FocusImage="gui/language/ChineseS/huashan/btn_duicai03_on.png" PushImage="gui/language/ChineseS/huashan/btn_duicai03_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="653" Top="712" Width="46" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xianxia_xiangqing" Font="font_main" DrawMode="Expand" />
+                <event on_click="on_btn_jy_click" />
+            </control>
+            <control name="btn_quick_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\tianti\strength\btn1_out.png" FocusImage="gui\special\tianti\strength\btn1_on.png" PushImage="gui\special\tianti\strength\btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="980" Top="376" Width="74" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_quick_1" Font="font_main" HintText="@ui_quick_2" DrawMode="FitWindow" />
+                <event on_click="on_btn_exist_cross_click" />
+            </control>
+        </control>
+        <control name="tree_job" entity="TreeViewEx" script="" init="">
+            <prop IsNoDrawRoot="true" IsLeftClickExpandClose="true" SelectBackColor="190,190,190,190" NodeExpandDraw="gui/special/match/subtract.png" NodeCloseDraw="gui/special/match/plus.png" ScrollSize="18" Left="-515" Top="112" Width="204" Height="510" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_select_changed="on_tree_job_select_changed" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="20" TrackSize="36" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="groupbox_match_hslj" entity="GroupBox" script="" init="">
+            <prop Left="163" Top="32" Width="747" Height="510" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="FitWindow" />
+            <control name="lbl_hslj_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="69" Top="136" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_huashan_ljrq" Font="font_main" />
+            </control>
+            <control name="lbl_hslj_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="120" Width="110" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_huashan_close" Font="font_main" />
+            </control>
+            <control name="lbl_hslj_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="69" Top="104" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_huashan_rwrq" Font="font_main" />
+            </control>
+            <control name="lbl_hslj_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="157" Top="152" Width="110" Height="16" ForeColor="255,255,204,0" BackColor="255,197,184,122" ShadowColor="0,0,0,0" Text="@ui_huashan_close" Font="font_main" />
+            </control>
+            <control name="lbl_23" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="69" Top="168" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_tianti_huashan_2" Font="font_main" />
+            </control>
+            <control name="groupbox_my" entity="GroupBox" script="" init="">
+                <prop Left="37" Top="48" Width="678" Height="462" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="btn_phb" entity="Button" script="" init="">
+                    <prop NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" PushImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="536" Top="416" Width="114" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_046" Font="font_main" DrawMode="FitWindow" />
+                    <event on_click="on_btn_phb_click" />
+                </control>
+                <control name="groupbox_my_lj" entity="GroupBox" script="" init="">
+                    <prop Left="168" Top="568" Width="198" Height="142" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui/special/huashan/bg_main_2.png" />
+                    <control name="lbl_hslj_1" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="24" Top="18" Width="134" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Text="@ui_huashan_wdlj" Font="HyperLink4" />
+                    </control>
+                    <control name="lbl_hslj_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="24" Top="88" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_jifen" Font="HyperLink1" />
+                    </control>
+                    <control name="lbl_hslj_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="24" Top="112" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_huashan_paiming" Font="HyperLink1" />
+                    </control>
+                    <control name="lbl_name" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="24" Top="48" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                    </control>
+                    <control name="lbl_paiming" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="88" Top="112" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_text" />
+                    </control>
+                    <control name="lbl_point" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="88" Top="88" Width="80" Height="16" ForeColor="255,254,204,0" ShadowColor="0,0,0,0" Font="font_text" />
+                    </control>
+                </control>
+            </control>
+            <control name="groupbox_title" entity="GroupBox" script="" init="">
+                <prop Left="121" Top="352" Width="326" Height="90" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                <control name="rbtn_wj_name" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" CheckedImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="172" Top="48" Width="152" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_wujue" Font="font_main" TabIndex="4" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+                <control name="rbtn_yt_sword" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" CheckedImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="20" Top="48" Width="144" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_yitianjian" Font="font_main" TabIndex="5" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+                <control name="rbtn_hslj" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" ClickEvent="true" BoxSize="12" NormalImage="gui/special/tianti/strength/btn1_out.png" FocusImage="gui/special/tianti/strength/btn1_on.png" CheckedImage="gui/special/tianti/strength/btn1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="19" Width="172" Height="32" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tianti_hslj" Font="font_main" TabIndex="6" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_rbtn_click" />
+                </control>
+            </control>
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="479" Top="76" Width="240" Height="183" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/form_back/bg_main_on.png" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="485" Top="80" Width="230" Height="174" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/special/huashan/form_back_6.png" />
+            </control>
+            <control name="mltbox_5" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="5,0,215,198" LineHeight="19" HtmlText="@ui_tianti_huashan" ScrollSize="17" HasVScroll="true" Left="484" Top="264" Width="232" Height="198" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" DrawMode="FitWindow" BackImage="gui/special/huashan/bg_main_6.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui/common/scrollbar/bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_up_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_up_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_down_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_down_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui/common/scrollbar/button_1/btn_match_trace_out.png" FocusImage="gui/common/scrollbar/button_1/btn_match_trace_on.png" PushImage="gui/common/scrollbar/button_1/btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="84" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_6" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,204,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,300,134" LineHeight="18" HtmlText="@ui_huashan_shoptips" ScrollSize="17" Left="-214" Top="184" Width="300" Height="134" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_main" NoFrame="true" AutoSize="true" />
+            </control>
+        </control>
+    </control>
+</form>

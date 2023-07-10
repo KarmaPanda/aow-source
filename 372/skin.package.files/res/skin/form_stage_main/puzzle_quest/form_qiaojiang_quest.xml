@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\puzzle_quest\form_caifeng_quest" init="bg_form_init">
+        <prop LimitInScreen="true" Left="21" Top="29" Width="1022" Height="766" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="caifeng" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\life\puzzle_quest\qiaojiang\bg_xg.dds" />
+        <event on_open="on_bg_form_open" on_close="on_bg_close" />
+        <control name="lbl_adorn_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-63" Top="-200" Width="376" Height="202" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" AutoSize="true" BackImage="gui\special\life\puzzle_quest\qiaojiang\qj_adorn_01.png" />
+        </control>
+        <control name="lbl_qjgb" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-320" Top="-332" Width="641" Height="653" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" AutoSize="true" BackImage="gui\special\life\puzzle_quest\qiaojiang\plate.png" />
+        </control>
+        <control name="ani_skull" entity="Animation" script="" init="">
+            <prop Independent="false" PlayMode="2" Left="-364" Top="-359" Width="32" Height="32" VAnchor="Center" HAnchor="Center" />
+            <event on_animation_end="on_ani_skull_animation_end" />
+        </control>
+        <control name="ani_layer_1" entity="Animation" script="" init="">
+            <prop Independent="false" PlayMode="2" Left="-320" Top="-332" Width="32" Height="32" VAnchor="Center" HAnchor="Center" />
+            <event on_animation_end="on_anim_end" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-209" Top="-169" Width="53" Height="237" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" AutoSize="true" BackImage="gui\special\life\puzzle_quest\qiaojiang\puff_z.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="157" Top="-169" Width="53" Height="237" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" AutoSize="true" BackImage="gui\special\life\puzzle_quest\qiaojiang\puff_y.png" />
+        </control>
+        <control name="ani_layer_2" entity="Animation" script="" init="">
+            <prop Independent="false" PlayMode="2" Left="-133" Top="-279" Width="32" Height="32" VAnchor="Center" HAnchor="Center" />
+            <event on_animation_end="on_anim_end" />
+        </control>
+        <control name="ani_layer_3" entity="Animation" script="" init="">
+            <prop Independent="false" PlayMode="2" Left="85" Top="-282" Width="32" Height="32" VAnchor="Center" HAnchor="Center" />
+            <event on_animation_end="on_anim_end" />
+        </control>
+        <control name="ani_layer_4" entity="Animation" script="" init="">
+            <prop Independent="false" PlayMode="2" Left="-31" Top="-245" Width="32" Height="32" VAnchor="Center" HAnchor="Center" />
+            <event on_animation_end="on_anim_end" />
+        </control>
+        <control name="gb_puzzle_turnleft" entity="GroupBox" script="" init="">
+            <prop Left="-211" Top="13" Width="414" Height="38" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" />
+            <control name="pbar_turnleft" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="80" WidthGap="2" HeightGap="2" ProgressImage="gui\special\life\puzzle_quest\qiaojiang\pbrtimer.png" ProgressMode="RightToLeft" Left="42" Top="8" Width="340" Height="16" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\life\puzzle_quest\qiaojiang\bg_pbrtimer.png" />
+            </control>
+            <control name="mtb_turnleft" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,340,16" LineHeight="13" ScrollSize="17" Left="45" Top="10" Width="340" Height="16" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="lbl_gemstone1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="27" Top="7" Width="19" Height="17" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\puzzle_quest\qiaojiang\gemstone.png" />
+            </control>
+            <control name="lbl_gemstone2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="379" Top="7" Width="19" Height="17" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\puzzle_quest\qiaojiang\gemstone.png" />
+            </control>
+        </control>
+        <control name="gb_puzzle_progress" entity="GroupBox" script="" init="">
+            <prop Left="-186" Top="-61" Width="374" Height="62" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" />
+            <control name="pbar_progress" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" WidthGap="2" HeightGap="2" ProgressMode="LeftToRight" Left="16" Top="8" Width="340" Height="23" ForeColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\life\puzzle_quest\qiaojiang\bg_pbrturns.png" />
+            </control>
+            <control name="mtb_progress" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,150,22" LineHeight="13" ScrollSize="17" Left="109" Top="41" Width="150" Height="22" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            </control>
+            <control name="anim_progress" entity="GroupBox" script="" init="">
+                <prop Left="16" Top="8" Width="340" Height="23" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="anim_progress1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Width="340" Height="23" ShadowColor="0,0,0,0" BackImage="qjgemburning" />
+                </control>
+            </control>
+        </control>
+        <control name="gb_puzzle_menu" entity="GroupBox" script="" init="">
+            <prop Left="-318" Top="-86" Width="310" Height="80" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" />
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\minigame\help_out.png" FocusImage="gui\language\ChineseS\minigame\help_on.png" PushImage="gui\language\ChineseS\minigame\help_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="233" Top="12" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_help_click" />
+            </control>
+            <control name="btn_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\life\puzzle_quest\dushi\btn_red_out.png" FocusImage="gui\special\life\puzzle_quest\dushi\btn_red_on.png" PushImage="gui\special\life\puzzle_quest\dushi\btn_red_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="9" Top="43" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="btn_4" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\life\puzzle_quest\dushi\btn_yellow_out.png" FocusImage="gui\special\life\puzzle_quest\dushi\btn_yellow_on.png" PushImage="gui\special\life\puzzle_quest\dushi\btn_yellow_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="43" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="btn_5" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\life\puzzle_quest\dushi\btn_blue_out.png" FocusImage="gui\special\life\puzzle_quest\dushi\btn_blue_on.png" PushImage="gui\special\life\puzzle_quest\dushi\btn_blue_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="69" Top="43" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="btn_6" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\life\puzzle_quest\dushi\btn_green_out.png" FocusImage="gui\special\life\puzzle_quest\dushi\btn_green_on.png" PushImage="gui\special\life\puzzle_quest\dushi\btn_green_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="97" Top="43" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="btn_7" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\life\puzzle_quest\dushi\btn_purple_out.png" FocusImage="gui\special\life\puzzle_quest\dushi\btn_purple_on.png" PushImage="gui\special\life\puzzle_quest\dushi\btn_purple_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="127" Top="43" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            </control>
+            <control name="product_grid" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,0,0" MouseInColor="0,0,0,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,50,50" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="50" GridWidth="50" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="162" Top="9" Width="58" Height="58" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\puzzle_quest\common\bag.png" />
+                <event on_mouseout_grid="on_product_grid_mouseout_grid" on_mousein_grid="on_product_grid_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_num" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="-133" Top="-33" Width="38" Height="22" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="999" Font="font_tip" />
+            </control>
+            <control name="btn_quit" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\tc-out.png" FocusImage="gui\language\ChineseS\tc-on.png" PushImage="gui\language\ChineseS\tc-down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="269" Top="12" Width="32" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_quit_click" />
+            </control>
+        </control>
+    </control>
+</form>

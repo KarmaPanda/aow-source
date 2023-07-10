@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--显示方式,显示在哪里,可多选-->
+	<ShowTypes>
+		<!--显示在系统提示信息框内-->
+		<ShowType Type="0"/>
+		<!--显示在中间，往上淡入淡出的文字-->
+		<ShowType Type="1"/>
+		<!--显示在中间的滚动信息-->
+		<ShowType Type="2"/>
+		<!--显示在通用对话框中-->
+		<ShowType Type="3"/>
+		<!--显示在自已的商店内-->
+		<ShowType Type="4"/>
+		<!--显示在帮派新闻框-->
+		<ShowType Type="5"/>
+	</ShowTypes>
+	<!--信息显示格式,一般互斥,只能单选-->
+	<ShowFormats>
+		<!--普通信息，无格式-->
+		<ShowFormat Type="0" IDName="ShowFormatType0"/>
+		<!--显示加[系统]前缀-->
+		<ShowFormat Type="1" IDName="ShowFormatType1"/>
+		<!--显示加[提示]前缀-->
+		<ShowFormat Type="2" IDName="ShowFormatType2"/>
+	</ShowFormats>
+	<!--具体的信息编号到显示方式的对应-->
+	<IDMaps ShowFormat="0">
+		<!--0-0GM频道-->
+		<Group begin="0" end="0" ShowType="0,2" ShowFormat="0"/>
+		<!--1-1000系统信息-->
+		<Group begin="1" end="1000" ShowType="0" ShowFormat="0"/>
+		<!--1001-1312-->
+		<Group begin="1001" end="1312" ShowType="0,1" ShowFormat="2"/>
+		<!--5000-5499是装备操作的相关提示-->
+		<Group begin="5000" end="5499" ShowType="0,1" ShowFormat="0"/>
+		<!--6000-6999是宠物相关提示-->
+		<Group begin="6000" end="6999" ShowType="0" ShowFormat="0"/>
+		<!--7000-7999是交互相关提示-->
+		<Group begin="7000" end="7050" ShowType="0" ShowFormat="2"/>
+		<!--7051是交互相关提示有金钱格式-->
+		<Group begin="7051" end="7051" ShowType="0,4" ShowFormat="2"/>
+		<!--7052是交互相关提示有金钱格式-->
+		<Group begin="7052" end="7052" ShowType="0,4" ShowFormat="2"/>
+		<!--8000-8999是战斗相关提示-->
+		<Group begin="8000" end="8999" ShowType="0,1" ShowFormat="0"/>
+		<!--9000-9999是技能相关提示-->
+		<Group begin="9000" end="9999" ShowType="1" ShowFormat="0"/>
+		<!--交易NPC的提示信息-->
+		<Group begin="10220" end="10232" ShowType="0" ShowFormat="2"/>
+		<!--10300-10499为装备改造,镶嵌等相关的提示信息-->
+		<Group begin="10300" end="10499" ShowType="0" ShowFormat="1"/>
+		<!--10800-10999为公会相关提示信息-->
+		<Group begin="10800" end="10999" ShowType="0,5" ShowFormat="2"/>
+		<!--11000-11999为交易相关提示信息-->
+		<Group begin="11000" end="11999" ShowType="1,4" ShowFormat="0"/>
+		<!--12000-12998为任务相关-->
+		<Group begin="12000" end="12998" ShowType="0,1" ShowFormat="0"/>
+		<!--13000-13999为竞技场相关-->
+		<Group begin="13000" end="13999" ShowType="0" ShowFormat="0"/>
+		<!--11612为帮会争夺时间宣告-->
+		<Group begin="11612" end="11612" ShowType="0,1" ShowFormat="0"/>
+		<!--11620-11624为帮会争夺相关-->
+		<Group begin="11620" end="11624" ShowType="0,1" ShowFormat="0"/>
+		<!--121127-12143为任务相关-->
+		<Group begin="12127" end="12143" ShowType="0,1" ShowFormat="0"/>
+	</IDMaps>
+</Root>

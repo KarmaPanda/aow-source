@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_fight\form_fight_select_scene" init="main_form_init">
+        <prop ShowGrid="true" Left="21" Top="29" Width="414" Height="366" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_shut="on_main_form_shut" on_close="on_main_form_close" />
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="8" Top="36" Width="396" Height="289" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\leitai\game_invite.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="136" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_scene_name" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="155" Top="92" Width="102" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@arena_scene_name_0" Font="font_map_area_1" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="26" Width="406" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="331" Width="406" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="323" Top="333" Width="87" Height="30" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="326" Width="406" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="168" Top="2" Width="82" Height="31" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_arena_join_1" Font="font_title" AutoSize="true" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="53" Top="128" Width="308" Height="163" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\leitai\bg_kuang.png" />
+        </control>
+        <control name="lbl_scene_image" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="56" Top="130" Width="302" Height="158" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\leitai\fight_0.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="384" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="combobox_scene_list" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" OnlySelect="true" Left="248" Top="47" Width="110" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" />
+            <event on_selected="on_combobox_scene_list_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ForeColor="255,197,184,159" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select1.png" />
+            </subor>
+            <subor name="DropButton">
+                <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_text" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_list1.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_list1.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="56" Top="47" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_arena_scene_select" Font="font_text" />
+        </control>
+    </control>
+</form>

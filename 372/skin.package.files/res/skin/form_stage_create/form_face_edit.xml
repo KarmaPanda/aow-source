@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_create\form_face_edit" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="-387" Top="-429" Width="1070" Height="718" BackColor="150,204,204,204" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="GE_FONT" DrawMode="Expand" />
+        <event on_open="on_main_form_open" />
+        <control name="scenebox_1" entity="SceneBox" script="" init="">
+            <prop Left="261" Top="5" Width="454" Height="438" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="255,255,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="model_path" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" SelectBackColor="190,190,190,190" Caret="Default" Left="360" Top="600" Width="270" Height="20" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\form_line\mibox_2.png" />
+        </control>
+        <control name="save_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="464" Top="656" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Save" Font="font_btn" TabStop="true" AutoSize="true" />
+            <event on_click="save_btn_click" />
+        </control>
+        <control name="brow_pos_rect" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="232" Top="80" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="brow_pos_changed" on_horizon_changed="brow_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="eye" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" VerticalMax="100" VerticalValue="50" Left="-183" Top="200" Width="286" Height="28" BackColor="128,128,128,128" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="ExpandH" BackImage="gui\common\form_line\mibox_2.png" />
+            <event on_horizon_changed="on_eye_horizon_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\common\button\b-07-out.png" FocusImage="gui\common\button\b-07-on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="472" Top="565" Width="62" Height="16" ShadowColor="0,20,0,0" Text="@ui_create_zy" Font="font_text_chat" />
+        </control>
+        <control name="fixbtn_face" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="656" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_fixbtn_face_click" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="560" Top="656" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_cancel" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="Variation_Btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="824" Top="584" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_ChangeShow" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="Expand" />
+            <event on_click="on_Variation_Btn_click" />
+        </control>
+        <control name="turn_left_btn" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\common\button\btn_left\btn_left2_out.png" FocusImage="gui\common\button\btn_left\btn_left2_on.png" PushImage="gui\common\button\btn_left\btn_left2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="384" Top="416" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_turn_left_btn_click" on_lost_capture="on_turn_left_btn_lost_capture" on_push="on_turn_left_btn_push" />
+        </control>
+        <control name="turn_right_btn" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\common\button\btn_right\btn_right2_out.png" FocusImage="gui\common\button\btn_right\btn_right2_on.png" PushImage="gui\common\button\btn_right\btn_right2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="576" Top="416" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_turn_right_btn_click" on_lost_capture="on_turn_right_btn_lost_capture" on_push="on_turn_right_btn_push" />
+        </control>
+        <control name="variation_box" entity="GroupBox" script="" init="">
+            <prop Left="344" Top="53" Width="334" Height="294" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="ImageControlGridVariation" entity="ImageControlGrid" script="" init="">
+                <prop SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,200,200" MaxSize="-1" RowNum="4" ClomnNum="4" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Solid="false" Left="32" Top="3" Width="230" Height="334" ShadowColor="0,0,0,0" Text="ImageControlGridVariation" NoFrame="true" />
+                <event on_select_changed="on_ImageControlGridVariation_select_changed" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_26" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="332" Top="20" Width="80" Height="16" ShadowColor="0,0,0,0" />
+            </control>
+        </control>
+        <control name="glabella_pos_rect" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="120" Top="72" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="glabella_pos_changed" on_horizon_changed="glabella_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="brow_shape_rect" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="11" Top="56" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="brow_shape_changed" on_horizon_changed="brow_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="eye_pos_rect" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="224" Top="176" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="eye_pos_changed" on_horizon_changed="eye_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="eye_scale_rect" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="112" Top="176" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="eye_scale_changed" on_horizon_changed="eye_scale_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="canthus_shape_rect" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="4" Top="176" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="canthus_shape_changed" on_horizon_changed="canthus_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="nose_bridge" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="11" Top="311" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_nose_bridge_changed" on_horizon_changed="on_nose_bridge_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="nose_head" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="120" Top="296" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_nose_head_changed" on_horizon_changed="on_nose_head_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="nose_pos" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="232" Top="280" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_nose_pos_changed" on_horizon_changed="on_nose_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="240" Top="288" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_bw" Font="font_main" />
+        </control>
+        <control name="ear_pos" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="696" Top="80" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_ear_pos_changed" on_horizon_changed="on_ear_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="ear_shape" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="808" Top="72" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_ear_shape_changed" on_horizon_changed="on_ear_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="ear_size" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="920" Top="56" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_ear_size_changed" on_horizon_changed="on_ear_size_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="cheekbone_pos" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="704" Top="176" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_cheekbone_pos_changed" on_horizon_changed="on_cheekbone_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="cheekbone_shape" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="928" Top="176" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_cheekbone_shape_changed" on_horizon_changed="on_cheekbone_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="cheekbone_size" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="816" Top="176" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_cheekbone_size_changed" on_horizon_changed="on_cheekbone_size_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="lip_pos" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="696" Top="280" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_lip_pos_changed" on_horizon_changed="on_lip_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="toplip_shape" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="816" Top="288" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_toplip_shape_changed" on_horizon_changed="on_toplip_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="bottomlip_shape" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="928" Top="304" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_bottomlip_shape_changed" on_horizon_changed="on_bottomlip_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="mandible_shape" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="336" Top="456" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" Cursor="Default" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_mandible_shape_changed" on_horizon_changed="on_mandible_shape_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="mandible_pos" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="456" Top="456" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_mandible_pos_changed" on_horizon_changed="on_mandible_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="chin_pos" entity="TrackRect" script="" init="">
+            <prop HorizonMax="100" HorizonValue="50" VerticalMax="100" VerticalValue="50" Left="576" Top="456" Width="86" Height="84" BackColor="128,128,128,128" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\create\di-lan.png" />
+            <event on_vertical_changed="on_chin_pos_changed" on_horizon_changed="on_chin_pos_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="gui\create\btn_out.png" FocusImage="gui\create\btn_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="21" Height="21" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </subor>
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="240" Top="88" Width="70" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_mm" Font="font_main" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="128" Top="80" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_mg" Font="font_main" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="16" Top="64" Width="70" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_mx" Font="font_main" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="184" Width="78" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_yw" Font="font_main" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="120" Top="184" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_yd" Font="font_main" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="8" Top="184" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_yx" Font="font_main" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="16" Top="320" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_bx" Font="font_main" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="128" Top="304" Width="70" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_bt" Font="font_main" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="816" Top="80" Width="70" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_ex" Font="font_main" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="936" Top="184" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_qx" Font="font_main" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="704" Top="88" Width="78" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_ew" Font="font_main" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="928" Top="64" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_ed" Font="font_main" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="712" Top="184" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_qw" Font="font_main" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="823" Top="185" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_qd" Font="font_main" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="704" Top="288" Width="78" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_zw" Font="font_main" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="824" Top="296" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_sc" Font="font_main" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="936" Top="312" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_xc" Font="font_main" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="347" Top="464" Width="62" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_xex" Font="font_main" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="464" Top="464" Width="78" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_xbw" Font="font_main" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="579" Top="464" Width="70" Height="16" ShadowColor="0,0,0,0" Text="@ui_create_xjw" Font="font_main" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-8" Top="47" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="102" Top="63" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="214" Top="69" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-15" Top="166" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_21" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="94" Top="166" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_22" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="206" Top="166" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_23" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-7" Top="301" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_24" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="102" Top="286" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_25" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="214" Top="270" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_27" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="678" Top="70" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_28" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="790" Top="62" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_29" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="686" Top="166" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_30" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="798" Top="166" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_31" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="678" Top="270" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_32" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="798" Top="278" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_33" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="318" Top="446" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_34" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="438" Top="446" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_35" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="558" Top="446" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_36" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="902" Top="46" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_37" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="910" Top="166" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="lbl_38" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="910" Top="294" Width="114" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\create\3j_bg.png" />
+        </control>
+        <control name="listbox_face" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="6" ScrollSize="17" Left="928" Top="440" Width="94" Height="222" ShadowColor="0,0,0,0" Text="listbox_1" Font="font_text_chat" TabStop="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+            <event on_select_double_click="on_listbox_face_select_double_click" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

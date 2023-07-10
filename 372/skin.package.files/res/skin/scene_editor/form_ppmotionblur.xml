@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_ppmotionblur" init="main_form_init">
+        <prop Left="29" Top="61" Width="398" Height="230" BackColor="150,152,155,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="112" Top="184" Width="78" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="208" Top="184" Width="78" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="8" Width="166" Height="22" Text="运动模糊参数" />
+        </control>
+        <control name="motion_blur_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="40" Width="86" Height="22" Text="开启运动模糊" TabStop="true" />
+            <event on_checked_changed="motion_blur_check_checked_changed" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="96" Width="54" Height="22" Text="采样次数" />
+        </control>
+        <control name="num_samples_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="1.000000" Max="100.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="96" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="num_samples_edit_changed" on_changed="num_samples_edit_changed" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="120" Width="78" Height="22" Text="运动速度上限" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="144" Width="78" Height="22" Text="运动速度调节" />
+        </control>
+        <control name="max_velocity_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.100000" Max="10.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="120" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="max_velocity_edit_changed" on_changed="max_velocity_edit_changed" />
+        </control>
+        <control name="velocity_scale_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="1.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="144" Width="126" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="velocity_scale_edit_changed" on_changed="velocity_scale_edit_changed" />
+        </control>
+        <control name="dynamic_blur_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="136" Top="64" Width="94" Height="22" Text="动态物体模糊" TabStop="true" />
+            <event on_checked_changed="dynamic_blur_check_checked_changed" />
+        </control>
+        <control name="static_blur_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="64" Width="94" Height="22" Text="静态物体模糊" TabStop="true" />
+            <event on_checked_changed="static_blur_check_checked_changed" />
+        </control>
+    </control>
+</form>

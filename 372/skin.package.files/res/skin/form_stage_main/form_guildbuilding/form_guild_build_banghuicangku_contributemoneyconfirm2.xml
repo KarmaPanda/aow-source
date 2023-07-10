@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_guildbuilding\form_guild_build_banghuicangku_contributemoneyconfirm2" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="300" Height="200" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="32" Width="290" Height="134" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="166" Width="291" Height="27" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="ipt_price_ding" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="9999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="17" Top="71" Width="60" Height="28" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\combobox\bg_select1.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="ipt_price_liang" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="108" Top="71" Width="60" Height="28" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\combobox\bg_select1.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="ipt_price_wen" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="201" Top="71" Width="60" Height="28" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\combobox\bg_select1.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="lbl_101" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="81" Top="73" Width="22" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_ding" Font="font_sns_list" />
+        </control>
+        <control name="lbl_102" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="169" Top="73" Width="22" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_liang" Font="font_sns_list" />
+        </control>
+        <control name="lbl_103" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="265" Top="73" Width="22" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_wen" Font="font_sns_list" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="17" Top="47" Width="190" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_guild_cangku_juanzeng_shuru" Font="font_sns_list" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="17" Top="111" Width="166" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_guild_cangku_juanzeng_huoqu" Font="font_sns_list" />
+        </control>
+        <control name="lbl_capital" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="145" Top="137" Width="118" Height="16" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_text_figure" />
+        </control>
+        <control name="lbl_contribution" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="185" Top="113" Width="102" Height="16" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_text_figure" />
+        </control>
+        <control name="btn_confirm" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="120" Top="166" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_OK" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" ClickSound="ok_7" />
+            <event on_click="on_btn_confirm_click" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="207" Top="166" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_Cancel" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" ClickSound="cancel_5" />
+            <event on_click="on_btn_cancel_click" />
+        </control>
+        <control name="btn_max" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="33" Top="165" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guild_cangku_juanzeng_max" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_max_click" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="78" Top="1" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="100" Top="10" Width="100" Height="16" ForeColor="255,244,244,244" ShadowColor="0,0,0,0" Text="@ui_guild_cangku_juanzeng_title" Font="font_title" DrawMode="Expand" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="160" Width="290" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="28" Width="290" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="33" Top="135" Width="110" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_off_money_left" Font="font_sns_list" />
+        </control>
+    </control>
+</form>

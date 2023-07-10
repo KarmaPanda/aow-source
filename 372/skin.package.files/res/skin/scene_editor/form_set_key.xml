@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_set_key" init="main_form_init">
+        <prop ShowGrid="true" Left="293" Top="149" Width="406" Height="326" BackColor="150,152,155,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="key_grid" entity="Grid" script="" init="">
+            <prop CanSelectRow="true" ColWidth="90" RowHeight="24" ColCount="4" ScrollSize="17" HasHScroll="true" Left="8" Top="72" Width="390" Height="198" ForeColor="255,0,0,255" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <event on_select_row="key_grid_select_row" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="10" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="new_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\button_out.png" FocusImage="skin\png\common\button\button_on.png" PushImage="skin\png\common\button\button_down.png" Left="24" Top="280" Width="80" Height="24" ShadowColor="0,0,0,0" Text="新建" TabStop="true" DrawMode="Expand" />
+            <event on_click="new_btn_click" />
+        </control>
+        <control name="del_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\button_out.png" FocusImage="skin\png\common\button\button_on.png" PushImage="skin\png\common\button\button_down.png" Left="168" Top="280" Width="80" Height="24" ShadowColor="0,0,0,0" Text="删除" TabStop="true" DrawMode="Expand" />
+        </control>
+        <control name="modify_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\button_out.png" FocusImage="skin\png\common\button\button_on.png" PushImage="skin\png\common\button\button_down.png" Left="304" Top="280" Width="80" Height="24" ShadowColor="0,0,0,0" Text="编辑" TabStop="true" DrawMode="Expand" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\tc-out.png" FocusImage="skin\png\common\button\tc-on.png" PushImage="skin\png\common\button\tc-down.png" Left="368" Top="8" Width="30" Height="24" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="160" Top="16" Width="86" Height="16" ForeColor="255,0,0,255" ShadowColor="0,0,0,0" Text="设置快捷键" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_static_npc_creator" init="main_form_init">
+        <prop ShowGrid="true" Left="245" Top="93" Width="438" Height="358" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="Label1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="216" Width="46" Height="24" Text="NPC位置" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="240" Width="46" Height="24" Text="NPC方向" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="264" Width="46" Height="24" Text="NPC编号" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="288" Width="46" Height="24" Text="NPC描述" />
+        </control>
+        <control name="id_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="216" Top="264" Width="134" Height="20" Enabled="false" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="item_desc_edit" entity="RichEdit" script="" init="">
+            <prop ViewRect="4,4,260,20" Caret="Default" ReturnAllFormat="false" ScrollSize="17" HasVScroll="true" Solid="false" Left="216" Top="288" Width="206" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="item_desc_edit_lost_focus" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="6" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="6" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="8" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="192" Width="86" Height="22" Text="生成器列表描述" />
+        </control>
+        <control name="staticcreator_desc_edit" entity="RichEdit" script="" init="">
+            <prop ViewRect="4,4,240,18" Caret="Default" ReturnAllFormat="false" ScrollSize="17" HasVScroll="true" Solid="false" Left="264" Top="192" Width="158" Height="20" Enabled="false" Text="固定NPC生成器" Cursor="WIN_IBEAM" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="6" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="6" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="8" />
+                </subor>
+            </subor>
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="400" Top="8" Width="22" Height="24" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="create_xml_file_btn" entity="Button" script="" init="">
+            <prop Left="80" Top="40" Width="78" Height="24" Text="创建XML文件" TabStop="true" />
+            <event on_click="create_xml_file_btn_click" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="176" Width="46" Height="22" Text="选择NPC" />
+        </control>
+        <control name="xml_file_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="72" Width="150" Height="102" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="xml_file_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label10" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="40" Width="46" Height="22" Text="选择XML" />
+        </control>
+        <control name="go_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="168" Top="104" Width="190" Height="24" Text="选择NPC时同步转到NPC所在位置" TabStop="true" />
+            <event on_checked_changed="go_check_checked_changed" />
+        </control>
+        <control name="x_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="216" Top="216" Width="62" Height="20" Enabled="false" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="y_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="288" Top="216" Width="62" Height="20" Enabled="false" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="z_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="360" Top="216" Width="62" Height="20" Enabled="false" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="orient_edit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="216" Top="240" Width="62" Height="20" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="orient_edit_drag" on_lost_focus="orient_edit_lost_focus" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="144" Top="8" Width="142" Height="22" Text="固定NPC摆放窗口" />
+        </control>
+        <control name="modify_all_static_npc_height_to_cur_ter_height" entity="Button" script="" init="">
+            <prop Left="8" Top="328" Width="150" Height="24" Text="修改NPC高度为地形高度" HintText="原本固定NPC没有Y值，后需求变更，为了不让使用人员花费大量时间重做，故加此按钮" TabStop="true" />
+            <event on_click="modify_all_static_npc_height_to_cur_ter_height_click" />
+        </control>
+        <control name="npc_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="200" Width="150" Height="118" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="npc_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+        </control>
+        <control name="delete_xml_file_btn" entity="Button" script="" init="">
+            <prop Left="168" Top="40" Width="78" Height="24" Text="删除XML文件" TabStop="true" />
+            <event on_click="delete_xml_file_btn_click" />
+        </control>
+        <control name="put_npc_to_show_err_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="168" Top="80" Width="110" Height="24" Text="提示错误信息" TabStop="true" />
+            <event on_checked_changed="put_npc_to_show_err_check_checked_changed" />
+        </control>
+        <control name="save_xml_file_btn" entity="Button" script="" init="">
+            <prop Left="256" Top="40" Width="78" Height="24" Text="保存所有修改" TabStop="true" />
+            <event on_click="save_xml_file_btn_click" />
+        </control>
+        <control name="npc_dis_edit" entity="Float_Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="264" Top="128" Width="80" Height="20" BackColor="255,128,128,128" Text="2.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="168" Top="128" Width="94" Height="16" Text="到NPC的距离：" />
+        </control>
+    </control>
+</form>

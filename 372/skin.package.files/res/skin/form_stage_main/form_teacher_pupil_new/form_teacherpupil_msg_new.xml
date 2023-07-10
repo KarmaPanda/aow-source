@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_teacher_pupil_new\form_teacherpupil_msg_new" init="on_main_form_init">
+        <prop ShowGrid="true" Left="21" Top="21" Width="800" Height="511" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" BackImage="gui\special\newshitu\b_bg.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_msginfo" entity="GroupBox" script="" init="">
+            <prop Left="165" Top="34" Width="630" Height="435" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" BackImage="gui\special\newshitu\ditu_1.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="160" Top="37" Width="638" Height="446" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <control name="rbtn_1" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" CheckedImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Width="150" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ruhebaishi" Font="font_text_figure" TabStop="true" NoFrame="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_2" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" CheckedImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="160" Width="118" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_neigongshixiong" Font="font_text_figure" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_3" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" CheckedImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="280" Width="214" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_neigongshidi" Font="font_text_figure" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,594,398" LineHeight="21" HtmlText="@ui_shitu_09" ScrollSize="17" HasVScroll="true" Left="8" Top="32" Width="614" Height="398" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_combox_text" NoFrame="true" AutoSize="true" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="rbtn_9" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\newshitu\fenye_out.png" FocusImage="gui\special\newshitu\fenye_on.png" CheckedImage="gui\special\newshitu\fenye_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="497" Width="118" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shituprize_xin" Font="font_text_figure" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+        </control>
+        <control name="tree_sublist" entity="TreeViewEx" script="" init="">
+            <prop ScrollSize="17" Top="40" Width="164" Height="470" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="tree_ex1" Font="font_text" TabStop="true" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_tree_sublist_select_changed" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="772" Top="5" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="5" Width="126" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shixiongdi_01" Font="font_title" />
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="3" Top="40" Width="158" Height="462" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="-79" Width="160" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_shixiongdidengji" Font="font_text_figure" DrawMode="ExpandH" BackImage="gui\special\newshitu\anniu_out.png" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Top="85" Width="160" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_mengpaishixiongdi" Font="font_text_figure" DrawMode="ExpandH" BackImage="gui\special\newshitu\anniu_out.png" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Top="145" Width="160" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shop" Font="font_text_chat" DrawMode="ExpandH" BackImage="gui\special\newshitu\anniu_out.png" />
+            </control>
+            <control name="rbtn_4" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\newshitu\anniu_s_out.png" FocusImage="gui\special\newshitu\anniu_s_on.png" CheckedImage="gui\special\newshitu\anniu_s_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Top="32" Width="156" Height="24" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shixiongdengji" Font="font_text_figure" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_5" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\newshitu\anniu_s_out.png" FocusImage="gui\special\newshitu\anniu_s_on.png" CheckedImage="gui\special\newshitu\anniu_s_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Top="58" Width="156" Height="24" ForeColor="255,197,184,159" BackColor="0,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shididengji" Font="font_text_figure" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_6" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\newshitu\anniu_s_out.png" FocusImage="gui\special\newshitu\anniu_s_on.png" CheckedImage="gui\special\newshitu\anniu_s_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Top="117" Width="156" Height="24" ForeColor="255,197,184,159" BackColor="0,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shituwu_001" Font="font_text_figure" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_7" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\newshitu\anniu_s_out.png" FocusImage="gui\special\newshitu\anniu_s_on.png" CheckedImage="gui\special\newshitu\anniu_s_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Top="175" Width="156" Height="24" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_hw_teacher_shop" Font="font_text_sys" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_8" entity="RadioButton" script="" init="">
+                <prop Checked="true" HideBox="true" BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="488" Width="155" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="将其它键抬起" TabStop="true" />
+            </control>
+        </control>
+    </control>
+</form>

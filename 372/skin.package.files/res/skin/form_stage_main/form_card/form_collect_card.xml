@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_card\form_collect_card" init="main_form_init">
+        <prop Left="37" Top="37" Width="838" Height="630" ForeColor="0,0,0,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="823" Height="625" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\language\ChineseS\card_collect\b_bg111.png" />
+        </control>
+        <control name="lbl_main_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="193" Top="51" Width="631" Height="31" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_card_collect_title" Font="font_task_name" AutoSize="true" BackImage="gui\language\ChineseS\card_collect\s_title_bg.png" />
+        </control>
+        <control name="groupbox_card_btb" entity="GroupBox" script="" init="">
+            <prop Left="12" Top="52" Width="178" Height="566" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="rbtn_cloth" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\card_collect\b_but_out.png" FocusImage="gui\language\ChineseS\card_collect\b_but_on.png" CheckedImage="gui\language\ChineseS\card_collect\b_but_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="4" Width="179" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_card_collect_btn" DataSource="cloth" Font="font_main" TabStop="true" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_cloak" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\card_collect\b_but_out.png" FocusImage="gui\language\ChineseS\card_collect\b_but_on.png" CheckedImage="gui\language\ChineseS\card_collect\b_but_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="44" Width="179" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_card_collect_btn" DataSource="cloak" Font="font_main" TabStop="true" />
+            </control>
+            <control name="rbtn_mount" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\language\ChineseS\card_collect\b_but_out.png" FocusImage="gui\language\ChineseS\card_collect\b_but_on.png" CheckedImage="gui\language\ChineseS\card_collect\b_but_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="84" Width="179" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_card_collect_btn" DataSource="mount" Font="font_main" TabStop="true" />
+            </control>
+        </control>
+        <control name="groupbox_card_info" entity="GroupBox" script="" init="">
+            <prop Left="192" Top="85" Width="631" Height="154" ShadowColor="0,0,0,0" Text="groupbox_1" DrawMode="ExpandV" BackImage="gui\language\ChineseS\card_collect\s_bg1.png" />
+            <control name="btn_card_get" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\card_collect\s_but_out.png" FocusImage="gui\language\ChineseS\card_collect\s_but_on.png" PushImage="gui\language\ChineseS\card_collect\s_but_down.png" DisableImage="gui\language\ChineseS\card_collect\s_but_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,37,16,15" Left="544" Top="104" Width="62" Height="26" ForeColor="255,37,16,15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_card_collect_btn_get" Font="font_tiguan_name" AutoSize="true" InSound="MouseOn1" ClickSound="MouseClick1" />
+                <event on_click="on_btn_card_get_click" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="2,2,406,22" LineHeight="18" HtmlText="@ui_card_collect_mlt01" ScrollSize="17" Left="112" Top="16" Width="406" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_playername" />
+            </control>
+            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="2,2,406,22" LineHeight="18" HtmlText="@ui_card_collect_mlt04" ScrollSize="17" Left="112" Top="40" Width="406" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_playername" />
+            </control>
+            <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,245,207" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="2,2,406,70" LineHeight="19" HtmlText="@ui_card_collect_mlt05" ScrollSize="17" Left="112" Top="67" Width="406" Height="83" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" />
+            </control>
+            <control name="ani_get" entity="Animation" script="" init="">
+                <prop AnimationImage="card_collect" PlayMode="2" Left="524" Top="80" Width="102" Height="62" />
+            </control>
+            <control name="imagegrid_get" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="1,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="142" GridWidth="88" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="6" Top="6" Width="88" Height="142" BackColor="255,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_1" DrawMode="FitWindow" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="groupbox_collect" entity="GroupBox" script="" init="">
+            <prop Left="192" Top="240" Width="634" Height="342" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="btn_left" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\card_collect\right_out.png" FocusImage="gui\language\ChineseS\card_collect\right_on.png" PushImage="gui\language\ChineseS\card_collect\right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Top="584" Width="40" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" InSound="MouseOn1" ClickSound="MouseClick1" />
+            <event on_click="on_btn_left_click" />
+        </control>
+        <control name="btn_right" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\card_collect\left_out.png" FocusImage="gui\language\ChineseS\card_collect\left_on.png" PushImage="gui\language\ChineseS\card_collect\left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="536" Top="584" Width="40" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" InSound="MouseOn1" ClickSound="MouseClick1" />
+            <event on_click="on_btn_right_click" />
+        </control>
+        <control name="lbl_page" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="78" Top="586" Width="10" Height="25" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_main" AutoSize="true" DrawMode="Center" />
+        </control>
+        <control name="lbl_collect_info" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="698" Top="586" Width="124" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_card_collect_get" Font="font_main" AutoSize="true" BackImage="gui\language\ChineseS\card_collect\collect_bg.png" />
+        </control>
+        <control name="groupbox_clt_card" entity="GroupBox" script="" init="">
+            <prop Left="2000" Top="400" Width="210" Height="168" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\card_collect\b_bg.png" />
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="109" Top="10" Width="94" Height="22" ForeColor="255,255,245,207" ShadowColor="0,0,0,0" Text="@ui_card_collect_title" Font="font_text_figure" />
+            </control>
+            <control name="mltbox_clt_color" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,94,22" LineHeight="20" HtmlText="@ui_card_collect_mlt01" ScrollSize="17" Left="110" Top="28" Width="94" Height="22" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text_figure" />
+            </control>
+            <control name="mltbox_clt_type" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,94,46" LineHeight="21" HtmlText="@ui_card_collect_mlt04" ScrollSize="17" Left="110" Top="44" Width="94" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+            </control>
+            <control name="lbl_collect" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="116" Top="76" Width="80" Height="67" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\card_collect\weishouji.png" />
+            </control>
+            <control name="imagegrid_cards" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="145" GridWidth="95" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="10" Top="12" Width="96" Height="145" BackColor="255,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_1" DrawMode="FitWindow" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="798" Top="21" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

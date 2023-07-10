@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_charge_shop\shop_component\form_browser" init="on_main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="238" Height="574" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_select1" entity="Label" script="" init="">
+            <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="25" Top="497" Width="40" Height="40" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item.png" />
+            <event on_click="on_try_click" on_lost_capture="on_lost_capture" on_get_capture="on_get_capture" />
+        </control>
+        <control name="lbl_select2" entity="Label" script="" init="">
+            <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="73" Top="497" Width="40" Height="40" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item.png" />
+            <event on_click="on_try_click" on_lost_capture="on_lost_capture" on_get_capture="on_get_capture" />
+        </control>
+        <control name="lbl_select3" entity="Label" script="" init="">
+            <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="121" Top="497" Width="40" Height="40" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item.png" />
+            <event on_click="on_try_click" on_lost_capture="on_lost_capture" on_get_capture="on_get_capture" />
+        </control>
+        <control name="lbl_select4" entity="Label" script="" init="">
+            <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="169" Top="497" Width="40" Height="40" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item.png" />
+            <event on_click="on_try_click" on_lost_capture="on_lost_capture" on_get_capture="on_get_capture" />
+        </control>
+        <control name="lbl_deep" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="236" Height="492" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\role\bg_main.png" />
+        </control>
+        <control name="scenebox_1" entity="SceneBox" script="" init="">
+            <prop Left="1" Top="39" Width="236" Height="438" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="btn_left" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\common\button\btn_left\btn_left2_out.png" FocusImage="gui\common\button\btn_left\btn_left2_on.png" PushImage="gui\common\button\btn_left\btn_left2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="41" Top="455" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_left_click" on_lost_capture="on_left_lost_capture" on_push="on_left_push" />
+        </control>
+        <control name="btn_right" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\common\button\btn_right\btn_right2_out.png" FocusImage="gui\common\button\btn_right\btn_right2_on.png" PushImage="gui\common\button\btn_right\btn_right2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="153" Top="455" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_right_click" on_lost_capture="on_right_lost_capture" on_push="on_right_push" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal3_out.png" FocusImage="gui\common\button\btn_normal3_on.png" PushImage="gui\common\button\btn_normal3_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="73" Top="455" Width="78" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shop_collect" Font="font_main" DrawMode="ExpandH" />
+            <event on_click="on_add_fav_click" />
+        </control>
+        <control name="btn_give" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="540" Width="63" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shop_give" Font="font_tip" DrawMode="ExpandH" />
+            <event on_click="on_give_click" />
+        </control>
+        <control name="btn_buy" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="171" Top="540" Width="63" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shop_buy" Font="font_tip" DrawMode="FitWindow" />
+            <event on_click="on_buy_click" />
+        </control>
+        <control name="btn_6" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="540" Width="110" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shop_look" Font="font_tip" DrawMode="ExpandH" />
+            <event on_click="on_show_fav_click" />
+        </control>
+        <control name="lbl_select" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="289" Top="535" Width="30" Height="30" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-1" Top="-2" Width="238" Height="37" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shop_browse" Font="font_title_tasktrace" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select_out.png" />
+        </control>
+    </control>
+</form>

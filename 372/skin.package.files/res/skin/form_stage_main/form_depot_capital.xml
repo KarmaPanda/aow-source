@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_depot_capital" init="on_main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="85" Top="205" Width="374" Height="310" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="272" Width="365" Height="31" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="3" Top="33" Width="366" Height="238" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop HAlign="Center" TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,126,26" LineHeight="19" ScrollSize="17" Left="-115" Top="75" Width="126" Height="26" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" HAnchor="Center" Text="mltbox_1" Font="font_text_title1" NoFrame="true" />
+        </control>
+        <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+            <prop HAlign="Center" TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,126,26" LineHeight="19" ScrollSize="17" Left="37" Top="75" Width="126" Height="26" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" HAnchor="Center" Text="mltbox_1" Font="font_text_title1" NoFrame="true" />
+        </control>
+        <control name="ipt_1" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxDigit="9999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="66" Top="140" Width="38" Height="30" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="Expand" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_1_changed" />
+        </control>
+        <control name="ipt_2" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxDigit="9999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="66" Top="192" Width="38" Height="30" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_2_changed" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="168" Width="80" Height="22" ForeColor="255,190,0,90" ShadowColor="0,0,0,0" Text="@ui_deposit_limit_1" Font="font_text_title1" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="224" Width="80" Height="22" ForeColor="255,190,0,90" ShadowColor="0,0,0,0" Text="@ui_deposit_limit_2" Font="font_text_title1" />
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="281" Top="272" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_cancel" Font="font_btn" />
+            <event on_click="on_close_click" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="192" Top="272" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" DrawMode="FitWindow" />
+            <event on_click="on_ok_click" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-51" Width="104" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_title" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="264" Width="364" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="36" Top="144" Width="24" Height="22" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\money\suiyin.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="208" Width="22" Height="14" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\money\yb.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="40" Top="76" Width="24" Height="22" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\money\suiyin.png" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="192" Top="80" Width="22" Height="14" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\money\yb.png" />
+        </control>
+        <control name="ipt_sliver_liang" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="152" Top="140" Width="38" Height="30" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_1_changed" />
+        </control>
+        <control name="ipt_sliver_wen" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="232" Top="140" Width="38" Height="30" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_1_changed" />
+        </control>
+        <control name="ipt_card_liang" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="152" Top="192" Width="38" Height="30" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_2_changed" />
+        </control>
+        <control name="ipt_card_wen" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="232" Top="192" Width="38" Height="30" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_2_changed" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="112" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_store_amount" Font="font_title_tasktrace" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="108" Top="148" Width="22" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_depot_ding" Font="font_text_title1" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="192" Top="148" Width="22" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_depot_liang" Font="font_text_title1" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="272" Top="148" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_depot_wen" Font="font_text_title1" />
+        </control>
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="108" Top="200" Width="22" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_depot_ding" Font="font_text_title1" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="192" Top="200" Width="22" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_depot_liang" Font="font_text_title1" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="272" Top="200" Width="30" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_depot_wen" Font="font_text_title1" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="32" Top="48" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,20,0,0" Text="@ui_account_amount" Font="font_title_tasktrace" />
+        </control>
+    </control>
+</form>

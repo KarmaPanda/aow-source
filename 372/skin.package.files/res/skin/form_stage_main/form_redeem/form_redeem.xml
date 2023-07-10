@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_redeem\form_redeem" init="main_form_init">
+        <prop ShowGrid="true" Left="125" Top="114" Width="718" Height="470" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="233" Top="31" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="473" Top="341" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="233" Top="341" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="473" Top="237" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="233" Top="237" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="233" Top="134" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="473" Top="134" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="473" Top="31" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\imagegrid\icon_item2.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="219" Top="8" Width="494" Height="459" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="icg_goods" entity="ImageControlGrid" script="" init="">
+                <prop ButtonCount="2" HasMultiTextBox="true" MultiTextBoxCount="6" ButtonPos="70,60;140,60;" MultiTextBoxLeft="70" MultiTextBoxPos="70,0;70,19;140,26;70,39;159,22;123,39;" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="20,25,420,398" MaxSize="-1" RowNum="4" ClomnNum="2" GridHeight="58" GridWidth="58" GridsPos="0,0;240,0;0,102;240,102;0,206;240,206;0,310;240,310" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Top="2" Width="486" Height="430" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+                <event on_mousein_grid="on_icg_goods_mousein_grid" on_rightclick_grid="on_icg_goods_rightclick_grid" on_click_addbutton="on_icg_goods_click_addbutton" on_mouseout_grid="on_icg_goods_mouseout_grid" />
+                <subor name="Button1">
+                    <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="60" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_redeem_now" Font="font_main" DrawMode="Expand" />
+                </subor>
+                <subor name="Button2">
+                    <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="60" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_redeem_clear" Font="font_main" DrawMode="Expand" />
+                </subor>
+                <subor name="MultiTextBox1">
+                    <prop HAlign="Center" TextColor="255,128,101,74" ViewRect="0,0,120,20" LineHeight="20" ScrollSize="17" Width="120" Height="20" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" DrawMode="FitWindow" />
+                </subor>
+                <subor name="MultiTextBox2">
+                    <prop HAlign="Center" TextColor="255,128,101,74" ViewRect="0,0,70,20" LineHeight="20" ScrollSize="17" Width="70" Height="20" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" DrawMode="FitWindow" />
+                </subor>
+                <subor name="MultiTextBox3">
+                    <prop TextColor="0,255,0,255" ViewRect="60,10,75,25" LineHeight="19" ScrollSize="17" Width="18" Height="11" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="WRYH12" AutoSize="true" BackImage="gui\common\money\liang.png" />
+                </subor>
+                <subor name="MultiTextBox4">
+                    <prop TextColor="255,255,69,0" ViewRect="0,0,60,20" LineHeight="18" ScrollSize="17" Width="60" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" NoFrame="true" />
+                </subor>
+                <subor name="MultiTextBox5">
+                    <prop TextColor="255,128,101,74" ViewRect="0,0,53,20" LineHeight="18" ScrollSize="17" Width="53" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" NoFrame="true" />
+                </subor>
+                <subor name="MultiTextBox6">
+                    <prop TextColor="255,255,69,0" ViewRect="0,0,86,20" LineHeight="18" ScrollSize="17" Width="86" Height="20" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" NoFrame="true" />
+                </subor>
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="16" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="248" Top="16" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="120" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="248" Top="120" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="224" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="248" Top="224" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="btn_pageup" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="202" Top="439" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_pageup_click" />
+            </control>
+            <control name="btn_pagedown" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="266" Top="439" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_pagedown_click" />
+            </control>
+            <control name="lbl_page" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="224" Top="441" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="1/1" Font="font_text" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="10" Top="328" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="248" Top="328" Width="230" Height="98" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+            </control>
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="1" Width="217" Height="472" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\sns_pk\level_map.png" />
+            <control name="mltbox_redeem_rule" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="12,15,185,429" LineHeight="17" HtmlText="@ui_redeem_rule_ specific" ScrollSize="17" Left="-2" Top="38" Width="198" Height="414" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_wuxue_title" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="210" Width="11" Height="473" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="190" Top="-1" Width="30" Height="473" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="33" Top="26" Width="118" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_redeem_rule" Font="font_sns_name" />
+            </control>
+        </control>
+    </control>
+</form>

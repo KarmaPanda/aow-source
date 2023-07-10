@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_emission_rigid_body" init="main_form_init">
+        <prop Left="77" Top="69" Width="382" Height="222" BackColor="171,161,161,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="8" Width="142" Height="22" ShadowColor="0,0,0,0" Text="发射刚体[快捷键Ctrl+K]" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="344" Top="8" Width="22" Height="24" ShadowColor="0,0,0,0" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="start_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="56" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="56" Width="38" Height="16" ShadowColor="0,0,0,0" Text="起点" />
+        </control>
+        <control name="start_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="128" Top="56" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="start_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="56" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="use_cam_pos_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="256" Top="56" Width="110" Height="24" ShadowColor="0,0,0,0" Enabled="false" Text="使用摄像机坐标" TabStop="true" />
+            <event on_checked_changed="use_cam_pos_checked_changed" />
+        </control>
+        <control name="Label19" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="80" Width="62" Height="16" ShadowColor="0,0,0,0" Text="终点/方向" />
+        </control>
+        <control name="dst_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="80" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="dst_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="152" Top="80" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="dst_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="216" Top="80" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="104" Width="54" Height="16" ShadowColor="0,0,0,0" Text="最大距离" />
+        </control>
+        <control name="max_dis_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="104" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Text="500.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="emission_btn" entity="Button" script="" init="">
+            <prop Left="288" Top="144" Width="70" Height="24" ShadowColor="0,0,0,0" Text="发射" TabStop="true" />
+            <event on_click="emission_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="22" Top="144" Width="38" Height="16" ShadowColor="0,0,0,0" Text="屏幕点" />
+        </control>
+        <control name="screen_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="73" Top="144" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="screen_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="144" Top="144" Width="54" Height="20" LineColor="255,0,0,255" ShadowColor="0,0,0,0" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+    </control>
+</form>

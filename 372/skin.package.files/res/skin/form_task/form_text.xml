@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_task\form_text" init="main_form_init">
+        <prop ShowGrid="true" Left="165" Top="117" Width="1022" Height="854" BackColor="255,134,143,152" ShadowColor="0,0,0,0" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="17" Top="15" Width="80" Height="16" ShadowColor="0,0,0,0" Text="任务文本编辑器" />
+        </control>
+        <control name="rbtn_form_text" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="25" Top="39" Width="150" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="任务界面文本编辑" TabStop="true" />
+            <event on_checked_changed="rbtn_form_text_checked_changed" />
+        </control>
+        <control name="rbtn_dialog_text" entity="RadioButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="177" Top="39" Width="118" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="任务对话编辑" TabStop="true" />
+            <event on_checked_changed="rbtn_dialog_text_checked_changed" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="985" Top="15" Width="24" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" TabStop="true" />
+            <event on_click="btn_close_click" />
+        </control>
+        <control name="btn_color" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="200" Top="72" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="字体颜色" TabStop="true" />
+            <event on_click="btn_color_click" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="72" Width="182" Height="30" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="rbtn_code" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="代码模式" TabStop="true" />
+                <event on_checked_changed="rbtn_code_checked_changed" />
+            </control>
+            <control name="rbtn_preview" entity="RadioButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="预览模式" TabStop="true" />
+                <event on_checked_changed="rbtn_preview_checked_changed" />
+            </control>
+        </control>
+        <control name="btn_save" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="670" Top="28" Width="80" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="保存" TabStop="true" />
+            <event on_click="btn_save_click" />
+        </control>
+        <control name="default_params_setting" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="352" Top="72" Width="110" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="默认参数配置" TabStop="true" />
+            <event on_click="default_params_setting_click" />
+        </control>
+        <control name="btn_quick_color" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="288" Top="72" Width="22" Height="24" BackColor="255,0,0,0" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="btn_quick_color_click" on_right_click="btn_quick_color_right_click" />
+        </control>
+        <control name="btn_set_white" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="312" Top="72" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="白" TabStop="true" />
+            <event on_click="btn_set_white_click" />
+        </control>
+        <control name="custom_hyper_button" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="478" Top="71" Width="70" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="超链接" />
+            <event on_click="custom_hyper_button_click" />
+        </control>
+    </control>
+</form>

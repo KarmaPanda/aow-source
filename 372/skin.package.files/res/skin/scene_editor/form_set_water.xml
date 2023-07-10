@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_set_water" init="main_form_init">
+        <property name="Left" value="125" />
+        <property name="Top" value="133" />
+        <property name="Width" value="558" />
+        <property name="Height" value="382" />
+        <property name="BackColor" value="178,178,180,255" />
+        <property name="DrawMode" value="Expand" />
+        <property name="BackImage" value="skin\png\form.png" />
+        <callback name="on_open" function="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <property name="Align" value="Center" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="224" />
+            <property name="Top" value="8" />
+            <property name="Width" value="86" />
+            <property name="Height" value="22" />
+            <property name="Text" value="水面配置" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <property name="Left" value="312" />
+            <property name="Top" value="336" />
+            <property name="Width" value="54" />
+            <property name="Height" value="24" />
+            <property name="Text" value="取消" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="cancel_btn_click" />
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <property name="Left" value="240" />
+            <property name="Top" value="336" />
+            <property name="Width" value="54" />
+            <property name="Height" value="24" />
+            <property name="Text" value="确定" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="ok_btn_click" />
+        </control>
+        <control name="water_list" entity="ListBox" script="" init="">
+            <property name="ItemHeight" value="16" />
+            <property name="TextOffsetX" value="2" />
+            <property name="ScrollSize" value="17" />
+            <property name="Left" value="24" />
+            <property name="Top" value="48" />
+            <property name="Width" value="118" />
+            <property name="Height" value="270" />
+            <property name="Text" value="ListBox1" />
+            <property name="TabStop" value="true" />
+            <callback name="on_select_changed" function="water_select_changed" />
+            <subor name="VScrollBar">
+                <property name="BackColor" value="255,224,224,224" />
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="24" />
+            <property name="Top" value="24" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="水面列表：" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="160" />
+            <property name="Top" value="40" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="水体颜色：" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="160" />
+            <property name="Top" value="88" />
+            <property name="Width" value="110" />
+            <property name="Height" value="22" />
+            <property name="Text" value="反映天空颜色：" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="160" />
+            <property name="Top" value="64" />
+            <property name="Width" value="110" />
+            <property name="Height" value="22" />
+            <property name="Text" value="反映阳光颜色：" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="160" />
+            <property name="Top" value="120" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="基本高度：" />
+        </control>
+        <control name="add_btn_click" entity="Button" script="" init="">
+            <property name="Left" value="32" />
+            <property name="Top" value="336" />
+            <property name="Width" value="54" />
+            <property name="Height" value="24" />
+            <property name="Text" value="添加" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="add_btn_click" />
+        </control>
+        <control name="remove_btn_click" entity="Button" script="" init="">
+            <property name="Left" value="88" />
+            <property name="Top" value="336" />
+            <property name="Width" value="46" />
+            <property name="Height" value="24" />
+            <property name="Text" value="删除" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="remove_btn_click" />
+        </control>
+        <control name="base_height_edit" entity="Edit" script="" init="">
+            <property name="DragEvent" value="true" />
+            <property name="TextOffsetX" value="2" />
+            <property name="Caret" value="Default" />
+            <property name="Left" value="240" />
+            <property name="Top" value="120" />
+            <property name="Width" value="94" />
+            <property name="Height" value="22" />
+            <property name="Cursor" value="WIN_IBEAM" />
+            <property name="TabStop" value="true" />
+            <callback name="on_lost_focus" function="base_height_lost_focus" />
+            <callback name="on_drag" function="base_height_drag" />
+        </control>
+        <control name="water_color_label" entity="Label" script="" init="">
+            <property name="Solid" value="true" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="264" />
+            <property name="Top" value="40" />
+            <property name="Width" value="22" />
+            <property name="Height" value="22" />
+            <property name="NoFrame" value="false" />
+        </control>
+        <control name="sun_color_label" entity="Label" script="" init="">
+            <property name="Solid" value="true" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="264" />
+            <property name="Top" value="64" />
+            <property name="Width" value="22" />
+            <property name="Height" value="22" />
+            <property name="NoFrame" value="false" />
+        </control>
+        <control name="sky_color_label" entity="Label" script="" init="">
+            <property name="Solid" value="true" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="264" />
+            <property name="Top" value="88" />
+            <property name="Width" value="22" />
+            <property name="Height" value="22" />
+            <property name="NoFrame" value="false" />
+        </control>
+        <control name="water_color_btn" entity="Button" script="" init="">
+            <property name="Left" value="296" />
+            <property name="Top" value="40" />
+            <property name="Width" value="38" />
+            <property name="Height" value="22" />
+            <property name="Text" value="设置" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="water_color_btn_click" />
+        </control>
+        <control name="sun_color_btn" entity="Button" script="" init="">
+            <property name="Left" value="296" />
+            <property name="Top" value="64" />
+            <property name="Width" value="38" />
+            <property name="Height" value="22" />
+            <property name="Text" value="设置" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="sun_color_btn_click" />
+        </control>
+        <control name="sky_color_btn" entity="Button" script="" init="">
+            <property name="Left" value="296" />
+            <property name="Top" value="88" />
+            <property name="Width" value="38" />
+            <property name="Height" value="22" />
+            <property name="Text" value="设置" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="sky_color_btn_click" />
+        </control>
+        <control name="GroupBox1" entity="GroupBox" script="" init="">
+            <property name="Left" value="344" />
+            <property name="Top" value="168" />
+            <property name="Width" value="198" />
+            <property name="Height" value="158" />
+            <property name="BackColor" value="0,255,255,255" />
+            <property name="Text" value="凹凸贴图" />
+            <control name="Label11" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="24" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="角度：" />
+            </control>
+            <control name="Label12" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="48" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="速度：" />
+            </control>
+            <control name="Label13" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="72" />
+                <property name="Width" value="62" />
+                <property name="Height" value="22" />
+                <property name="Text" value="尺寸：" />
+            </control>
+            <control name="Label14" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="96" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="距离：" />
+            </control>
+            <control name="Label15" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="120" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="变化：" />
+            </control>
+            <control name="bump_angle_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="24" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="bump_angle_lost_focus" />
+                <callback name="on_drag" function="bump_angle_drag" />
+            </control>
+            <control name="bump_speed_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="48" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="bump_speed_lost_focus" />
+                <callback name="on_drag" function="bump_speed_drag" />
+            </control>
+            <control name="bump_scale_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="72" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="bump_scale_lost_focus" />
+                <callback name="on_drag" function="bump_scale_drag" />
+            </control>
+            <control name="bump_tile_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="96" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="bump_tile_lost_focus" />
+                <callback name="on_drag" function="bump_tile_drag" />
+            </control>
+            <control name="bump_ani_speed_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="120" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="bump_ani_speed_lost_focus" />
+                <callback name="on_drag" function="bump_ani_speed_drag" />
+            </control>
+        </control>
+        <control name="GroupBox2" entity="GroupBox" script="" init="">
+            <property name="Left" value="152" />
+            <property name="Top" value="152" />
+            <property name="Width" value="190" />
+            <property name="Height" value="174" />
+            <property name="BackColor" value="0,255,255,255" />
+            <property name="Text" value="反射阳光" />
+            <control name="Label16" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="24" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="起始：" />
+            </control>
+            <control name="Label17" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="48" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="强度：" />
+            </control>
+            <control name="Label18" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="72" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="颜色1：" />
+            </control>
+            <control name="Label19" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="96" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="颜色2：" />
+            </control>
+            <control name="road_start_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="24" />
+                <property name="Width" value="78" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="road_start_lost_focus" />
+                <callback name="on_drag" function="road_start_drag" />
+            </control>
+            <control name="road_power_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="72" />
+                <property name="Top" value="48" />
+                <property name="Width" value="78" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="road_power_lost_focus" />
+                <callback name="on_drag" function="road_power_drag" />
+            </control>
+            <control name="road_color1_label" entity="Label" script="" init="">
+                <property name="Solid" value="true" />
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="80" />
+                <property name="Top" value="72" />
+                <property name="Width" value="22" />
+                <property name="Height" value="22" />
+                <property name="NoFrame" value="false" />
+            </control>
+            <control name="road_color2_label" entity="Label" script="" init="">
+                <property name="Solid" value="true" />
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="80" />
+                <property name="Top" value="96" />
+                <property name="Width" value="22" />
+                <property name="Height" value="22" />
+                <property name="NoFrame" value="false" />
+            </control>
+            <control name="road_color1_btn" entity="Button" script="" init="">
+                <property name="Left" value="112" />
+                <property name="Top" value="72" />
+                <property name="Width" value="38" />
+                <property name="Height" value="22" />
+                <property name="Text" value="设置" />
+                <property name="TabStop" value="true" />
+                <callback name="on_click" function="road_color1_btn_click" />
+            </control>
+            <control name="road_color2_btn" entity="Button" script="" init="">
+                <property name="Left" value="112" />
+                <property name="Top" value="96" />
+                <property name="Width" value="38" />
+                <property name="Height" value="22" />
+                <property name="Text" value="设置" />
+                <property name="TabStop" value="true" />
+                <callback name="on_click" function="road_color2_btn_click" />
+            </control>
+            <control name="sun_road_btn" entity="Button" script="" init="">
+                <property name="Left" value="24" />
+                <property name="Top" value="128" />
+                <property name="Width" value="134" />
+                <property name="Height" value="24" />
+                <property name="Text" value="刷新阳光反射贴图" />
+                <property name="TabStop" value="true" />
+                <callback name="on_click" function="sun_road_btn_click" />
+            </control>
+        </control>
+        <control name="GroupBox3" entity="GroupBox" script="" init="">
+            <property name="Left" value="344" />
+            <property name="Top" value="32" />
+            <property name="Width" value="198" />
+            <property name="Height" value="134" />
+            <property name="BackColor" value="0,255,255,255" />
+            <property name="Text" value="水体参数" />
+            <control name="Label20" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="24" />
+                <property name="Width" value="62" />
+                <property name="Height" value="22" />
+                <property name="Text" value="透明度：" />
+            </control>
+            <control name="Label21" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="48" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Text" value="折射系数：" />
+            </control>
+            <control name="Label22" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="24" />
+                <property name="Top" value="72" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Text" value="反射系数：" />
+            </control>
+            <control name="Label23" entity="Label" script="" init="">
+                <property name="RefCursor" value="WIN_HELP" />
+                <property name="Left" value="23" />
+                <property name="Top" value="99" />
+                <property name="Width" value="80" />
+                <property name="Height" value="22" />
+                <property name="Text" value="衰减系数：" />
+            </control>
+            <control name="water_trans_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="104" />
+                <property name="Top" value="24" />
+                <property name="Width" value="70" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="water_trans_lost_focus" />
+                <callback name="on_drag" function="water_trans_drag" />
+            </control>
+            <control name="water_fresnel_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="104" />
+                <property name="Top" value="48" />
+                <property name="Width" value="70" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="water_fresnel_lost_focus" />
+                <callback name="on_drag" function="water_fresnel_drag" />
+            </control>
+            <control name="water_reflec_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="104" />
+                <property name="Top" value="72" />
+                <property name="Width" value="70" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="water_reflec_lost_focus" />
+                <callback name="on_drag" function="water_reflec_drag" />
+            </control>
+            <control name="water_attenu_edit" entity="Edit" script="" init="">
+                <property name="DragEvent" value="true" />
+                <property name="TextOffsetX" value="2" />
+                <property name="Caret" value="Default" />
+                <property name="Left" value="104" />
+                <property name="Top" value="96" />
+                <property name="Width" value="70" />
+                <property name="Height" value="22" />
+                <property name="Cursor" value="WIN_IBEAM" />
+                <property name="TabStop" value="true" />
+                <callback name="on_lost_focus" function="water_attenu_lost_focus" />
+                <callback name="on_drag" function="water_attenu_drag" />
+            </control>
+        </control>
+    </control>
+</form>

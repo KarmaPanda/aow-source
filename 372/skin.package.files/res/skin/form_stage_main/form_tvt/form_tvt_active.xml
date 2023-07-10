@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_tvt\form_tvt_active" init="">
+        <prop ShowGrid="true" Left="10" Top="30" Width="742" Height="547" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="2" Top="-4" Width="740" Height="553" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\gengxintishi\tvt_update_back.png" />
+        </control>
+        <control name="groupbox_base" entity="GroupBox" script="" init="">
+            <prop Top="7" Width="718" Height="527" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" DrawMode="Expand" />
+            <control name="lbl_title_base" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="27" Top="10" Width="80" Height="30" ForeColor="255,204,204,204" ShadowColor="0,255,0,0" Text="活动一：内功" Font="font_title" />
+            </control>
+            <control name="mltbox_content_base" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,662,479" LineHeight="21" TipAutoSize="true" TipMaxWidth="640" ScrollSize="17" HasVScroll="true" Left="27" Top="36" Width="662" Height="479" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="lbl_srollbar_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="711" Top="3" Width="30" Height="536" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+        </control>
+        <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="18" HasVScroll="true" Left="2" Top="6" Width="733" Height="530" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="18" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="360" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

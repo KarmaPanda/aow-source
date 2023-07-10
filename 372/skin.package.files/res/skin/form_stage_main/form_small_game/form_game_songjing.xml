@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_songjing" init="main_form_init">
+        <prop ShowGrid="true" Left="205" Top="173" Width="800" Height="600" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" BackImage="gui\xgame\back-xyx.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="-100" Width="800" Height="100" ShadowColor="0,0,0,0" VAnchor="Bottom" DrawMode="FitWindow" BackImage="gui\loading\scene_change_down.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="800" Height="100" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\loading\scene_change_up.png" />
+        </control>
+        <control name="mltbox_lyric" entity="MultiTextBox" script="" init="">
+            <prop HAlign="Center" VAlign="Center" TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,800,62" LineHeight="20" LineTextAlign="Center" TransHyperLink="true" ScrollSize="17" Left="-400" Top="-72" Width="800" Height="62" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" Font="font_name" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="8" Top="-56" Width="84" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_songjing_01" Font="font_playername" HintText="@tip_songjing_01" />
+        </control>
+        <control name="lbl_value" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="136" Top="-56" Width="80" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="0" Font="font_playername" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-400" Top="24" Width="800" Height="54" ForeColor="255,255,227,132" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_sns_event_day" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Top="-24" Width="800" Height="24" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_songjing_04" Font="font_main" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\an_lx_out.png" FocusImage="gui\common\button\an_lx_on.png" PushImage="gui\common\button\an_lx_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-96" Top="-40" Width="97" Height="42" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_songjing_02" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\an_tiaozhuan_out.png" FocusImage="gui\common\button\an_tiaozhuan_on.png" PushImage="gui\common\button\an_tiaozhuan_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-170" Top="-80" Width="84" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_songjing_08" DataSource="backward" Font="font_btn" HintText="@tip_songjing_03" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_offset_click" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\an_tiaozhuan_out.png" FocusImage="gui\common\button\an_tiaozhuan_on.png" PushImage="gui\common\button\an_tiaozhuan_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-87" Top="-80" Width="84" Height="38" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="@ui_songjing_07" DataSource="forward" Font="font_btn" HintText="@tip_songjing_02" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_offset_click" />
+        </control>
+    </control>
+</form>

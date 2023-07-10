@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\from_clone_damage_statistics" entity="Form" script="form_stage_main\form_clone_damage_statistics" init="form_damage_statistics_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="600" Top="405" Width="390" Height="167" BackColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" />
+        <event on_open="from_clone_damage_statistics_open" on_active="from_clone_damage_statistics_active" on_close="from_clone_damage_statistics_close" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Width="390" Height="172" BackColor="0,255,255,255" BlendColor="255,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+            <control name="btn_show_all" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_maximum_out.png" FocusImage="gui\common\button\btn_maximum_on.png" PushImage="gui\common\button\btn_maximum_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="349" Top="4" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_show_all_click" />
+            </control>
+            <control name="btn_show_panel" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_set_out.png" FocusImage="gui\common\button\btn_set_on.png" PushImage="gui\common\button\btn_set_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="367" Top="4" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_show_panel_click" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Width="23" Height="23" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" AutoSize="true" BackImage="gui\special\recount\icon_1.png" />
+            </control>
+            <control name="lbl_7_7" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="39" Top="5" Width="70" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="99999999" Font="font_name_tittle" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="117" Width="23" Height="23" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" AutoSize="true" BackImage="gui\special\recount\icon_2.png" />
+            </control>
+            <control name="lbl_8_8" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="145" Top="5" Width="62" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="999999/s" Font="font_name_tittle" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="30" Width="110" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_info_01" Font="Default" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="52" Width="142" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_info_02" Font="Default" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="32" Top="76" Width="158" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_info_03" Font="Default" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="32" Top="100" Width="262" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_info_04" Font="Default" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="32" Top="124" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_info_05" Font="Default" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="32" Top="148" Width="158" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_info_06" Font="Default" />
+            </control>
+            <control name="lbl_1_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="298" Top="29" Width="86" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="99999999" Font="font_name" />
+            </control>
+            <control name="lbl_2_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="298" Top="53" Width="86" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="99999999" Font="font_name" />
+            </control>
+            <control name="lbl_3_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="298" Top="77" Width="86" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="99999999" Font="font_name" />
+            </control>
+            <control name="lbl_4_4" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="298" Top="101" Width="86" Height="14" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="99999999" Font="font_name" />
+            </control>
+            <control name="lbl_5_5" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="298" Top="124" Width="86" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="99999999" Font="font_name" />
+            </control>
+            <control name="lbl_6_6" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="298" Top="148" Width="86" Height="16" ForeColor="255,0,125,255" ShadowColor="0,0,0,0" Text="99:99:99" Font="font_name" />
+            </control>
+            <control name="lbl_9_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="24" Width="382" Height="25" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select3.png" />
+            </control>
+            <control name="lbl_9_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="48" Width="382" Height="25" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select3.png" />
+            </control>
+            <control name="lbl_9_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="72" Width="382" Height="25" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select3.png" />
+            </control>
+            <control name="lbl_9_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="96" Width="382" Height="25" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select3.png" />
+            </control>
+            <control name="lbl_9_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-3" Top="120" Width="382" Height="25" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select3.png" />
+            </control>
+            <control name="lbl_9_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="144" Width="382" Height="25" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\combobox\bg_select3.png" />
+            </control>
+            <control name="btn_Hiden" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_minimum_out.png" FocusImage="gui\common\button\btn_minimum_on.png" PushImage="gui\common\button\btn_minimum_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="349" Top="4" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_Hiden_click" />
+            </control>
+            <control name="lbl_9_1_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="125" Width="22" Height="22" ShadowColor="0,0,0,0" BackImage="gui\special\recount\icon_5.png" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="100" Width="23" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\recount\icon_4.png" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="25" Width="23" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\recount\icon_1.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="50" Width="23" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\recount\icon_2.png" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="149" Width="23" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\recount\icon_6.png" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5" Top="75" Width="23" Height="23" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\recount\icon_3.png" />
+            </control>
+        </control>
+    </control>
+</form>

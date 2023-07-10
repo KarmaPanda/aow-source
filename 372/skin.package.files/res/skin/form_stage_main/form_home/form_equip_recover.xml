@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_home\form_equip_recover" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="-419" Top="93" Width="350" Height="486" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="lbl_dt" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="32" Width="342" Height="406" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\fenjie\003.png" />
+        </control>
+        <control name="btn_help" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" CheckedImage="gui\common\button\btn_help_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="-51" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_btn_help_checked_changed" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="256" Top="448" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-30" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="40" Width="334" Height="326" ShadowColor="0,0,0,0" BackImage="gui\special\fenjie\001.png" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,153,36" LineHeight="17" ScrollSize="17" Left="101" Top="442" Width="153" Height="36" ShadowColor="0,0,0,0" Text="@ui_jh_equiprepair_pay" NoFrame="true" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="136" Top="6" Width="118" Height="20" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_jh_equiprepair" Font="font_title" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="432" Width="343" Height="14" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="24" Width="342" Height="12" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="imagegrid_equip" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,44,44" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="150" Top="184" Width="46" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_imagegrid_select_changed" on_mousein_grid="on_imagegrid_mousein_grid" on_rightclick_grid="on_imagegrid_rightclick_grid" on_mouseout_grid="on_imagegrid_mouseout_grid" />
+        </control>
+        <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,204,204,204" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,96,38" LineHeight="17" HtmlText="@ui_repair_payment" ScrollSize="17" Left="8" Top="440" Width="96" Height="38" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_money" />
+        </control>
+    </control>
+</form>

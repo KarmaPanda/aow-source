@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_die_world_war" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="181" Top="133" Width="713" Height="526" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="32" Width="478" Height="494" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Width="478" Height="488" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+            </control>
+            <control name="pic_map" entity="Picture" script="" init="">
+                <prop CenterX="-1" CenterY="-1" Left="4" Width="471" Height="486" ShadowColor="0,0,0,0" NoFrame="true" />
+            </control>
+        </control>
+        <control name="lbl_choose_mode" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="264" Top="11" Width="150" Height="16" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Text="@ui_rebornoption" Font="font_title" />
+        </control>
+        <control name="lbl_back_hua" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="272" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="480" Width="230" Height="526" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="32" Width="227" Height="52" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area.png" />
+            </control>
+            <control name="lbl_kuang" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="77" Width="228" Height="442" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+            </control>
+            <control name="lbl_revert" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="45" Width="30" Height="21" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="hyshtj14_S" />
+            </control>
+            <control name="btn_return_near_location" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="39" Top="192" Width="154" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_worldwar_relive_miaoshu" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" ClickSound="ok_7" />
+                <event on_click="on_btn_return_near_location_click" on_lost_capture="on_btn_return_near_location_lost_capture" on_get_capture="on_btn_return_near_location_get_capture" />
+            </control>
+            <control name="lbl_free" entity="Label" script="" init="">
+                <prop Rotate="true" RefCursor="WIN_HELP" Left="283" Top="336" Width="158" Height="22" ForeColor="255,255,0,255" ShadowColor="0,0,0,0" Font="hyshtj15" />
+            </control>
+            <control name="lbl_count" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="392" Width="169" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_revive_count" Font="font_text_figure" />
+            </control>
+            <control name="btn_relive_local" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="41" Top="296" Width="151" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_fuhuo0002" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" ClickSound="ok_7" />
+                <event on_click="on_btn_relive_local_click" />
+            </control>
+            <control name="btn_relive_strong" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="42" Top="344" Width="149" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_fuhuo_healthTreatment" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" ClickSound="ok_7" />
+                <event on_click="on_btn_relive_strong_click" />
+            </control>
+            <control name="lbl_location_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="25" Top="136" Width="190" Height="16" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Font="font_text_figure" />
+            </control>
+            <control name="lbl_location_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="25" Top="172" Width="195" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Font="font_text_figure" />
+            </control>
+            <control name="lbl_ui_fuhuo_time_near" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="40" Top="40" Width="150" Height="30" ForeColor="255,220,220,220" ShadowColor="0,0,0,0" Text="@ui_fuhuo_time_near" Font="font_text_figure" />
+            </control>
+            <control name="lbl_ui_revive_choose1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="2" Top="79" Width="222" Height="30" ForeColor="255,222,184,135" ShadowColor="0,20,0,0" Text="@ui_worldwar_relive_select" Font="font_text" DrawMode="Expand" BackImage="gui\common\treeview\tree_1_out.png" />
+            </control>
+            <control name="lbl_ui_revive_choose3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="2" Top="248" Width="222" Height="30" ForeColor="255,222,184,135" ShadowColor="0,20,0,0" Text="@ui_revive_choose3" Font="font_text" DrawMode="Expand" BackImage="gui\common\treeview\tree_1_out.png" />
+            </control>
+            <control name="lbl_ui_revive_location" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="120" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_revive_location" Font="font_main" />
+            </control>
+            <control name="lbl_ui_location_state" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="152" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@ui_location_state" Font="font_main" />
+            </control>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="475" Top="32" Width="9" Height="486" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="704" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

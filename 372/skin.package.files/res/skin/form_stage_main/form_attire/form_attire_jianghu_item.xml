@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_attire\form_attire_jianghu_item" init="on_main_form_init">
+        <prop ShowGrid="true" Top="29" Width="560" Height="662" BackColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="rbtn_type_all" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_anniu_out.png" FocusImage="gui\special\attire\attire_btn\btn_anniu_on.png" CheckedImage="gui\special\attire\attire_btn\btn_anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,0,0,0" PushColor="255,0,0,0" DisableColor="0,0,0,0" Width="66" Height="45" ForeColor="255,83,32,12" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Text="@ui_trade_buy_all" DataSource="1" Font="font_main" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_rbtn_type_all_checked_changed" />
+        </control>
+        <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" Top="49" Width="560" Height="524" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupscrollbox_1" NoFrame="true" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="32" Top="-96" Width="502" Height="86" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="groupbox_1" NoFrame="true" />
+            <control name="btn_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\attire\attire_btn\btn_left_out.png" FocusImage="gui\special\attire\attire_btn\btn_left_on.png" PushImage="gui\special\attire\attire_btn\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="160" Top="6" Width="42" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_left_click" />
+            </control>
+            <control name="btn_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\attire\attire_btn\btn_right_out.png" FocusImage="gui\special\attire\attire_btn\btn_right_on.png" PushImage="gui\special\attire\attire_btn\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="232" Top="6" Width="42" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_right_click" />
+            </control>
+            <control name="lbl_page" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="201" Top="16" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1/23" Font="font_main" />
+            </control>
+            <control name="btn_use" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\attire\attire_btn\btmenu_out.png" FocusImage="gui\special\attire\attire_btn\btmenu_on.png" PushImage="gui\special\attire\attire_btn\btmenu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Top="40" Width="131" Height="46" ForeColor="255,231,224,178" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_attire_save_9" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_use_click" />
+            </control>
+        </control>
+        <control name="rbtn_active" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\special\attire\attire_btn\btn_anniu_out.png" FocusImage="gui\special\attire\attire_btn\btn_anniu_on.png" CheckedImage="gui\special\attire\attire_btn\btn_anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,0,0,0" PushColor="255,0,0,0" DisableColor="0,0,0,0" Left="74" Width="66" Height="45" ForeColor="255,83,32,12" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Text="@ui_origin_yhd" DataSource="2" Font="font_main" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_rbtn_active_checked_changed" />
+        </control>
+        <control name="groupbox_sub" entity="GroupBox" script="" init="">
+            <prop Left="50000" Top="320" Width="248" Height="108" ShadowColor="0,0,0,0" Text="groupbox_1" AutoSize="true" BackImage="gui\special\attire\attire_back\jhz_out.png" />
+            <control name="imagegrid_1" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="73" GridWidth="72" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\attire\attire_back\k_jhz.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="7" Top="27" Width="73" Height="74" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" AutoSize="true" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="3" Top="8" Width="238" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="名字" Font="font_main" />
+            </control>
+            <control name="lbl_have" entity="MultiTextBox" script="" init="">
+                <prop TextColor="0,255,0,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="15,7,73,30" LineHeight="15" ScrollSize="17" Left="90" Top="68" Width="73" Height="30" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" AutoSize="true" BackImage="gui\special\attire\attire_back\jianghu_1.png" />
+            </control>
+            <control name="lbl_level" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="171" Top="45" Width="56" Height="22" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="98" Top="44" Width="57" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_attire_jianghu_item_pinzhi" Font="font_main" />
+            </control>
+            <control name="imagegrid_equip_info" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,3,255,0" MouseInColor="0,255,255,0" CoverColor="0,0,0,0" LockColor="0,0,0,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="30" GridWidth="73" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="165" Top="68" Width="73" Height="30" ShadowColor="0,0,0,0" Text="imagegrid_2" NoFrame="true" AutoSize="true" BackImage="gui\special\attire\attire_back\tips.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+    </control>
+</form>

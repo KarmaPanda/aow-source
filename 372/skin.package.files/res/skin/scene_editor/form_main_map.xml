@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_main_map" init="main_form_init">
+        <prop Transparent="true" Left="-10" Top="-10" Width="431" Height="262" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" NoFrame="true" />
+        <event on_open="main_form_open" />
+        <control name="groupbox_smallmap" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="5" Top="5" Width="431" Height="246" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" NoFrame="true" />
+            <event on_open="main_form_open" />
+            <control name="roundbox_smallmap" entity="Picture" script="" init="">
+                <prop Image="gui\map\born04.dds" ZoomWidth="0.232420" ZoomHeight="0.193359" CenterX="-1" CenterY="-1" Left="5" Top="5" Width="239" Height="199" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_left_up="on_roundbox_smallmap_left_up" on_mouse_move="on_roundbox_smallmap_mouse_move" on_get_capture="on_roundbox_smallmap_get_capture" on_lost_capture="on_roundbox_smallmap_lost_capture" />
+            </control>
+            <control name="lbl_position" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="141" Top="152" Width="78" Height="24" ForeColor="255,240,240,24" ShadowColor="0,0,0,0" Text="333,444" Font="FZHTJT15_O" DrawMode="Expand" BackImage="gui\common\lengque_01.png" />
+            </control>
+            <control name="groupmap_objs" entity="GroupMap" script="" init="">
+                <prop Left="5" Top="5" Width="238" Height="198" ShadowColor="0,0,0,0" Text="GroupMap1" />
+                <event on_click_obj="on_groupmap_objs_click_obj" on_mouse_out_obj="on_groupmap_objs_mouse_out_obj" on_mouse_in_obj="on_groupmap_objs_mouse_in_obj" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close\b-x-out.png" FocusImage="gui\common\button\btn_close\b-x-on.png" PushImage="gui\common\button\btn_close\b-x-down.png" Left="218" Top="10" Width="20" Height="20" ShadowColor="0,0,0,0" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="lbl_mouse_position" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="290" Top="122" Width="70" Height="16" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\form_back\di02.png" />
+            </control>
+        </control>
+        <control name="btn_zoom_out" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\map\suoxiao-out.png" FocusImage="gui\map\suoxiao-on.png" PushImage="gui\map\suoxiao-down.png" Left="12" Top="160" Width="25" Height="28" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_push="on_btn_zoom_out_push" on_lost_capture="on_btn_zoom_out_lost_capture" on_click="on_btn_zoom_out_click" />
+        </control>
+        <control name="btn_zoom_in" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\map\fangda-out.png" FocusImage="gui\map\fangda-on.png" PushImage="gui\map\fangda-down.png" Left="12" Top="134" Width="25" Height="28" ShadowColor="0,0,0,0" TestTrans="true" TabStop="true" AutoSize="true" />
+            <event on_push="on_btn_zoom_in_push" on_lost_capture="on_btn_zoom_in_lost_capture" on_click="on_btn_zoom_in_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="7" Top="7" Width="246" Height="206" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\kuangzi02.png" />
+        </control>
+    </control>
+</form>

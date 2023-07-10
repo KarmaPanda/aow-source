@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_school_war\form_escortfind" init="main_form_init">
+        <prop ShowGrid="true" Left="13" Top="29" Width="334" Height="534" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_close="on_main_form_close" on_open="on_main_form_open" />
+        <control name="lbl_area" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="6" Top="500" Width="320" Height="25" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_title_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="96" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="96" Top="10" Width="134" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_biaodui" Font="font_title" />
+        </control>
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Left="3" Top="31" Width="325" Height="470" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            <control name="groupbox_path" entity="GroupBox" script="" init="">
+                <prop Left="13" Top="73" Width="300" Height="382" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\list\bg_line.png" />
+                <control name="groupscrollpathbox_desc" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="22" HasVScroll="true" Left="8" Top="8" Width="286" Height="366" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Font="STKAITI16_W" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="22" TrackSize="56" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow"  />
+                        <subor name="DecButton">
+                            <prop  NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop  NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop  NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="56" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                        </subor>
+                    </subor>
+                </control>
+            </control>
+            <control name="lbl_line_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="10" Top="33" Width="310" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_text" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="77" Top="19" Width="175" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_biaoduixuanze" Font="font_text_title1" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_title.png" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop InSound="MouseOn_20" ClickSound="cancel_5" NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="304" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="26" Width="324" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_line_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="4" Top="494" Width="324" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_escort" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Top="499" Width="177" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xiangxi" Font="font_btn" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_escort_click" />
+        </control>
+    </control>
+</form>

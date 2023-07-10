@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_tarot\form_tarot_share" init="main_form_init">
+        <prop ShowGrid="true" Left="173" Top="141" Width="550" Height="388" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\chat_group\bg_0.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="50" Top="35" Width="175" Height="27" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_tarotcard_2" Font="font_text_chat" AutoSize="true" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="320" Top="35" Width="175" Height="27" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_tarotcard_3" Font="font_text_chat" AutoSize="true" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="452" Top="355" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_qunliao_quxiao" Font="font_text_chat" AutoSize="true" />
+            <event on_click="on_btn_cancel_click" />
+        </control>
+        <control name="groupbox_select_playerlist" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="278" Top="68" Width="268" Height="280" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupscrollbox_1" />
+            </subor>
+            <subor name="VScrollBar">
+                <prop SmallChange="1" LargeChange="280" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="250" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <control name="groupbox_select_item" entity="GroupBox" script="" init="">
+                <prop Left="6" Top="1" Width="233" Height="26" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_4" />
+                </subor>
+                <control name="item_select_hide" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-16" Top="8" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" />
+                </control>
+                <control name="item_select_bg" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\chat_group\out.png" FocusImage="gui\special\chat_group\on.png" CheckedImage="gui\special\chat_group\down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="233" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_text_chat" TabStop="true" AutoSize="true" />
+                </control>
+                <control name="item_select_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="233" Height="25" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_playername" DrawMode="ExpandH" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="192" Top="2" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tarotcard_4" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="groupbox_playerlist" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="278" Top="68" Width="268" Height="280" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupscrollbox_1" />
+            </subor>
+            <subor name="VScrollBar">
+                <prop FullBarBack="false" SmallChange="12" LargeChange="238" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="250" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <control name="groupbox_mark" entity="GroupBox" script="" init="">
+                <prop Left="2" Width="244" Height="30" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="ExpandH" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_3" />
+                </subor>
+                <control name="mark_bg" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="244" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_3" AutoSize="true" />
+                </control>
+                <control name="mark_ext" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_minimum_out.png" FocusImage="gui\common\button\btn_minimum_on.png" PushImage="gui\common\button\btn_minimum_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="6" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_3" AutoSize="true" />
+                </control>
+                <control name="mark_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="48" Top="8" Width="62" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="lbl_3" Font="font_name_tittle" />
+                </control>
+                <control name="mark_num" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="112" Top="8" Width="62" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="lbl_3" Font="font_name_tittle" />
+                </control>
+            </control>
+            <control name="groupbox_item" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="32" Width="233" Height="26" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_4" />
+                </subor>
+                <control name="item_bg" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\chat_group\out.png" FocusImage="gui\special\chat_group\on.png" CheckedImage="gui\special\chat_group\down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="2" Width="233" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                </control>
+                <control name="item_name" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="2" Width="233" Height="26" ShadowColor="0,0,0,0" Text="lbl_3" Font="font_name_tittle" />
+                </control>
+                <control name="item_hide" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-24" Width="14" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_num" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="456" Top="35" Width="30" Height="24" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_text_chat" />
+        </control>
+        <control name="gb_chat" entity="GroupBox" script="" init="">
+            <prop Left="6" Top="70" Width="242" Height="276" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_1" />
+            </subor>
+            <control name="btn_fujin" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="10" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,245,255,194" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_1" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_shijie" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="55" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_2" Font="font_name_tittle" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_changjing" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="100" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_3" Font="font_name_tittle" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_liuyan" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-166" Top="146" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_4" Font="font_name_tittle" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_banghui" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="145" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_5" Font="font_name_tittle" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_lianmeng" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="190" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_6" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_duiwu" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="235" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_7" Font="font_name_tittle" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_tuandui" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="130" Top="10" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_8" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_menyin" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="130" Top="55" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_9" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_menpai" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="130" Top="100" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_10" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_shili" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="130" Top="100" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_11" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+            <control name="btn_yinshi" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\chat_group\bg_1_out.png" FocusImage="gui\special\chat_group\bg_1_on.png" PushImage="gui\special\chat_group\bg_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="130" Top="100" Width="94" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tarotcard_s_12" Font="font_name_tittle" DrawMode="ExpandV" />
+                <event on_click="on_btn_chat_click" />
+            </control>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="362" Width="366" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tarotcard_5" Font="font_text_chat" />
+        </control>
+    </control>
+</form>

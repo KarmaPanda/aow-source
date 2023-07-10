@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_main\form_active_icon" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="20" Top="30" Width="702" Height="490" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="176" Top="4" Width="150" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_dbomall_0306" Font="font_title" AutoSize="true" />
+        </control>
+        <control name="groupbox_redeem" entity="GroupBox" script="" init="">
+            <prop Top="95" Width="702" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="8" Width="694" Height="73" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\hotlist\kuangzi.png" />
+            </control>
+            <control name="lbl_redeem" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="36" Top="27" Width="64" Height="16" ForeColor="255,0,180,0" ShadowColor="0,0,0,0" Text="@ui_active_shuhuilibao" Font="font_main" />
+            </control>
+            <control name="ImageControlGrid_redeem" entity="ImageControlGrid" script="" init="">
+                <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="-7" MultiTextBoxTop="36" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,206,50" MaxSize="-1" RowNum="1" ClomnNum="9" ShowEmpty="false" GridHeight="36" GridWidth="36" GridsPos="0,8;64,8;128,8;192,8;256,8;320,8;384,8;448,8;512,8" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="161" Width="504" Height="50" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" on_select_changed="on_ImageControlGrid_changed" />
+                <subor name="MultiTextBox1">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,65,34" ScrollSize="17" Width="65" Height="34" ShadowColor="0,0,0,0" Font="font_text_figure" NoFrame="true" />
+                </subor>
+            </control>
+            <control name="btn_redeem_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jtz_out.png" FocusImage="gui\special\hotlist\jtz_on.png" PushImage="gui\special\hotlist\jtz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="140" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_redeem_left_click" />
+            </control>
+            <control name="btn_redeem_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jty_out.png" FocusImage="gui\special\hotlist\jty_on.png" PushImage="gui\special\hotlist\jty_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="673" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_2" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_redeem_right_click" />
+            </control>
+        </control>
+        <control name="groupbox_buy" entity="GroupBox" script="" init="">
+            <prop Top="167" Width="702" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="8" Width="694" Height="73" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\hotlist\kuangzi.png" />
+            </control>
+            <control name="lbl_buy" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="39" Top="27" Width="64" Height="16" ForeColor="255,28,134,218" ShadowColor="0,0,0,0" Text="@ui_active_xianshiqianggou" Font="font_main" />
+            </control>
+            <control name="ImageControlGrid_buy" entity="ImageControlGrid" script="" init="">
+                <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="-7" MultiTextBoxTop="36" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,206,50" MaxSize="-1" RowNum="1" ClomnNum="9" ShowEmpty="false" GridHeight="36" GridWidth="36" GridsPos="0,8;64,8;128,8;192,8;256,8;320,8;384,8;448,8;512,8" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="161" Top="-4" Width="504" Height="50" BackColor="0,0,255,255" ShadowColor="0,0,0,0" Text="ImageControlGrid1" NoFrame="true" AutoSize="true" />
+                <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" on_select_changed="on_ImageControlGrid_changed" />
+                <subor name="MultiTextBox1">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,65,34" ScrollSize="17" Width="65" Height="34" ShadowColor="0,0,0,0" Font="font_text_figure" NoFrame="true" />
+                </subor>
+            </control>
+            <control name="btn_buy_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jtz_out.png" FocusImage="gui\special\hotlist\jtz_on.png" PushImage="gui\special\hotlist\jtz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="140" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_buy_left_click" />
+            </control>
+            <control name="btn_buy_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jty_out.png" FocusImage="gui\special\hotlist\jty_on.png" PushImage="gui\special\hotlist\jty_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="673" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_2" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_buy_right_click" />
+            </control>
+        </control>
+        <control name="groupbox_special" entity="GroupBox" script="" init="">
+            <prop Top="239" Width="702" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="8" Width="694" Height="73" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\hotlist\kuangzi.png" />
+            </control>
+            <control name="lbl_special" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="36" Top="27" Width="64" Height="16" ForeColor="255,239,84,0" ShadowColor="0,0,0,0" Text="@ui_active_teshuhuodong" Font="font_main" />
+            </control>
+            <control name="ImageControlGrid_special" entity="ImageControlGrid" script="" init="">
+                <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="-7" MultiTextBoxTop="36" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,206,50" MaxSize="-1" RowNum="1" ClomnNum="9" ShowEmpty="false" GridHeight="36" GridWidth="36" GridsPos="0,8;64,8;128,8;192,8;256,8;320,8;384,8;448,8;512,8" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="161" Top="-4" Width="504" Height="50" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="ImageControlGrid1" NoFrame="true" AutoSize="true" />
+                <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" on_select_changed="on_ImageControlGrid_changed" />
+                <subor name="MultiTextBox1">
+                    <prop HAlign="Center" TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,65,34" ScrollSize="17" Width="65" Height="34" ShadowColor="0,0,0,0" Font="font_text_figure" NoFrame="true" />
+                </subor>
+            </control>
+            <control name="btn_special_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jtz_out.png" FocusImage="gui\special\hotlist\jtz_on.png" PushImage="gui\special\hotlist\jtz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="140" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_special_left_click" />
+            </control>
+            <control name="btn_special_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jty_out.png" FocusImage="gui\special\hotlist\jty_on.png" PushImage="gui\special\hotlist\jty_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="673" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_2" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_special_right_click" />
+            </control>
+        </control>
+        <control name="groupbox_happy" entity="GroupBox" script="" init="">
+            <prop Left="1" Top="23" Width="702" Height="78" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="8" Width="694" Height="73" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\hotlist\kuangzi.png" />
+            </control>
+            <control name="lbl_happy" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="27" Width="64" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_active_lefantian" Font="font_main" />
+            </control>
+            <control name="ImageControlGrid_happy" entity="ImageControlGrid" script="" init="">
+                <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="-7" MultiTextBoxTop="36" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,206,50" MaxSize="-1" RowNum="1" ClomnNum="9" ShowEmpty="false" Center="true" GridHeight="36" GridWidth="36" GridsPos="0,8;64,8;128,8;192,8;256,8;320,8;384,8;448,8;512,8" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="161" Width="504" Height="50" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" on_select_changed="on_ImageControlGrid_changed" />
+                <subor name="MultiTextBox1">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,65,34" ScrollSize="17" Width="65" Height="34" ShadowColor="0,0,0,0" Font="font_text_figure" NoFrame="true" />
+                </subor>
+            </control>
+            <control name="btn_happy_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jtz_out.png" FocusImage="gui\special\hotlist\jtz_on.png" PushImage="gui\special\hotlist\jtz_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="140" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_happy_left_click" />
+            </control>
+            <control name="btn_happy_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\jty_out.png" FocusImage="gui\special\hotlist\jty_on.png" PushImage="gui\special\hotlist\jty_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="672" Top="24" Width="15" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_2" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_happy_right_click" />
+            </control>
+        </control>
+    </control>
+</form>

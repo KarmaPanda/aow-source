@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_findpic.lua" init="main_form_init">
+        <prop ShowGrid="true" Left="125" Top="77" Width="926" Height="638" ShadowColor="0,0,0,0" Font="font_name" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="-463" Top="-319" Width="926" Height="638" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="lbl_help" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="232" Top="160" Width="454" Height="278" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="416" Top="8" Width="86" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_LianEye" Font="font_title" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="900" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_tips" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="840" Top="368" Width="32" Height="32" ShadowColor="0,0,0,0" Font="FZHKJT20" AutoSize="true" DrawMode="Center" BackImage="gui\animations\face\bq011_01.png" />
+        </control>
+        <control name="btn_startgame" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="376" Top="512" Width="166" Height="46" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_StartGame" Font="font_title" TabStop="true" DrawMode="Expand" InSound="MouseOn1" ClickSound="MouseClick1" />
+            <event on_click="on_btn_startgame_click" />
+        </control>
+        <control name="groupbox_life" entity="GroupBox" script="" init="">
+            <prop Left="840" Top="104" Width="62" Height="246" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_life1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="24" Width="35" Height="37" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\exp.png" />
+            </control>
+            <control name="lbl_life2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="64" Width="35" Height="37" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\exp.png" />
+            </control>
+            <control name="lbl_life3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="104" Width="35" Height="37" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\exp.png" />
+            </control>
+            <control name="lbl_life4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="144" Width="35" Height="37" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\exp.png" />
+            </control>
+            <control name="lbl_life5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="184" Width="35" Height="37" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\life\exp.png" />
+            </control>
+        </control>
+        <control name="mltbox_help" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" Transparent="true" MouseInBarColor="0,255,255,0" ViewRect="0,0,430,318" LineHeight="25" TipMaxWidth="220" HtmlText="@ui_LianEye_desc" LineTextAlign="Top" TransNormalText="true" ScrollSize="17" ClipChildren="false" Left="-207" Top="128" Width="430" Height="318" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_name" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="pbar_show" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\animations\findpic\pic_008.png" ProgressMode="BottomToTop" Left="768" Top="456" Width="128" Height="128" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        </control>
+    </control>
+</form>

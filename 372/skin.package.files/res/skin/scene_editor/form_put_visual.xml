@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_put_visual" init="main_form_init">
+        <prop Left="133" Top="29" Width="254" Height="622" BackColor="146,146,148,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_move="main_form_move" on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="8" Width="94" Height="16" ShadowColor="0,0,0,0" Text="物体模型" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="233" Top="-1" Width="22" Height="22" ShadowColor="0,0,0,0" Text="X" HintText="关闭" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="file_list" entity="ListBox" script="" init="">
+            <prop Sorted="true" ItemHeight="12" TextOffsetX="2" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" AlwaysHScroll="true" Left="8" Top="248" Width="238" Height="102" ShadowColor="0,0,0,0" Text="ListBox2" TabStop="true" />
+            <event on_select_click="file_select_changed" on_select_changed="file_select_changed" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="192" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="56" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="32" Width="38" Height="22" ShadowColor="0,0,0,0" Text="路径：" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="200" Width="30" Height="22" ShadowColor="0,0,0,0" Text="模型:" />
+        </control>
+        <control name="reload_btn" entity="Button" script="" init="">
+            <prop Left="200" Top="200" Width="46" Height="22" ShadowColor="0,0,0,0" Text="刷新" TabStop="true" />
+            <event on_click="reload_btn_click" />
+        </control>
+        <control name="sample_box" entity="SceneBox" script="" init="">
+            <prop Left="120" Top="504" Width="126" Height="94" BackColor="255,154,155,157" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="info_grid" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="255,178,178,178" CanSelectRow="true" ColWidth="100" RowHeight="16" ColCount="2" ScrollSize="17" HasHScroll="true" Left="8" Top="376" Width="238" Height="126" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="16" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="entity_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="382" OnlySelect="true" Left="120" Top="32" Width="126" Height="16" ShadowColor="0,0,0,0" />
+            <event on_selected="entity_select_changed" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="16" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="352" Width="62" Height="22" ShadowColor="0,0,0,0" Text="模型信息：" />
+        </control>
+        <control name="camera_dis_tb" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Value="50" Left="120" Top="600" Width="126" Height="11" ShadowColor="0,0,0,0" />
+            <event on_value_changed="camera_dis_tb_changed" />
+            <subor name="TrackButton">
+                <prop Width="12" Height="11" ShadowColor="0,0,0,0" />
+            </subor>
+        </control>
+        <control name="bind_check" entity="CheckButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" Left="152" Top="352" Width="94" Height="22" ShadowColor="0,0,0,0" Text="绑定到辅助点" TabStop="true" />
+            <event on_checked_changed="bind_check_checked_changed" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="224" Width="38" Height="22" ShadowColor="0,0,0,0" Text="筛选:" />
+        </control>
+        <control name="file_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="40" Top="224" Width="126" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="file_edit_changed" />
+        </control>
+        <control name="path_tree" entity="TreeView" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" LevelWidth="18" ScrollSize="17" HasHScroll="true" AlwaysVScroll="true" AlwaysHScroll="true" Left="8" Top="56" Width="238" Height="142" ShadowColor="0,0,0,0" Text="TreeView1" TabStop="true" AutoSize="true" />
+            <event on_expand_changed="path_tree_expand_changed" on_select_changed="path_select_changed" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="192" Height="17" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="96" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="576" Width="54" Height="16" ShadowColor="0,0,0,0" Text="标记信息:" />
+        </control>
+        <control name="sound_groupbox" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="504" Width="238" Height="110" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="volume_edit" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" MaxDigit="1" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="40" Top="8" Width="38" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+                <event on_changed="volume_edit_changed" />
+            </control>
+            <control name="min_distance_edit" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="32" Width="38" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+                <event on_changed="min_distance_edit_changed" />
+            </control>
+            <control name="max_distance_edit" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="56" Width="38" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+                <event on_changed="max_distance_edit_changed" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="8" Width="22" Height="16" ShadowColor="0,0,0,0" Text="音量" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="32" Width="78" Height="16" ShadowColor="0,0,0,0" Text="开始衰减距离" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="56" Width="78" Height="16" ShadowColor="0,0,0,0" Text="结束衰减距离" />
+            </control>
+            <control name="min_interval_edit" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="200" Top="32" Width="38" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+                <event on_changed="min_interval_edit_changed" />
+            </control>
+            <control name="Label7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="120" Top="32" Width="78" Height="16" ShadowColor="0,0,0,0" Text="最小间隔时间" />
+            </control>
+            <control name="max_interval_edit" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="200" Top="56" Width="38" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+                <event on_changed="max_interval_edit_changed" />
+            </control>
+            <control name="Label9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="120" Top="56" Width="78" Height="16" ShadowColor="0,0,0,0" Text="最大间隔时间" />
+            </control>
+        </control>
+        <control name="model_groupbox" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="504" Width="78" Height="70" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="no_light_check" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" Left="8" Width="70" Height="24" ShadowColor="0,0,0,0" Text="无需光照" TabStop="true" />
+                <event on_click="no_light_check_click" />
+            </control>
+            <control name="random_dir_check" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" Left="8" Top="24" Width="70" Height="24" ShadowColor="0,0,0,0" Text="随机方向" TabStop="true" />
+                <event on_click="random_dir_check_click" />
+            </control>
+            <control name="only_design_check" entity="CheckButton" script="" init="">
+                <prop ClickEvent="true" BoxSize="12" Left="8" Top="48" Width="70" Height="24" ShadowColor="0,0,0,0" Text="辅助物体" TabStop="true" />
+                <event on_click="only_design_check_click" />
+            </control>
+        </control>
+        <control name="tag_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="8" Top="592" Width="110" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_changed="tag_edit_changed" />
+        </control>
+    </control>
+</form>

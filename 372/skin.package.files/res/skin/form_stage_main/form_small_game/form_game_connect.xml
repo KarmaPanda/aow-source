@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_connect" init="main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="470" Height="438" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_backgroundImage" entity="GroupBox" script="" init="">
+            <prop Left="-7" Top="-9" Width="470" Height="446" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\smallgame\forgegameground.png" />
+        </control>
+        <control name="groupbox_background" entity="GroupBox" script="" init="">
+            <prop Left="-15" Top="-9" Width="478" Height="446" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="9" Width="408" Height="443" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\connectpicbackground2.png" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\tc-out.png" FocusImage="gui\language\ChineseS\tc-on.png" PushImage="gui\language\ChineseS\tc-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="416" Top="16" Width="55" Height="32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_start" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\minigame\start-out.png" FocusImage="gui\language\ChineseS\minigame\start-on.png" PushImage="gui\language\ChineseS\minigame\start-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="192" Top="168" Width="71" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_start_click" />
+            </control>
+            <control name="btn_help" entity="Button" script="" init="">
+                <prop NormalImage="gui\language\ChineseS\minigame\help_out.png" FocusImage="gui\language\ChineseS\minigame\help_on.png" PushImage="gui\language\ChineseS\minigame\help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="416" Top="64" Width="55" Height="32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_help_click" />
+            </control>
+            <control name="lbl_progress" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="80" Top="344" Width="241" Height="102" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\mainform\smallgame\connectpicprogressbackground2.png" />
+            </control>
+            <control name="pebar_connect" entity="EllipseProgressBar" script="" init="">
+                <prop BeginDelta="200" EndDelta="340" ProgressImage="gui\mainform\smallgame\connectpicprogress.png" Maximum="100" Value="100" WidthGap="2" HeightGap="2" Left="102" Top="348" Width="230" Height="70" ShadowColor="0,0,0,0" />
+            </control>
+        </control>
+    </control>
+</form>

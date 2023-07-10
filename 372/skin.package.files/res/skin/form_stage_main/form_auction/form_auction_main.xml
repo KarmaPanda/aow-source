@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_auction\form_auction_main" init="main_form_init">
+        <prop LimitInScreen="true" Left="13" Top="13" Width="1034" Height="582" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_close="on_main_form_close" on_active="on_form_active" on_open="on_main_form_open" on_shut="on_main_form_shut" />
+        <control name="gb_main" entity="GroupBox" script="" init="">
+            <prop Width="1032" Height="550" ShadowColor="0,0,0,0" Text="groupbox_1" DrawMode="ExpandV" BackImage="gui\special\market_new\Hbg_1.png" />
+            <control name="gb_search" entity="GroupBox" script="" init="">
+                <prop Top="44" Width="1030" Height="510" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="lbl_title_sell" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="2" Width="1026" Height="35" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_wudao\bg_title.png" />
+                </control>
+                <control name="gb_tree" entity="GroupBox" script="" init="">
+                    <prop Left="1" Top="36" Width="174" Height="438" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_6" DrawMode="Expand" BackImage="gui\special\battlefiled_wudao\bp_bg_4.png" />
+                    <control name="lbl_text_back_tree" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="151" Width="25" Height="438" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" DrawMode="Expand" BackImage="gui\special\dbomall\form_back12.png" />
+                    </control>
+                    <control name="tree_ex1" entity="TreeViewEx" script="" init="">
+                        <prop IsNoDrawRoot="true" IsLeftClickExpandClose="true" ScrollSize="17" AlwaysVScroll="true" Width="172" Height="434" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="tree_ex1" TabStop="true" />
+                        <event on_select_changed="on_tree_ex1_select_changed" on_left_click="on_tree_ex1_left_click" />
+                        <subor name="VScrollBar">
+                            <prop SmallChange="1" LargeChange="5" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                            <subor name="DecButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="404" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                            </subor>
+                        </subor>
+                    </control>
+                </control>
+                <control name="gb_text" entity="GroupBox" script="" init="">
+                    <prop Left="176" Top="36" Width="854" Height="435" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_balance\result\back.png" />
+                    <control name="lbl_text_back_0" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Top="37" Width="852" Height="398" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\market_new\btn_choose_out.png" />
+                    </control>
+                    <control name="lbl_text_back_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="825" Top="38" Width="30" Height="396" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" DrawMode="Expand" BackImage="gui\special\dbomall\form_back12.png" />
+                    </control>
+                    <control name="gsb_search" entity="GroupScrollableBox" script="" init="">
+                        <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Top="39" Width="848" Height="392" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                        <subor name="VScrollBar">
+                            <prop SmallChange="50" LargeChange="392" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                            <subor name="DecButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="362" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                            </subor>
+                        </subor>
+                    </control>
+                    <control name="lbl_quality" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="96" Top="480" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_quality" Font="font_btn" />
+                    </control>
+                    <control name="lbl_time_left" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="144" Top="480" Width="70" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sequence_time_left" Font="font_btn" />
+                    </control>
+                    <control name="lbl_desc" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="200" Top="504" Width="46" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sequence_price" Font="font_btn" />
+                    </control>
+                    <control name="lbl_price" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="264" Top="480" Width="46" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_total_price" Font="font_btn" />
+                    </control>
+                    <control name="lbl_search_title" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="2" Top="2" Width="849" Height="35" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_wudao\bg_title.png" />
+                    </control>
+                    <control name="lbl_search_item_name" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="83" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_name" Font="font_main" />
+                    </control>
+                    <control name="lbl_search_quality" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="208" Top="12" Width="54" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_haiwai_auction_pz" Font="font_main" />
+                    </control>
+                    <control name="lbl_search_time_left" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,255,249,194" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,62,38" HtmlText="@ui_auction_sequence_time_left" ScrollSize="17" Left="280" Width="62" Height="38" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+                    </control>
+                    <control name="lbl_search_seller" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="364" Top="12" Width="46" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_seller" Font="font_main" />
+                    </control>
+                    <control name="lbl_search_min" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="476" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_price_min" Font="font_main" />
+                    </control>
+                    <control name="lbl_search_max" entity="Label" script="" init="">
+                        <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="600" Top="12" Width="126" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_price_max_t" Font="font_main" />
+                    </control>
+                    <control name="lbl_search_buy" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="752" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_competitor" Font="font_main" />
+                    </control>
+                    <control name="lbl_fenge_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="184" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                    </control>
+                    <control name="lbl_fenge_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="260" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                    </control>
+                    <control name="lbl_fenge_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="336" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                    </control>
+                    <control name="lbl_fenge_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="430" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                    </control>
+                    <control name="lbl_fenge_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="578" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                    </control>
+                    <control name="lbl_fenge_6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="736" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                    </control>
+                    <control name="lbl_desc_up" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="586" Top="10" Width="10" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" BackImage="gui\special\market_new\arrow_0.png" />
+                    </control>
+                    <control name="lbl_desc_down" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="586" Top="14" Width="10" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" BackImage="gui\special\market_new\arrow_1.png" />
+                    </control>
+                    <control name="lbl_time_left_down" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="268" Top="14" Width="10" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" BackImage="gui\special\market_new\arrow_1.png" />
+                    </control>
+                    <control name="lbl_time_left_up" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="268" Top="10" Width="10" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" BackImage="gui\special\market_new\arrow_0.png" />
+                    </control>
+                    <control name="lbl_quality_up" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="192" Top="10" Width="10" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" BackImage="gui\special\market_new\arrow_0.png" />
+                    </control>
+                    <control name="lbl_quality_down" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="192" Top="14" Width="10" Height="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" BackImage="gui\special\market_new\arrow_1.png" />
+                    </control>
+                    <control name="cbtn_time_left" entity="CheckButton" script="" init="">
+                        <prop BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="262" Top="2" Width="80" Height="35" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HintText="@tips_auction_sequence_time_left" TabStop="true" DrawMode="Expand" />
+                        <event on_checked_changed="on_cbtn_time_left_checked_changed" />
+                    </control>
+                    <control name="cbtn_quality" entity="CheckButton" script="" init="">
+                        <prop BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="192" Top="2" Width="68" Height="35" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HintText="@tips_auction_sequence_quality" TabStop="true" DrawMode="Expand" />
+                        <event on_checked_changed="on_cbtn_quality_checked_changed" />
+                    </control>
+                    <control name="cbtn_desc" entity="CheckButton" script="" init="">
+                        <prop BoxSize="12" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="582" Top="2" Width="158" Height="35" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HintText="@tips_auction_sequence_price" TabStop="true" DrawMode="Expand" />
+                        <event on_checked_changed="on_cbtn_desc_checked_changed" />
+                    </control>
+                    <control name="cbtn_price" entity="CheckButton" script="" init="">
+                        <prop BoxSize="12" NormalImage="gui\special\battlefiled_balance\choose_out.png" FocusImage="gui\special\battlefiled_balance\choose_on.png" CheckedImage="gui\special\battlefiled_balance\choose_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="720" Top="10" Width="20" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_auction_price" TabStop="true" AutoSize="true" />
+                        <event on_checked_changed="on_cbtn_search_price_checked" />
+                    </control>
+                </control>
+                <control name="gb_search_op" entity="GroupBox" script="" init="">
+                    <prop Left="176" Width="862" Height="36" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <control name="btn_search" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_wudao\group\anniu_r_out.png" FocusImage="gui\special\battlefiled_wudao\group\anniu_r_on.png" PushImage="gui\special\battlefiled_wudao\group\anniu_r_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="564" Top="4" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_search" Font="font_name_tittle" AutoSize="true" />
+                        <event on_click="on_btn_search_click" />
+                    </control>
+                    <control name="btn_reset" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="660" Top="4" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_chongzhi" Font="font_name_tittle" AutoSize="true" />
+                        <event on_click="on_btn_reset_click" />
+                    </control>
+                    <control name="btn_refresh" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="756" Top="4" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_break" Font="font_name_tittle" AutoSize="true" />
+                        <event on_click="on_btn_refresh_click" />
+                    </control>
+                    <control name="combo_color" entity="ComboBox" script="" init="">
+                        <prop ButtonWidth="20" DropDownHeight="118" OnlySelect="true" Left="424" Top="4" Width="70" Height="26" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                        <event on_selected="on_combo_color_selected" />
+                        <subor name="InputEdit">
+                            <prop ReadOnly="true" TextOffsetX="2" Align="Center" Caret="Default" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" DrawMode="ExpandH" BackImage="gui\special\market_new\0.png" />
+                        </subor>
+                        <subor name="DropButton">
+                            <prop NormalImage="gui\special\battlefiled_wudao\btn_xiala_out.png" FocusImage="gui\special\battlefiled_wudao\btn_xiala_on.png" PushImage="gui\special\battlefiled_wudao\btn_xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="DropListBox">
+                            <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="255,255,204,0" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+                            <subor name="VScrollBar">
+                                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                                <subor name="DecButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="IncButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                                </subor>
+                                <subor name="TrackButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                            </subor>
+                        </subor>
+                    </control>
+                    <control name="cbtn_fuzzy_search" entity="CheckButton" script="" init="">
+                        <prop BoxSize="12" NormalImage="gui\special\battlefiled_balance\choose_out.png" FocusImage="gui\special\battlefiled_balance\choose_on.png" CheckedImage="gui\special\battlefiled_balance\choose_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="202" Top="8" Width="20" Height="19" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" HintText="@tips_auction_search" TabStop="true" AutoSize="true" />
+                        <event on_checked_changed="on_cbtn_fuzzy_search_checked_changed" />
+                    </control>
+                    <control name="combo_search_1" entity="ComboBox" script="" init="">
+                        <prop ButtonWidth="20" DropDownWidth="174" DropDownHeight="360" OnlySelect="true" Left="2" Top="5" Width="196" Height="26" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <event on_selected="on_combo_search_selected" />
+                        <subor name="InputEdit">
+                            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+                        </subor>
+                        <subor name="DropButton">
+                            <prop NormalImage="gui\special\battlefiled_wudao\btn_xiala_out.png" FocusImage="gui\special\battlefiled_wudao\btn_xiala_on.png" PushImage="gui\special\battlefiled_wudao\btn_xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="24" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="DropListBox">
+                            <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="255,255,204,0" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" DrawMode="Expand" BackImage="gui\common\combobox\bg_list1.png" />
+                            <subor name="VScrollBar">
+                                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                                <subor name="DecButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="IncButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="TrackButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                                </subor>
+                            </subor>
+                        </subor>
+                    </control>
+                    <control name="lbl_fuzzy_search" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="222" Top="11" Width="70" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_fuzzy" Font="font_main" />
+                    </control>
+                    <control name="lbl_quality_search" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="352" Top="11" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_quality" Font="font_main" />
+                    </control>
+                    <control name="combo_search_2" entity="ComboBox" script="" init="">
+                        <prop ButtonWidth="20" DropDownWidth="174" DropDownHeight="360" OnlySelect="true" Left="2" Top="5" Width="196" Height="26" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <event on_selected="on_combo_search_2_selected" />
+                        <subor name="InputEdit">
+                            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+                        </subor>
+                        <subor name="DropButton">
+                            <prop NormalImage="gui\special\battlefiled_wudao\btn_xiala_out.png" FocusImage="gui\special\battlefiled_wudao\btn_xiala_on.png" PushImage="gui\special\battlefiled_wudao\btn_xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="24" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="DropListBox">
+                            <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="255,255,204,0" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" DrawMode="Expand" BackImage="gui\common\combobox\bg_list1.png" />
+                            <subor name="VScrollBar">
+                                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                                <subor name="DecButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="IncButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="TrackButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                                </subor>
+                            </subor>
+                        </subor>
+                    </control>
+                    <control name="ipt_search" entity="Edit" script="" init="">
+                        <prop ChangedEvent="true" TextOffsetX="2" SelectBackColor="255,255,204,0" Caret="Default" Left="2" Top="3" Width="174" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" HintText="@tips_auction_search_fast" TabStop="true" DrawMode="ExpandH" BackImage="gui\special\market_new\0.png" />
+                        <event on_get_focus="on_ipt_search_get_focus" on_changed="on_ipt_search_changed" />
+                    </control>
+                    <control name="btn_jump" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_wudao\group\anniu_r_out.png" FocusImage="gui\special\battlefiled_wudao\group\anniu_r_on.png" PushImage="gui\special\battlefiled_wudao\group\anniu_r_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="896" Top="4" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_04" Font="font_name_tittle" HintText="@tips_auction_001" AutoSize="true" />
+                        <event on_click="on_btn_jump_click" />
+                    </control>
+                </control>
+                <control name="gb_op" entity="GroupBox" script="" init="">
+                    <prop Left="458" Top="472" Width="622" Height="38" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <control name="btn_compete" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="382" Top="3" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_compete" Font="font_name_tittle" AutoSize="true" />
+                        <event on_click="on_btn_compete_click" />
+                    </control>
+                    <control name="btn_buy" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="476" Top="3" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" LineColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_buy" Font="font_name_tittle" AutoSize="true" />
+                        <event on_click="on_btn_buy_click" />
+                    </control>
+                    <control name="btn_page_up" entity="Button" script="" init="">
+                        <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="8" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        <event on_click="on_btn_page_up_click" />
+                    </control>
+                    <control name="btn_page_down" entity="Button" script="" init="">
+                        <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="8" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        <event on_click="on_btn_page_down_click" />
+                    </control>
+                    <control name="lbl_page_info" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="28" Top="10" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" />
+                    </control>
+                    <control name="ipt_compete_ding" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" MaxLength="3" TextOffsetX="2" Caret="Default" Left="166" Top="3" Width="31" Height="28" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                    </control>
+                    <control name="ipt_compete_liang" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" MaxLength="3" TextOffsetX="2" Caret="Default" Left="238" Top="3" Width="31" Height="28" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                    </control>
+                    <control name="ipt_compete_wen" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" MaxLength="3" TextOffsetX="2" Caret="Default" Left="302" Top="3" Width="31" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                    </control>
+                    <control name="lbl_search_ding" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="200" Top="9" Width="20" Height="16" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Text="@ui_auction_ding" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_search_liang" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="270" Top="9" Width="20" Height="16" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Text="@ui_auction_liang" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_search_wen" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="334" Top="9" Width="20" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_wen" Font="font_name_tittle" />
+                    </control>
+                </control>
+                <control name="lbl_fenge_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="1" Top="30" Width="172" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+                </control>
+                <control name="lbl_menu" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="16" Top="6" Width="150" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_menu_01" Font="font_main" />
+                </control>
+                <control name="lbl_fenge_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="168" Width="9" Height="35" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+            </control>
+            <control name="gb_compete" entity="GroupBox" script="" init="">
+                <prop Top="44" Width="1030" Height="510" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+                <control name="lbl_compete_back_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="4" Top="1" Width="1026" Height="470" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\market_new\btn_choose_out.png" />
+                </control>
+                <control name="lbl_compete" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="584" Top="482" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_compete" Font="font_name_tittle" />
+                </control>
+                <control name="btn_compete_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="838" Top="474" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_compete" Font="font_name_tittle" AutoSize="true" />
+                    <event on_click="on_btn_compete_2_click" />
+                </control>
+                <control name="btn_buy_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="932" Top="474" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_buy" Font="font_name_tittle" AutoSize="true" />
+                    <event on_click="on_btn_buy_2_click" />
+                </control>
+                <control name="ipt_compete_ding_2" entity="Edit" script="" init="">
+                    <prop OnlyDigit="true" MaxDigit="999" MaxLength="3" TextOffsetX="2" SelectBackColor="255,255,204,0" Caret="Default" Left="640" Top="475" Width="31" Height="28" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                </control>
+                <control name="ipt_compete_liang_2" entity="Edit" script="" init="">
+                    <prop OnlyDigit="true" MaxDigit="999" MaxLength="3" TextOffsetX="2" SelectBackColor="255,255,204,0" Caret="Default" Left="712" Top="475" Width="31" Height="28" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                </control>
+                <control name="ipt_compete_wen_2" entity="Edit" script="" init="">
+                    <prop OnlyDigit="true" MaxDigit="999" MaxLength="3" TextOffsetX="2" SelectBackColor="255,255,204,0" Caret="Default" Left="776" Top="475" Width="31" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                </control>
+                <control name="lbl_compete_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="6" Top="2" Width="1022" Height="35" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_wudao\bg_title.png" />
+                </control>
+                <control name="lbl_compete_back_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="6" Top="38" Width="1020" Height="432" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\market_new\btn_choose_out.png" />
+                </control>
+                <control name="lbl_compete_back_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="1002" Top="39" Width="30" Height="430" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" DrawMode="Expand" BackImage="gui\special\dbomall\form_back12.png" />
+                </control>
+                <control name="gsb_compete" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="6" Top="41" Width="1019" Height="424" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <subor name="VScrollBar">
+                        <prop SmallChange="20" LargeChange="100" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="394" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="lbl_compete_ding" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="676" Top="481" Width="20" Height="16" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Text="@ui_auction_ding" Font="font_name_tittle" />
+                </control>
+                <control name="lbl_compete_liang" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="744" Top="481" Width="20" Height="16" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Text="@ui_auction_liang" Font="font_name_tittle" />
+                </control>
+                <control name="lbl_compete_wen" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="808" Top="481" Width="20" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_wen" Font="font_name_tittle" />
+                </control>
+                <control name="lbl_fenge_9" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="240" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_compete_name" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="90" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_name" Font="font_main" />
+                </control>
+                <control name="lbl_compete_quality" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="251" Top="12" Width="46" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_quality" Font="font_main" />
+                </control>
+                <control name="lbl_compete_time_left" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="304" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_sequence_time_left" Font="font_main" />
+                </control>
+                <control name="lbl_compete_state" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="400" Top="12" Width="102" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_state" Font="font_main" />
+                </control>
+                <control name="lbl_compete_min" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="570" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_price_present" Font="font_main" />
+                </control>
+                <control name="lbl_compete_max" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="760" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_price_max" Font="font_main" />
+                </control>
+                <control name="lbl_compete_buy" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="920" Top="12" Width="46" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_competitor" Font="font_main" />
+                </control>
+                <control name="lbl_fenge_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="294" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="394" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_12" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="504" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="696" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_14" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="880" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="btn_compete_left" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="462" Top="480" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_compete_page_left_click" />
+                </control>
+                <control name="btn_compete_right" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="554" Top="480" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_compete_page_right_click" />
+                </control>
+                <control name="lbl_compete_page" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="486" Top="481" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" />
+                </control>
+            </control>
+            <control name="gb_sell" entity="GroupBox" script="" init="">
+                <prop Top="44" Width="1030" Height="510" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" />
+                <control name="lbl_sell_back_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="166" Width="864" Height="472" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\market_new\btn_choose_out.png" />
+                </control>
+                <control name="gb_up" entity="GroupBox" script="" init="">
+                    <prop Width="166" Height="474" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <control name="lbl_sell_back_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="4" Top="199" Width="160" Height="272" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\special\market_new\04.png" />
+                    </control>
+                    <control name="btn_up" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Hbtn_out.png" FocusImage="gui\special\battlefiled_balance\Hbtn_on.png" PushImage="gui\special\battlefiled_balance\Hbtn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="40" Top="440" Width="80" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_sell" Font="font_name_tittle" DrawMode="ExpandH" />
+                        <event on_click="on_btn_up_click" />
+                    </control>
+                    <control name="lbl_tax_ding" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="416" Width="30" Height="16" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Font="font_name_tittle" />
+                    </control>
+                    <control name="ipt_compete_1" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="8" Top="260" Width="31" Height="28" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                        <event on_changed="on_ipt_compete_changed" />
+                    </control>
+                    <control name="ipt_compete_2" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="56" Top="260" Width="31" Height="28" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                        <event on_changed="on_ipt_compete_changed" />
+                    </control>
+                    <control name="ipt_compete_3" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="104" Top="260" Width="31" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                        <event on_changed="on_ipt_compete_changed" />
+                    </control>
+                    <control name="ipt_buy_1" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="8" Top="316" Width="31" Height="28" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                        <event on_changed="on_ipt_buy_changed" />
+                    </control>
+                    <control name="ipt_buy_2" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="56" Top="316" Width="31" Height="28" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                        <event on_changed="on_ipt_buy_changed" />
+                    </control>
+                    <control name="ipt_buy_3" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="3" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="104" Top="316" Width="31" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\01.png" />
+                        <event on_changed="on_ipt_buy_changed" />
+                    </control>
+                    <control name="combobox_time_index" entity="ComboBox" script="" init="">
+                        <prop ButtonWidth="22" DropDownHeight="78" OnlySelect="true" Left="48" Top="356" Width="98" Height="24" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+                        <event on_selected="on_combobox_time_index_selected" />
+                        <subor name="InputEdit">
+                            <prop ReadOnly="true" TextOffsetX="2" Align="Center" SelectBackColor="0,0,0,0" Caret="Default" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" DrawMode="Expand" BackImage="gui\special\market_new\03.png" />
+                        </subor>
+                        <subor name="DropButton">
+                            <prop NormalImage="gui\special\battlefiled_wudao\btn_xiala_out.png" FocusImage="gui\special\battlefiled_wudao\btn_xiala_on.png" PushImage="gui\special\battlefiled_wudao\btn_xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_auction_sell_time" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="DropListBox">
+                            <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="255,255,204,0" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+                            <subor name="VScrollBar">
+                                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                                <subor name="DecButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="IncButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="TrackButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" />
+                                </subor>
+                            </subor>
+                        </subor>
+                    </control>
+                    <control name="ig_sell" entity="ImageGrid" script="" init="">
+                        <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,350,130" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="39" GridWidth="39" GridsPos="4,4;74,4;144,4;214,4;284,4" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_3.png" GridBackOffsetX="-4" GridBackOffsetY="-4" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="4" Top="20" Width="54" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_1" AutoSize="true" DrawMode="Center" />
+                        <event on_select_changed="on_ig_sell_select_changed" on_mousein_grid="on_ig_sell_mousein_grid" on_rightclick_grid="on_ig_sell_rightclick_grid" on_mouseout_grid="on_ig_sell_mouseout_grid" />
+                    </control>
+                    <control name="ipt_stack" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="10" Top="100" Width="57" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\0.png" />
+                        <event on_get_focus="on_ipt_stack_get_focus" on_changed="on_ipt_stack_num_changed" />
+                    </control>
+                    <control name="ipt_num" entity="Edit" script="" init="">
+                        <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" Left="10" Top="160" Width="57" Height="28" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\special\market_new\0.png" />
+                        <event on_get_focus="on_ipt_num_get_focus" on_changed="on_ipt_stack_num_changed" />
+                    </control>
+                    <control name="btn_stack_max" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Hbtn_out.png" FocusImage="gui\special\battlefiled_balance\Hbtn_on.png" PushImage="gui\special\battlefiled_balance\Hbtn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="80" Top="102" Width="62" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_sell_max" Font="font_main" DrawMode="ExpandH" />
+                        <event on_click="on_btn_stack_max_click" />
+                    </control>
+                    <control name="btn_num_max" entity="Button" script="" init="">
+                        <prop NormalImage="gui\special\battlefiled_balance\Hbtn_out.png" FocusImage="gui\special\battlefiled_balance\Hbtn_on.png" PushImage="gui\special\battlefiled_balance\Hbtn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="80" Top="162" Width="62" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_sell_max" Font="font_main" DrawMode="ExpandH" />
+                        <event on_click="on_btn_num_max_click" />
+                    </control>
+                    <control name="lbl_tax_liang" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="58" Top="416" Width="30" Height="16" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_tax_wen" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="110" Top="416" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="4" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sell_name" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_back_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="4" Top="2" Width="160" Height="194" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\special\market_new\04.png" />
+                    </control>
+                    <control name="mltbox_sell_name" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="2,2,84,46" LineHeight="18" ScrollSize="17" Left="64" Top="24" Width="86" Height="46" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" DrawMode="Expand" BackImage="gui\special\market_new\04.png" />
+                    </control>
+                    <control name="lbl_stack" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="76" Width="54" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sell_stack" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_num" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="136" Width="54" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sell_num" Font="font_name_tittle" />
+                    </control>
+                    <control name="combobox_group" entity="ComboBox" script="" init="">
+                        <prop ButtonWidth="22" DropDownHeight="78" OnlySelect="true" Left="48" Top="206" Width="98" Height="24" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+                        <event on_selected="on_combobox_group_selected" />
+                        <subor name="InputEdit">
+                            <prop ReadOnly="true" TextOffsetX="2" Align="Center" SelectBackColor="255,255,204,0" Caret="Default" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" DrawMode="Expand" BackImage="gui\special\market_new\03.png" />
+                        </subor>
+                        <subor name="DropButton">
+                            <prop NormalImage="gui\special\battlefiled_wudao\btn_xiala_out.png" FocusImage="gui\special\battlefiled_wudao\btn_xiala_on.png" PushImage="gui\special\battlefiled_wudao\btn_xiala_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_auction_sell_sort" DrawMode="FitWindow" />
+                        </subor>
+                        <subor name="DropListBox">
+                            <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="255,255,204,0" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\combobox\bg_list2.png" />
+                            <subor name="VScrollBar">
+                                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                                <subor name="DecButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="IncButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                                </subor>
+                                <subor name="TrackButton">
+                                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Expand" />
+                                </subor>
+                            </subor>
+                        </subor>
+                    </control>
+                    <control name="lbl_group_price" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="210" Width="30" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sell_price" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_min_set" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="240" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_price_min" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_max_set" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="295" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_price_max" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_ding_min" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="40" Top="266" Width="20" Height="16" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Text="@ui_auction_ding" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_ding_max" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="40" Top="322" Width="20" Height="16" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Text="@ui_auction_ding" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_ding_tax" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="40" Top="416" Width="20" Height="16" ForeColor="255,228,109,10" ShadowColor="0,0,0,0" Text="@ui_auction_ding" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_liang_min" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="88" Top="266" Width="20" Height="16" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Text="@ui_auction_liang" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_liang_max" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="88" Top="322" Width="20" Height="16" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Text="@ui_auction_liang" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_liang_tax" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="88" Top="416" Width="20" Height="16" ForeColor="255,0,176,80" ShadowColor="0,0,0,0" Text="@ui_auction_liang" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_wen_min" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="136" Top="266" Width="20" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_wen" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_wen_max" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="137" Top="322" Width="20" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_wen" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_wen_tax" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="137" Top="416" Width="20" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_wen" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_time_set" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="10" Top="360" Width="38" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sell_time" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_sell_tax" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="8" Top="396" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_sell_tax" Font="font_name_tittle" />
+                    </control>
+                    <control name="lbl_fenge_15" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="4" Top="384" Width="158" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+                    </control>
+                    <control name="lbl_money" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="68" Top="398" Width="22" Height="13" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+                    </control>
+                </control>
+                <control name="lbl_sell_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="168" Top="2" Width="860" Height="35" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_wudao\bg_title.png" />
+                </control>
+                <control name="lbl_sell_name" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="244" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_name" Font="font_main" />
+                </control>
+                <control name="lbl_sell_quality" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="384" Top="12" Width="38" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_quality" Font="font_main" />
+                </control>
+                <control name="lbl_sell_time_left" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,249,194" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,67,38" HtmlText="@ui_auction_sequence_time_left" ScrollSize="17" Left="432" Top="4" Width="67" Height="38" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+                </control>
+                <control name="lbl_sell_max_compete" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="520" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_sell_price_max" Font="font_main" />
+                </control>
+                <control name="btn_sell_cancel" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="880" Top="474" Width="145" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_sell_cancel" Font="font_name_tittle" DrawMode="ExpandH" />
+                    <event on_click="on_btn_sell_cancel_click" />
+                </control>
+                <control name="lbl_sell_min" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="686" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_price_min" Font="font_main" />
+                </control>
+                <control name="lbl_sell_max" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="824" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_price_max" Font="font_main" />
+                </control>
+                <control name="lbl_sell_buy" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="928" Top="12" Width="62" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_auction_competitor" Font="font_main" />
+                </control>
+                <control name="lbl_fenge_16" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="378" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_17" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="422" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_18" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="490" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_19" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="634" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_20" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="782" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_fenge_21" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="920" Top="3" Width="9" Height="33" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+                </control>
+                <control name="lbl_sell_back_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="168" Top="38" Width="860" Height="432" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\market_new\btn_choose_out.png" />
+                </control>
+                <control name="lbl_sell_back_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="1001" Top="39" Width="30" Height="430" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_btn" DrawMode="Expand" BackImage="gui\special\dbomall\form_back12.png" />
+                </control>
+                <control name="gsb_sell" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" Left="168" Top="40" Width="856" Height="426" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    <subor name="VScrollBar">
+                        <prop SmallChange="50" LargeChange="100" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="396" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_sell_left" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="462" Top="480" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_sell_page_left_click" />
+                </control>
+                <control name="btn_sell_right" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="554" Top="480" Width="18" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_sell_page_right_click" />
+                </control>
+                <control name="lbl_sell_page" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="486" Top="481" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_name_tittle" />
+                </control>
+            </control>
+            <control name="gb_money" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="522" Width="230" Height="26" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <control name="mltbox_yinka" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,250,238,186" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="2,2,240,30" LineHeight="19" HtmlText="@ui_auction_price_own" ScrollSize="17" Width="254" Height="26" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_money" DrawMode="FitWindow" />
+                </control>
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1004" Top="18" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_help" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\button\btn_help_out.png" CheckedImage="gui\common\button\btn_help_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="-48" Top="18" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_btn_help_checked_changed" />
+            </control>
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="472" Top="18" Width="86" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_auction_info" Font="font_title" />
+            </control>
+        </control>
+        <control name="gb_mod_search" entity="GroupBox" script="" init="">
+            <prop Top="608" Width="828" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_1" NoFrame="true" />
+            <control name="cbtn_1_bg" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\market_new\btn_choose_out.png" FocusImage="gui\special\market_new\btn_choose_on.png" CheckedImage="gui\special\market_new\btn_choose_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Width="828" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+            </control>
+            <control name="lbl_1_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="56" Top="18" Width="158" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="name" Font="font_main" />
+            </control>
+            <control name="lbl_1_color" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="230" Top="18" Width="22" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="color" Font="font_main" />
+            </control>
+            <control name="lbl_1_time" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="264" Top="18" Width="70" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_main" />
+            </control>
+            <control name="lbl_1_seller" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="350" Top="18" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="seller" Font="font_main" />
+            </control>
+            <control name="ig_1" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,350,130" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="36" GridWidth="36" GridsPos="4,4;74,4;144,4;214,4;284,4" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item2.png" GridBackOffsetX="-4" GridBackOffsetY="-4" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Top="1" Width="54" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_2" AutoSize="true" DrawMode="Center" />
+            </control>
+            <control name="lbl_1_competitor" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="746" Top="18" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="competitor" Font="font_main" />
+            </control>
+            <control name="lbl_1_price_min" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="price_min" ScrollSize="17" Left="468" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_1_price_max" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="price_max" ScrollSize="17" Left="616" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="mltbox_search_pic_min" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="442" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="mltbox_search_pic_max" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="590" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+        </control>
+        <control name="gb_mod_compete" entity="GroupBox" script="" init="">
+            <prop Top="664" Width="996" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="cbtn_2_bg" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\market_new\btn_choose_out.png" FocusImage="gui\special\market_new\btn_choose_on.png" CheckedImage="gui\special\market_new\btn_choose_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Width="996" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+            </control>
+            <control name="lbl_2_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="56" Top="18" Width="170" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="name" Font="font_main" />
+            </control>
+            <control name="lbl_2_color" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="252" Top="18" Width="22" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="color" Font="font_main" />
+            </control>
+            <control name="lbl_2_time" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="316" Top="18" Width="54" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_main" />
+            </control>
+            <control name="lbl_2_state" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" LblLimitWidth="true" Left="418" Top="18" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="state" Font="font_main" />
+            </control>
+            <control name="lbl_2_competitor" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="890" Top="18" Width="78" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="competitior" Font="font_main" />
+            </control>
+            <control name="ig_2" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,350,130" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="36" GridWidth="36" GridsPos="4,4;74,4;144,4;214,4;284,4" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item2.png" GridBackOffsetX="-4" GridBackOffsetY="-4" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Top="1" Width="54" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_2" AutoSize="true" DrawMode="Center" />
+            </control>
+            <control name="lbl_2_price_min" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="proce_min" ScrollSize="17" Left="542" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_2_price_max" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="price_max" ScrollSize="17" Left="738" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="mltbox_compete_pic_min" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="516" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="mltbox_compete_pic_max" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="712" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+        </control>
+        <control name="gb_mod_sell" entity="GroupBox" script="" init="">
+            <prop Top="688" Width="836" Height="54" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_1" />
+            <control name="cbtn_3_bg" entity="CheckButton" script="" init="">
+                <prop HideBox="true" BoxSize="12" NormalImage="gui\special\market_new\btn_choose_out.png" FocusImage="gui\special\market_new\btn_choose_on.png" CheckedImage="gui\special\market_new\btn_choose_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Width="836" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+            </control>
+            <control name="lbl_3_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="54" Top="18" Width="158" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="name" Font="font_main" />
+            </control>
+            <control name="lbl_3_color" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="228" Top="18" Width="14" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="color" Font="font_main" />
+            </control>
+            <control name="lbl_3_time" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="264" Top="18" Width="56" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="time" Font="font_main" />
+            </control>
+            <control name="lbl_3_competitor" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="764" Top="18" Width="62" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="competitor" Font="font_main" />
+            </control>
+            <control name="ig_3" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,350,130" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="36" GridWidth="36" GridsPos="4,4;74,4;144,4;214,4;284,4" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item2.png" GridBackOffsetX="-4" GridBackOffsetY="-4" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Top="1" Width="54" Height="54" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_2" AutoSize="true" DrawMode="Center" />
+            </control>
+            <control name="lbl_3_price_cur" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="price_cur" ScrollSize="17" Left="358" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_3_price_min" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="price_min" ScrollSize="17" Left="502" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="lbl_3_price_max" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,104,20" LineHeight="19" HtmlText="price_max" ScrollSize="17" Left="648" Top="14" Width="104" Height="20" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </control>
+            <control name="mltbox_sell_pic_cur" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="332" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="mltbox_sell_pic_min" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="476" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+            <control name="mltbox_sell_pic_max" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,22,13" LineHeight="19" ScrollSize="17" Left="622" Top="20" Width="22" Height="13" ForeColor="255,231,222,196" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+            </control>
+        </control>
+        <control name="lbl_waiting" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="896" Top="720" Width="118" Height="110" ShadowColor="0,0,0,0" Text="lbl_3" BackImage="loading" />
+        </control>
+        <control name="groupbox_sifter" entity="GroupBox" script="" init="">
+            <prop Left="1032" Top="48" Width="230" Height="502" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" Text="groupbox_1" DrawMode="ExpandV" BackImage="gui\special\maket\bg.png" />
+            <control name="tree_ex_treasure" entity="TreeViewEx" script="" init="">
+                <prop IsNoDrawRoot="true" ScrollSize="17" Top="35" Width="228" Height="428" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="tree_ex2" TabStop="true" />
+                <event on_left_double_click="on_tree_ex_treasure_left_double_click" on_left_click="on_tree_ex_treasure_left_click" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_sifter" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="131" Top="470" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_search" Font="font_name_tittle" AutoSize="true" />
+                <event on_click="on_btn_sifter_click" />
+            </control>
+            <control name="btn_sifter_cancel" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_balance\Btn_a_out.png" FocusImage="gui\special\battlefiled_balance\Btn_a_on.png" PushImage="gui\special\battlefiled_balance\Btn_a_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="6" Top="470" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_sifter_cancel" Font="font_name_tittle" AutoSize="true" />
+                <event on_click="on_btn_sifter_cancel_click" />
+            </control>
+        </control>
+        <control name="gb_rbtn" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="546" Width="406" Height="34" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="rbtn_search" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\market_new\Btn_out.png" FocusImage="gui\special\market_new\Btn_on.png" CheckedImage="gui\special\market_new\Btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="110" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_01" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_search_checked_changed" />
+            </control>
+            <control name="rbtn_compete" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\market_new\Btn_out.png" FocusImage="gui\special\market_new\Btn_on.png" CheckedImage="gui\special\market_new\Btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="110" Width="118" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_02" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_compete_checked_changed" />
+            </control>
+            <control name="rbtn_sell" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\market_new\Btn_out.png" FocusImage="gui\special\market_new\Btn_on.png" CheckedImage="gui\special\market_new\Btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="228" Width="118" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_auction_03" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_sell_checked_changed" />
+            </control>
+        </control>
+    </control>
+</form>

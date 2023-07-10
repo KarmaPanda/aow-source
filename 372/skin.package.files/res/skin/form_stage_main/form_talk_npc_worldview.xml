@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_talk_npc_worldview" init="main_form_init">
+        <prop ShowGrid="true" Left="45" Top="37" Width="246" Height="294" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="12" Width="224" Height="278" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\special\talk_movie\bg_biography_main.png" />
+            <control name="mltbox_story" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,196,140" LineHeight="20" LineTextAlign="Center" ScrollSize="14" HasVScroll="true" Left="24" Top="122" Width="196" Height="140" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="mltbox_1" Font="font_conten_tasktrace" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="12" Top="16" Width="118" Height="24" ForeColor="255,160,61,44" ShadowColor="0,20,0,0" Text="@textinskin00023" Font="font_title" />
+            </control>
+            <control name="lbl_byname" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="132" Top="20" Width="94" Height="18" ForeColor="255,128,101,74" ShadowColor="0,20,0,0" Text="@textinskin00024" Font="font_text_chat" />
+            </control>
+            <control name="lbl_identity" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="48" Width="158" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@textinskin00025" Font="font_sns_list" />
+            </control>
+            <control name="lbl_character" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="72" Width="182" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@textinskin00026" Font="font_sns_list" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="102" Width="38" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_worldnpcinfo_story" Font="font_sns_name" />
+            </control>
+            <control name="groupbox_line" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="-4" Width="230" Height="286" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="lbl_line_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="40" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_line_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="64" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_line_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="88" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_line_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="120" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_line_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="140" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="160" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="180" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="200" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="220" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="240" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+                <control name="lbl_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="260" Width="168" Height="4" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\talk_movie\line_biography.png" />
+                </control>
+            </control>
+        </control>
+        <control name="btn_reel1" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\talk_movie\bg_biography_bot_out.png" FocusImage="gui\special\talk_movie\bg_biography_bot_on.png" PushImage="gui\special\talk_movie\bg_biography_bot_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="270" Width="238" Height="17" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_reel1_click" />
+        </control>
+        <control name="btn_reel" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\talk_movie\bg_biography_bot_out.png" FocusImage="gui\special\talk_movie\bg_biography_bot_on.png" PushImage="gui\special\talk_movie\bg_biography_bot_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="-2" Width="238" Height="17" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_reel_click" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_school_war\form_school_vote" init="main_form_init">
+        <prop LimitInScreen="true" Left="349" Top="133" Width="550" Height="502" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_background" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="550" Height="502" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="192" Top="1" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_title" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="mltbox_votedesc" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="3,2,540,22" LineHeight="18" HtmlText="@ui_schoolcontest_announce" ScrollSize="17" Left="4" Top="33" Width="540" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_sys" DrawMode="ExpandH" BackImage="gui\common\form_back\bj_kuang.png" />
+        </control>
+        <control name="lbl_line1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="51" Width="540" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_line2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="27" Width="540" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="520" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_all" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="57" Width="544" Height="444" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            <control name="groupbox_zhangmen" entity="GroupBox" script="" init="">
+                <prop Left="14" Top="10" Width="520" Height="206" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+                <control name="lbl_zhangmen" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="16" Width="78" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_player" Font="font_text" />
+                </control>
+                <control name="lbl_zhangmenorigin" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="48" Width="110" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_origin" Font="font_text" />
+                </control>
+                <control name="redit_zhangmen" entity="RichEdit" script="" init="">
+                    <prop ViewRect="10,5,480,55" MaxLength="50" SelectBackColor="190,190,190,190" Caret="Default" LineHeight="23" ScrollSize="17" Left="8" Top="104" Width="504" Height="62" ForeColor="255,92,58,0" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+                </control>
+                <control name="lbl_zhangmenvotedesc" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="176" Top="80" Width="150" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_manifesto" Font="font_text_title1" />
+                </control>
+                <control name="btn_editzhangmendesc" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="352" Top="167" Width="164" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_edit" Font="font_btn" DrawMode="Expand" />
+                    <event on_click="on_btn_editzhangmendesc_click" />
+                </control>
+                <control name="btn_votezhangmen" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="360" Top="69" Width="151" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_vote" Font="DefaultQ" DrawMode="ExpandH" />
+                    <event on_click="on_btn_votezhangmen_click" />
+                </control>
+                <control name="lbl_zhangmenvotenum" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="392" Top="8" Width="118" Height="46" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_name" DrawMode="Expand" BackImage="gui\common\form_line\ibox_1.png" />
+                </control>
+                <control name="lbl_zhangmenname" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="88" Top="16" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+                <control name="lbl_zhangmenoriginname" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="48" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+                <control name="lbl_piao1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="472" Top="24" Width="30" Height="16" ForeColor="255,147,129,99" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_piao" Font="font_name" />
+                </control>
+                <control name="lbl_piaonum1" entity="Label" script="" init="">
+                    <prop Align="Right" RefCursor="WIN_HELP" Left="400" Top="24" Width="70" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="11111" Font="font_name" />
+                </control>
+            </control>
+            <control name="groupbox_zhanglao" entity="GroupBox" script="" init="">
+                <prop Left="14" Top="224" Width="520" Height="206" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+                <control name="btn_votezhanglao" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="359" Top="71" Width="151" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_vote" Font="DefaultQ" DrawMode="ExpandH" />
+                    <event on_click="on_btn_votezhanglao_click" />
+                </control>
+                <control name="btn_editzhanglaodesc" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="352" Top="167" Width="164" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_edit" Font="font_btn" DrawMode="Expand" />
+                    <event on_click="on_btn_editzhanglaodesc_click" />
+                </control>
+                <control name="lbl_zhanglao" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="16" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_player" Font="font_text" />
+                </control>
+                <control name="lbl_zhanglaoorigin" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="48" Width="110" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_origin" Font="font_text" />
+                </control>
+                <control name="lbl_zhanglaovotedesc" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="178" Top="79" Width="158" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_manifesto" Font="font_text_title1" />
+                </control>
+                <control name="lbl_zhanglaovotenum" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="392" Top="8" Width="118" Height="46" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Font="font_name" DrawMode="Expand" BackImage="gui\common\form_line\ibox_1.png" />
+                </control>
+                <control name="redit_zhanglao" entity="RichEdit" script="" init="">
+                    <prop ViewRect="10,5,480,55" MaxLength="100" SelectBackColor="190,190,190,190" Caret="Default" LineHeight="23" ScrollSize="17" Left="8" Top="103" Width="504" Height="62" ForeColor="255,92,58,0" ShadowColor="0,20,0,0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+                </control>
+                <control name="lbl_zhanglaoname" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="88" Top="16" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+                <control name="lbl_zhanglaooriginname" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="120" Top="48" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+                <control name="lbl_piao2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="472" Top="24" Width="30" Height="16" ForeColor="255,147,129,99" ShadowColor="0,0,0,0" Text="@ui_schoolcontest_piao" Font="font_name" />
+                </control>
+                <control name="lbl_piaonum2" entity="Label" script="" init="">
+                    <prop Align="Right" RefCursor="WIN_HELP" Left="400" Top="24" Width="70" Height="16" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Text="11111" Font="font_name" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

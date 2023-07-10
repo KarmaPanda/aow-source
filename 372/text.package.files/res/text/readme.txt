@@ -1,0 +1,15 @@
+简体中文 ChineseS
+繁體中文 ChineseT
+英文 English
+泰语 Thai
+越南文 Vietnamese
+法文 French
+德语 German
+波兰语 Polish
+意大利语 Italian
+土耳其语 Turkish
+俄罗斯 Russian
+韩语 Korean
+日语 Japanese
+葡萄牙语 Portuguese
+西班牙语 Spanish

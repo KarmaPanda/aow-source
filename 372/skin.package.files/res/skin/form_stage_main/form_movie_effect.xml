@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_movie_effect" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Width="800" Height="600" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+        <event on_close="on_main_form_close" on_open="on_main_form_open" />
+        <control name="mltbox_up" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" ViewRect="0,0,800,75" LineHeight="35" ScrollSize="17" Solid="true" Width="800" Height="75" BackColor="255,0,0,0" ShadowColor="0,0,0,0" Font="FZHKJT30" NoFrame="true" DrawMode="FitWindow" BackImage="gui\loading\scene_change_up.png" />
+        </control>
+        <control name="mltbox_down" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" Transparent="true" ViewRect="0,0,800,75" LineHeight="35" AutoScroll="true" ScrollSize="17" HasVScroll="true" Solid="true" Top="525" Width="800" Height="75" BackColor="255,0,0,0" ShadowColor="0,0,0,0" Font="FZHKJT30" NoFrame="true" DrawMode="ExpandH" BackImage="gui\loading\scene_change_down.png" />
+            <subor name="VScrollBar">
+                <prop ForeColor="0,0,0,0" BackColor="0,224,224,224" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" ForeColor="0,0,0,0" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

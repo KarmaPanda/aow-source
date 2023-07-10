@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_ground_block" init="main_form_init">
+        <prop Left="101" Top="117" Width="334" Height="606" BackColor="158,152,154,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="8" Width="80" Height="22" ShadowColor="0,0,0,0" Text="地块编辑" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="312" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" HintText="关闭窗口" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="x_mirror_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="88" Width="94" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X方向镜像" TabStop="true" />
+        </control>
+        <control name="z_mirror_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="120" Top="88" Width="94" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="Z方向镜像" TabStop="true" />
+        </control>
+        <control name="raise_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="120" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="升高" TabStop="true" />
+            <event on_click="raise_btn_click" />
+        </control>
+        <control name="sink_btn" entity="Button" script="" init="">
+            <prop Left="160" Top="120" Width="62" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="降低" TabStop="true" />
+            <event on_click="sink_btn_click" />
+        </control>
+        <control name="range_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="72" Top="120" Width="86" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="32" Width="318" Height="22" ShadowColor="0,0,0,0" Text="按[C]复制(如果没有选择高度图，则按" />
+        </control>
+        <control name="save_model_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="8" Top="408" Width="86" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="保存物体" TabStop="true" />
+        </control>
+        <control name="save_filename_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="104" Top="200" Width="174" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="file_name_abel" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="200" Width="94" Height="22" ShadowColor="0,0,0,0" Text="保存文件名:" />
+        </control>
+        <control name="file_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="224" Width="142" Height="174" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="file_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="save_btn" entity="Button" script="" init="">
+            <prop Left="280" Top="200" Width="46" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="保存" TabStop="true" />
+            <event on_click="save_btn_click" />
+        </control>
+        <control name="sample_pict" entity="Picture" script="" init="">
+            <prop CenterX="-1" CenterY="-1" Left="152" Top="264" Width="166" Height="134" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="56" Width="270" Height="22" ShadowColor="0,0,0,0" Text="鼠标框选地形进行复制)" />
+        </control>
+        <control name="hide_btn" entity="Button" script="" init="">
+            <prop Left="288" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="-" HintText="仅隐藏窗口并不销毁窗口" TabStop="true" />
+            <event on_click="hide_btn_click" />
+        </control>
+        <control name="lt_btn" entity="Button" script="" init="">
+            <prop Style="LeftArrow" Left="192" Top="456" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="lt_btn_click" />
+        </control>
+        <control name="rt_btn" entity="Button" script="" init="">
+            <prop Style="RightArrow" Left="296" Top="456" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="rt_btn_click" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="184" Top="432" Width="142" Height="22" ShadowColor="0,0,0,0" Text="旋转新拷贝的场景" />
+        </control>
+        <control name="angle_edit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="1.000000" Max="359.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Align="Center" Caret="Default" Left="216" Top="456" Width="78" Height="20" ShadowColor="0,0,0,0" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_enter="angle_edit_enter" on_drag="angle_edit_drag" />
+        </control>
+        <control name="cancel_select_btn" entity="Button" script="" init="">
+            <prop Left="152" Top="224" Width="86" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="取消选择" TabStop="true" />
+            <event on_click="cancel_select_btn_click" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="72" Width="318" Height="22" ShadowColor="0,0,0,0" Text="--------------------------------------" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="184" Top="488" Width="142" Height="22" ShadowColor="0,0,0,0" Text="移动新拷贝的场景" />
+        </control>
+        <control name="move_left_btn" entity="Button" script="" init="">
+            <prop Style="LeftArrow" Left="192" Top="536" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="move_left_btn_click" />
+        </control>
+        <control name="move_up_btn" entity="Button" script="" init="">
+            <prop Style="UpArrow" Left="240" Top="512" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="move_up_btn_click" />
+        </control>
+        <control name="move_right_btn" entity="Button" script="" init="">
+            <prop Style="RightArrow" Left="296" Top="536" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="move_right_btn_click" />
+        </control>
+        <control name="move_down_btn" entity="Button" script="" init="">
+            <prop Style="DownArrow" Left="240" Top="560" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="move_down_btn_click" />
+        </control>
+        <control name="move_dis_fe" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="1.000000" Max="20.000000" OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Align="Center" Caret="Default" Left="216" Top="536" Width="78" Height="20" ShadowColor="0,0,0,0" Text="1.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="undo_btn" entity="Button" script="" init="">
+            <prop Icon="ico\undo" Left="192" Top="408" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="撤销拷贝" TabStop="true" />
+            <event on_click="undo_btn_click" />
+        </control>
+        <control name="redo_btn" entity="Button" script="" init="">
+            <prop Icon="ico\redo" Left="216" Top="408" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="重做拷贝" TabStop="true" />
+            <event on_click="redo_btn_click" />
+        </control>
+        <control name="cancel_fixed_pos_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="576" Width="174" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="取消固定预览图位置" TabStop="true" />
+            <event on_click="cancel_fixed_pos_btn_click" />
+        </control>
+        <control name="use_blend_data_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="8" Top="432" Width="158" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="使用混合贴图数据" TabStop="true" />
+        </control>
+        <control name="delete_select_btn" entity="Button" script="" init="">
+            <prop Left="240" Top="224" Width="86" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="删除选择" TabStop="true" />
+            <event on_click="delete_select_btn_click" />
+        </control>
+        <control name="prog_bar" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" WidthGap="2" HeightGap="2" ProgressMode="LeftToRight" TextVisible="true" TextPercent="true" Left="8" Top="176" Width="318" Height="16" ForeColor="255,255,0,0" BackColor="255,50,70,70" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="clear_blend_data_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="8" Top="456" Width="158" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="清除混合贴图数据" TabStop="true" />
+        </control>
+        <control name="use_grass_data_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="8" Top="480" Width="118" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="使用花草数据" TabStop="true" />
+        </control>
+        <control name="clear_grass_data_check" entity="CheckButton" script="" init="">
+            <prop Checked="true" BoxSize="12" Left="8" Top="504" Width="118" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="清除花草数据" TabStop="true" />
+        </control>
+        <control name="prog_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="152" Width="318" Height="16" ShadowColor="0,0,0,0" Text="进度信息：" />
+        </control>
+        <control name="select_model_mode_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="536" Width="158" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="框选场景物件模式" TabStop="true" DrawMode="FitWindow" />
+            <event on_checked_changed="select_model_mode_checked_changed" />
+        </control>
+    </control>
+</form>

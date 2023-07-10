@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_clone\form_clone_describe_boss" init="main_form_init">
+        <prop ShowGrid="true" Left="349" Top="173" Width="302" Height="486" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\clone_new\ty_ditu.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_describe" entity="GroupBox" script="" init="">
+            <prop Top="8" Width="294" Height="470" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="imagegrid_boss" entity="ImageGrid" script="" init="">
+                <prop SelectColor="80,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="92" GridWidth="68" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="16" Width="68" Height="92" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="imagegrid_1" DrawMode="Center" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="boss_power" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="200" Top="58" Width="80" Height="14" ForeColor="255,232,182,132" ShadowColor="0,0,0,0" Text="首领实力" Font="font_main" />
+            </control>
+            <control name="boss_describe" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,232,182,132" ViewRect="0,0,286,377" LineHeight="15" ScrollSize="17" Left="8" Top="96" Width="286" Height="377" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_main" NoFrame="true" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="107" Top="29" Width="80" Height="16" ForeColor="255,232,182,132" ShadowColor="0,0,0,0" Text="@ui_clone_text_4" Font="font_main" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="108" Top="55" Width="80" Height="22" ForeColor="255,232,182,132" ShadowColor="0,0,0,0" Text="@ui_clone_text_5" Font="font_main" />
+            </control>
+        </control>
+        <control name="boss_name" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="200" Top="36" Width="80" Height="16" ForeColor="255,232,182,132" ShadowColor="0,0,0,0" Text="首领名字" Font="font_main" />
+        </control>
+    </control>
+</form>

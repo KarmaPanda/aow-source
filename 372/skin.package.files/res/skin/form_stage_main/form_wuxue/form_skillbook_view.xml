@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_wuxue\form_skillbook_view" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="109" Top="30" Width="910" Height="606" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="ani_1" entity="Animation" script="" init="">
+            <prop IsAutoClip="true" AnimationImage="wuxueviewex" Loop="false" PlayMode="2" Left="360" Top="127" Width="510" Height="342" />
+        </control>
+        <control name="lbl_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-20" Width="963" Height="621" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\wuxue\skillbook\bg_main.png" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="33" Top="655" Width="80" Height="16" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="scenebox_show" entity="SceneBox" script="" init="">
+            <prop Left="432" Top="87" Width="390" Height="354" BackColor="0,0,0,0" LineColor="255,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="lbl_skill_desc_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="328" Top="511" Width="582" Height="41" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandH" BackImage="gui\special\wuxue\skillbook\tiao.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="892" Top="23" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_skillbook_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="80000" Top="71" Width="65" Height="182" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="mltbox_form_desc" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,261,30" LineHeight="20" ScrollSize="17" Left="501" Top="524" Width="261" Height="30" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_name" />
+        </control>
+        <control name="mltbox_skil_title" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,126,51" LineHeight="18" ScrollSize="17" Left="88" Top="47" Width="126" Height="51" LineColor="0,0,0,0" ShadowColor="0,255,0,0" Font="font_text_chat" />
+        </control>
+        <control name="mltbox_skill_desc1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,126,22" ScrollSize="17" Left="88" Top="91" Width="126" Height="22" LineColor="0,0,0,0" ShadowColor="0,255,0,0" Font="font_treeview" />
+        </control>
+        <control name="mltbox_skill_desc2" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,126,45" ScrollSize="17" Left="88" Top="114" Width="126" Height="45" LineColor="0,0,0,0" ShadowColor="0,255,0,0" Font="font_treeview" />
+        </control>
+        <control name="lbl_skillicon" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="47" Width="86" Height="94" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="lbl_skill_attribute1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="47" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="lbl_skill_attribute2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="232" Top="102" Width="30" Height="30" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\wuxue\skillbook\study_out.png" FocusImage="gui\special\wuxue\skillbook\study_on.png" PushImage="gui\special\wuxue\skillbook\study_down.png" DisableImage="gui\special\wuxue\skillbook\study_jin.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="809" Top="516" Width="91" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_wuxue_book_xuexi" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_study_click" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\wuxue\skillbook\study_out.png" FocusImage="gui\special\wuxue\skillbook\study_on.png" PushImage="gui\special\wuxue\skillbook\study_down.png" DisableImage="gui\special\wuxue\skillbook\study_jin.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="706" Top="516" Width="91" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_chongfubofang" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_replay_click" />
+        </control>
+        <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" IsEditMode="false" Left="80" Top="247" Width="246" Height="342" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop FullBarBack="false" Maximum="58" SmallChange="1" LargeChange="342" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\special\wuxue\liaotian_gdt_1.png" FocusImage="gui\special\wuxue\liaotian_gdt_2.png" PushImage="gui\special\wuxue\liaotian_gdt_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="266" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+            <control name="mltbox_skill_desc3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,224,70" LineHeight="20" ScrollSize="17" Left="8" Top="8" Width="224" Height="70" LineColor="0,255,0,0" ShadowColor="0,255,0,0" Font="font_treeview" NoFrame="true" />
+            </control>
+            <control name="mltbox_skill_desc4" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,224,224" LineHeight="20" ScrollSize="17" Left="8" Top="176" Width="224" Height="224" ForeColor="255,133,94,27" LineColor="0,255,0,0" ShadowColor="0,255,0,0" Font="font_main" NoFrame="true" />
+            </control>
+        </control>
+    </control>
+</form>

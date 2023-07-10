@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_fight\form_fight_role_left" entity="Form" script="form_stage_main\form_fight\form_fight_role" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Width="400" Height="500" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="A" />
+        <event on_open="on_main_form_open" on_shut="on_main_form_shut" on_close="on_main_form_close" />
+        <control name="groupbox_role" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="5" Top="5" Width="400" Height="400" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+            <control name="lbl_frame" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="669" Top="37" Width="367" Height="85" ShadowColor="0,0,0,0" BackImage="fight_xuetiao" />
+            </control>
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="24" Width="352" Height="71" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\mainform\role\bg_role.png" />
+            </control>
+            <control name="pbar_resume_hp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_resume.png" ProgressMode="LeftToRight" Left="85" Top="48" Width="284" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Font="Arial11" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="pbar_hp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="80" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_hp.png" ProgressMode="LeftToRight" Left="85" Top="48" Width="284" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Font="Arial11" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="pbar_state_hp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_hp.png" ProgressMode="LeftToRight" Left="85" Top="48" Width="284" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" Font="Arial11" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="pbar_mp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_mp.png" ProgressMode="LeftToRight" Left="86" Top="63" Width="146" Height="6" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" NoFrame="true" AutoSize="true" DrawMode="Center" />
+            </control>
+            <control name="pbar_state_mp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_mp.png" ProgressMode="LeftToRight" Left="86" Top="64" Width="146" Height="6" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" NoFrame="true" AutoSize="true" DrawMode="Center" />
+            </control>
+            <control name="pbar_sp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_nu.png" ProgressMode="LeftToRight" Left="108" Top="70" Width="68" Height="8" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_nuqi" NoFrame="true" AutoSize="true" />
+            </control>
+            <control name="lbl_nq1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="107" Top="70" Width="11" Height="11" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\mainform\role\bg_nu_off.png" />
+            </control>
+            <control name="lbl_nq2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="123" Top="70" Width="11" Height="11" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\mainform\role\bg_nu_off.png" />
+            </control>
+            <control name="lbl_nq3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="138" Top="70" Width="11" Height="11" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\mainform\role\bg_nu_off.png" />
+            </control>
+            <control name="lbl_nq4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="153" Top="70" Width="11" Height="11" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\mainform\role\bg_nu_off.png" />
+            </control>
+            <control name="lbl_nq5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="171" Top="70" Width="11" Height="11" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\mainform\role\bg_nu_off.png" />
+            </control>
+            <control name="mltbox_name" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,224,215,184" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,230,22" LineHeight="20" TipMaxWidth="400" ScrollSize="17" Left="96" Top="16" Width="230" Height="22" ForeColor="255,224,215,184" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="pbar_qinggong" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\role\pbr_qg.png" ProgressMode="BottomToTop" Left="74" Top="72" Width="36" Height="15" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            </control>
+            <control name="scenebox_role" entity="SceneBox" script="" init="">
+                <prop Left="29" Width="59" Height="86" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" NoFrame="true" DrawMode="FitWindow" />
+                <event on_right_click="on_panel_right_click" />
+            </control>
+            <control name="lbl_a_nq1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="99" Top="50" Width="22" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="nuqi_1" />
+            </control>
+            <control name="lbl_a_nq2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="114" Top="50" Width="22" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="nuqi_1" />
+            </control>
+            <control name="lbl_a_nq3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="131" Top="50" Width="22" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="nuqi_1" />
+            </control>
+            <control name="lbl_a_nq4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="147" Top="50" Width="22" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="nuqi_1" />
+            </control>
+            <control name="lbl_a_nq5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="165" Top="50" Width="22" Height="32" ShadowColor="0,0,0,0" AutoSize="true" BackImage="nuqi_1" />
+            </control>
+            <control name="groupbox_win_count" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="93" Top="76" Width="278" Height="38" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" Text="groupbox_1" NoFrame="true" />
+                <control name="lbl_win_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="80" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="104" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="152" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="176" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_9" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="200" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+                <control name="lbl_win_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="224" Top="8" Width="22" Height="25" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\leitai\game_win.png" />
+                </control>
+            </control>
+            <control name="btn_camera" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\task\icon_search_2.png" FocusImage="gui\special\task\icon_search_1.png" PushImage="gui\special\task\icon_search_2.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="101" Width="33" Height="34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_arena_target_camera" AutoSize="true" />
+                <event on_click="on_btn_camera_click" />
+            </control>
+            <control name="buff_groupbox" entity="GroupBox" script="" init="">
+                <prop Left="88" Top="128" Width="246" Height="118" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_3" NoFrame="true" />
+                <control name="buff_grid" entity="ImageControlGrid" script="" init="">
+                    <prop MultiTextBoxLeft="4" MultiTextBoxTop="40" MultiTextBoxPos="4,40" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,190,100" MaxSize="-1" RowNum="3" ClomnNum="6" ShowEmpty="false" GridsPos="175,0;140,0;105,0;70,0;35,0;0,0;175,35;140,35;105,35;70,35;35,35;0,35;175,70;140,70;105,70;70,70;35,70;0,70;" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\mainform\bg_buff.png" GridBackOffsetX="-6" GridBackOffsetY="-5" GridCoverOffsetY="-2" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="-210" Width="210" Height="106" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" NoFrame="true" DrawMode="FitWindow" />
+                    <event on_mouseout_grid="on_imagegrid_buffer_mouseout_grid" on_doubleclick_grid="on_buff_grid_doubleclick_grid" on_mousein_grid="on_imagegrid_buffer_mousein_grid" />
+                </control>
+            </control>
+            <control name="lbl_curskill" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="56" Top="264" Width="318" Height="71" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Font="font_sns_title_hual_3" />
+            </control>
+        </control>
+        <control name="lbl_hit_point" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="61" Top="237" Width="270" Height="54" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_sns_title_hual_3" />
+        </control>
+    </control>
+</form>

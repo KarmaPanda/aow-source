@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\from_word_protect\form_secword_bymail_confirm" init="on_main_form_init">
+        <prop ShowGrid="true" Left="200" Top="110" Width="342" Height="250" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Top="31" Width="340" Height="190" BackColor="146,255,255,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="-338" Top="-487" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="3" Top="27" Width="335" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="ipt_code" entity="Edit" script="" init="">
+            <prop TextOffsetX="8" Caret="Default" Left="20" Top="182" Width="190" Height="30" ShadowColor="0,20,0,0" Font="font_text" Cursor="WIN_IBEAM" HintText="@mail_back_10" TabStop="true" DrawMode="Expand" BackImage="gui\common\form_line\ibox_2.png" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="170" Top="215" Width="86" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_submit" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="311" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_canel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="254" Top="215" Width="86" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_cancel" Font="font_btn" DrawMode="Expand" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_timelimit" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="221" Top="186" Width="80" Height="16" ForeColor="255,154,51,0" ShadowColor="0,20,0,0" Font="font_main" />
+        </control>
+        <control name="lbl_code" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="25" Top="164" Width="102" Height="16" ForeColor="255,154,51,0" ShadowColor="0,20,0,0" Text="@mail_back_06" Font="font_main" />
+        </control>
+        <control name="mltbox_mail" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,154,51,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="6,5,305,125" LineHeight="18" HtmlText="@mail_back_04" ScrollSize="17" HasVScroll="true" Left="13" Top="37" Width="318" Height="124" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+            <subor name="VScrollBar">
+                <prop FullBarBack="false" Maximum="1" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+            </subor>
+        </control>
+        <control name="LineEnd1" entity="LineEnd" script="" init="">
+            <prop Left="4" Top="210" Width="335" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" IsLimitWidth="true" Left="99" Top="2" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@mail_back_01" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+    </control>
+</form>

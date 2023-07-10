@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_main\form_main_sysinfo" init="main_form_init">
+        <prop Transparent="true" LimitInScreen="true" Left="-363" Top="-407" Width="356" Height="347" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="image_change_size" entity="Picture" script="" init="">
+            <prop CenterX="-1" CenterY="-1" Left="32" Top="128" Width="50" Height="50" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="btn_open" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_right\btn_right3_out.png" FocusImage="gui\common\button\btn_right\btn_right3_on.png" PushImage="gui\common\button\btn_right\btn_right3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="335" Top="-43" Width="18" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HintText="@ui_tips_yincang" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_open_click" />
+        </control>
+        <control name="info_group" entity="GroupBox" script="" init="">
+            <prop Left="-332" Top="-331" Width="331" Height="295" BackColor="0,97,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="GroupBox5" NoFrame="true" />
+            <event on_lost_capture="on_info_group_lost_capture" on_get_capture="on_info_group_get_capture" />
+            <control name="info_list" entity="MultiTextBox" script="" init="">
+                <prop VAlign="Bottom" TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,228,170" LineHeight="22" AutoScroll="true" TransNormalText="true" ScrollSize="15" Solid="true" Left="-251" Top="120" Width="228" Height="170" BackColor="41,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="MultiTextBox1" Font="font_text_sys" NoFrame="true" DrawMode="Expand" BackImage="gui\mainform\chat\bg_main.png" />
+                <event on_lost_capture="on_info_list_lost_capture" on_get_capture="on_info_list_get_capture" />
+            </control>
+            <control name="fight_list" entity="MultiTextBox" script="" init="">
+                <prop VAlign="Bottom" TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,222,170" LineHeight="22" AutoScroll="true" TransNormalText="true" ScrollSize="15" Solid="true" Left="-251" Top="120" Width="222" Height="170" BackColor="74,255,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="MultiTextBox1" Font="font_text_sys" NoFrame="true" DrawMode="Expand" BackImage="gui\mainform\chat\bg_main.png" />
+                <event on_lost_capture="on_info_list_lost_capture" on_get_capture="on_info_list_get_capture" />
+            </control>
+            <control name="tvt_list" entity="MultiTextBox" script="" init="">
+                <prop VAlign="Bottom" TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,222,170" LineHeight="22" AutoScroll="true" TransNormalText="true" ScrollSize="15" Solid="true" Left="-251" Top="120" Width="222" Height="170" BackColor="74,255,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="MultiTextBox1" Font="font_text_sys" NoFrame="true" DrawMode="Expand" BackImage="gui\mainform\chat\bg_main.png" />
+                <event on_lost_capture="on_info_list_lost_capture" on_get_capture="on_info_list_get_capture" />
+            </control>
+            <control name="emotion_list" entity="MultiTextBox" script="" init="">
+                <prop VAlign="Bottom" TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,222,170" LineHeight="22" AutoScroll="true" TransNormalText="true" ScrollSize="15" Solid="true" Left="-251" Top="120" Width="222" Height="170" BackColor="74,255,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="MultiTextBox1" Font="font_text_sys" NoFrame="true" DrawMode="Expand" BackImage="gui\mainform\chat\bg_main.png" />
+                <event on_lost_capture="on_info_list_lost_capture" on_get_capture="on_info_list_get_capture" />
+            </control>
+            <control name="drag_info_size_change" entity="Adjuster" script="" init="">
+                <prop Left="-475" Top="112" Width="198" Height="177" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Text="Adjuster1" Cursor="WIN_SIZEWE" DrawMode="Expand" />
+                <event on_drag_leave="on_info_size_change_over" on_drag_move="on_info_size_change" />
+            </control>
+            <control name="btn_up" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-67" Top="-603" Width="30" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" HintText="@ui_sysinfo_up" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_up_click" />
+            </control>
+            <control name="btn_down" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-51" Top="-602" Width="30" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" HintText="@ui_sysinfo_down" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_down_click" />
+            </control>
+            <control name="adjuster_1" entity="Adjuster" script="" init="">
+                <prop Left="80" Top="120" Width="10" Height="10" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="adjuster_1" Cursor="WIN_SIZEWE" AutoSize="true" BackImage="gui\mainform\chat\btn_draw_left.png" />
+                <event on_drag_leave="on_info_size_change_over" on_drag_move="on_info_size_change" />
+            </control>
+            <control name="groupbox_transparence" entity="GroupBox" script="" init="">
+                <prop Left="-200" Top="45" Width="158" Height="39" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Font="Arial11" NoFrame="true" DrawMode="Expand" BackImage="gui\common\trackbar\tb_1_bg.png" />
+                <control name="lbl_cao" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="34" Top="12" Width="110" Height="15" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\trackbar\tb_1_cao.png" />
+                </control>
+                <control name="tbar_transparence" entity="TrackBar" script="" init="">
+                    <prop Orient="Horizon" Maximum="160" Value="85" Left="34" Top="12" Width="110" Height="15" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    <event on_value_changed="on_tbar_transparence_value_changed" on_drag_leave="on_tbar_transparence_drag_leave" />
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\trackbar\tb_1_out.png" FocusImage="gui\common\trackbar\tb_1_on.png" PushImage="gui\common\trackbar\tb_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                    </subor>
+                </control>
+                <control name="lbl_p" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="34" Top="12" Width="110" Height="15" ShadowColor="0,0,0,0" BackImage="gui\common\trackbar\tb_1_tiao.png" />
+                </control>
+                <control name="lbl_num" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="6" Top="12" Width="22" Height="14" ForeColor="255,255,255,255" ShadowColor="0,20,0,0" Text="1%" Font="font_main" />
+                </control>
+            </control>
+            <control name="groupbox_btn" entity="GroupBox" script="" init="">
+                <prop Left="-243" Top="96" Width="214" Height="26" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" Font="Arial11" />
+                <control name="btn_sys" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out.png" FocusImage="gui\mainform\chat\btn_subentry_on.png" CheckedImage="gui\mainform\chat\btn_subentry_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="46" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_system_Fight_zdxx" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_btn_sys_checked_changed" />
+                </control>
+                <control name="btn_fight" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out.png" FocusImage="gui\mainform\chat\btn_subentry_on.png" CheckedImage="gui\mainform\chat\btn_subentry_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="48" Width="46" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_system_fight_zdzt" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_btn_fight_checked_changed" />
+                </control>
+                <control name="btn_tvt" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry__1out.png" FocusImage="gui\mainform\chat\btn_subentry_1_on.png" CheckedImage="gui\mainform\chat\btn_subentry_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Width="50" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_tvt_wanfa_jh" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_btn_tvt_checked_changed" />
+                </control>
+                <control name="btn_tvt_arrow" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\chat\arrow_out.png" FocusImage="gui\mainform\chat\arrow_on.png" PushImage="gui\mainform\chat\arrow_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="134" Top="3" Width="11" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_tvt_arrow_click" />
+                </control>
+                <control name="btn_emotion" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry__1out.png" FocusImage="gui\mainform\chat\btn_subentry_1_on.png" CheckedImage="gui\mainform\chat\btn_subentry_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Width="62" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_karma_title" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_btn_emotion_checked_changed" />
+                </control>
+                <control name="btn_emotion_arrow" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\chat\arrow_out.png" FocusImage="gui\mainform\chat\arrow_on.png" PushImage="gui\mainform\chat\arrow_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="192" Top="3" Width="11" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_emotion_arrow_click" />
+                </control>
+            </control>
+            <control name="groupbox_tvt_info_set" entity="GroupBox" script="" init="">
+                <prop Left="24" Top="75" Width="22" Height="41" ShadowColor="0,0,0,0" Text="groupbox_1" AutoSize="true" BackImage="gui\mainform\chat\bg_small.png" />
+                <event on_lost_capture="on_groupbox_channel_set_lost_capture" />
+                <control name="btn_tvt_info_set" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\chat\setup_out.png" FocusImage="gui\mainform\chat\setup_on.png" PushImage="gui\mainform\chat\setup_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="22" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_menu_chat_setting" AutoSize="true" />
+                    <event on_click="on_btn_tvt_info_set_click" />
+                </control>
+                <control name="btn_tvt_info_del" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\chat\close_out.png" FocusImage="gui\mainform\chat\close_on.png" PushImage="gui\mainform\chat\close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="20" Width="22" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_menu_chat_closepage" AutoSize="true" />
+                    <event on_click="on_btn_tvt_info_del_click" />
+                </control>
+            </control>
+            <control name="groupbox_ctrl" entity="GroupBox" script="" init="">
+                <prop Left="304" Top="96" Width="28" Height="222" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="btn_bottom" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_bottom_out.png" FocusImage="gui\common\scrollbar\button_1\btn_bottom_on.png" PushImage="gui\common\scrollbar\button_1\btn_bottom_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-21" Top="172" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" HintText="@ui_chat_todown" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_bottom_click" />
+                </control>
+                <control name="scrollbar_list" entity="ScrollBar" script="" init="">
+                    <prop ButtonSize="18" TrackSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" Left="-21" Top="55" Width="18" Height="117" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <event on_value_changed="on_scrollbar_list_value_changed" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </control>
+                <control name="btn_transparence" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_alpha_out.png" FocusImage="gui\common\button\btn_alpha_on.png" PushImage="gui\common\button\btn_alpha_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-21" Top="38" Width="18" Height="18" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Right" HintText="@ui_chat_transparence" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_transparence_click" />
+                </control>
+                <control name="btn_fix" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_unlock_out_6.png" FocusImage="gui\common\button\btn_unlock_on_6.png" PushImage="gui\common\button\btn_unlock_down_6.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="7" Top="22" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_suoding" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_fix_click" />
+                </control>
+                <control name="btn_unfix" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_lock_out_6.png" FocusImage="gui\common\button\btn_lock_on_6.png" PushImage="gui\common\button\btn_lock_down_6.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="7" Top="22" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_jiesuo" TabStop="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_unfix_click" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

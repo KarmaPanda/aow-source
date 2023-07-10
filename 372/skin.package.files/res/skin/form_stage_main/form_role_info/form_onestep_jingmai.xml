@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_onestep_jingmai" entity="Form" script="form_stage_main\form_role_info\form_onestep_jingmai" init="on_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="189" Top="53" Width="410" Height="564" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+        <event on_open="on_form_onestep_jingmai_open" on_close="on_form_onestep_jingmai_close" />
+        <control name="groupbox_bg" entity="GroupBox" script="" init="">
+            <prop Width="410" Height="562" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_1" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="gbox_jingmai_name" entity="GroupBox" script="" init="">
+            <prop Left="5" Top="31" Width="406" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        </control>
+        <control name="tree_types" entity="TreeViewEx" script="" init="">
+            <prop ScrollSize="17" Left="640" Top="-8" Width="86" Height="374" ForeColor="255,255,255,255" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Text="tree_ex1" Font="font_treeview" TabStop="true" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_tree_types_select_changed" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="gpsbox_jingmai" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="14" HasVScroll="true" IsEditMode="false" Left="2" Top="105" Width="404" Height="454" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\wuxue\backg_2_new.png" />
+            <subor name="VScrollBar">
+                <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="77" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="348" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="gbox_jingmai" entity="GroupBox" script="" init="">
+            <prop Left="5" Top="604" Width="400" Height="41" BackColor="0,255,255,255" BlendColor="255,147,123,99" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" />
+            <control name="lbl_jingmai_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="15" Top="10" Width="100" Height="17" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="lbl_1" Font="font_text_title1" />
+            </control>
+            <control name="lbl_jingmai_level_z" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" LblLimitWidth="true" Left="115" Top="10" Width="75" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="lbl_1" Font="font_text_figure" />
+            </control>
+            <control name="lbl_jingmai_level_n" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" LblLimitWidth="true" Left="259" Top="10" Width="75" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="lbl_1" Font="font_text_figure" />
+            </control>
+            <control name="btn_jingmai_active_z" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\wuxue\jihuo_out.png" FocusImage="gui\special\wuxue\jihuo_on.png" PushImage="gui\special\wuxue\jihuo_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="197" Top="7" Width="46" Height="22" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" Font="font_text_figure" DrawMode="Center" />
+                <event on_click="on_btn_jingmai_active_click" on_lost_capture="on_btn_jingmai_active_lost_capture" on_get_capture="on_btn_jingmai_active_get_capture" />
+            </control>
+            <control name="btn_jingmai_active_n" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\wuxue\jihuo_out.png" FocusImage="gui\special\wuxue\jihuo_on.png" PushImage="gui\special\wuxue\jihuo_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="341" Top="7" Width="46" Height="22" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="btn_1" Font="font_text_figure" DrawMode="Center" />
+                <event on_click="on_btn_jingmai_active_click" on_lost_capture="on_btn_jingmai_active_lost_capture" on_get_capture="on_btn_jingmai_active_get_capture" />
+            </control>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="8" Width="398" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_onestep_jingmai_fangan" Font="font_title" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="511" Width="404" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="64" Width="404" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="gbox_title" entity="GroupBox" script="" init="">
+            <prop Left="2" Top="69" Width="404" Height="37" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Text="groupbox_4" NoFrame="true" AutoSize="true" BackImage="gui\special\wuxue\backg_1.png" />
+            <control name="lbl_title_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="8" Top="11" Width="100" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_onestep_jingmai_mingcheng" Font="font_text" />
+            </control>
+            <control name="lbl_title_2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="154" Top="11" Width="75" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_onestep_jingmai_zhengxiu" Font="font_text" />
+            </control>
+            <control name="lbl_title_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="290" Top="11" Width="75" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_onestep_jingmai_nilian" Font="font_text" />
+            </control>
+        </control>
+        <control name="mltbox_tips" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,76,61,44" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,302,22" LineHeight="17" ScrollSize="17" Left="14" Top="524" Width="302" Height="22" ShadowColor="0,0,0,0" Font="font_text_figure" NoFrame="true" />
+        </control>
+    </control>
+</form>

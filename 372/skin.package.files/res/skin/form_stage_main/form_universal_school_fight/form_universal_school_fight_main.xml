@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_universal_school_fight\form_universal_school_fight_main" init="main_form_init">
+        <prop ShowGrid="true" Left="-580" Top="30" Width="705" Height="492" ShadowColor="0,0,0,0" HAnchor="Center" AutoSize="true" BackImage="gui\special\guj_newmpz\Abg.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-63" Top="7" Width="126" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_newschoolwar_guj_008" Font="font_playername" />
+        </control>
+        <control name="rbtn_join" entity="RadioButton" script="" init="">
+            <prop Checked="true" BoxSize="12" NormalImage="gui\special\smzb\fenye_out.png" FocusImage="gui\special\smzb\fenye_out.png" CheckedImage="gui\special\smzb\fenye_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="9" Top="35" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_smzb_join" Font="font_text" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_rbtn_join_checked_changed" />
+        </control>
+        <control name="rbtn_war_info" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\special\smzb\fenye_out.png" FocusImage="gui\special\smzb\fenye_out.png" CheckedImage="gui\special\smzb\fenye_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="2147483647" Top="36" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_001" Font="font_text" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_rbtn_war_info_checked_changed" />
+        </control>
+        <control name="rbtn_price" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\special\smzb\fenye_out.png" FocusImage="gui\special\smzb\fenye_out.png" CheckedImage="gui\special\smzb\fenye_on.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="97" Top="36" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_smzb_price" Font="font_text" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_rbtn_price_checked_changed" />
+        </control>
+        <control name="groupbox_war_info" entity="GroupBox" script="" init="">
+            <prop Left="1" Top="69" Width="703" Height="420" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" DrawMode="Expand" BackImage="gui\special\smzb\fengekuang_1.png" />
+            <control name="groupbox_info" entity="GroupBox" script="" init="">
+                <prop Left="215" Top="2" Width="482" Height="382" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\guj_newmpz\Cbg_2.png" />
+                <control name="lbl_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="19" Width="461" Height="121" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" AutoSize="true" BackImage="gui\special\guj_newmpz\Cbg_3.png" />
+                </control>
+                <control name="lbl_fight_school" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="104" Top="40" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_defend_school" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="376" Top="40" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_fight_players" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="104" Top="96" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_defend_players" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="376" Top="96" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_fight_address" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="187" Top="192" Width="72" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_fight_time" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="187" Top="253" Width="72" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_fight_result" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="187" Top="315" Width="72" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_attack_school" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="40" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_66" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_attack_players" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="32" Top="96" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_68" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_defend_school" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="304" Top="40" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_66" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_defend_players" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="304" Top="96" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_68" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_fight_address" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="190" Top="160" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_69" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_fight_time" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="190" Top="223" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_70" Font="font_text_chat" />
+                </control>
+                <control name="lbl_title_fight_result" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="190" Top="283" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_cross_schoolfight_71" Font="font_text_chat" />
+                </control>
+                <control name="lbl_vs" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="176" Top="48" Width="88" Height="62" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\guj_newmpz\VS.png" />
+                </control>
+            </control>
+            <control name="groupscrollbox_list" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" HasVScroll="true" Top="2" Width="212" Height="382" ForeColor="255,197,184,159" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" DrawMode="Expand" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="410" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <control name="mltbox_6" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="18,48,198,326" LineHeight="25" HtmlText="@ui_gujcross_newschoolfight_64" ScrollSize="17" Left="-1" Width="217" Height="382" ForeColor="255,197,184,159" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_playername" BackImage="gui\special\guj_newmpz\Cbg_1.png" />
+                </control>
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="73" Top="12" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_007" Font="font_playername" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="676" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_join" entity="GroupBox" script="" init="">
+            <prop Left="1" Top="69" Width="703" Height="418" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="437" Top="1" Width="267" Height="89" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\guj_newmpz\Abg_1.png" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="2" Width="267" Height="89" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\guj_newmpz\Abg_1.png" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="96" Width="697" Height="287" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="90" Width="702" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+            <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="10,10,685,286" LineHeight="17" HtmlText="@ui_gujmpz_guizeshuoming" ScrollSize="17" HasVScroll="true" Left="1" Top="96" Width="700" Height="288" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" BackImage="gui\commom_new\form_bg\bg_3.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="20" Maximum="27" SmallChange="1" LargeChange="17" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="95" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="89" Top="8" Width="78" Height="22" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_002" Font="font_playername" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="308" Top="1" Width="88" Height="62" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\guj_newmpz\VS.png" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="532" Top="8" Width="78" Height="22" ForeColor="255,197,184,150" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_003" Font="font_playername" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="272" Top="66" Width="62" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_004" Font="font_main" />
+            </control>
+            <control name="lbl_24" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="360" Top="66" Width="70" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Font="font_main" />
+            </control>
+            <control name="lbl_25" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="571" Top="53" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="lbl_26" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="53" Width="62" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_playername" />
+            </control>
+            <control name="btn_join" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\smzb\anniu_out.png" FocusImage="gui\special\smzb\anniu_on.png" PushImage="gui\special\smzb\anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="507" Top="390" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_005" Font="font_btn" HintText="@ui_newschoolwar_gujxuanfu_005" AutoSize="true" />
+                <event on_click="on_btn_join_click" />
+            </control>
+            <control name="btn_quit" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\smzb\anniu_out.png" FocusImage="gui\special\smzb\anniu_on.png" PushImage="gui\special\smzb\anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="603" Top="390" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_006" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_quit_click" />
+            </control>
+            <control name="lbl_30" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="96" Top="46" Width="28" Height="28" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_31" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="537" Top="48" Width="28" Height="28" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_32" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,0,0" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,492,40" HtmlText="@ui_wuxuejinyong_guj_001" ScrollSize="17" Left="8" Top="386" Width="492" Height="40" ForeColor="255,255,0,0" ShadowColor="0,0,0,0" Font="font_tip" AutoSize="true" />
+            </control>
+        </control>
+        <control name="groupbox_price" entity="GroupBox" script="" init="">
+            <prop Left="1" Top="69" Width="703" Height="420" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Visible="false" DrawMode="Expand" />
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="4" Top="8" Width="288" Height="38" ForeColor="255,255,144,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" DrawMode="ExpandH" BackImage="gui\special\smzb\jiangli_bg_s.png" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="4" Top="133" Width="289" Height="38" ForeColor="255,255,144,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" DrawMode="ExpandH" BackImage="gui\special\smzb\jiangli_bg_s.png" />
+            </control>
+            <control name="lbl_16" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="4" Top="259" Width="290" Height="38" ForeColor="255,255,144,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" DrawMode="ExpandH" BackImage="gui\special\smzb\jiangli_bg_s.png" />
+            </control>
+            <control name="lbl_17" entity="Label" script="" init="">
+                <prop Align="Right" RefCursor="WIN_HELP" Left="2147483647" Top="315" Width="158" Height="38" ForeColor="255,255,144,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_playername" DrawMode="ExpandH" BackImage="gui\special\smzb\jiangli_bg_s.png" />
+            </control>
+            <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,150" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="5,5,500,66" LineHeight="18" HtmlText="@ui_newschoolwar_guj_016" ScrollSize="14" HasVScroll="true" Left="3" Top="54" Width="526" Height="70" ForeColor="255,197,184,150" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_tip" BackImage="gui\special\guj_newmpz\Bbg_2.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="4" SmallChange="1" LargeChange="3" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,150" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="5,5,500,66" LineHeight="18" HtmlText="@ui_newschoolwar_guj_017" ScrollSize="17" HasVScroll="true" Left="2" Top="183" Width="525" Height="66" ForeColor="255,197,184,150" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_tip" BackImage="gui\special\guj_newmpz\Bbg_2.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="4" SmallChange="1" LargeChange="3" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_4" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,150" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="5,5,500,66" LineHeight="18" HtmlText="@ui_newschoolwar_guj_018" ScrollSize="17" HasVScroll="true" Left="1" Top="308" Width="524" Height="66" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_tip" BackImage="gui\special\guj_newmpz\Bbg_2.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="3" SmallChange="1" LargeChange="3" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_5" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,150" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="5,5,530,66" LineHeight="18" HtmlText="@ui_smzb_price_bhsjphjlsm" ScrollSize="17" Left="2147483647" Top="353" Width="700" Height="66" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_tip" AutoSize="true" BackImage="gui\special\guj_newmpz\Bbg_2.png" />
+            </control>
+            <control name="lbl_18" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="80" Top="18" Width="80" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_013" Font="font_playername" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="88" Top="143" Width="80" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_014" Font="font_playername" />
+            </control>
+            <control name="lbl_20" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="56" Top="269" Width="80" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Text="@ui_newschoolwar_guj_015" Font="font_playername" />
+            </control>
+            <control name="lbl_21" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2147483647" Top="325" Width="80" Height="16" ForeColor="255,255,144,0" ShadowColor="0,0,0,0" Text="@ui_smzb_price_bhsjphjl" Font="font_playername" />
+            </control>
+            <control name="imagegrid_1" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="534" Top="65" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="box_menpai_win_001" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <event on_mouseout_grid="on_imagegrid_item_mouseout_grid" on_mousein_grid="on_imagegrid_item_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_2" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="590" Top="65" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_3" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="645" Top="65" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_4" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="534" Top="193" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="box_menpai_fail_001" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <event on_mouseout_grid="on_imagegrid_item_mouseout_grid" on_mousein_grid="on_imagegrid_item_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_5" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="590" Top="193" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_6" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="645" Top="193" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_7" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="534" Top="319" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="box_menpai_person_bang_001" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <event on_mouseout_grid="on_imagegrid_item_mouseout_grid" on_mousein_grid="on_imagegrid_item_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_8" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="590" Top="319" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="box_menpai_person_bang_002" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <event on_mouseout_grid="on_imagegrid_item_mouseout_grid" on_mousein_grid="on_imagegrid_item_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_9" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="645" Top="319" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="box_menpai_person_bang_003" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <event on_mouseout_grid="on_imagegrid_item_mouseout_grid" on_mousein_grid="on_imagegrid_item_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_10" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,58,58" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="37" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="2147483647" Top="363" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="box_lzy_smzb_dzjl_yu_a" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <event on_mouseout_grid="on_imagegrid_item_mouseout_grid" on_mousein_grid="on_imagegrid_item_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_11" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="2147483647" Top="363" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="imagegrid_12" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="2147483647" Top="363" Width="48" Height="47" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_yqd_jl_4.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="648" Top="67" Width="44" Height="44" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="648" Top="195" Width="44" Height="44" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+            <control name="lbl_22" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2147483647" Top="258" Width="44" Height="44" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+            <control name="lbl_23" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2147483647" Top="363" Width="44" Height="44" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+            <control name="lbl_27" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2147483647" Top="363" Width="44" Height="44" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+            <control name="lbl_28" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="592" Top="67" Width="44" Height="44" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+            <control name="lbl_29" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="592" Top="194" Width="44" Height="44" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\imagegrid\icon_lock2.png" />
+            </control>
+        </control>
+    </control>
+</form>

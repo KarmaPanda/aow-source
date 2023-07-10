@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_attire\form_attire_save" init="on_main_form_init">
+        <prop ShowGrid="true" Left="101" Top="69" Width="1062" Height="790" BackColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="160" Top="32" Width="738" Height="601" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Width="738" Height="601" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\attire\attire_list\dadi.png" />
+                <control name="textgrid_1" entity="Grid" script="" init="">
+                    <prop ShowComment="true" HeaderRowHeight="45" HeaderColWidth="50" HeaderBackColor="0,0,255,0" HeaderForeColor="255,255,255,255" SelectForeColor="0,255,255,255" SelectBackColor="0,255,99,128" SelectBackDraw="gui\special\attire\attire_list\xu.png" CanSelectRow="true" ColWidth="50" ColWidths="70,70,200,100,140,108" RowHeight="72" ColCount="6" ScrollSize="18" HasHScroll="true" AlwaysVScroll="true" Left="3" Top="46" Width="727" Height="484" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" />
+                    <subor name="HScrollBar">
+                        <prop Maximum="1" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="559" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" FullBarBack="false" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="448" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                    <subor name="CornerLabel">
+                        <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                    </subor>
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="570" Width="282" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_attire_save_29" Font="font_main" />
+                </control>
+                <control name="cbtn_useitem" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_10_out.png" FocusImage="gui\common\checkbutton\cbtn_10_on.png" CheckedImage="gui\common\checkbutton\cbtn_10_down.png" DisableImage="gui\common\checkbutton\cbtn_10_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="24" Top="568" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_cbtn_useitem_checked_changed" />
+                </control>
+                <control name="cbtn_usemoney" entity="RadioButton" script="" init="">
+                    <prop Checked="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_10_out.png" FocusImage="gui\common\checkbutton\cbtn_10_on.png" CheckedImage="gui\common\checkbutton\cbtn_10_down.png" DisableImage="gui\common\checkbutton\cbtn_10_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="24" Top="544" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                    <event on_checked_changed="on_cbtn_usemoney_checked_changed" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="546" Width="134" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_attire_save_30" Font="font_main" />
+                </control>
+            </control>
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\attire\attire_copy\btn_yel_out.png" FocusImage="gui\special\attire\attire_copy\btn_yel_on.png" PushImage="gui\special\attire\attire_copy\btn_yel_down.png" DisableImage="gui\special\attire\attire_copy\btn_yel_forbiden.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="576" Top="548" Width="140" Height="39" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_attire_save_7" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_save_click" />
+            </control>
+            <control name="btn_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\attire\attire_copy\btn_yel_out.png" FocusImage="gui\special\attire\attire_copy\btn_yel_on.png" PushImage="gui\special\attire\attire_copy\btn_yel_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="432" Top="548" Width="140" Height="39" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_cancel" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_cancel_click" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="312" Top="13" Width="121" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_attire_save_title" Font="font_title" />
+            </control>
+            <control name="btn_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="706" Top="10" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="60" Top="56" Width="69" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_selectall" Font="font_main" />
+            </control>
+            <control name="cbtn_1" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\attire\attire_list\btn_qx_out.png" FocusImage="gui\special\attire\attire_list\btn_qx_on.png" CheckedImage="gui\special\attire\attire_list\btn_qx_down.png" DisableImage="gui\special\attire\attire_list\btn_qx_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="30" Top="56" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_checked_changed" />
+            </control>
+        </control>
+    </control>
+</form>

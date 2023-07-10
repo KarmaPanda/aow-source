@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_battlefield_wulin\form_wulin_apply" init="main_form_init">
+        <prop LimitInScreen="true" Left="29" Top="21" Width="478" Height="630" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Width="478" Height="626" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\battlefiled_wudao\create_bg_1.png" />
+            <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" HasVScroll="true" Top="74" Width="478" Height="518" BackColor="0,0,0,0" LineColor="255,255,204,0" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\battlefiled_wudao\bp_bg_wuxue.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="270" BackColor="0,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="234" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <control name="textgrid_apply" entity="Grid" script="" init="">
+                    <prop ShowComment="true" HeaderBackColor="0,0,0,0" RowHeaderVisible="false" SelectBackDraw="gui\special\battlefiled_wudao\invite_btn_on.png" CanSelectRow="true" ColWidth="40" RowHeight="42" ScrollSize="18" HasHScroll="true" AlwaysVScroll="true" Left="-223" Top="-255" Width="460" Height="508" ForeColor="255,255,255,255" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="font_text" TabStop="true" DrawMode="Expand" />
+                    <subor name="HScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="10" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                    <subor name="VScrollBar">
+                        <prop SmallChange="1" LargeChange="5" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="478" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                    <subor name="CornerLabel">
+                        <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                    </subor>
+                </control>
+            </control>
+            <control name="btn_agree" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_balance\Bbtn_out.png" FocusImage="gui\special\battlefiled_balance\Bbtn_on.png" PushImage="gui\special\battlefiled_balance\Bbtn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="350" Top="594" Width="123" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_wudao_apply_4" Font="font_name_tittle" AutoSize="true" />
+                <event on_click="on_btn_agree_click" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="18" Top="52" Width="70" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_wudao_common_1" Font="font_main" />
+            </control>
+            <control name="btn_clear" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_balance\Bbtn_out.png" FocusImage="gui\special\battlefiled_balance\Bbtn_on.png" PushImage="gui\special\battlefiled_balance\Bbtn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="594" Width="123" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_wudao_apply_3" Font="font_name_tittle" AutoSize="true" />
+                <event on_click="on_btn_clear_click" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="170" Top="52" Width="70" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_wudao_common_2" Font="font_main" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="284" Top="52" Width="70" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_wudao_invite_5" Font="font_main" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="372" Top="52" Width="70" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_wudao_apply_5" Font="font_main" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Top="72" Width="474" Height="8" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Font="font_main" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+            </control>
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="137" Top="10" Width="200" Height="22" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Text="@ui_wudao_apply_1" Font="font_playername" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="448" Top="10" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

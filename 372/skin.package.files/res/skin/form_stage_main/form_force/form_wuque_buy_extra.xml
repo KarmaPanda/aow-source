@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_force\form_wuque_buy_extra" init="main_form_init">
+        <prop ShowGrid="true" Left="80" Top="25" Width="470" Height="318" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="93" Top="52" Width="350" Height="254" ShadowColor="0,0,0,0" Text="groupbox_1" DrawMode="ExpandV" BackImage="gui\special\smzb\huawuque_guj.png" />
+            <control name="btn_buy" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\smzb\anniu_out.png" FocusImage="gui\special\smzb\anniu_on.png" PushImage="gui\special\smzb\anniu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="248" Top="216" Width="93" Height="29" ForeColor="255,255,249,194" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_huawuque_guj_001" Font="font_btn" AutoSize="true" />
+                <event on_click="on_btn_buy_click" />
+            </control>
+            <control name="mltbox_yinka" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,206,26" LineHeight="17" HtmlText="@ui_wuque_buy_own" ScrollSize="17" Left="18" Top="219" Width="206" Height="26" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_money" />
+            </control>
+            <control name="ipt_buy" entity="Edit" script="" init="">
+                <prop OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="0,0,0,128" Caret="Default" Left="-95" Top="174" Width="70" Height="20" ForeColor="255,29,246,0" ShadowColor="0,0,0,0" HAnchor="Center" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\imagegrid\icon_item.png" />
+                <event on_changed="on_ipt_buy_changed" />
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="112" Top="55" Width="142" Height="16" ForeColor="255,244,224,0" ShadowColor="0,0,0,0" Text="@ui_huawuque_guj_002" Font="font_text_chat" />
+            </control>
+            <control name="lbl_nums" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="256" Top="105" Width="80" Height="16" ForeColor="255,255,249,194" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_btn" />
+            </control>
+            <control name="imagegrid_1" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="70" GridWidth="70" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" ShowMouseDownState="false" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="51" Top="56" Width="72" Height="72" BackColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                <event on_mouseout_grid="on_imagegrid_1_mouseout_grid" on_mousein_grid="on_imagegrid_1_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_left_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="12" Top="144" Width="80" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_wuque_buy_001" Font="font_money" />
+            </control>
+            <control name="mltbox_price_total" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,249,194" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,158,22" LineHeight="17" HtmlText="@ui_wuque_buy_total" ScrollSize="17" Left="162" Top="175" Width="158" Height="22" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_money" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="324" Top="5" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="mltbox_price" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,249,194" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,174,23" LineHeight="18" HtmlText="@ui_wuque_buy_price" ScrollSize="17" Left="144" Top="77" Width="174" Height="23" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_money" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="14" Top="176" Width="56" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_huawuque_guj_003" Font="font_money" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="144" Top="104" Width="80" Height="16" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_huawuque_guj_004" Font="font_money" />
+            </control>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="205" Top="52" Width="115" Height="30" ForeColor="255,255,249,194" ShadowColor="0,0,0,0" Text="@ui_huawuque_guj_005" Font="font_text" />
+        </control>
+    </control>
+</form>

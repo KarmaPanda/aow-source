@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_hire_shop\form_hire_shop_additem" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="29" Top="29" Width="430" Height="478" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="19" Top="150" Width="390" Height="130" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+        </control>
+        <control name="lbl_put" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="38" Top="160" Width="60" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_lable1" Font="font_text" />
+        </control>
+        <control name="grid_put" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,0,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="0,0,0,0" ViewRect="0,0,48,48" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item2.png" GridBackOffsetX="-4" GridBackOffsetY="-3" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="50" Top="190" Width="38" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_grid_put_select_changed" on_mousein_grid="on_grid_put_mousein_grid" on_rightclick_grid="on_grid_put_right_click" on_mouseout_grid="on_grid_put_mouseout_grid" />
+        </control>
+        <control name="lbl_price" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="144" Top="160" Width="30" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_lable2" Font="font_text" />
+        </control>
+        <control name="ipt_price_ding" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="9999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="136" Top="184" Width="55" Height="28" ForeColor="255,228,109,10" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="ipt_price_liang" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="224" Top="184" Width="55" Height="28" ForeColor="255,0,176,80" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="ipt_price_wen" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" MaxLength="4" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="320" Top="184" Width="55" Height="28" ForeColor="255,147,123,99" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="187" Width="22" Height="22" ForeColor="255,228,109,10" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_ding" Font="font_text" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="187" Width="22" Height="22" ForeColor="255,0,176,80" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_liang" Font="font_text" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="376" Top="187" Width="22" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_wen" Font="font_text" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="135" Top="220" Width="30" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_lable3" Font="font_text" />
+        </control>
+        <control name="ipt_cost_ding" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" MaxDigit="9999" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="136" Top="244" Width="55" Height="28" ForeColor="255,228,109,10" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="ipt_cost_liang" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" MaxDigit="99" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="224" Top="244" Width="55" Height="28" ForeColor="255,0,176,80" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="ipt_cost_wen" entity="Edit" script="" init="">
+            <prop ReadOnly="true" OnlyDigit="true" MaxDigit="99" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="312" Top="244" Width="55" Height="28" ForeColor="255,147,123,99" BackColor="0,255,255,255" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="247" Width="22" Height="22" ForeColor="255,228,109,10" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_ding" Font="font_text" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="247" Width="22" Height="22" ForeColor="255,0,176,80" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_liang" Font="font_text" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="373" Top="247" Width="22" Height="22" ForeColor="255,128,101,74" ShadowColor="0,255,255,255" Text="@ui_shangpu_shezhi_wen" Font="font_text" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="240" Width="62" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_chushou" Font="font_main" TabStop="true" NoFrame="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="btn_ShouTan" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="206" Top="443" Width="121" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shangpu_shoutan" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_ShouTan_click" />
+        </control>
+        <control name="btn_ChuTan" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="328" Top="443" Width="96" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shangpu_chutan" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_ChuTan_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="24" Width="80" Height="80" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="112" Top="192" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+        </control>
+        <control name="lbl_10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="112" Top="252" Width="22" Height="13" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yyb.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="30" Top="295" Width="382" Height="126" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="lbl_28" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Top="9" Width="54" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_offline_form_tanwei_name" Font="font_text" />
+            </control>
+            <control name="ipt_name" entity="Edit" script="" init="">
+                <prop MaxLength="10" TextOffsetX="4" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" Left="114" Top="-58" Width="254" Height="30" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,255,255,255" VAnchor="Center" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            </control>
+            <control name="lbl_29" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Top="49" Width="54" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_offline_form_tanwei_yaohe" Font="font_text" />
+            </control>
+            <control name="groupbox_2" entity="GroupBox" script="" init="">
+                <prop Left="114" Top="48" Width="254" Height="64" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_line\mibox_2.png" />
+                <control name="ipt_yaohe" entity="RichEdit" script="" init="">
+                    <prop ViewRect="4,0,234,62" ChangedEvent="true" MaxLength="31" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" Caret="Default" LineHeight="18" ScrollSize="14" HasVScroll="true" Top="1" Width="254" Height="62" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,255,255,255" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_changed="on_ipt_yaohe_changed" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="14" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="313" Top="123" Width="80" Height="16" ShadowColor="0,0,0,0" />
+            </control>
+        </control>
+        <control name="btn_change" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="4" Top="443" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xiugai" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_change_click" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="412" Width="414" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_shangpu_xiugai" Font="font_text_figure" />
+        </control>
+        <control name="lbl_14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="19" Top="10" Width="390" Height="130" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_sub.png" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,97,67,37" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,366,102" LineHeight="17" HtmlText="@ui_shangpu_shezhi_desc" ScrollSize="17" Left="30" Top="32" Width="366" Height="102" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" NoFrame="true" />
+        </control>
+        <control name="lbl_15" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="134" Width="160" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shangpu_shezhi_shuoming" Font="font_text_title1" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+    </control>
+</form>

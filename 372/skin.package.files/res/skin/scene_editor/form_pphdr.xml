@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_pphdr" init="main_form_init">
+        <prop Left="133" Top="213" Width="342" Height="294" BackColor="150,152,155,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="80" Top="248" Width="78" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="184" Top="248" Width="78" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="8" Width="94" Height="22" Text="HDR参数配置" />
+        </control>
+        <control name="bloom_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="144" Width="94" Height="22" Text="开启Bloom效果" TabStop="true" />
+            <event on_checked_changed="bloom_checked_changed" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="176" Width="38" Height="16" Text="亮度:" />
+        </control>
+        <control name="bloom_brightness_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="176" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="bloom_brightness_edit_lost_focus" on_drag="bloom_brightness_edit_drag" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="176" Top="176" Width="54" Height="16" Text="发光权重:" />
+        </control>
+        <control name="bloom_glowweight_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="232" Top="176" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="bloom_glowweight_edit_lost_focus" on_drag="bloom_glowweight_edit_drag" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="208" Width="54" Height="16" Text="抖动(x):" />
+        </control>
+        <control name="bloom_dither1x_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="208" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="bloom_dither1x_edit_lost_focus" on_drag="bloom_dither1x_edit_drag" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="176" Top="208" Width="54" Height="16" Text="抖动(y):" />
+        </control>
+        <control name="bloom_dither1y_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="232" Top="208" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="bloom_dither1y_edit_lost_focus" on_drag="bloom_dither1y_edit_drag" />
+        </control>
+        <control name="hdr_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="48" Width="94" Height="22" Text="开启HDR效果" TabStop="true" />
+            <event on_checked_changed="hdr_checked_changed" />
+        </control>
+        <control name="avelumscale_lable" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="80" Width="54" Height="22" Text="曝光期望:" />
+        </control>
+        <control name="exposurescale_lable" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="176" Top="80" Width="54" Height="22" Text="曝光缩放:" />
+        </control>
+        <control name="exposureadd_lable" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="112" Width="54" Height="22" Text="光圈附加:" />
+        </control>
+        <control name="exposure_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="80" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="exposure_edit_lost_focus" on_drag="exposure_edit_drag" />
+        </control>
+        <control name="gaussianscale_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="232" Top="80" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="gaussianscale_edit_lost_focus" on_drag="gaussianscale_edit_drag" />
+        </control>
+        <control name="exposureadd_edit" entity="Edit" script="" init="">
+            <prop DragEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="112" Width="78" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="exposureadd_edit_lost_focus" on_drag="exposureadd_edit_drag" />
+        </control>
+    </control>
+</form>

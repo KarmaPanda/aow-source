@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_relation_enchou" init="main_form_init">
+        <prop ShowGrid="true" Left="87" Top="64" Width="706" Height="502" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Left="4" Top="33" Width="698" Height="31" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area.png" />
+        </control>
+        <control name="groupbox_sub" entity="GroupBox" script="" init="">
+            <prop Left="4" Top="61" Width="175" Height="438" BackColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="groupbox_info" entity="GroupBox" script="" init="">
+            <prop Left="180" Top="63" Width="521" Height="438" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            <control name="mltbox_intro" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="8,8,475,60" LineHeight="17" ScrollSize="14" HasVScroll="true" Left="18" Top="15" Width="495" Height="67" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_sns_main_1" NoFrame="true" DrawMode="Expand" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="39" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_prog" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="8,8,476,110" LineHeight="17" ScrollSize="14" HasVScroll="true" Left="42" Top="574" Width="485" Height="114" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_text.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="8,8,483,140" LineHeight="17" ScrollSize="14" HasVScroll="true" Left="12" Top="278" Width="501" Height="147" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_sns_main_1" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="119" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="btn_func" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal2_out.png" FocusImage="gui\common\button\btn_normal2_on.png" PushImage="gui\common\button\btn_normal2_down.png" DisableImage="gui\common\button\btn_normal2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="330" Top="238" Width="176" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" NoFrame="true" DrawMode="Expand" />
+                <event on_click="on_btn_func_click" />
+            </control>
+            <control name="rbtn_rule" entity="RadioButton" script="" init="">
+                <prop Checked="true" BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_bg_out.png" FocusImage="gui\common\checkbutton\rbtn_bg_on.png" CheckedImage="gui\common\checkbutton\rbtn_bg_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="21" Top="254" Width="118" Height="26" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_karmahelp_rule" Font="font_treeview" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_info_changed" />
+            </control>
+            <control name="rbtn_notice" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_bg_out.png" FocusImage="gui\common\checkbutton\rbtn_bg_on.png" CheckedImage="gui\common\checkbutton\rbtn_bg_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="146" Top="254" Width="118" Height="26" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_karmahelp_attention" Font="font_treeview" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_rbtn_info_changed" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="92" Width="517" Height="4" ShadowColor="0,0,0,0" BackImage="gui\common\form_line\line_bg4.png" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="246" Width="517" Height="4" ShadowColor="0,0,0,0" BackImage="gui\common\form_line\line_bg4.png" />
+            </control>
+            <control name="lbl_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" LblLimitWidth="true" Left="18" Top="184" Width="94" Height="30" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_sns_event" />
+            </control>
+            <control name="lbl_7" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="122" Top="110" Width="390" Height="124" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_list3.png" />
+            </control>
+            <control name="lbl_award" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="178" Top="182" Width="326" Height="16" ForeColor="255,128,25,46" ShadowColor="0,0,0,0" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_award_text" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="130" Top="182" Width="80" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_karmahelp_award" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_open_time" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="242" Top="150" Width="266" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_open_time_text" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="130" Top="150" Width="118" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_karmahelp_opentime" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_limit" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="338" Top="118" Width="174" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_limit_text" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="306" Top="118" Width="30" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_karmahelp_limit" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_difficulty" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="202" Top="118" Width="118" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_difficulty_text" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="130" Top="118" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_karmahelp_difficulty" Font="font_sns_main_1" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="30" Top="110" Width="68" Height="68" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_sub.png" />
+            </control>
+            <control name="lbl_pic" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="34" Top="113" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+            <control name="mlt_name" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,110,46" LineHeight="17" ScrollSize="17" Left="10" Top="185" Width="110" Height="46" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text_figure" NoFrame="true" />
+            </control>
+            <control name="mlt_award" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,128,25,46" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,308,44" LineHeight="17" ScrollSize="17" Left="194" Top="183" Width="308" Height="44" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_treeview" NoFrame="true" />
+            </control>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" DisableImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="676" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="28" Width="698" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="273" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="262" Top="5" Width="190" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_karmahelp_title" Font="font_title" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="174" Top="61" Width="11" Height="435" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+        </control>
+        <control name="rbtn_main_template" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\rbtn_top_out.png" FocusImage="gui\common\checkbutton\rbtn_top_on.png" CheckedImage="gui\common\checkbutton\rbtn_top_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-4" Top="541" Width="78" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_sns_event" TabStop="true" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="rbtn_sub_template" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\treeview\tree_1_out.png" FocusImage="gui\common\treeview\tree_1_on.png" CheckedImage="gui\common\treeview\tree_4_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,255,255" PushColor="255,255,255,255" DisableColor="0,0,0,0" Left="70" Top="549" Width="166" Height="30" ForeColor="255,197,184,159" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Font="font_main" TabStop="true" DrawMode="Expand" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-10" Top="-3" Width="55" Height="55" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\btn_main\btn_enchou_out_36.png" />
+        </control>
+        <control name="cbb_scene" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="26" DropDownWidth="120" DropDownHeight="70" OnlySelect="true" Left="430" Top="33" Width="134" Height="26" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" MaxLength="16" TextOffsetX="2" Align="Center" SelectForeColor="255,76,61,44" SelectBackColor="255,204,204,204" Caret="Default" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" DrawMode="Expand" BackImage="gui\common\combobox\bg_select_out.png" />
+            </subor>
+            <subor name="DropButton">
+                <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="12" SelectForeColor="255,197,184,159" SelectBackColor="255,255,255,255" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="14" ForeColor="255,76,61,44" LineColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list1.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="cbb_relation" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="26" DropDownWidth="120" DropDownHeight="70" OnlySelect="true" Left="566" Top="33" Width="134" Height="26" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" MaxLength="16" TextOffsetX="2" Align="Center" SelectForeColor="255,76,61,44" SelectBackColor="255,204,204,204" Caret="Default" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" Cursor="WIN_IBEAM" DrawMode="Expand" BackImage="gui\common\combobox\bg_select_out.png" />
+            </subor>
+            <subor name="DropButton">
+                <prop NormalImage="gui\common\combobox\btn_down1_out.png" FocusImage="gui\common\combobox\btn_down1_on.png" PushImage="gui\common\combobox\btn_down1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="12" SelectForeColor="255,197,184,159" SelectBackColor="255,255,255,255" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="14" ForeColor="255,76,61,44" LineColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\common\combobox\bg_list1.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_wuxue\form_skillbook_preview" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Left="20" Top="30" Width="457" Height="489" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_main" entity="GroupBox" script="" init="">
+            <prop Left="5" Width="448" Height="478" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="48" Top="20" Width="396" Height="462" BackColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\wuxue\skillbook\skillbook_preview.png" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out_1.png" FocusImage="gui\common\button\btn_close_on_1.png" PushImage="gui\common\button\btn_close_down_1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="401" Top="17" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="btn_preview" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\wuxue\skillbook\preview-out.png" FocusImage="gui\special\wuxue\skillbook\preview-on.png" PushImage="gui\special\wuxue\skillbook\preview-down.png" DisableImage="gui\special\wuxue\skillbook\preview-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="140" Top="439" Width="82" Height="31" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_yulan" Font="font_btn" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_preview_click" />
+            </control>
+            <control name="btn_study" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\wuxue\skillbook\preview-out.png" FocusImage="gui\special\wuxue\skillbook\preview-on.png" PushImage="gui\special\wuxue\skillbook\preview-down.png" DisableImage="gui\special\wuxue\skillbook\preview-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="260" Top="439" Width="82" Height="31" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_xuexi" Font="font_btn" NoFrame="true" AutoSize="true" />
+                <event on_click="on_btn_study_click" />
+            </control>
+            <control name="lbl_book_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="127" Top="69" Width="65" Height="182" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="groupbox_fenye" entity="GroupBox" script="" init="">
+                <prop Top="20" Width="94" Height="430" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="rbtn_1" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="24" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_1" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_2" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="56" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_2" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_3" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="88" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_3" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_4" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="120" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_4" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_5" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="152" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_5" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_6" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="184" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_6" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_7" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="216" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_7" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_8" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="248" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_8" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_9" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="280" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_9" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_10" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="312" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_10" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_11" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="9" Top="344" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_11" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+                <control name="rbtn_12" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\wuxue\skillbook\page-out.png" FocusImage="gui\special\wuxue\skillbook\page-on.png" CheckedImage="gui\special\wuxue\skillbook\page-down.png" DisableImage="gui\special\wuxue\skillbook\page-jinyong.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="255,204,204,204" Left="8" Top="376" Width="85" Height="31" ForeColor="255,76,61,44" BackColor="255,192,192,192" ShadowColor="0,255,0,0" Text="@ui_wuxue_book_12" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                </control>
+            </control>
+        </control>
+    </control>
+</form>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_helper\form_regulations_tips" entity="Form" script="form_stage_main\form_helper\form_regulations_tips" init="on_main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="392" Height="303" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="363" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="216" Top="270" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" Text="@ui_system_cancel" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_cancel_click" />
+        </control>
+        <control name="lbl_line1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="384" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_Expand" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="384" Height="237" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="btn_read" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="301" Top="270" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" Text="@ ui_life_yuedu" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_read_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="149" Top="9" Width="80" Height="16" ForeColor="255,255,255,255" Text="@ui_kaiqi" Font="font_title" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="119" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="image_control_grid" entity="ImageControlGrid" script="" init="">
+            <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="1" MultiTextBoxTop="33" SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,286,129" MaxSize="-1" RowNum="2" ClomnNum="2" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="1" MouseDownAlpha="128" Solid="false" Left="52" Top="50" Width="286" Height="110" ShadowColor="0,0,0,0" Text="ImageControlGrid1" NoFrame="true" />
+            <event on_select_changed="on_image_control_grid_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="MultiTextBox1">
+                <prop ViewRect="0,0,48,20" LineHeight="15" ScrollSize="17" Width="48" Height="20" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_main" />
+            </subor>
+        </control>
+        <control name="mltbox_info" entity="MultiTextBox" script="" init="">
+            <prop ViewRect="0,0,358,70" LineHeight="13" ScrollSize="17" Left="15" Top="178" Width="358" Height="70" ShadowColor="0,0,0,0" Text="mltbox_1" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_line\ibox_1.png" />
+        </control>
+        <control name="lbl_line2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="264" Width="384" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

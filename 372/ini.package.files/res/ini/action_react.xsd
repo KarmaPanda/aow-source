@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by ylp (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="StateChange" type="StateChange"/>
+				<xs:element name="StateSame">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="StateSame">
+								<xs:choice maxOccurs="unbounded">
+									<xs:element name="SubState" type="SubState"/>
+								</xs:choice>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="StateChange">
+		<xs:annotation>
+			<xs:documentation>状态动作改变处理项</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ReAct" type="ReAct"/>
+		</xs:choice>
+		<xs:attribute name="src" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>原始状态动作名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="dest">
+			<xs:annotation>
+				<xs:documentation>目标状态动作名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ReAct">
+		<xs:annotation>
+			<xs:documentation>针对具体某个动作的处理</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="action" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>响应此状态改变的动作（非循环动作）名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="mode" type="xs:short" use="optional" default="0">
+			<xs:annotation>
+				<xs:documentation>处理方式
+				0,	//不处理
+				1,	//直接删除
+				2,	//转成上半身动作
+				3,	//用新动作替换
+				4,	//通过函数处理
+		</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="sync_frame" type="xs:boolean" use="optional" default="true">
+			<xs:annotation>
+				<xs:documentation>如果是动作替换是否同步帧</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="function" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>如果是函数处理，则直接定函数名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="replace_action" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>如果是动作替换则指定动作名</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="StateSame">
+		<xs:annotation>
+			<xs:documentation>不同名，但同样处理的原状态动作名</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="state" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>和原状态动作一致处理的动作名称</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="SubState">
+		<xs:annotation>
+			<xs:documentation>不同名，但同样处理的原状态动作名</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>和原状态动作一致处理的动作名称</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

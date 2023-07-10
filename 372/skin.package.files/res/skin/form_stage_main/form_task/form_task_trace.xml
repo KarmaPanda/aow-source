@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<control name="main_form" entity="Form" script="form_stage_main\form_task\form_task_trace" init="main_form_init">
+		<prop LimitInScreen="true" ShowGrid="true" Left="-335" Top="-189" Width="275" Height="374" BackColor="0,255,255,255" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Right" TestTrans="true" NoFrame="true" DrawMode="Expand"/>
+		<event on_open="on_main_form_open" on_close="on_main_form_close"/>
+		<control name="groupbox_form" entity="GroupBox" script="" init="">
+			<prop Top="3" Width="270" Height="334" BackColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" NoFrame="true" DrawMode="Expand"/>
+			<event on_lost_capture="on_groupbox_form_lost_capture" on_get_capture="on_groupbox_form_get_capture"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="260" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0"/>
+			</subor>
+			<control name="lbl_back" entity="Label" script="" init="">
+				<prop RefCursor="WIN_HELP" Left="4" Top="22" Width="254" Height="302" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\mainform\chat\bg_main.png"/>
+			</control>
+			<control name="mltbox_trace_info" entity="MultiTextBox" script="" init="">
+				<prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="10,0,240,290" LineHeight="21" HtmlText="1231231231212312312312312312111231231231231233" LineTextAlign="Center" ScrollSize="18" HasVScroll="true" Left="2" Top="21" Width="254" Height="290" BackColor="0,255,255,255" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" Font="font_conten_tasktrace" NoFrame="true" DrawMode="Expand" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_get_capture="on_mltbox_trace_info_get_capture" on_select_item_change="on_mltbox_trace_info_select_item_change" on_mousein_image="on_mltbox_trace_info_mousein_image" on_mouseout_image="on_mltbox_trace_info_mouseout_image" on_mouseout_hyperlink="on_mltbox_trace_info_mouseout_hyperlink" on_click_hyperlink="on_mltbox_trace_info_click_hyperlink" on_mousein_hyperlink="on_mltbox_trace_info_mousein_hyperlink" on_lost_capture="on_mltbox_trace_info_lost_capture" on_click_image="on_mltbox_trace_info_click_image"/>
+				<subor name="VScrollBar">
+					<prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png"/>
+					<subor name="DecButton">
+						<prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow"/>
+					</subor>
+					<subor name="IncButton">
+						<prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow"/>
+					</subor>
+					<subor name="TrackButton">
+						<prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="8" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand"/>
+					</subor>
+				</subor>
+			</control>
+		</control>
+		<control name="groupbox_control" entity="GroupBox" script="" init="">
+			<prop Left="185" Top="3" Width="90" Height="25" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="80" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0"/>
+			</subor>
+			<control name="btn_minimize" entity="Button" script="" init="">
+				<prop NormalImage="gui\common\button\btn_minimum_out_9.png" FocusImage="gui\common\button\btn_minimum_on_9.png" PushImage="gui\common\button\btn_minimum_down_9.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="45" Top="5" Width="18" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_tips_zuixiaohua" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_btn_minimize_click"/>
+			</control>
+			<control name="btn_fix" entity="Button" script="" init="">
+				<prop NormalImage="gui\common\button\btn_unlock_out_6.png" FocusImage="gui\common\button\btn_unlock_on_6.png" PushImage="gui\common\button\btn_unlock_down_6.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="5" Top="5" Width="18" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_tips_suoding" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_btn_fix_click"/>
+			</control>
+			<control name="btn_alpha" entity="Button" script="" init="">
+				<prop NormalImage="gui\common\button\btn_alpha_out.png" FocusImage="gui\common\button\btn_alpha_on.png" PushImage="gui\common\button\btn_alpha_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="25" Top="5" Width="18" Height="18" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HintText="@ui_tips_toumingdu" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_btn_alpha_click"/>
+			</control>
+			<control name="btn_unfix" entity="Button" script="" init="">
+				<prop NormalImage="gui\common\button\btn_lock_out_6.png" FocusImage="gui\common\button\btn_lock_on_6.png" PushImage="gui\common\button\btn_lock_down_6.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="5" Top="5" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_jiesuo" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5"/>
+				<event on_click="on_btn_unfix_click"/>
+			</control>
+		</control>
+		<control name="groupbox_sift" entity="GroupBox" script="" init="">
+			<prop Top="-9" Width="195" Height="35" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="185" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0"/>
+			</subor>
+			<control name="btn_left" entity="Button" script="" init="">
+				<prop NormalImage="gui\mainform\task_trace\btn_left_out.png" FocusImage="gui\mainform\task_trace\btn_left_on.png" PushImage="gui\mainform\task_trace\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="17" Width="11" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_btn_left_click"/>
+			</control>
+			<control name="btn_right" entity="Button" script="" init="">
+				<prop NormalImage="gui\mainform\task_trace\btn_right_out.png" FocusImage="gui\mainform\task_trace\btn_right_on.png" PushImage="gui\mainform\task_trace\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="172" Top="17" Width="11" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_btn_right_click"/>
+			</control>
+			<control name="rbtn_all" entity="RadioButton" script="" init="">
+				<prop Checked="true" ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_trace_all" Font="font_main" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_main" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_zx" Font="font_main" TabIndex="1" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_menpai" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_mp" Font="font_main" TabIndex="4" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_adventure" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_qiyu" Font="font_main" TabIndex="8" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_clone" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_fb" Font="font_main" TabIndex="6" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_life" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_life" Font="font_main" TabIndex="3" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_side" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_zhix" Font="font_main" TabIndex="5" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_guide" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_guide" Font="font_main" TabIndex="9" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_enyuan" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_enyuan" Font="font_main" TabIndex="7" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_bagua" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_bagua" Font="font_main" TabIndex="10" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_shimen" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_shimen" Font="font_main" TabIndex="2" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_war" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_war" Font="font_main" TabIndex="11" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_force" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_force" Font="font_main" TabIndex="12" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_newschool" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_newschool" Font="font_main" TabIndex="13" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_newterritory" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_newterritory" Font="font_main" TabIndex="14" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_shijia" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_shijia" Font="font_main" TabIndex="15" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+			</control>
+			<control name="rbtn_waiyu" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="20" Top="9" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_waiyu" Font="font_main" TabIndex="16" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+			</control>
+			<control name="rbtn_mzyy" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_mzyy" Font="font_main" TabIndex="17" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+			</control>
+			<control name="rbtn_wljs" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jnyy" Font="font_main" TabIndex="18" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+			</control>
+			<control name="rbtn_xbqzj" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_xbqzj" Font="font_main" TabIndex="19" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+			</control>
+			<control name="rbtn_yyc" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_yyc" Font="font_main" TabIndex="20" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_city_zx" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_city_zx" Font="font_main" TabIndex="21" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_city_yl" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_city_yl" Font="font_main" TabIndex="22" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_city_gs" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_city_gs" Font="font_main" TabIndex="23" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+			<control name="rbtn_city_jtg" entity="RadioButton" script="" init="">
+				<prop ClickEvent="true" BoxSize="12" NormalImage="gui\mainform\chat\btn_subentry_out_3.png" FocusImage="gui\mainform\chat\btn_subentry_on_3.png" CheckedImage="gui\mainform\chat\btn_subentry_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="18" Top="10" Width="122" Height="26" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_task_city_jtg" Font="font_main" TabIndex="24" TabStop="true" NoFrame="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7"/>
+				<event on_click="on_rbtn_click"/>
+			</control>
+		</control>
+		<control name="groupbox_alpha" entity="GroupBox" script="" init="">
+			<prop Left="116" Top="-2" Width="158" Height="30" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\trackbar\tb_1_bg.png"/>
+			<subor name="TitleBar">
+				<prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="148" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0"/>
+			</subor>
+			<control name="tbar_alpha" entity="TrackBar" script="" init="">
+				<prop Orient="Horizon" Maximum="160" Left="24" Top="8" Width="110" Height="15" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\trackbar\tb_1_cao.png"/>
+				<event on_value_changed="on_tbar_alpha_value_changed" on_drag_leave="on_tbar_alpha_drag_leave"/>
+				<subor name="TrackButton">
+					<prop NormalImage="gui\common\trackbar\tb_1_out.png" FocusImage="gui\common\trackbar\tb_1_on.png" PushImage="gui\common\trackbar\tb_1_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow"/>
+				</subor>
+			</control>
+		</control>
+	</control>
+</form>

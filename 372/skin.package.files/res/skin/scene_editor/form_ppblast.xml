@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="scene_editor\form_ppblast" init="main_form_init">
+        <prop Left="29" Top="61" Width="398" Height="230" BackColor="150,152,155,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="112" Top="192" Width="78" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="208" Top="192" Width="78" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="8" Width="166" Height="22" Text="PPBlast（爆炸）效果参数" />
+        </control>
+        <control name="ppblast_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="48" Width="166" Height="22" Text="开启PPBlast（爆炸）效果" TabStop="true" />
+            <event on_checked_changed="ppblast_checked_changed" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="88" Width="46" Height="16" Text="强度" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="88" Width="38" Height="22" Text="颜色" />
+        </control>
+        <control name="blast_color_label" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="240" Top="88" Width="22" Height="22" NoFrame="false" />
+        </control>
+        <control name="blast_color_btn" entity="Button" script="" init="">
+            <prop Left="280" Top="88" Width="46" Height="22" Text="设置" TabStop="true" />
+            <event on_click="blast_color_btn_click" />
+        </control>
+        <control name="intensity_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="88" Width="80" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="intensity_floatedit_drag" on_changed="intensity_floatedit_changed" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="22" Top="131" Width="54" Height="16" Text="生命周期" />
+        </control>
+        <control name="lifetime_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="128" Width="80" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="lifetime_floatedit_drag" on_changed="lifetime_floatedit_changed" />
+        </control>
+    </control>
+</form>

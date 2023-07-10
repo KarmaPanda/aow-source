@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_item_alchemy" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="-419" Top="109" Width="542" Height="438" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" NoFrame="true" AutoSize="true" />
+        <event on_open="on_form_open" on_close="on_form_close" />
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="20" Top="8" Width="490" Height="390" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="40" Width="483" Height="353" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\ronghe\bg.png" />
+        </control>
+        <control name="goods_grid" entity="ImageGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,0,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="6,6,245,325" MaxSize="-1" RowNum="6" ClomnNum="5" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-4" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="264" Top="43" Width="238" Height="310" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" />
+            <event on_select_changed="on_goods_grid_select_changed" on_mousein_grid="on_goods_grid_mousein_grid" on_rightclick_grid="on_goods_grid_rightclick_grid" on_mouseout_grid="on_goods_grid_mouseout_grid" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="484" Top="14" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="164" Top="17" Width="182" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_zhenqi1" Font="font_title" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="38" Top="57" Width="118" Height="16" ForeColor="255,156,156,156" ShadowColor="0,0,0,0" Text="@ui_zhenqi4" Font="font_playername" />
+        </control>
+        <control name="lbl_per" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="163" Top="58" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="100%" Font="font_playername" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="-40" Width="110" Height="16" ForeColor="255,156,156,156" ShadowColor="0,0,0,0" Text="@ui_zhenqi2" Font="font_sns_btn_2" />
+        </control>
+        <control name="pbar_per" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="100" WidthGap="2" HeightGap="2" ProgressImage="gui\special\ronghe\bg_pbr_2.png" ProgressMode="BottomToTop" Left="70" Top="93" Width="143" Height="245" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\ronghe\bg_pbr_2.png" />
+        </control>
+        <control name="cbtn_guanyin" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="40" Top="592" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_zhenqi_2" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_cbtn_guanyin_checked_changed" />
+        </control>
+        <control name="cbtn_suiyin" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="40" Top="560" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_zhenqi_1" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_cbtn_suiyin_checked_changed" />
+        </control>
+        <control name="lbl_price" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="30" Top="367" Width="94" Height="22" ForeColor="255,156,156,156" ShadowColor="0,0,0,0" Text="@ui_zhenqi5" Font="font_playername" />
+        </control>
+        <control name="lbl_guanyin" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="155" Top="370" Width="80" Height="16" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Text="guanyin" Font="font_playername" />
+        </control>
+        <control name="lbl_suiyin" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="96" Top="576" Width="80" Height="16" ForeColor="255,156,156,156" ShadowColor="0,0,0,0" Text="suiyin" Font="font_playername" />
+        </control>
+        <control name="lbl_money1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="128" Top="374" Width="18" Height="11" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\yb.png" />
+        </control>
+        <control name="lbl_money2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="64" Top="560" Width="21" Height="19" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\money\suiyin.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="10" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="23" Top="35" Width="483" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="360" Width="478" Height="27" ShadowColor="0,0,0,0" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="384" Top="362" Width="123" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_zhenqi6" Font="font_btn" TabStop="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="23" Top="357" Width="483" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_cancel" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="371" Top="362" Width="134" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_zhenqi7" Font="font_btn" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_cancel_click" />
+        </control>
+    </control>
+</form>

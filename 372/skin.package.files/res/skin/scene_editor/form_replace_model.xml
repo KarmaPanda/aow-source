@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_replace_model" init="main_form_init">
+        <prop ShowGrid="true" Left="109" Top="117" Width="390" Height="190" BackColor="150,152,155,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="16" Width="120" Height="22" ShadowColor="0,0,0,0" Text="批量替换模型" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="56" Width="62" Height="22" ShadowColor="0,0,0,0" Text="旧模型：" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="88" Width="62" Height="22" ShadowColor="0,0,0,0" Text="新模型：" />
+        </control>
+        <control name="old_model_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="96" Top="56" Width="198" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="new_model_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="96" Top="88" Width="198" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="104" Top="152" Width="80" Height="24" ShadowColor="0,0,0,0" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="200" Top="152" Width="80" Height="24" ShadowColor="0,0,0,0" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="select_btn" entity="Button" script="" init="">
+            <prop Left="304" Top="88" Width="54" Height="24" ShadowColor="0,0,0,0" Text="选择" TabStop="true" />
+            <event on_click="select_btn_click" />
+        </control>
+        <control name="only_replace_select_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="32" Top="120" Width="326" Height="24" ShadowColor="0,0,0,0" Text="仅替换选择的模型，且非指定资源不替换" TabStop="true" />
+        </control>
+    </control>
+</form>

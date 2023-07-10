@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_create\form_book_introduce" init="main_form_init">
+        <prop ShowGrid="true" Left="21" Top="29" Width="800" Height="600" BackColor="0,255,255,255" />
+        <event on_open="on_form_open" on_close="on_form_close" />
+        <control name="lbl_book" entity="Animation" script="" init="">
+            <prop IsAutoClip="true" AnimationImage="book_t" PlayMode="2" Left="-384" Top="16" Width="206" Height="278" HAnchor="Center" />
+        </control>
+        <control name="mltbox_introduce" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,87" Transparent="true" ViewRect="0,0,100,200" ScrollSize="17" Left="550" Top="40" Width="200" Height="400" ForeColor="255,255,255,255" Font="FZHKJT24_0" NoFrame="true" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop Align="Right" NormalImage="gui\language\chineses\qr-out.png" FocusImage="gui\language\chineses\qr-on.png" PushImage="gui\language\chineses\qr-down.png" Left="-112" Top="-112" Width="42" Height="59" VAnchor="Bottom" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+        <control name="btn_back" entity="Button" script="" init="">
+            <prop Align="Right" NormalImage="gui\language\chineses\fh-out.png" FocusImage="gui\language\chineses\fh-on.png" PushImage="gui\language\chineses\fh-down.png" Left="-56" Top="-112" Width="42" Height="59" VAnchor="Bottom" HAnchor="Right" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="on_btn_back_click" />
+        </control>
+        <control name="lbl_back" entity="GroupBox" script="" init="">
+            <prop Transparent="true" BlendAlpha="0" Width="800" Height="600" ForeColor="0,0,0,0" BackColor="255,0,0,0" Enabled="false" TestTrans="true" NoFrame="true" />
+        </control>
+        <control name="lbl_up" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="800" Height="50" DrawMode="FitWindow" BackImage="gui\loading\scene_change_up.png" />
+        </control>
+        <control name="lbl_down" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="550" Width="800" Height="50" DrawMode="FitWindow" BackImage="gui\loading\scene_change_down.png" />
+        </control>
+    </control>
+</form>

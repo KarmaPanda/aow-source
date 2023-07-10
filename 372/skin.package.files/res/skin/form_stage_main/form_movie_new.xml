@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_movie_new" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Width="800" Height="600" BackColor="0,255,255,255" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="mltbox_up" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" ViewRect="0,0,1024,74" LineHeight="35" ScrollSize="17" Solid="true" Width="1024" Height="74" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Font="FZHKJT30" NoFrame="true" DrawMode="ExpandV" BackImage="gui\loading\scene_change_up.png" />
+        </control>
+        <control name="mltbox_down" entity="MultiTextBox" script="" init="">
+            <prop VAlign="Center" TextColor="255,255,255,255" Transparent="true" ViewRect="10,10,800,75" LineHeight="20" AutoScroll="true" LineTextAlign="Center" ScrollSize="17" HasVScroll="true" Solid="true" Top="525" Width="802" Height="74" BackColor="255,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_name" NoFrame="true" BackImage="gui\loading\scene_change_down.png" />
+            <subor name="VScrollBar">
+                <prop ForeColor="0,0,0,0" BackColor="0,224,224,224" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" ForeColor="0,0,0,0" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_top" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\task_juqing\guo_out.png" FocusImage="gui\language\ChineseS\task_juqing\guo_on.png" PushImage="gui\language\ChineseS\task_juqing\guo_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="654" Top="541" Width="51" Height="51" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_top_click" on_right_click="on_btn_top_click" />
+        </control>
+        <control name="btn_end" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\task_juqing\wan_out.png" FocusImage="gui\language\ChineseS\task_juqing\wan_on.png" PushImage="gui\language\ChineseS\task_juqing\wan_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="718" Top="542" Width="51" Height="51" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" AutoSize="true" />
+            <event on_click="on_btn_end_click" />
+        </control>
+    </control>
+</form>

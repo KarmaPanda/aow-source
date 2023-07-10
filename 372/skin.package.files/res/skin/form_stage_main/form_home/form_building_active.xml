@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_home\form_building_active" init="main_form_init">
+        <prop ShowGrid="true" Left="93" Top="117" Width="550" Height="358" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="-5" Top="-8" Width="558" Height="374" ShadowColor="0,0,0,0" Text="groupbox_1" DrawMode="FitWindow" BackImage="gui\common\form_back\clone_bg1.png" />
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="253" Top="11" Width="46" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="lbl_2" Font="font_text_chat" />
+            </control>
+            <control name="gsb_item" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" Left="13" Top="294" Width="534" Height="16" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupscrollbox_1" NoFrame="true" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="525" Top="10" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="gb_model" entity="GroupBox" script="" init="">
+                <prop Left="664" Top="164" Width="128" Height="56" ShadowColor="0,0,0,0" Text="groupbox_2" NoFrame="true" BackImage="gui\special\home\home_jianzhu\bg_1a.png" />
+                <control name="ig_item" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="4,4,50,50" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="40" GridWidth="40" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="8" Top="8" Width="47" Height="47" ShadowColor="0,0,0,0" Text="imagegrid_1" DrawMode="Expand" BackImage="gui\special\home\home_jianzhu\bg_1b.png" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="lbl_name" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="56" Top="7" Width="54" Height="16" ForeColor="255,127,101,74" ShadowColor="0,0,0,0" Text="lbl_1" Font="font_sns_list" />
+                </control>
+                <control name="mltbox_count" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,211,77,25" MouseInBarColor="0,255,255,0" ViewRect="0,0,46,22" LineHeight="15" ScrollSize="17" Left="55" Top="31" Width="46" Height="22" ForeColor="255,211,77,25" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_sns_list" NoFrame="true" />
+                </control>
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="645" Top="184" Width="534" Height="94" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\lingxiao\bg_5.png" />
+            </control>
+            <control name="btn_ok" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\lingxiao\btn_hqjl_out.png" FocusImage="gui\special\lingxiao\btn_hqjl_on.png" PushImage="gui\special\lingxiao\btn_hqjl_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="181" Top="-55" Width="206" Height="52" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_home_active_ok" Font="font_title" DrawMode="ExpandH" />
+                <event on_click="on_btn_ok_click" />
+            </control>
+            <control name="mltbox_tips" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,270,92" LineHeight="18" ScrollSize="17" Left="280" Top="200" Width="270" Height="92" ForeColor="255,69,54,39" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" BackImage="gui\special\home\home_jianzhu\bg_6a.png" />
+            </control>
+            <control name="mltbox_tips2" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,270,94" LineHeight="18" HtmlText="@ui_home_building_active_tips_jihuo" ScrollSize="17" Left="13" Top="200" Width="270" Height="94" ForeColor="255,69,54,39" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" BackImage="gui\special\home\home_jianzhu\bg_6a.png" />
+            </control>
+            <control name="lbl_jh_bg_picture" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="9" Top="38" Width="542" Height="158" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+        </control>
+        <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,270,92" LineHeight="18" ScrollSize="17" Left="570" Top="149" Width="270" Height="92" ForeColor="255,69,54,39" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="啊啊啊啊" Font="font_title_tasktrace" NoFrame="true" />
+        </control>
+    </control>
+</form>

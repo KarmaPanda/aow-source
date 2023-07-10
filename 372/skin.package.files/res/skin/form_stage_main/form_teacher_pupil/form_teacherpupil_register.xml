@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_teacher_pupil\form_teacherpupil_register" init="on_main_form_init">
+        <prop ShowGrid="true" Left="69" Top="77" Width="624" Height="467" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Expand" BackImage="gui\special\shitu\shituditu2222.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_top" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" Left="-1" Top="32" Width="622" Height="407" ForeColor="255,76,61,44" BackColor="0,204,204,204" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+            <subor name="VScrollBar">
+                <prop Maximum="11" SmallChange="1" LargeChange="407" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="367" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                </subor>
+            </subor>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="1" Width="604" Height="407" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\shitu\ditua.png" />
+            </control>
+            <control name="lbl_col1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="10" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shitu_name" Font="font_text_title1" />
+            </control>
+            <control name="lbl_col3" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="296" Top="8" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shitu_chushi" Font="font_text_title1" DrawMode="Expand" />
+            </control>
+            <control name="lbl_col2" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="8" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shitu_zhuangtai" Font="font_text_title1" DrawMode="Expand" />
+            </control>
+            <control name="lbl_col4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="456" Top="8" Width="70" Height="16" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_shitu_desc" Font="font_text_title1" DrawMode="Expand" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="40" Width="598" Height="366" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            </control>
+            <control name="textgrid_list" entity="Grid" script="" init="">
+                <prop ShowComment="true" HeaderBackColor="0,255,255,255" HeaderForeColor="255,76,61,44" RowHeaderVisible="false" SelectForeColor="255,0,255,97" SelectBackColor="0,0,0,128" SelectBackDraw="gui\common\combobox\bg_select3.png" CanSelectRow="true" ColWidth="60" ColWidths="125,125,130,195" RowHeight="30" ColCount="6" ScrollSize="14" HasHScroll="true" Left="8" Top="48" Width="590" Height="262" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,255,0,0" Font="font_tip" TabStop="true" NoFrame="true" DrawMode="Expand" />
+                <event on_right_select_grid="on_textgrid_list_right_select_grid" on_select_grid="on_textgrid_list_select_grid" />
+                <subor name="HScrollBar">
+                    <prop Maximum="1" SmallChange="1" LargeChange="4" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="40" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop ButtonSize="14" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="380" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="31" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="groupscrollbox_1" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="18" Top="320" Width="600" Height="86" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DisableEnter="true" />
+                <control name="ImageControlGrid_neigong" entity="ImageControlGrid" script="" init="">
+                    <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="-10" MultiTextBoxTop="60" MultiTextBoxPos="-10,60;5,25" SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,585,90" MaxSize="-1" RowNum="1" ClomnNum="6" ShowEmpty="false" GridHeight="40" GridWidth="40" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\shitu\ditub.png" GridBackOffsetX="-26" GridBackOffsetY="-10" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" ScrollSize="18" AlwaysVScroll="true" Solid="false" Left="25" Width="569" Height="83" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                    <event on_mouseout_grid="on_ImageControlGrid_neigong_mouseout_grid" on_mousein_grid="on_ImageControlGrid_neigong_mousein_grid" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" FullBarBack="false" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="47" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                    <subor name="MultiTextBox1">
+                        <prop TextColor="255,128,101,74" ViewRect="0,-10,70,22" LineHeight="18" ScrollSize="17" Width="70" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+                    </subor>
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_bottom" entity="GroupBox" script="" init="">
+            <prop Top="440" Width="622" Height="30" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_area2.png" />
+            <control name="btn_request" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\shitu\shitubutton3-out.png" FocusImage="gui\special\shitu\shitubutton3-on.png" PushImage="gui\special\shitu\shitubutton3-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Width="182" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shixiongdengji" Font="font_sns_event" TabStop="true" DrawMode="Expand" />
+                <event on_click="on_btn_request_click" />
+            </control>
+            <control name="cbtn_jm" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_6_out.png" FocusImage="gui\common\checkbutton\cbtn_6_on.png" CheckedImage="gui\common\checkbutton\cbtn_6_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="-614" Top="2" Width="104" Height="24" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_shitu_jinmai" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_cbtn_jm_checked_changed" />
+            </control>
+            <control name="cbtn_ng" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_6_out.png" FocusImage="gui\common\checkbutton\cbtn_6_on.png" CheckedImage="gui\common\checkbutton\cbtn_6_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="-502" Top="2" Width="114" Height="24" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" Text="@ui_neigong_title" Font="font_main" TabStop="true" DrawMode="ExpandH" />
+                <event on_checked_changed="on_cbtn_ng_checked_changed" />
+            </control>
+            <control name="btn_1" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\shitu\shitubutton3-out.png" FocusImage="gui\special\shitu\shitubutton3-on.png" PushImage="gui\special\shitu\shitubutton3-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="264" Width="67" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_fanhui" Font="font_sns_event" TabStop="true" DrawMode="Expand" />
+                <event on_click="on_btn_return_click" />
+            </control>
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\shitu\shitubutton3-out.png" FocusImage="gui\special\shitu\shitubutton3-on.png" PushImage="gui\special\shitu\shitubutton3-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="331" Width="109" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shitu_quxiaodengji" Font="font_sns_event" TabStop="true" DrawMode="Expand" />
+                <event on_click="on_btn_unregiste_click" />
+            </control>
+        </control>
+        <control name="combobox_school" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="220" OnlySelect="true" Left="8" Top="3" Width="96" Height="26" ForeColor="255,255,255,255" BackColor="60,0,0,0" ShadowColor="0,0,0,0" Text="@ui_suoyoumenpai" Font="font_main" NoFrame="true" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\shitu\shituxialakuang.png" />
+            <event on_selected="on_combobox_school_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ForeColor="255,255,255,255" BackColor="60,0,0,0" BlendColor="60,0,0,0" ShadowColor="0,0,0,0" Text="@ui_suoyoumenpai" Font="font_main" Cursor="WIN_IBEAM" AutoSize="true" />
+            </subor>
+            <subor name="DropButton">
+                <prop NormalImage="gui\special\shitu\shituxialabutton-out.png" FocusImage="gui\special\shitu\shituxialabutton-on.png" PushImage="gui\special\shitu\shituxialabutton-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\shitu\shituxialakuang.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\shitu\shituxialakuang.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\shitu\shitushang-out.png" FocusImage="gui\special\shitu\shitushang-on.png" PushImage="gui\special\shitu\shitushang-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\shitu\shituxia-out.png" FocusImage="gui\special\shitu\shituxia-on.png" PushImage="gui\special\shitu\shituxia-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\shitu\shituhuakuai-out.png" FocusImage="gui\special\shitu\shituhuakuai-on.png" PushImage="gui\special\shitu\shituhuakuai-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="combobox_ngl" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="220" OnlySelect="true" Left="104" Top="3" Width="96" Height="26" ForeColor="255,255,255,255" BackColor="60,0,0,0" ShadowColor="0,0,0,0" Text="@ui_suoyouneigong" Font="font_main" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\shitu\shituxialakuang.png" />
+            <event on_selected="on_combobox_ngl_selected" />
+            <subor name="InputEdit">
+                <prop ReadOnly="true" TextOffsetX="2" Caret="Default" ForeColor="255,255,255,255" BackColor="60,0,0,0" BlendColor="60,0,0,0" ShadowColor="0,0,0,0" Text="@ui_suoyouneigong" Font="font_main" Cursor="WIN_IBEAM" AutoSize="true" />
+            </subor>
+            <subor name="DropButton">
+                <prop NormalImage="gui\special\shitu\shituxialabutton-out.png" FocusImage="gui\special\shitu\shituxialabutton-on.png" PushImage="gui\special\shitu\shituxialabutton-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" DrawMode="FitWindow" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\special\shitu\shituxialakuang.png" />
+                <subor name="VScrollBar">
+                    <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\shitu\shituxialakuang.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\shitu\shitushang-out.png" FocusImage="gui\special\shitu\shitushang-on.png" PushImage="gui\special\shitu\shitushang-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\shitu\shituxia-out.png" FocusImage="gui\special\shitu\shituxia-on.png" PushImage="gui\special\shitu\shituxia-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\shitu\shituhuakuai-out.png" FocusImage="gui\special\shitu\shituhuakuai-on.png" PushImage="gui\special\shitu\shituhuakuai-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="0,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="groupbox_menu" entity="GroupBox" script="" init="">
+            <prop Left="240" Top="184" Width="229" Height="78" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" BackImage="gui\common\form_back\bg_menu.png" />
+            <control name="btn_baishi" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,179,99,0" DisableColor="0,0,0,0" Left="4" Width="222" Height="24" ForeColor="255,255,255,255" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="@ui_menu_baishi" Font="font_main" />
+                <event on_click="on_btn_baishi_click" />
+            </control>
+            <control name="btn_shoutu" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="255,0,0,255" DisableColor="0,0,0,0" Top="24" Width="184" Height="24" ForeColor="255,255,255,255" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="@ui_menu_shoutu" Font="font_main" NoFrame="true" />
+                <event on_click="on_btn_shoutu_click" />
+            </control>
+            <control name="btn_queryinfo" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="255,255,180,40" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="48" Width="120" Height="24" ForeColor="255,255,255,255" BackColor="0,192,192,192" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Text="@ui_playerlink_chakanxinxi" Font="font_main" />
+                <event on_click="on_btn_queryinfo_click" />
+            </control>
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,147,123,99" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,590,86" LineHeight="18" HtmlText="@ui_shitu_shuoming" ScrollSize="17" Left="8" Top="352" Width="590" Height="86" ShadowColor="0,0,0,0" Font="font_btn" NoFrame="true" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="360" Top="10" Width="80" Height="16" ShadowColor="0,0,0,0" />
+        </control>
+    </control>
+</form>

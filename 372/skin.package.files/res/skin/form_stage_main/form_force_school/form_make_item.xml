@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_force_school\form_make_item" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="125" Top="77" Width="446" Height="401" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="415" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="153" Top="3" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_tile" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" TextOffsetX="30" Left="180" Top="9" Width="94" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_make_item" Font="font_title" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="28" Width="436" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="362" Width="436" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="6" Top="368" Width="434" Height="27" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="btn_make" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="248" Top="368" Width="104" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_mask_make" Font="font_btn" TabStop="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_make_click" />
+        </control>
+        <control name="ImageControlGrid" entity="ImageControlGrid" script="" init="">
+            <prop HasMultiTextBox="true" MultiTextBoxCount="1" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,200,40" MaxSize="-1" RowNum="1" ClomnNum="4" GridHeight="40" GridWidth="40" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-3" GridBackOffsetY="-3" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="74" Top="173" Width="206" Height="46" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+            <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" />
+            <subor name="MultiTextBox1">
+                <prop ViewRect="10,40,100,200" LineHeight="19" ScrollSize="17" Width="48" Height="50" ShadowColor="0,0,0,0" NoFrame="true" />
+            </subor>
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="66" Width="428" Height="65" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="rbtn_1" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_hui.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="6" Width="160" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_2" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_hui.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="168" Top="6" Width="160" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_3" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_hui.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Top="34" Width="159" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="rbtn_4" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\binglu_hui.png" FocusImage="gui\common\checkbutton\binglu_on.png" CheckedImage="gui\common\checkbutton\binglu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="168" Top="34" Width="160" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Expand" />
+                <event on_checked_changed="on_rbtn_checked_changed" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="199" Top="39" Width="70" Height="18" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_mask_shalu" Font="font_btn" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="31" Top="9" Width="40" Height="18" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_mask_xia" Font="font_btn" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="201" Top="10" Width="41" Height="19" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_mask_eren" Font="font_btn" />
+            </control>
+            <control name="lbl_19" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="32" Top="38" Width="41" Height="19" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_mask_jieao" Font="font_btn" />
+            </control>
+        </control>
+        <control name="ipt_1" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="9999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="144" Top="269" Width="60" Height="30" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="lbl_27" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="246" Width="14" Height="16" ForeColor="255,98,83,67" ShadowColor="0,0,0,0" Text="@ui_bag_ding" Font="font_text_sys" />
+        </control>
+        <control name="ipt_2" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="236" Top="269" Width="60" Height="30" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="lbl_28" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="299" Top="280" Width="14" Height="16" ForeColor="255,98,83,67" ShadowColor="0,0,0,0" Text="@ui_bag_liang" Font="font_text_sys" />
+        </control>
+        <control name="ipt_3" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="999.000000" OnlyDigit="true" MaxDigit="999" ChangedEvent="true" TextOffsetX="2" Align="Center" SelectBackColor="190,190,190,190" Caret="Default" Left="333" Top="269" Width="60" Height="30" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Text="0" Font="font_main" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" DrawMode="ExpandH" BackImage="gui\common\form_line\ibox_2.png" />
+            <event on_changed="on_ipt_changed" />
+        </control>
+        <control name="lbl_29" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="395" Top="279" Width="14" Height="16" ForeColor="255,98,83,67" ShadowColor="0,0,0,0" Text="@ui_bag_wen" Font="font_text_sys" />
+        </control>
+        <control name="btn_lock" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="353" Top="368" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_mask_lock" Font="font_btn" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_lock_click" />
+        </control>
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="13" Top="44" Width="126" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_mask_choice" Font="font_playername" />
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="13" Top="140" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_mask_cailiao" Font="font_playername" />
+        </control>
+        <control name="lbl_18" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="246" Width="78" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_mask_cost" Font="font_main" />
+        </control>
+        <control name="lbl_sys_ding" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="144" Top="238" Width="60" Height="30" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\form_line\ibox_2.png" />
+        </control>
+        <control name="lbl_20" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="210" Top="279" Width="22" Height="16" ForeColor="255,98,83,67" ShadowColor="0,0,0,0" Text="@ui_bag_ding" Font="font_text_sys" />
+        </control>
+        <control name="lbl_sys_liang" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="236" Top="238" Width="60" Height="31" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\form_line\ibox_2.png" />
+        </control>
+        <control name="lbl_sys_wen" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="333" Top="238" Width="60" Height="30" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\form_line\ibox_2.png" />
+        </control>
+        <control name="lbl_23" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="299" Top="246" Width="22" Height="16" ForeColor="255,98,83,67" ShadowColor="0,0,0,0" Text="@ui_bag_liang" Font="font_text_sys" />
+        </control>
+        <control name="lbl_24" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="394" Top="246" Width="30" Height="16" ForeColor="255,98,73,67" ShadowColor="0,0,0,0" Text="@ui_bag_wen" Font="font_text_sys" />
+        </control>
+        <control name="lbl_25" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="309" Width="94" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_mask_close" Font="font_main" />
+        </control>
+        <control name="lbl_cost_intimate" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="174" Top="302" Width="60" Height="30" ForeColor="255,73,49,49" ShadowColor="0,20,0,0" Font="font_main" DrawMode="Expand" BackImage="gui\common\form_line\ibox_2.png" />
+        </control>
+        <control name="lbl_lock" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="34" Width="436" Height="201" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\exchange\bg_lock.png" />
+        </control>
+        <control name="groupbox_2" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="56" Width="334" Height="83" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+            <control name="ImageControlGrid_Make" entity="ImageControlGrid" script="" init="">
+                <prop HasMultiTextBox="true" MultiTextBoxCount="1" MultiTextBoxLeft="-36" MultiTextBoxTop="2" MultiTextBoxPos="-36,2" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,200,60" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="40" GridWidth="40" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-3" GridBackOffsetY="-3" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="144" Top="18" Width="54" Height="51" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" AutoSize="true" />
+                <event on_mouseout_grid="on_ImageControlGrid_mouseout_grid" on_mousein_grid="on_ImageControlGrid_mousein_grid" />
+                <subor name="MultiTextBox1">
+                    <prop ViewRect="10,40,100,200" LineHeight="19" ScrollSize="17" Width="48" Height="50" ShadowColor="0,0,0,0" Font="font_main" NoFrame="true" />
+                </subor>
+            </control>
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="276" Width="76" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_mask_price" Font="font_main" />
+        </control>
+        <control name="lbl_7" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,230,230,230" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,5,422,60" LineHeight="15" HtmlText="@ui_mask_interface" ScrollSize="17" Left="12" Top="325" Width="422" Height="39" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" />
+        </control>
+        <control name="lbl_price_lock" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="238" Width="435" Height="126" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\exchange\bg_lock.png" />
+        </control>
+    </control>
+</form>

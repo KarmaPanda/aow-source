@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_common\form_play_video" init="main_form_init">
+        <prop LimitInScreen="true" Width="1102" Height="798" ShadowColor="0,0,0,0" AutoSize="true" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="vid_poem" entity="Video" script="" init="">
+            <prop Loop="false" AutoPlay="false" Width="958" Height="766" ShadowColor="0,0,0,0" />
+            <event on_play_finish="on_vid_poem_play_finish" />
+        </control>
+        <control name="lbl_video_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="80" Height="16" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\movie_png\beibao_guanbi_up.png" FocusImage="gui\movie_png\beibao_guanbi_up.png" PushImage="gui\movie_png\beibao_guanbi_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-225" Top="5" Width="80" Height="72" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

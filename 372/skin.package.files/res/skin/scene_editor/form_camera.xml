@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_camera" init="main_form_init">
+        <prop Left="149" Top="165" Width="414" Height="366" BackColor="161,173,170,255" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="152" Top="8" Width="102" Height="24" ShadowColor="0,0,0,0" Text="编辑器参数" />
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="112" Top="328" Width="80" Height="24" ShadowColor="0,0,0,0" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="216" Top="328" Width="80" Height="24" ShadowColor="0,0,0,0" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="40" Width="94" Height="16" ShadowColor="0,0,0,0" Text="摄像机位置：" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="72" Width="94" Height="22" ShadowColor="0,0,0,0" Text="摄像机方向：" />
+        </control>
+        <control name="pos_x_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="128" Top="40" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="pos_y_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="216" Top="40" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="pos_z_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="304" Top="40" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="dir_x_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="128" Top="72" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="dir_y_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="216" Top="72" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="dir_z_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="304" Top="72" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="136" Width="78" Height="22" ShadowColor="0,0,0,0" Text="移动速度:" />
+        </control>
+        <control name="speed_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="112" Top="136" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="104" Width="78" Height="22" ShadowColor="0,0,0,0" Text="视野角度：" />
+        </control>
+        <control name="angle_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="112" Top="104" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="216" Top="136" Width="78" Height="22" ShadowColor="0,0,0,0" Text="拖拽速度：" />
+        </control>
+        <control name="drag_speed_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="304" Top="136" Width="80" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="168" Width="78" Height="22" ShadowColor="0,0,0,0" Text="编辑范围：" />
+        </control>
+        <control name="design_radius_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="112" Top="168" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="auto_save_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="32" Top="264" Width="86" Height="22" ShadowColor="0,0,0,0" Text="自动保存" TabStop="true" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="136" Top="264" Width="118" Height="22" ShadowColor="0,0,0,0" Text="间隔时间(分钟)" />
+        </control>
+        <control name="save_time_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="256" Top="264" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="232" Width="110" Height="22" ShadowColor="0,0,0,0" Text="角色配置文件：" />
+        </control>
+        <control name="role_config_edit" entity="Edit" script="" init="">
+            <prop ReadOnly="true" TextOffsetX="2" Caret="Default" Left="144" Top="232" Width="174" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="role_config_btn" entity="Button" script="" init="">
+            <prop Left="328" Top="232" Width="54" Height="24" ShadowColor="0,0,0,0" Text="选择" TabStop="true" />
+            <event on_click="role_config_btn_click" />
+        </control>
+        <control name="show_light_range_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="32" Top="296" Width="134" Height="22" ShadowColor="0,0,0,0" Text="显示点光源范围" TabStop="true" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="200" Width="110" Height="22" ShadowColor="0,0,0,0" Text="碰撞信息范围：" />
+        </control>
+        <control name="collide_radius_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="144" Top="200" Width="78" Height="22" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+    </control>
+</form>

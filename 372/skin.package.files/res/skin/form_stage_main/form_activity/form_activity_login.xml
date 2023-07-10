@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_activity\form_activity_login.lua" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Left="125" Top="69" Width="802" Height="560" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_name" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="32" Width="798" Height="344" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="200" Top="-3" Width="110" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="912" Top="280" Width="6" Height="6" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="364" Width="794" Height="166" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="502" Top="440" Width="80" Height="22" ForeColor="255,223,184,94" ShadowColor="0,0,0,0" Text="@ui_aal_dctc" Font="font_main" />
+        </control>
+        <control name="btn_2" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1000" Top="264" Width="7" Height="4" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_btn" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="904" Top="152" Width="6" Height="6" ShadowColor="0,0,0,0" AutoSize="true" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="920" Top="376" Width="80" Height="22" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Text="@ui_ydl_dajiang" Font="font_text" />
+        </control>
+        <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,147,123,99" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,270,102" LineHeight="20" TipAutoSize="true" HtmlText="@ui_ydl_shuoming" LineTextAlign="Top" ScrollSize="20" Left="688" Top="736" Width="270" Height="102" ForeColor="255,147,123,99" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="lbl_11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="478" Top="28" Width="224" Height="280" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\dbomall\qd_bg2.png" />
+        </control>
+        <control name="mltbox_des" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,147,123,99" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,190,126" LineHeight="20" TipAutoSize="true" HtmlText="@ui_ydl_shuoming_1" LineTextAlign="Top" ScrollSize="17" HasVScroll="true" Left="482" Top="312" Width="214" Height="126" ForeColor="255,146,158,179" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" DrawMode="ExpandV" />
+            <subor name="VScrollBar">
+                <prop Maximum="3" SmallChange="1" LargeChange="6" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="64" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_bu_qian" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn-out.png" FocusImage="gui\common\button\btn-on.png" PushImage="gui\common\button\btn-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="608" Top="456" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,20,0,0" Text="@ui_ydl_title_2" Font="font_btn" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_bu_qian_click" />
+        </control>
+        <control name="lbl_12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="6" Top="30" Width="477" Height="460" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\dbomall\qd_bg1.png" />
+        </control>
+        <control name="groupscrollbox_all" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" Left="8" Top="32" Width="470" Height="278" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,255,204,0" DrawMode="Expand" />
+            <control name="groupbox_day" entity="GroupBox" script="" init="">
+                <prop Width="63" Height="60" BackColor="0,249,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" AutoSize="true" DrawMode="Expand" />
+                <control name="btn_bg" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\imagegrid\icon_yqd_qd_1.png" FocusImage="gui\common\imagegrid\icon_yqd_qd_1.png" PushImage="gui\common\imagegrid\icon_yqd_qd_1.png" FocusBlendColor="255,255,204,0" PushBlendColor="255,255,204,0" DisableBlendColor="255,255,204,0" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="63" Height="63" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                </control>
+                <control name="lbl_sign" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" TextOffsetX="0" TextOffsetY="0" Left="4" Top="4" Width="36" Height="36" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\language\ChineseS\create\yqd_qd.png" />
+                </control>
+                <control name="lbl_num" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" TextOffsetX="0" TextOffsetY="0" Width="63" Height="63" ForeColor="255,245,222,179" ShadowColor="0,0,0,0" Text="12" Font="font_map_area_1" DrawMode="FitWindow" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_select_bg" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" TextOffsetX="0" TextOffsetY="0" Width="60" Height="62" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao2.png" />
+        </control>
+        <control name="ani_1" entity="Animation" script="" init="">
+            <prop AnimationImage="yqd" Loop="false" PlayMode="2" Left="8" Top="8" Width="32" Height="32" />
+        </control>
+        <control name="ImageControlGrid_total1" entity="ImageControlGrid" script="" init="">
+            <prop MultiTextBoxLeft="5" MultiTextBoxTop="5" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="36" GridWidth="36" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_4.png" GridBackOffsetX="-6" GridBackOffsetY="-6" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="648" Top="64" Width="49" Height="49" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="960" Top="336" Width="2" Height="6" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_41" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="102" Top="30" Width="175" Height="27" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_ydl_ljqd" Font="font_text" AutoSize="true" />
+        </control>
+        <control name="lbl_day_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="488" Top="72" Width="150" Height="22" ForeColor="255,234,215,101" ShadowColor="0,0,0,0" Text="@ui_ydl_ljqd_day" Font="font_main" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="312" Width="80" Height="22" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_ydl_jiangli_3" Font="font_text" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="312" Width="80" Height="22" ForeColor="255,204,102,0" ShadowColor="0,0,0,0" Text="@ui_ydl_jiangli_2" Font="font_text" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="312" Width="80" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_ydl_jiangli_1" Font="font_text" />
+        </control>
+        <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,142,94" LineHeight="20" TipAutoSize="true" HtmlText="@ui_ydl_tishi" LineTextAlign="Top" ScrollSize="20" Left="24" Top="344" Width="142" Height="94" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,126,62" LineHeight="17" HtmlText="@ui_ydl_tishi_2" ScrollSize="17" Left="336" Top="384" Width="126" Height="62" ForeColor="255,128,101,74" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="lbl_noaward_tips1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="432" Width="126" Height="38" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="icg3" entity="ImageControlGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,49,49" MaxSize="-1" RowNum="1" ClomnNum="1" ShowEmpty="false" GridHeight="38" GridWidth="38" GridsPos="0,0;50,0;100,0" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_1.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="376" Top="344" Width="38" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="mltbox_desc" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,118,38" LineHeight="17" ScrollSize="17" Left="184" Top="384" Width="118" Height="38" ForeColor="255,128,101,74" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="lbl_noaward_tips3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="344" Top="336" Width="126" Height="38" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="lbl_noaward_tips2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="192" Top="336" Width="126" Height="38" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_text" />
+        </control>
+        <control name="ImageControlGrid2" entity="ImageControlGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,49,49" MaxSize="-1" RowNum="1" ClomnNum="3" ShowEmpty="false" GridHeight="38" GridWidth="38" GridsPos="0,0;50,0;100,0" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_1.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="944" Top="360" Width="70" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="ImageControlGrid1" entity="ImageControlGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,49,49" MaxSize="-1" RowNum="1" ClomnNum="1" ShowEmpty="false" GridHeight="38" GridWidth="38" GridsPos="0,0;50,0;100,0" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_1.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="376" Top="432" Width="38" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="ImageControlGrid4" entity="ImageControlGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,49,49" MaxSize="-1" RowNum="1" ClomnNum="1" ShowEmpty="false" GridHeight="38" GridWidth="38" GridsPos="0,0;50,0;100,0" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_1.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="224" Top="424" Width="38" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="icg2" entity="ImageControlGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,49,49" MaxSize="-1" RowNum="1" ClomnNum="1" ShowEmpty="false" GridHeight="38" GridWidth="38" GridsPos="0,0;50,0;100,0" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_1.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="224" Top="344" Width="38" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="icg1" entity="ImageControlGrid" script="" init="">
+            <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,49,49" MaxSize="-1" RowNum="1" ClomnNum="1" ShowEmpty="false" GridHeight="38" GridWidth="38" GridsPos="0,0;50,0;100,0" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_yqd_jl_1.png" GridBackOffsetX="-5" GridBackOffsetY="-5" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="64" Top="432" Width="38" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" DrawMode="FitWindow" />
+            <event on_mouseout_grid="on_icg_mouseout_grid" on_mousein_grid="on_icg_mousein_grid" />
+        </control>
+        <control name="cbtn_1" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="480" Top="440" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_checked_changed="on_cbtn_1_checked_changed" />
+        </control>
+    </control>
+</form>

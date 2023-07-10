@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="from_battlefield_schedule" entity="Form" script="form_stage_main\form_battlefield\form_battlefield_self_score" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="157" Top="110" Width="873" Height="430" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-30" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_title_bg" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="333" Width="144" Height="29" ShadowColor="0,0,0,0" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="305" Top="6" Width="200" Height="22" ForeColor="255,255,255,255" ShadowColor="0,255,255,255" Text="@ui_battlefield_SelfWeekTotalScore" Font="font_playername" />
+        </control>
+        <control name="lbl_line_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="26" Width="867" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_bg1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="39" Width="860" Height="30" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg1.png" />
+        </control>
+        <control name="lbl_bg2" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="70" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg2.png" />
+        </control>
+        <control name="lbl_bg3" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="120" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg3.png" />
+        </control>
+        <control name="lbl_bg4" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="170" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg2.png" />
+        </control>
+        <control name="lbl_bg5" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="220" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg3.png" />
+        </control>
+        <control name="lbl_bg6" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="270" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg2.png" />
+        </control>
+        <control name="lbl_bg7" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="320" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg3.png" />
+        </control>
+        <control name="lbl_bg8" entity="Label" script="" init="">
+            <prop Transparent="false" RefCursor="WIN_HELP" Left="6" Top="370" Width="860" Height="50" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\battlefield\sc_bg2.png" />
+        </control>
+        <control name="lbl_time" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="46" Width="46" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_time" Font="font_playername" />
+        </control>
+        <control name="lbl_time_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="89" Top="46" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_battlefield_score1" Font="font_text_figure" />
+        </control>
+        <control name="lbl_time_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="222" Top="46" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_battlefield_score2" Font="font_text_figure" />
+        </control>
+        <control name="lbl_time_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="354" Top="46" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_battlefield_score3" Font="font_text_figure" />
+        </control>
+        <control name="lbl_time_4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="486" Top="46" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_battlefield_score4" Font="font_text_figure" />
+        </control>
+        <control name="lbl_time_5" entity="Label" script="" init="">
+            <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="621" Top="46" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_battlefield_TotalScore" Font="font_text_figure" HintText="@ui_battlefield_DescTotalScore" />
+        </control>
+        <control name="lbl_time_6" entity="Label" script="" init="">
+            <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="753" Top="46" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_battlefield_WeekTotalScore" Font="font_text_figure" HintText="@ui_battlefield_DescWeekTotalScore" />
+        </control>
+        <control name="lbl_week_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="86" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_monday" Font="font_text_sys" />
+        </control>
+        <control name="lbl_week_2" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="136" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_tuesday" Font="font_text_sys" />
+        </control>
+        <control name="lbl_week_3" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="186" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_wednesday" Font="font_text_sys" />
+        </control>
+        <control name="lbl_week_4" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="236" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_thursday" Font="font_text_sys" />
+        </control>
+        <control name="lbl_week_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="286" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_friday" Font="font_text_sys" />
+        </control>
+        <control name="lbl_week_6" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="336" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_saturday" Font="font_text_sys" />
+        </control>
+        <control name="lbl_week_7" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="12" Top="386" Width="50" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_sunday" Font="font_text_sys" />
+        </control>
+        <control name="rbtn_item" entity="RadioButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\special\battlefield\scitem_out.png" FocusImage="gui\special\battlefield\scitem_on.png" CheckedImage="gui\special\battlefield\scitem_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-175" Top="47" Width="122" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" NoFrame="true" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_item_v" entity="Label" script="" init="">
+            <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="-95" Top="79" Width="46" Height="18" ForeColor="255,170,134,114" ShadowColor="0,0,0,0" Enabled="false" TestTrans="true" Text="0" Font="font_main" DrawMode="FitWindow" DisableEnter="true" />
+        </control>
+        <control name="lbl_item_a" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-79" Top="87" Width="54" Height="22" ForeColor="255,170,139,114" ShadowColor="0,0,0,0" Text="0" Font="font_main" />
+        </control>
+        <control name="lbl_item_b" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-95" Top="71" Width="52" Height="22" ForeColor="255,170,139,114" ShadowColor="0,0,0,0" Font="font_main" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_edit_rigid_body" init="main_form_init">
+        <prop Left="77" Top="69" Width="414" Height="414" BackColor="171,161,161,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="8" Width="190" Height="22" Text="模型刚体属性编辑[快捷键Ctrl+K]" />
+        </control>
+        <control name="activate_rigid_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="48" Width="70" Height="22" Text="激活刚体" TabStop="true" />
+            <event on_checked_changed="activate_rigid_checked_changed" />
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="120" Top="48" Width="62" Height="16" Text="刚体类型" />
+        </control>
+        <control name="type_cb" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="100" Left="176" Top="48" Width="182" Height="20" />
+            <event on_selected="type_cb_selected" />
+            <subor name="InputEdit">
+                <prop TextOffsetX="2" Caret="Default" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="80" Width="30" Height="16" Text="重量" />
+        </control>
+        <control name="mass_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="80" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="mass_fedit_lost_focus" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="104" Width="30" Height="16" Text="位置" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="128" Width="30" Height="16" Text="旋转" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="152" Width="38" Height="16" Text="线速度" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="176" Width="38" Height="16" Text="角速度" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="200" Width="94" Height="16" Text="重心(局部坐标)" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="224" Width="54" Height="16" Text="线性阻尼" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="136" Top="224" Width="54" Height="16" Text="旋转阻尼" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="248" Width="80" Height="16" Text="重力影响因数" />
+        </control>
+        <control name="Label10" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="168" Top="248" Width="46" Height="16" Text="摩擦力" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="272" Top="248" Width="54" Height="16" Text="反弹系数" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="272" Width="62" Height="16" Text="最大线速度" />
+        </control>
+        <control name="Label13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="152" Top="272" Width="62" Height="16" Text="最大角速度" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="280" Top="272" Width="62" Height="16" Text="可穿刺深度" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="296" Width="78" Height="16" Text="碰撞检测方式" />
+        </control>
+        <control name="position_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="104" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="position_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="128" Top="104" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="position_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="104" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="rotation_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="128" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="rotation_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="128" Top="128" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="rotation_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="128" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="rotation_w_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="256" Top="128" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="linear_velocity_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="152" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="linear_velocity_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="128" Top="152" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="linear_velocity_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="152" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="angular_velocity_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="64" Top="176" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="angular_velocity_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="128" Top="176" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="angular_velocity_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="176" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="mass_center_x_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="128" Top="200" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="mass_center_y_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="200" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="mass_center_z_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="256" Top="200" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="linear_damping_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="80" Top="224" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="linear_damping_fedit_lost_focus" />
+        </control>
+        <control name="angular_damping_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="192" Top="224" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="angular_damping_fedit_lost_focus" />
+        </control>
+        <control name="gravity_factorg_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="248" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="gravity_factorg_fedit_lost_focus" />
+        </control>
+        <control name="friction_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="208" Top="248" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="friction_fedit_lost_focus" />
+        </control>
+        <control name="festitution_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="328" Top="248" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="festitution_fedit_lost_focus" />
+        </control>
+        <control name="max_linear_velocity_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="88" Top="272" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="max_linear_velocity_fedit_lost_focus" />
+        </control>
+        <control name="max_angular_velocity_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="216" Top="272" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="max_angular_velocity_fedit_lost_focus" />
+        </control>
+        <control name="allowed_penetration_depth_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.1f" DragStep="0.100000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="344" Top="272" Width="54" Height="20" LineColor="255,0,0,255" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="allowed_penetration_depth_fedit_lost_focus" />
+        </control>
+        <control name="quality_type_fedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.0f" DragStep="1.000000" Max="1000.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="296" Width="54" Height="20" LineColor="255,0,0,255" Text="0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_lost_focus="quality_type_fedit_lost_focus" />
+        </control>
+        <control name="save_btn" entity="Button" script="" init="">
+            <prop Left="24" Top="376" Width="142" Height="24" Text="保存到指定刚体属性文件" TabStop="true" />
+            <event on_click="save_btn_click" />
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="192" Top="376" Width="70" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="280" Top="376" Width="70" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+    </control>
+</form>

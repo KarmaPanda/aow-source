@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_main\form_main_map.xml" entity="Form" script="form_stage_main\form_main\form_main_map" init="main_form_init">
+        <prop Transparent="true" LimitInScreen="true" Left="-462" Top="1" Width="463" Height="404" BackColor="0,255,0,0" LineColor="255,255,0,0" ShadowColor="0,0,0,0" HAnchor="Right" TestTrans="true" NoFrame="true" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="btn_curfreshman" entity="Button" script="" init="">
+            <prop NormalImage="gui\special\lead\hd_ditu.png" FocusImage="gui\special\lead\hd_ditu_on.png" PushImage="gui\special\lead\hd_ditu_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="67" Top="80" Width="152" Height="115" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_curfreshman_click" />
+        </control>
+        <control name="lbl_freshman_pro" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="86" Top="162" Width="130" Height="7" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\lead\hd_fenduan_1.png" />
+        </control>
+        <control name="lbl_freshman_tip2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="91" Top="124" Width="96" Height="32" ForeColor="255,255,255,255" BackColor="190,190,190,190" ShadowColor="0,0,0,0" Enabled="false" Text="@ui_hd_menpai_03" Font="font_sns_main_2" />
+        </control>
+        <control name="mltbox_freshman_tip1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="93" Top="108" Width="96" Height="32" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Enabled="false" Text="@ui_hd_menpai_02" Font="font_title" />
+        </control>
+        <control name="pbar_curfreshmanpro" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\special\lead\hd_jindutiao_1.png" ProgressMode="LeftToRight" Left="86" Top="162" Width="130" Height="7" ShadowColor="0,0,0,0" Enabled="false" AutoSize="true" BackImage="gui\special\lead\hd_jindutiaoditu_1.png" />
+        </control>
+        <control name="mltbox_area_limit" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,209,187,143" Transparent="true" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="10,5,160,246" LineHeight="21" TransNormalText="true" ScrollSize="17" Solid="true" Left="74" Top="30" Width="166" Height="246" BackColor="0,255,255,255" LineColor="0,255,255,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu_3.png" />
+        </control>
+        <control name="groupbox_map" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="196" Width="262" Height="326" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="77" Top="39" Width="164" Height="160" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\map\minimap\bg_back.png" />
+            </control>
+            <control name="btn_activity_guide" entity="Button" script="" init="">
+                <prop NormalImage="huodong" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="2500" Top="228" Width="67" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_activity_guide" AutoSize="true" />
+                <event on_click="on_btn_activity_guide_click" />
+            </control>
+            <control name="btn_playsnail_main" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\playsnail\playsnail_out.png" FocusImage="gui\mainform\playsnail\playsnail_on.png" PushImage="gui\mainform\playsnail\playsnail_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="157" Top="-10000" Width="50" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_playsnail_main_click" />
+            </control>
+            <control name="groupbox_smallmap" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="-37" Top="34" Width="302" Height="190" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TestTrans="true" NoFrame="true" />
+                <control name="roundbox_smallmap" entity="RoundBox" script="" init="">
+                    <prop CenterX="-1" CenterY="-1" FanCount="16" Left="111" Top="6" Width="164" Height="164" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                    <event on_lost_capture="on_roundbox_smallmap_lost_capture" on_get_capture="on_roundbox_smallmap_get_capture" on_mouse_move="on_roundbox_smallmap_mouse_move" on_left_up="on_roundbox_smallmap_left_up" />
+                </control>
+                <control name="groupmap_objs" entity="GroupMap" script="" init="">
+                    <prop Left="115" Top="5" Width="162" Height="164" ShadowColor="0,0,0,0" Text="GroupMap1" />
+                    <event on_mouse_out_obj="on_groupmap_objs_mouse_out_obj" on_mouse_in_obj="on_groupmap_objs_mouse_in_obj" on_click_obj="on_groupmap_objs_click_obj" />
+                </control>
+                <control name="line_path" entity="DrawLines" script="" init="">
+                    <prop TexWidth="256" LineWidth="2.000000" Left="135" Top="33" Width="32" Height="32" LineColor="255,255,0,0" ShadowColor="0,0,0,0" />
+                </control>
+                <control name="btn_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" PushImage="gui\common\button\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="108" Top="207" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                </control>
+            </control>
+            <control name="btn_pathfinding" entity="Button" script="" init="">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-157" Top="18" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_pathfinding_click" />
+            </control>
+            <control name="btn_net_yellow" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\icon_yellow.png" FocusImage="gui\map\minimap\icon_yellow.png" PushImage="gui\map\minimap\icon_yellow.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="229" Top="63" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_lost_capture="on_btn_4_lost_capture" on_get_capture="on_btn_4_get_capture" />
+            </control>
+            <control name="btn_net_red" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\icon_red.png" FocusImage="gui\map\minimap\icon_red.png" PushImage="gui\map\minimap\icon_red.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="229" Top="63" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_lost_capture="on_btn_4_lost_capture" on_get_capture="on_btn_4_get_capture" />
+            </control>
+            <control name="btn_research" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_wjdc_out.png" FocusImage="gui\map\minimap\btn_wjdc_on.png" PushImage="gui\map\minimap\btn_wjdc_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="302" Top="132" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_diaocha" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_research_click" />
+            </control>
+            <control name="btn_seven" entity="Button" script="" init="">
+                <prop NormalImage="qifu_hd" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1157" Top="274" Width="54" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_wish_tips" DrawMode="FitWindow" />
+                <event on_click="on_btn_seven_click" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="65" Top="28" Width="186" Height="202" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\dt_x_d.png" />
+            </control>
+            <control name="btn_net_green" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\icon_green.png" FocusImage="gui\map\minimap\icon_green.png" PushImage="gui\map\minimap\icon_green.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="229" Top="63" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_lost_capture="on_btn_4_lost_capture" on_get_capture="on_btn_4_get_capture" />
+            </control>
+            <control name="btn_zoom_in" entity="Button" script="" init="">
+                <prop PushEvent="true" NormalImage="gui\map\minimap\dt_x_j3.png" FocusImage="gui\map\minimap\dt_x_j2.png" PushImage="gui\map\minimap\dt_x_j1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="202" Top="34" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TestTrans="true" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_zoom_in_click" on_lost_capture="on_btn_zoom_in_lost_capture" on_get_capture="on_btn_zoom_in_get_capture" on_push="on_btn_zoom_in_push" />
+            </control>
+            <control name="cbtn_2" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\help_gm\minimap_box_out.png" FocusImage="gui\special\help_gm\minimap_box_on.png" CheckedImage="gui\special\help_gm\minimap_box_out_1.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="20900" Top="186" Width="39" Height="39" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_2_checked_changed" />
+            </control>
+            <control name="cbtn_gmcc_url" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\gm_out.png" FocusImage="gui\special\gm_on.png" CheckedImage="gui\special\gm_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="215" Top="180" Width="27" Height="29" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_gmcc_url_checked_changed" />
+            </control>
+            <control name="btn_theme_helper" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_help_out.png" FocusImage="gui\map\minimap\btn_help_on.png" PushImage="gui\map\minimap\btn_help_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="226" Top="154" Width="28" Height="31" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_jianghusc_001" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_theme_helper_click" />
+            </control>
+            <control name="btn_guild_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_guild_out.png" FocusImage="gui\map\minimap\btn_guild_on.png" PushImage="gui\map\minimap\btn_guild_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="152" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_guildwar_statistics" AutoSize="true" />
+                <event on_click="on_btn_guild_war_click" />
+            </control>
+            <control name="btn_bf_order" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_guild_out.png" FocusImage="gui\map\minimap\btn_guild_on.png" PushImage="gui\map\minimap\btn_guild_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="152" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_battle_info" AutoSize="true" />
+                <event on_click="on_btn_bf_order_click" />
+            </control>
+            <control name="btn_sca_rank" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_guild_out.png" FocusImage="gui\map\minimap\btn_guild_on.png" PushImage="gui\map\minimap\btn_guild_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="152" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_schoolcounterattack_info" AutoSize="true" />
+                <event on_click="on_btn_sca_rank_click" />
+            </control>
+            <control name="lbl_regulations_note" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="23" Top="5000" Width="81" Height="64" ShadowColor="0,0,0,0" HintText="@ui_tips_xinshouyindao" AutoSize="true" BackImage="lead" />
+            </control>
+            <control name="btn_regulations" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\btn_lead_out.png" FocusImage="gui\mainform\btn_lead_on.png" PushImage="gui\mainform\btn_lead_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="56" Top="5000" Width="48" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_xinshouyindao" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_regulations_click" />
+            </control>
+            <control name="btn_sf_order" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_guild_out.png" FocusImage="gui\map\minimap\btn_guild_on.png" PushImage="gui\map\minimap\btn_guild_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="152" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_schoolfight_rank" AutoSize="true" />
+                <event on_click="on_btn_sf_order_click" />
+            </control>
+            <control name="btn_show" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_npc_out.png" FocusImage="gui\map\minimap\btn_npc_on.png" PushImage="gui\map\minimap\btn_npc_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-201" Top="79" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" HintText="@ui_tips_mubiaoshaixuan" TabStop="true" AutoSize="true" DrawMode="Center" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_show_click" />
+            </control>
+            <control name="btn_area_limit" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\dt_x_jt1.png" FocusImage="gui\map\minimap\dt_x_jt2.png" PushImage="gui\map\minimap\dt_x_jt3.png" DisableImage="gui\map\minimap\dt_x_jt4.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="35" Top="64" Width="17" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            </control>
+            <control name="btn_world_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\WorldWar\menu\jinhaodown.png" FocusImage="gui\special\WorldWar\menu\jinhaoon.png" PushImage="gui\special\WorldWar\menu\jinhao.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="152" Width="30" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_worldwar_statistics" AutoSize="true" />
+                <event on_click="on_btn_world_war_click" />
+            </control>
+            <control name="btn_wujidao_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_guild_out.png" FocusImage="gui\map\minimap\btn_guild_on.png" PushImage="gui\map\minimap\btn_guild_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="149" Width="25" Height="25" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_wjd_statistics" AutoSize="true" />
+                <event on_click="on_btn_wujidao_war_click" />
+            </control>
+            <control name="btn_gen_info" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_info_out.png" FocusImage="gui\map\minimap\btn_info_on.png" PushImage="gui\map\minimap\btn_info_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-204" Top="101" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" HintText="@ui_tips_xxhz" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_gen_info_click" />
+            </control>
+            <control name="btn_bigmap" entity="Button" script="" init="">
+                <prop PushEvent="true" DragEvent="true" NormalImage="gui\map\minimap\dt_x_dk1.png" FocusImage="gui\map\minimap\dt_x_dk2.png" PushImage="gui\map\minimap\dt_x_dk3.png" DisableImage="gui\map\minimap\dt_x_dk4.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-185" Top="29" Width="36" Height="36" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" DataSource="func:open_form_role" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_bigmap_click" on_lost_capture="on_btn_bigmap_lost_capture" on_get_capture="on_btn_bigmap_get_capture" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="95" Top="168" Width="123" Height="33" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\dt_bg.png" />
+            </control>
+            <control name="lbl_position" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="123" Top="173" Width="70" Height="14" ForeColor="255,204,204,197" ShadowColor="0,0,0,0" Text="3333,4444" Font="font_main" DrawMode="Expand" />
+                <event on_lost_capture="on_lbl_position_lost_capture" on_get_capture="on_lbl_position_get_capture" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="81" Width="156" Height="43" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\dt_secne.png" />
+            </control>
+            <control name="lbl_map_name" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="95" Top="5" Width="134" Height="14" ForeColor="255,203,191,169" ShadowColor="0,0,0,0" Text="@ui_changjingming" Font="font_main" DrawMode="Expand" />
+            </control>
+            <control name="btn_zoom_out" entity="Button" script="" init="">
+                <prop PushEvent="true" NormalImage="gui\map\minimap\dt_x_jian3.png" FocusImage="gui\map\minimap\dt_x_jian2.png" PushImage="gui\map\minimap\dt_x_jian1.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="214" Top="47" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_zoom_out_click" on_lost_capture="on_btn_zoom_out_lost_capture" on_get_capture="on_btn_zoom_out_get_capture" on_push="on_btn_zoom_out_push" />
+            </control>
+            <control name="lbl_time_lp" entity="Label" script="" init="">
+                <prop Rotate="true" RefCursor="WIN_HELP" Left="67" Top="31" Width="179" Height="179" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\lp_0.png" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="115" Top="26" Width="88" Height="15" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\time_1.png" />
+            </control>
+            <control name="btn_2" entity="Button" script="" init="">
+                <prop NormalImage="bt_gengxintishi" FocusImage="bt_gengxintishi" PushImage="bt_gengxintishi" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="227" Top="107" Width="43" Height="43" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@tips_newupdate_remain" AutoSize="true" />
+                <event on_click="on_btn_2_click" />
+            </control>
+            <control name="ani_1" entity="Animation" script="" init="">
+                <prop Loop="false" PlayMode="2" Left="71" Top="36" Width="158" Height="166" />
+            </control>
+            <control name="btn_scene_compete" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_hwq\compete\compete_out.png" FocusImage="gui\common\button\btn_hwq\compete\compete_on.png" PushImage="gui\common\button\btn_hwq\compete\compete_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="31" Top="180" Width="55" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Center" />
+                <event on_click="on_btn_scene_compete_click" />
+            </control>
+            <control name="btn_huanyuan" entity="Button" script="" init="">
+                <prop NormalImage="gui\map\minimap\btn_jmhy_out.png" FocusImage="gui\map\minimap\btn_jmhy_on.png" PushImage="gui\map\minimap\btn_jmhy_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="60" Top="124" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_jmgl" AutoSize="true" DrawMode="Center" />
+                <event on_click="on_btn_huanyuan_click" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="58" Top="22" Width="196" Height="201" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\dt_new.png" />
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="119" Top="22" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text_title2" />
+            </control>
+            <control name="lbl_tianqi" entity="Label" script="" init="">
+                <prop Transparent="false" RefCursor="WIN_HELP" Left="191" Top="4" Width="22" Height="16" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+            </control>
+            <control name="btn_nlb_shimen_rank" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main40rh\btn_rank_out.png" FocusImage="gui\special\btn_main40rh\btn_rank_on.png" PushImage="gui\special\btn_main40rh\btn_rank_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="149" Width="40" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_nlb_shimen_pm" AutoSize="true" />
+                <event on_click="on_btn_nlb_shimen_rank_click" />
+            </control>
+            <control name="btn_hsp_meet" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main40rh\btn_rank_out.png" FocusImage="gui\special\btn_main40rh\btn_rank_on.png" PushImage="gui\special\btn_main40rh\btn_rank_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="62" Top="149" Width="40" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_nlb_shimen_pm" AutoSize="true" />
+                <event on_click="on_btn_hsp_meet_click" />
+            </control>
+            <control name="btn_outland_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\Outlandwar\btn_out.png" FocusImage="gui\special\Outlandwar\btn_on.png" PushImage="gui\special\Outlandwar\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="60" Top="130" Width="53" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_outland_war_click" />
+            </control>
+            <control name="btn_sanmeng" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\Outlandwar\btn_out.png" FocusImage="gui\special\Outlandwar\btn_on.png" PushImage="gui\special\Outlandwar\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="53" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_sanmeng_click" />
+            </control>
+            <control name="btn_new_war_rule" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\Outlandwar\btn_out.png" FocusImage="gui\special\Outlandwar\btn_on.png" PushImage="gui\special\Outlandwar\btn_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="53" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_new_war_rule_click" />
+            </control>
+            <control name="btn_jy_rank" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main\btn_schoolwar_out_36.png" FocusImage="gui\special\btn_main\btn_schoolwar_on_36.png" PushImage="gui\special\btn_main\btn_schoolwar_down_36.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="50" Top="132" Width="45" Height="45" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+                <event on_click="on_btn_jy_rank_click" />
+            </control>
+            <control name="btn_balance_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_balance\btn_balance_out.png" FocusImage="gui\special\battlefiled_balance\btn_balance_on.png" PushImage="gui\special\battlefiled_balance\btn_balance_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="53" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_balance_war_click" />
+            </control>
+            <control name="btn_wudao" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_wudao\zhan_out.png" FocusImage="gui\special\battlefiled_wudao\zhan_on.png" PushImage="gui\special\battlefiled_wudao\zhan_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="48" Height="44" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_wudao_click" />
+            </control>
+            <control name="btn_wuque_buy" entity="Button" script="" init="">
+                <prop NormalImage="gujhwq" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="71" Top="204" Width="55" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="Center" />
+                <event on_click="on_btn_wuque_buy_click" />
+            </control>
+            <control name="lbl_wuque_buy" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="79" Top="252" Width="46" Height="16" ForeColor="255,0,255,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="@ui_wuque_buy_001" Font="font_tip" />
+            </control>
+            <control name="btn_scuffle" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\battlefiled_wudao\zhan_out.png" FocusImage="gui\special\battlefiled_wudao\zhan_on.png" PushImage="gui\special\battlefiled_wudao\zhan_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="48" Height="44" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_scuffle_click" />
+            </control>
+            <control name="btn_taosha" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main40rh\taosha_out.png" FocusImage="gui\special\btn_main40rh\taosha_on.png" PushImage="gui\special\btn_main40rh\taosha_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="48" Height="40" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                <event on_click="on_btn_taosha_click" />
+            </control>
+            <control name="btn_sjy_school_meet" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\Outlandwar\btn_outland_war_out.png" FocusImage="gui\special\Outlandwar\btn_outland_war_on.png" PushImage="gui\special\Outlandwar\btn_outland_war_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="55" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_sjy_school_meet_click" />
+            </control>
+            <control name="btn_cross_station_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\animations\guildwar\fight\guild_kua_out.png" FocusImage="gui\animations\guildwar\fight\guild_kua_on.png" PushImage="gui\animations\guildwar\fight\guild_kua_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="59" Top="127" Width="60" Height="60" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_cross_station_war_click" />
+            </control>
+            <control name="btn_guild_battle_war" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_main\btn_bangpaizhan_out.png" FocusImage="gui\special\btn_main\btn_bangpaizhan_on.png" PushImage="gui\special\btn_main\btn_bangpaizhan_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="59" Top="127" Width="49" Height="54" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_guild_battle_war_click" />
+            </control>
+            <control name="btn_xmg_school_meet" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\Outlandwar\btn_outland_war_out.png" FocusImage="gui\special\Outlandwar\btn_outland_war_on.png" PushImage="gui\special\Outlandwar\btn_outland_war_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="63" Top="132" Width="55" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_xmg_school_meet_click" />
+            </control>
+            <control name="btn_league_matches" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\Outlandwar\btn_outland_war_out.png" FocusImage="gui\special\Outlandwar\btn_outland_war_on.png" PushImage="gui\special\Outlandwar\btn_outland_war_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="59" Top="127" Width="55" Height="55" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_league_matches_click" />
+            </control>
+        </control>
+        <control name="btn_npc" entity="Button" script="" init="">
+            <prop NormalImage="task_trace" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="152" Top="4" Width="26" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_lost_capture="on_btn_npc_lost_capture" on_get_capture="on_btn_npc_get_capture" />
+        </control>
+        <control name="mltbox_tips_info" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,180,40" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="10,18,236,46" LineHeight="17" HtmlText="@textinskin00214" ScrollSize="17" Left="56" Top="5000" Width="242" Height="46" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_tips.png" />
+        </control>
+        <control name="groupbox_filter" entity="GroupBox" script="" init="">
+            <prop Left="67" Top="52" Width="158" Height="139" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bj_kuang.png" />
+            <control name="cbtn_hide" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="6" Top="12" Width="14" Height="15" ForeColor="255,203,191,169" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_hide_checked_changed" />
+            </control>
+            <control name="cbtn_eshili" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="6" Top="62" Width="14" Height="15" ForeColor="255,203,191,169" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_eshili_checked_changed" />
+            </control>
+            <control name="cbtn_zudui" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="6" Top="87" Width="14" Height="15" ForeColor="255,203,191,169" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_zudui_checked_changed" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="26" Top="11" Width="59" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shili_wanjia" Font="font_main" />
+            </control>
+            <control name="lbl_3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="26" Top="61" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shili_didui" Font="font_main" />
+            </control>
+            <control name="lbl_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="26" Top="86" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shili_duiwu" Font="font_main" />
+            </control>
+            <control name="cbtn_tuandui" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="6" Top="112" Width="14" Height="15" ForeColor="255,203,191,169" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_tuandui_checked_changed" />
+            </control>
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="26" Top="111" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shili_tuandui" Font="font_main" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="26" Top="36" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shili_choujia" Font="font_main" />
+            </control>
+            <control name="cbtn_chouren" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="6" Top="37" Width="14" Height="15" ForeColor="255,203,191,169" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_chouren_checked_changed" />
+            </control>
+        </control>
+        <control name="btn_drop_npc" entity="Button" script="" init="">
+            <prop NormalImage="jh_drop_foward" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="179" Top="4" Width="26" Height="26" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_drop_npc_click" on_lost_capture="on_btn_drop_npc_lost_capture" on_get_capture="on_btn_drop_npc_get_capture" />
+        </control>
+        <control name="lbl_time" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="342" Top="212" Width="30" Height="11" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Font="font_text_figure" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="325" Top="213" Width="9" Height="10" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\map\minimap\map_clock.png" />
+        </control>
+        <control name="btn_9yinzhi" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\mainform\sow_out.png" FocusImage="gui\mainform\sow_on.png" PushImage="gui\mainform\sow_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="431" Top="79" Width="27" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TestTrans="true" HintText="@tips_jiuyinzhi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_9yinzhi_click" />
+        </control>
+        <control name="lbl_9yin" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="427" Top="72" Width="39" Height="42" ShadowColor="0,0,0,0" HintText="@tips_jiuyinzhi" AutoSize="true" BackImage="sow_light" />
+        </control>
+        <control name="btn_area_info" entity="Button" script="" init="">
+            <prop NormalImage="gui\map\minimap\btn_areainfo_out.png" FocusImage="gui\map\minimap\btn_areainfo_on.png" PushImage="gui\map\minimap\btn_areainfo_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-198" Top="59" Width="19" Height="19" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" HintText="@ui_tips_quyugaoshi" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_area_info_click" />
+        </control>
+        <control name="groupbox_main_box" entity="GroupBox" script="" init="">
+            <prop Left="355" Top="224" Width="97" Height="177" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" AutoSize="true" BackImage="gui\special\help_gm\main_help.png" />
+            <control name="lbl_page" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="31" Top="158" Width="33" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="1/2" Font="font_main" />
+            </control>
+            <control name="imagegrid_func" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,0,0" MouseInColor="0,0,0,0" CoverColor="0,0,0,0" LockColor="0,0,0,0" CoolColor="100,0,0,0" ViewRect="6,4,100,144" MaxSize="-1" RowNum="3" ClomnNum="2" GridHeight="36" GridWidth="36" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Top="12" Width="97" Height="140" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                <event on_mouseout_grid="on_imagegrid_func_mouseout_grid" on_mousein_grid="on_imagegrid_func_mousein_grid" on_select_changed="on_imagegrid_func_select_changed" />
+            </control>
+            <control name="btn_left" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\hleft_out.png" FocusImage="gui\special\hotlist\hleft_on.png" PushImage="gui\special\hotlist\hleft_down.png" DisableImage="gui\special\hotlist\hleft_jin.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="10" Top="156" Width="21" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_left_click" />
+            </control>
+            <control name="btn_right" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\hotlist\hright_out.png" FocusImage="gui\special\hotlist\hright_on.png" PushImage="gui\special\hotlist\hright_down.png" DisableImage="gui\special\hotlist\hright_jin.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="68" Top="156" Width="21" Height="21" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                <event on_click="on_btn_right_click" />
+            </control>
+        </control>
+        <control name="groupbox_8" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="-425" Top="175" Width="276" Height="44" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Right" TestTrans="true" NoFrame="true" />
+            <control name="btn_11" entity="Button" script="" init="">
+                <prop NormalImage="gui\mainform\tc_out.png" FocusImage="gui\mainform\tc_on.png" PushImage="gui\mainform\tc_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="238" Top="15" Width="24" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_tips_jyhkjss" AutoSize="true" />
+                <event on_click="on_btn_11_click" />
+            </control>
+            <control name="groupbox_10" entity="GroupBox" script="" init="">
+                <prop Left="17" Top="3" Width="228" Height="43" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" />
+                <control name="combobox_1" entity="ComboBox" script="" init="">
+                    <prop ButtonWidth="20" DropDownWidth="140" DropDownHeight="80" OnlySelect="true" Left="7" Top="11" Width="157" Height="20" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\combobox\bg_select2.png" />
+                    <event on_selected="on_combobox_1_selected" />
+                    <subor name="InputEdit">
+                        <prop ReadOnly="true" ChangedEvent="true" MaxLength="32" TextOffsetX="2" Caret="Default" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_main" Cursor="WIN_IBEAM" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bj_kuang_3.png" />
+                    </subor>
+                    <subor name="DropButton">
+                        <prop NormalImage="gui\common\combobox\btn_down1_out_6.png" FocusImage="gui\common\combobox\btn_down1_on_6.png" PushImage="gui\common\combobox\btn_down1_down_6.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    </subor>
+                    <subor name="DropListBox">
+                        <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" SelectBackColor="0,0,0,128" SelectBackImage="gui\common\combobox\bg_select2.png" ScrollSize="17" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\special\battlefield\info_3.png" />
+                        <subor name="VScrollBar">
+                            <prop TrackSize="30" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar_3.png" />
+                            <subor name="DecButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_up_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                            </subor>
+                            <subor name="IncButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_down_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" />
+                            </subor>
+                            <subor name="TrackButton">
+                                <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out_3.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on_3.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="20" Height="30" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                            </subor>
+                        </subor>
+                    </subor>
+                </control>
+                <control name="ipt_search_key" entity="Edit" script="" init="">
+                    <prop ChangedEvent="true" MaxLength="15" TextOffsetX="2" Caret="Default" Left="12" Top="8" Width="137" Height="26" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" BlendColor="0,255,255,255" ShadowColor="0,20,0,0" Font="font_text" Cursor="WIN_IBEAM" TabStop="true" DrawMode="ExpandH" />
+                    <event on_get_focus="on_ipt_search_key_get_focus" on_lost_focus="on_ipt_search_key_lost_focus" on_changed="on_ipt_search_key_changed" />
+                </control>
+                <control name="btn_key" entity="Button" script="" init="">
+                    <prop NormalImage="gui\mainform\ss_out_3.png" FocusImage="gui\mainform\ss_on_3.png" PushImage="gui\mainform\ss_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="165" Top="10" Width="53" Height="23" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_search" Font="font_main" AutoSize="true" />
+                    <event on_click="on_btn_key_click" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_filter1" entity="GroupBox" script="" init="">
+            <prop Left="91" Top="140" Width="158" Height="118" LineColor="255,60,60,60" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_menu_3.png" />
+            <control name="cbtn_fwz" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="16" Top="6" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="1" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_info_filter_checked_changed" />
+            </control>
+            <control name="cbtn_hz" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="15" Top="32" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="2" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_info_filter_checked_changed" />
+            </control>
+            <control name="cbtn_lc" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="90" Top="6" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="3" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_info_filter_checked_changed" />
+            </control>
+            <control name="cbtn_blv" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_5_out.png" FocusImage="gui\common\checkbutton\cbtn_5_on.png" CheckedImage="gui\common\checkbutton\cbtn_5_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="5000" Top="42" Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_info_filter_checked_changed" />
+            </control>
+            <control name="lbl_bangfei" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="36" Top="4" Width="60" Height="18" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_card" Font="font_treeview" />
+            </control>
+            <control name="lbl_haibu" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="36" Top="32" Width="60" Height="18" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_role_onestep" Font="font_treeview" />
+            </control>
+            <control name="lbl_fanghuo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="110" Top="6" Width="60" Height="18" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_role_sable" Font="font_treeview" />
+            </control>
+            <control name="lbl_yunbiao" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="5000" Top="42" Width="60" Height="18" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_map_gl" Font="font_treeview" />
+            </control>
+            <control name="lbl_line_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="32" Width="170" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_line_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="62" Width="170" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_line_4" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="122" Width="170" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="lbl_line_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="6" Top="152" Width="170" Height="4" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_bg2.png" />
+            </control>
+            <control name="btn_weizhi" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\maket\btn_out_3.png" FocusImage="gui\special\maket\btn_on_3.png" PushImage="gui\special\maket\btn_down_3.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="16" Top="81" Width="126" Height="24" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_comeback_default" Font="font_treeview" NoFrame="true" DrawMode="FitWindow" />
+                <event on_click="on_btn_weizhi_click" />
+            </control>
+            <control name="cbtn_equip_buff" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_off_3.png" FocusImage="gui\common\checkbutton\cbtn_on_3.png" CheckedImage="gui\common\checkbutton\cbtn_down_3.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="16" Top="56" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="4" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_cbtn_info_filter_checked_changed" />
+            </control>
+            <control name="lbl_equip_buff" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="37" Top="56" Width="60" Height="18" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_equip_buff" Font="font_treeview" />
+            </control>
+        </control>
+        <control name="groupbox_jhscene_btns" entity="GroupBox" script="" init="">
+            <prop Left="283" Top="236" Width="78" Height="86" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Visible="false" HintText="@ui_newworld_btn_tips_2" NoFrame="true" BackImage="gui\common\form_back\" />
+            <control name="btn_guide" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\btn_fresh\book_over.png" FocusImage="gui\special\btn_fresh\book_on.png" PushImage="gui\special\btn_fresh\book_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="15" Top="17" Width="46" Height="52" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                <event on_click="on_btn_guide_click" />
+            </control>
+        </control>
+    </control>
+</form>

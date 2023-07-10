@@ -1,0 +1,127 @@
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by ylp (EMBRACE) -->
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="action_react.xsd">
+	<!--从站立到跑步的处理-->
+	<StateChange src="stand" dest="run">
+		<!--动作处理列表-->
+		<ReAct action="jumpdown" mode="1"/>
+		<ReAct action="interact284" mode="1"/>
+		<ReAct action="atk_sp_0h_01" mode="1"/>
+		<!--自定义属性处理列表-->
+		<ReAct custom="whack_state" mode="5"/>
+	</StateChange>
+	<StateChange src="yd_jz_0h" dest="run">
+		<!--动作处理列表-->
+		<ReAct custom="state_to_half" mode="5"/>
+	</StateChange>
+
+	<StateChange src="stand" dest="jumping">
+		<!--动作处理列表-->
+		<ReAct custom="nolimit_skill_bh" mode="5"/>
+		<ReAct custom="whack_state" mode="5"/>
+	</StateChange>
+
+	<StateChange src="run" dest="jumping">
+		<!--动作处理列表-->
+		<ReAct custom="nolimit_skill_bh" mode="5"/>
+		<ReAct custom="whack_state" mode="5"/>
+	</StateChange>
+
+	<StateChange src="yd_jz_0h" dest="jumping">
+		<!--动作处理列表-->
+		<ReAct custom="state_to_half" mode="5"/>
+	</StateChange>
+
+	<StateChange src="run" dest="stand">
+		<!--自定义属性处理列表-->
+		<ReAct custom="whack_state" mode="5"/>
+	</StateChange>
+	<StateChange src="run" dest="qg_S_runs_f">
+		<!--动作处理列表-->
+		<ReAct action="jumpdown" mode="1"/>
+		<ReAct action="jumpdown_f" mode="1"/>
+	</StateChange>
+	<StateChange src="jumping" dest="run">
+		<!--动作处理列表-->
+		<ReAct action="jumpdown" mode="1"/>
+		<!--自定义属性处理列表-->
+		<ReAct custom="whack_state" mode="5"/>
+		<!--动作处理列表-->
+		<ReAct custom="nolimit_skill_ba" mode="5"/>
+	</StateChange>
+	<StateChange src="jumping" dest="stand">
+		<!--自定义属性处理列表-->
+		<ReAct custom="whack_state" mode="5"/>
+			<!--动作处理列表-->
+		<ReAct custom="nolimit_skill_ba" mode="5"/>
+	</StateChange>
+	<StateChange src="sitcross" dest="run">
+		<!--动作处理列表-->
+		<ReAct action="ng_end_1" mode="1"/>
+		<ReAct action="ng_start_1" mode="1"/>
+	</StateChange>
+	<StateChange src="stand" dest="stand">
+		<!--自定义属性处理列表-->
+		<ReAct custom="whack_state" mode="5"/>
+	</StateChange>
+	<!--不同名，但同样处理的原状态动作名-->
+	<StateSame state="stand">
+		<SubState name="stand"/>
+		<SubState name="byd_stand"/>
+		<SubState name="dgb_stand"/>
+		<SubState name="fi_0h_stand"/>
+		<SubState name="fi_1h_stand"/>
+		<SubState name="fi_2h_stand"/>
+		<SubState name="fi_3h_stand"/>
+		<SubState name="fi_4h_bz_stand"/>
+		<SubState name="fi_4h_stand"/>
+		<SubState name="fi_5h_stand"/>
+		<SubState name="fi_6h_stand"/>
+		<SubState name="fi_7h_stand"/>
+		<SubState name="fi_8h_stand"/>
+		<SubState name="grd_0h_stand"/>
+		<SubState name="grd_1h_stand"/>
+		<SubState name="grd_2h_stand"/>
+		<SubState name="grd_3h_stand"/>
+		<SubState name="grd_4h_bz_stand"/>
+		<SubState name="grd_4h_stand"/>
+		<SubState name="grd_5h_stand"/>
+		<SubState name="grd_6h_stand"/>
+		<SubState name="grd_7h_stand"/>
+		<SubState name="grd_8h_stand"/>
+	</StateSame>
+	<StateSame state="run">
+		<SubState name="run"/>
+		<SubState name="fi_0h_run"/>
+		<SubState name="fi_1h_run"/>
+		<SubState name="fi_2h_run"/>
+		<SubState name="fi_3h_run"/>
+		<SubState name="fi_4h_run"/>
+		<SubState name="fi_5h_run"/>
+		<SubState name="fi_6h_run"/>
+		<SubState name="fi_7h_run"/>
+		<SubState name="fi_8h_run"/>
+		<SubState name="grd_0h_run"/>
+		<SubState name="grd_1h_run"/>
+		<SubState name="grd_2h_run"/>
+		<SubState name="grd_3h_run"/>
+		<SubState name="grd_4h_run"/>
+		<SubState name="grd_5h_run"/>
+		<SubState name="grd_6h_run"/>
+		<SubState name="grd_7h_run"/>
+		<SubState name="grd_8h_run"/>
+		<SubState name="qg_fastrun"/>
+		<SubState name="run_back"/>
+		<SubState name="qg_fastruning"/>
+	</StateSame>
+	<StateSame state="sitcross">
+		<SubState name="ng_state_1"/>
+	</StateSame>
+	<StateSame state="jumping">
+		<SubState name="jumpdowning"/>
+	</StateSame>
+
+	<StateSame state="yd_jz_0h">
+		<!--需要在移动中不打断的准备动作，前提是必须有相应的半身动作-->
+		<SubState name="tlq_stand"/>
+	</StateSame>
+</Root>

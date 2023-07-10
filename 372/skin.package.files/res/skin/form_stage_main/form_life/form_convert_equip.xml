@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_convert_equip" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="-419" Top="109" Width="402" Height="646" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="612" Width="390" Height="27" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="16" Width="402" Height="588" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\changdi1.png" />
+        </control>
+        <control name="btn_convert" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="305" Top="611" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Enabled="false" Text="@ui_ok" Font="font_btn" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_convert_click" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-26" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="ImgCtl_SplitItem" entity="ImageControlGrid" script="" init="">
+            <prop MultiTextBoxLeft="60" MultiTextBoxTop="10" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="8,8,70,70" MaxSize="-1" RowNum="1" ClomnNum="1" GridOffsetX="-2" GridOffsetY="1" GridHeight="43" GridWidth="43" GridsPos="0,0;0,105" DrawMouseIn="xuanzekuang" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-3" GridBackOffsetY="-1" GridCoverOffsetX="2" GridCoverOffsetY="2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="175" Top="198" Width="54" Height="54" ForeColor="255,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="WRYH18" NoFrame="true" DrawMode="Expand" />
+            <event on_select_changed="on_ImgCtl_SplitItem_select_changed" on_mousein_grid="on_ImgCtl_SplitItem_mousein_grid" on_rightclick_grid="on_ImgCtl_SplitItem_rightclick_grid" on_mouseout_grid="on_ImgCtl_SplitItem_mouseout_grid" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="28" Width="392" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="120" Top="2" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_EquipChange_zhujian" Font="font_sns_main" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="160" Top="2" Width="10" Height="31" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" AutoSize="true" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="2" Top="605" Width="395" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" Transparent="true" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,364,117" LineHeight="17" HtmlText="@ui_EquipChange_shuoming" ScrollSize="17" HasVScroll="true" Solid="true" Left="10" Top="475" Width="384" Height="117" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Font="font_treeview" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bj_kuang.png" />
+            <subor name="VScrollBar">
+                <prop Maximum="3" SmallChange="1" LargeChange="6" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="58" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="176" Top="201" Width="54" Height="56" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao2.png" />
+        </control>
+        <control name="btn_help" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="353" Top="7" Width="20" Height="22" BackColor="0,192,192,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_checked_changed="on_btn_help_checked_changed" />
+        </control>
+        <control name="lbl_9" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="104" Top="256" Width="204" Height="20" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_EquipChange_zhujian" Font="font_text_title1" />
+        </control>
+        <control name="Img_Convert" entity="ImageControlGrid" script="" init="">
+            <prop MultiTextBoxLeft="268580209" MultiTextBoxTop="50" MultiTextBoxPos="0,50" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="80,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="5,5,360,44" MaxSize="-1" RowNum="1" ClomnNum="5" GridHeight="42" GridWidth="42" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_item.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Solid="false" Left="32" Top="416" Width="342" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <event on_mouseout_grid="on_Img_Convert_mouseout_grid" on_mousein_grid="on_Img_Convert_mousein_grid" />
+        </control>
+        <control name="rbtn_Type1" entity="RadioButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="48" Top="400" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_rbtn_Type_click" />
+        </control>
+        <control name="rbtn_Type2" entity="RadioButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="120" Top="400" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_rbtn_Type_click" />
+        </control>
+        <control name="rbtn_Type4" entity="RadioButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="264" Top="400" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_rbtn_Type_click" />
+        </control>
+        <control name="rbtn_Type5" entity="RadioButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="336" Top="400" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_rbtn_Type_click" />
+        </control>
+        <control name="mltbox_cost" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,255,204,0" Transparent="true" ViewRect="0,0,286,18" LineHeight="17" ScrollSize="17" Left="8" Top="616" Width="286" Height="18" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_money" NoFrame="true" />
+        </control>
+        <control name="rbtn_Type3" entity="RadioButton" script="" init="">
+            <prop ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="192" Top="400" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+            <event on_click="on_rbtn_Type_click" />
+        </control>
+        <control name="rbtn_Type6" entity="RadioButton" script="" init="">
+            <prop Checked="true" ClickEvent="true" BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_2_out.png" FocusImage="gui\common\checkbutton\cbtn_2_on.png" CheckedImage="gui\common\checkbutton\cbtn_2_down.png" DisableImage="gui\common\checkbutton\cbtn_2_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="408" Top="416" Width="16" Height="16" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" />
+        </control>
+        <control name="lbl_lk_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="28" Top="412" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao1.png" />
+        </control>
+        <control name="lbl_lk_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="99" Top="412" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao1.png" />
+        </control>
+        <control name="lbl_lk_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="170" Top="412" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao1.png" />
+        </control>
+        <control name="lbl_lk_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="241" Top="412" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao1.png" />
+        </control>
+        <control name="lbl_lk_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="312" Top="412" Width="60" Height="60" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\fenjie\guangxiao1.png" />
+        </control>
+    </control>
+</form>

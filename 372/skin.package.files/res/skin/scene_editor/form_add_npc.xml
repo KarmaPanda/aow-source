@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_add_npc" init="main_form_init">
+        <prop Left="125" Top="133" Width="414" Height="294" BackColor="255,157,155,255" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="168" Top="8" Width="80" Height="22" Text="添加NPC" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="48" Width="46" Height="22" Text="类型:" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="48" Width="46" Height="22" Text="名称：" />
+        </control>
+        <control name="name_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="70" Top="46" Width="134" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="type_combo" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="50" Left="256" Top="48" Width="134" Height="22" />
+            <subor name="InputEdit">
+                <prop TextOffsetX="2" Caret="Default" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                </subor>
+            </subor>
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop Left="104" Top="264" Width="70" Height="24" Text="确定" TabStop="true" />
+            <event on_click="ok_btn_click" />
+        </control>
+        <control name="cancel_btn" entity="Button" script="" init="">
+            <prop Left="264" Top="264" Width="70" Height="24" Text="取消" TabStop="true" />
+            <event on_click="cancel_btn_click" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="104" Width="80" Height="22" Text="配置文件：" />
+        </control>
+        <control name="config_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="104" Top="104" Width="230" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="config_btn" entity="Button" script="" init="">
+            <prop Left="344" Top="104" Width="48" Height="24" Text="选择" TabStop="true" />
+            <event on_click="config_btn_click" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="232" Width="80" Height="22" Text="标记信息：" />
+        </control>
+        <control name="tag_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="104" Top="232" Width="286" Height="22" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="add_all_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="24" Top="80" Width="318" Height="24" Text="要添加配置文件中的所有NPC，则请先选择" TabStop="true" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="24" Top="144" Width="70" Height="16" Text="NPC 列表：" />
+        </control>
+        <control name="name_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="104" Top="136" Width="230" Height="86" Text="ListBox1" TabStop="true" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+            </subor>
+        </control>
+    </control>
+</form>

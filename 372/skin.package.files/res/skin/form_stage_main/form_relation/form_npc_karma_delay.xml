@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_relation\form_npc_karma_delay" init="main_form_init">
+        <prop LimitInScreen="true" Left="93" Top="109" Width="600" Height="450" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_back" entity="GroupBox" script="" init="">
+            <prop Width="600" Height="450" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+            <control name="lbl_title_pic" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Top="-2" Width="36" Height="36" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\language\ChineseS\btn_main\btn_adventure_out.png" />
+            </control>
+            <control name="lbl_title" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="256" Top="9" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_enchou" Font="font_title" />
+            </control>
+            <control name="lbl_title_back" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="224" Top="3" Width="144" Height="29" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Font="font_title" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+            </control>
+            <control name="lbl_scroll" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="567" Top="32" Width="30" Height="414" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar_form.png" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="570" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="mltbox_karma" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" SelectBarColor="255,0,0,255" MouseInBarColor="0,255,255,0" SelectBarDraw="gui\common\treeview\tree_3_out.png" MouseInBarDraw="gui\common\treeview\tree_1_out.png" ViewRect="20,10,570,400" LineHeight="28" ScrollSize="17" Left="2" Top="31" Width="570" Height="417" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+                <event on_right_click_item="on_mltbox_karma_right_click_item" />
+            </control>
+            <control name="mltbox_data" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,0,0,0" SelectBarColor="255,0,0,255" MouseInBarColor="0,255,255,0" SelectBarDraw="gui\common\treeview\tree_3_out.png" MouseInBarDraw="gui\common\treeview\tree_1_out.png" ViewRect="20,10,570,400" LineHeight="28" ScrollSize="17" Left="392" Top="32" Width="174" Height="414" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_sns_event_mid" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+            </control>
+        </control>
+    </control>
+</form>

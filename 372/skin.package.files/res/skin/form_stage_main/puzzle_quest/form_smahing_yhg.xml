@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\puzzle_quest\form_smahing_yhg" init="on_main_form_init">
+        <prop LimitInScreen="true" Left="61" Top="45" Width="1024" Height="768" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Center" BackImage="gui\special\life\puzzle_quest\moyumeihua\bg.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_qp" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-504" Top="-488" Width="1080" Height="1080" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" AutoSize="true" BackImage="gui\special\life\puzzle_quest\moyumeihua\qp.png" />
+        </control>
+        <control name="groupbox_turn" entity="GroupBox" script="" init="">
+            <prop Left="-217" Top="-6" Width="486" Height="72" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" />
+            <control name="pbar_turn" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="80" WidthGap="2" HeightGap="2" ProgressImage="gui\special\life\puzzle_quest\zadan\bout_tiao.png" ProgressMode="RightToLeft" Left="47" Top="22" Width="399" Height="32" ShadowColor="0,0,0,0" Font="font_title_tasktrace" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\life\puzzle_quest\zadan\bout_cao.png" />
+            </control>
+            <control name="mltbox_turn" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,31" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,398,30" LineHeight="18" ScrollSize="17" Left="44" Top="28" Width="398" Height="30" ShadowColor="0,0,0,0" Font="font_title_tasktrace" NoFrame="true" />
+            </control>
+        </control>
+        <control name="groupbox_skill" entity="GroupBox" script="" init="">
+            <prop Left="248" Top="-72" Width="94" Height="238" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" />
+            <control name="lbl_qpdb" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-8" Top="48" Width="110" Height="102" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\life\puzzle_quest\moyumeihua\article.png" />
+            </control>
+            <control name="skill_3" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\life\puzzle_quest\moyumeihua\Jdao_out.png" FocusImage="gui\special\life\puzzle_quest\moyumeihua\Jdao_on.png" PushImage="gui\special\life\puzzle_quest\moyumeihua\Jdao_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="64" Width="81" Height="81" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DataSource="gemegg_004" HintText="@ui_ydhd_skill_04" NoFrame="true" AutoSize="true" ClickSound="czyx" />
+                <event on_click="on_skill_click" />
+            </control>
+        </control>
+        <control name="groupbox_prizes" entity="GroupBox" script="" init="">
+            <prop Left="264" Top="64" Width="206" Height="242" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DrawMode="FitWindow" BackImage="gui\special\life\puzzle_quest\moyumeihua\article.png" />
+            <control name="lbl_prizewz" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="-63" Top="16" Width="104" Height="16" ForeColor="255,255,240,179" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_ydhd_hdjl" Font="font_text_chat" />
+            </control>
+            <control name="imagegrid_prize" entity="ImageGrid" script="" init="">
+                <prop SelectColor="0,0,0,0" MouseInColor="0,0,0,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="-1" RowNum="3" ClomnNum="3" GridHeight="50" GridWidth="50" GridsPos="0,5;57,5;114,5;0,65;57,65;114,65;0,125;57,125;114,125;" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\life\puzzle_quest\zadan\article_gz.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" ScrollSize="18" Left="22" Top="40" Width="184" Height="180" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+                <event on_mouseout_grid="on_imagegrid_prize_mouseout_grid" on_mousein_grid="on_imagegrid_prize_mousein_grid" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="18" FullBarBack="false" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_1\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="144" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                    </subor>
+                </subor>
+            </control>
+        </control>
+        <control name="btn_quit" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\tc-out.png" FocusImage="gui\language\ChineseS\tc-on.png" PushImage="gui\language\ChineseS\tc-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-76" Top="-79" Width="55" Height="32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" AutoSize="true" />
+            <event on_click="on_btn_quit_click" />
+        </control>
+    </control>
+</form>

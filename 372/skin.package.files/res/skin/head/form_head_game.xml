@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="" init="">
+        <prop LimitInScreen="true" ShowGrid="true" ClipChildren="false" Left="20" Top="30" Width="422" Height="494" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+        <control name="TitleID" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-74" Top="71" Width="190" Height="18" ForeColor="255,200,255,255" LineColor="255,255,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="TitleID" DataSource="TitleID" Font="font_name_tittle" AutoSize="true" />
+        </control>
+        <control name="Name" entity="MultiTextBox" script="" init="">
+            <prop HAlign="Center" ViewRect="0,0,182,30" LineHeight="18" HtmlText="Name" LineTextAlign="Top" ScrollSize="17" Left="-162" Top="15" Width="182" Height="30" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="mltbox_1" DataSource="Name" Font="font_name_tittle" NoFrame="true" />
+        </control>
+        <control name="Guild" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="-146" Top="39" Width="190" Height="16" ForeColor="255,200,255,255" LineColor="0,255,0,0" ShadowColor="0,0,0,0" HAnchor="Center" Text="Guild" DataSource="GuildName" Font="font_name_guild" />
+        </control>
+        <control name="HP" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="-162" Top="95" Width="72" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="HP" AutoSize="true" BackImage="gui\mainform\bg_hp.png" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="62" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="pbar_hithp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="60" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_resume.png" ProgressMode="LeftToRight" TextPercent="true" Width="72" Height="12" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="HP" Font="Default_npc_talk" AutoSize="true" />
+            </control>
+            <control name="pbar_hp" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_hp.png" ProgressMode="LeftToRight" TextPercent="true" Width="72" Height="12" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="HP" Font="Default_npc_talk" AutoSize="true" />
+            </control>
+            <control name="pbar_hp_1" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_player_hp.png" ProgressMode="LeftToRight" TextPercent="true" Width="72" Height="12" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DataSource="HP" Font="Default_npc_talk" AutoSize="true" />
+            </control>
+        </control>
+        <control name="IQGGroupBox" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="-159" Top="152" Width="72" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="QingGong" BackImage="gui\mainform\bg_hp.png" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="62" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="prog_qg" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_qg.png" ProgressMode="LeftToRight" Width="72" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+        </control>
+        <control name="IRideSpurtGroupBox" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="-159" Top="196" Width="166" Height="30" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="RideSpurt" Font="font_main" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="156" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Width="77" Height="26" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+            <control name="lbl_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="2" Width="22" Height="22" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            </control>
+            <control name="prog_rs" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_qg.png" ProgressMode="LeftToRight" TextVisible="true" Left="22" Top="10" Width="120" Height="8" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\mainform\bg_qg.png" />
+            </control>
+        </control>
+        <control name="FortuneTellingStallName" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="-152" Top="237" Width="142" Height="39" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="FortStall" NoFrame="true" DrawMode="ExpandH" BackImage="gui\mainform\bg_stall.png" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="132" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="lbl_Fortu_icon" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="29" Height="39" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\mainform\icon_gua.png" />
+            </control>
+            <control name="lbl_Fortu_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="42" Top="10" Width="80" Height="16" ForeColor="255,162,224,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="stallname" Font="font_text_chat" />
+            </control>
+        </control>
+        <control name="StallName" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="-158" Top="303" Width="142" Height="39" BackColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="StallName" NoFrame="true" DrawMode="ExpandH" BackImage="gui\mainform\bg_stall.png" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="132" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="lbl_icon" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="36" Height="39" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\language\ChineseS\mainform\icon_stall.png" />
+            </control>
+            <control name="lbl_stall_name" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="42" Top="10" Width="80" Height="16" ForeColor="255,162,224,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="stallname" Font="font_text_chat" />
+            </control>
+        </control>
+        <control name="NeigongPKStatus" entity="ProgressBar" script="" init="">
+            <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_qg.png" ProgressMode="LeftToRight" TextPercent="true" Left="-162" Top="127" Width="134" Height="13" ForeColor="255,255,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NeigongPKStatus" Font="Default_npc_talk" DrawMode="FitWindow" BackImage="gui\mainform\bg_hp.png" />
+        </control>
+        <control name="Chat" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="14" Top="351" Width="190" Height="102" BackColor="0,255,255,255" LineColor="255,255,0,0" BlendColor="0,255,255,255" ShadowColor="0,0,0,0" HAnchor="Center" NoFrame="true" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="180" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="MultiTextBox_1" entity="MultiTextBox" script="" init="">
+                <prop ViewRect="0,0,150,70" LineHeight="13" TipAutoSize="true" ScrollSize="17" Width="150" Height="70" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Text="mltbox_1" NoFrame="true" DrawMode="Expand" />
+            </control>
+        </control>
+        <control name="Groupbox_Parry" entity="GroupBox" script="" init="">
+            <prop ClipChildren="false" Left="-31" Top="380" Width="46" Height="6" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="NpcParryRatio" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="36" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="ParryRatio" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\common\progressbar\Parry_pbr.png" ProgressMode="LeftToRight" TextPercent="true" Width="42" Height="4" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="Default" DrawMode="FitWindow" BackImage="gui\mainform\bg_hp.png" />
+            </control>
+            <control name="lbl_parry" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="42" Height="4" ShadowColor="0,0,0,0" Font="Default" DrawMode="FitWindow" BackImage="gui\mainform\pbr_df1.png" />
+            </control>
+        </control>
+        <control name="CharacterFlag" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="25" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" DataSource="CharacterFlag" AutoSize="true" BackImage="gui\language\ChineseS\sns_new\mark\mark_chu.png" />
+        </control>
+        <control name="GuildChaseFlag" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="25" Top="39" Width="27" Height="27" ShadowColor="0,0,0,0" DataSource="GuildKillLevel" Font="font_name_guild" AutoSize="true" BackImage="gui\language\ChineseS\mainform\icon_kill_1.png" />
+        </control>
+        <control name="RevengeIntegral" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="289" Top="23" Width="18" Height="18" ShadowColor="0,0,0,0" DataSource="RevengeIntegral" AutoSize="true" BackImage="gui\special\tianti\glory\icon_room1.png" />
+        </control>
+        <control name="huashanFlag" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="25" Top="15" Width="15" Height="16" ShadowColor="0,0,0,0" DataSource="huashanFlag" AutoSize="true" BackImage="gui\special\huashan\head.png" />
+        </control>
+        <control name="NewTerritoryStatus" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="337" Top="63" Width="19" Height="19" ShadowColor="0,0,0,0" DataSource="NewTerritoryStatus" AutoSize="true" BackImage="gui\language\ChineseS\mainform\icon_dhpvp_xiu.png" />
+        </control>
+        <control name="OldRevengeIntegral" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="247" Top="31" Width="18" Height="18" ShadowColor="0,0,0,0" DataSource="OldRevengeIntegral" AutoSize="true" BackImage="gui\special\tianti\glory\icon_room1.png" />
+        </control>
+        <control name="IGJQGGroupBox" entity="GroupBox" script="" init="">
+            <prop Left="-159" Top="163" Width="72" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" HAnchor="Center" DataSource="GJQingGong" BackImage="gui\mainform\bg_hp.png" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="62" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            </subor>
+            <control name="prog_gj_qg" entity="ProgressBar" script="" init="">
+                <prop Maximum="100" Value="40" WidthGap="2" HeightGap="2" ProgressImage="gui\mainform\pbr_qg_high.png" ProgressMode="LeftToRight" Width="72" Height="12" ForeColor="0,0,0,0" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" AutoSize="true" />
+            </control>
+        </control>
+        <control name="BalanceGrowCurLv" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="281" Top="95" Width="19" Height="19" ShadowColor="0,0,0,0" DataSource="BalanceGrowCurLv" AutoSize="true" BackImage="gui\language\ChineseS\mainform\icon_dhpvp_xiu.png" />
+        </control>
+    </control>
+</form>

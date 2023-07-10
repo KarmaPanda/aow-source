@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_create" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Width="1024" Height="768" DrawMode="FitWindow" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="btn_1" entity="Button" script="" init="">
+            <prop NormalImage="gui\creat\land.png" FocusImage="gui\creat\landx.png" PushImage="gui\creat\landx.png" Left="-195" Top="53" Width="184" Height="33" ForeColor="255,255,255,255" HAnchor="Right" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_1_click" />
+        </control>
+        <control name="GroupBox4" entity="GroupBox" script="" init="">
+            <prop Left="-320" Top="80" Width="302" Height="590" BackColor="0,255,255,255" LineColor="0,0,0,0" HAnchor="Right" />
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Width="254" Height="590" AutoSize="true" BackImage="gui\creat\mulu.png" />
+            </control>
+            <control name="photo_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" Left="21" Top="469" Width="222" Height="62" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_photo_btn_get_capture" on_lost_capture="on_photo_btn_lost_capture" />
+            </control>
+            <control name="random_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" PushImage="gui\login\empty.png" Left="45" Top="400" Width="198" Height="29" Font="FZHKJT24" TabStop="true" DrawMode="Expand" />
+                <event on_click="random_btn_on_click" on_get_capture="on_random_btn_get_capture" on_lost_capture="on_random_btn_lost_capture" />
+            </control>
+            <control name="shoes_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" Left="45" Top="341" Width="198" Height="30" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_shoes_btn_get_capture" on_lost_capture="on_shoes_btn_lost_capture" />
+            </control>
+            <control name="pants_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" Left="45" Top="280" Width="190" Height="30" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_pants_btn_get_capture" on_lost_capture="on_pants_btn_lost_capture" />
+            </control>
+            <control name="cloth_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" Left="45" Top="224" Width="198" Height="30" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_cloth_btn_get_capture" on_lost_capture="on_cloth_btn_lost_capture" />
+            </control>
+            <control name="hair_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" Left="45" Top="168" Width="198" Height="30" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_hair_btn_get_capture" on_lost_capture="on_hair_btn_lost_capture" />
+            </control>
+            <control name="impress_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" Left="45" Top="88" Width="198" Height="30" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_impress_btn_get_capture" on_lost_capture="on_impress_btn_lost_capture" />
+            </control>
+            <control name="face_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="Creat_Detail_Button_On" Left="45" Top="32" Width="166" Height="30" TabStop="true" DrawMode="FitWindow" />
+                <event on_get_capture="on_face_btn_get_capture" on_lost_capture="on_face_btn_lost_capture" />
+            </control>
+            <control name="cur_icon_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="496" Width="46" Height="16" ForeColor="255,0,255,0" Text="@ui_create" Font="FZHKJT20_O" />
+            </control>
+            <control name="cur_hair_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="176" Width="46" Height="16" ForeColor="255,0,255,0" Text="@ui_create" Font="FZHKJT20_O" />
+            </control>
+            <control name="cur_pants_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="288" Width="46" Height="16" ForeColor="255,0,255,0" Text="@ui_create" Font="FZHKJT20_O" />
+            </control>
+            <control name="cur_cloth_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="232" Width="46" Height="16" ForeColor="255,0,255,0" Text="@ui_create" Font="FZHKJT20_O" />
+            </control>
+            <control name="cur_shoes_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="352" Width="46" Height="16" ForeColor="255,0,255,0" Text="@ui_create" Font="FZHKJT20_O" />
+            </control>
+            <control name="cur_impress_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="96" Width="46" Height="16" ForeColor="255,0,255,0" Text="壹" Font="FZHKJT20_O" />
+            </control>
+            <control name="impress_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="88" Width="30" Height="30" />
+            </control>
+            <control name="impress_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="88" Width="30" Height="30" />
+            </control>
+            <control name="hair_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="168" Width="30" Height="30" />
+            </control>
+            <control name="hair_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" PlayMode="2" Left="216" Top="168" Width="30" Height="30" />
+            </control>
+            <control name="cloth_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="224" Width="30" Height="30" />
+            </control>
+            <control name="cloth_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="224" Width="30" Height="30" />
+            </control>
+            <control name="pants_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="280" Width="30" Height="30" />
+            </control>
+            <control name="pants_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="280" Width="30" Height="30" />
+            </control>
+            <control name="shoes_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="344" Width="30" Height="30" />
+            </control>
+            <control name="shoes_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="344" Width="30" Height="30" />
+            </control>
+            <control name="random_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="400" Width="30" Height="30" />
+            </control>
+            <control name="random_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="400" Width="30" Height="30" />
+            </control>
+            <control name="lbl_photo" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="64" Top="456" Width="62" Height="79" AutoSize="true" BackImage="gui\creat\tx.png" />
+            </control>
+            <control name="photo_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="488" Width="30" Height="30" />
+            </control>
+            <control name="photo_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="488" Width="30" Height="30" />
+            </control>
+            <control name="cur_face_label" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="165" Top="40" Width="46" Height="16" ForeColor="255,0,255,0" Text="@ui_create" Font="FZHKJT20_O" />
+                <event on_get_capture="on_cur_face_label_get_capture" on_click="on_cur_face_label_click" />
+            </control>
+            <control name="face_prev_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Left_Appear_New" Loop="false" PlayMode="2" Left="21" Top="32" Width="30" Height="30" />
+            </control>
+            <control name="face_next_ani" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Smallarrow_Right_Appear_New" Loop="false" PlayMode="2" Left="216" Top="32" Width="30" Height="30" />
+            </control>
+            <control name="face_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="22" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="face_prev_btn_on_click" on_get_capture="on_face_prev_btn_get_capture" on_lost_capture="on_face_prev_btn_lost_capture" />
+            </control>
+            <control name="face_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="22" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="face_next_btn_on_click" on_get_capture="on_face_next_btn_get_capture" on_lost_capture="on_face_next_btn_lost_capture" />
+            </control>
+            <control name="impress_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="78" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="impress_btn_click" on_get_capture="on_impress_prev_btn_get_capture" on_lost_capture="on_impress_prev_btn_lost_capture" />
+            </control>
+            <control name="impress_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="78" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_impress_next_btn_click" on_get_capture="on_impress_next_btn_get_capture" on_lost_capture="on_impress_next_btn_lost_capture" />
+            </control>
+            <control name="hair_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="158" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="hair_prev_btn_on_click" on_get_capture="on_hair_prev_btn_get_capture" on_lost_capture="on_hair_prev_btn_lost_capture" />
+            </control>
+            <control name="hair_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="158" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="hair_next_btn_on_click" on_get_capture="on_hair_next_btn_get_capture" on_lost_capture="on_hair_next_btn_lost_capture" />
+            </control>
+            <control name="cloth_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="214" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="cloth_prev_btn_on_click" on_get_capture="on_cloth_prev_btn_get_capture" on_lost_capture="on_cloth_prev_btn_lost_capture" />
+            </control>
+            <control name="cloth_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="214" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="cloth_next_btn_on_click" on_get_capture="on_cloth_next_btn_get_capture" on_lost_capture="on_cloth_next_btn_lost_capture" />
+            </control>
+            <control name="pants_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="270" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="pants_prev_btn_on_click" on_get_capture="on_pants_prev_btn_get_capture" on_lost_capture="on_pants_prev_btn_lost_capture" />
+            </control>
+            <control name="pants_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="270" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="pants_next_btn_on_click" on_get_capture="on_pants_next_btn_get_capture" on_lost_capture="on_pants_next_btn_lost_capture" />
+            </control>
+            <control name="shoes_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="334" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="shoes_prev_btn_on_click" on_get_capture="on_shoes_prev_btn_get_capture" on_lost_capture="on_shoes_prev_btn_lost_capture" />
+            </control>
+            <control name="shoes_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="334" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="shoes_next_btn_on_click" on_get_capture="on_shoes_next_btn_get_capture" on_lost_capture="on_shoes_next_btn_lost_capture" />
+            </control>
+            <control name="random_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="391" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_random_prev_btn_click" on_get_capture="on_random_prev_btn_get_capture" on_lost_capture="on_random_prev_btn_lost_capture" />
+            </control>
+            <control name="random_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="391" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="on_random_next_btn_click" on_get_capture="on_random_next_btn_get_capture" on_lost_capture="on_random_next_btn_lost_capture" />
+            </control>
+            <control name="photo_prev_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="6" Top="478" Width="55" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="photo_prev_btn_on_click" on_get_capture="on_photo_prev_btn_get_capture" on_lost_capture="on_photo_prev_btn_lost_capture" />
+            </control>
+            <control name="photo_next_btn" entity="Button" script="" init="">
+                <prop NormalImage="gui\login\empty.png" FocusImage="gui\login\empty.png" PushImage="gui\login\empty.png" Left="201" Top="478" Width="65" Height="45" TabStop="true" DrawMode="FitWindow" />
+                <event on_click="photo_next_btn_on_click" on_get_capture="on_photo_next_btn_get_capture" on_lost_capture="on_photo_next_btn_lost_capture" />
+            </control>
+        </control>
+        <control name="lbl_24" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="-48" Width="1024" Height="47" VAnchor="Bottom" DrawMode="ExpandH" BackImage="gui\login\down.png" />
+        </control>
+        <control name="lbl_23" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="1024" Height="75" DrawMode="ExpandH" BackImage="gui\login\up.png" />
+        </control>
+        <control name="ok_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\creat\qr-out.png" FocusImage="Creat_Confirm_On" PushImage="gui\creat\qr-down.png" Left="-104" Top="-112" Width="42" Height="59" ForeColor="255,153,255,255" VAnchor="Bottom" HAnchor="Right" Font="FZHKJT20" TabStop="true" AutoSize="true" />
+            <event on_click="ok_btn_on_click" />
+        </control>
+        <control name="back_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\login\tc-out.png" FocusImage="Creat_Cancel_On" PushImage="gui\login\tc-down.png" Left="-48" Top="-72" Width="32" Height="55" ForeColor="255,153,255,255" VAnchor="Bottom" HAnchor="Right" Font="FZHKJT20" TabStop="true" AutoSize="true" />
+            <event on_click="back_btn_click" />
+        </control>
+        <control name="info_group" entity="GroupBox" script="" init="">
+            <prop Left="16" Top="240" Width="414" Height="494" BackColor="0,255,255,255" LineColor="0,0,0,0" DrawMode="Expand" />
+            <control name="sex_group" entity="GroupBox" script="" init="">
+                <prop Left="264" Top="64" Width="54" Height="126" BackColor="0,255,255,255" LineColor="0,0,0,0" />
+                <control name="man_check" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\creat\boy1.png" FocusImage="Creat_Sex_Boy_On" CheckedImage="gui\creat\boy2.png" DisableImage="gui\creat\boy1.png" Top="8" Width="56" Height="57" TabStop="true" />
+                    <event on_checked_changed="man_checked_changed" />
+                </control>
+                <control name="woman_check" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\creat\girl1.png" FocusImage="Creat_Sex_Girl_On" CheckedImage="gui\creat\girl2.png" DisableImage="gui\creat\girl1.png" Top="72" Width="56" Height="57" TabStop="true" />
+                    <event on_checked_changed="woman_checked_changed" />
+                </control>
+            </control>
+            <control name="textgrid_born" entity="Grid" script="" init="">
+                <prop RowHeaderVisible="false" SelectBackDraw="gui\common\selectbar\xz-on&amp;down.png" CanSelectRow="true" ColWidth="105" ColWidths="0,0" RowHeight="20" ColCount="2" ScrollSize="26" HasHScroll="true" Solid="false" Left="16" Top="424" Width="230" Height="198" BackColor="0,255,255,255" LineColor="0,0,0,0" Font="FZHTJT18" TabStop="true" DrawMode="Expand" />
+                <event on_select_row="on_textgrid_born_select_row" />
+                <subor name="HScrollBar">
+                    <prop BackColor="255,224,224,224" />
+                    <subor name="DecButton">
+                        <prop Width="15" Height="26" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="15" Height="26" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="16" Height="26" />
+                    </subor>
+                </subor>
+                <subor name="VScrollBar">
+                    <prop ButtonSize="26" TrackSize="26" BackColor="255,224,224,224" DrawMode="Expand" BackImage="gui\common\scrollbar\gdc.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button\xx-out.png" FocusImage="gui\common\scrollbar\button\xx-on.png" PushImage="gui\common\scrollbar\button\xx-hui.png" Width="26" Height="26" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button\xs-out.png" FocusImage="gui\common\scrollbar\button\xs-on.png" PushImage="gui\common\scrollbar\button\xs-hui.png" Width="26" Height="25" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\gdt-out.png" FocusImage="gui\common\scrollbar\gdt-on&amp;down.png" PushImage="gui\common\scrollbar\gdt-on&amp;down.png" Width="26" Height="46" AutoSize="true" />
+                    </subor>
+                </subor>
+                <subor name="CornerLabel">
+                    <prop Solid="true" RefCursor="WIN_HELP" NoFrame="false" />
+                </subor>
+            </control>
+            <control name="ani_boy" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Sex_Boy_Down" PlayMode="2" Left="264" Top="69" Width="54" Height="54" />
+            </control>
+            <control name="ani_girl" entity="Animation" script="" init="">
+                <prop AnimationImage="Creat_Sex_Girl_Down" PlayMode="2" Left="264" Top="136" Width="46" Height="46" />
+            </control>
+        </control>
+        <control name="logo_group" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="56" Width="100" Height="206" BackColor="0,255,255,255" LineColor="0,0,0,0" />
+            <control name="logo_label" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="24" Top="16" Width="50" Height="159" AutoSize="true" BackImage="gui\creat\jslogo.png" />
+            </control>
+        </control>
+        <control name="name_group" entity="GroupBox" script="" init="">
+            <prop Left="-155" Top="-144" Width="254" Height="46" BackColor="0,255,255,255" LineColor="0,0,0,0" VAnchor="Bottom" HAnchor="Center" />
+            <control name="name_edit" entity="Edit" script="" init="">
+                <prop MaxLength="8" TextOffsetX="4" Align="Center" Caret="Default" Left="48" Top="4" Width="206" Height="33" ForeColor="255,255,255,255" BackColor="0,255,255,255" LineColor="0,0,0,0" Font="FZHKJT20" Cursor="WIN_IBEAM" TabStop="true" AutoSize="true" BackImage="gui\creat\srk2.png" />
+            </control>
+            <control name="name_lbl" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="8" Top="13" Width="34" Height="17" Font="FZHKJT24" AutoSize="true" BackImage="gui\creat\f2.png" />
+            </control>
+        </control>
+        <control name="empty_1_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="88" Width="6" Height="6" />
+        </control>
+        <control name="empty_2_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="80" Top="144" Width="6" Height="6" />
+        </control>
+        <control name="empty_3_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="32" Top="200" Width="6" Height="6" />
+        </control>
+        <control name="left_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\creat\b-jty-out.png" FocusImage="gui\creat\b-jty-on.png" PushImage="gui\creat\b-jty-down.png" Left="-171" Top="-83" Width="89" Height="52" VAnchor="Bottom" HAnchor="Center" TabStop="true" />
+        </control>
+        <control name="right_btn" entity="Button" script="" init="">
+            <prop NormalImage="gui\creat\b-jtz-out.png" FocusImage="gui\creat\b-jtz-on.png" PushImage="gui\creat\b-jtz-down.png" Left="61" Top="-83" Width="89" Height="52" VAnchor="Bottom" HAnchor="Center" TabStop="true" />
+        </control>
+        <control name="logogrp_start_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="80" Width="6" Height="6" />
+        </control>
+        <control name="logogrp_stop_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="56" Width="6" Height="6" />
+        </control>
+        <control name="namegrp_start_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-155" Top="-144" Width="6" Height="6" VAnchor="Bottom" HAnchor="Center" />
+        </control>
+        <control name="namegrp_stop_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-155" Top="-120" Width="6" Height="6" VAnchor="Bottom" HAnchor="Center" />
+        </control>
+        <control name="4g_start_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-360" Top="-304" Width="6" Height="6" VAnchor="Center" HAnchor="Right" />
+        </control>
+        <control name="4g_stop_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-320" Top="-304" Width="6" Height="6" VAnchor="Center" HAnchor="Right" />
+        </control>
+        <control name="info_group_start_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-496" Top="-144" Width="6" Height="6" VAnchor="Center" HAnchor="Center" />
+        </control>
+        <control name="info_group_stop_lbl" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-448" Top="-144" Width="6" Height="6" VAnchor="Center" HAnchor="Center" />
+        </control>
+    </control>
+</form>

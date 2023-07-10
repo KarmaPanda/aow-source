@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_home\form_home_zh" init="main_form_init">
+        <prop ShowGrid="true" Left="133" Top="93" Width="670" Height="456" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="291" Top="8" Width="100" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_home_zh_07" Font="font_title" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="270" Top="1" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="660" Height="395" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\anqianyue_form.png" />
+        </control>
+        <control name="groupscrollbox_zh" entity="GroupScrollableBox" script="" init="">
+            <prop ScrollSize="17" HasVScroll="true" Left="15" Top="42" Width="638" Height="374" ForeColor="0,0,0,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="VScrollBar">
+                <prop FullBarBack="false" Maximum="10" SmallChange="50" LargeChange="230" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                <subor name="DecButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="512" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="639" Top="6" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="groupbox_mod" entity="GroupBox" script="" init="">
+            <prop Left="32" Top="48" Width="206" Height="130" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\home\kuang_3.PNG" />
+            <control name="lbl_mod_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="1" Width="80" Height="30" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_zh_01" Font="font_text" />
+            </control>
+            <control name="lbl_homename" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="24" Width="80" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="话题哑巴的" Font="font_text" />
+            </control>
+            <control name="lbl_mod_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="15" Top="37" Width="80" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_home_zh_02" Font="font_text" />
+            </control>
+            <control name="lbl_playername" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="15" Top="57" Width="80" Height="22" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="话题的设定" Font="font_text" />
+            </control>
+            <control name="btn_jw" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\home\friend_out.png" FocusImage="gui\special\home\friend_on.png" PushImage="gui\special\home\friend_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="16" Top="88" Width="22" Height="22" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_btn_home_10" AutoSize="true" />
+                <event on_click="on_btn_jw_click" />
+            </control>
+            <control name="btn_dm" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\home\baifang_out.png" FocusImage="gui\special\home\baifang_on.png" PushImage="gui\special\home\baifang_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="64" Top="88" Width="22" Height="22" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_btn_home_11" AutoSize="true" />
+                <event on_click="on_btn_dm_click" />
+            </control>
+            <control name="btn_qs" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\home\suo_out.png" FocusImage="gui\special\home\suo_on.png" PushImage="gui\special\home\suo_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="280" Top="456" Width="22" Height="22" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_btn_home_17" AutoSize="true" />
+                <event on_click="on_btn_qs_click" />
+            </control>
+            <control name="btn_gohome" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal3_out.png" FocusImage="gui\common\button\btn_normal3_on.png" PushImage="gui\common\button\btn_normal3_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="134" Top="8" Width="65" Height="30" ForeColor="255,128,101,74" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_home_zh_06" Font="font_sns_list" DrawMode="Expand" />
+                <event on_click="on_btn_gohome_click" />
+            </control>
+            <control name="btn_sell" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\home\buy_out.png" FocusImage="gui\special\home\buy_on.png" PushImage="gui\special\home\buy_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="112" Top="88" Width="22" Height="22" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_btn_home_20" AutoSize="true" />
+                <event on_click="on_btn_sell_click" />
+            </control>
+            <control name="btn_buy" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\home\buy_out.png" FocusImage="gui\special\home\buy_on.png" PushImage="gui\special\home\buy_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="112" Top="88" Width="22" Height="22" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_btn_home_19" AutoSize="true" />
+                <event on_click="on_btn_buy_click" />
+            </control>
+            <control name="btn_shopinfo" entity="Button" script="" init="">
+                <prop NormalImage="gui\special\home\buy_out.png" FocusImage="gui\special\home\buy_on.png" PushImage="gui\special\home\buy_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="112" Top="88" Width="22" Height="22" ForeColor="255,204,204,204" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_title" HintText="@tips_btn_home_18" AutoSize="true" />
+                <event on_click="on_btn_shopinfo_click" />
+            </control>
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="464" Width="660" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="420" Width="660" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_blend_color" init="main_form_init">
+        <property name="Left" value="205" />
+        <property name="Top" value="21" />
+        <property name="Width" value="254" />
+        <property name="Height" value="454" />
+        <property name="BackColor" value="152,154,154,255" />
+        <property name="Font" value="Default" />
+        <property name="DrawMode" value="Expand" />
+        <property name="BackImage" value="skin\png\form.png" />
+        <callback name="on_open" function="main_form_open" />
+        <callback name="on_move" function="main_form_move" />
+        <control name="title_label" entity="Label" script="" init="">
+            <property name="Align" value="Center" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="64" />
+            <property name="Top" value="8" />
+            <property name="Width" value="118" />
+            <property name="Height" value="22" />
+            <property name="Text" value="地面颜色编辑" />
+        </control>
+        <control name="scale_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="16" />
+            <property name="Top" value="160" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="刷子尺寸：" />
+        </control>
+        <control name="scale_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="30" />
+            <property name="Left" value="16" />
+            <property name="Top" value="184" />
+            <property name="Width" value="222" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="scale_track_value_changed" />
+        </control>
+        <control name="range_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="100" />
+            <property name="Left" value="16" />
+            <property name="Top" value="224" />
+            <property name="Width" value="222" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="range_track_value_changed" />
+        </control>
+        <control name="range_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="16" />
+            <property name="Top" value="200" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="边缘柔和：" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <property name="Left" value="232" />
+            <property name="Width" value="24" />
+            <property name="Height" value="24" />
+            <property name="Text" value="X" />
+            <property name="HintText" value="关闭" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="close_btn_click" />
+        </control>
+        <control name="color_list" entity="ListBox" script="" init="">
+            <property name="ItemHeight" value="12" />
+            <property name="TextOffsetX" value="2" />
+            <property name="ScrollSize" value="17" />
+            <property name="Left" value="16" />
+            <property name="Top" value="272" />
+            <property name="Width" value="94" />
+            <property name="Height" value="142" />
+            <property name="Text" value="ListBox1" />
+            <property name="TabStop" value="true" />
+            <callback name="on_select_changed" function="color_list_select_changed" />
+            <subor name="VScrollBar">
+                <property name="BackColor" value="255,224,224,224" />
+            </subor>
+        </control>
+        <control name="GroupBox1" entity="GroupBox" script="" init="">
+            <property name="Left" value="8" />
+            <property name="Top" value="32" />
+            <property name="Width" value="238" />
+            <property name="Height" value="46" />
+            <property name="BackColor" value="0,255,255,255" />
+            <property name="Text" value="编辑模式" />
+            <control name="add_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="16" />
+                <property name="Top" value="16" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="增加" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="add_checked_changed" />
+            </control>
+            <control name="erase_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="64" />
+                <property name="Top" value="16" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="擦除" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="erase_checked_changed" />
+            </control>
+            <control name="erase_all_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="112" />
+                <property name="Top" value="16" />
+                <property name="Width" value="70" />
+                <property name="Height" value="22" />
+                <property name="Text" value="全部擦除" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="erase_all_checked_changed" />
+            </control>
+            <control name="smooth_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="184" />
+                <property name="Top" value="16" />
+                <property name="Width" value="46" />
+                <property name="Height" value="22" />
+                <property name="Text" value="平滑" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="smooth_checked_changed" />
+            </control>
+        </control>
+        <control name="GroupBox2" entity="GroupBox" script="" init="">
+            <property name="Left" value="8" />
+            <property name="Top" value="80" />
+            <property name="Width" value="238" />
+            <property name="Height" value="78" />
+            <property name="BackColor" value="0,255,255,255" />
+            <property name="Text" value="刷子形状" />
+            <control name="rect_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="24" />
+                <property name="Top" value="16" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="方形" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="rect_checked_changed" />
+            </control>
+            <control name="circle_check" entity="RadioButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="88" />
+                <property name="Top" value="16" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="圆形" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="circle_checked_changed" />
+            </control>
+            <control name="special_check" entity="CheckButton" script="" init="">
+                <property name="BoxSize" value="12" />
+                <property name="Left" value="24" />
+                <property name="Top" value="40" />
+                <property name="Width" value="54" />
+                <property name="Height" value="24" />
+                <property name="Text" value="镂空" />
+                <property name="TabStop" value="true" />
+                <callback name="on_checked_changed" function="special_checked_changed" />
+            </control>
+            <control name="special_btn" entity="Button" script="" init="">
+                <property name="Left" value="88" />
+                <property name="Top" value="40" />
+                <property name="Width" value="54" />
+                <property name="Height" value="22" />
+                <property name="Text" value="设置" />
+                <property name="TabStop" value="true" />
+                <callback name="on_click" function="special_btn_click" />
+            </control>
+            <control name="special_pict" entity="Picture" script="" init="">
+                <property name="Left" value="168" />
+                <property name="Top" value="16" />
+                <property name="Width" value="46" />
+                <property name="Height" value="46" />
+            </control>
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="16" />
+            <property name="Top" value="248" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="颜色列表：" />
+        </control>
+        <control name="color_label" entity="Label" script="" init="">
+            <property name="Solid" value="true" />
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="120" />
+            <property name="Top" value="248" />
+            <property name="Width" value="54" />
+            <property name="Height" value="22" />
+            <property name="NoFrame" value="false" />
+        </control>
+        <control name="color_btn" entity="Button" script="" init="">
+            <property name="Left" value="176" />
+            <property name="Top" value="248" />
+            <property name="Width" value="62" />
+            <property name="Height" value="22" />
+            <property name="Text" value="选择颜色" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="color_btn_click" />
+        </control>
+        <control name="alpha_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="255" />
+            <property name="Left" value="120" />
+            <property name="Top" value="304" />
+            <property name="Width" value="118" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="alpha_track_value_changed" />
+        </control>
+        <control name="red_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="255" />
+            <property name="Left" value="120" />
+            <property name="Top" value="344" />
+            <property name="Width" value="118" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="red_track_value_changed" />
+        </control>
+        <control name="green_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="255" />
+            <property name="Left" value="120" />
+            <property name="Top" value="384" />
+            <property name="Width" value="118" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="green_track_value_changed" />
+        </control>
+        <control name="blue_track" entity="TrackBar" script="" init="">
+            <property name="Orient" value="Horizon" />
+            <property name="Maximum" value="255" />
+            <property name="Left" value="120" />
+            <property name="Top" value="424" />
+            <property name="Width" value="118" />
+            <property name="Height" value="14" />
+            <callback name="on_value_changed" function="blue_track_value_changed" />
+        </control>
+        <control name="alpha_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="120" />
+            <property name="Top" value="280" />
+            <property name="Width" value="54" />
+            <property name="Height" value="22" />
+            <property name="Text" value="透明度：" />
+        </control>
+        <control name="red_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="120" />
+            <property name="Top" value="320" />
+            <property name="Width" value="54" />
+            <property name="Height" value="22" />
+            <property name="Text" value="红色：" />
+        </control>
+        <control name="green_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="120" />
+            <property name="Top" value="360" />
+            <property name="Width" value="54" />
+            <property name="Height" value="22" />
+            <property name="Text" value="绿色：" />
+        </control>
+        <control name="blue_label" entity="Label" script="" init="">
+            <property name="RefCursor" value="WIN_HELP" />
+            <property name="Left" value="120" />
+            <property name="Top" value="400" />
+            <property name="Width" value="80" />
+            <property name="Height" value="22" />
+            <property name="Text" value="蓝色：" />
+        </control>
+        <control name="add_btn" entity="Button" script="" init="">
+            <property name="Left" value="16" />
+            <property name="Top" value="416" />
+            <property name="Width" value="46" />
+            <property name="Height" value="22" />
+            <property name="Text" value="添加" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="add_btn_click" />
+        </control>
+        <control name="remove_btn" entity="Button" script="" init="">
+            <property name="Left" value="64" />
+            <property name="Top" value="416" />
+            <property name="Width" value="46" />
+            <property name="Height" value="22" />
+            <property name="Text" value="删除" />
+            <property name="TabStop" value="true" />
+            <callback name="on_click" function="remove_btn_click" />
+        </control>
+    </control>
+</form>

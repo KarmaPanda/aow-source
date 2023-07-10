@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_visual_type_list" init="main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="542" Height="190" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_close="main_form_close" on_open="main_form_open" />
+        <control name="show_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\button_out.png" FocusImage="skin\png\common\button\button_on.png" PushImage="skin\png\common\button\button_down.png" Left="-75" Top="-23" Width="75" Height="24" ForeColor="255,240,200,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="显示" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="show_btn_click" />
+        </control>
+        <control name="betimes_fresh" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="10" Top="-24" Width="80" Height="24" BackColor="255,255,255,0" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="即时刷新" TabStop="true" />
+            <event on_checked_changed="betimes_fresh_checked_changed" />
+        </control>
+        <control name="showall_cbtn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="9" Top="-1" Width="80" Height="24" BackColor="255,255,255,0" ShadowColor="0,0,0,0" Text="全部显示" TabStop="true" />
+            <event on_checked_changed="large_showall_checked_changed" />
+        </control>
+        <control name="showmodel_cbtn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="97" Top="-23" Width="80" Height="24" BackColor="255,255,255,0" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="显示预览" TabStop="true" />
+            <event on_checked_changed="showmodel_cbtn_checked_changed" />
+        </control>
+        <control name="hide_filter_menu_cbtn" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" NormalImage="skin\png\common\button\small\_1.png" FocusImage="skin\png\common\button\small\_2.png" CheckedImage="skin\png\common\button\small\2.png" Left="-37" Top="7" Width="30" Height="30" BackColor="255,255,255,0" ShadowColor="0,0,0,0" HAnchor="Right" HintText="隐藏/显示筛选菜单" TabStop="true" DrawMode="FitWindow" />
+            <event on_checked_changed="hide_filter_menu_cbtn_checked_changed" />
+        </control>
+        <control name="keyword_edit" entity="Edit" script="" init="">
+            <prop ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="-317" Top="-23" Width="46" Height="20" BackColor="150,152,155,255" LineColor="255,0,0,255" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Cursor="WIN_IBEAM" TabStop="true" DrawMode="FitWindow" />
+            <event on_changed="keyword_edit_changed" />
+        </control>
+        <control name="keyword_cbox1" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="254" Left="-269" Top="-23" Width="60" Height="20" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" />
+            <event on_selected="keyword_cbox1_selected" />
+            <subor name="InputEdit">
+                <prop TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="keyword_cbox2" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="78" Left="-205" Top="-23" Width="60" Height="20" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" />
+            <event on_selected="keyword_cbox2_selected" />
+            <subor name="InputEdit">
+                <prop TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+        <control name="keyword_cbox3" entity="ComboBox" script="" init="">
+            <prop ButtonWidth="20" DropDownHeight="70" Left="-141" Top="-23" Width="60" Height="20" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" />
+            <event on_selected="keyword_cbox3_selected" />
+            <subor name="InputEdit">
+                <prop TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+            </subor>
+            <subor name="DropButton">
+                <prop Width="20" Height="20" ShadowColor="0,0,0,0" />
+            </subor>
+            <subor name="DropListBox">
+                <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                <subor name="VScrollBar">
+                    <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                    <subor name="DecButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop Width="17" Height="15" ShadowColor="0,0,0,0" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop Width="17" Height="10" ShadowColor="0,0,0,0" />
+                    </subor>
+                </subor>
+            </subor>
+        </control>
+    </control>
+</form>

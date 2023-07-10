@@ -1,0 +1,194 @@
+require("util_gui")
+require("util_functions")
+require("custom_sender")
+local FORM_NAME = "form_stage_main\\form_force\\form_force_ssg_smdh"
+function open_form()
+  local form = util_get_form(FORM_NAME, true)
+  if not nx_is_valid(form) then
+    return
+  end
+  local gui = nx_value("gui")
+  form.Visible = true
+  form:Show()
+  form.rbtn_con1.Checked = true
+end
+function close_form()
+  local form = nx_execute("util_gui", "util_get_form", FORM_NAME, false, false)
+  if nx_is_valid(form) then
+    form:Close()
+  end
+end
+function main_form_init(form)
+  form.Fixed = false
+end
+function on_main_form_open(form)
+  local gui = nx_value("gui")
+  if nx_is_valid(gui) then
+    form.Left = (gui.Width - form.Width) / 2
+    form.Top = (gui.Height - form.Height) / 2
+  end
+end
+function on_main_form_close(form)
+  nx_destroy(form)
+end
+function on_btn_close_click(btn)
+  close_form()
+end
+function on_rbtn_con1_checked_changed(rbtn)
+  local form = rbtn.ParentForm
+  if not nx_is_valid(form) then
+    return
+  end
+  if not rbtn.Checked then
+    return
+  end
+  form.rbtn_con2.Checked = false
+  form.rbtn_damage.Checked = false
+  set_rank_title(form, 1)
+  nx_execute("custom_sender", "custom_ssg_schoolmeet", 3)
+end
+function on_rbtn_con2_checked_changed(rbtn)
+  local form = rbtn.ParentForm
+  if not nx_is_valid(form) then
+    return
+  end
+  if not rbtn.Checked then
+    return
+  end
+  form.rbtn_con1.Checked = false
+  form.rbtn_damage.Checked = false
+  set_rank_title(form, 2)
+  nx_execute("custom_sender", "custom_ssg_schoolmeet", 4)
+end
+function on_rbtn_damage_checked_changed(rbtn)
+  local form = rbtn.ParentForm
+  if not nx_is_valid(form) then
+    return
+  end
+  if not rbtn.Checked then
+    return
+  end
+  form.rbtn_con1.Checked = false
+  form.rbtn_con2.Checked = false
+  set_rank_title(form, 3)
+  nx_execute("custom_sender", "custom_ssg_schoolmeet", 5)
+end
+function server_msg_handle(...)
+  if table.getn(arg) < 1 then
+    return
+  end
+  local form = nx_execute("util_gui", "util_get_form", FORM_NAME, false, false)
+  if not nx_is_valid(form) then
+    return
+  end
+  local sub_msg = arg[1]
+  if nx_number(2) == nx_number(sub_msg) then
+    if table.getn(arg) < 5 then
+      return
+    end
+    if not form.rbtn_con1.Checked then
+      return
+    end
+    local name_str = nx_widestr(arg[2])
+    local gx_str = nx_string(arg[3])
+    local gx_total = nx_int(arg[4])
+    local my_gx_value = nx_int(arg[5])
+    set_rank_title(form, 1)
+    update_rank_con(form, name_str, gx_str, gx_total, my_gx_value)
+  elseif nx_number(3) == nx_number(sub_msg) then
+    if table.getn(arg) < 5 then
+      return
+    end
+    if not form.rbtn_con2.Checked then
+      return
+    end
+    local name_str = nx_widestr(arg[2])
+    local gx_str = nx_string(arg[3])
+    local gx_total = nx_int(arg[4])
+    local my_gx_value = nx_int(arg[5])
+    set_rank_title(form, 2)
+    update_rank_con(form, name_str, gx_str, gx_total, my_gx_value)
+  elseif nx_number(4) == nx_number(sub_msg) then
+    if table.getn(arg) < 3 then
+      return
+    end
+    if not form.rbtn_damage.Checked then
+      return
+    end
+    local name_str = nx_widestr(arg[2])
+    local damage_str = nx_string(arg[3])
+    set_rank_title(form, 3)
+    update_rank_damage(form, name_str, damage_str)
+  end
+end
+function set_rank_title(form, index)
+  local gui = nx_value("gui")
+  form.textgrid_con:ClearRow()
+  form.textgrid_my_con:ClearRow()
+  if nx_int(index) == nx_int(1) or nx_int(index) == nx_int(2) then
+    form.textgrid_con:SetColTitle(0, nx_widestr(gui.TextManager:GetText("ui_at_con_list_0")))
+    form.textgrid_con:SetColTitle(1, nx_widestr(gui.TextManager:GetText("ui_ssg_player_name")))
+    form.textgrid_con:SetColTitle(2, nx_widestr(gui.TextManager:GetText("ui_at_con_list_2")))
+    form.lbl_6.Visible = true
+  elseif nx_int(index) == nx_int(3) then
+    form.textgrid_con:SetColTitle(0, nx_widestr(gui.TextManager:GetText("ui_at_damage_list_0")))
+    form.textgrid_con:SetColTitle(1, nx_widestr(gui.TextManager:GetText("ui_ssg_player_name")))
+    form.textgrid_con:SetColTitle(2, nx_widestr(gui.TextManager:GetText("ui_at_damage_list_2")))
+    form.lbl_6.Visible = false
+  end
+end
+function update_rank_con(form, name_str, gx_str, gx_total, my_gx_value)
+  local gui = nx_value("gui")
+  local game_client = nx_value("game_client")
+  local client_player = game_client:GetPlayer()
+  if not nx_is_valid(client_player) then
+    return
+  end
+  local player_name = client_player:QueryProp("Name")
+  local player_num = 0
+  local name_tab = {}
+  local gx_tab = {}
+  if nx_widestr(name_str) ~= nx_widestr("") then
+    name_tab = util_split_wstring(nx_widestr(name_str), ",")
+    gx_tab = util_split_string(nx_string(gx_str), ",")
+  end
+  for i = 1, table.getn(name_tab) do
+    local row = form.textgrid_con:InsertRow(-1)
+    form.textgrid_con:SetGridText(row, 0, nx_widestr(i))
+    form.textgrid_con:SetGridText(row, 1, nx_widestr(name_tab[i]))
+    form.textgrid_con:SetGridText(row, 2, nx_widestr(gx_tab[i]))
+    if nx_widestr(name_tab[i]) == nx_widestr(player_name) then
+      player_num = i
+    end
+  end
+  if nx_int(my_gx_value) >= nx_int(0) then
+    local row = form.textgrid_my_con:InsertRow(-1)
+    if nx_int(player_num) > nx_int(0) then
+      form.textgrid_my_con:SetGridText(row, 0, nx_widestr(player_num))
+    else
+      form.textgrid_my_con:SetGridText(row, 0, nx_widestr("--"))
+    end
+    form.textgrid_my_con:SetGridText(row, 1, nx_widestr(player_name))
+    form.textgrid_my_con:SetGridText(row, 2, nx_widestr(my_gx_value))
+  else
+    local row = form.textgrid_my_con:InsertRow(-1)
+    form.textgrid_my_con:SetGridText(row, 0, nx_widestr("--"))
+    form.textgrid_my_con:SetGridText(row, 1, nx_widestr("--"))
+    form.textgrid_my_con:SetGridText(row, 2, nx_widestr("--"))
+  end
+  form.lbl_6.Text = nx_widestr(gui.TextManager:GetFormatText("ui_ssg_px_sum", nx_int(gx_total)))
+end
+function update_rank_damage(form, name_str, damage_str)
+  local name_tab = {}
+  local damage_tab = {}
+  if nx_widestr(name_str) ~= nx_widestr("") then
+    name_tab = util_split_wstring(nx_widestr(name_str), ",")
+    damage_tab = util_split_string(nx_string(damage_str), ",")
+  end
+  for i = 1, table.getn(name_tab) do
+    local row = form.textgrid_con:InsertRow(-1)
+    form.textgrid_con:SetGridText(row, 0, nx_widestr(i))
+    form.textgrid_con:SetGridText(row, 1, nx_widestr(name_tab[i]))
+    form.textgrid_con:SetGridText(row, 2, nx_widestr(damage_tab[i]))
+  end
+end

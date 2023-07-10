@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_visual_player" init="main_form_init">
+        <prop Left="125" Top="165" Width="446" Height="158" DrawMode="Expand" BackImage="skin\png\common\button\bg.png" />
+        <event on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="160" Top="8" Width="150" Height="38" DrawMode="FitWindow" BackImage="skin\png\common\button\player_title.png" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\tc-out.png" FocusImage="skin\png\common\button\tc-on.png" PushImage="skin\png\common\button\tc-down.png" Left="400" Top="8" Width="22" Height="22" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="play_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\play_out.png" FocusImage="skin\png\common\button\play_on.png" PushImage="skin\png\common\button\play_down.png" Left="208" Top="72" Width="62" Height="62" HintText="播放" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="play_btn_click" />
+        </control>
+        <control name="stop" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\stop_out.png" FocusImage="skin\png\common\button\stop_on.png" PushImage="skin\png\common\button\stop_down.png" Left="96" Top="80" Width="38" Height="38" HintText="停止" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="stop_click" />
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Top="16" Width="78" Height="134" DrawMode="FitWindow" BackImage="skin\png\common\button\logo.png" />
+        </control>
+        <control name="loop_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\loop_out.png" FocusImage="skin\png\common\button\loop_on.png" PushImage="skin\png\common\button\loop_down.png" Left="344" Top="80" Width="38" Height="38" HintText="循环" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="loop_btn_click" />
+        </control>
+        <control name="frames_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="80" Top="128" Width="134" Height="16" Text="总共帧数：" />
+        </control>
+        <control name="slow_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\slow_out.png" FocusImage="skin\png\common\button\slow_on.png" PushImage="skin\png\common\button\slow_down.png" Left="152" Top="80" Width="38" Height="38" HintText="慢放" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="slow_btn_click" />
+        </control>
+        <control name="quick_btn" entity="Button" script="" init="">
+            <prop NormalImage="skin\png\common\button\quick_out.png" FocusImage="skin\png\common\button\quick_on.png" PushImage="skin\png\common\button\quick_down.png" Left="288" Top="80" Width="38" Height="38" HintText="快放" TabStop="true" DrawMode="FitWindow" />
+            <event on_click="quick_btn_click" />
+        </control>
+        <control name="cur_speed_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="288" Top="128" Width="134" Height="16" Text="当前速度：" />
+        </control>
+        <control name="frame_progbar" entity="TrackBar" script="" init="">
+            <prop Orient="Horizon" Maximum="100" Left="80" Top="56" Width="350" Height="8" DrawMode="FitWindow" BackImage="skin\png\common\button\progbar_bg.png" />
+            <event on_value_changed="frame_progbar_value_changed" />
+            <subor name="TrackButton">
+                <prop NormalImage="skin\png\common\button\progbar.png" Width="12" Height="8" />
+            </subor>
+        </control>
+    </control>
+</form>

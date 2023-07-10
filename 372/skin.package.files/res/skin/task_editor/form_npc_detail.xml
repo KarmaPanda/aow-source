@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="task_editor\form_npc_detail.lua" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="5" Top="29" Width="814" Height="550" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="tree_npc" entity="TreeView" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" LevelWidth="18" ScrollSize="17" Left="168" Top="40" Width="214" Height="502" ShadowColor="0,0,0,0" Text="tree_1" TabStop="true" />
+            <event on_select_changed="on_tree_npc_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="760" Top="8" Width="48" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="关闭" TabStop="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="btn_detail" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="384" Width="150" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="详细信息" TabStop="true" />
+            <event on_click="on_btn_detail_click" />
+        </control>
+        <control name="lbl_npc" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="168" Top="16" Width="62" Height="24" ShadowColor="0,0,0,0" Text="NPC列表" />
+        </control>
+        <control name="listbox_map" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="8" Top="40" Width="150" Height="342" ShadowColor="0,0,0,0" Text="listbox_1" TabStop="true" />
+            <event on_select_changed="on_listbox_map_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_map" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="15" Width="70" Height="24" ShadowColor="0,0,0,0" Text="地图列表" />
+        </control>
+        <control name="listbox_task" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="392" Top="40" Width="206" Height="238" ShadowColor="0,0,0,0" Text="listbox_1" TabStop="true" />
+            <event on_select_changed="on_listbox_task_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="lbl_task" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="392" Top="16" Width="70" Height="24" ShadowColor="0,0,0,0" Text="任务列表" />
+        </control>
+        <control name="scenebox_model" entity="SceneBox" script="" init="">
+            <prop Left="392" Top="320" Width="206" Height="222" ShadowColor="0,0,0,0" />
+        </control>
+        <control name="lbl_model" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="392" Top="296" Width="62" Height="24" ShadowColor="0,0,0,0" Text="NPC预览" />
+        </control>
+        <control name="lbl_tell" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="608" Top="296" Width="70" Height="24" ShadowColor="0,0,0,0" Text="任务描述" />
+        </control>
+        <control name="lbl_life" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="608" Top="16" Width="70" Height="24" ShadowColor="0,0,0,0" Text="生平事迹" />
+        </control>
+        <control name="textbox_task_info" entity="MultiTextBox" script="" init="">
+            <prop ViewRect="0,0,198,222" LineHeight="13" ScrollSize="17" HasVScroll="true" Left="608" Top="320" Width="198" Height="222" ShadowColor="0,0,0,0" Text="mltbox_1" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="textbox_life" entity="MultiTextBox" script="" init="">
+            <prop ViewRect="0,0,198,238" LineHeight="13" ScrollSize="17" Left="608" Top="40" Width="198" Height="238" ShadowColor="0,0,0,0" Text="mltbox_1" />
+        </control>
+        <control name="btn_find" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="424" Width="150" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="查找" TabStop="true" />
+            <event on_click="on_btn_find_click" />
+        </control>
+        <control name="btn_select" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="80" Top="504" Width="78" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="选择" />
+            <event on_click="on_btn_select_click" />
+        </control>
+        <control name="ipt_select" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="8" Top="504" Width="70" Height="38" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="btn_goto" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="8" Top="464" Width="150" Height="38" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="定位" />
+            <event on_click="on_btn_goto_click" />
+        </control>
+    </control>
+</form>

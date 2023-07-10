@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_task\form_version" init="main_form_init">
+        <prop ShowGrid="true" Left="21" Top="101" Width="1014" Height="446" ForeColor="255,111,122,60" BackColor="255,134,143,152" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="424" Top="8" Width="62" Height="16" ShadowColor="0,0,0,0" Text="版本设置" />
+        </control>
+        <control name="id_grid" entity="Grid" script="" init="">
+            <prop HeaderBackColor="255,96,106,116" SelectBackColor="255,113,88,18" CanSelectRow="true" ColWidth="150" RowHeight="24" ColCount="4" ScrollSize="17" HasHScroll="true" Left="8" Top="40" Width="998" Height="366" BackColor="255,134,143,152" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <event on_select_grid="id_grid_select_grid" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="116" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="close_button" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="984" Top="8" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" />
+            <event on_click="close_button_click" />
+        </control>
+        <control name="save_button" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="960" Top="416" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="保存" />
+            <event on_click="save_button_click" />
+        </control>
+        <control name="set_version_button" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Top="416" Width="158" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="设置版本号(全部）" />
+            <event on_click="set_version_button_click" />
+        </control>
+        <control name="ver_num_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="8" Top="415" Width="80" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="export_edit" entity="Edit" script="" init="">
+            <prop OnlyDigit="true" TextOffsetX="2" Caret="Default" Left="728" Top="8" Width="80" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="export_button" entity="Button" script="" init="">
+            <prop NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="816" Top="8" Width="46" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="导出" />
+            <event on_click="export_button_click" />
+        </control>
+    </control>
+</form>

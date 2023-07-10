@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_decal" init="main_form_init">
+        <prop ShowGrid="true" Left="133" Top="29" Width="254" Height="518" BackColor="0,255,255,255" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="Label1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="104" Top="8" Width="38" Height="16" Text="贴花" />
+        </control>
+        <control name="create_spotlight_btn" entity="Button" script="" init="">
+            <prop Left="8" Top="40" Width="102" Height="24" ForeColor="255,0,0,255" Text="创建聚光灯" TabStop="true" />
+            <event on_click="create_spotlight_btn_click" />
+        </control>
+        <control name="create_decal_btn" entity="Button" script="" init="">
+            <prop PushImage="picture1" Left="8" Top="400" Width="102" Height="24" ForeColor="255,0,0,255" Text="生成贴花" TabStop="true" />
+            <event on_click="create_decal_btn_click" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="232" Width="70" Height="16" Text="DiffuseMap(*)" />
+        </control>
+        <control name="diffusemap_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="88" Top="232" Width="134" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="diffusemap_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="232" Width="22" Height="24" Text="..." TabStop="true" />
+            <event on_click="diffusemap_btn_click" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="432" Width="38" Height="16" Text="位置" />
+        </control>
+        <control name="tex_pos_x" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="40" Top="432" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="tex_pos_y" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="432" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="tex_pos_z" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="168" Top="432" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="456" Width="38" Height="16" Text="角度" />
+        </control>
+        <control name="tex_angle_x" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="40" Top="456" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="tex_angle_y" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="456" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="tex_angle_z" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="168" Top="456" Width="62" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="480" Width="38" Height="16" Text="缩放" />
+        </control>
+        <control name="tex_scale_x" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="40" Top="480" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="tex_scale_y" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="104" Top="480" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="tex_scale_z" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="168" Top="480" Width="63" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="208" Width="38" Height="16" Text="文件名" />
+        </control>
+        <control name="decal_file_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="48" Top="208" Width="174" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="decal_file_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="208" Width="22" Height="24" Text="..." TabStop="true" />
+            <event on_click="decal_file_btn_click" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="256" Width="62" Height="16" Text="NormalMap" />
+        </control>
+        <control name="normalmap_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="88" Top="256" Width="134" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="normalmap_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="256" Width="22" Height="24" Text="..." TabStop="true" />
+            <event on_click="normalmap_btn_click" />
+        </control>
+        <control name="Label8" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="280" Width="62" Height="16" Text="SpecularMap" />
+        </control>
+        <control name="specularmap_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="88" Top="280" Width="134" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="specularmap_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="280" Width="22" Height="24" Text="..." TabStop="true" />
+            <event on_click="specularmap_btn_click" />
+        </control>
+        <control name="Label9" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="304" Width="62" Height="16" Text="AlphaMap" />
+        </control>
+        <control name="independence_alphamap_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="88" Top="304" Width="134" Height="20" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="independence_alphamap_btn" entity="Button" script="" init="">
+            <prop Left="224" Top="304" Width="22" Height="24" Text="..." TabStop="true" />
+            <event on_click="independence_alphamap_btn_click" />
+        </control>
+        <control name="enable_lighting_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="328" Width="70" Height="24" Text="Lighting" TabStop="true" />
+        </control>
+        <control name="enable_alphatest_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="104" Top="328" Width="78" Height="24" Text="AlphaTest" TabStop="true" />
+        </control>
+        <control name="enable_alphablend_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="352" Width="86" Height="24" Text="AlphaBlend" TabStop="true" />
+        </control>
+        <control name="enable_alphablendenhance_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="104" Top="352" Width="126" Height="24" Text="AlphaBlendEnhance" TabStop="true" />
+        </control>
+        <control name="enable_doubleside_check" entity="CheckButton" script="" init="">
+            <prop BoxSize="12" Left="8" Top="376" Width="86" Height="24" Text="DoubleSide" TabStop="true" />
+        </control>
+        <control name="Label11" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="184" Width="238" Height="16" Text="----------------------------------------" />
+        </control>
+        <control name="Label13" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="80" Width="38" Height="16" Text="灯张角" />
+        </control>
+        <control name="spotlight_fov_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="56" Top="80" Width="62" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="spotlight_fov_floatedit_drag" />
+        </control>
+        <control name="Label14" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="24" Width="238" Height="16" Text="----------------------------------------" />
+        </control>
+        <control name="Label15" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="7" Top="104" Width="54" Height="16" Text="灯顶坐标" />
+        </control>
+        <control name="spotlight_top_x" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="56" Top="104" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="spotlight_top_y" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="120" Top="104" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="spotlight_top_z" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="184" Top="104" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="6" Top="128" Width="54" Height="16" Text="灯底坐标" />
+        </control>
+        <control name="spotlight_bottom_x" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="56" Top="128" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="spotlight_bottom_y" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="120" Top="128" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="spotlight_bottom_z" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="184" Top="128" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="7" Top="152" Width="38" Height="16" Text="灯角度" />
+        </control>
+        <control name="spotlight_angle_x_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="56" Top="152" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="spotlight_angle_y_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="120" Top="152" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="spotlight_angle_z_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="184" Top="152" Width="62" Height="20" Enabled="false" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="delete_decal_btn" entity="Button" script="" init="">
+            <prop PushImage="picture1" Left="128" Top="400" Width="102" Height="24" ForeColor="255,0,0,255" Text="删除贴花" TabStop="true" />
+            <event on_click="delete_decal_btn_click" />
+        </control>
+        <control name="spotlight_rotate_by_center_axis_floatedit" entity="Float_Edit" script="" init="">
+            <prop OnlyDigit="true" DragEvent="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="184" Top="80" Width="62" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+            <event on_drag="spotlight_rotate_by_center_axis_floatedit_drag" />
+        </control>
+        <control name="Label12" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="122" Top="80" Width="54" Height="16" Text="灯自旋转" />
+        </control>
+    </control>
+</form>

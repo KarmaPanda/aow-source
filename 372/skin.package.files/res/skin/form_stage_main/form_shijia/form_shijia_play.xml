@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_shijia\form_shijia_play" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="21" Top="29" Width="1094" Height="550" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_16" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="208" Top="2" Width="660" Height="43" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\shijia\bg_out1.png" />
+        </control>
+        <control name="groupbox_1" entity="GroupBox" script="" init="">
+            <prop Width="982" Height="638" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_1" />
+            </subor>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="183" Width="715" Height="359" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_donghai1.png" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="183" Top="354" Width="715" Height="107" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_donghai1.png" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="179" Width="11" Height="500" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+            </control>
+            <control name="groupbox_2" entity="GroupBox" script="" init="">
+                <prop Left="186" Width="718" Height="522" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_2" />
+                </subor>
+                <control name="groupscrollbox_2" entity="GroupScrollableBox" script="" init="">
+                    <prop ScrollSize="18" HasVScroll="true" Left="-2" Top="48" Width="710" Height="301" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                    <subor name="TitleBar">
+                        <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupscrollbox_1" />
+                    </subor>
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" Maximum="10" SmallChange="10" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\scrollbar\bg_scrollbar_3.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="12" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,197,184,159" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="2,2,666,94" LineHeight="20" ScrollSize="18" HasVScroll="true" Left="14" Top="363" Width="696" Height="94" ShadowColor="0,0,0,0" Font="font_text" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop ButtonSize="18" Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_up_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_up_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_down_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_down_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_1\btn_match_trace_out.png" FocusImage="gui\common\scrollbar\button_1\btn_match_trace_on.png" PushImage="gui\common\scrollbar\button_1\btn_match_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_trans" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\shijia\btn_back_out.png" FocusImage="gui\special\shijia\btn_back_on.png" PushImage="gui\special\shijia\btn_back_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="534" Top="464" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Enabled="false" Text="@ui_shijia_form_shp_047" Font="font_btn" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_click="on_btn_trans_click" />
+                </control>
+                <control name="imagegrid_1" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,180,32" MaxSize="-1" RowNum="1" ClomnNum="4" ShowEmpty="false" GridHeight="35" GridWidth="35" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\shijia\daoju_bg.png" GridBackOffsetX="-6" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="286" Top="568" Width="94" Height="50" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" />
+                    <event on_mouseout_grid="on_imagegrid_1_mouseout_grid" on_mousein_grid="on_imagegrid_1_mousein_grid" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="btn_rank" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\shijia\btn_back_out.png" FocusImage="gui\special\shijia\btn_back_on.png" PushImage="gui\special\shijia\btn_back_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="2147483647" Top="2147483647" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_024" Font="font_btn" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_click="on_btn_rank_click" />
+                </control>
+                <control name="btn_refresh" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\shijia\btn_back_out.png" FocusImage="gui\special\shijia\btn_back_on.png" PushImage="gui\special\shijia\btn_back_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="622" Top="464" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_refresh" Font="font_btn" AutoSize="true" DrawMode="ExpandH" />
+                    <event on_click="on_btn_refresh_click" />
+                </control>
+            </control>
+            <control name="groupbox_4" entity="GroupBox" script="" init="">
+                <prop Width="190" Height="190" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_2" />
+                </subor>
+                <control name="rbtn_1" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\shijia\btn_t_out.png" FocusImage="gui\special\shijia\btn_t_on.png" CheckedImage="gui\special\shijia\btn_t_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="36" Width="179" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="10,0,0,0" Text="@ui_shijia_form_shp_034" DataSource="1" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_2" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\shijia\btn_t_out.png" FocusImage="gui\special\shijia\btn_t_on.png" CheckedImage="gui\special\shijia\btn_t_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="62" Width="179" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="10,0,0,0" Text="@ui_shijia_form_shp_035" DataSource="2" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_3" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\shijia\btn_t_out.png" FocusImage="gui\special\shijia\btn_t_on.png" CheckedImage="gui\special\shijia\btn_t_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="88" Width="179" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="10,0,0,0" Text="@ui_shijia_form_shp_036" DataSource="3" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_4" entity="RadioButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\shijia\btn_t_out.png" FocusImage="gui\special\shijia\btn_t_on.png" CheckedImage="gui\special\shijia\btn_t_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="3" Top="114" Width="179" Height="25" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="10,0,0,0" Text="@ui_shijia_form_shp_037" DataSource="4" Font="font_btn" TabStop="true" AutoSize="true" DrawMode="FitWindow" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Width="185" Height="36" ForeColor="255,255,255,255" ShadowColor="10,0,0,0" Text="@ui_shijia_form_shp_048" Font="font_btn" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\shijia\btn_out.png" />
+                </control>
+            </control>
+            <control name="groupbox_5" entity="GroupBox" script="" init="">
+                <prop Left="-5" Top="295" Width="190" Height="222" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_2" />
+                </subor>
+                <control name="lbl_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="23" Top="136" Width="141" Height="29" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\shijia\clo_bg1.png" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="40" Top="24" Width="107" Height="107" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\shijia\clo.png" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="42" Top="23" Width="107" Height="107" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\shijia\1.png" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="54" Top="142" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_049" Font="font_text" />
+                </control>
+            </control>
+            <control name="groupbox_3" entity="GroupBox" script="" init="">
+                <prop Left="176" Top="560" Width="702" Height="54" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_2" />
+                </subor>
+                <control name="cbtn_1" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\special\shijia\bg_out1.png" FocusImage="gui\special\shijia\bg_on1.png" CheckedImage="gui\special\shijia\bg_down1.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Top="2" Width="660" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" DrawMode="FitWindow" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="6" Top="-13" Width="678" Height="78" ShadowColor="0,0,0,0" TestTrans="true" DrawMode="FitWindow" BackImage="huashan_kuang_4" />
+                </control>
+                <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,204,204,204" MouseInBarColor="0,255,255,0" ViewRect="0,0,150,22" HtmlText="@ui_shijia_shp_play_desc21_1" ScrollSize="17" Left="63" Top="17" Width="150" Height="22" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_text" NoFrame="true" />
+                </control>
+                <control name="imagegrid_2" entity="ImageGrid" script="" init="">
+                    <prop SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="0,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,180,32" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="35" GridWidth="35" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\special\shijia\daoju_bg.png" GridBackOffsetX="-6" GridBackOffsetY="-4" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Left="240" Top="8" Width="54" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="lbl_7" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="316" Top="17" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_050" Font="font_text" />
+                </control>
+                <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,204,204,204" MouseInBarColor="0,255,255,0" ViewRect="0,0,134,22" HtmlText="@ui_shijia_shp_play_desc21_1" ScrollSize="17" Left="541" Top="17" Width="134" Height="22" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_text" NoFrame="true" />
+                </control>
+                <control name="mltbox_4" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,204,204,204" MouseInBarColor="0,255,255,0" ViewRect="0,0,60,22" HtmlText="@ui_shijia_shp_play_desc21_1" ScrollSize="17" Left="444" Top="17" Width="60" Height="22" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_text" NoFrame="true" />
+                </control>
+            </control>
+            <control name="lbl_11" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="248" Top="16" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_051" Font="font_text" />
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="400" Top="16" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_052" Font="font_text" />
+            </control>
+            <control name="lbl_13" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="504" Top="16" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_053" Font="font_text" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="616" Top="16" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_054" Font="font_text" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="712" Top="16" Width="80" Height="16" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_shijia_form_shp_055" Font="font_text" />
+            </control>
+        </control>
+        <control name="lbl_17" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="187" Top="40" Width="707" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+    </control>
+</form>

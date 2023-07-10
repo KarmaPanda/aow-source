@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\\form_guild\form_guild_bank_distribute" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="37" Top="173" Width="558" Height="438" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_back" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="550" Height="400" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="264" Top="302" Width="70" Height="25" ForeColor="255,147,123,99" ShadowColor="0,0,0,0" Text="1/6" Font="font_text_figure" DrawMode="ExpandH" />
+        </control>
+        <control name="lbl_t1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="336" Width="85" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_guildbank_distribute_info5" Font="font_text" />
+        </control>
+        <control name="lbl_t2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="360" Width="182" Height="16" ForeColor="255,128,101,74" ShadowColor="0,0,0,0" Text="@ui_guildbank_distribute_info6" Font="font_text" />
+        </control>
+        <control name="btn_help" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="2" Top="397" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guildbank_distribute_help" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_help_click" />
+        </control>
+        <control name="btn_distribute" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="90" Top="397" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guildbank_distribute_ok" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_distribute_click" />
+        </control>
+        <control name="btn_cancle" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="456" Top="397" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_guildbank_distribute_cancel" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" ClickSound="cancel_5" />
+            <event on_click="on_btn_cancle_click" />
+        </control>
+        <control name="btn_last" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_left\btn_left_out.png" FocusImage="gui\common\button\btn_left\btn_left_on.png" PushImage="gui\common\button\btn_left\btn_left_down.png" DisableImage="gui\common\button\btn_left\btn_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="248" Top="304" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Font="simsun12_S" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_last_click" />
+        </control>
+        <control name="btn_next" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_right\btn_right_out.png" FocusImage="gui\common\button\btn_right\btn_right_on.png" PushImage="gui\common\button\btn_right\btn_right_down.png" DisableImage="gui\common\button\btn_right\btn_right_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="320" Top="304" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,255,255,255" Font="simsun12_S" TabStop="true" AutoSize="true" DrawMode="ExpandH" />
+            <event on_click="on_btn_next_click" />
+        </control>
+        <control name="lbl_active_num" entity="Label" script="" init="">
+            <prop Solid="true" RefCursor="WIN_HELP" Left="136" Top="338" Width="86" Height="16" ForeColor="255,147,123,99" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="999/999" Font="font_text_figure" />
+        </control>
+        <control name="grid_member_info" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="0,255,255,255" SelectForeColor="255,128,101,74" SelectBackColor="190,190,190,190" SelectBackDraw="gui\common\combobox\bg_select2.png" CanSelectRow="true" ColWidth="80" ColWidths="30,87,87,87,112" RowHeight="26" ColCount="5" ScrollSize="17" HasHScroll="true" Left="25" Top="8" Width="510" Height="286" ForeColor="255,128,101,74" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_text" TabStop="true" NoFrame="true" DrawMode="Expand" />
+            <event on_select_row="on_grid_member_info_select_row" />
+            <subor name="HScrollBar">
+                <prop Maximum="1" SmallChange="1" LargeChange="4" BackColor="255,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="294" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="false" AutoSize="true" BackImage="gui\guild\jinku\d_1.png" />
+            </subor>
+        </control>
+        <control name="lbl_current_siliver" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,147,123,99" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,142,14" LineTextAlign="Center" ScrollSize="17" Left="224" Top="363" Width="142" Height="14" ForeColor="255,96,61,44" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text_figure" NoFrame="true" />
+        </control>
+    </control>
+</form>

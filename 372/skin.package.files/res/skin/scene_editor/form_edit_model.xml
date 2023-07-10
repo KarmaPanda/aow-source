@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_edit_model" init="main_form_init">
+        <prop Left="133" Top="13" Width="254" Height="798" BackColor="146,146,148,255" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_move="main_form_move" on_open="main_form_open" />
+        <control name="title_label" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="8" Width="94" Height="16" ShadowColor="0,0,0,0" Text="物体设置" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="233" Top="-1" Width="22" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="X" HintText="关闭" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="GroupBox1" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="24" Width="238" Height="46" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="物体控制" />
+            <control name="edit_pos_check" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" Left="24" Top="16" Width="78" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="移动[1]" TabStop="true" />
+                <event on_checked_changed="edit_pos_checked_changed" />
+            </control>
+            <control name="edit_dir_check" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" Left="96" Top="16" Width="78" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="旋转[2]" TabStop="true" />
+                <event on_checked_changed="edit_dir_checked_changed" />
+            </control>
+            <control name="edit_size_check" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" Left="160" Top="16" Width="62" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="缩放[3]" TabStop="true" />
+                <event on_checked_changed="edit_size_checked_changed" />
+            </control>
+        </control>
+        <control name="model_attr_grid" entity="Grid" script="" init="">
+            <prop ShowComment="true" HeaderBackColor="255,192,192,192" CanSelectRow="true" ColWidth="98" ColWidths="0,0" RowHeight="16" ColCount="2" ScrollSize="17" HasHScroll="true" Left="16" Top="384" Width="222" Height="406" ShadowColor="0,0,0,0" Text="Grid1" TabStop="true" />
+            <event on_select_row="model_attr_select_row" />
+            <subor name="HScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="15" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="16" Height="17" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+            <subor name="CornerLabel">
+                <prop Solid="true" RefCursor="WIN_HELP" ShadowColor="0,0,0,0" NoFrame="false" />
+            </subor>
+        </control>
+        <control name="model_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="12" TextOffsetX="2" ScrollSize="17" Left="16" Top="168" Width="222" Height="70" ShadowColor="0,0,0,0" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="model_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="144" Width="80" Height="22" ShadowColor="0,0,0,0" Text="物体列表:" />
+        </control>
+        <control name="model_name_label" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="352" Width="54" Height="22" ShadowColor="0,0,0,0" Text="model" />
+        </control>
+        <control name="delete_btn" entity="Button" script="" init="">
+            <prop Left="200" Top="240" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="删除" TabStop="true" />
+            <event on_click="delete_btn_click" />
+        </control>
+        <control name="clone_check" entity="CheckButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" Left="16" Top="240" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="复制" TabStop="true" />
+            <event on_checked_changed="clone_checked_changed" />
+        </control>
+        <control name="GroupBox2" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="72" Width="238" Height="70" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="选择屏蔽" />
+            <control name="mask_model_check" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" Left="24" Top="16" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="模型" TabStop="true" />
+                <event on_checked_changed="mask_model_checked_changed" />
+            </control>
+            <control name="mask_par_check" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" Left="96" Top="16" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="粒子" TabStop="true" />
+                <event on_checked_changed="mask_par_checked_changed" />
+            </control>
+            <control name="mask_light_check" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" Left="160" Top="16" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="灯光" TabStop="true" />
+                <event on_checked_changed="mask_light_checked_changed" />
+            </control>
+            <control name="mask_sound_check" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" Left="24" Top="40" Width="46" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="声音" TabStop="true" />
+                <event on_checked_changed="mask_sound_checked_changed" />
+            </control>
+            <control name="mask_actor_check" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" Left="96" Top="40" Width="62" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="组合体" TabStop="true" />
+                <event on_checked_changed="mask_actor_checked_changed" />
+            </control>
+        </control>
+        <control name="align_btn" entity="Button" script="" init="">
+            <prop Left="54" Top="240" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="对齐" TabStop="true" />
+            <event on_click="align_btn_click" />
+        </control>
+        <control name="queue_btn" entity="Button" script="" init="">
+            <prop Left="92" Top="240" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="排队" TabStop="true" />
+            <event on_click="queue_btn_click" />
+        </control>
+        <control name="hide_btn" entity="Button" script="" init="">
+            <prop Left="160" Top="144" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="隐藏" TabStop="true" />
+            <event on_click="hide_btn_click" />
+        </control>
+        <control name="show_btn" entity="Button" script="" init="">
+            <prop Left="200" Top="144" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="显示" TabStop="true" />
+            <event on_click="show_btn_click" />
+        </control>
+        <control name="GroupBox3" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="272" Width="238" Height="86" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="保存选中的所有模型作为群组" />
+            <control name="save_all_visuals_as_group_btn" entity="Button" script="" init="">
+                <prop Left="176" Top="24" Width="46" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="保存" TabStop="true" />
+                <event on_click="save_all_visuals_as_group_btn_click" />
+            </control>
+            <control name="group_name_edit" entity="Edit" script="" init="">
+                <prop TextOffsetX="2" Caret="Default" Left="48" Top="48" Width="174" Height="20" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" TabStop="true" />
+            </control>
+            <control name="Label2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="48" Width="38" Height="16" ShadowColor="0,0,0,0" Text="组名" />
+            </control>
+            <control name="type_combo" entity="ComboBox" script="" init="">
+                <prop ButtonWidth="20" DropDownHeight="100" Left="48" Top="24" Width="126" Height="20" ShadowColor="0,0,0,0" />
+                <subor name="InputEdit">
+                    <prop TextOffsetX="2" Caret="Default" ShadowColor="0,0,0,0" Cursor="WIN_IBEAM" />
+                </subor>
+                <subor name="DropButton">
+                    <prop Width="20" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                </subor>
+                <subor name="DropListBox">
+                    <prop MouseSelect="true" ItemHeight="16" TextOffsetX="2" ScrollSize="17" ShadowColor="0,0,0,0" />
+                    <subor name="VScrollBar">
+                        <prop BackColor="255,224,224,224" ShadowColor="0,0,0,0" />
+                        <subor name="DecButton">
+                            <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" />
+                        </subor>
+                    </subor>
+                </subor>
+            </control>
+            <control name="Label3" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="28" Width="38" Height="16" ShadowColor="0,0,0,0" Text="类型" />
+            </control>
+        </control>
+        <control name="edit_material_btn" entity="Button" script="" init="">
+            <prop Left="88" Top="144" Width="64" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="编辑材质" TabStop="true" />
+            <event on_click="edit_material_btn_click" />
+        </control>
+        <control name="connect" entity="Button" script="" init="">
+            <prop Left="130" Top="240" Width="38" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="同步" TabStop="true" />
+            <event on_click="connect_click" />
+        </control>
+        <control name="clear" entity="Button" script="" init="">
+            <prop Left="168" Top="240" Width="32" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="清除" TabStop="true" />
+            <event on_click="clear_click" />
+        </control>
+        <control name="extend_btn" entity="Button" script="" init="">
+            <prop Left="160" Top="352" Width="70" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="扩展功能" TabStop="true" />
+            <event on_click="extend_btn_click" />
+        </control>
+    </control>
+</form>

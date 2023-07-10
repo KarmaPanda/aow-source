@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_map\form_map_func" init="main_form_init">
+        <prop Transparent="true" ShowGrid="true" Left="37" Top="29" Width="216" Height="702" LineColor="0,200,0,0" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="groupbox_func" entity="GroupBox" script="" init="">
+            <prop Top="10" Width="216" Height="686" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+            <control name="groupbox_spot_head" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="42" Width="198" Height="36" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="btn_spot" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\treeview\tree_1_out.png" FocusImage="gui\common\treeview\tree_1_on.png" PushImage="gui\common\treeview\tree_1_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="198" Height="30" ForeColor="255,248,215,34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_spot_click" />
+                </control>
+                <control name="lbl_spot" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="10" Width="5" Height="8" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_main" AutoSize="true" BackImage="gui\map\mapn\jiantou_right_out.png" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="27" Top="6" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_ZhuYaoGongNeng" Font="font_main" />
+                </control>
+                <control name="lbl_select_spot" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="132" Top="6" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_SelectAll" Font="font_main" />
+                </control>
+                <control name="cbtn_select_spot" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_select_spot_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_life_head" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="138" Width="198" Height="36" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="btn_life" entity="Button" script="" init="">
+                    <prop Align="Left" NormalImage="gui\common\treeview\tree_1_out.png" FocusImage="gui\common\treeview\tree_1_on.png" PushImage="gui\common\treeview\tree_1_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="198" Height="30" ForeColor="255,248,215,34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_life_click" />
+                </control>
+                <control name="lbl_life" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="10" Width="5" Height="8" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_main" BackImage="gui\map\mapn\jiantou_right_out.png" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="27" Top="6" Width="80" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_shenghuoMaster" Font="font_main" />
+                </control>
+                <control name="lbl_select_life" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="132" Top="6" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_SelectAll" Font="font_main" />
+                </control>
+                <control name="cbtn_select_life" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_select_life_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_team_head" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="400" Width="198" Height="36" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="btn_team" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\treeview\tree_1_out.png" FocusImage="gui\common\treeview\tree_1_on.png" PushImage="gui\common\treeview\tree_1_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="198" Height="30" ForeColor="255,248,215,34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_team_click" />
+                </control>
+                <control name="lbl_team" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="10" Width="5" Height="8" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_main" BackImage="gui\map\mapn\jiantou_right_out.png" />
+                </control>
+                <control name="lbl_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="27" Top="6" Width="70" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_huoban" Font="font_main" />
+                </control>
+                <control name="lbl_select_team" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="132" Top="6" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_SelectAll" Font="font_main" />
+                </control>
+                <control name="cbtn_select_team" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_select_team_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_label_head" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="490" Width="198" Height="36" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="btn_label" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\treeview\tree_1_out.png" FocusImage="gui\common\treeview\tree_1_on.png" PushImage="gui\common\treeview\tree_1_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="198" Height="30" ForeColor="255,248,215,34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_team_click" />
+                </control>
+                <control name="lbl_label" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="10" Width="5" Height="8" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_main" BackImage="gui\map\mapn\jiantou_right_out.png" />
+                </control>
+                <control name="lbl_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="27" Top="6" Width="70" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_biaoqian" Font="font_main" />
+                </control>
+                <control name="lbl_select_label" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="132" Top="6" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_SelectAll" Font="font_main" />
+                </control>
+                <control name="cbtn_select_label" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_select_label_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_caiji_head" entity="GroupBox" script="" init="">
+                <prop Left="8" Top="580" Width="198" Height="36" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="btn_caiji" entity="Button" script="" init="">
+                    <prop NormalImage="gui\common\treeview\tree_1_out.png" FocusImage="gui\common\treeview\tree_1_on.png" PushImage="gui\common\treeview\tree_1_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="198" Height="28" ForeColor="255,248,215,34" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_main" TabStop="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_click="on_btn_caiji_click" />
+                </control>
+                <control name="lbl_caiji" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="12" Top="10" Width="5" Height="8" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Font="font_main" BackImage="gui\map\mapn\jiantou_right_out.png" />
+                </control>
+                <control name="lbl_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="27" Top="6" Width="54" Height="16" ForeColor="255,255,204,0" ShadowColor="0,0,0,0" Text="@ui_caijiwu" Font="font_main" />
+                </control>
+                <control name="lbl_select_caiji" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="136" Top="6" Width="80" Height="16" ForeColor="255,204,204,204" ShadowColor="0,0,0,0" Text="@ui_SelectAll" Font="font_main" />
+                </control>
+                <control name="cbtn_select_caiji" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="109" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_select_caiji_checked_changed" />
+                </control>
+            </control>
+            <control name="groupbox_spot" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="70" Width="198" Height="58" BackColor="0,255,255,255" LineColor="0,0,0,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="cbtn_shangdian" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_spot_npc" />
+                </control>
+                <control name="cbtn_chefu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="9" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_spot_npc" />
+                </control>
+                <control name="cbtn_fuhuodian" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="31" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_spot_npc" />
+                </control>
+                <control name="cbtn_chuansongmen" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="32" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_spot_npc" />
+                </control>
+                <control name="lbl_spot_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="5" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_ShangDian" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_spot_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="9" Width="54" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_CheFu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_spot_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="28" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_FuHuoDian" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_spot_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="29" Width="54" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_ChuanSongMen" Font="font_main" DrawMode="Expand" />
+                </control>
+            </control>
+            <control name="groupbox_life" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="176" Width="198" Height="214" BackColor="0,255,255,255" LineColor="0,0,0,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="cbtn_kuanggong" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="6" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_tiejiang" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="7" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_yufu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="29" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_qiaofu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="30" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_nongfu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="52" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_liehu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="53" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_caifeng" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="75" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_jinjiang" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="76" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_yaoshi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="98" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_dushi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="100" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_chushi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="121" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_qinshi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="123" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_qishi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="144" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_shusheng" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="146" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_huashi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="167" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_guashi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="169" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="cbtn_qigai" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="190" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_life_npc" />
+                </control>
+                <control name="lbl_life_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="3" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_KuangGong" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="3" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_TieJiang" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="26" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_YuFu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="28" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_QiaoFu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="49" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_NongFu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="51" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_LieHu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="72" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_CaiFeng" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="71" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_JinJiang" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_9" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="95" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_YaoShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="97" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_DuShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="117" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_ChuShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_12" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="121" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_QinShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="141" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_QiShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_14" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="142" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_ShuSheng" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_15" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="164" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_HuaShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_16" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="167" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_GuaShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_life_17" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="185" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_QiGai" Font="font_main" DrawMode="Expand" />
+                </control>
+            </control>
+            <control name="groupbox_team" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="432" Width="198" Height="54" BackColor="0,255,255,255" LineColor="0,0,0,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="cbtn_smallteam" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="15" Top="5" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_smallteam_checked_changed" />
+                </control>
+                <control name="cbtn_bigteam" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="15" Top="28" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_cbtn_bigteam_checked_changed" />
+                </control>
+                <control name="lbl_team_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="1" Width="46" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_XiaoDui" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_team_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="25" Width="46" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_DaDui" Font="font_main" DrawMode="Expand" />
+                </control>
+            </control>
+            <control name="groupbox_label" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="520" Width="198" Height="54" BackColor="0,255,255,255" LineColor="0,0,0,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="cbtn_label_1" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="8" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_checked_changed_label" />
+                </control>
+                <control name="cbtn_label_2" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="8" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_checked_changed_label" />
+                </control>
+                <control name="cbtn_label_3" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="32" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_checked_changed_label" />
+                </control>
+                <control name="cbtn_label_4" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="31" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_checked_changed_label" />
+                </control>
+                <control name="lbl_label_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="6" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_BiaoQian_1" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_label_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="6" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_BiaoQian_2" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_label_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="29" Width="54" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_BiaoQian_3" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_label_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="29" Width="54" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_BiaoQian_4" Font="font_main" DrawMode="Expand" />
+                </control>
+            </control>
+            <control name="groupbox_caiji" entity="GroupBox" script="" init="">
+                <prop Left="10" Top="600" Width="198" Height="78" BackColor="0,255,255,255" LineColor="0,0,0,255" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <control name="cbtn_buyu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="8" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_caiji_npc" />
+                </control>
+                <control name="cbtn_kuangshi" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="8" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_caiji_npc" />
+                </control>
+                <control name="cbtn_famu" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="32" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_caiji_npc" />
+                </control>
+                <control name="cbtn_caoyao" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="107" Top="31" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_caiji_npc" />
+                </control>
+                <control name="cbtn_duyao" entity="CheckButton" script="" init="">
+                    <prop BoxSize="12" NormalImage="gui\common\checkbutton\cbtn_1_off.png" FocusImage="gui\common\checkbutton\cbtn_1_on.png" CheckedImage="gui\common\checkbutton\cbtn_1_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="14" Top="56" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_check_changed_caiji_npc" />
+                </control>
+                <control name="lbl_caiji_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="6" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_BuYu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_caiji_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="6" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_KuangShi" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_caiji_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="29" Width="54" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_FaMu" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_caiji_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="130" Top="29" Width="54" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_CaoYao" Font="font_main" DrawMode="Expand" />
+                </control>
+                <control name="lbl_caiji_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="37" Top="54" Width="62" Height="22" ForeColor="255,197,184,159" ShadowColor="0,0,0,0" Text="@ui_DuYao" Font="font_main" DrawMode="Expand" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="73" Top="18" Width="70" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_GongNengXuanZe" Font="font_title" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="36" Width="208" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="186" Top="16" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="" TabStop="true" NoFrame="true" AutoSize="true" InSound="MouseOn_20" ClickSound="cancel_5" />
+            <event on_click="on_btn_close_click" />
+        </control>
+    </control>
+</form>

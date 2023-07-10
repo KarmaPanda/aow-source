@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="form_stage_main\form_relation\form_relation_guild\form_new_guild.xml" entity="Form" script="form_stage_main\form_relation\form_relation_guild\form_new_guild" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="37" Top="21" Width="931" Height="648" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="8" Top="8" Width="910" Height="630" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\guild\guild_new_2\0_bg_1.png" />
+        </control>
+        <control name="groupbox_bg_out" entity="GroupBox" script="" init="">
+            <prop Top="9" Width="910" Height="69" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="groupbox_5" NoFrame="true" AutoSize="true" DrawMode="Expand" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="778" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_5" />
+            </subor>
+            <control name="btn_help" entity="CheckButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\common\button\btn_help_out.png" FocusImage="gui\common\button\btn_help_on.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" Left="864" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_checked_changed="on_btn_help_checked_changed" />
+            </control>
+            <control name="lbl_1" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="408" Top="10" Width="118" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_FormBangPai" Font="font_title" />
+            </control>
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="888" Top="8" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+                <event on_click="on_btn_close_click" />
+            </control>
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="16" Top="29" Width="838" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" TestTrans="true" Text="groupbox_5" NoFrame="true" />
+                <subor name="TitleBar">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="719" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_5" />
+                </subor>
+                <control name="rbtn_info" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="2" Top="8" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newguild_title_01" DataSource="form_stage_main\form_relation\form_relation_guild\form_new_guild_intro_total" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_construct" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="91" Top="8" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newguild_title_02" DataSource="form_stage_main\form_relation\form_relation_guild\form_new_guild_levelup" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_activity" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="179" Top="8" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newguild_title_03" DataSource="form_stage_main\form_relation\form_relation_guild\form_new_guild_activity" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_manager" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="267" Top="8" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newguild_title_04" DataSource="form_stage_main\form_relation\form_relation_guild\form_new_guild_manage" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+                <control name="rbtn_diplomacy" entity="RadioButton" script="" init="">
+                    <prop HideBox="true" BoxSize="12" NormalImage="gui\commom_new\radio_btn\main_out.png" FocusImage="gui\commom_new\radio_btn\main_on.png" CheckedImage="gui\commom_new\radio_btn\main_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="255,255,255,197" FocusColor="255,255,204,0" PushColor="255,255,204,0" DisableColor="0,0,0,0" Left="355" Top="8" Width="85" Height="34" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_newguild_title_05" DataSource="form_stage_main\form_relation\form_relation_guild\form_new_guild_war_info" Font="font_main" TabStop="true" AutoSize="true" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                    <event on_checked_changed="on_rbtn_checked_changed" />
+                </control>
+            </control>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="144" Top="832" Width="827" Height="599" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\guild\guild_new\Hbg_1.png" />
+        </control>
+        <control name="groupbox_all" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="76" Width="913" Height="562" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <subor name="TitleBar">
+                <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="90" Height="20" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="groupbox_2" />
+            </subor>
+        </control>
+    </control>
+</form>

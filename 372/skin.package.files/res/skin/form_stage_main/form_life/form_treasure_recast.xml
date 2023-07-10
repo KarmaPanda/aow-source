@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_life\form_treasure_recast" init="on_main_form_init">
+        <prop ShowGrid="true" Left="61" Top="53" Width="598" Height="742" BackColor="0,0,0,0" LineColor="0,0,0,0" ShadowColor="0,0,0,0" />
+        <event on_open="on_main_form_open" on_active="on_form_active" on_close="on_main_form_close" />
+        <control name="lbl_main" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Width="590" Height="730" ShadowColor="0,0,0,0" Font="Default" DrawMode="Expand" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="136" Top="3" Width="309" Height="30" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_recast_treasure_random_1" Font="font_title" AutoSize="true" DrawMode="ExpandH" BackImage="gui\commom_new\form_bg\zjhuawen.png" DisableEnter="true" />
+        </control>
+        <control name="lbl_line" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="56" Width="590" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_main_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="3" Top="63" Width="590" Height="629" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\commom_new\form_bg\huawen.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-184" Top="64" Width="174" Height="632" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\form_expand.png" />
+        </control>
+        <control name="lbl_line2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-40" Top="64" Width="11" Height="632" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\form_line\line_vertical.png" />
+        </control>
+        <control name="groupbox_rbt" entity="GroupBox" script="" init="">
+            <prop Left="-200" Top="64" Width="174" Height="632" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="btn_equip_dire" entity="Button" script="" init="">
+                <prop NormalImage="gui\commom_new\btn\main_left_out.png" FocusImage="gui\commom_new\btn\main_left_on.png" PushImage="gui\commom_new\btn\main_left_down.png" DisableImage="gui\commom_new\btn\main_left_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="1" Top="8" Width="174" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_recast_treasrue_random" Font="font_btn" DrawMode="ExpandH" InSound="MouseOn_20" ClickSound="ok_7" />
+                <event on_click="on_btn_equip_dire_click" />
+            </control>
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="688" Width="590" Height="9" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_start" entity="Button" script="" init="">
+            <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="399" Top="700" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_recast_random" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_start_click" />
+        </control>
+        <control name="groupbox_zb" entity="GroupBox" script="" init="">
+            <prop Left="6" Top="52" Width="574" Height="646" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="lbl_5" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="20" Width="550" Height="78" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+            </control>
+            <control name="imagegrid_zb" entity="ImageGrid" script="" init="">
+                <prop SelectColor="80,0,255,0" MouseInColor="80,255,255,0" CoverColor="80,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,32,32" MaxSize="1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" DrawMouseIn="xuanzekuang_on" DrawMouseSelect="xuanzekuang" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\commom_new\imagegrid\item.png" GridBackOffsetX="-2" GridBackOffsetY="-2" MouseDownScale="0.900000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" HasVScroll="false" Left="48" Top="39" Width="43" Height="45" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="imagegrid_1" NoFrame="true" AutoSize="true" />
+                <event on_select_changed="on_imagegrid_zb_select_changed" on_mousein_grid="on_imagegrid_zb_mousein_grid" on_rightclick_grid="on_imagegrid_zb_rightclick_grid" on_mouseout_grid="on_imagegrid_zb_mouseout_grid" />
+            </control>
+            <control name="lbl_8" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="11" Top="111" Width="564" Height="247" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\ng_3.png" />
+            </control>
+            <control name="lbl_9" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="856" Top="480" Width="4" Height="214" ShadowColor="0,0,0,0" BackImage="gui\special\schoolwar\bg_line.png" />
+            </control>
+            <control name="lbl_10" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="16" Top="365" Width="550" Height="254" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\commom_new\form_bg\Tips_hotlist.png" />
+            </control>
+            <control name="lbl_title_2" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="344" Top="123" Width="182" Height="16" ForeColor="255,255,255,197" ShadowColor="0,255,0,0" Text="@ui_recast_equip_random_attribute_max" Font="font_main" />
+            </control>
+            <control name="lbl_14" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="80" Top="373" Width="414" Height="16" ForeColor="255,255,255,197" ShadowColor="0,255,0,0" Text="@ui_recast_result" Font="font_title" />
+            </control>
+            <control name="lbl_15" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="20" Top="389" Width="542" Height="5" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\commom_new\form_line\line.png" />
+            </control>
+            <control name="lbl_6" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="96" Top="120" Width="182" Height="16" ForeColor="255,255,255,197" ShadowColor="0,255,0,0" Text="@ui_treasure_base" Font="font_main" />
+            </control>
+            <control name="mltbox_value" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,254,206" LineHeight="17" ScrollSize="17" Left="24" Top="152" Width="254" Height="206" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="mltbox_max" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,3" MouseInBarColor="0,0,0,0" ViewRect="0,0,278,206" LineHeight="17" ScrollSize="17" Left="296" Top="152" Width="278" Height="206" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_tip" NoFrame="true" />
+            </control>
+            <control name="mltbox_result" entity="MultiTextBox" script="" init="">
+                <prop SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,534,214" LineHeight="17" ScrollSize="17" Left="24" Top="400" Width="534" Height="214" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_tip" NoFrame="true" />
+            </control>
+        </control>
+        <control name="mltbox_cost" entity="MultiTextBox" script="" init="">
+            <prop VAlign="Center" TextColor="255,255,180,0" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,222,25" LineHeight="20" HtmlText="@ui_treasure_recast_cost" ScrollSize="17" Solid="true" Left="8" Top="700" Width="222" Height="25" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_money" NoFrame="true" AutoSize="true" DrawMode="ExpandH" />
+        </control>
+        <control name="mltbox_tip" entity="MultiTextBox" script="" init="">
+            <prop VAlign="Center" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="0,0,446,16" HtmlText="@ui_recast_server_tip" ScrollSize="17" Left="20" Top="674" Width="446" Height="16" ForeColor="255,255,255,255" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Font="font_tip" NoFrame="true" AutoSize="true" DrawMode="ExpandH" />
+        </control>
+        <control name="btn_ok" entity="Button" script="" init="">
+            <prop NormalImage="gui\commom_new\btn\btn_normal_out.png" FocusImage="gui\commom_new\btn\btn_normal_on.png" PushImage="gui\commom_new\btn\btn_normal_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="498" Top="700" Width="93" Height="29" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_ok_click" />
+        </control>
+    </control>
+</form>

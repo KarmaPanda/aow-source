@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_animalkeep\form_sable_info" init="main_form_init">
+        <prop ShowGrid="true" Left="20" Top="30" Width="462" Height="358" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+        <event on_open="on_main_form_open" />
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="1" Top="-1" Width="462" Height="362" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_form.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="32" Width="454" Height="295" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_back\bg_main.png" />
+        </control>
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="212" Top="8" Width="58" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_pet_title" Font="font_title" />
+        </control>
+        <control name="scenebox_mountmodel" entity="SceneBox" script="" init="">
+            <prop Left="37" Top="103" Width="170" Height="198" BackColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_main_on.png" />
+        </control>
+        <control name="btn_close" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="433" Top="7" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_name" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="255" Top="55" Width="175" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Font="font_text_title1" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+        <control name="mltbox_words" entity="MultiTextBox" script="" init="">
+            <prop TextColor="255,128,101,74" SelectBarColor="0,0,0,0" MouseInBarColor="0,0,0,0" ViewRect="10,15,169,200" LineHeight="17" ScrollSize="17" Left="257" Top="103" Width="170" Height="198" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text_title1" NoFrame="true" DrawMode="FitWindow" BackImage="gui\common\form_back\bg_main_on.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="26" Width="455" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="327" Width="451" Height="27" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\common\form_back\bg_area2.png" />
+        </control>
+        <control name="btn_unite" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="287" Top="327" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_pet_summon" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_unite_click" />
+        </control>
+        <control name="btn_hide" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_normal_out.png" FocusImage="gui\common\button\btn_normal_on.png" PushImage="gui\common\button\btn_normal_down.png" DisableImage="gui\common\button\btn_normal_forbid.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="371" Top="327" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_pet_close" Font="font_btn" AutoSize="true" />
+            <event on_click="on_btn_close_click" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="4" Top="322" Width="455" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\common\form_line\line_horizontal.png" />
+        </control>
+        <control name="btn_right" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\common\button\btn_right\btn_right2_out.png" FocusImage="gui\common\button\btn_right\btn_right2_on.png" PushImage="gui\common\button\btn_right\btn_right2_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="168" Top="266" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_right_click" on_lost_capture="on_btn_right_lost_capture" on_push="on_btn_right_push" />
+        </control>
+        <control name="btn_left" entity="Button" script="" init="">
+            <prop PushEvent="true" NormalImage="gui\common\button\btn_left\btn_left2_out.png" FocusImage="gui\common\button\btn_left\btn_left2_on.png" PushImage="gui\common\button\btn_left\btn_left2_down.png" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="47" Top="266" Width="30" Height="27" BackColor="255,192,192,192" ShadowColor="0,0,0,0" TabStop="true" AutoSize="true" />
+            <event on_click="on_btn_left_click" on_lost_capture="on_btn_left_lost_capture" on_push="on_btn_left_push" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="160" Top="-1" Width="144" Height="29" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\common\form_back\bg_adorn.png" />
+        </control>
+        <control name="lbl_8" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="55" Width="175" Height="27" ForeColor="255,76,61,44" ShadowColor="0,0,0,0" Text="@ui_mountpreview" Font="font_text_title1" AutoSize="true" BackImage="gui\common\form_back\bg_title.png" />
+        </control>
+    </control>
+</form>

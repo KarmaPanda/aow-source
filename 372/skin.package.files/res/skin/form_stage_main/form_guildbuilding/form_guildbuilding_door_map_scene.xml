@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_guildbuilding\form_guildbuilding_door_map_scene" init="main_form_init">
+        <prop LimitInScreen="true" ShowGrid="true" Left="28" Top="30" Width="735" Height="679" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" />
+        <event on_open="main_form_open" on_close="main_form_close" />
+        <control name="groupbox_back" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="1" Top="-1" Width="728" Height="678" BackColor="0,255,255,255" LineColor="0,0,0,0" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\map\mapn\bg_main.png" />
+            <control name="btn_close" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-46" Top="14" Width="20" Height="22" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HAnchor="Right" TabStop="true" AutoSize="true" DrawMode="FitWindow" InSound="MouseOn_20" ClickSound="cancel_5" />
+                <event on_click="on_btn_close_click" />
+            </control>
+        </control>
+        <control name="groupbox_map" entity="GroupBox" script="" init="">
+            <prop Transparent="true" Left="57" Top="43" Width="620" Height="590" BackColor="0,255,255,255" LineColor="0,0,255,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            <control name="pic_map" entity="Picture" script="" init="">
+                <prop CenterX="500" CenterY="500" Left="2" Width="620" Height="590" BackColor="167,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <event on_right_down="on_pic_map_right_down" on_left_down="on_pic_map_left_down" on_right_up="on_pic_map_right_up" on_mouse_move="on_pic_map_mouse_move" on_left_up="on_pic_map_left_up" />
+            </control>
+            <control name="groupmap_objs" entity="GroupBigMap" script="" init="">
+                <prop Left="2" Width="620" Height="590" ForeColor="0,0,0,0" BackColor="0,0,0,0" LineColor="0,0,0,0" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" Font="font_map_area" />
+                <event on_mouse_in_obj="on_groupmap_objs_mouse_in_obj" on_mouse_out_obj="on_groupmap_objs_mouse_out_obj" on_click_obj="on_groupmap_objs_click_obj" />
+            </control>
+            <control name="lbl_back" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="2" Width="620" Height="590" ShadowColor="0,0,0,0" DrawMode="Expand" />
+            </control>
+            <control name="groupbox_polygon" entity="GroupBox" script="" init="">
+                <prop Transparent="true" Left="1" Top="-4" Width="620" Height="590" BackColor="0,255,255,255" LineColor="0,0,255,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" />
+            </control>
+            <control name="lbl_end" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" IsLimitWidth="true" Left="568" Top="476" Width="39" Height="49" ShadowColor="0,0,0,0" AutoSize="true" BackImage="flag_zhongdian" />
+            </control>
+            <control name="btn_delete" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Top="548" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_delete" Font="font_main" AutoSize="true" />
+                <event on_click="on_btn_delete_click" />
+            </control>
+            <control name="btn_ok" entity="Button" script="" init="">
+                <prop NormalImage="gui\common\button\btn_normal1_out.png" FocusImage="gui\common\button\btn_normal1_on.png" PushImage="gui\common\button\btn_normal1_down.png" DisableImage="gui\common\button\btn_normal1_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="528" Top="548" Width="87" Height="30" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_ok" Font="font_main" AutoSize="true" />
+                <event on_click="on_btn_ok_click" />
+            </control>
+        </control>
+    </control>
+</form>

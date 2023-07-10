@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_small_game\form_game_openlocker" init="main_form_init">
+        <prop LimitInScreen="true" Left="61" Top="45" Width="1024" Height="768" LineColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\home\qiaosuo\qs_dt.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="-3" Top="706" Width="1030" Height="62" ShadowColor="0,0,0,0" BackImage="gui\special\home\qiaosuo\qs_tiao.png" />
+        </control>
+        <control name="scenebox_mod" entity="SceneBox" script="" init="">
+            <prop Left="8" Top="16" Width="886" Height="646" BackColor="0,0,0,0" ShadowColor="0,0,0,0" Enabled="false" NoFrame="true" DrawMode="Expand" />
+        </control>
+        <control name="lbl_1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="29" Top="-49" Width="46" Height="44" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" BackImage="gui\special\home\qiaosuo\qs_mouse.png" />
+        </control>
+        <control name="lbl_2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="227" Top="-49" Width="46" Height="45" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" BackImage="gui\special\home\qiaosuo\qs_g.png" />
+        </control>
+        <control name="lbl_4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="91" Top="-33" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_qs_mouse" Font="font_code_figure" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="292" Top="-33" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_qs_g" Font="font_code_figure" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="384" Top="-49" Width="46" Height="45" ShadowColor="0,0,0,0" VAnchor="Bottom" AutoSize="true" BackImage="gui\special\home\qiaosuo\home_qsms_01.png" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="448" Top="-33" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" VAnchor="Bottom" Text="@ui_home_qsms_01" Font="font_code_figure" />
+        </control>
+        <control name="qsgj" entity="ImageControlGrid" script="" init="">
+            <prop HasMultiTextBox="true" MultiTextBoxCount="2" MultiTextBoxLeft="5" MultiTextBoxTop="10" MultiTextBoxPos="5,10;50,40" SelectColor="0,0,255,0" MouseInColor="0,255,255,0" CoverColor="0,255,0,0" LockColor="80,255,255,0" CoolColor="100,0,0,0" ViewRect="0,0,86,78" MaxSize="-1" RowNum="1" ClomnNum="1" GridHeight="38" GridWidth="38" GridsPos="5,5" DrawMouseIn="RECT" DrawMouseSelect="RECT" DrawCover="RECT" DrawLock="RECT" DrawGridBack="gui\common\imagegrid\icon_bag.png" GridBackOffsetX="-4" GridBackOffsetY="-4" ShowMouseDownState="false" MouseDownScale="1.000000" MouseDownOffsetX="2" MouseDownOffsetY="2" MouseDownAlpha="128" Solid="false" Left="-216" Top="-50" Width="44" Height="44" LineColor="0,0,0,0" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" Text="ImageControlGrid2" Font="Default" NoFrame="true" AutoSize="true" />
+            <event on_select_changed="on_product_grid_select_changed" on_mousein_grid="on_product_grid_mousein_grid" on_rightclick_grid="on_product_grid_right_click" on_mouseout_grid="on_product_grid_mouseout_grid" />
+            <subor name="VScrollBar">
+                <prop Maximum="10" SmallChange="1" LargeChange="5" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="Expand" />
+                <subor name="DecButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="IncButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="10" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                </subor>
+            </subor>
+            <subor name="MultiTextBox1">
+                <prop TextColor="255,128,101,74" ViewRect="10,0,48,48" LineHeight="28" HtmlText="AAAAAAAAA" ScrollSize="17" Width="48" Height="48" ForeColor="255,98,83,76" LineColor="0,0,0,0" ShadowColor="0,0,0,0" Font="Default" />
+            </subor>
+            <subor name="MultiTextBox2">
+                <prop TextColor="255,128,101,74" ViewRect="0,10,48,48" LineHeight="28" ScrollSize="17" Width="48" Height="48" ShadowColor="0,0,0,0" Font="Default" NoFrame="true" AutoSize="true" />
+            </subor>
+        </control>
+        <control name="btn_quit" entity="Button" script="" init="">
+            <prop NormalImage="gui\language\ChineseS\tc-out.png" FocusImage="gui\language\ChineseS\tc-on.png" PushImage="gui\language\ChineseS\tc-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-72" Top="-47" Width="55" Height="32" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Bottom" HAnchor="Right" AutoSize="true" />
+            <event on_click="on_btn_quit_click" />
+        </control>
+    </control>
+</form>

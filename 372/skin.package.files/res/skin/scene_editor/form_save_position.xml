@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_save_position" init="main_form_init">
+        <prop Left="197" Top="229" Width="350" Height="270" BackColor="150,152,155,255" DrawMode="Expand" BackImage="skin\png\form.png" />
+        <event on_open="main_form_open" />
+        <control name="Label1" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="96" Top="16" Width="158" Height="16" Text="保存坐标和行走朝向" />
+        </control>
+        <control name="close_btn" entity="Button" script="" init="">
+            <prop Left="312" Top="8" Width="24" Height="24" Text="X" TabStop="true" />
+            <event on_click="close_btn_click" />
+        </control>
+        <control name="pos_x_floatedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="240" Top="56" Width="94" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="pos_y_floatedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="240" Top="80" Width="94" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="pos_z_floatedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="240" Top="104" Width="94" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="save_cur_pos_btn" entity="Button" script="" init="">
+            <prop Left="184" Top="168" Width="150" Height="24" Text="保存当前点" TabStop="true" />
+            <event on_click="save_cur_pos_btn_click" />
+        </control>
+        <control name="delete_select_btn" entity="Button" script="" init="">
+            <prop Left="16" Top="168" Width="158" Height="24" Text="删除选择点" TabStop="true" />
+            <event on_click="delete_select_btn_click" />
+        </control>
+        <control name="pos_list" entity="ListBox" script="" init="">
+            <prop ItemHeight="16" TextOffsetX="2" ScrollSize="17" Left="16" Top="56" Width="158" Height="102" Text="ListBox1" TabStop="true" />
+            <event on_select_changed="pos_list_select_changed" />
+            <subor name="VScrollBar">
+                <prop BackColor="255,224,224,224" />
+                <subor name="DecButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="IncButton">
+                    <prop Width="17" Height="15" />
+                </subor>
+                <subor name="TrackButton">
+                    <prop Width="17" Height="10" />
+                </subor>
+            </subor>
+        </control>
+        <control name="Label2" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="57" Width="30" Height="16" Text="X" />
+        </control>
+        <control name="Label3" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="80" Width="30" Height="16" Text="Y" />
+        </control>
+        <control name="Label4" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="104" Width="30" Height="16" Text="Z" />
+        </control>
+        <control name="Label5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="184" Top="131" Width="46" Height="16" Text="Angle" />
+        </control>
+        <control name="angle_floatedit" entity="Float_Edit" script="" init="">
+            <prop Format="%.4f" DragStep="0.001000" Max="100.000000" OnlyDigit="true" ChangedEvent="true" TextOffsetX="2" Caret="Default" Left="240" Top="128" Width="94" Height="20" Text="0.0" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="save_to_file_btn" entity="Button" script="" init="">
+            <prop Left="184" Top="208" Width="150" Height="24" Text="保存到文件" TabStop="true" />
+            <event on_click="save_to_file_btn_click" />
+        </control>
+        <control name="file_name_edit" entity="Edit" script="" init="">
+            <prop TextOffsetX="2" Caret="Default" Left="64" Top="208" Width="110" Height="20" Enabled="false" Text="pos_list.ini" Cursor="WIN_IBEAM" TabStop="true" />
+        </control>
+        <control name="Label6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="16" Top="211" Width="46" Height="16" Text="文件名" />
+        </control>
+        <control name="show_check" entity="CheckButton" script="" init="">
+            <prop HideBox="true" BoxSize="12" Left="16" Top="232" Width="158" Height="24" Text="显示当前保存的点" TabStop="true" />
+            <event on_checked_changed="show_checked_changed" />
+        </control>
+    </control>
+</form>

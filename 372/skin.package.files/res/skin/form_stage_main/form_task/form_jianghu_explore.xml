@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <control name="main_form" entity="Form" script="form_stage_main\form_task\form_jianghu_explore" init="main_form_init">
+        <prop ShowGrid="true" Left="13" Top="37" Width="822" Height="587" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\tansuodi.png" />
+        <event on_open="on_main_form_open" on_close="on_main_form_close" />
+        <control name="lbl_title" entity="Label" script="" init="">
+            <prop Align="Center" RefCursor="WIN_HELP" Left="370" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_01" Font="font_title" />
+        </control>
+        <control name="btn_quit" entity="Button" script="" init="">
+            <prop NormalImage="gui\common\button\btn_close_out.png" FocusImage="gui\common\button\btn_close_on.png" PushImage="gui\common\button\btn_close_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="792" Top="7" Width="22" Height="24" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+            <event on_click="on_btn_quit_click" />
+        </control>
+        <control name="lbl_5" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="29" Width="813" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\sns_new\jh_explore\hengtiao.png" />
+        </control>
+        <control name="lbl_7" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="240" Top="64" Width="16" Height="523" ShadowColor="0,0,0,0" DrawMode="FitWindow" />
+        </control>
+        <control name="lbl_6" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="5" Top="59" Width="813" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\sns_new\jh_explore\hengtiao.png" />
+        </control>
+        <control name="groupbox_rbtn" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="32" Width="382" Height="38" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+            <control name="rbtn_youli" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\sns_new\jh_explore\fenye-out.png" FocusImage="gui\special\sns_new\jh_explore\fenye-on.png" CheckedImage="gui\special\sns_new\jh_explore\fenye-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="96" Width="90" Height="39" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_75" Font="font_text_figure" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_youli_checked_changed" />
+            </control>
+            <control name="rbtn_juqing" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\sns_new\jh_explore\fenye-out.png" FocusImage="gui\special\sns_new\jh_explore\fenye-on.png" CheckedImage="gui\special\sns_new\jh_explore\fenye-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="192" Width="90" Height="39" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_76" Font="font_text_figure" TabIndex="1" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_juqing_checked_changed" />
+            </control>
+            <control name="rbtn_prize" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\sns_new\jh_explore\fenye-out.png" FocusImage="gui\special\sns_new\jh_explore\fenye-on.png" CheckedImage="gui\special\sns_new\jh_explore\fenye-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="288" Width="90" Height="39" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_77" Font="font_text_figure" TabIndex="2" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_prize_checked_changed" />
+            </control>
+            <control name="rbtn_daoju" entity="RadioButton" script="" init="">
+                <prop BoxSize="12" NormalImage="gui\special\sns_new\jh_explore\fenye-out.png" FocusImage="gui\special\sns_new\jh_explore\fenye-on.png" CheckedImage="gui\special\sns_new\jh_explore\fenye-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-1" Width="90" Height="39" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_74" Font="font_text_figure" TabIndex="2" TabStop="true" NoFrame="true" AutoSize="true" />
+                <event on_checked_changed="on_rbtn_daoju_checked_changed" />
+            </control>
+        </control>
+        <control name="lbl_jh_scene" entity="Label" script="" init="">
+            <prop RefCursor="WIN_HELP" Left="40" Top="13" Width="80" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_xiyu" Font="font_sns_xiayi_title1" />
+        </control>
+        <control name="groupbox_juqing" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="64" Width="810" Height="520" ShadowColor="0,0,0,0" Visible="false" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\youlidadi.png" />
+            <control name="groupbox_juqing_left" entity="GroupBox" script="" init="">
+                <prop Top="1" Width="237" Height="520" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\juqing\lbd.png" />
+                <control name="lbl_38" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="8" Top="191" Width="222" Height="206" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\juqing\juqingwzd.png" />
+                </control>
+                <control name="btn_jq_left_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\juqing\juqing-out.png" FocusImage="gui\special\sns_new\jh_explore\juqing\juqing-on.png" PushImage="gui\special\sns_new\jh_explore\juqing\juqing-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-3" Width="243" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_11" Font="font_text_chat" DrawMode="ExpandH" />
+                    <event on_click="on_btn_jq_left_1_click" />
+                </control>
+                <control name="btn_jq_left_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\juqing\juqing-out.png" FocusImage="gui\special\sns_new\jh_explore\juqing\juqing-on.png" PushImage="gui\special\sns_new\jh_explore\juqing\juqing-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-3" Top="33" Width="243" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_12" Font="font_text_chat" DrawMode="ExpandH" />
+                    <event on_click="on_btn_jq_left_2_click" />
+                </control>
+                <control name="btn_jq_left_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\juqing\juqing-out.png" FocusImage="gui\special\sns_new\jh_explore\juqing\juqing-on.png" PushImage="gui\special\sns_new\jh_explore\juqing\juqing-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-3" Top="66" Width="243" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_13" Font="font_text_chat" DrawMode="ExpandH" />
+                    <event on_click="on_btn_jq_left_3_click" />
+                </control>
+                <control name="btn_jq_left_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\juqing\juqing-out.png" FocusImage="gui\special\sns_new\jh_explore\juqing\juqing-on.png" PushImage="gui\special\sns_new\jh_explore\juqing\juqing-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-3" Top="100" Width="243" Height="36" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_14" Font="font_text_chat" DrawMode="ExpandH" />
+                    <event on_click="on_btn_jq_left_4_click" />
+                </control>
+                <control name="btn_jiangli" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\juqing\jjjl_out.PNG" FocusImage="gui\special\sns_new\jh_explore\juqing\jjjl_on.PNG" PushImage="gui\special\sns_new\jh_explore\juqing\jjjl_down.PNG" DisableImage="gui\special\sns_new\jh_explore\juqing\jjjl_forbid.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="44" Top="425" Width="146" Height="64" BackColor="255,192,192,192" ShadowColor="0,0,0,0" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_jiangli_click" />
+                </control>
+                <control name="mltbox_jjjl" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,210,160" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,206,182" LineHeight="18" HtmlText="@ui_jh_jhts_47" ScrollSize="17" Left="18" Top="215" Width="206" Height="182" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_title_tasktrace" NoFrame="true" />
+                </control>
+            </control>
+            <control name="lbl_36" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="232" Top="-2" Width="16" Height="523" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\shutiao.png" />
+            </control>
+            <control name="groupbox_ending" entity="GroupBox" script="" init="">
+                <prop Left="241" Width="570" Height="520" ShadowColor="0,0,0,0" Visible="false" Font="font_text" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\youlidadi.png" />
+                <control name="lbl_21" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="15" Top="8" Width="542" Height="310" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\juqing\juqingkuang.png" />
+                </control>
+                <control name="lbl_32" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="4" Top="417" Width="555" Height="65" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\juqing\juqingwzd.png" />
+                </control>
+                <control name="btn_show_jq_detail" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\ca_out.png" FocusImage="gui\special\sns_new\jh_explore\ca_on.png" PushImage="gui\special\sns_new\jh_explore\ca_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="440" Top="488" Width="130" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_23" Font="font_btn" DrawMode="ExpandH" />
+                    <event on_click="on_btn_show_jq_detail_click" />
+                </control>
+                <control name="lbl_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="17" Top="430" Width="166" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_27" Font="font_text" />
+                </control>
+                <control name="lbl_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="18" Top="455" Width="166" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_28" Font="font_text" />
+                </control>
+                <control name="lbl_sum_youlizhi" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="191" Top="432" Width="80" Height="16" ForeColor="255,255,255,192" ShadowColor="0,0,0,0" Text="6983" Font="font_treeview" />
+                </control>
+                <control name="lbl_sum_haogandu" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="192" Top="456" Width="80" Height="16" ForeColor="255,255,255,197" ShadowColor="0,0,0,0" Text="3752" Font="font_treeview" />
+                </control>
+                <control name="mltbox_end_content" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,542,84" LineHeight="17" ScrollSize="17" Left="13" Top="326" Width="542" Height="84" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_text" NoFrame="true" />
+                </control>
+                <control name="lbl_end_pic" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="20" Top="14" Width="532" Height="300" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\jqjg\jiejuditu_14.png" />
+                </control>
+                <control name="lbl_end_title" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="39" Top="24" Width="176" Height="46" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="Center" BackImage="gui\special\sns_new\jh_explore\jqjg\1.PNG" />
+                </control>
+                <control name="lbl_34" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="1" Top="480" Width="568" Height="9" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\sns_new\jh_explore\hengtiao.png" />
+                </control>
+                <control name="lbl_35" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="471" Top="226" Width="63" Height="69" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\z.png" />
+                </control>
+                <control name="lbl_20" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="15" Top="8" Width="542" Height="310" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\juqing\juqingyh.png" />
+                </control>
+            </control>
+            <control name="groupscrollbox_juqing_right" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" Left="241" Top="1" Width="566" Height="520" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\youlidida.png" />
+                <control name="groupbox_juqing2" entity="GroupBox" script="" init="">
+                    <prop Left="1" Top="161" Width="566" Height="158" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-1.png" />
+                    <control name="lbl_30" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="21" Top="50" Width="526" Height="79" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\kuang-3.png" />
+                    </control>
+                    <control name="lbl_scenen_config2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_25" Font="font_text" />
+                    </control>
+                    <control name="lbl_scene2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="86" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_26" Font="font_text" />
+                    </control>
+                    <control name="lbl_58" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="271" Top="13" Width="80" Height="16" ForeColor="255,255,255,225" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_15" Font="font_text" />
+                    </control>
+                    <control name="lbl_npc2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="406" Top="14" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_31" Font="font_text" />
+                    </control>
+                    <control name="lbl_56" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="30" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_16" Font="font_text" />
+                    </control>
+                    <control name="lbl_dialog2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="210" Top="31" Width="334" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_32" Font="font_text" />
+                    </control>
+                    <control name="lbl_57" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="52" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_17" Font="font_text" />
+                    </control>
+                    <control name="lbl_item2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="143" Top="53" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_33" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_18" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value4" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="302" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="+10" Font="font_text" />
+                    </control>
+                    <control name="lbl_29" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="374" Top="133" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_22" Font="font_text" />
+                    </control>
+                    <control name="lbl_date2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="480" Top="133" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="2014/10/10" Font="font_treeview" />
+                    </control>
+                    <control name="lbl_youli_config2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="71" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_19" Font="font_text" />
+                    </control>
+                    <control name="lbl_youli_value2" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="220" Top="72" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="5" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="366" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_50" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value5" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="470" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="+10" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="109" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_51" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value6" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="145" Top="109" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="-12" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_heart_6" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="145" Top="109" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                    <control name="lbl_fav_heart_5" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="478" Top="90" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                    <control name="lbl_fav_heart_4" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="310" Top="90" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                </control>
+                <control name="groupbox_juqing1" entity="GroupBox" script="" init="">
+                    <prop Left="1" Top="1" Width="566" Height="158" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-1.png" />
+                    <control name="lbl_28" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="21" Top="50" Width="526" Height="79" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\kuang-3.png" />
+                    </control>
+                    <control name="lbl_scenen_config1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_25" Font="font_text" />
+                    </control>
+                    <control name="lbl_scene1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="86" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_26" Font="font_text" />
+                    </control>
+                    <control name="lbl_62" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="271" Top="13" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_15" Font="font_text" />
+                    </control>
+                    <control name="lbl_npc1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="406" Top="14" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_31" Font="font_text" />
+                    </control>
+                    <control name="lbl_55" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="30" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_16" Font="font_text" />
+                    </control>
+                    <control name="lbl_dialog1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="210" Top="31" Width="336" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_32" Font="font_text" />
+                    </control>
+                    <control name="lbl_59" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="52" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_17" Font="font_text" />
+                    </control>
+                    <control name="lbl_item1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="143" Top="53" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_33" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_18" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value1" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="302" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="+10" Font="font_text" />
+                    </control>
+                    <control name="lbl_26" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="374" Top="133" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_22" Font="font_text" />
+                    </control>
+                    <control name="lbl_date1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="480" Top="133" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="2014/10/10" Font="font_treeview" />
+                    </control>
+                    <control name="lbl_youli_config1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="71" Width="80" Height="16" ForeColor="255,130,255,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_19" Font="font_text" />
+                    </control>
+                    <control name="lbl_youli_value1" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="220" Top="72" Width="80" Height="16" ForeColor="255,0,230,0" ShadowColor="0,0,0,0" Text="5" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="366" Top="89" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_50" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value2" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="470" Top="89" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="+6" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="109" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_51" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value3" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="145" Top="109" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="-18" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_heart_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="310" Top="91" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                    <control name="lbl_fav_heart_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="478" Top="91" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                    <control name="lbl_fav_heart_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="145" Top="110" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                </control>
+                <control name="groupbox_juqing3" entity="GroupBox" script="" init="">
+                    <prop Left="1" Top="321" Width="566" Height="158" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-1.png" />
+                    <control name="lbl_31" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="21" Top="50" Width="526" Height="79" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\kuang-3.png" />
+                    </control>
+                    <control name="lbl_scenen_config3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_25" Font="font_text" />
+                    </control>
+                    <control name="lbl_scene3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="86" Top="11" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_26" Font="font_text" />
+                    </control>
+                    <control name="lbl_60" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="271" Top="13" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_15" Font="font_text" />
+                    </control>
+                    <control name="lbl_npc3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="406" Top="14" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_31" Font="font_text" />
+                    </control>
+                    <control name="lbl_50" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="30" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_16" Font="font_text" />
+                    </control>
+                    <control name="lbl_dialog3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" LblLimitWidth="true" Left="210" Top="31" Width="297" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_32" Font="font_text" />
+                    </control>
+                    <control name="lbl_53" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="52" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_17" Font="font_text" />
+                    </control>
+                    <control name="lbl_item3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="143" Top="53" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_33" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config7" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_18" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value7" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="302" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="+10" Font="font_text" />
+                    </control>
+                    <control name="lbl_33" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="374" Top="133" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_22" Font="font_text" />
+                    </control>
+                    <control name="lbl_date3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="480" Top="133" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="2014/10/10" Font="font_treeview" />
+                    </control>
+                    <control name="lbl_youli_config3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="71" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_19" Font="font_text" />
+                    </control>
+                    <control name="lbl_youli_value3" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="220" Top="72" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="10" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config8" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="366" Top="89" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_50" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value8" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="470" Top="90" Width="80" Height="16" ForeColor="255,130,230,0" LineColor="255,204,204,204" ShadowColor="0,0,0,0" Text="+12" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_config9" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="28" Top="109" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_51" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_value9" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="145" Top="109" Width="80" Height="16" ForeColor="255,130,230,0" ShadowColor="0,0,0,0" Text="-15" Font="font_text" />
+                    </control>
+                    <control name="lbl_fav_heart_7" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="310" Top="90" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                    <control name="lbl_fav_heart_8" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="478" Top="90" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                    <control name="lbl_fav_heart_9" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="145" Top="109" Width="15" Height="14" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\juqing\hgd.png" />
+                    </control>
+                </control>
+                <control name="btn_jq_last" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\btn_left_out.png" FocusImage="gui\special\sns_new\jh_explore\btn_left_on.png" PushImage="gui\special\sns_new\jh_explore\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="-53" Top="233" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" VAnchor="Center" HAnchor="Center" Font="font_btn" AutoSize="true" DrawMode="Center" />
+                    <event on_click="on_btn_jq_last_click" />
+                </control>
+                <control name="btn_jq_next" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\btn_right_out.png" FocusImage="gui\special\sns_new\jh_explore\btn_right_on.png" PushImage="gui\special\sns_new\jh_explore\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="301" Top="492" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" DrawMode="Center" />
+                    <event on_click="on_btn_jq_next_click" />
+                </control>
+                <control name="ipt_jq_page" entity="Edit" script="" init="">
+                    <prop TextOffsetX="2" Caret="Default" Left="251" Top="489" Width="22" Height="22" ForeColor="255,255,255,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="1" Font="font_btn" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" />
+                </control>
+                <control name="ipt_jq_max_page" entity="Edit" script="" init="">
+                    <prop TextOffsetX="2" Caret="Default" Left="280" Top="489" Width="22" Height="22" ForeColor="255,255,255,0" BackColor="0,255,255,255" ShadowColor="0,0,0,0" Text="6" Font="font_btn" Cursor="WIN_IBEAM" TabStop="true" NoFrame="true" />
+                </control>
+                <control name="lbl_page_devide_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="270" Top="493" Width="6" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="/" Font="font_treeview" />
+                </control>
+                <control name="lbl_juqing_divide_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="163" Width="510" Height="4" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\gedangtiao.png" />
+                </control>
+                <control name="lbl_juqing_divide_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="5" Top="323" Width="510" Height="4" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\gedangtiao.png" />
+                </control>
+                <control name="btn_item_course" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\ca_out.png" FocusImage="gui\special\sns_new\jh_explore\ca_on.png" PushImage="gui\special\sns_new\jh_explore\ca_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="439" Top="607" Width="118" Height="33" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_41" Font="font_btn" NoFrame="true" DrawMode="ExpandH" />
+                    <event on_click="on_btn_item_course_click" />
+                </control>
+                <control name="lbl_item_kuang" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="255" Top="599" Width="135" Height="46" ShadowColor="0,0,0,0" BackImage="huashan_kuang_1" />
+                </control>
+            </control>
+        </control>
+        <control name="groupbox_youli" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="64" Width="810" Height="520" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\youlidadi.png" />
+            <control name="groupscrollbox_haogan" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="18" HasVScroll="true" Left="267" Width="541" Height="518" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\youlidida.png" />
+                <subor name="VScrollBar">
+                    <prop ButtonSize="20" Maximum="7" SmallChange="1" LargeChange="502" BackColor="0,224,224,224" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandV" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\sns_new\jh_explore\shang-out.png" FocusImage="gui\special\sns_new\jh_explore\shang-on.png" PushImage="gui\special\sns_new\jh_explore\shang-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\sns_new\jh_explore\xia-out.png" FocusImage="gui\special\sns_new\jh_explore\xia-on.png" PushImage="gui\special\sns_new\jh_explore\xia-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="18" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" DrawMode="ExpandV" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\sns_new\jh_explore\zhong-out.png" FocusImage="gui\special\sns_new\jh_explore\zhong-on.png" PushImage="gui\special\sns_new\jh_explore\zhong-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="18" Height="455" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+                <control name="groupbox_haogan1" entity="GroupBox" script="" init="">
+                    <prop Left="2" Top="1" Width="540" Height="158" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-1.png" />
+                    <control name="lbl_18" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="115" Top="10" Width="406" Height="40" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-2.png" />
+                    </control>
+                    <control name="lbl_pai1" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="35" Top="111" Width="70" Height="24" ForeColor="255,130,200,200" ShadowColor="0,0,0,0" Text="@ui_jhts_hgd_11" Font="font_text_figure" />
+                    </control>
+                    <control name="lbl_hg1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="127" Top="20" Width="80" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_07" Font="font_sns_event_mid" />
+                    </control>
+                    <control name="mltbox_haogan1" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,255,255" ViewRect="0,0,394,90" LineHeight="19" HtmlText="@ui_jhts_hgd_01" ScrollSize="17" Left="125" Top="55" Width="394" Height="90" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_title_tasktrace" NoFrame="true" />
+                    </control>
+                    <control name="pbar_1" entity="ProgressBar" script="" init="">
+                        <prop Maximum="300" Value="200" WidthGap="2" HeightGap="2" ProgressImage="gui\special\sns_new\jh_explore\jindudil.png" ProgressMode="LeftToRight" TextVisible="true" Left="203" Top="32" Width="280" Height="14" ShadowColor="0,0,0,0" Font="font_main" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jindudi.png" />
+                    </control>
+                    <control name="lbl_fav_pic_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="22" Top="26" Width="70" Height="70" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\wlzp.png" />
+                    </control>
+                    <control name="lbl_17" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="115" Top="53" Width="406" Height="94" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-3.png" />
+                    </control>
+                    <control name="lbl_fav_stage_1" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="330" Top="10" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_42" Font="font_tip" />
+                    </control>
+                </control>
+                <control name="groupbox_haogan2" entity="GroupBox" script="" init="">
+                    <prop Left="2" Top="160" Width="540" Height="158" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-1.png" />
+                    <control name="lbl_22" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="115" Top="10" Width="406" Height="40" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-2.png" />
+                    </control>
+                    <control name="lbl_pai2" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="26" Top="111" Width="70" Height="24" ForeColor="255,255,170,160" ShadowColor="0,0,0,0" Text="@ui_jhts_hgd_12" Font="font_text_figure" />
+                    </control>
+                    <control name="lbl_hg2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="127" Top="20" Width="80" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_07" Font="font_sns_event_mid" />
+                    </control>
+                    <control name="mltbox_haogan2" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,255,255,255" MouseInBarColor="0,255,0,255" ViewRect="0,0,390,90" LineHeight="19" HtmlText="@ui_jhts_hgd_02" ScrollSize="17" Left="125" Top="55" Width="390" Height="90" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_title_tasktrace" NoFrame="true" />
+                    </control>
+                    <control name="pbar_2" entity="ProgressBar" script="" init="">
+                        <prop Maximum="300" Value="200" WidthGap="2" HeightGap="2" ProgressImage="gui\special\sns_new\jh_explore\jindudil.png" ProgressMode="LeftToRight" TextVisible="true" Left="203" Top="32" Width="280" Height="14" ShadowColor="0,0,0,0" Font="font_main" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jindudi.png" />
+                    </control>
+                    <control name="lbl_fav_pic_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="22" Top="26" Width="70" Height="70" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\wlxp.png" />
+                    </control>
+                    <control name="lbl_19" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="115" Top="53" Width="406" Height="94" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-3.png" />
+                    </control>
+                    <control name="lbl_fav_stage_2" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="330" Top="10" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_42" Font="font_tip" />
+                    </control>
+                </control>
+                <control name="groupbox_haogan3" entity="GroupBox" script="" init="">
+                    <prop Left="2" Top="319" Width="540" Height="158" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\kuang-1.png" />
+                    <control name="lbl_25" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="115" Top="10" Width="406" Height="40" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-2.png" />
+                    </control>
+                    <control name="lbl_pai3" entity="Label" script="" init="">
+                        <prop Align="Center" RefCursor="WIN_HELP" Left="26" Top="111" Width="70" Height="24" ForeColor="255,255,200,255" ShadowColor="0,0,0,0" Text="@ui_jhts_hgd_13" Font="font_text_figure" />
+                    </control>
+                    <control name="lbl_hg3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="127" Top="20" Width="80" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_07" Font="font_sns_event_mid" />
+                    </control>
+                    <control name="mltbox_haogan3" entity="MultiTextBox" script="" init="">
+                        <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,390,90" LineHeight="19" HtmlText="@ui_jhts_hgd_03" ScrollSize="17" Left="125" Top="55" Width="390" Height="90" ShadowColor="0,0,0,0" Text="mltbox_1" Font="font_title_tasktrace" NoFrame="true" />
+                    </control>
+                    <control name="pbar_3" entity="ProgressBar" script="" init="">
+                        <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\special\sns_new\jh_explore\jindudil.png" ProgressMode="LeftToRight" TextVisible="true" Left="203" Top="32" Width="280" Height="14" ShadowColor="0,0,0,0" Font="font_main" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jindudi.png" />
+                    </control>
+                    <control name="lbl_fav_pic_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="22" Top="26" Width="70" Height="70" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\llhr.png" />
+                    </control>
+                    <control name="lbl_27" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="115" Top="53" Width="406" Height="94" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\kuang-3.png" />
+                    </control>
+                    <control name="lbl_fav_stage_3" entity="Label" script="" init="">
+                        <prop RefCursor="WIN_HELP" Left="330" Top="10" Width="38" Height="22" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_42" Font="font_tip" />
+                    </control>
+                </control>
+                <control name="lbl_/" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="265" Top="493" Width="14" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="/" Font="font_btn" />
+                </control>
+                <control name="lbl_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-3" Top="-40" Width="544" Height="38" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                </control>
+                <control name="lbl_haoguan" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="189" Top="-25" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_05" Font="font_title" />
+                </control>
+                <control name="lbl_yl_page" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="250" Top="489" Width="22" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="1" Font="font_btn" />
+                </control>
+                <control name="lbl_yl_max_page" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="280" Top="489" Width="22" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="1" Font="font_btn" />
+                </control>
+                <control name="btn_yl_last" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\btn_left_out.png" FocusImage="gui\special\sns_new\jh_explore\btn_left_on.png" PushImage="gui\special\sns_new\jh_explore\btn_left_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="223" Top="492" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                    <event on_click="on_btn_yl_last_click" />
+                </control>
+                <control name="btn_yl_next" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\btn_right_out.png" FocusImage="gui\special\sns_new\jh_explore\btn_right_on.png" PushImage="gui\special\sns_new\jh_explore\btn_right_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="300" Top="492" Width="18" Height="20" ForeColor="255,255,255,255" BackColor="255,192,192,192" ShadowColor="0,0,0,0" Font="font_btn" AutoSize="true" />
+                    <event on_click="on_btn_yl_next_click" />
+                </control>
+            </control>
+            <control name="groupbox_4" entity="GroupBox" script="" init="">
+                <prop Top="1" Width="264" Height="515" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\youlixiao.png" />
+                <control name="lbl_youlizhi" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="104" Top="49" Width="80" Height="21" ForeColor="255,255,210,160" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_08" Font="font_title" />
+                </control>
+                <control name="lbl_youli" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="95" Top="9" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_04" Font="font_title" />
+                </control>
+                <control name="lbl_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="104" Top="212" Width="80" Height="21" ForeColor="255,255,210,160" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_34" Font="font_title" />
+                </control>
+                <control name="mltbox_youlidetail" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,210,160" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,238,149" LineHeight="18" HtmlText="@ui_jh_jhts_36" ScrollSize="14" HasVScroll="true" Left="12" Top="359" Width="238" Height="149" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_title_tasktrace" NoFrame="true" />
+                    <subor name="VScrollBar">
+                        <prop Maximum="2" SmallChange="1" LargeChange="8" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                        <subor name="DecButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                        </subor>
+                        <subor name="IncButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                        </subor>
+                        <subor name="TrackButton">
+                            <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="95" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                        </subor>
+                    </subor>
+                </control>
+                <control name="lbl_16" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="106" Width="80" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_10" Font="font_text" />
+                </control>
+                <control name="lbl_cur_youlizhi" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="162" Top="106" Width="80" Height="24" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="123" Font="font_text" />
+                </control>
+                <control name="lbl_15" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" Left="30" Top="79" Width="80" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_09" Font="font_text" HintText="@ui_jh_jhts_68" />
+                </control>
+                <control name="lbl_tour_stage" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="162" Top="79" Width="80" Height="24" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+                <control name="pbar_tour_max_point" entity="ProgressBar" script="" init="">
+                    <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\special\sns_new\jh_explore\jindudih.png" ProgressMode="LeftToRight" TextVisible="true" Left="30" Top="166" Width="206" Height="14" ShadowColor="0,0,0,0" Font="font_main" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jindudi.png" />
+                </control>
+                <control name="lbl_39" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" Left="30" Top="269" Width="80" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_35" Font="font_text" HintText="@ui_jh_jhts_67" />
+                </control>
+                <control name="lbl_cur_renown_point" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="184" Top="269" Width="80" Height="24" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="123" Font="font_text" />
+                </control>
+                <control name="lbl_11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-3" Top="2" Width="270" Height="38" ShadowColor="0,0,0,0" DrawMode="ExpandH" />
+                </control>
+                <control name="pbar_renown_maxpoint" entity="ProgressBar" script="" init="">
+                    <prop Maximum="100" Value="50" WidthGap="2" HeightGap="2" ProgressImage="gui\special\sns_new\jh_explore\jindudih.png" ProgressMode="LeftToRight" TextVisible="true" Left="30" Top="301" Width="206" Height="14" ShadowColor="0,0,0,0" Font="font_main" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jindudi.png" />
+                </control>
+                <control name="lbl_41" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" LblLimitWidth="true" Left="30" Top="135" Width="118" Height="24" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_37" Font="font_text" />
+                </control>
+                <control name="lbl_today_youli_point" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="163" Top="137" Width="22" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="1200" Font="font_text" />
+                </control>
+                <control name="lbl_44" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="197" Top="141" Width="14" Height="16" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="/" Font="font_text" />
+                </control>
+                <control name="lbl_45" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="205" Top="137" Width="22" Height="22" ForeColor="255,255,255,0" ShadowColor="0,0,0,0" Text="1200" Font="font_text" />
+                </control>
+                <control name="lbl_13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="30" Top="247" Width="80" Height="16" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_46" Font="font_text" />
+                </control>
+                <control name="lbl_fav_stage" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="162" Top="247" Width="80" Height="16" ForeColor="255,255,120,0" ShadowColor="0,0,0,0" Font="font_text" />
+                </control>
+            </control>
+            <control name="lbl_40" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="259" Top="-1" Width="16" Height="523" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\shutiao.png" />
+            </control>
+        </control>
+        <control name="groupbox_prize" entity="GroupBox" script="" init="">
+            <prop Left="8" Top="64" Width="810" Height="520" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\youlidadi.png" />
+            <control name="groupbox_prize_left" entity="GroupBox" script="" init="">
+                <prop Top="1" Width="264" Height="515" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jiangli\xiaodi.png" />
+                <control name="lbl_37" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="9" Top="183" Width="246" Height="326" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\juqing\juqingwzd.png" />
+                </control>
+                <control name="lbl_42" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="-2" Top="2" Width="270" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_38" Font="font_text_chat" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jiangli\tiao.png" />
+                </control>
+                <control name="mltbox_2" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,210,160" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,238,134" LineHeight="18" HtmlText="@ui_jh_jhts_40" ScrollSize="17" Left="13" Top="54" Width="238" Height="134" ShadowColor="0,0,0,0" Text="mltbox_2" Font="font_title_tasktrace" NoFrame="true" />
+                </control>
+                <control name="lbl_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="128" Top="255" Width="86" Height="86" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" />
+                </control>
+                <control name="lbl_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="149" Top="357" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="72000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_9" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="142" Top="399" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_16" Font="font_text_chat" />
+                </control>
+                <control name="lbl_14" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="128" Top="205" Width="83" Height="46" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_48" Font="font_text_chat" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\baoxiang\xy.PNG" />
+                </control>
+                <control name="lbl_23" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="-4" Top="431" Width="83" Height="46" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_jh_jhts_49" Font="font_text_chat" AutoSize="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\baoxiang\sz.PNG" />
+                </control>
+                <control name="lbl_24" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="32" Top="336" Width="95" Height="50" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_08" Font="font_text_chat" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\baoxiang\y.png" />
+                </control>
+            </control>
+            <control name="groupbox_prize_right" entity="GroupBox" script="" init="">
+                <prop Left="267" Width="541" Height="518" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\jiangli\dadi.png" />
+                <control name="btn_prize_1" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="26" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_52" NoFrame="true" AutoSize="true" DrawMode="Center" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_2" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="133" Top="26" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_53" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_3" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="229" Top="26" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_54" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_4" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="325" Top="26" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_55" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_5" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="421" Top="26" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_56" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_6" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="176" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_57" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_7" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="133" Top="176" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_58" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_8" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="229" Top="176" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_59" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_9" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="325" Top="176" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_60" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_10" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="421" Top="176" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_61" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_11" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="37" Top="336" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_62" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_12" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="133" Top="336" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_63" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_13" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="229" Top="336" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_64" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_14" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="325" Top="336" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_65" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="btn_prize_15" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\baoxiang\gj_out.png" FocusImage="gui\special\sns_new\jh_explore\baoxiang\gj_on.png" PushImage="gui\special\sns_new\jh_explore\baoxiang\gj_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="421" Top="336" Width="86" Height="86" BackColor="255,192,192,192" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_66" NoFrame="true" AutoSize="true" />
+                    <event on_click="on_btn_prize_click" />
+                </control>
+                <control name="lbl_tour_level_1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="53" Top="136" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_2" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="136" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_3" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="243" Top="136" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_4" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_4" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="340" Top="136" Width="70" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_5" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_5" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="437" Top="132" Width="62" Height="23" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_6" Font="font_text_figure" AutoSize="true" />
+                </control>
+                <control name="lbl_tour_level_6" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="53" Top="290" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_7" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_7" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="148" Top="290" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_8" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_8" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="243" Top="290" Width="70" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_9" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_9" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="340" Top="287" Width="63" Height="23" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_10" Font="font_text_figure" AutoSize="true" />
+                </control>
+                <control name="lbl_tour_level_10" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="437" Top="290" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_11" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_11" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="-225" Top="454" Width="54" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" HAnchor="Center" Text="@ui_youli_12" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_12" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="141" Top="454" Width="70" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_13" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_13" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="229" Top="454" Width="62" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_14" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_14" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="317" Top="454" Width="70" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_15" Font="font_text_figure" />
+                </control>
+                <control name="lbl_tour_level_15" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="437" Top="454" Width="70" Height="16" ForeColor="255,255,255,40" ShadowColor="0,0,0,0" Text="@ui_youli_16" Font="font_text_figure" AutoSize="true" />
+                </control>
+                <control name="lbl_maxpoint_1" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="62" Top="112" Width="33" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="60" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_2" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="154" Top="112" Width="38" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="300" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_3" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="249" Top="112" Width="38" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="600" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_4" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="347" Top="112" Width="38" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="1200" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_5" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="443" Top="112" Width="38" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="6000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_6" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="57" Top="263" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="12000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_7" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="151" Top="263" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="18000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_8" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="247" Top="263" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="24000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_9" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="343" Top="263" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="30000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_10" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="439" Top="263" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="36000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_11" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="56" Top="424" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="42000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_12" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="151" Top="424" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="48000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_13" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="247" Top="424" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="54000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_14" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="343" Top="424" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="60000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_maxpoint_15" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="439" Top="424" Width="46" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="72000" Font="font_text_chat" />
+                </control>
+                <control name="lbl_46" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="-1" Top="3" Width="545" Height="38" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_39" Font="font_text_chat" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\jiangli\tiao.png" />
+                </control>
+                <control name="ani_1" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="29" Top="32" Width="32" Height="32" />
+                </control>
+                <control name="ani_2" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="125" Top="32" Width="32" Height="32" />
+                </control>
+                <control name="ani_3" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="221" Top="32" Width="32" Height="32" />
+                </control>
+                <control name="ani_4" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="317" Top="32" Width="32" Height="32" />
+                </control>
+                <control name="ani_5" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="413" Top="32" Width="32" Height="32" />
+                </control>
+                <control name="ani_6" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="29" Top="184" Width="32" Height="32" />
+                </control>
+                <control name="ani_7" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="125" Top="184" Width="32" Height="32" />
+                </control>
+                <control name="ani_8" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="221" Top="184" Width="32" Height="32" />
+                </control>
+                <control name="ani_9" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="317" Top="184" Width="32" Height="32" />
+                </control>
+                <control name="ani_10" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="413" Top="184" Width="32" Height="32" />
+                </control>
+                <control name="ani_11" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="29" Top="344" Width="32" Height="32" />
+                </control>
+                <control name="ani_12" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="125" Top="344" Width="32" Height="32" />
+                </control>
+                <control name="ani_13" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="221" Top="344" Width="32" Height="32" />
+                </control>
+                <control name="ani_14" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="317" Top="344" Width="32" Height="32" />
+                </control>
+                <control name="ani_15" entity="Animation" script="" init="">
+                    <prop AnimationImage="bxjh" Independent="false" PlayMode="2" Left="413" Top="344" Width="32" Height="32" />
+                </control>
+            </control>
+            <control name="lbl_12" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="259" Width="16" Height="523" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\shutiao.png" />
+            </control>
+        </control>
+        <control name="groupbox_daoju" entity="GroupBox" script="" init="">
+            <prop Left="5" Top="64" Width="813" Height="520" ShadowColor="0,0,0,0" Visible="false" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\youlidadi.png" />
+            <control name="gb_item_list" entity="GroupBox" script="" init="">
+                <prop Left="6" Top="69" Width="801" Height="205" ShadowColor="0,0,0,0" NoFrame="true" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\daoju\daojudi.png" />
+                <control name="lbl_name01" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="108" Top="116" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@item_newworld_xiyu_a1_task_006" Font="font_main" />
+                </control>
+                <control name="lbl_name02" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="279" Top="116" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@item_newworld_xiyu_a1_task_006" Font="font_main" />
+                </control>
+                <control name="lbl_name03" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="453" Top="116" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@item_newworld_xiyu_a1_task_006" Font="font_main" />
+                </control>
+                <control name="lbl_name04" entity="Label" script="" init="">
+                    <prop Align="Center" RefCursor="WIN_HELP" Left="620" Top="116" Width="80" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="@item_newworld_xiyu_a1_task_006" Font="font_main" />
+                </control>
+                <control name="btn_prev" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\daoju\zf-out.png" FocusImage="gui\special\sns_new\jh_explore\daoju\zf-on.png" PushImage="gui\special\sns_new\jh_explore\daoju\zf-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="27" Top="40" Width="50" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_prev_click" />
+                </control>
+                <control name="btn_next" entity="Button" script="" init="">
+                    <prop NormalImage="gui\special\sns_new\jh_explore\daoju\yf-out.png" FocusImage="gui\special\sns_new\jh_explore\daoju\yf-on.png" PushImage="gui\special\sns_new\jh_explore\daoju\zf-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Left="727" Top="40" Width="50" Height="50" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    <event on_click="on_btn_next_click" />
+                </control>
+                <control name="lbl_j1" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="206" Top="40" Width="50" Height="50" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\daoju\jiantou.png" />
+                </control>
+                <control name="lbl_j2" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="377" Top="40" Width="50" Height="50" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\daoju\jiantou.png" />
+                </control>
+                <control name="lbl_j3" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="550" Top="40" Width="50" Height="50" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\daoju\jiantou.png" />
+                </control>
+                <control name="lbl_bg01" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="93" Top="10" Width="104" Height="104" ShadowColor="0,0,0,0" DataSource="1" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wpk.png" />
+                    <event on_click="on_item_click" />
+                </control>
+                <control name="lbl_bg02" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="264" Top="10" Width="104" Height="104" ShadowColor="0,0,0,0" DataSource="2" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wpk.png" />
+                    <event on_click="on_item_click" />
+                </control>
+                <control name="lbl_photo02" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="272" Top="17" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wh.png" />
+                </control>
+                <control name="lbl_bg03" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="437" Top="10" Width="104" Height="104" ShadowColor="0,0,0,0" DataSource="3" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wpk.png" />
+                    <event on_click="on_item_click" />
+                </control>
+                <control name="lbl_bg04" entity="Label" script="" init="">
+                    <prop Transparent="false" ClickEvent="true" RefCursor="WIN_HELP" Left="608" Top="10" Width="104" Height="104" ShadowColor="0,0,0,0" DataSource="4" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wpk.png" />
+                    <event on_click="on_item_click" />
+                </control>
+                <control name="lbl_photo04" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="615" Top="17" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wh.png" />
+                </control>
+                <control name="lbl_photo03" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="445" Top="17" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wh.png" />
+                </control>
+                <control name="lbl_photo01" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="101" Top="17" Width="90" Height="90" ShadowColor="0,0,0,0" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\djlc\wh.png" />
+                </control>
+                <control name="lbl_border03" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="435" Top="8" Width="108" Height="108" ShadowColor="0,0,0,0" AutoSize="true" BackImage="newworld_item01_click" />
+                </control>
+                <control name="lbl_border04" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="606" Top="8" Width="108" Height="108" ShadowColor="0,0,0,0" AutoSize="true" BackImage="newworld_item01_click" />
+                </control>
+                <control name="lbl_border01" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="91" Top="8" Width="108" Height="108" ShadowColor="0,0,0,0" AutoSize="true" BackImage="newworld_item01_click" />
+                </control>
+                <control name="lbl_border02" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="262" Top="8" Width="108" Height="108" ShadowColor="0,0,0,0" AutoSize="true" BackImage="newworld_item01_click" />
+                </control>
+                <control name="mltbox_3" entity="MultiTextBox" script="" init="">
+                    <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,778,58" LineHeight="19" HtmlText="@ui_newworld_item_rule_01" ScrollSize="17" Left="13" Top="138" Width="778" Height="58" ShadowColor="0,0,0,0" Font="font_sns_list" NoFrame="true" />
+                </control>
+            </control>
+            <control name="groupbox_page" entity="GroupBox" script="" init="">
+                <prop Left="347" Top="616" Width="206" Height="78" ShadowColor="0,0,0,0" Text="groupbox_1" />
+                <control name="lbl_cur_page" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="41" Top="38" Width="14" Height="20" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="1" Font="font_title_tasktrace" />
+                </control>
+                <control name="lbl_interval" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="88" Top="41" Width="22" Height="16" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="/" Font="font_title_tasktrace" />
+                </control>
+                <control name="lbl_total_page" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="144" Top="42" Width="22" Height="15" ForeColor="255,255,180,40" ShadowColor="0,0,0,0" Text="3" Font="font_title_tasktrace" />
+                </control>
+                <control name="mltbox_1" entity="MultiTextBox" script="" init="">
+                    <prop ViewRect="0,0,48,50" LineHeight="13" ScrollSize="17" Left="113" Top="22" Width="48" Height="50" ShadowColor="0,0,0,0" Text="mltbox_1" />
+                </control>
+            </control>
+            <control name="groupbox_1" entity="GroupBox" script="" init="">
+                <prop Left="3" Top="6" Width="806" Height="58" BackColor="0,255,255,255" ShadowColor="0,0,0,0" NoFrame="true" />
+                <control name="pbar_item" entity="ProgressBar" script="" init="">
+                    <prop Maximum="1600" Value="300" WidthGap="2" HeightGap="2" ProgressImage="gui\special\sns_new\jh_explore\daoju\jindu2.png" ProgressMode="LeftToRight" Left="1" Top="45" Width="806" Height="14" ShadowColor="0,0,0,0" DrawMode="ExpandH" BackImage="gui\special\sns_new\jh_explore\daoju\jindu1.png" />
+                </control>
+                <control name="ani_role" entity="Animation" script="" init="">
+                    <prop AnimationImage="renjt" Independent="false" PlayMode="2" Left="9" Top="-3" Width="60" Height="50" />
+                </control>
+                <control name="lbl_47" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Left="720" Top="-2" Width="47" Height="45" ShadowColor="0,0,0,0" BackImage="gui\special\sns_new\jh_explore\daoju\zd.png" />
+                </control>
+                <control name="lbl_bar_bg" entity="Label" script="" init="">
+                    <prop RefCursor="WIN_HELP" Top="610" Width="806" Height="14" ShadowColor="0,0,0,0" DrawMode="FitWindow" BackImage="gui\special\sns_new\jh_explore\daoju\kedu1.png" />
+                </control>
+                <control name="lbl_role" entity="Label" script="" init="">
+                    <prop Transparent="false" RefCursor="WIN_HELP" Left="9" Top="-3" Width="60" Height="50" ShadowColor="0,0,0,0" HintText="@ui_jh_jhts_79" AutoSize="true" BackImage="gui\special\sns_new\jh_explore\daoju\renjt-11.png" />
+                </control>
+                <control name="lbl_43" entity="Label" script="" init="">
+                    <prop Align="Center" Transparent="false" RefCursor="WIN_HELP" Left="728" Top="-5" Width="38" Height="46" ForeColor="255,255,255,255" ShadowColor="0,0,0,0" Text="@ui_jh_jhts_78" Font="font_sns_title_caoshu_2" HintText="@ui_jh_jhts_80" DrawMode="Center" />
+                </control>
+            </control>
+            <control name="lbl_49" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="3" Top="277" Width="806" Height="242" ShadowColor="0,0,0,0" DrawMode="Expand" BackImage="gui\special\sns_new\jh_explore\daoju\xiaoxidi.png" />
+            </control>
+            <control name="lbl_48" entity="Label" script="" init="">
+                <prop RefCursor="WIN_HELP" Left="7" Top="283" Width="227" Height="231" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\special\sns_new\jh_explore\daoju\jhxx4.png" />
+            </control>
+            <control name="mltbox_item_desc" entity="MultiTextBox" script="" init="">
+                <prop TextColor="255,255,255,255" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,181,182" LineHeight="18" HtmlText="@desc_item_newworld_xiyu_a1_task_001_0" ScrollSize="14" HasVScroll="true" Left="29" Top="318" Width="181" Height="182" ShadowColor="0,0,0,0" Font="font_title_tasktrace" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop Maximum="2" SmallChange="1" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" DrawMode="ExpandV" BackImage="gui\common\scrollbar\bg_scrollbar2.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_up_out.png" FocusImage="gui\common\scrollbar\button_2\btn_up_on.png" PushImage="gui\common\scrollbar\button_2\btn_up_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_down_out.png" FocusImage="gui\common\scrollbar\button_2\btn_down_on.png" PushImage="gui\common\scrollbar\button_2\btn_down_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="15" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="Center" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\common\scrollbar\button_2\btn_trace_out.png" FocusImage="gui\common\scrollbar\button_2\btn_trace_on.png" PushImage="gui\common\scrollbar\button_2\btn_trace_down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="126" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="mltbox_item_name" entity="MultiTextBox" script="" init="">
+                <prop HAlign="Center" VAlign="Center" TextColor="255,0,255,144" SelectBarColor="0,0,0,255" MouseInBarColor="0,255,255,0" ViewRect="0,0,174,22" LineHeight="21" HtmlText="@item_newworld_xiyu_a1_task_009" ScrollSize="17" Left="27" Top="536" Width="174" Height="22" ShadowColor="0,0,0,0" Text="mltbox_3" Font="font_title" NoFrame="true" />
+            </control>
+            <control name="gsb_clue" entity="GroupScrollableBox" script="" init="">
+                <prop ScrollSize="17" HasVScroll="true" AlwaysVScroll="true" IsEditMode="false" Left="237" Top="288" Width="570" Height="222" BackColor="0,255,255,255" BlendColor="0,0,0,0" ShadowColor="0,0,0,0" NoFrame="true" />
+                <subor name="VScrollBar">
+                    <prop FullBarBack="false" SmallChange="1" LargeChange="10" BackColor="255,224,224,224" ShadowColor="0,0,0,0" BackImage="gui\special\sns_new\jh_explore\daoju\BG.png" />
+                    <subor name="DecButton">
+                        <prop NormalImage="gui\special\sns_new\jh_explore\daoju\s-out.png" FocusImage="gui\special\sns_new\jh_explore\daoju\s-on.png" PushImage="gui\special\sns_new\jh_explore\daoju\s-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="IncButton">
+                        <prop NormalImage="gui\special\sns_new\jh_explore\daoju\x-out.png" FocusImage="gui\special\sns_new\jh_explore\daoju\x-on.png" PushImage="gui\special\sns_new\jh_explore\daoju\x-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="14" Height="14" BackColor="255,192,192,192" ShadowColor="0,0,0,0" AutoSize="true" />
+                    </subor>
+                    <subor name="TrackButton">
+                        <prop NormalImage="gui\special\sns_new\jh_explore\daoju\h-out.png" FocusImage="gui\special\sns_new\jh_explore\daoju\h-on.png" PushImage="gui\special\sns_new\jh_explore\daoju\h-down.png" FocusBlendColor="255,255,255,255" PushBlendColor="255,255,255,255" DisableBlendColor="255,255,255,255" NormalColor="0,0,0,0" FocusColor="0,0,0,0" PushColor="0,0,0,0" DisableColor="0,0,0,0" Width="17" Height="192" BackColor="255,192,192,192" ShadowColor="0,0,0,0" DrawMode="ExpandV" />
+                    </subor>
+                </subor>
+            </control>
+            <control name="lbl_item_name" entity="Label" script="" init="">
+                <prop Align="Center" RefCursor="WIN_HELP" Left="35" Top="301" Width="174" Height="16" ForeColor="255,0,255,144" ShadowColor="0,0,0,0" Text="@item_newworld_xiyu_a1_task_006" Font="font_title" />
+            </control>
+        </control>
+    </control>
+</form>
